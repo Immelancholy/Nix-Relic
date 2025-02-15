@@ -34,6 +34,12 @@
 				}
 				{
 					type = "display";
+					key = "  󰍹 Display";
+					format = "{1}x{2} @ {3}Hz [{7}]";
+					keyColor = "green";
+				}
+				{
+					type = "terminal";
 					key = "   Terminal";
 					keyColor = "yellow";
 				}
