@@ -6,9 +6,6 @@
     noto-fonts-emoji
     powerline
     powerline-symbols
-    nerd-fonts.symbols-only
-    nerd-fonts.fantasque-sans-mono
-    nerd-fonts.jetbrains-mono
-    nerd-fonts.caskaydia-cove
+    nerd-fonts
   ];
 }
