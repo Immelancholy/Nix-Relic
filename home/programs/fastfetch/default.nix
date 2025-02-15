@@ -3,7 +3,7 @@
 		enable = true;
 		settings = {
 			logo = {
-				source = "$HOME/Pictures/tomoe.png";
+				source = "$HOME/Pictures/fastfetch_logos/tomoe.png";
 				height = 18;
 			};
 			display = {

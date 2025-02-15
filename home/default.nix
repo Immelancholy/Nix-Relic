@@ -98,6 +98,12 @@
       recursive = true;
     };
   };
+  home.file = {
+    "Pictures/fastfetch_logos" = {
+      source = ./programs/fastfetch/logo;
+      recursive = true;
+    };
+  };
   fonts.fontconfig = {
     enable = true;
   };
