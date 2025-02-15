@@ -25,8 +25,6 @@
 				waves = 0;
 			};
 			color = {
-				gradient = 1;
-
 				gradient_color_1 = "#94e2d5";
 				gradient_color_2 = "#89dceb";
 				gradient_color_3 = "#74c7ec";
