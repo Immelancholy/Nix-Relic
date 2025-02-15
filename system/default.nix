@@ -47,7 +47,7 @@
   users.users.mela = {
     isNormalUser = true;
     description = "mela";
-    extraGroups = [ "mela" "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" ];
   };
   
   users.defaultUserShell = pkgs.zsh;
