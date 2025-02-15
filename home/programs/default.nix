@@ -6,6 +6,7 @@
     ./mpd
     ./nixcord
     ./cava
+    ./fastfetch
   ];
   programs.kitty = {
     enable = true;
@@ -31,7 +32,6 @@
   };
 
   home.packages = with pkgs; [
-    fastfetch
     inputs.zen-browser.packages."${system}".beta
 
     # archives
