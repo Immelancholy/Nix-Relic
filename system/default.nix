@@ -8,6 +8,8 @@
     ../modules
     ./extracache.nix
   ];
+  
+  services.solaar.enable = true;
 
   networking.hostName = "nixos";
   networking.firewall.enable = true;
