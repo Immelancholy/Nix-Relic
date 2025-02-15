@@ -19,6 +19,7 @@
       "$mod, I, exec, [workspace 1 silent; float; size 626 384; move 10 37]$term --hold fastfetch" 
       "$mod, Delete, exec, uwsm stop"
       "$mod+Shift, 0, movetoworkspace, 10"
+      ", Print, exec, grimblast copysave output"
     ]
     ++ (
         # workspaces
