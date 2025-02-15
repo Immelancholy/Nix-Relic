@@ -110,6 +110,7 @@
     easyeffects
     qpwgraph
     ark
+    parted
   ];
   
   programs.zoxide = {
