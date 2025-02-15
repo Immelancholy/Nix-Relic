@@ -24,7 +24,10 @@
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
-
+  fileSystems."/home/mela/mnt/HDD0" =
+    { device = "/dev/disk/by-uuid/7d302399-723e-4504-9aeb-824cf055225f";
+      fsType = "ext4";
+    };
 
   swapDevices =
     [ { device = "/dev/disk/by-uuid/c8d9cb8e-81ff-414b-8e55-4a76de493aac"; }
@@ -36,6 +39,7 @@
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
   # networking.interfaces.enp5s0.useDHCP = lib.mkDefault true;
+  # networking.interfaces.wg0-mullvad.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlo1.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
