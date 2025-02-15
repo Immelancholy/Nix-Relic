@@ -64,8 +64,8 @@
     bind = $mod+Ctrl, Right, workspace, r+1
     bind = $mod+Ctrl, Left, workspace, r-1
 
-
     bind = $mod+Ctrl, J, workspace, empty 
+    bind = $mod+Ctrl, Down, workspace, empty
 
     binde = $mod+Shift, H, resizeactive, 1 0
     binde = $mod+Shift, L, resizeactive, -1 0
