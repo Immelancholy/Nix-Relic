@@ -12,7 +12,7 @@
 			modules = [    
 				{
       					type = "command";
-      					key = "  ";
+      					key = "  󰁘";
       					keyColor = "blue";
 					text = "splash=$(hyprctl splash);echo $splash";
     				}
