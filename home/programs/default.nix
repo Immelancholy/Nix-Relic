@@ -19,7 +19,7 @@
       font_size = 9.5;
       window_padding_width = 15;
       allow_remote_control = true;
-      listen_on = "unix:${TEMP}/kitty";
+      listen_on = "unix:tmp/kitty";
     };
   };
 
