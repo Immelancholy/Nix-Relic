@@ -47,8 +47,7 @@
         rm -f -- "$tmp"
       } 
 
-      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-      fortune | pokemonsay -p fennekin -N
+      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh 
     '';
   };
 }
