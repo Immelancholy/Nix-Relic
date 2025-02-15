@@ -15,6 +15,7 @@
     yazi.url = "github:sxyazi/yazi";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     swww.url = "github:LGFae/swww";
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
 
@@ -27,6 +28,7 @@
         modules = [
           ./system
           catppuccin.nixosModules.catppuccin
+	  nixos-hardware.nixosModules.lenovo-legion-t526amr5
 
 
           home-manager.nixosModules.home-manager
