@@ -128,5 +128,7 @@
       "/home/mela/.steam/root/compatibilitytools.d";
     EDITOR = 
       "$HOME/.local/share/bin/kitty_nvim.sh";
+    XDG_SCREENSHOTS_DIR = 
+      "$HOME/Pictures/screenshots";
   };
 }
