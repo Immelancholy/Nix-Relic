@@ -1,6 +1,7 @@
 { pkgs, ... }: {
 
   imports = [
+    <nixos-hardware/lenovo/legion/t526amr5>
     ./hardware-configuration.nix
     ./boot.nix
     ./fonts
