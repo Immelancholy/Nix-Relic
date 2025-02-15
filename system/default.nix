@@ -59,7 +59,7 @@
     sddm.enable = false;
   };
 
-  system.autoUpgrage = {
+  system.autoUpgrade = {
     enable = true;
     dates = "weekly";
   };
