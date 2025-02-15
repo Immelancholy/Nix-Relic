@@ -8,5 +8,6 @@
     "quiet"
     "splash"
     "usbcore.blinkenlights=1"
+    "discard"
   ];
 }
