@@ -5,7 +5,7 @@
     enableZshIntegration = true;
     plugins = {};
     settings = {
-      show_hidden = true;
+      manager.show_hidden = true;
     };
   };
 }
