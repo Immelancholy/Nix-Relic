@@ -25,5 +25,7 @@
     hyprland-qtutils
     xdg-desktop-portal-hyprland
     hyprpolkitagent
+    grim
+    slurp
   ];
 }

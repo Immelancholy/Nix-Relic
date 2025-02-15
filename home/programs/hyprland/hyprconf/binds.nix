@@ -101,7 +101,10 @@
 
     bind = Ctrl+Shift, Escape, exec, $term --title "btop" sh $scr/btop.sh
     
-    bindd = $mod+Shift, P,Color Picker , exec, hyprpicker -a # Pick color (Hex) >> clipboard# 
+    bindd = $mod+Shift, P,Color Picker , exec, hyprpicker -a # Pick color (Hex) >> clipboard#
+
+    bind = , Print, exec, if area=$(slurp); then grim -g "$area" - | tee >(wl-copy) > ~/Pictures/Screenshots/Screenshot-$(date +%F_%T).png && dunstify "Screenshot of the region taken" -t 1000; fi
+
 
   '';
 }
