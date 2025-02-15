@@ -106,6 +106,7 @@
   };
   home.file = {
     "Pictures/screenshots" = {
+      source = ./screenshots;
       recursive = true;
     };
   };
