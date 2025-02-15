@@ -109,6 +109,7 @@
     lz4
     easyeffects
     qpwgraph
+    ark
   ];
   
   programs.zoxide = {
