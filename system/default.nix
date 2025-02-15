@@ -68,8 +68,8 @@
     automatic = true;
     dates = "daily";
     options = "--delete-older-than 10d";
-    auto-optimise-store = true;
   };
+  nix.settings.auto-optimise-store = true;
 
   system.stateVersion = "24.05";
 }
