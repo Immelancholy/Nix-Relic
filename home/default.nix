@@ -104,8 +104,18 @@
       recursive = true;
     };
   };
+  home.file = {
+    "Pictures/screenshots" = {
+      recursive = true;
+    };
+  };
+
   fonts.fontconfig = {
     enable = true;
+  };
+
+  xdg.mimeApps.defaultApplications = {
+  "text/plain" = ["nvim.desktop"];
   };
 
   home.stateVersion = "24.11";
