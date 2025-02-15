@@ -127,7 +127,7 @@
     STEAM_EXTRA_COMPAT_TOOLS_PATHS = 
       "/home/mela/.steam/root/compatibilitytools.d";
     EDITOR = 
-      "nvim";
+      "/home/mela/.local/share/bin/kitty_nvim.sh";
     XDG_SCREENSHOTS_DIR = 
       "$HOME/Pictures/screenshots";
   };
