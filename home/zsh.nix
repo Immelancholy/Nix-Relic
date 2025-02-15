@@ -15,6 +15,7 @@
       neo = "/home/mela/.local/share/bin/neo.sh";
       rmpc = "/home/mela/.local/share/bin/rmpc.sh";
       cava = "$HOME/.local/share/bin/cava.sh";
+      nvim = "nv";
     };
 
     history.size = 10000;
