@@ -111,6 +111,7 @@
     qpwgraph
     ark
     parted
+    teams-for-linux
   ];
   
   programs.zoxide = {
