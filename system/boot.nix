@@ -1,11 +1,12 @@
 { pkgs, config, ... }: {
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.extraModulePackages = with config.boot.kernelPackages; [ bbswitch ];
+  boot.extraModulePackages = with config.boot.kernelPackages; [ bbswitch ];:qa
   boot.kernelPackages = pkgs.linuxPackages_zen;
   boot.kernelParams = [
     "rw"
     "quiet"
     "splash"
+    "usbcore.blinkenlights=1"
   ];
 }
