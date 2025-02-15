@@ -113,7 +113,6 @@
     parted
     teams-for-linux
     retroarch-free
-    input-remapper
   ];
   
   programs.zoxide = {
