@@ -8,7 +8,11 @@
     		noto-fonts-emoji
     		powerline
     		powerline-symbols
-    		nerd-fonts.*
+    		nerd-fonts.jetbrains-mono
+		nerd-fonts.caskaydia-cove
+		nerd-fonts.fantasque-sans-mono
+		nerd-fonts.symbols-only
+		nerd-fonts.sauce-code-pro
   	];
   };
 }
