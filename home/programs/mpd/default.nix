@@ -23,6 +23,12 @@
       audio_output {
         type  "pipewire"
         name  "Pipewire Sound Server"
+	target  "alsa_output.usb-Audient_Audient_iD4-00.pro-output-0"
+      }
+      audio_output {
+        type  "pipewire"
+        name  "Pipewire CAVA"
+	target  "virtual_cable"
       }
     ''; 
   };
