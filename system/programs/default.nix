@@ -7,7 +7,6 @@
 
   programs.neovim = {
     enable = true;
-    defaultEditor = true;
   };
 
   programs.xfconf.enable = true;
