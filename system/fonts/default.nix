@@ -6,6 +6,6 @@
     noto-fonts-emoji
     powerline
     powerline-symbols
-    nerd-fonts
+    nerdfonts
   ];
 }
