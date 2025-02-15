@@ -2,7 +2,6 @@
 	programs.fastfetch = {
 		enable = true;
 		settings = {
-			schema = "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json";
 			logo = {
 				source = "$HOME/Pictures/tomoe.png";
 				height = 18;
@@ -85,10 +84,6 @@
 					type = "uptime";
 					key = "  󱫐 Uptime ";
 					keyColor = "red";
-				}
-				{
-					type = "custom";
-					key = "└──────────────────────────────────────────┘";
 				}
 				{
 					type = "colors";
