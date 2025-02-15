@@ -3,7 +3,7 @@
 		enable = true;
 		settings = {
 			logo = {
-				source = "$HOME/mela/Pictures/tomoe.png";
+				source = "$HOME/Pictures/tomoe.png";
 				height = 18;
 			};
 			display = {
