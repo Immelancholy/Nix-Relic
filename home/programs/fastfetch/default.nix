@@ -9,7 +9,13 @@
 			display = {
 				separator = " : ";
 			};
-			modules = [
+			modules = [    
+				{
+      					type = "command";
+      					key = "  ";
+      					keyColor" = "blue";
+      					text = "splash=$(hyprctl splash);echo $splash";
+    				}
 				{
 					type = "custom";
 					format = "┌──────────────────────────────────────────┐";
