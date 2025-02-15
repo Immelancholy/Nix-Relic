@@ -55,8 +55,8 @@
     bind = $mod, J, movefocus, d
     bind = Alt, Tab, movefocus, d
 
-    bind = $mod+Ctrl, H, workspace, r+1
-    bind = $mod+Ctrl, L, workspace, r-1
+    bind = $mod+Ctrl, L, workspace, r+1
+    bind = $mod+Ctrl, H, workspace, r-1
 
     bind = $mod+Ctrl, J, workspace, empty 
 
