@@ -13,8 +13,8 @@
 				{
       					type = "command";
       					key = "  ";
-      					keyColor" = "blue";
-      					text = "splash=$(hyprctl splash);echo $splash";
+      					keyColor = "blue";
+					text = "splash=$(hyprctl splash);echo $splash";
     				}
 				{
 					type = "custom";
