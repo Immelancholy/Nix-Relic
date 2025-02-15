@@ -112,7 +112,7 @@
     ark
     parted
     teams-for-linux
-    retroarch-full
+    retroarch-free
   ];
   
   programs.zoxide = {
