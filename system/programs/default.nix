@@ -46,4 +46,7 @@
     gamescopeSession.enable = true;
   };
   programs.gamemode.enable = true;
+
+  services.mullvad-vpn.enable = true;
+  services.mullvad-vpn.package = pkgs.mullvad-vpn;
 }
