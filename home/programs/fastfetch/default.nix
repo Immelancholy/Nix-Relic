@@ -86,10 +86,15 @@
 					keyColor = "red";
 				}
 				{
+					type = "custom";
+					format = "└──────────────────────────────────────────┘";
+				}
+				{
 					type = "colors";
 					paddingLeft = "2";
 					symbol = "circle";
 				}
+
 				"break"
 
 			];
