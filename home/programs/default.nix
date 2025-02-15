@@ -5,6 +5,7 @@
     ./yazi.nix
     ./mpd
     ./nixcord
+    ./cava
   ];
   programs.kitty = {
     enable = true;
