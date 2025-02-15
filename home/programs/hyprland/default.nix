@@ -27,5 +27,6 @@
     hyprpolkitagent
     grim
     slurp
+    wl-clipboard
   ];
 }
