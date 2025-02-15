@@ -1,6 +1,7 @@
-{
+{ pkgs, ... }: {
 	programs.nixcord = {
 		enable = true;
+		package = pkgs.discord-canary
 		config = {
 			useQuickCss = true;
 			themeLinks = [
