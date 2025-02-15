@@ -124,6 +124,6 @@
     STEAM_EXTRA_COMPAT_TOOLS_PATHS = 
       "/home/mela/.steam/root/compatibilitytools.d";
     EDITOR = 
-      "$HOME/.local/share/bin/kitty_nvim.sh"
+      "$HOME/.local/share/bin/kitty_nvim.sh";
   };
 }
