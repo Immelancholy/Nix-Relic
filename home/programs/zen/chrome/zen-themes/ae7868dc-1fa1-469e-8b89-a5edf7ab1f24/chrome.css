@@ -1,0 +1,57 @@
+@-moz-document url-prefix("chrome:") {
+  @media (-moz-bool-pref: "zen.view.use-single-toolbar") {
+    #zen-appcontent-wrapper {
+      position: relative !important;
+      background-color: transparent !important;
+    }
+  
+    #zen-appcontent-wrapper::before {
+      content: "" !important;
+      position: absolute !important;
+      top: 2px !important;
+      left: 6px !important;
+      height: 4px !important;
+      max-width: calc(100% - 16px) !important;
+      width: var(--bar-pcent) !important;
+      background-color: var(--bar-colour) !important;
+      border-radius: 4px;
+      pointer-events: none !important;
+      transition:
+        background-color 0.2s ease-in-out,
+        width 0.5s ease-in-out !important;
+    }
+  
+    #main-window {
+      &:has(.tabbrowser-tab[selected][busy]) {
+        --bar-colour: white;
+        --bar-pcent: 10%;
+      }
+  
+      &:has(.tabbrowser-tab[selected][busy][pendingicon]) {
+        --bar-colour: white;
+        --bar-pcent: 50%;
+      }
+  
+      &:has(.tabbrowser-tab[selected][busy][pendingicon][progress]) {
+        --bar-colour: white;
+        --bar-pcent: 80%;
+      }
+  
+      &:has(.tabbrowser-tab[selected][busy][progress]) {
+        --bar-colour: white;
+        --bar-pcent: 100%;
+      }
+  
+      &:has(.tabbrowser-tab[selected][muted]:not([busy])) {
+        --bar-colour: orangered;
+        --bar-pcent: 100%;
+      }
+  
+      &:has(.tabbrowser-tab[selected]:not([muted]):not([busy])) {
+        --bar-colour: transparent;
+        --bar-pcent: 0%;
+      }
+    }
+  }
+  
+}
