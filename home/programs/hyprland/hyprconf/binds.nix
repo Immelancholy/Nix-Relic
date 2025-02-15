@@ -54,9 +54,16 @@
     bind = $mod, K, movefocus, u
     bind = $mod, J, movefocus, d
     bind = Alt, Tab, movefocus, d
+    bind = $mod, Left, movefocus, l
+    bind = $mod, Right, movefocus, r
+    bind = $mod, Up, movefocus, u
+    bind = $mod, Down, movefocus, d
 
     bind = $mod+Ctrl, L, workspace, r+1
     bind = $mod+Ctrl, H, workspace, r-1
+    bind = $mod+Ctrl, Right, workspace, r+1
+    bind = $mod+Ctrl, Left, workspace, r-1
+
 
     bind = $mod+Ctrl, J, workspace, empty 
 
@@ -64,12 +71,20 @@
     binde = $mod+Shift, L, resizeactive, -1 0
     binde = $mod+Shift, K, resizeactive, 0 -1
     binde = $mod+Shift, J, resizeactive, 0 1
+    binde = $mod+Shift, Left, resizeactive, 1 0
+    binde = $mod+Shift, Right, resizeactive, -1 0
+    binde = $mod+Shift, Up, resizeactive, 0 -1
+    binde = $mod+Shift, Down, resizeactive, 0 1
 
     $moveactivewindow=grep -q "true" <<< $(hyprctl activewindow -j | jq -r .floating) && hyprctl dispatch moveactive
     binded = $mod+Shift+Ctrl, H, Move activewindow left, exec, $moveactivewindow -30 0 || hyprctl dispatch movewindow l
     binded = $mod+Shift+Ctrl, L, Move activewindow right, exec, $moveactivewindow 30 0 || hyprctl dispatch movewindow r
     binded = $mod+Shift+Ctrl, K, Move activewindow up, exec, $moveactivewindow  0 -30 || hyprctl dispatch movewindow u
     binded = $mod+Shift+Ctrl, J, Move activewindow down, exec, $moveactivewindow 0 30 || hyprctl dispatch movewindow d
+    binded = $mod+Shift+Ctrl, Left, Move activewindow left, exec, $moveactivewindow -30 0 || hyprctl dispatch movewindow l
+    binded = $mod+Shift+Ctrl, Right, Move activewindow right, exec, $moveactivewindow 30 0 || hyprctl dispatch movewindow r
+    binded = $mod+Shift+Ctrl, Up, Move activewindow up, exec, $moveactivewindow  0 -30 || hyprctl dispatch movewindow u
+    binded = $mod+Shift+Ctrl, Down, Move activewindow down, exec, $moveactivewindow 0 30 || hyprctl dispatch movewindow d
 
     bind = $mod, mouse_up, workspace, e+1
     bind = $mod, mouse_down, workspace, e-1
