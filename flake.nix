@@ -26,7 +26,7 @@
 
 
 
-  outputs = inputs@{ self, nixpkgs, nixos-hardware, catppuccin, home-manager, yazi, ... }: {
+  outputs = inputs@{ self, nixpkgs, nixos-hardware, catppuccin, home-manager, yazi, solaar, ... }: {
     nixosConfigurations = { 
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
