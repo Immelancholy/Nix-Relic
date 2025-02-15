@@ -24,5 +24,6 @@
     hyprpicker
     hyprland-qtutils
     xdg-desktop-portal-hyprland
+    hyprpolkitagent
   ];
 }
