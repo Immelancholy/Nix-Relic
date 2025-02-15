@@ -12,12 +12,6 @@
 			};
 			modules = [
 				{
-					type = "command";
-					key = "  ";
-					keyColor = "blue";
-
-				}
-				{
 					type = "custom";
 					format = "┌──────────────────────────────────────────┐";
 				}
@@ -72,7 +66,7 @@
 				}
 				{
 					type = "memory";
-					key = "   Memory ";
+					key = "   Memory ";
 					keyColor = "magenta";
 				}
 				{
