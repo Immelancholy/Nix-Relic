@@ -81,13 +81,12 @@
         lazy = {
           enable = true;
           plugins = {
-              "snacks-nvim" = {
-                package = pkgs.vimPlugins.snacks-nvim;
-              };
-              "smear-cursor-nvim" = {
-                package = pkgs.vimPlugins.smear-cursor-nvim;
-              };
-            }
+            "snacks-nvim" = {
+              package = pkgs.vimPlugins.snacks-nvim;
+            };
+            "smear-cursor-nvim" = {
+              package = pkgs.vimPlugins.smear-cursor-nvim;
+            }; 
           };
         };
       };
