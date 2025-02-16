@@ -17,9 +17,6 @@
           style = "mocha";
         };
         enableLuaLoader = true;
-        lazy = {
-          enable = true;
-        };
         languages = {
           enableDAP = true;
           enableExtraDiagnostics = true;
@@ -35,10 +32,10 @@
           enable = true;
           cmp.enable = true;
         }; 
-    statusline.lualine.enable = true;
-    filetree.nvimTree = {
-      enable = true;
-    };
+        statusline.lualine.enable = true;
+        filetree.nvimTree = {
+          enable = true;
+        };
       };
     };
   };
