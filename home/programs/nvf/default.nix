@@ -62,7 +62,7 @@
             enable = true;
             setupOpts = {
               scope = {
-                exclude.node_type = [
+                exclude.file_type = [
                   "dashboard"
                 ];
               };
