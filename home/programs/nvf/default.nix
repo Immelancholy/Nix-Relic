@@ -87,7 +87,7 @@
             enable = true;
           };
         };
-        dashboard.startify = {
+        dashboard.alpha = {
           enable = true;
         };
         lazy = {
