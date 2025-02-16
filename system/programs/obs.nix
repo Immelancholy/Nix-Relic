@@ -3,9 +3,9 @@
     enable = true;
     enableVirtualCamera = true;
     plugins = with pkgs; [
-      obs-vkcapture
-      obs-vaapi
-      obs-nvfbc
+      obs-studio-plugins.obs-vkcapture
+      obs-studio-plugins.obs-vaapi
+      obs-studio-plugins.obs-nvfbc
     ];
   };
 }
