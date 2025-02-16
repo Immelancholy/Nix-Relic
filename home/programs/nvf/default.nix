@@ -56,6 +56,7 @@
         options = {
           tabstop = 2;
           shiftwidth = 2;
+          tm = 10;
         };
       };
     };
