@@ -60,7 +60,7 @@
           indent-blankline = {
             enable = true;
             setupOpts = {
-              filetype_exclude = ["dashboard"];
+              "filetype_exclude" = ["dashboard"];
             };
           };
           cinnamon-nvim.enable = true;
