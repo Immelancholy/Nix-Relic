@@ -22,11 +22,12 @@
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     swww.url = "github:LGFae/swww";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    nvf.url = "github:notashelf/nvf";
   };
 
 
 
-  outputs = inputs@{ self, nixpkgs, nixos-hardware, catppuccin, home-manager, yazi, solaar, ... }: {
+  outputs = inputs@{ self, nixpkgs, nixos-hardware, catppuccin, home-manager, yazi, solaar, nvf, ... }: {
     nixosConfigurations = { 
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -36,6 +37,7 @@
           ./system
           catppuccin.nixosModules.catppuccin
 	  nixos-hardware.nixosModules.lenovo-legion-t526amr5
+	  nvf.nixosModules.default
 
 
           home-manager.nixosModules.home-manager
