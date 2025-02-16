@@ -89,7 +89,7 @@
         keymaps = [
           {
             key = "<leader>e";
-            mode = ["n" "v"];
+            mode = ["n"];
             action = ":Neotree toggle<CR>";
           }
         ];
@@ -129,7 +129,7 @@
             };
             "harpoon2" = {
               package = pkgs.vimPlugins.harpoon2;
-              setupModule = "harpoon2";
+              setupModule = "harpoon";
               setupOpts = {};
             };
           };
