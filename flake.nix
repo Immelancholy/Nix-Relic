@@ -40,7 +40,6 @@
           ./system
           catppuccin.nixosModules.catppuccin
 	  nixos-hardware.nixosModules.lenovo-legion-t526amr5
-	  nvf.nixosModules.default
 
 
           home-manager.nixosModules.home-manager
@@ -57,6 +56,7 @@
                 ./home
                 catppuccin.homeManagerModules.catppuccin
                 inputs.nixcord.homeManagerModules.nixcord
+	        nvf.nixosModules.default
               ];
             };
             # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
