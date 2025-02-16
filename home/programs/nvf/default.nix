@@ -57,6 +57,8 @@
         };
         visuals = {
           nvim-web-devicons.enable = true;
+          indent-blankline.enable = true;
+          cinnamon.enable = true;
         };
         debugger.nvim-dap = {
           enable = true;
@@ -97,12 +99,6 @@
             action = ":Neotree toggle<CR>";
           }
         ];
-        visuals = {
-          cinnamon-nvim = {
-            enable = true;
-          };
-          intent-blankline.enable = true;
-        };
         dashboard.dashboard-nvim = {
           enable = true;
           setupOpts = {
