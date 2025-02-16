@@ -57,6 +57,7 @@
           tabstop = 2;
           shiftwidth = 2;
         };
+        autopairs.nvim-autopairs.enable = true;
       };
     };
   };
