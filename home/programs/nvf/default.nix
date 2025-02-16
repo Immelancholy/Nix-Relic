@@ -75,7 +75,7 @@
             setupOpts = {
               symbol = "│";
               options = {
-                  try_as_border = true;
+                try_as_border = true;
               };
             };
           };
@@ -101,9 +101,15 @@
           cinnamon-nvim = {
             enable = true;
           };
+          intent-blankline.enable = true;
         };
         dashboard.dashboard-nvim = {
           enable = true;
+          hide = [
+            "statusline"
+            "tabline"
+            "winbar"
+          ];
         };
         assistant.copilot = {
           enable = true;
