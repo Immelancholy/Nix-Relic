@@ -58,6 +58,14 @@
         visuals = {
           nvim-web-devicons.enable = true;
           cinnamon-nvim.enable = true;
+          indent-blankline = {
+            enable = true;
+            setupOpts = {
+              exclude.file_type = [
+                "dashboard"
+              ];
+            };
+          };
         };
         debugger.nvim-dap = {
           enable = true;
