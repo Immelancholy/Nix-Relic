@@ -63,7 +63,6 @@
         dashboard.startify.sessionPersistence = true;
         tabline.nvimBufferline.enable = true;
         ui.noice.enable = true;       
-        diagnostics.nvim-lint.enable = true;
       };
     };
   };
