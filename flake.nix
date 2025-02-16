@@ -35,10 +35,7 @@
     nixosConfigurations = { 
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = {
-          inherit inputs;
-          inherit self;
-        };
+        specialArgs = {inherit inputs;};
         modules = [
 	  solaar.nixosModules.default
           ./system
@@ -51,10 +48,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              extraSpecialArgs = {
-                inherit inputs; 
-                inherit self;
-              };
+              extraSpecialArgs = {inherit inputs;};
             };
 
             # TODO replace ryan with your own username ;
