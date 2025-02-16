@@ -83,7 +83,9 @@
           copilot = {
             enable = true;
             cmp.enable = true;
-            suggestion.enable = true;
+            setupOpts = {
+              suggestion.enable = true;
+            };
           };
         };
       };
