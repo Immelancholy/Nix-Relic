@@ -76,9 +76,6 @@
         ui.noice.enable = true;
         notes.neorg = {
           enable = true;
-          setupOpts = {
-            load."coredefaults".enable = true;
-          };
         };
         keymaps = [
           {
