@@ -6,6 +6,7 @@
     alsa.support32Bit = true;
     pulse.enable = true;
     jack.enable = true;
+    autio.enable = true;
     wireplumber = {
       enable = true;
     };

@@ -6,6 +6,7 @@
       obs-studio-plugins.obs-vkcapture
       obs-studio-plugins.obs-vaapi
       obs-studio-plugins.obs-nvfbc
+      obs-studio-plugins.obs-pipewire-audio-capture
     ];
   };
 }
