@@ -18,7 +18,7 @@
          enableForma = true;
          enableLSP = true;
          enableTreesitter = true;
-         nix = enable;
+         nix.enable = true;
       
       };
     };
