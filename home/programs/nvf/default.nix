@@ -102,7 +102,7 @@
         dashboard.dashboard-nvim = {
           enable = true;
           setupOpts = {
-            theme = "doom";
+            theme = "hyper";
           };
         };
         assistant.copilot = {
