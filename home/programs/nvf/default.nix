@@ -52,7 +52,6 @@
         mini = {
           basics.enable = true;
           bracketed.enable = true;
-          notify.enable = true;
           pairs.enable = true;          
           animate.enable = true;
         };
@@ -63,7 +62,7 @@
         autopairs.nvim-autopairs.enable = true;
         dashboard.startify.sessionPersistence = true;
         tabline.nvimBufferline.enable = true;
-        #ui.noice.enable = true;       
+        ui.noice.enable = true;       
         #diagnostics.nvim-lint.enable = true;
       };
     };
