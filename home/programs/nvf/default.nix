@@ -110,6 +110,7 @@
           enable = true;
           lazygit.enable = true;
         };
+        snippets.luasnip.enable = true;
         lazy = {
           enable = true;
           plugins = {
@@ -121,6 +122,14 @@
             "nvim-window-picker" = {
               package = pkgs.vimPlugins.nvim-window-picker;
               setupModule = "window-picker";
+              setupOpts = {};
+            };
+            "plenary.nvim" = {
+              package = pkgs.vimPlugins.plenary-nvim;
+            };
+            "harpoon2" = {
+              package = pkgs.vimPlugins.harpoon2;
+              setupModule = "harpoon2";
               setupOpts = {};
             };
           };
