@@ -36,8 +36,9 @@
           cmp.enable = true;
         }; 
     statusline.lualine.enable = true;
-    filetree.neo-tree = {
+    filetree.nvimTree = {
       enable = true;
+      lazy = true;
     };
       };
     };
