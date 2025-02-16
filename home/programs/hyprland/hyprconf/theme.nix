@@ -12,7 +12,7 @@
     group {
         col.border_active = rgba(f5e0dcff) rgba(89dcebff) rgba(cba6f7ff) 45deg
         col.border_inactive = rgba(b4befecc) rgba(6c7086cc) 45deg
-        col.border_locked_active = rgba(f5e0dcff)  rgba(89dcebff) rgba(cba6f7ff) 45deg
+        col.border_locked_active = rgba(f5e0dcff) rgba(89dcebff) rgba(cba6f7ff) 45deg
         col.border_locked_inactive = rgba(b4befecc) rgba(6c7086cc) 45deg
     }
 
