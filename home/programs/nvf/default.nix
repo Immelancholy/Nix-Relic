@@ -1,4 +1,4 @@
-{ pkgs, inputs, self, ... }: {
+{ pkgs, inputs, ... }: {
   programs.nvf = {
     enable = true;
     # your settings need to go into the settings attribute set
@@ -76,17 +76,6 @@
         visuals = {
           cinnamon-nvim = {
             enable = true;
-          };
-        };
-        lazy = {
-          enable = true;
-          plugins = {
-            "snacks-nvim" = {
-              package = pkgs.vimPlugins.snacks-nvim;
-            };
-            "smear-cursor-nvim" = {
-              package = pkgs.vimPlugins.smear-cursor-nvim;
-            }; 
           };
         };
       };
