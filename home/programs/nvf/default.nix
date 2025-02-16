@@ -124,14 +124,6 @@
               setupModule = "window-picker";
               setupOpts = {};
             };
-            "plenary.nvim" = {
-              package = pkgs.vimPlugins.plenary-nvim;
-            };
-            "harpoon2" = {
-              package = pkgs.vimPlugins.harpoon2;
-              setupModule = "harpoon";
-              setupOpts = {};
-            };
           };
         };
       };
