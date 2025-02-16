@@ -13,8 +13,8 @@
         };
         theme = {
           enable = true;
-          name = "catpuccin-mocha";
-          style = "dark";
+          name = "catpuccin";
+          style = "mocha";
         };
         enableLuaLoader = true;
         lazy.enable = true;
