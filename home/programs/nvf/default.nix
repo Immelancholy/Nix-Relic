@@ -44,7 +44,9 @@
             git.enable = true;
             git_status_async = true;
             renderer.icons.show.git = true;
-            position = "right";
+            window = {  
+              position = "right";
+            };
           };
         };
         telescope.enable = true;
