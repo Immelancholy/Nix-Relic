@@ -38,7 +38,6 @@
     statusline.lualine.enable = true;
     filetree.nvimTree = {
       enable = true;
-      lazy = true;
     };
       };
     };
