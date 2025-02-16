@@ -15,7 +15,7 @@
       vim.languages = {
          enableDAP = true;
          enableExtraDiagnostics = true;
-         enableForma = true;
+         enableFormat = true;
          enableLSP = true;
          enableTreesitter = true;
          nix.enable = true;
