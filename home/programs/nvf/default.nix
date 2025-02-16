@@ -16,7 +16,7 @@
           name = "catppuccin";
           style = "mocha";
         };
-        # enableLuaLoader = true;
+        enableLuaLoader = true;
         languages = {
           enableDAP = true;
           enableExtraDiagnostics = true;
@@ -24,6 +24,11 @@
           enableLSP = true;
           enableTreesitter = true;
           nix.enable = true;
+          rust = {
+            enable = true;
+            crates.enable = true;
+          };
+          python.enable = true;
         };
         autocomplete.nvim-cmp = {
           enable = true;
