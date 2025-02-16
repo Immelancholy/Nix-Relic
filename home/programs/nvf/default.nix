@@ -83,7 +83,7 @@
           plugins = {
             "smear-cursor.nvim" = {
               package = pkgs.vimPlugins.smear-cursor-nvim;
-              setupModule = "smear-cursor";
+              setupModule = "smear_cursor";
               setupOpts = {};
             };
           };
