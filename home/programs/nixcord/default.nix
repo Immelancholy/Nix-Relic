@@ -56,7 +56,7 @@
         pinDMs.enable = true;
         platformIndicators.enable = true;
         previewMessage.enable = true;
-        pronounDB.enable = true;
+        userMessagesPronouns.enable = true;
         quickMention.enable = true;
         quickReply.enable = true;
         reactErrorDecoder.enable = true;
