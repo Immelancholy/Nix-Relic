@@ -27,6 +27,7 @@
         };
         autocomplete.nvim-cmp = {
           enable = true;
+          format = true;
         };
         assistant.copilot = {
           enable = true;
@@ -36,6 +37,16 @@
         filetree.nvimTree = {
           enable = true;
         };
+        fzf-lua.enable = true;
+        treesitter = {
+          enable = true;
+          indent.enable = true;
+        };
+        visuals = {
+          indent-blankline.enable = true;
+          nvim-web-devicons.enable = true;
+        };
+        debugger.nvim-dap.enable = true;
       };
     };
   };
