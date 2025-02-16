@@ -96,6 +96,11 @@
               setupModule = "snacks";
               setupOpts = {};
             };
+            "window-picker" = {
+              package = pkgs.vimPlugins.nvim-window-picker;
+              setupModule = "window-picker";
+              setupOpts = {};
+            };
           };
         };
       };
