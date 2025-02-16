@@ -101,6 +101,14 @@
         };
         dashboard.dashboard-nvim = {
           enable = true;
+          nvim.setupOpts = {
+            theme = "doom";
+            hide = [
+              "statusline"
+              "tabline"
+              "winbar"
+            ];
+          };
         };
         assistant.copilot = {
           enable = true;
