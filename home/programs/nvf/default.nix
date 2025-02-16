@@ -25,7 +25,7 @@
           enableTreesitter = true;
           nix.enable = true;
         };
-        autocomplete.nvim-cmp = {
+        autocomplete.blink-cmp = {
           enable = true;
         };
         statusline.lualine.enable = true;
@@ -78,13 +78,17 @@
             enable = true;
           };
         };
-        assistant = {
-          copilot = {
-            enable = true;
-            cmp.enable = true;
-            setupOpts = {
-              suggestion.enable = true;
-            };
+        lazy = {
+          enable = true;
+          plugins = {
+            {
+              $''${pkgs.vimPlugins.snacks-nvim.pname}'' = {
+                package = pkgs.vimPlugins.snacks-nvim;
+              };
+              $''${pkgs.vimPlugins.smear-cursor-nvim}'' = {
+                package = pkgs.vimPlugins.smear-cursor-nvim;
+              };
+            }
           };
         };
       };
