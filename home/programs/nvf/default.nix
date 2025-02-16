@@ -57,7 +57,13 @@
         };
         visuals = {
           nvim-web-devicons.enable = true;
-          indent-blankline.enable = true;
+          indent-blankline = {
+            enable = true;
+            setupOpts = {
+              buftype_exclude = ["terminal"];
+              filetype_exclude = ["dashboard"];
+            };
+          };
           cinnamon-nvim.enable = true;
         };
         debugger.nvim-dap = {
@@ -88,7 +94,6 @@
           autoindent = true;
         };
         autopairs.nvim-autopairs.enable = true;
-        dashboard.startify.sessionPersistence = true;
         tabline.nvimBufferline.enable = true;
         ui.noice.enable = true;
         notes.mind-nvim.enable = true;
@@ -102,7 +107,11 @@
         dashboard.dashboard-nvim = {
           enable = true;
           setupOpts = {
-            hide = "tabline";
+            hide = [
+              "statusline"
+              "tabline"
+              "winbar"
+            ];
           };
         };
         assistant.copilot = {
