@@ -25,7 +25,7 @@
           enableTreesitter = true;
           nix.enable = true;
         };
-        autocomplete.blink-cmp = {
+        autocomplete.nvim-cmp = {
           enable = true;
         };
         statusline.lualine.enable = true;
