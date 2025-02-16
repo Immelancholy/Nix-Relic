@@ -32,9 +32,7 @@
         filetree.neo-tree = {
           enable = true;
           setupOpts = {
-            enable_cursor_hijack = true;
             git_status_async = true;
-            
           };
         };
         fzf-lua.enable = true;
