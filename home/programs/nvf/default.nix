@@ -6,7 +6,7 @@
     settings = {
       vim = {
         #package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
-        package = pkgs.neovim;
+        package = pkgs.neovim-unwrapped;
         viAlias = false;
         vimAlias = true;
         lsp = {
