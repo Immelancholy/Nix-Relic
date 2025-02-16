@@ -5,7 +5,8 @@
     # most settings are documented in the appendix
     settings = {
       vim = {
-        package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
+        #package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
+        package = pkgs.neovim;
         viAlias = false;
         vimAlias = true;
         lsp = {
@@ -86,6 +87,8 @@
               setupModule = "smear_cursor";
               setupOpts = {};
             };
+            "vimplugin-blink.cmp"
+              package = pkgs.vimPlugins.blink-cmp;
           };
         };
       };
