@@ -25,7 +25,7 @@
           enableTreesitter = true;
           nix.enable = true;
         };
-        autocomplete.nvim-cmp = {
+        autocomplete.blink-cmp = {
           enable = true;
         };
         statusline.lualine.enable = true;
@@ -83,7 +83,6 @@
           plugins = {
             smear-cursor-nvim = {
               package = pkgs.vimPlugins.smear-cursor-nvim;
-              setupModules = "smear-cursor";
               setupOpts = {};
             };
           };
