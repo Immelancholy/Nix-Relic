@@ -46,7 +46,7 @@
             renderer.icons.show.git = true;
           };
         };
-        fzf-lua.enable = true;
+        telescope.enable = true;
         treesitter = {
           enable = true;
           indent.enable = true;
