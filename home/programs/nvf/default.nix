@@ -64,7 +64,15 @@
           basics.enable = true;
           bracketed.enable = true;
           pairs.enable = true;          
-          indentscope.enable = true;
+          indentscope = {
+            enable = true;
+            setupOpts = {
+              symbol = "│";
+              options = {
+                  try_as_border = true;
+              };
+            };
+          };
         };
         options = {
           tabstop = 2;
@@ -89,6 +97,10 @@
         };
         dashboard.dashboard-nvim = {
           enable = true;
+        };
+        assistant.copilot = {
+          enable = true;
+          cmp.enable = true;
         };
         lazy = {
           enable = true;
