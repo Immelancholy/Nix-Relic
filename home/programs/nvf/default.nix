@@ -69,6 +69,12 @@
         tabline.nvimBufferline.enable = true;
         ui.noice.enable = true;
         notes.neorg.enable = true;
+        keymaps = [
+          {
+            key = "<leader>e";
+            action = ":Neotree toggle";
+          }
+        ];
       };
     };
   };
