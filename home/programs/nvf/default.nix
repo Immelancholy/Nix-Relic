@@ -17,7 +17,9 @@
           style = "mocha";
         };
         enableLuaLoader = true;
-        lazy.enable = true;
+        lazy = {
+          enable = true;
+        };
         languages = {
           enableDAP = true;
           enableExtraDiagnostics = true;
@@ -32,7 +34,8 @@
         assistant.copilot = {
           enable = true;
           cmp.enable = true;
-        };
+        status.lualine.enable = true;
+        }; 
       };
     };
   };
