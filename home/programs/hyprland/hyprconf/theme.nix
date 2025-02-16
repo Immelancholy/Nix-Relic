@@ -4,15 +4,15 @@
       gaps_in = 3
       gaps_out = 8
       border_size = 2
-      col.active_border = rgba(cba6f7ff) rgba(89dcebff) rgba(f5e0dcff) 45deg
+      col.active_border = rgba(cba6f7ff) rgba(89dcebff) rgba(f5e0dcff) 60deg
       col.inactive_border = rgba(b4befecc) rgba(6c7086cc) 45deg
       layout = dwindle
       resize_on_border = true
     }
     group {
-        col.border_active = rgba(cba6f7ff) rgba(89dcebff) rgba(f5e0dcff) 45deg
+        col.border_active = rgba(cba6f7ff) rgba(89dcebff) rgba(f5e0dcff) 60deg
         col.border_inactive = rgba(b4befecc) rgba(6c7086cc) 45deg
-        col.border_locked_active =rgba(cba6f7ff) rgba(89dcebff) rgba(f5e0dcff) 45deg
+        col.border_locked_active =rgba(cba6f7ff) rgba(89dcebff) rgba(f5e0dcff) 60deg
         col.border_locked_inactive = rgba(b4befecc) rgba(6c7086cc) 45deg
     }
 
