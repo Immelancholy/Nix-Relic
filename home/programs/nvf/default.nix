@@ -46,6 +46,12 @@
           nvim-web-devicons.enable = true;
         };
         debugger.nvim-dap.enable = true;
+        binds.whichKey.enable = true;
+        mini = {
+          tabline.enable = true;
+          basics.enable = true;
+          bracketed.enable = true;
+        };
       };
     };
   };
