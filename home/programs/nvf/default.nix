@@ -60,7 +60,6 @@
           indent-blankline = {
             enable = true;
             setupOpts = {
-              buftype_exclude = ["terminal"];
               filetype_exclude = ["dashboard"];
             };
           };
