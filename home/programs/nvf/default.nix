@@ -103,6 +103,7 @@
           enable = true;
           setupOpts = {
             theme = "hyper";
+            hide = "tabline";
           };
         };
         assistant.copilot = {
