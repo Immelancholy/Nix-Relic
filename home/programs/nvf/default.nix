@@ -101,10 +101,6 @@
         };
         dashboard.dashboard-nvim = {
           enable = true;
-          setupOpts = {
-            theme = "hyper";
-            hide = "tabline";
-          };
         };
         assistant.copilot = {
           enable = true;
