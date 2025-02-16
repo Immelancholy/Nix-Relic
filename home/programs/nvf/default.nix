@@ -25,6 +25,10 @@
           enableTreesitter = true;
           nix.enable = true;
         };
+        autocomplete.blink-cmp = {
+          enable = true;
+          package = pkgs.vimPlugins.blink-cmp;
+        };
         statusline.lualine.enable = true;
         filetree.neo-tree = {
           enable = true;
@@ -81,11 +85,6 @@
             "smear-cursor.nvim" = {
               package = pkgs.vimPlugins.smear-cursor-nvim;
               setupModule = "smear_cursor";
-              setupOpts = {};
-            };
-            "blink.cmp" = {
-              package = pkgs.vimPlugins.blink-cmp;
-              setupModule = "blink.cmp";
               setupOpts = {};
             };
           };
