@@ -56,7 +56,6 @@
                 ./home
                 catppuccin.homeManagerModules.catppuccin
                 inputs.nixcord.homeManagerModules.nixcord
-	        nvf.nixosModules.default
               ];
             };
             # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
