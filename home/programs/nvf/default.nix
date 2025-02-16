@@ -35,7 +35,7 @@
           enable = true;
           cmp.enable = true;
         }; 
-        status.lualine.enable = true;
+    status.lualine.enable = true;
       };
     };
   };
