@@ -99,6 +99,7 @@
 
     windowrulev2 = size 437 306, title:^(Qalculate!)$
     windowrulev2 = float, title:^(Qalculate!)$
+    windowrulev2 = opacity 0.80 0.80, title:^(Qalculate!)$
 
     windowrulev2 = opacity 0.80 0.80,class:^(dev.zed.Zed-Dev)$
 
