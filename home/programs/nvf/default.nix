@@ -77,7 +77,9 @@
           }
         ];
         visuals = {
-          cinnamon-nvim.enable = true;
+          cinnamon-nvim = {
+            enable = true;
+          };
         };
         assistant = {
           copilot = {
