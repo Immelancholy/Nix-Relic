@@ -61,9 +61,11 @@
           indent-blankline = {
             enable = true;
             setupOpts = {
-              exclude.node_type = [
-                "dashboard"
-              ];
+              scope = {
+                exclude.node_type = [
+                  "dashboard"
+                ];
+              };
             };
           };
         };
