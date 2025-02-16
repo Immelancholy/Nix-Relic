@@ -77,7 +77,7 @@
         notes.neorg = {
           enable = true;
           setupOpts = {
-            load.core.defaults = true;
+            load."coredefaults".enable = true;
           };
         };
         keymaps = [
