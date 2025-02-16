@@ -59,9 +59,6 @@
           nvim-web-devicons.enable = true;
           indent-blankline = {
             enable = true;
-            setupOpts = {
-              "filetype_exclude" = ["dashboard"];
-            };
           };
           cinnamon-nvim.enable = true;
         };
