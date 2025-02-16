@@ -113,6 +113,7 @@
     parted
     teams-for-linux
     retroarch-free
+    qalculate-gtk
   ];
   
   programs.zoxide = {
