@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, self, ... }:
 
 {
   # TODO please change the username & home directory to your own
