@@ -3,6 +3,7 @@
     ./hyprland.nix
     ./pipewire.nix
     ./sddm.nix
+    ./obs.nix
   ];
 
   programs.xfconf.enable = true;
