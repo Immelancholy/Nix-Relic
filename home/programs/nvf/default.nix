@@ -87,7 +87,7 @@
             enable = true;
           };
         };
-        dashboard.dashboard-nvim = {
+        dashboard.startify = {
           enable = true;
         };
         lazy = {
