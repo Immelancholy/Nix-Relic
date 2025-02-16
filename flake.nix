@@ -48,7 +48,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              extraSpecialArgs = {inherit inputs;};
+              extraSpecialArgs = {inherit inputs; inherit self;};
             };
 
             # TODO replace ryan with your own username ;
