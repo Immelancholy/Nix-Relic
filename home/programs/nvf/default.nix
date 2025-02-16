@@ -50,7 +50,6 @@
           indent.enable = true;
         };
         visuals = {
-          indent-blankline.enable = true;
           nvim-web-devicons.enable = true;
         };
         debugger.nvim-dap = {
@@ -65,6 +64,7 @@
           basics.enable = true;
           bracketed.enable = true;
           pairs.enable = true;          
+          indentscope.enable = true;
         };
         options = {
           tabstop = 2;
@@ -87,7 +87,7 @@
             enable = true;
           };
         };
-        dashboard.alpha = {
+        dashboard.dashboard-nvim = {
           enable = true;
         };
         lazy = {
