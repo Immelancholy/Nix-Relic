@@ -29,6 +29,10 @@
             crates.enable = true;
           };
           python.enable = true;
+          lua = {
+            enable = true;
+            lsp.lazydev.enable = true;
+          };
         };
         autocomplete.nvim-cmp = {
           enable = true;
@@ -70,7 +74,12 @@
         dashboard.startify.sessionPersistence = true;
         tabline.nvimBufferline.enable = true;
         ui.noice.enable = true;
-        notes.neorg.enable = true;
+        notes.neorg = {
+          enable = true;
+          setupOpts = {
+            load.core.defaults = true;
+          };
+        };
         keymaps = [
           {
             key = "<leader>e";
