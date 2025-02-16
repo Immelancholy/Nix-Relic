@@ -72,6 +72,7 @@
         keymaps = [
           {
             key = "<leader>e";
+            mode = ["n" "v"];
             action = ":Neotree toggle";
           }
         ];
