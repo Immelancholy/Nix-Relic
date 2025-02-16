@@ -27,7 +27,6 @@
         };
         autocomplete.nvim-cmp = {
           enable = true;
-          package = pkgs.vimPlugins.blink-cmp;
         };
         statusline.lualine.enable = true;
         filetree.neo-tree = {
