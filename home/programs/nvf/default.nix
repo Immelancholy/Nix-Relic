@@ -106,6 +106,10 @@
           cmp.enable = true;
         };
         git.enable = true;
+        terminal.toggleterm = {
+          enable = true;
+          lazygit.enable = true;
+        };
         lazy = {
           enable = true;
           plugins = {
