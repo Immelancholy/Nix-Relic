@@ -10,6 +10,17 @@
       vim.lsp = {
         enable = true;
       };
+      vim.enableLuaLoader = true;
+      vim.lazy.enable = true;
+      vim.languages = {
+         enableDAP = true;
+         enableExtraDiagnostics = true;
+         enableForma = true;
+         enableLSP = true;
+         enableTreesitter = true;
+         nix = enable;
+      
+      };
     };
   };
 }
