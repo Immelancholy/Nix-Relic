@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ... }: {
 	programs.nixcord = {
 		enable = true;
 		discord.package = pkgs.discord-canary;
@@ -27,7 +27,7 @@
         fixImagesQuality.enable = true;
         fixSpotifyEmbeds.enable = true;
         fixYoutubeEmbeds.enable = true;
-        forceOwnerCrown = true;
+        forceOwnerCrown.enable = true;
         friendInvites.enable = true;
         friendsSince.enable = true;
         fullSearchContext.enable = true;
