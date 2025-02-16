@@ -32,7 +32,7 @@
           enable = true;
           cmp.enable = true;
         }; 
-        statusline.lualine.enable = true;
+        statusline.nvimBufferline.enable = true;
         filetree.nvimTree = {
           enable = true;
         };
@@ -58,6 +58,8 @@
           shiftwidth = 2;
         };
         autopairs.nvim-autopairs.enable = true;
+        dashboard.startify.sessionPersistence = true;
+
       };
     };
   };
