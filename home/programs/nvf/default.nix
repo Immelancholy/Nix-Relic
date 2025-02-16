@@ -81,7 +81,6 @@
         lazy = {
           enable = true;
           plugins = {
-            {
               $''${pkgs.vimPlugins.snacks-nvim.pname}'' = {
                 package = pkgs.vimPlugins.snacks-nvim;
               };
