@@ -51,6 +51,11 @@
           tabline.enable = true;
           basics.enable = true;
           bracketed.enable = true;
+          notify.enable = true;
+        };
+        options = {
+          tabstop = 2;
+          shiftwidth = 2;
         };
       };
     };
