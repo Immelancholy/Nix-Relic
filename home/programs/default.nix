@@ -8,6 +8,7 @@
     ./cava
     ./fastfetch
     ./nvf
+    ./obs.nix
   ];
   programs.kitty = {
     enable = true;

@@ -91,9 +91,9 @@
               setupModule = "smear_cursor";
               setupOpts = {};
             };
-            "harpoon" = {
-              package = pkgs.vimPlugins.harpoon;
-              setupModule = "harpoon";
+            "snacks.nvim" = {
+              package = pkgs.vimPlugins.snacks-nvim;
+              setupModule = "snacks";
               setupOpts = {};
             };
           };
