@@ -83,6 +83,7 @@
           copilot = {
             enable = true;
             cmp.enable = true;
+            suggestion.enable = true;
           };
         };
       };
