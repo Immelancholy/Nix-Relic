@@ -29,8 +29,13 @@
           enable = true;
         };
         statusline.lualine.enable = true;
-        filetree.nvimTree = {
+        filetree.neo-tree = {
           enable = true;
+          setup0pts = {
+            enable_cursor_hijack = true;
+            git_status_async = true;
+            
+          };
         };
         fzf-lua.enable = true;
         treesitter = {
@@ -62,7 +67,8 @@
         autopairs.nvim-autopairs.enable = true;
         dashboard.startify.sessionPersistence = true;
         tabline.nvimBufferline.enable = true;
-        ui.noice.enable = true;       
+        ui.noice.enable = true;
+        notes.neorg.enable = true;
       };
     };
   };
