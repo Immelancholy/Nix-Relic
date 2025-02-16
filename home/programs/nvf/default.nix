@@ -87,8 +87,6 @@
               setupModule = "smear_cursor";
               setupOpts = {};
             };
-            "vimplugin-blink.cmp"
-              package = pkgs.vimPlugins.blink-cmp;
           };
         };
       };
