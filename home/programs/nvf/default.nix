@@ -28,11 +28,7 @@
         autocomplete.nvim-cmp = {
           enable = true;
         };
-        assistant.copilot = {
-          enable = true;
-          cmp.enable = true;
-        }; 
-        statusline.nvimBufferline.enable = true;
+        statusline.lualine.enable = true;
         filetree.nvimTree = {
           enable = true;
         };
@@ -45,13 +41,20 @@
           indent-blankline.enable = true;
           nvim-web-devicons.enable = true;
         };
-        debugger.nvim-dap.enable = true;
+        debugger.nvim-dap = {
+          enable = true;
+          ui = {
+            enable = true;
+            autostart = true;
+          };
+        }; 
         binds.whichKey.enable = true;
         mini = {
-          tabline.enable = true;
           basics.enable = true;
           bracketed.enable = true;
           notify.enable = true;
+          pairs.enable = true;          
+          animate.enable = true;
         };
         options = {
           tabstop = 2;
@@ -59,7 +62,8 @@
         };
         autopairs.nvim-autopairs.enable = true;
         dashboard.startify.sessionPersistence = true;
-
+        tabline.nvimBufferline.enable = true;
+        ui.noice.enable = true;        
       };
     };
   };
