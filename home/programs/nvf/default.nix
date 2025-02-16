@@ -5,8 +5,7 @@
     # most settings are documented in the appendix
     settings = {
       vim = {
-        #package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
-        package = pkgs.neovim-unwrapped;
+        package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
         viAlias = false;
         vimAlias = true;
         lsp = {
@@ -25,9 +24,6 @@
           enableLSP = true;
           enableTreesitter = true;
           nix.enable = true;
-        };
-        autocomplete.blink-cmp = {
-          enable = true;
         };
         statusline.lualine.enable = true;
         filetree.neo-tree = {
@@ -85,6 +81,11 @@
             "smear-cursor.nvim" = {
               package = pkgs.vimPlugins.smear-cursor-nvim;
               setupModule = "smear_cursor";
+              setupOpts = {};
+            };
+            "vimplugins-blink.cmp" = {
+              package = pkgs.vimPlugins.blink-cmp;
+              setupModule = "blink.cmp";
               setupOpts = {};
             };
           };
