@@ -103,11 +103,6 @@
           enable = true;
           setupOpts = {
             theme = "doom";
-            hide = [
-              "statusline"
-              "tabline"
-              "winbar"
-            ];
           };
         };
         assistant.copilot = {
