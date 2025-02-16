@@ -31,7 +31,7 @@
         statusline.lualine.enable = true;
         filetree.neo-tree = {
           enable = true;
-          setup0pts = {
+          setupOpts = {
             enable_cursor_hijack = true;
             git_status_async = true;
             
