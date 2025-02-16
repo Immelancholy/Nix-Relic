@@ -47,6 +47,7 @@
           };
         };
         telescope.enable = true;
+        fzf-lua.enable = true;
         treesitter = {
           enable = true;
           indent.enable = true;
