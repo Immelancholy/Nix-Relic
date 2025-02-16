@@ -81,10 +81,10 @@
         lazy = {
           enable = true;
           plugins = {
-              $''${pkgs.vimPlugins.snacks-nvim.pname}'' = {
+              "snacks-nvim" = {
                 package = pkgs.vimPlugins.snacks-nvim;
               };
-              $''${pkgs.vimPlugins.smear-cursor-nvim}'' = {
+              "smear-cursor-nvim" = {
                 package = pkgs.vimPlugins.smear-cursor-nvim;
               };
             }
