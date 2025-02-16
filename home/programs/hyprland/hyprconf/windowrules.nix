@@ -82,16 +82,6 @@
     windowrulev2 = float,class:^(io.gitlab.adhami3310.Impression)$ # Impression-Gtk
     windowrulev2 = float,class:^(io.missioncenter.MissionCenter)$ # MissionCenter-Gtk
 
-    windowrulev2 = opacity 0.80 0.80,class:^(org.fooyin.fooyin)$
-    windowrulev2 = float,class:^(org.fooyin.fooyin)$
-    windowrulev2 = size 968 577, class:^(org.fooyin.fooyin)$
-    windowrulev2 = move 43 218,class:^(org.fooyin.fooyin)$
-    windowrulev2 = float, class:^(LibreWolf)$,title:^(Picture-in-Picture)$
-    windowrulev2 = size 856 482, class:^(LibreWolf)$,title:^(Picture-in-Picture)$
-    windowrulev2 = pin, class:^(LibreWolf)$,title:^(Picture-in-Picture)$
-    windowrulev2 = float,class:^(LibreWolf)$,title:^(Library)$
-    windowrulev2 = size 856 482, class:^(firefox)$,title:^(Picture-in-Picture)$
-    windowrulev2 = pin, class:^(firefox)$,title:^(Picture-in-Picture)$
 
     windowrulev2 = float,title:^(rmpc)$
     windowrulev2 = size 900 580,title:^(rmpc)$
@@ -108,6 +98,7 @@
     windowrulev2 = size 960 675,title:^(btop)$
 
     windowrulev2 = size 437 306, title:^(Qalculate!)$
+    windowrulev2 = float, title:^(Qalculate!)$
 
     windowrulev2 = opacity 0.80 0.80,class:^(dev.zed.Zed-Dev)$
 
