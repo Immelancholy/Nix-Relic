@@ -105,11 +105,13 @@
         };
         dashboard.dashboard-nvim = {
           enable = true;
-          hide = [
-            "statusline"
-            "tabline"
-            "winbar"
-          ];
+          setupOpts = {
+            hide = [
+              "statusline"
+              "tabline"
+              "winbar"
+            ];
+          };
         };
         assistant.copilot = {
           enable = true;
