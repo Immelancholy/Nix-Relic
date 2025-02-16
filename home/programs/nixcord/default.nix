@@ -66,7 +66,7 @@
           customEngineURL = "https://duckduckgo.com";
         };
         reverseImageSearch.enable = true;
-        shikiCodeBlock.enable = true;
+        shikiCodeBlocks.enable = true;
         showConnections.enable = true;
         showHiddenChannels.enable = true;
         showHiddenThings.enable = true;
