@@ -78,7 +78,16 @@
             enable = true;
           };
         };
-        startPlugins = [pkgs.vimPlugins.smear-cursor-nvim];
+        lazy = {
+          enable = true;
+          plugins = {
+            smear-cursor-nvim = {
+              package = pkgs.vimPlugins.smear-cursor-nvim;
+              setupModules = "smear-cursor";
+              setupOpts = {};
+            };
+          };
+        };
       };
     };
   };
