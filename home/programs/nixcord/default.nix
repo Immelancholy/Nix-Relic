@@ -50,7 +50,7 @@
         noMaskedUrlPaste.enable = true;
         oneko.enable = true;
         openInApp.enable = true;
-        permissionViewer.enable = true;
+        permissionsViewer.enable = true;
         petpet.enable = true;
         pictureInPicture.enable = true;
         pinDMs.enable = true;
