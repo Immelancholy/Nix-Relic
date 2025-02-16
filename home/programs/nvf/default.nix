@@ -101,7 +101,7 @@
         };
         dashboard.dashboard-nvim = {
           enable = true;
-          nvim.setupOpts = {
+          setupOpts = {
             theme = "doom";
             hide = [
               "statusline"
