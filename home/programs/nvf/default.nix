@@ -27,7 +27,6 @@
         };
         autocomplete.nvim-cmp = {
           enable = true;
-          format = true;
         };
         assistant.copilot = {
           enable = true;
