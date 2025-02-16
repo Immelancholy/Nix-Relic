@@ -36,6 +36,9 @@
           cmp.enable = true;
         }; 
     statusline.lualine.enable = true;
+    filetree.nvimTree = {
+      enable = true;
+    };
       };
     };
   };
