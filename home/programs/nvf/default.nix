@@ -61,7 +61,7 @@
           indent-blankline = {
             enable = true;
             setupOpts = {
-              exclude.file_type = [
+              exclude.node_type = [
                 "dashboard"
               ];
             };
