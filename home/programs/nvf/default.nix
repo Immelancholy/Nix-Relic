@@ -41,7 +41,9 @@
         filetree.neo-tree = {
           enable = true;
           setupOpts = {
+            git.enable = true;
             git_status_async = true;
+            renderer.icons.show.git = true;
           };
         };
         fzf-lua.enable = true;
@@ -77,6 +79,8 @@
         options = {
           tabstop = 2;
           shiftwidth = 2;
+          git.enable = true;
+          autoindent = true;
         };
         autopairs.nvim-autopairs.enable = true;
         dashboard.startify.sessionPersistence = true;
