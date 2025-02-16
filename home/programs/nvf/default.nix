@@ -16,7 +16,7 @@
           name = "catppuccin";
           style = "mocha";
         };
-        enableLuaLoader = true;
+        # enableLuaLoader = true;
         languages = {
           enableDAP = true;
           enableExtraDiagnostics = true;
@@ -56,7 +56,6 @@
         options = {
           tabstop = 2;
           shiftwidth = 2;
-          tm = 10;
         };
       };
     };
