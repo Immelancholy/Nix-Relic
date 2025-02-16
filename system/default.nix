@@ -60,11 +60,6 @@
     sddm.enable = false;
   };
 
-  system.autoUpgrade = {
-    enable = true;
-    dates = "weekly";
-  };
-
   nix.gc = {
     automatic = true;
     dates = "daily";
