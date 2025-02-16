@@ -47,7 +47,7 @@
         mutualGroupDMs.enable = true;
         newGuildSettings.enable = true;
         noF1.enable = true;
-        noMaskedURLPaste.enable = true;
+        noMaskedUrlPaste.enable = true;
         oneko.enable = true;
         openInApp.enable = true;
         permissionViewer.enable = true;
