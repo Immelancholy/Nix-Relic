@@ -76,6 +76,15 @@
             action = ":Neotree toggle<CR>";
           }
         ];
+        visuals = {
+          cinnamon-nvim.enable = true;
+        };
+        assistant = {
+          copilot = {
+            enable = true;
+            cmp.enable = true;
+          };
+        };
       };
     };
   };
