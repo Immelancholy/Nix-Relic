@@ -102,11 +102,11 @@
         dashboard.dashboard-nvim = {
           enable = true;
           setupOpts = {
-            hide = [
-              "statusline"
-              "tabline"
-              "winbar"
-            ];
+            hide = {
+              statusline;
+              tabline;
+              winbar;
+            };
           };
         };
         assistant.copilot = {
