@@ -7,6 +7,7 @@
     ./nixcord
     ./cava
     ./fastfetch
+    ./nvf
   ];
   programs.kitty = {
     enable = true;
