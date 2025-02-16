@@ -56,7 +56,6 @@
           basics.enable = true;
           bracketed.enable = true;
           pairs.enable = true;          
-          animate.enable = true;
         };
         options = {
           tabstop = 2;
