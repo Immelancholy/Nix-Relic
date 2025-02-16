@@ -83,7 +83,7 @@
               setupModule = "smear_cursor";
               setupOpts = {};
             };
-            "vim.lazy.plugins.blink.cmp" = {
+            "blink.cmp" = {
               package = pkgs.vimPlugins.blink-cmp;
               setupModule = "blink.cmp";
               setupOpts = {};
