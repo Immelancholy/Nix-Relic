@@ -22,7 +22,10 @@
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     swww.url = "github:LGFae/swww";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-    nvf.url = "github:notashelf/nvf";
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
 
