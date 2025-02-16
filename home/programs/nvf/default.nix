@@ -45,7 +45,7 @@
           enable = true;
           ui = {
             enable = true;
-            autostart = true;
+            autoStart = true;
           };
         }; 
         binds.whichKey.enable = true;
@@ -63,7 +63,8 @@
         autopairs.nvim-autopairs.enable = true;
         dashboard.startify.sessionPersistence = true;
         tabline.nvimBufferline.enable = true;
-        ui.noice.enable = true;        
+        ui.noice.enable = true;       
+        diagnostics.nvim-lint = true;
       };
     };
   };
