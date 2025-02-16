@@ -91,11 +91,6 @@
               setupModule = "smear_cursor";
               setupOpts = {};
             };
-            "LazyVim" = {
-              package = pkgs.vimPlugins.LazyVim;
-              setupModule = "lazy";
-              setupOpts = {};
-            };
             "nvim-window-picker" = {
               package = pkgs.vimPlugins.nvim-window-picker;
               setupModule = "window-picker";
