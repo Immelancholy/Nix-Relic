@@ -74,9 +74,7 @@
         dashboard.startify.sessionPersistence = true;
         tabline.nvimBufferline.enable = true;
         ui.noice.enable = true;
-        notes.neorg = {
-          enable = true;
-        };
+        notes.mind-nvim.enable = true;
         keymaps = [
           {
             key = "<leader>e";
@@ -88,6 +86,9 @@
           cinnamon-nvim = {
             enable = true;
           };
+        };
+        dashboard.dashboard-nvim = {
+          enable = true;
         };
         lazy = {
           enable = true;
