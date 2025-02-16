@@ -79,7 +79,6 @@
         options = {
           tabstop = 2;
           shiftwidth = 2;
-          git.enable = true;
           autoindent = true;
         };
         autopairs.nvim-autopairs.enable = true;
@@ -106,6 +105,7 @@
           enable = true;
           cmp.enable = true;
         };
+        git.enable = true;
         lazy = {
           enable = true;
           plugins = {
