@@ -14,8 +14,10 @@
       modules-right = [
         "cpu"
         "memory"
+        "pulseaudio"
         "network"
         "tray"
+        "custom/power"
       ];
     };
   };
