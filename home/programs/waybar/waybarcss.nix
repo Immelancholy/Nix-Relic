@@ -20,7 +20,7 @@ tooltip {
     background: alpha(@mantle, 0.8);
     color: @text; 
     border-radius: 7px;
-    border: 5p solid #ffffff;
+    border: 5px solid #ffffff;
 }
 
 
