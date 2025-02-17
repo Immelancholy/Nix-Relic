@@ -9,14 +9,15 @@
         unstable = true;
       };
     };
+    vesktop = {
+      enable = true;
+    };
 		config = {
 			useQuickCss = true;
 			themeLinks = [
 			"https://catppuccin.github.io/discord/dist/catppuccin-mocha-mauve.theme.css"
 			];
 			frameless = true;
-		};
-    vencordConfig = {
       plugins = {
         fakeNitro.enable = true;
         banger.enable = true;
