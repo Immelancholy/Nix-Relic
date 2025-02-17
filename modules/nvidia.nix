@@ -15,7 +15,6 @@
  		  libva-utils	
       mesa
       driversi686Linux.mesa
-      mesa
     ];
   };
 
