@@ -37,6 +37,10 @@
     heroic
     networkmanagerapplet
     (pkgs.ffmpeg-full.override { withUnfree = true; withOpengl = true; })
+    libva
+    libva-vdpau
+    libva1
+    libva-utils
   ];
   environment.shells = with pkgs; [ zsh ];
 
