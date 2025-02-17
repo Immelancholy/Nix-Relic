@@ -6,7 +6,7 @@
  * {
     border: none;
     border-radius: 0px;
-    border: 2px solid #ffffff;
+    border-bottom: 2px solid @mauve;
     font-family: "JetBrainsMono Nerd Font";
     font-weight: bold;
     font-size: 10px;
