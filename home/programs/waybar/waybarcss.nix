@@ -10,7 +10,6 @@
     font-weight: bold;
     font-size: 10px;
     min-height: 10px;
-    opacity: 0.90;
 }
 
 window#waybar {
@@ -49,6 +48,7 @@ tooltip {
     margin-right: 3px;
     animation: ws_active 20s ease-in-out 1;
     transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
+    opacity: 95;
 }
 
 #workspaces button:hover {
@@ -56,6 +56,7 @@ tooltip {
     color: @crust;
     animation: ws_hover 20s ease-in-out 1;
     transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
+    opacity: 95;
 }
 
 #taskbar button {
