@@ -103,18 +103,18 @@
       "pulseaudio" = {
         scroll-step = 1;
         format = "{volume}% {icon}";
-        format-muted = "";
+        format-muted = "婢";
         format-icons = {
           headphone = "";
-          hands-free = "󰂑";
-          headset = "󰂑";
+          hands-free = "";
+          headset = "";
           phone = "";
           portable = "";
           car = "";
           default = [
-            ""
-            ""
-            ""
+            " "
+            " "
+            " "
           ];
         };
         on-click = "pavucontrol";
