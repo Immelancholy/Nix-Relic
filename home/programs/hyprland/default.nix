@@ -51,6 +51,7 @@
         frame_color = "#fab387";
       };
     };
+  };
 
   imports = [
     ./hyprconf
