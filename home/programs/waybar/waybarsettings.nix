@@ -10,8 +10,12 @@
       height = 28;
       
       modules-left = [
+        "custom/padd"
+        "custom/l_end"
         "hyprland/workspaces"
         "hyprland/window"
+        "custom/r_end"
+        "custom/padd"
       ];
       modules-center = [
         "idle_inhibitor"
@@ -109,6 +113,42 @@
         format = "⏻ ";
         tooltip = false;
         on-click = "wlogout";
+      };
+      #Custom padding mmodules
+      "custom/l_end" = {
+        format = " ";
+        intervel = "once";
+        tooltip = false;
+      };
+      "custom/r_end" = {
+        format = " ";
+        intervel = "once";
+        tooltip = false;
+      };
+      "custom/sl_end" = {
+        format = " ";
+        intervel = "once";
+        tooltip = false;
+      };
+      "custom/sr_end" = {
+        format = " ";
+        intervel = "once";
+        tooltip = false;
+      };
+      "custom/rl_end" = {
+        format = " ";
+        intervel = "once";
+        tooltip = false;
+      };
+      "custom/rr_end" = {
+        format = " ";
+        intervel = "once";
+        tooltip = false;
+      };
+      "custom/padd" = {
+        format = " ";
+        intervel = "once";
+        tooltip = false;
       };
     };
   };
