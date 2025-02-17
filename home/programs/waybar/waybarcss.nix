@@ -19,8 +19,7 @@ window#waybar {
 tooltip {
     background: alpha(@mantle, 0.8);
     color: @text; 
-    border-radius: 7px;
-    border-width: 0px;
+    border-radius: 7px solid #ffffff;
     border: 5px;
 }
 
