@@ -1,5 +1,5 @@
 {
-  programs.waybar.style = {
-
-  };
+  # programs.waybar.style = {
+  #
+  # };
 }
