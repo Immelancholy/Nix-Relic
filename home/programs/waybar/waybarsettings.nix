@@ -2,8 +2,11 @@
   programs.waybar.settings = {
     mainBar = {
       layer = "top";
+      height = 30;
+      spacing = 4;
       
       modules-left = [
+        "hyprland/submap"
         "hyprland/workspaces"
         "hyprland/window"
       ];
@@ -17,7 +20,6 @@
         "pulseaudio"
         "network"
         "tray"
-        "custom/power"
       ];
     };
   };
