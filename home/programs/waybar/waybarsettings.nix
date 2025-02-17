@@ -32,14 +32,14 @@
         all-outputs = true;
         format = "{name}: {icon}";
         format-icons = {
-          "1": "";
-          "2": "";
-          "3": "";
-          "4": "";
-          "5": "";
-          "urgent": "";
-          "focused": "";
-          "default": "";
+          "1" = "";
+          "2" = "";
+          "3" = "";
+          "4" = "";
+          "5" = "";
+          "urgent" = "";
+          "focused" = "";
+          "default" = "";
         };
       };
     };
