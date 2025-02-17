@@ -52,7 +52,7 @@ tooltip {
 }
 
 #workspaces button:hover {
-    background: @sky;
+    background: @sapphire;
     color: @surface0;
     animation: ws_hover 20s ease-in-out 1;
     transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
