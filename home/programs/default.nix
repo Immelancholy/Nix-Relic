@@ -116,6 +116,7 @@
     retroarch-free
     qalculate-gtk
     libreoffice
+    libcava
   ];
   
   programs.zoxide = {
