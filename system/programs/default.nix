@@ -39,6 +39,7 @@
     (pkgs.ffmpeg-full.override { withUnfree = true; withOpengl = true; })
     vulkan-tools
     clapper
+    libva-utils
   ];
   environment.shells = with pkgs; [ zsh ];
 
