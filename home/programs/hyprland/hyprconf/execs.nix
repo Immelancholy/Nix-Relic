@@ -13,7 +13,7 @@
       "[workspace 2 silent] $browser"
       "[workspace 2 silent] teams-for-linux --minimized"
       "[workspace 2 silent] mullvad-vpn"
-      "[workspace 3] discordcanary"
+      "[workspace 3] discord"
       "[workspace 4 silent] qpwgraph"
       "[workspace 5 silent] easyeffects"
     ];

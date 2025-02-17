@@ -53,12 +53,15 @@
         pictureInPicture.enable = true;
         userMessagesPronouns.enable = true;
         reactErrorDecoder.enable = true;
-        replaceGoogleSearch.enable = true;
-        replaceGoogleSearch.customEngineName = "DuckDuckGo";
-        replaceGoogleSearch.customEngineURL = "https://duckduckgo.com/?q=";
+        replaceGoogleSearch = {
+          enable = true;
+          customEngineName = "DuckDuckGo";
+          customEngineURL = "https://duckduckgo.com/?q=";
+        };
         reverseImageSearch.enable = true;
         showHiddenChannels.enable = true;
         showHiddenThings.enable = true;
+        spotifyControls.enable = true;
         spotifyCrack.enable = true;
         spotifyShareCommands.enable = true;
         typingTweaks.enable = true;
