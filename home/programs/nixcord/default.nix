@@ -27,7 +27,7 @@
         crashHandler.enable = true;
         disableCallIdle.enable = true;
         experiments.enable = true;
-        fixCodeBlockGap.enable = true;
+        fixCodeblockGap.enable = true;
         fixImagesQuality.enable = true;
         fixSpotifyEmbeds.enable = true;
         fixYoutubeEmbeds.enable = true;
