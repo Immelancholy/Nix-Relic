@@ -13,10 +13,7 @@
 }
 
 window#waybar {
-    background-color: transparent;
-    color: #ffffff;
-    transition-property: background-color;
-    transition-duration: .5s;
+    background: @base;
 }
 
 window#waybar.hidden {
