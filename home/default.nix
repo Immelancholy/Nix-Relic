@@ -51,6 +51,7 @@
       flavor = "mocha";
     };
     waybar.enable = false;
+    wlogout.enable = false;
   };
   xdg.portal = lib.mkDefault {
     enable = true;
