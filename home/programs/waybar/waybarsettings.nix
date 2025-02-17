@@ -5,16 +5,15 @@
       
       modules-left = [
         "hyprland/workspaces"
-        "cpu"
-        "memory"
+        "hyprland/window"
       ];
       modules-center = [
-        "hyprland/window"
+        "idle_inhibitor"
         "clock"
       ];
       modules-right = [
-        "mpd"
-        "idle_inhibitor"
+        "cpu"
+        "memory"
         "network"
         "tray"
       ];
