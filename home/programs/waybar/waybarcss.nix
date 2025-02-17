@@ -10,7 +10,6 @@
     font-weight: bold;
     font-size: 10px;
     min-height: 10px;
-    opacity: 0.97;
 }
 
 window#waybar {
@@ -18,7 +17,7 @@ window#waybar {
 }
 
 tooltip {
-    background: @base;
+    background: @crust;
     color: @text; 
     border-radius: 7px;
     border-width: 0px;
@@ -145,7 +144,7 @@ tooltip {
 #custom-rl_end,
 #custom-rr_end {
     color: @text;
-    background: @base;
+    background: @crust;
     opacity: 1;
     margin: 4px 0px 4px 0px;
     padding-left: 4px;
