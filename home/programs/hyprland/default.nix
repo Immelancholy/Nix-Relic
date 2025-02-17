@@ -30,10 +30,6 @@
     enable = true;
   };
 
-  programs.wlogout = {
-    enable = true;
-  };
-
   imports = [
     ./hyprconf
     ./rofi

@@ -96,6 +96,11 @@
             mode = ["n"];
             action = ":Neotree toggle<CR>";
           }
+          {
+            key = "i";
+            mode = ["n"];
+            action = ":Copilot auth<CR>";
+          }
         ];
         dashboard.dashboard-nvim = {
           enable = true;
