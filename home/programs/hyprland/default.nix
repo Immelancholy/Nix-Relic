@@ -1,9 +1,4 @@
 { pkgs, inputs, ... }: {
-  imports = [
-    ./hyprconf
-    ./rofi
-  ];
-
   wayland.windowManager.hyprland = {
     enable = true;
     package = null;
@@ -27,5 +22,9 @@
     hyprpolkitagent
     grimblast
     wl-clipboard
+  ];
+  imports = [
+    ./hyprconf
+    ./rofi
   ];
 }
