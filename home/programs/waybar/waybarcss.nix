@@ -70,7 +70,6 @@ tooltip {
     margin-right: 0px;
     color: @text;
     animation: tb_normal 20s ease-in-out 1;
-    border-bottom: 2px solid @mauve;
 }
 
 #taskbar button.active {
@@ -150,6 +149,7 @@ tooltip {
     padding-left: 4px;
     padding-right: 4px;
     opacity: 0.95;
+    border-bottom: 2px solid @mauve;
 }
 
 #workspaces,
