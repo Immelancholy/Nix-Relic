@@ -4,13 +4,16 @@
   ];
   programs.waybar.style = '' 
  * {
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    border: none;
+    border-radius: 0px;
+    font-family: "JetBrainsMono Nerd Font"
+    font-weight: bold;
+    font-size: 10px;
+    min-height: 10px;
 }
 
 window#waybar {
-    background-color: shade(@base, 0.5);
+    background-color: transparent;
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
