@@ -40,7 +40,7 @@
         };
       };
 
-      "hyrpland/windows" = {
+      "hyrpland/window" = {
         format = " 󱄅 {app_id}";
         spacing = 0;
       };
