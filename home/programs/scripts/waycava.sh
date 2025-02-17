@@ -154,6 +154,7 @@ HELP
     # Create cava config
     cat >"$config_file" <<EOF
 [general]
+framerate = 144
 bars = ${bar_width}
 sleep_timer = 1
 [input]
