@@ -37,7 +37,7 @@
         messageLogger.enable = true;
         moreCommands.enable = true;
         moreKaomoji.enable = true;
-        moyazi.enable = true;
+        moyai.enable = true;
         mutualGroups.enable = true;
         oneko.enable = true;
         openInApp.enable = true;
