@@ -30,16 +30,12 @@
       "hyprland/workspaces" = {
         disable-scroll = true;
         all-outputs = true;
-        format = "{name}: {icon}";
-        format-icons = {
-          "1" = "";
-          "2" = "";
-          "3" = "";
-          "4" = "";
-          "5" = "";
-          "urgent" = "";
-          "focused" = "";
-          "default" = "";
+        active-only = false;
+        on-click = "activate";
+        disable-scroll = false;
+        on-scroll-up = "hyprctl dispatch workspace -1";
+        on-scroll-down = "hyprctl dispatch workspace +1";
+        persistent-workspaces = {
         };
       };
     };
