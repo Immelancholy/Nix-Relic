@@ -1,7 +1,6 @@
 { pkgs, inputs, ... }: {
 
   home.packages = with pkgs; [
-    dunst
     libsForQt5.qt5.qtwayland
     kdePackages.qtwayland
     rofi-wayland
@@ -29,6 +28,8 @@
   programs.swaylock = {
     enable = true;
   };
+  
+  services.dunst.enable = true;
 
   imports = [
     ./hyprconf
