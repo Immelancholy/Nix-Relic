@@ -121,6 +121,9 @@
   xdg.mimeApps.defaultApplications = {
     "text/plain" = ["nvim.desktop"];
     "inode/directory" = ["thunar.desktop"];
+    "video/mp4" = ["com.github.rafostar.Clapper.desktop"];
+    "video/quicktime" = ["com.github.rafostar.Clapper.desktop"];
+
   };
 
   home.stateVersion = "24.11";
