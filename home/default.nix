@@ -52,8 +52,7 @@
     };
     waybar.enable = false;
     dunst = {
-      enable = true;
-      flavor = "mocha";
+      enable = false;
     };
   };
   xdg.portal = lib.mkDefault {
