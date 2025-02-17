@@ -6,6 +6,7 @@
  * {
     border: none;
     border-radius: 0px;
+    border-bottom: 0px solid #ffffff;
     font-family: "JetBrainsMono Nerd Font";
     font-weight: bold;
     font-size: 10px;
@@ -20,7 +21,7 @@ tooltip {
     background: alpha(@mantle, 0.8);
     color: @text; 
     border-radius: 7px;
-    border: 5px solid #ffffff;
+    border-width: 0px;
 }
 
 
