@@ -36,7 +36,8 @@
         frame_color = "#cba6f7c0";
         separator_color = "frame";
         highlight = "#89b4fac0";
-        corner_radius = 5;
+        frame_width = 2;
+        corner_radius = 10;
       };
       urgency_low = {
         background = "#1e1e2ec0";
