@@ -15,6 +15,7 @@
 window#waybar {
     background: transparent;
 }
+
 tooltip {
     background: @crust;
     color: @text; 
@@ -64,9 +65,18 @@ button:hover {
 }
 
 #workspaces button {
-    padding: 0 5px;
-    background-color: transparent;
-    color: #ffffff;
+    box-shadow: none;
+    text-shadow: none;
+    padding: 0px;
+    border-radius: 9px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 0px;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin-right: 0px
+    color: @text;
+    animation: ws_normal 20s ease-in-out 1;
 }
 
 #workspaces button:hover {
