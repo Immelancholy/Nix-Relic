@@ -10,7 +10,7 @@
     font-weight: bold;
     font-size: 10px;
     min-height: 10px;
-    opacity: 0.95;
+    opacity: 0.98;
 }
 
 window#waybar {
@@ -52,7 +52,7 @@ tooltip {
 }
 
 #workspaces button:hover {
-    background: @sky;
+    background: @lavender;
     color: @surface0;
     animation: ws_hover 20s ease-in-out 1;
     transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
