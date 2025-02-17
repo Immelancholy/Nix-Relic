@@ -90,5 +90,13 @@ tooltip {
     transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
 }
 
+#tray menu * {
+    min-height: 16px
+}
+
+#tray menu separator {
+    min-height: 10px
+}
+
   '';
 }
