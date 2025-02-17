@@ -17,7 +17,7 @@ window#waybar {
 }
 
 tooltip {
-    background: alpha(@base, 0.8);
+    background: alpha(@mantle, 0.8);
     color: @text; 
     border-radius: 7px;
     border-width: 0px;
@@ -41,7 +41,7 @@ tooltip {
 }
 
 #workspaces button.active {
-    background: @mauve;
+    background: alpha(@mauve, 0.8);
     color: @surface0;
     margin-left: 3px;
     padding-left: 12px;
@@ -52,7 +52,7 @@ tooltip {
 }
 
 #workspaces button:hover {
-    background: @sapphire;
+    background: alpha(@sky, 0.8);
     color: @surface0;
     animation: ws_hover 20s ease-in-out 1;
     transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
@@ -144,7 +144,7 @@ tooltip {
 #custom-rl_end,
 #custom-rr_end {
     color: @text;
-    background: alpha(@base, 0.8);
+    background: alpha(@mantle, 0.8);
     opacity: 1;
     margin: 4px 0px 4px 0px;
     padding-left: 4px;
