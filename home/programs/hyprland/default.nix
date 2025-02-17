@@ -36,6 +36,7 @@
         frame_color = "#cba6f7c0";
         separator_color = "frame";
         highlight = "#89b4fac0";
+        progress_bar_cornder_radius = 3;
       };
       urgency_low = {
         background = "#1e1e2ec0";
