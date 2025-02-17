@@ -28,7 +28,6 @@
         "custom/power"
       ];
       "hyprland/workspaces" = {
-        disable-scroll = true;
         all-outputs = true;
         active-only = false;
         on-click = "activate";
