@@ -17,7 +17,7 @@ window#waybar {
 }
 
 tooltip {
-    background: @mantle;
+    background: alpha(@base, 0.8);
     color: @text; 
     border-radius: 7px;
     border-width: 0px;
@@ -144,7 +144,7 @@ tooltip {
 #custom-rl_end,
 #custom-rr_end {
     color: @text;
-    background: @mantle;
+    background: alpha(@base, 0.8);
     opacity: 1;
     margin: 4px 0px 4px 0px;
     padding-left: 4px;
