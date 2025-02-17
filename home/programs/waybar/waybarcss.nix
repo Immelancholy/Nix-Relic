@@ -21,7 +21,6 @@ tooltip {
     color: @text; 
     border-radius: 7px;
     border-width: 0px;
-    opacity: 0.95;
 }
 
 
