@@ -148,8 +148,8 @@ tooltip {
     margin: 4px 0px 4px 0px;
     padding-left: 4px;
     padding-right: 4px;
-    opacity: 0.95;
-    border-bottom: 4px solid @mauve;
+    border-radius: 10px;
+    border-bottom: 2px solid alpha(@mauve, 0.92);
 }
 
 #workspaces,
