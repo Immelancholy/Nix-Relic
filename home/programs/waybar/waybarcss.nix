@@ -22,6 +22,7 @@ tooltip {
     color: @text; 
     border-radius: 7px;
     border-width: 0px;
+    opacity: 0.95;
 }
 
 
@@ -149,6 +150,7 @@ tooltip {
     margin: 4px 0px 4px 0px;
     padding-left: 4px;
     padding-right: 4px;
+    opacity: 0.95;
 }
 
 #workspaces,
