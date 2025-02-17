@@ -116,7 +116,7 @@
     retroarch-free
     qalculate-gtk
     libreoffice
-    (discord-canary.override {
+    (discord.override {
       withOpenASAR = true; # can do this here too
       withVencord = true;
     })
