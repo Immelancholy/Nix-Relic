@@ -39,6 +39,10 @@
         persistent-workspaces = {
         };
       };
+      
+      "hyprland/window" = {
+        format = " 󱄅 {}";
+      };
 
       "keyboard-state" = {
         numlock = true;
