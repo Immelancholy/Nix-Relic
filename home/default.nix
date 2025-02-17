@@ -120,6 +120,13 @@
   "inode/directory" = ["thunar.desktop"];
   };
 
+  systemd.user.units = {
+    pipewire.enable = true;
+    wireplumber.enable = true;
+    nm-applet.enable = true;
+  };
+
+
   home.stateVersion = "24.11";
    # Let home Manager install and manage itself.
   programs.home-manager.enable = true;
