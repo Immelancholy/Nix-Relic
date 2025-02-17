@@ -84,9 +84,6 @@ tooltip {
 #workspaces,
 #workspaces,
 #workspaces,
-#custom-cava {
-  color: @text
-}
 #custom-l_end,
 #custom-r_end,
 #custom-sl_end,
@@ -141,6 +138,11 @@ tooltip {
     border-radius: 7px 0px 0px 7px;
     margin-left: 9px;
     padding-left: 3px;
+}
+
+#custom-cava {
+  color: @text
+  background: alpha(@base, 0.8);
 }
   '';
 }
