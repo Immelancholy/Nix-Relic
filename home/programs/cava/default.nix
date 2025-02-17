@@ -1,6 +1,7 @@
-{
+{ pkgs, ... }: {
 	programs.cava = {
 		enable = true;
+    package = pkgs.libcava;
 		settings = {
 			general = {
 				framerate = 144;
