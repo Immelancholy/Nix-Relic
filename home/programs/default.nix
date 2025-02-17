@@ -29,6 +29,7 @@
     enable = true;
     settings = {
       theme = "catppuccin-mocha";
+      vim_keys = true;
     };
   };
 
