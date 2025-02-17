@@ -117,7 +117,6 @@
     retroarch-free
     qalculate-gtk
     libreoffice
-    clapper
   ];
   
   programs.zoxide = {
