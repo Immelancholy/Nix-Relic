@@ -56,6 +56,8 @@
       
       "hyprland/window" = {
         format = " 󱄅 {}";
+        separate-outputs = true;
+        max-length = 50;
       };
 
       "keyboard-state" = {
@@ -83,8 +85,29 @@
         format-alt = "{:%Y-%m-%d}";
       };
       "cpu" = {
-        format = "{usage}%";
+        intervel = 10;
+        format = "󰍛 {usage}%";
+        format-alt = "{icon0}{icon1}{icon2}{icon3}";
+        format-icons = ["▁" "▂" "▃" "▄" "▅" "▆" "▇" "█"];
       };
+
+      "memory" = {
+        states = {
+          c = 90;
+          h = 60;
+          m = 30;
+        };
+        intervel = 30;
+        format = "󰾆 {used}GB";
+        format-m = "󰾅 {used}GB";
+        format-h = "󰓅 {used}GB";
+        format-c = " {used}GB";
+        format-alt = "󰾆 {percentage}%";
+        max-length = 10;
+        tooltip = true;
+        tooltip-format = "󰾆 {percentage}%\n {used:0.1f}GB/{total:0.1f}GB";
+      };
+
       "temperature" = {
         critical-threshold = 80;
         format = "{temperatureC}°C {icon}";
