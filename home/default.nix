@@ -74,7 +74,7 @@
         mpv = pkgs.mpv-unwrapped.override {
           waylandSupport = true;
         };
-      };
+      }
     );
 
     config = {
