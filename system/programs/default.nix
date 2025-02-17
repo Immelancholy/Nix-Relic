@@ -37,8 +37,8 @@
     heroic
     networkmanagerapplet
     (pkgs.ffmpeg-full.override { withUnfree = true; withOpengl = true; })
-    libva-utils
     vulkan-tools
+    clapper
   ];
   environment.shells = with pkgs; [ zsh ];
 
