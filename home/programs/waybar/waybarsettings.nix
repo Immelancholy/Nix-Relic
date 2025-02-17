@@ -41,7 +41,9 @@
       };
 
       "hyprland/window" = {
-        format = " 󱄅 {app_id}";
+        format = "{icon}{app_id}";
+        icon-size = 10;
+        icon-theme = "󱄅";
         spacing = 0;
         tooltip-format = "{title}";
         on-click = "activate";
