@@ -197,7 +197,7 @@
       };
       "custom/cava" = {
         format = "{}";
-        exec = "~/.local/share/bin/waycava.sh waybar --stb 3";
+        exec = "~/.local/share/bin/waycava.sh waybar --bar 8";
         restart-interval = 1;
       };
     };
