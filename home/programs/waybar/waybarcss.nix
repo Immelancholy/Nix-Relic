@@ -141,7 +141,13 @@ tooltip {
 }
 
 #custom-cava {
-  color: @text;
+    color: @text;
+    background: alpha(@base, 0.8);
+    opacity: 1;
+    margin: 4px 0px 4px 0px;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-bottom: 2px solid alpha(@mauve, 0.92);
 }
   '';
 }
