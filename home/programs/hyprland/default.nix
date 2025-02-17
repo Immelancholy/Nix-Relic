@@ -38,7 +38,8 @@
         highlight = "#89b4fac0";
         frame_width = 2;
         corner_radius = 10;
-        offset = 55;
+        origin = "top-right";
+        offset = "(55, 100)";
       };
       urgency_low = {
         background = "#1e1e2ec0";
