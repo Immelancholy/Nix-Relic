@@ -82,5 +82,13 @@ tooltip {
     animation: tb_active 20s ease-in-out 1;
     transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
 }
+
+#taskbar button:hover {
+    background: @mauve;
+    color: @surface0;
+    animation: tb_hover 20s ease-in-out 1;
+    transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
+}
+
   '';
 }
