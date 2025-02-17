@@ -6,7 +6,6 @@
  * {
     border: none;
     border-radius: 0px;
-    border-bottom: 2px solid @mauve;
     font-family: "JetBrainsMono Nerd Font";
     font-weight: bold;
     font-size: 10px;
@@ -71,6 +70,7 @@ tooltip {
     margin-right: 0px;
     color: @text;
     animation: tb_normal 20s ease-in-out 1;
+    border-bottom: 2px solid @mauve;
 }
 
 #taskbar button.active {
