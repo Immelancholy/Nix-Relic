@@ -84,7 +84,9 @@ tooltip {
 #workspaces,
 #workspaces,
 #workspaces,
-#custom-cava,
+#custom-cava {
+  color: @text
+}
 #custom-l_end,
 #custom-r_end,
 #custom-sl_end,
