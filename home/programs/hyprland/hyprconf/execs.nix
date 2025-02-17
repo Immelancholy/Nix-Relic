@@ -15,6 +15,7 @@
       "[workspace 2 silent] $browser"
       "sleep 1"
       "[workspace 2 silent] teams-for-linux --minimized"
+      "sleep 1"
       "[workspace 3] discord"
       "[workspace 5 silent] easyeffects"
     ];
