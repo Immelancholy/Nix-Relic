@@ -35,6 +35,7 @@
     bibata-cursors
     mangohud
     heroic
+    networkmanagerapplet
   ];
   environment.shells = with pkgs; [ zsh ];
 
