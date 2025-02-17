@@ -10,7 +10,8 @@
 }
 
 window#waybar {
-    background-color: transparent;
+    background-color: @base;
+    background-opacity: 0.2;
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
