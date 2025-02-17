@@ -6,19 +6,19 @@
         label = "lock";
         action = "swaylock-fancy";
         text = "Lock";
-        keybing = "l";
+        keybind = "l";
       }
       {
         label = "logout";
         action = "loginctl terminate-user $USER";
         text = "Logout";
-        keybing = "e";
+        keybind = "e";
       }
       {
         label = "shutdown";
         action = "systemctl poweroff";
         text = "Shutdown";
-        keybing = "s";
+        keybind = "s";
       }
       {
         label = "reboot";
