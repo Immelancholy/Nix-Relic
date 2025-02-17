@@ -11,7 +11,6 @@
       spacing = 4;
       
       modules-left = [
-        "hyprland/submap"
         "hyprland/workspaces"
         "hyprland/window"
       ];
@@ -25,7 +24,24 @@
         "pulseaudio"
         "network"
         "tray"
+        "keyboard-state"
+        "custom/power"
       ];
+      "hyprland/workspaces" = {
+        disable-scroll = true;
+        all-outputs = true;
+        format = "{name}: {icon}";
+        format-icons = {
+          "1": "";
+          "2": "";
+          "3": "";
+          "4": "";
+          "5": "";
+          "urgent": "";
+          "focused": "";
+          "default": "";
+        };
+      };
     };
   };
 }
