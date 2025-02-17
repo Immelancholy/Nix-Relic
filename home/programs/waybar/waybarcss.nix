@@ -42,7 +42,7 @@ tooltip {
 
 #workspaces button.active {
     background: @mauve;
-    color: @surface0;
+    color: @crust;
     margin-left: 3px;
     padding-left: 12px;
     padding-right: 12px;
@@ -52,8 +52,8 @@ tooltip {
 }
 
 #workspaces button:hover {
-    background: @lavender;
-    color: @surface0;
+    background: @sky;
+    color: @crust;
     animation: ws_hover 20s ease-in-out 1;
     transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
 }
