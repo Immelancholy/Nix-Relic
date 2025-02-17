@@ -4,7 +4,6 @@
     ./waybar
     ./yazi.nix
     ./mpd
-    ./nixcord
     ./cava
     ./fastfetch
     ./nvf
@@ -117,7 +116,7 @@
     retroarch-free
     qalculate-gtk
     libreoffice
-    (discord.override {
+    (discord-canary.override {
       withOpenASAR = true; # can do this here too
       withVencord = true;
     })
