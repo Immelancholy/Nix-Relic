@@ -41,7 +41,7 @@
       };
 
       "hyrpland/windows" = {
-        format = "󱄅{app_id}";
+        format = " 󱄅 {app_id}";
         spacing = 0;
       };
 
