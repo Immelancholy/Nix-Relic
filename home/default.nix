@@ -144,7 +144,8 @@
   xdg.mimeApps.defaultApplications = {
     "text/plain" = ["nvim.desktop"];
     "inode/directory" = ["thunar.desktop"];
-
+    "video/mp4" = ["umpv.desktop"];
+    "video/quicktime" = ["umpv.desktop"];
 
   };
 
