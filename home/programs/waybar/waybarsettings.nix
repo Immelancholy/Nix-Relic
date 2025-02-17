@@ -197,7 +197,7 @@
       };
       "custom/cava" = {
         format = "{}";
-        exec = "~/.local/share/bin/waycava.sh stdout --stb 3 --bar 8";
+        exec = "~/.local/share/bin/waycava.sh stdout --stb 3";
         restart-interval = 1;
       };
     };
