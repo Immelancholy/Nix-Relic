@@ -39,7 +39,7 @@
         frame_width = 2;
         corner_radius = 10;
         origin = "top-right";
-        offset = "(55, 0)";
+        offset = "(55, 5)";
       };
       urgency_low = {
         background = "#1e1e2ec0";
