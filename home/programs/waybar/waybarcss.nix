@@ -17,7 +17,7 @@ window#waybar {
 }
 
 tooltip {
-    background: @crust;
+    background: @base;
     color: @text; 
     border-radius: 7px;
     border-width: 0px;
@@ -41,7 +41,7 @@ tooltip {
 
 #workspaces button.active {
     background: @mauve;
-    color: @crust;
+    color: @surface0;
     margin-left: 3px;
     padding-left: 12px;
     padding-right: 12px;
@@ -53,7 +53,7 @@ tooltip {
 
 #workspaces button:hover {
     background: @sky;
-    color: @crust;
+    color: @surface0;
     animation: ws_hover 20s ease-in-out 1;
     transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
     opacity: 95;
