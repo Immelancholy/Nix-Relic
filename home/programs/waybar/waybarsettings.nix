@@ -32,9 +32,9 @@
         "temperature"
         "memory"
         "pulseaudio"
+        "network"
         "custom/r_end"
         "custom/l_end"
-        "network"
         "tray"
         "keyboard-state"
         "custom/power"
@@ -118,6 +118,14 @@
           ];
         };
         on-click = "pavucontrol";
+      };
+      "pulseaudio#mic" = {
+        scroll-step = 1;
+        format = "{format_source}";
+        format-source = "󰍬";
+        format-source-muted = "󰍭";
+        on-click = "pavucontrol";
+        tooltip-format = "{format_source} {source_desc} // {source_volume}%";
       };
       "custom/power" = {
         format = "⏻ ";
