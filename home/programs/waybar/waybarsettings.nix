@@ -32,10 +32,14 @@
         "temperature"
         "memory"
         "pulseaudio"
+        "custom/r_end"
+        "custom/l_end"
         "network"
         "tray"
         "keyboard-state"
         "custom/power"
+        "custom/r_end"
+        "custom/padd"
       ];
 
       "hyprland/workspaces" = {
