@@ -8,8 +8,8 @@
     border-radius: 0px;
     font-family: "JetBrainsMono Nerd Font";
     font-weight: bold;
-    font-size: 9.5px;
-    min-height: 9.5px;
+    font-size: 12px;
+    min-height: 12px;
 }
 
 window#waybar {
