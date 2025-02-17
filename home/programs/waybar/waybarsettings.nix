@@ -84,10 +84,8 @@
       };
       "pulseaudio" = {
         scroll-step = 1;
-        format = "{volume}% {icon} {format_source}";
-        format-muted = " {format_source}";
-        formate-source = "{volume}% ";
-        format-source-muted = "";
+        format = "{volume}% {icon}";
+        format-muted = "";
         format-icons = {
           headphone = "";
           hands-free = "󰂑";
