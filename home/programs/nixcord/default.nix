@@ -6,7 +6,7 @@
       openASAR.enable = true;
       vencord = {
         enable = true;
-        vencord.unstable = true;
+        unstable = true;
       };
     };
 		config = {
