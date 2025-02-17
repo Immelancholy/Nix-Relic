@@ -149,7 +149,7 @@ tooltip {
     padding-left: 4px;
     padding-right: 4px;
     opacity: 0.95;
-    border-bottom: 2px solid @mauve;
+    border-bottom: 4px solid @mauve;
 }
 
 #workspaces,
