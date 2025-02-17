@@ -40,19 +40,6 @@
         };
       };
 
-      "hyprland/window" = {
-        format = "{icon}{app_id}";
-        icon-size = 10;
-        icon-theme = "󱄅";
-        spacing = 0;
-        tooltip-format = "{title}";
-        on-click = "activate";
-        on-click-middle = "close";
-        ignore-list = [
-          "Alacritty"
-        ];
-      };
-
       "keyboard-state" = {
         numlock = true;
         capslock = true;
