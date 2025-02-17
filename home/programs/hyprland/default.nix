@@ -33,5 +33,6 @@
   imports = [
     ./hyprconf
     ./rofi
+    ./wlogout.nix
   ];
 }
