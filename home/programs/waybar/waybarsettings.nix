@@ -21,7 +21,7 @@
         "custom/padd"
         "custom/l_end"
         "idle_inhibitor"
-        "cava"
+        "custom/cava"
         "clock"
         "custom/r_end"
         "custom/padd"
@@ -86,7 +86,7 @@
         format-alt = "{:%Y-%m-%d}";
       };
       "cpu" = {
-        intervel = 10;
+        interval = 10;
         format = "󰍛 {usage}%";
         format-alt = "{icon0}{icon1}{icon2}{icon3}";
         format-icons = ["▁" "▂" "▃" "▄" "▅" "▆" "▇" "█"];
@@ -98,7 +98,7 @@
           h = 60;
           m = 30;
         };
-        intervel = 30;
+        interval = 30;
         format = "󰾆 {used}GB";
         format-m = "󰾅 {used}GB";
         format-h = "󰓅 {used}GB";
@@ -125,7 +125,7 @@
         format-linked = "󰈀 {ifname} (No IP)";
         format-disconnected = "Disconnected 󰖪";
         format-alt = "<span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>";
-        intervel = 2;
+        interval = 2;
       };
       "pulseaudio" = {
         scroll-step = 1;
@@ -162,42 +162,43 @@
       #Custom padding mmodules
       "custom/l_end" = {
         format = " ";
-        intervel = "once";
+        interval = "once";
         tooltip = false;
       };
       "custom/r_end" = {
         format = " ";
-        intervel = "once";
+        interval = "once";
         tooltip = false;
       };
       "custom/sl_end" = {
         format = " ";
-        intervel = "once";
+        interval = "once";
         tooltip = false;
       };
       "custom/sr_end" = {
         format = " ";
-        intervel = "once";
+        interval = "once";
         tooltip = false;
       };
       "custom/rl_end" = {
         format = " ";
-        intervel = "once";
+        interval = "once";
         tooltip = false;
       };
       "custom/rr_end" = {
         format = " ";
-        intervel = "once";
+        interval = "once";
         tooltip = false;
       };
       "custom/padd" = {
         format = " ";
-        intervel = "once";
+        interval = "once";
         tooltip = false;
       };
-      "cava" = {
+      "custom/cava" = {
         format = "{}";
-        exec = "~/.local/share/bin/waycava.sh";
+        exec = "waycava.sh waybar";
+        restart-interval = 1;
       };
     };
   };
