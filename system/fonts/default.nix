@@ -9,10 +9,12 @@
     		powerline
     		powerline-symbols
     		nerd-fonts.jetbrains-mono
-		nerd-fonts.caskaydia-cove
-		nerd-fonts.fantasque-sans-mono
-		nerd-fonts.symbols-only
-		nerd-fonts.sauce-code-pro
+        nerd-fonts.caskaydia-cove
+        nerd-fonts.fantasque-sans-mono
+        nerd-fonts.symbols-only
+        nerd-fonts.sauce-code-pro
+        font-awesome
+        roboto
   	];
   };
 }

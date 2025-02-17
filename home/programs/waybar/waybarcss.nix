@@ -8,10 +8,10 @@
 
 window#waybar {
     background-color: rgba(43, 48, 59, 0.5);
+    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
     color: #ffffff;
-    border-radius: 14px;
-    opacity: 0.8;
-    border 3px solid #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
 }
 
 window#waybar.hidden {
