@@ -38,6 +38,8 @@
         highlight = "#89b4fac0";
         frame_width = 2;
         corner_radius = 10;
+        width = 500;
+        height = 250;
       };
       urgency_low = {
         background = "#1e1e2ec0";
