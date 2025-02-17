@@ -115,7 +115,7 @@
     teams-for-linux
     retroarch-free
     qalculate-gtk
-    librewolf
+    libreoffice
   ];
   
   programs.zoxide = {
