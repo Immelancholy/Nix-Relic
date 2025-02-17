@@ -40,7 +40,7 @@ tooltip {
 }
 
 #workspaces button.active {
-    background: alpha(@mauve, 0.95);
+    background: alpha(@mauve, 0.92);
     color: @surface0;
     margin-left: 3px;
     padding-left: 12px;
@@ -51,7 +51,7 @@ tooltip {
 }
 
 #workspaces button:hover {
-    background: alpha(@sky, 0.95);
+    background: alpha(@sky, 0.92);
     color: @surface0;
     animation: ws_hover 20s ease-in-out 1;
     transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
