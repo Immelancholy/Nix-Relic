@@ -142,7 +142,6 @@ tooltip {
 
 #custom-cava {
   color: @text;
-  background: alpha(@base, 0.8);
 }
   '';
 }
