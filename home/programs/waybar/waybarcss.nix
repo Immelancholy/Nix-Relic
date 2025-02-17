@@ -4,6 +4,8 @@
   ];
   programs.waybar.style = '' 
  * {
+    border: none;
+    border-radius: 0px;
     font-family: "JetBrainsMono Nerd Font";
     font-weight: bold;
     font-size: 10px;
@@ -15,11 +17,10 @@ window#waybar {
 }
 
 tooltip {
-    border-radius: 2px;
     background: alpha(@mantle, 0.8);
     color: @text; 
     border-radius: 7px;
-    border-width: 0px;
+    border-width: 2px;
 }
 
 
