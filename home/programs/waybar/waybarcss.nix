@@ -13,7 +13,13 @@
 }
 
 window#waybar {
-    background: @base;
+    background: transparent;
+}
+tooltip {
+    background: @crust;
+    color: @text; 
+    border-radius: 7px;
+    border-width: 0px;
 }
 
 window#waybar.hidden {
