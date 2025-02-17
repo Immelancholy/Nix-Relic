@@ -50,6 +50,12 @@
     indicator = true;
   };
 
+  systemd.user.units = {
+    pipewire.enable = true;
+    wireplumber.enable = true;
+    nm-applet.enable = true;
+  };
+  
   services.mullvad-vpn.enable = true;
   services.mullvad-vpn.package = pkgs.mullvad-vpn;
 }
