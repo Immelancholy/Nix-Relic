@@ -21,6 +21,7 @@
       modules-right = [
         "mpd"
         "cpu"
+        "temperature"
         "memory"
         "pulseaudio"
         "network"
@@ -83,8 +84,25 @@
           deactivated = "";
         };
       };
-      tray = {
+      "tray" = {
         spacing = 10;
+      };
+      "clock" = {
+        tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
+        format-alt = "{:%Y-%m-%d}";
+      };
+      "cpu" = {
+        format = "{usage}%";
+        tooltip = false;
+      };
+      "temperature" = {
+        critical-threshold = 80;
+        format = "{temperatureC}°C {icon}";
+        format-icons = [
+          "" 
+          "" 
+          ""
+        ];
       };
     };
   };
