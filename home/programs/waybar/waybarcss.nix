@@ -18,10 +18,10 @@ window#waybar {
 
 tooltip {
     background: alpha(@mantle, 0.8);
-    border-bottom: 5px solid #ffffff;
     color: @text; 
     border-radius: 7px;
     border-width: 0px;
+    border: 5px;
 }
 
 
