@@ -43,6 +43,12 @@
       "hyprland/window" = {
         format = " 󱄅 {app_id}";
         spacing = 0;
+        tooltip-format = "{title}";
+        on-click = "activate";
+        on-click-middle = "close";
+        ignore-list = [
+          "Alacritty"
+        ];
       };
 
       "keyboard-state" = {
