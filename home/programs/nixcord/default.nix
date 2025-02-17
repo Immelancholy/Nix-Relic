@@ -3,9 +3,9 @@
 		enable = true;
 		discord = {
       package = pkgs.discord-canary;
+      openASAR.enable = true;
       vencord = {
         enable = true;
-        openASAR.enable = true;
         vencord.unstable = true;
       };
     };
