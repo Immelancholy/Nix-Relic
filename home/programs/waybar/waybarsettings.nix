@@ -196,16 +196,8 @@
         tooltip = false;
       };
       "cava" = {
-        cava_config = "$XDG_CONFIG_HOME/cava/config";
-        framerate = 144;
-        sensitivity = 100;
-        bars = 8;
-        method = "pipewire";
-        souce = "virtual_cable";
-        stereo = true;
-        monstercat = true;
-        waves = false;
-        format-icons = ["▁" "▂" "▃" "▄" "▅" "▆" "▇" "█" ];
+        format = "{}";
+        exec = "~/.local/share/bin/waycava.sh";
       };
     };
   };
