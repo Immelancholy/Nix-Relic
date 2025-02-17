@@ -6,7 +6,6 @@
  * {
     border: none;
     border-radius: 0px;
-    border-bottom: 5px solid #ffffff;
     font-family: "JetBrainsMono Nerd Font";
     font-weight: bold;
     font-size: 10px;
@@ -19,6 +18,7 @@ window#waybar {
 
 tooltip {
     background: alpha(@mantle, 0.8);
+    border-bottom: 5px solid #ffffff;
     color: @text; 
     border-radius: 7px;
     border-width: 0px;
