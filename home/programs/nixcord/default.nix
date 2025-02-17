@@ -2,6 +2,7 @@
 	programs.nixcord = {
 		enable = true;
 		discord = {
+      enable = true;
       package = pkgs.discord-canary;
       openASAR.enable = true;
       vencord = {
