@@ -38,8 +38,9 @@
         highlight = "#89b4fac0";
         frame_width = 2;
         corner_radius = 10;
-        width = 500;
-        height = 250;
+        icon_size = 256;
+        width = 640;
+        height = 320;
       };
       urgency_low = {
         background = "#1e1e2ec0";
