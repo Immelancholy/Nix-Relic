@@ -37,10 +37,10 @@
         system = "x86_64-linux";
         specialArgs = {inherit inputs;};
         modules = [
-	  solaar.nixosModules.default
+          solaar.nixosModules.default
           ./system
           catppuccin.nixosModules.catppuccin
-	  nixos-hardware.nixosModules.lenovo-legion-t526amr5
+          nixos-hardware.nixosModules.lenovo-legion-t526amr5
 
 
           home-manager.nixosModules.home-manager
@@ -57,7 +57,7 @@
                 ./home
                 catppuccin.homeManagerModules.catppuccin
                 inputs.nixcord.homeManagerModules.nixcord
-		nvf.homeManagerModules.default
+                nvf.homeManagerModules.default
               ];
             };
             # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
