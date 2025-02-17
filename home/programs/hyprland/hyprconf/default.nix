@@ -2,7 +2,7 @@
   wayland.windowManager.hyprland.settings = {
     "$scr" = "$HOME/.local/share/bin/";
     "$term" = "kitty";
-    "$files" = "$term sh $scr/yazi.sh";
+    "$files" = "thunar";
     "$mod" = "SUPER";
     "$menu" = "rofi -show drun";
     "$browser" = "zen";
