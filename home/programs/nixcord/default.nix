@@ -38,7 +38,7 @@
         moreCommands.enable = true;
         moreKaomoji.enable = true;
         moyai.enable = true;
-        mutualGroups.enable = true;
+        mutualGroupDMs.enable = true;
         oneko.enable = true;
         openInApp.enable = true;
         permissionsViewer.enable = true;
