@@ -6,6 +6,7 @@
  * {
     border: none;
     border-radius: 0px;
+    border-bottom: 0px solid #ffffff;
     font-family: "JetBrainsMono Nerd Font";
     font-weight: bold;
     font-size: 10px;
