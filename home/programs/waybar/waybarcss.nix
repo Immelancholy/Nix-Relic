@@ -4,8 +4,6 @@
   ];
   programs.waybar.style = '' 
  * {
-    border: none;
-    border-radius: 0px;
     font-family: "JetBrainsMono Nerd Font";
     font-weight: bold;
     font-size: 10px;
