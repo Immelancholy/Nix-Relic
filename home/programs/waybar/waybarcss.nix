@@ -20,7 +20,7 @@ tooltip {
     background: alpha(@mantle, 0.8);
     color: @text; 
     border-radius: 7px;
-    border-width: 2px;
+    border-width: 0px;
 }
 
 
@@ -149,8 +149,6 @@ tooltip {
     padding-left: 4px;
     padding-right: 4px;
     opacity: 0.95;
-    border-radius: 7px;
-    border-width: 2px;
 }
 
 #workspaces,
