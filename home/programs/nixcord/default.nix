@@ -60,10 +60,11 @@
         reverseImageSearch.enable = true;
         showHiddenChannels.enable = true;
         showHiddenThings.enable = true;
-        spotifyControls.enable = true;
         spotifyCrack.enable = true;
         spotifyShareCommands.enable = true;
         typingTweaks.enable = true;
+        voiceChatDoubleClick.enable = true;
+        vencordToolbox.enable = true;
       };
     };
 	};
