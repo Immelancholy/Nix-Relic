@@ -83,6 +83,7 @@
         format-alt = "{ifname}: {ipaddr}/{cidr}";
       };
       "pulseaudio" = {
+        spacing = 5;
         scroll-step = 1;
         format = "{volume}% {icon} {format_source}";
         format-bluetooth = "{volume}% {icon} {format_source}";
