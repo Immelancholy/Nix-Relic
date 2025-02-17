@@ -33,22 +33,22 @@
     enable = true;
     settings = {
       global = {
-        frame_color = "#89b4fad0";
+        frame_color = "#cba6f7c0";
         separator_color = "frame";
-        highlight = "#89b4fad0";
+        highlight = "#89b4fac0";
       };
       urgency_low = {
-        background = "#1e1e2ed0";
-        foreground = "#cdd6f4d0";
+        background = "#1e1e2ec0";
+        foreground = "#cdd6f4";
       };
       urgency_normal = {
-        background = "#1e1e2ed0";
-        foreground = "#cdd6f4d0";
+        background = "#1e1e2ec0";
+        foreground = "#cdd6f4";
       };
       urgency_critical = {
-        background = "#1e1e2ed0";
-        foreground = "#cdd6f4d0";
-        frame_color = "#fab387d0";
+        background = "#1e1e2ec0";
+        foreground = "#cdd6f4";
+        frame_color = "#fab387c0";
       };
     };
   };
