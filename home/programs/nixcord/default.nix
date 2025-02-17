@@ -50,7 +50,6 @@
         messageClickActions.enable = true;
         newGuildSettings.enable = true;
         noF1.enable = true;
-        pictureInPicture.enable = true;
         userMessagesPronouns.enable = true;
         reactErrorDecoder.enable = true;
         replaceGoogleSearch = {
