@@ -119,8 +119,8 @@
   };
 
   xdg.mimeApps.defaultApplications = {
-  "text/plain" = ["nvim.desktop"];
-  "inode/directory" = ["thunar.desktop"];
+    "text/plain" = ["nvim.desktop"];
+    "inode/directory" = ["thunar.desktop"];
   };
 
   home.stateVersion = "24.11";
