@@ -16,7 +16,7 @@
       "$mod, I, exec, [workspace 1 silent; float; size 854 465; move 646 605] $term sh $scr/cava.sh"
       "$mod, I, exec, [workspace 1 silent; float; size 626 638; move 10 432] $term sh $scr/btop.sh"
       "$mod, I, exec, [workspace 1 silent; float; size 400 1030; move 1510 40] $term sh $scr/neo.sh"
-      "$mod, I, exec, [workspace 1 silent; float; size 626 384; move 10 38] $term --hold fastfetch" 
+      "$mod, I, exec, [workspace 1 silent; float; size 626 382; move 10 40] $term --hold fastfetch" 
       "$mod, Delete, exec, uwsm stop"
       "$mod+Shift, 0, movetoworkspace, 10"
       ", Print, exec, grimblast --notify copysave output"
