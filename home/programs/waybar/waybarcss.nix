@@ -10,7 +10,7 @@
     font-weight: bold;
     font-size: 10px;
     min-height: 10px;
-    opacity: 1.0;
+    opacity: 0.95;
 }
 
 window#waybar {
