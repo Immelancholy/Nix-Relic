@@ -10,8 +10,7 @@
 }
 
 window#waybar {
-    background-color: @base;
-    background-opacity: 0.2;
+    background-color: shade(@base, 0.5);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
