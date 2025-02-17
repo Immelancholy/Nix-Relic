@@ -1,3 +1,5 @@
 {
-  
+  programs.waybar.style = {
+
+  };
 }
