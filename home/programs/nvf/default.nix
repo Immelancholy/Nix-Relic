@@ -107,10 +107,6 @@
             ];
           };
         };
-        assistant.copilot = {
-          enable = true;
-          cmp.enable = true;
-        };
         git.enable = true;
         terminal.toggleterm = {
           enable = true;
@@ -132,9 +128,6 @@
             };
           };
         };
-        extraLuaFiles = [
-          ./start_copilot.lua
-        ];
       };
     };
   };
