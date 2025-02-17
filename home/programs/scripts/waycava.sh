@@ -158,7 +158,7 @@ bars = ${bar_width}
 sleep_timer = 1
 [input]
 method = pipewire
-source = virtual_cable
+source = 44 
 [output]
 method = raw
 raw_target = /dev/stdout
