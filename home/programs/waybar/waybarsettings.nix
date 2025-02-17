@@ -196,7 +196,7 @@
         tooltip = false;
       };
       "cava" = {
-        cava_config = "$XDG_CONFIG_HOME/cava/config.conf}";
+        cava_config = "$XDG_CONFIG_HOME/cava/config";
         framerate = 144;
         sensitivity = 100;
         bars = 8;
