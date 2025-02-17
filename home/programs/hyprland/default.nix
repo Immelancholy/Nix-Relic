@@ -14,6 +14,7 @@
     hyprpolkitagent
     grimblast
     wl-clipboard
+    swaylock-fancy
   ];
 
   wayland.windowManager.hyprland = {
@@ -23,6 +24,14 @@
     # plugins = [
     #   inputs.hyprtasking.packages.${pkgs.system}.hyprtasking
     # ];
+  };
+
+  programs.swaylock = {
+    enable = true;
+  };
+
+  programs.wlogout = {
+    enable = true;
   };
 
   imports = [
