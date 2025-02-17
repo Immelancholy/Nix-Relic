@@ -8,7 +8,6 @@
       exclusive = true;
       gtk-layer-shell = true;
       height = 28;
-      spacing = 4;
       
       modules-left = [
         "hyprland/workspaces"
