@@ -39,6 +39,12 @@
         persistent-workspaces = {
         };
       };
+
+      "hyrpland/windows" = {
+        format = "󱄅{app_id}";
+        spacing = 0;
+      };
+
       "keyboard-state" = {
         numlock = true;
         capslock = true;
