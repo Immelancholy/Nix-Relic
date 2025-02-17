@@ -18,10 +18,16 @@
         "custom/padd"
       ];
       modules-center = [
+        "custom/padd"
+        "custom/l_end"
         "idle_inhibitor"
         "clock"
+        "custom/r_end"
+        "custom/padd"
       ];
       modules-right = [
+        "custom/padd"
+        "custom/l_end"
         "cpu"
         "temperature"
         "memory"
