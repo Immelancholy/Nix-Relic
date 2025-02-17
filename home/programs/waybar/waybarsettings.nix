@@ -2,7 +2,12 @@
   programs.waybar.settings = {
     mainBar = {
       layer = "top";
-      height = 30;
+      position = "top";
+      mode = "dock";
+      passthrough = true;
+      exclusive = true;
+      gtk-layer-shell = true;
+      height = 38;
       spacing = 4;
       
       modules-left = [
