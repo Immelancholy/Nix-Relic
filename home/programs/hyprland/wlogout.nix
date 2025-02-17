@@ -1,4 +1,4 @@
-{
+{ lib, ... }: {
   programs.wlogout = {
     enable = true;
     layout = [
@@ -34,24 +34,25 @@
       }
 
       window {
-        background-color: rgba(12, 12, 12, 0.9);
+        background-color: rgba(30, 30, 46, 0.90);
       }
 
       button {
         border-radius: 0;
-        border-color: black;
-          text-decoration-color: #FFFFFF;
-        color: #FFFFFF;
-          background-color: #1E1E1E;
-          border-style: solid;
-          border-width: 1px;
-          background-repeat: no-repeat;
-          background-position: center;
-          background-size: 25%;
+        border-color: #cba6f7;
+        text-decoration-color: #cdd6f4;
+        color: #cdd6f4;
+        background-color: #181825;
+        border-style: solid;
+        border-width: 1px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 25%;
       }
 
       button:focus, button:active, button:hover {
-        background-color: #3700B3;
+        /* 20% Overlay 2, 80% mantle */
+        background-color: rgb(48, 50, 66);
         outline-style: none;
       }
 
