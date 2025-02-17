@@ -149,6 +149,8 @@ tooltip {
     padding-left: 4px;
     padding-right: 4px;
     opacity: 0.95;
+    border-radius: 7px;
+    border-width: 2px;
 }
 
 #workspaces,
