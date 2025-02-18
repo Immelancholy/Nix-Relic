@@ -192,7 +192,9 @@
                 key = "f";
               }
               {
-                action = "Telescope app";
+                action = {
+                  __raw = "function(path) vim.cmd('cd /etc/nixos/home/programs/ | Telescope find_files') end";
+                };
                 desc = " Apps";
                 group = "DiagnosticHint";
                 key = "a";
