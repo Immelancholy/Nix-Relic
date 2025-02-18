@@ -1,5 +1,4 @@
 { pkgs, inputs, ... }: {
-
 	programs.nixvim = {
     enable = true;
     globals.mapleader = " ";
@@ -86,7 +85,24 @@
       cmp-treesitter.enable = true;
       cmp-nvim-lua.enable = true;
       bufdelete.enable = true;
-      treesitter.enable = true;
+      treesitter = {
+        enable = true;
+        grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+          bash
+          json
+          lua
+          make
+          markdown
+          nix
+          regex
+          toml
+          vim
+          vimdoc
+          xml
+          yaml
+          nix
+        ];
+      };
       treesitter-context.enable = true;
       treesitter-refactor.enable = true;
       treesitter-textobjects.enable = true;
@@ -110,11 +126,6 @@
         servers = {
           nixd.enable = true;
           hyprls.enable = true;
-          # rust_analyzer = {
-          #   enable = true;
-          #   installCargo = true;
-          #   installRustc = true;
-          # };
           lua_ls.enable = true;
           pylyzer.enable = true;
         };
