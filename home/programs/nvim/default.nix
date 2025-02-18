@@ -1,7 +1,6 @@
 { pkgs, inputs, ... }: {
 	programs.nixvim = {
     enable = true;
-    lz-n.enable = true;
     globals.mapleader = " ";
 		colorschemes.catppuccin.enable = true;
 		colorscheme = "catppuccin-mocha";
@@ -10,6 +9,7 @@
     withPerl = true;
     luaLoader.enable = true;
 		plugins = {
+      lz-n.enable = true;
 			lualine.enable = true;
 			snacks = {
       enable = true;
