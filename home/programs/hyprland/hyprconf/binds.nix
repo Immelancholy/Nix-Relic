@@ -110,7 +110,7 @@
         hyprtasking {
             layout = grid
 
-            gap_size = 10
+            gap_size = 15
             rounded_gaps = true;
             bg_color = 0x11111b
             border_size = 4
