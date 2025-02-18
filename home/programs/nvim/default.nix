@@ -154,7 +154,11 @@
       nix-develop.enable = true;
       web-devicons.enable = true;
       smear-cursor.enable = true;
-      which-key.enable = true;
+      which-key = {
+        lazy = false;
+        autoLoad = true;
+        enable = true;
+      };
       telescope = {
         enable = true;
         extensions = {
