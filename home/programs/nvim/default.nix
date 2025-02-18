@@ -165,7 +165,7 @@
       lsp-status = {
         autoLoad = true;
         enable = true;
-        setting = {
+        settings = {
           diagnostics = true;
           indicator_errors = "";
           indicator_hint = "❗";
