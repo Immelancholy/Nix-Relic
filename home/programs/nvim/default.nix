@@ -53,29 +53,29 @@
           };
         };
 			};
-			blink-cmp = {
-        enable = true;
-        settings = {
-          sources = {
-            default = [ "lsp" "path" "buffer" "snippets" ];
-            providers = {
-              lsp = {
-                name = "lsp";
-                enabled = true;
-                module = "blink.cmp.sources.lsp";
-              };
-              snippets = {
-                name = "snippets";
-                enabled = true;
-                module = "blink.cmp.sources.snippets";
-              };
-            };
-          };
-          keymap = {
-            preset = "super-tab";
-          };
-        };
-      };
+			# blink-cmp = {
+			#      enable = true;
+			#      settings = {
+			#        sources = {
+			#          default = [ "lsp" "path" "buffer" "snippets" ];
+			#          providers = {
+			#            lsp = {
+			#              name = "lsp";
+			#              enabled = true;
+			#              module = "blink.cmp.sources.lsp";
+			#            };
+			#            snippets = {
+			#              name = "snippets";
+			#              enabled = true;
+			#              module = "blink.cmp.sources.snippets";
+			#            };
+			#          };
+			#        };
+			#        keymap = {
+			#          preset = "super-tab";
+			#        };
+			#      };
+			#    };
       nvim-autopairs.enable = true;
       yanky.enable = true;
       # blink-cmp-dictionary.enable = true;
@@ -96,19 +96,19 @@
         };
       };
       cmp-async-path.enable = true;
-      # cmp-cmdline.enable = true;
-      # cmp-buffer.enable = true;
-      # cmp-dap.enable = true;
-      # cmp-dictionary.enable = true;
-      # cmp-nvim-lsp.enable = true;
-      # cmp-nvim-lsp-document-symbol.enable = true;
-      # cmp-nvim-lsp-signature-help.enable = true;
-      # cmp-spell.enable = true;
-      # cmp_luasnip.enable = true;
-      # cmp_yanky.enable = true;
-      # cmp-treesitter.enable = true;
-      # cmp-nvim-lua.enable = true;
-      # bufdelete.enable = true;
+      cmp-cmdline.enable = true;
+      cmp-buffer.enable = true;
+      cmp-dap.enable = true;
+      cmp-dictionary.enable = true;
+      cmp-nvim-lsp.enable = true;
+      cmp-nvim-lsp-document-symbol.enable = true;
+      cmp-nvim-lsp-signature-help.enable = true;
+      cmp-spell.enable = true;
+      cmp_luasnip.enable = true;
+      cmp_yanky.enable = true;
+      cmp-treesitter.enable = true;
+      cmp-nvim-lua.enable = true;
+      bufdelete.enable = true;
       treesitter = {
         enable = true;
         nixGrammars = true;
