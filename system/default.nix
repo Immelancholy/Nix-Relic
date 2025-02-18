@@ -13,7 +13,10 @@
   services.input-remapper.enable = true;
 
   networking.hostName = "nixos";
-  networking.firewall.enable = true;
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [ 3389 ];
+  };
   networking.networkmanager.enable = true;
 
   time.timeZone = "Europe/London";
