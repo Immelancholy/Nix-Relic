@@ -155,7 +155,7 @@
       web-devicons.enable = true;
       smear-cursor.enable = true;
       which-key = {
-        lazyLoad = false;
+        lazyLoad.enable = false;
         autoLoad = true;
         enable = true;
         settings = {
