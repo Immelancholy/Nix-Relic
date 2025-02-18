@@ -316,13 +316,7 @@
       }
       {
         action = {
-          __raw = ''
-            if vim.bo.filetype == "dasboard" then
-              vim.cmd('qa')
-            else
-              vim.cmd('Dashboard')
-            end
-          '';
+          __raw = "if vim.bo.filetype == 'dasboard' then vim.cmd('qa') else vim.cmd('Dashboard') end";
         };
         key = "<leader>q";
         options.desc = "Return to Dashboard";
