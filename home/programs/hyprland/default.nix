@@ -18,9 +18,9 @@
     enable = true;
     package = null;
     portalPackage = null;
-    # plugins = [
-    #   inputs.hyprtasking.packages.${pkgs.system}.hyprtasking
-    # ];
+    plugins = [
+      inputs.hyprtasking.packages.${pkgs.system}.hyprtasking
+    ];
   };
 
   programs.swaylock = {
