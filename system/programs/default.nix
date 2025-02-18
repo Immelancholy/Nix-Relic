@@ -38,6 +38,7 @@
     networkmanagerapplet
     (pkgs.ffmpeg-full.override { withUnfree = true; withOpengl = true; withRtmp = true; })
     clapper
+    selectdefaultapplication
   ];
   environment.shells = with pkgs; [ zsh ];
 
