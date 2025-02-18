@@ -313,7 +313,7 @@
       }
       {
         action = "<Cmd>Dashboard<CR>";
-        key = "q";
+        key = "<leader>q";
         options.desc = "Return to Dashboard";
         mode = ["n"];
       }
