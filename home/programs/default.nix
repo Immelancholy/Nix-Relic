@@ -39,6 +39,8 @@
   home.packages = with pkgs; [
     inputs.zen-browser.packages."${system}".beta
 
+    manix
+
     # archives
     zip
     xz

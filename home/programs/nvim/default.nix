@@ -146,7 +146,17 @@
       web-devicons.enable = true;
       smear-cursor.enable = true;
       which-key.enable = true;
-      telescope.enable = true;
+      telescope = {
+        enable = true;
+        extensions = {
+          file-browser.enable = true;
+          fzf-native.enable = true;
+          live-grep-args.enable = true;
+          ui-select.enable = true;
+          undo.enable = true;
+          project.enable = true;
+          manix.enable = true;
+        };
       dashboard = {
         enable = true;
         settings = {
