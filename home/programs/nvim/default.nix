@@ -32,6 +32,7 @@
     withPerl = true;
     luaLoader.enable = true;
 		plugins = {
+      barbar.enable = true;
       rustaceanvim.enable = true;
       lz-n.enable = true;
 			lualine.enable = true;
@@ -232,7 +233,6 @@
       neogit
       cmp-zsh
       vimacs
-      tabby-nvim
     ];
 		package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
     keymaps = [
