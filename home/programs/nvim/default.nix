@@ -41,8 +41,10 @@
       indent-blankline = {
         enable = true;
       };
-      chadtree.enable = true;
-
+      neo-tree = {
+        enable = true;
+        enableGitStatus = true;
+      };
 		};
 		opts = {
 			tabstop = 2;
