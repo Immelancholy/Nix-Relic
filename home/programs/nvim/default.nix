@@ -72,7 +72,13 @@
 			};
       nvim-autopairs.enable = true;
       yanky.enable = true;
-      precognition.enable = true;
+      precognition = {
+        enable = true;
+        settings = {
+          disabled_fts = [
+            "dashboard"
+          ];
+        };
       cmp = {
         autoLoad = true;
         enable = true;
@@ -149,6 +155,7 @@
       dap-go.enable = true;
       dap-python.enable = true;
       dap-ui.enable = true;
+      spider.enable = true;
       lsp = {
         enable = true;
         autoLoad = true;
