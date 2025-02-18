@@ -15,7 +15,6 @@
   networking.hostName = "nixos";
   networking.firewall = {
     enable = true;
-    allowedTCPPorts = [ 3389 ];
   };
   networking.networkmanager.enable = true;
 
