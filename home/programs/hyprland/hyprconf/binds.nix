@@ -111,8 +111,9 @@
             layout = grid
 
             gap_size = 20
+            rounded_gaps = true;
             bg_color = 0x1e1e2e
-            border_size = 5
+            border_size = 3
             exit_behavior = active interacted original hovered
 
             gestures {
