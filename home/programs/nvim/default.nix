@@ -215,7 +215,7 @@
                   __raw = "function(path) vim.cmd('cd ~/Documents/Notes | Telescope find_files') end";
                 };
                 desc = "󱓧 Notes";
-                group = "Notes";
+                group = "function";
                 key = "n";
               }
             ];
