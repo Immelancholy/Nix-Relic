@@ -1,11 +1,9 @@
 { pkgs, inputs, ... }: {
 	programs.nixvim = {
 		enable = true;
-		colorscheme = "catppuccin-mocha";
+		colorscheme.catppuccin.enable = true;
 		plugins = {
-			which-key.enable = true;
-			snacks.enable = true;
-			blink-cmp.enable = true;
+			lualine.enable = true;
 		};
 		extraPlugins = with pkgs.vimPlugins; [
 			plenary-nvim
