@@ -9,7 +9,6 @@
     hypridle
     hyprpicker
     hyprland-qtutils
-    xdg-desktop-portal-hyprland
     xdg-desktop-portal-gtk
     hyprpolkitagent
     grimblast
