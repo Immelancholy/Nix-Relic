@@ -36,7 +36,7 @@
       yanky.enable = true;
       blink-cmp-dictionary.enable = true;
       blink-cmp-git.enable = true;
-      blink-cmp-ripgrep.enable = true;
+      blink-ripgrep.enable = true;
       treesitter.enable = true;
       treesitter-context.enable = true;
       treesitter-refactor.enable = true;
@@ -64,6 +64,23 @@
       lazy.enable = true;
       indent-blankline = {
         enable = true;
+        settings = {
+          exclued = {
+            buftypes = [
+              "terminal"
+              "quickfix"
+            ];
+            filetypes = [
+              ""
+              "checkhealth"
+              "help"
+              "lspinfo"
+              "TelescopePrompt"
+              "TelescopeResults"
+              "dashboard"
+            ];
+          };
+        };
       };
       neo-tree = {
         enable = true;
