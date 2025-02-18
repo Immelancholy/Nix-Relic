@@ -1,6 +1,11 @@
 { pkgs, inputs, config, lib, ... }: {
+  nixpkgs = {
+    overlays = [
+      inputs.neovim-nightly-overlay.overlay
+    ];
   programs.neovim = {
-    package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
+    package = pkgs.neovim-nightly;
+    defaultEditor = true;
     extraPackages = with pkgs; [
       # LazyVim
       lua-language-server
