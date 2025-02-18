@@ -6,6 +6,8 @@
     pkgs.mesa-demos
     pkgs.vulkan-tools
     pkgs.libva-utils
+    pkgs.vdpauinfo
+    pkgs.driversi686Linux.vdpauinfo
   ];
 
   services.xserver.videoDrivers = [ "nvidia" ];
@@ -13,6 +15,16 @@
   hardware.graphics = {
   	enable = true;
   	enable32Bit = true;
+    extraPackages = with pkgs; [
+      libvdpau-va-gl
+      libvdpau
+      vaapiVdpau
+    ];
+    extraPackages32 = with pkgs.driversi686Linux; [
+      libvdpau-va-gl
+      libvdpau
+      vaapiVdpau     
+    ];
   };
 
   hardware.nvidia = {
