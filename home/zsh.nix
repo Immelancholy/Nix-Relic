@@ -17,7 +17,7 @@
       fastfetch = "clear; fastfetch";
       nvn = "cd /etc/nixos/; nv";
       switch = "sudo nixos-rebuild switch --flake /etc/nixos/.";
-      update = "nix flake update /etc/nixos/";
+      update = "nix flake update --flake /etc/nixos/.";
     };
 
     history.size = 10000;
