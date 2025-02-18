@@ -1,4 +1,4 @@
-{ pkgs, inputs, config, lib, ... }: {
+{ pkgs, inputs, config, lib, overlay, ... }: {
   nixpkgs = {
     overlays = [
       inputs.neovim-nightly-overlay.overlay
