@@ -6,7 +6,7 @@
 		vimAlias = true;
 		withNodeJs = true;
     withPerl = true;
-    lualoader.enable = true;
+    luaLoader.enable = true;
 		plugins = {
       lz-n.enable = true;
 			lualine.enable = true;
