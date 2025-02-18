@@ -36,7 +36,7 @@
         enable = true;
         lintersByFt = {
           nix = [
-            "nixd"
+            "nix"
           ];
         };
       };
