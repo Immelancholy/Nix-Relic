@@ -40,6 +40,10 @@
     clapper
     selectdefaultapplication
     libopus
+    (discord.override {
+      withOpenASAR = true; # can do this here too
+      withVencord = true;
+    })
   ];
   environment.shells = with pkgs; [ zsh ];
 

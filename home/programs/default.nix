@@ -116,10 +116,7 @@
     retroarch-free
     qalculate-gtk
     libreoffice
-    (discord.override {
-      withOpenASAR = true; # can do this here too
-      withVencord = true;
-    })
+
   ];
   
   programs.zoxide = {
