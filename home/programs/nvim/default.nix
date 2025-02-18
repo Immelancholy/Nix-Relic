@@ -1,6 +1,7 @@
 { pkgs, inputs, ... }: {
 	programs.nixvim = {
     enable = true;
+    lz-n.enable = true;
     globals.mapleader = " ";
 		colorschemes.catppuccin.enable = true;
 		colorscheme = "catppuccin-mocha";
@@ -60,7 +61,6 @@
       lsp-signature.enable = true;
       lsp-lines.enable = true;
       lsp-status.enable = true;
-      lazy.enable = true;
       indent-blankline = {
         enable = true;
         settings = {
