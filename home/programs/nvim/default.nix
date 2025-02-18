@@ -59,32 +59,36 @@
       cmp = {
         enable = true;
         autoEnableSources = true;
-        # settings = {
-        #   mapping = {
-        #     __raw = ''
-        #       cmp.mapping.preset.insert({
-        #         ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-        #         ['<C-f>'] = cmp.mapping.scroll_docs(4),
-        #         ['<C-Space>'] = cmp.mapping.complete(),
-        #         ['<C-e>'] = cmp.mapping.abort(),
-        #         ['<CR>'] = cmp.mapping.confirm({ select = true }),
-        #       })
-        #     '';
-        #   };
-        #   source = {
-        #     __raw = ''
-        #       cmp.config.sources({
-        #         { name = 'nvim_lsp' },
-        #         { name = 'luasnip' },
-        #         { name = 'nvim_lua' },
-        #         { name = 'async_path' },
-        #
-        #       }, {
-        #         { name = 'buffer' },
-        #       })
-        #     '';
-        #   };
-        # };
+        settings = {
+          mapping = {
+            __raw = ''
+              cmp.mapping.preset.insert({
+                ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+                ['<C-f>'] = cmp.mapping.scroll_docs(4),
+                ['<C-Space>'] = cmp.mapping.complete(),
+                ['<C-e>'] = cmp.mapping.abort(),
+                ['<CR>'] = cmp.mapping.confirm({ select = true }),
+              })
+            '';
+          };
+          sources = {
+            __raw = ''
+              require'cmp'.setup {
+                sources = {
+                  { name = 'nvim_lsp' }
+                }
+              }
+
+              -- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
+              local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+              -- An example for configuring `clangd` LSP to use nvim-cmp as a completion engine
+              require('lspconfig').clangd.setup {
+                capabilities = capabilities,
+              }
+            '';
+          };
+        };
       };
       cmp-async-path.enable = true;
       cmp-cmdline.enable = true;
