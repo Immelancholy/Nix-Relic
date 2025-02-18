@@ -108,7 +108,7 @@
 
     plugin {
         hyprtasking {
-            layout = grid
+            layout = linear 
 
             gap_size = 15
             rounded_gaps = true;
