@@ -199,7 +199,7 @@
               }
               {
                 action = {
-                  __raw = "vim.cmd('cd /etc/nixos/') | function(path) vim.cmd('Telescope find_files') end";
+                  __raw = "function(path) vim.cmd('cd /etc/nixos/ | Telescope find_files') end";
                 };
                 desc = " dotfiles";
                 group = "Number";
