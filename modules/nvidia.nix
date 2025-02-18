@@ -1,18 +1,18 @@
 { pkgs, config, lib, ... }: {
 
+    boot.blacklistedKernelModules = ["nouveau"];
+  environment.systemPackages = [
+    pkgs.nvtopPackages.full # nvtop
+    pkgs.mesa-demos
+    pkgs.vulkan-tools
+    pkgs.libva-utils
+  ];
+
   services.xserver.videoDrivers = [ "nvidia" ];
     
   hardware.graphics = {
   	enable = true;
   	enable32Bit = true;
-	  extraPackages = with pkgs; [
-	    vaapiVdpau
-  	  libvdpau
-  	  libvdpau-va-gl 
-  	  nvidia-vaapi-driver
-  	  vdpauinfo
-	    libva	
-    ];
   };
 
   hardware.nvidia = {
@@ -26,10 +26,6 @@
     # Experimental and only works on modern Nvidia GPUs (Turing or newer).
     powerManagement.finegrained = false;
       
-    #dynamicBoost.enable = true; # Dynamic Boost
-
-    nvidiaPersistenced = true;
-
     # Use the NVidia open source kernel module (not to be confused with the
     # independent third-party "nouveau" open source driver).
     # Support is limited to the Turing and later architectures. Full list of
