@@ -26,6 +26,7 @@
         };
         term_colors = true;
       };
+    };
 		colorscheme = "catppuccin";
 		vimAlias = true;
 		withNodeJs = true;
