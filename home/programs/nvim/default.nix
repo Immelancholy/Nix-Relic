@@ -2,8 +2,31 @@
 	programs.nixvim = {
     enable = true;
     globals.mapleader = " ";
-		colorschemes.catppuccin.enable = true;
-		colorscheme = "catppuccin-mocha";
+    colorschemes.catppuccin = {
+      enable = true;
+      settings = {
+        flavour = "mocha";
+        integrations = {
+          cmp = true;
+          gitsigns = true;
+          mini = {
+            enabled = true;
+          };
+          treesitter = true;
+          neo-tree = true;
+        };
+        styles = {
+          booleans = [
+            "bold"
+            "italic"
+          ];
+          conitionals = [
+            "bold"
+          ];
+        };
+        term_colors = true;
+      };
+		colorscheme = "catppuccin";
 		vimAlias = true;
 		withNodeJs = true;
     withPerl = true;
