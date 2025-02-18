@@ -64,7 +64,7 @@
       indent-blankline = {
         enable = true;
         settings = {
-          exclued = {
+          exclude = {
             buftypes = [
               "terminal"
               "quickfix"
