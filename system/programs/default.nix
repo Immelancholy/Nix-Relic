@@ -44,6 +44,7 @@
       withOpenASAR = true; # can do this here too
       withVencord = true;
     })
+    libvlc
   ];
   environment.shells = with pkgs; [ zsh ];
 
