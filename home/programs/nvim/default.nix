@@ -56,7 +56,16 @@
       dap-go.enable = true;
       dap-python.enable = true;
       dap-ui.enable = true;
-      lsp.enable = true;
+      lsp = {
+        enable = true;
+        servers = {
+          nixd.enable = true;
+          hyprls.enable = true;
+          rust_analyzer.enable = true;
+          lua_ls.enable = true;
+          pylyzer.enable = true;
+        };
+      };
       lsp-format.enable = true;
       lsp-signature.enable = true;
       lsp-lines.enable = true;
@@ -96,7 +105,7 @@
 		extraPlugins = with pkgs.vimPlugins; [
 			plenary-nvim
       nvim-window-picker
-		];
+    ];
 		package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
     keymaps = [
       {
