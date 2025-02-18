@@ -109,6 +109,7 @@
           ];
         };
       };
+      cmp-nvim-lsp.enable = true;
       bufdelete.enable = true;
       treesitter = {
         autoLoad = true;
