@@ -61,6 +61,9 @@
       lsp-signature.enable = true;
       lsp-lines.enable = true;
       lsp-status.enable = true;
+      harpoon = {
+        enable = true;
+      };
       indent-blankline = {
         enable = true;
         settings = {
