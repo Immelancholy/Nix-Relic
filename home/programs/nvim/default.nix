@@ -198,7 +198,9 @@
                 key = "a";
               }
               {
-                action = "Telescope dotfiles";
+                action = {
+                  __raw = "function(path) vim.cmd('cd /etc/nixos/') | vim.cmd('Telescope find_files') end";
+                };
                 desc = " dotfiles";
                 group = "Number";
                 key = "d";
