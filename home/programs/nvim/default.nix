@@ -81,9 +81,9 @@
             {
               name = "buffer";
             }
-            {
-              name = "cmp_yanky";
-            }
+            # {
+            #   name = "cmp_yanky";
+            # }
             # {
             #   name = "calc";
             # }
@@ -93,9 +93,9 @@
             {
               name = "treesitter";
             }
-            {
-              name = "dap";
-            }
+            # {
+            #   name = "dap";
+            # }
             # {
             #   name = "dictionary";
             #   keyword_length = 2;
