@@ -9,7 +9,18 @@
 				enable = true;
 				lazyLoad.enable = false;
 				autoLoad = true;
+				settings = {
+					bigfile = {
+						enabled = true;
+					};
+					
+				};
 			};
+		};
+		globalOpts = {
+			tabstop = 2;
+			shiftwidth = 0;
+			softtabsop = 0;
 		};
 		extraPlugins = with pkgs.vimPlugins; [
 			plenary-nvim
