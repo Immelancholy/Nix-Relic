@@ -272,7 +272,12 @@
       };
       neo-tree = {
         enable = true;
-        enableGitStatus = true;
+        popupBorderStyle = "rounded";
+        popup.position = "20%";
+        window = { 
+          l = "open";
+          h = "close_node";
+        };
       };
 		};
 		opts = {
