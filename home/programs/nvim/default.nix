@@ -308,13 +308,13 @@
       {
         action = "<Cmd>LazyGit<CR>";
         key = "<leader>lg";
-        description = "LazyGit";
+        options.desc = "LazyGit";
         mode = ["n"];
       }
       {
         action = "<Cmd>Dashboard<CR>";
         key = "q";
-        description = "Return to Dashboard";
+        options.desc = "Return to Dashboard";
         mode = ["n"];
       }
     ];
