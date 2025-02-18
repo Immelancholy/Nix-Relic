@@ -204,8 +204,6 @@
 		opts = {
 			tabstop = 2;
 			shiftwidth = 0;
-      number = true;
-      relativenumber = true;
 		};
 		extraPlugins = with pkgs.vimPlugins; [
 			plenary-nvim
