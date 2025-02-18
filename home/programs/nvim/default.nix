@@ -1,4 +1,5 @@
 { pkgs, inputs, ... }: {
+
 	programs.nixvim = {
     enable = true;
     globals.mapleader = " ";
@@ -34,17 +35,18 @@
         enable = true;
         settings = {
           sources = {
-            default = [ "lsp" "path" "buffer" "luasnip" ];
+            default = [ "lsp" "path" "buffer" "snippets" ];
             providers = {
               lsp = {
                 name = "lsp";
                 enabled = true;
                 module = "blink.cmp.sources.lsp";
               };
-              luasnip = {
-                name = "luasnip";
+              snippets = {
+                name = "snippets";
                 enabled = true;
-                module = "blink.cmp.sources.luasnip";
+                module = "blink.cmp.sources.snippets";
+                preset = "luasnip"
               };
             };
           };
