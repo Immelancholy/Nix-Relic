@@ -1,6 +1,9 @@
-{ pkgs, inputs, config, lib, overlay, ... }: {
+{ config, lib, pkgs, ... }:
+
+{
   programs.neovim = {
-    defaultEditor = true;
+    enable = true;
+    package = pkgs.neovim-unwrapped;
     extraPackages = with pkgs; [
       # LazyVim
       lua-language-server
@@ -118,4 +121,3 @@
   # Normal LazyVim config here, see https://github.com/LazyVim/starter/tree/main/lua
   xdg.configFile."nvim/lua".source = ./lua;
 }
-
