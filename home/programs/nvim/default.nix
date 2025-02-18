@@ -9,7 +9,6 @@
     withPerl = true;
     luaLoader.enable = true;
 		plugins = {
-      lz-n.enable = true;
 			lualine.enable = true;
 			snacks = {
       enable = true;
