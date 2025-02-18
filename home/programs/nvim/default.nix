@@ -16,9 +16,41 @@
 					bigfile = {
 						enabled = true;
 					};
-					
+					notifier = {
+						enabled = true;
+						timeout = 3000;
+					};
+					quickfile = {
+						enabled = false;
+					};
+					statuscolumn = {
+						enabled = false;
+					};
+					words = {
+						debounce = 100;
+						enabled = true;
+					};
+					dashboard = {
+						enabled = true;
+					};
+					explorer = {
+						enabled = true;
+					};
+					indent = {
+						enabled = true;
+					};
+					picker = {	
+						enabled = true;
+					};
 				};
 			};
+			blink-cmp = {
+				enable = true;
+			};
+			treesitter.enable = true;
+			nix.enable = true;
+			nix-develop.enable = true;
+
 		};
 		opts = {
 			tabstop = 2;
