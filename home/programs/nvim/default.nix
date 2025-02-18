@@ -87,6 +87,7 @@
       bufdelete.enable = true;
       treesitter = {
         enable = true;
+        nixGrammers = true;
         grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
           bash
           json
@@ -102,6 +103,9 @@
           yaml
           nix
         ];
+        settings = {
+          auto_install = true;
+        };
       };
       treesitter-context.enable = true;
       treesitter-refactor.enable = true;
