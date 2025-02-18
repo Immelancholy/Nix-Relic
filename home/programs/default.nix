@@ -6,7 +6,7 @@
     ./mpd
     ./cava
     ./fastfetch
-    ./nvf
+    ./nvim
   ];
   programs.kitty = {
     enable = true;
