@@ -14,9 +14,9 @@
     
   hardware.graphics = {
   	enable = true;
-    package = with pkgs; [unstable.mesa.drivers];
+    package = pkgs.mesa.drivers;
   	enable32Bit = true;
-    package32 = with pkgs; [unstable.pkgsi686Linux.mesa.drivers];
+    package32 = pkgs.pkgsi686Linux.mesa.drivers;
     extraPackages = with pkgs; [
       libvdpau-va-gl
       libvdpau
