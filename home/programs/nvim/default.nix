@@ -228,5 +228,11 @@
         mode = ["n" "v"];
       }
     ];
+    clipboard = {
+      register = "unnamedplus";
+      providers = [
+        "wl-clipboard"
+      ];
+    };
 	};
 }
