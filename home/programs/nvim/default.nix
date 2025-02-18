@@ -1,5 +1,4 @@
 { pkgs, inputs, ... }: { 
-
 	programs.nixvim = {
     enable = true;
     globals.mapleader = " ";
