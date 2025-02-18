@@ -13,7 +13,6 @@
             enabled = true;
           };
           treesitter = true;
-          neo-tree = true;
         };
         styles = {
           booleans = [
