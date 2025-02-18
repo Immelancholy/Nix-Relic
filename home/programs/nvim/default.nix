@@ -3,4 +3,4 @@
     enable = true;
     defaultEditor = true;
   };
-};
+}
