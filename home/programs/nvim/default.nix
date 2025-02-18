@@ -76,30 +76,45 @@
               name = "nvim_lsp";
             }
             {
-              name = "luasnip";
-            }
-            {
-              name = "path";
+              name = "cmp_luasnip";
             }
             {
               name = "buffer";
             }
+            {
+              name = "cmp_yanky";
+            }
+            {
+              name = "calc";
+            }
+            {
+              name = "async_path";
+            }
+            {
+              name = "treesitter";
+            }
+            {
+              name = "dap";
+            }
+            {
+              name = "dictionary";
+              keyword_length = 2;
+            }
+            {
+              name = "zsh";
+            }
+            {
+              name = "cmdLine_history";
+            }
+            {
+              name = "fuzzy_buffer";
+            }
+            {
+              name = "fuzzy_path";
+            }
           ];
         };
       };
-      cmp-async-path.enable = true;
-      cmp-cmdline.enable = true;
-      cmp-buffer.enable = true;
-      cmp-dap.enable = true;
-      cmp-dictionary.enable = true;
-      cmp-nvim-lsp.enable = true;
-      cmp-nvim-lsp-document-symbol.enable = true;
-      cmp-nvim-lsp-signature-help.enable = true;
-      cmp-spell.enable = true;
-      cmp_luasnip.enable = true;
-      cmp_yanky.enable = true;
-      cmp-treesitter.enable = true;
-      cmp-nvim-lua.enable = true;
       bufdelete.enable = true;
       treesitter = {
         enable = true;
@@ -203,7 +218,6 @@
 			plenary-nvim
       nvim-window-picker
       neogit
-      cmp-zsh
       vimacs
     ];
 		package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
