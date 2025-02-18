@@ -9,6 +9,8 @@
     withPerl = true;
     luaLoader.enable = true;
 		plugins = {
+      rustaceanvim.enable = true;
+      rust-tools.enable = true;
       lz-n.enable = true;
 			lualine.enable = true;
 			snacks = {
@@ -61,7 +63,11 @@
         servers = {
           nixd.enable = true;
           hyprls.enable = true;
-          rust_analyzer.enable = true;
+          rust_analyzer = {
+            enable = true;
+            installCargo = true;
+            installRustc = true;
+          };
           lua_ls.enable = true;
           pylyzer.enable = true;
         };
