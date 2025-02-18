@@ -1,11 +1,5 @@
 { pkgs, inputs, config, lib, overlay, ... }: {
-  nixpkgs = {
-    overlays = [
-      inputs.neovim-nightly-overlay.overlay
-    ];
-  };
   programs.neovim = {
-    package = pkgs.neovim-nightly;
     defaultEditor = true;
     extraPackages = with pkgs; [
       # LazyVim
