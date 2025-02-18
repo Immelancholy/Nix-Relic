@@ -36,5 +36,4 @@
       vimdiffAlias = true;
       defaultEditor = true;
     };
-  };
 }

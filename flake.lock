@@ -652,6 +652,22 @@
         "type": "github"
       }
     },
+    "lazyvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1736179281,
+        "narHash": "sha256-SsFaoiJ2YysB57QHyVU/x5JF/3ILv5PsVheqHtOezec=",
+        "owner": "PaideiaDilemma",
+        "repo": "LazyVim",
+        "rev": "ad9889c5734f2da908e7edf018b1449680ea113f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "PaideiaDilemma",
+        "repo": "LazyVim",
+        "type": "github"
+      }
+    },
     "neovim-nightly-overlay": {
       "inputs": {
         "flake-compat": "flake-compat_2",
@@ -900,6 +916,7 @@
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "hyprtasking": "hyprtasking",
+        "lazyvim": "lazyvim",
         "neovim-nightly-overlay": "neovim-nightly-overlay",
         "nixcord": "nixcord",
         "nixos-hardware": "nixos-hardware",
