@@ -38,6 +38,7 @@
       blink-cmp-dictionary.enable = true;
       blink-cmp-git.enable = true;
       blink-ripgrep.enable = true;
+      blink-compat.enable = true;
       treesitter.enable = true;
       treesitter-context.enable = true;
       treesitter-refactor.enable = true;
