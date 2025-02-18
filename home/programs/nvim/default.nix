@@ -59,6 +59,7 @@
           pkgs.vimPlugins.trouble-nvim
           pkgs.vimPlugins.which-key-nvim
         ];
+      };
       #lz-n.enable = true;
       lualine.enable = true;
       snacks = {
