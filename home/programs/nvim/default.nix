@@ -58,7 +58,7 @@
       dap-ui.enable = true;
       lsp.enable = true;
       lsp-format.enable = true;
-      lsp.signature.enable = true;
+      lsp-signature.enable = true;
       lsp-lines.enable = true;
       lsp-status.enable = true;
       lazy.enable = true;
