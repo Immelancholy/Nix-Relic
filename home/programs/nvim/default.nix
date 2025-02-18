@@ -194,7 +194,7 @@
               }
             ];
             week_header = {
-              enable = true;
+              enable = false;
             };
           };
           theme = "hyper";
