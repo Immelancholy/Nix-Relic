@@ -44,7 +44,7 @@
 			nix.enable = true;
 			nix-develop.enable = true;
       cmp-nvim-lsp.enable = true;
-      web-dev-icons.enable = true;
+      web-devicons.enable = true;
 
 		};
 		opts = {
