@@ -111,7 +111,7 @@
             layout = grid
 
             gap_size = 20
-            bg_color = 0x89dcebff
+            bg_color = #b4befe
             border_size = 2
             exit_behavior = active interacted original hovered
 
