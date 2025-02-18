@@ -10,28 +10,30 @@
 			lualine.enable = true;
 			snacks = {
 				enable = true;
-				lazyLoad.enable = true;
-				settings = {
-					bigfile = {
-						enabled = true;
-					};
-					notifier = {
-						enabled = true;
-						timeout = 3000;
-					};
-					quickfile = {
-						enabled = false;
-					};
-					statuscolumn = {
-						enabled = false;
-					};
-					explorer = {
-						enabled = true;
-					};
-					picker = {	
-						enabled = true;
-					};
-				};
+        lazyLoad = {
+          enable = true;
+          settings = {
+            bigfile = {
+              enabled = true;
+            };
+            notifier = {
+              enabled = true;
+              timeout = 3000;
+            };
+            quickfile = {
+              enabled = false;
+            };
+            statuscolumn = {
+              enabled = false;
+            };
+            explorer = {
+              enabled = true;
+            };
+            picker = {	
+              enabled = true;
+            };
+          };
+        };
 			};
 			blink-cmp = {
 				enable = true;
