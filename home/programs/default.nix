@@ -120,7 +120,6 @@
       withOpenASAR = true; # can do this here too
       withVencord = true;
     })
-    discord-canary
   ];
   
   programs.zoxide = {
