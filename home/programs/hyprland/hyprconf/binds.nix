@@ -108,10 +108,10 @@
 
     plugin {
         hyprtasking {
-            layout = linear 
+            layout = grid 
 
             gap_size = 15
-            rounded_gaps = true;
+            rounded_gaps = true
             bg_color = 0x11111b
             border_size = 4
             exit_behavior = active interacted original hovered
