@@ -10,29 +10,20 @@
       lz-n.enable = true;
 			lualine.enable = true;
 			snacks = {
-				enable = true;
-        lazyLoad = {
-          enable = true;
-          settings = {
-            bigfile = {
-              enabled = true;
-            };
-            notifier = {
-              enabled = true;
-              timeout = 3000;
-            };
-            quickfile = {
-              enabled = false;
-            };
-            statuscolumn = {
-              enabled = false;
-            };
-            explorer = {
-              enabled = true;
-            };
-            picker = {	
-              enabled = true;
-            };
+      enable = true;
+        settings = {
+          bigfile = {
+            enabled = true;
+          };
+          notifier = {
+            enabled = true;
+            timeout = 3000;
+          };
+          quickfile = {
+            enabled = false;
+          };
+          statuscolumn = {
+            enabled = false;
           };
         };
 			};
@@ -50,6 +41,7 @@
       indent-blankline = {
         enable = true;
       };
+      chadtree.enable = true;
 
 		};
 		opts = {
