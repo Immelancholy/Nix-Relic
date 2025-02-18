@@ -165,29 +165,29 @@
       lsp-status = {
         autoLoad = true;
         enable = true;
-        settings = {
-          diagnostics = true;
-          indicator_errors = "";
-          indicator_hint = "❗";
-          indicator_info = "🛈";
-          indicator_ok = "";
-          indictor_separator = " ";
-          indicator_warnings = "";
-          select_symbol = "";
-          show_filename = true;
-          spinner_frames = [
-            "⣾"
-            "⣽"
-            "⣻"
-            "⢿"
-            "⡿"
-            "⣟"
-            "⣯"
-            "⣷"
-          ];
-          status_symbol = " 🇻";
-          update_interval = 100;
-        };
+      #   settings = {
+      #     diagnostics = true;
+      #     indicator_errors = "";
+      #     indicator_hint = "❗";
+      #     indicator_info = "🛈";
+      #     indicator_ok = "";
+      #     indictor_separator = " ";
+      #     indicator_warnings = "";
+      #     select_symbol = "";
+      #     show_filename = true;
+      #     spinner_frames = [
+      #       "⣾"
+      #       "⣽"
+      #       "⣻"
+      #       "⢿"
+      #       "⡿"
+      #       "⣟"
+      #       "⣯"
+      #       "⣷"
+      #     ];
+      #     status_symbol = " 🇻";
+      #     update_interval = 100;
+      #   };
       };
       lspkind = {
         enable = true;
@@ -224,6 +224,7 @@
 		opts = {
 			tabstop = 2;
 			shiftwidth = 0;
+      number = true;
 		};
 		extraPlugins = with pkgs.vimPlugins; [
 			plenary-nvim
