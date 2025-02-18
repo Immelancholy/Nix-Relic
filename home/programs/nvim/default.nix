@@ -157,6 +157,7 @@
           project.enable = true;
           manix.enable = true;
         };
+      };
       dashboard = {
         enable = true;
         settings = {
