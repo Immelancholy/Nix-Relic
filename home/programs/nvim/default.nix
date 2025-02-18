@@ -27,7 +27,7 @@
     };
 
     xdg.configFile."nvim/lua" = {
-      source = "${inputs.lazyvim}/lua";
+      source = "./lua";
     };
 
     programs.neovim = {
