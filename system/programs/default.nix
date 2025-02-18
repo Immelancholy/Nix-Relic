@@ -45,6 +45,7 @@
       withVencord = true;
     })
     libvlc
+    cachix
   ];
   environment.shells = with pkgs; [ zsh ];
 
