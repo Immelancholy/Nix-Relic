@@ -32,6 +32,9 @@
     withPerl = true;
     luaLoader.enable = true;
 		plugins = {
+      lint = {
+        enable = true;
+      };
       noice = {
         enable = true;
         autoLoad = true;
