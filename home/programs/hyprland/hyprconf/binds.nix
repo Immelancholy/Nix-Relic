@@ -110,10 +110,10 @@
         hyprtasking {
             layout = grid
 
-            gap_size = 20
+            gap_size = 10
             rounded_gaps = true;
             bg_color = 0x11111b
-            border_size = 3
+            border_size = 4
             exit_behavior = active interacted original hovered
 
             gestures {
