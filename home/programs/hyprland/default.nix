@@ -8,9 +8,7 @@
     libnotify
     hypridle
     hyprpicker
-    hyprland-qtutils
     xdg-desktop-portal-gtk
-    hyprpolkitagent
     grimblast
     wl-clipboard
     swaylock-fancy
