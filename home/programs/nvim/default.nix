@@ -34,13 +34,23 @@
         enable = true;
         settings = {
           sources = {
-            default = [ "lsp" ];
+            default = [ "lsp" "path" "buffer" "luasnip" ];
             providers = {
               lsp = {
                 name = "lsp";
+                enabled = true;
                 module = "blink.cmp.sources.lsp";
+                kind = "LSP";
+              };
+              luasnip = {
+                name = "luasnip";
+                enabled = true;
+                module = "blink.cmp.sources.luasnip";
               };
             };
+          };
+          keymap = {
+            preset = "super-tab";
           };
         };
       };
@@ -48,8 +58,11 @@
       yanky.enable = true;
       blink-cmp-dictionary.enable = true;
       blink-cmp-git.enable = true;
+      blink-cmp-spell.enable = true;
       blink-ripgrep.enable = true;
+      blink-emoji.enable = true;
       blink-compat.enable = true;
+      bufdelete.enable = true;
       treesitter.enable = true;
       treesitter-context.enable = true;
       treesitter-refactor.enable = true;
