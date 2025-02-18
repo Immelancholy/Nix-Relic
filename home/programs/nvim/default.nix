@@ -230,7 +230,6 @@
     ];
     clipboard = {
       register = "unnamedplus";
-      providers = "wl-copy";
     };
 	};
 }
