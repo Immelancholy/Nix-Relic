@@ -8,8 +8,6 @@
     shellAliases = {
       ll = "ls -l";
       edit = "sudo -e";
-      update = "sudo nixos-rebuild switch";
-      upgrade = "sudo nixos-rebuild switch --upgrade";
       nv = "/home/mela/.local/share/bin/kitty_nvim.sh";
       yazi = "/home/mela/.local/share/bin/yazi.sh";
       neo = "/home/mela/.local/share/bin/neo.sh";
@@ -17,6 +15,9 @@
       cava = "$HOME/.local/share/bin/cava.sh";
       nvim = "nv";
       fastfetch = "clear; fastfetch";
+      nvn = "cd /etc/nixos/; nv";
+      switch = "sudo nixos-rebuild switch --flake /etc/nixos/.";
+      update = "nix flake update /etc/nixos/";
     };
 
     history.size = 10000;
