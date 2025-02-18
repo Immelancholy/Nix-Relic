@@ -32,6 +32,11 @@
     };
   };
 
+  services.remmin = {
+    enable = true;
+    addRdpMimeTypeAssoc = true;
+    systemdService.enable = true;
+  };
   home.packages = with pkgs; [
     inputs.zen-browser.packages."${system}".beta
 
@@ -116,6 +121,7 @@
     retroarch-free
     qalculate-gtk
     libreoffice
+    fd
 
   ];
   

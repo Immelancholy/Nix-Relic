@@ -32,6 +32,11 @@
     withPerl = true;
     luaLoader.enable = true;
 		plugins = {
+      noice = {
+        enable = true;
+        autoLoad = true;
+      };
+      bufferline.enable = true;
       barbar.enable = true;
       rustaceanvim.enable = true;
       lz-n.enable = true;
