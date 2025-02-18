@@ -2,7 +2,6 @@
   wayland.windowManager.hyprland.settings = {
     bind = [ 
       "$mod, T, exec, $term --hold sh $scr/poke.sh"
-      "$mod, Q, killactive"
       "$mod, F, exec, $browser"
       "$mod, E, exec, $files"
       "$mod, A, exec, $menu"
@@ -112,7 +111,7 @@
             layout = grid
 
             gap_size = 20
-            bg_color = 0xff26233a
+            bg_color = 0x89dcebff
             border_size = 2
             exit_behavior = active interacted original hovered
 
