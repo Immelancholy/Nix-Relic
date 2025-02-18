@@ -1,6 +1,7 @@
 { pkgs, inputs, ... }: {
 	programs.nixvim = {
-		enable = true;
+    enable = true;
+    globals.mapleader = " ";
 		colorschemes.catppuccin.enable = true;
 		colorscheme = "catppuccin-mocha";
 		vimAlias = true;
