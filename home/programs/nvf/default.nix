@@ -115,15 +115,20 @@
         snippets.luasnip.enable = true;
         lazy = {
           enable = true;
-          plugins = {
+          plugins = with pkgs.vimPlugins; {
             "smear-cursor.nvim" = {
-              package = pkgs.vimPlugins.smear-cursor-nvim;
+              package = smear-cursor-nvim;
               setupModule = "smear_cursor";
               setupOpts = {};
             };
             "nvim-window-picker" = {
-              package = pkgs.vimPlugins.nvim-window-picker;
+              package = nvim-window-picker;
               setupModule = "window-picker";
+              setupOpts = {};
+            };
+            "harpoon" = {
+              package = harpoon2;
+              setupModule = "harpoon";
               setupOpts = {};
             };
           };
