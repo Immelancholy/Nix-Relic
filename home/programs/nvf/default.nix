@@ -125,14 +125,15 @@
               package = nvim-window-picker;
               setupModule = "window-picker";
               setupOpts = {};
-            }; 
+            };
+            "plenary.nvim" = {
+              package = plenary-nvim;
+              setupModule = "plenary";
+              setupOpts = {};
+            };
           };
         };
         extraPlugins = with pkgs.vimPlugins; {
-          "plenary.nvim" = {
-            package = plenary-nvim;
-            setup = "require('plenary').setup {}";
-          };
           harpoon2 = {
             package = harpoon2;
             setup = "require('harpoon').setup {}";
