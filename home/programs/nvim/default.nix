@@ -63,11 +63,11 @@
         servers = {
           nixd.enable = true;
           hyprls.enable = true;
-          rust_analyzer = {
-            enable = true;
-            installCargo = true;
-            installRustc = true;
-          };
+          # rust_analyzer = {
+          #   enable = true;
+          #   installCargo = true;
+          #   installRustc = true;
+          # };
           lua_ls.enable = true;
           pylyzer.enable = true;
         };
