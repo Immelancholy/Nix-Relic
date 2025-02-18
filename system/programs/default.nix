@@ -36,7 +36,7 @@
     mangohud
     heroic
     networkmanagerapplet
-    (pkgs.ffmpeg-full.override { withUnfree = true; withOpengl = true; })
+    (pkgs.ffmpeg-full.override { withUnfree = true; withOpengl = true; withRmtp = true; })
     clapper
   ];
   environment.shells = with pkgs; [ zsh ];
