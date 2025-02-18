@@ -213,7 +213,6 @@
 			tabstop = 2;
 			shiftwidth = 0;
       number = true;
-      number = true;
       relativenumber = true;
 		};
 		extraPlugins = with pkgs.vimPlugins; [
