@@ -126,7 +126,7 @@
               setupModule = "window-picker";
               setupOpts = {};
             };
-            "harpoon" = {
+            "harpoon2" = {
               package = harpoon2;
               setupModule = "harpoon";
               setupOpts = {};
