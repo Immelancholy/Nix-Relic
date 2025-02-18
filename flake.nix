@@ -21,10 +21,6 @@
     yazi.url = "github:sxyazi/yazi";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     swww.url = "github:LGFae/swww";
-    nvf = {
-      url = "github:notashelf/nvf";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     hyprland.url = "github:hyprwm/Hyprland";
     hyprtasking = {
@@ -59,7 +55,6 @@
                 ./home
                 catppuccin.homeManagerModules.catppuccin
                 inputs.nixcord.homeManagerModules.nixcord
-                nvf.homeManagerModules.default
               ];
             };
             # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
