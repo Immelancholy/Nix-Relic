@@ -40,7 +40,7 @@
       treesitter.enable = true;
       treesitter-context.enable = true;
       treesitter-refactor.enable = true;
-      treesitter-textobkect.enable = true;
+      treesitter-textobject.enable = true;
 			nix.enable = true;
 			nix-develop.enable = true;
       cmp-nvim-lsp.enable = true;
