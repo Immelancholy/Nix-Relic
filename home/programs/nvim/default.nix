@@ -26,17 +26,7 @@
 					statuscolumn = {
 						enabled = false;
 					};
-					words = {
-						debounce = 100;
-						enabled = true;
-					};
-					dashboard = {
-						enabled = true;
-					};
 					explorer = {
-						enabled = true;
-					};
-					indent = {
 						enabled = true;
 					};
 					picker = {	
@@ -47,9 +37,14 @@
 			blink-cmp = {
 				enable = true;
 			};
-			treesitter.enable = true;
+      treesitter.enable = true;
+      treesitter-context.enable = true;
+      treesitter-refactor.enable = true;
+      treesitter-textobkect.enable = true;
 			nix.enable = true;
 			nix-develop.enable = true;
+      cmp-nvim-lsp.enable = true;
+      web-dev-icons.enable = true;
 
 		};
 		opts = {
