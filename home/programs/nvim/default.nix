@@ -54,46 +54,21 @@
           };
         };
 			};
-			# blink-cmp = {
-			#      enable = true;
-			#      settings = {
-			#        sources = {
-			#          default = [ "lsp" "path" "buffer" "snippets" ];
-			#          providers = {
-			#            lsp = {
-			#              name = "lsp";
-			#              enabled = true;
-			#              module = "blink.cmp.sources.lsp";
-			#            };
-			#            snippets = {
-			#              name = "snippets";
-			#              enabled = true;
-			#              module = "blink.cmp.sources.snippets";
-			#            };
-			#          };
-			#        };
-			#        keymap = {
-			#          preset = "super-tab";
-			#        };
-			#      };
-			#    };
       nvim-autopairs.enable = true;
       yanky.enable = true;
-      # blink-cmp-dictionary.enable = true;
-      # blink-cmp-git.enable = true;
-      # blink-cmp-spell.enable = true;
-      # blink-ripgrep.enable = true;
-      # blink-emoji.enable = true;
-      # blink-compat.enable = true;
       cmp = {
         enable = true;
         autoEnableSources = true;
         settings = {
-          sources = [
-            { name = "nvim_lsp"; }
-            { name = "path"; }
-            { name = "buffer"; }
-          ];
+          __raw = ''
+            cmp.config.sources({
+              { name = 'nvim_lsp' },
+              { name = 'luasnip' },
+              { name = 'nvim_lua' },
+            }, {
+              { name = 'buffer' },
+            })
+          '';
         };
       };
       cmp-async-path.enable = true;
@@ -195,6 +170,9 @@
         cmp.enable = true;
       };
       harpoon = {
+        enable = true;
+      };
+      mini = {
         enable = true;
       };
       indent-blankline = {
