@@ -20,7 +20,7 @@
       "$mod, Delete, exec, uwsm stop"
       "$mod+Shift, 0, movetoworkspace, 10"
       ", Print, exec, grimblast --notify copysave output"
-      "$mod, L, exec, swaylock-fancy"
+      "Alt, L, exec, swaylock-fancy"
     ]
     ++ (
         # workspaces
@@ -51,10 +51,10 @@
     bind = $mod, M, exec,[workspace 4 silent] $scr/patch.sh
     bind = $mod, M, exec,[workspace 4 silent] qpwgraph
 
-    bind = $mod, H, movefocus, l
-    bind = $mod, L, movefocus, r
-    bind = $mod, K, movefocus, u
-    bind = $mod, J, movefocus, d
+    #bind = $mod, H, movefocus, l
+    #bind = $mod, L, movefocus, r
+    #bind = $mod, K, movefocus, u
+    #bind = $mod, J, movefocus, d
     bind = Alt, Tab, movefocus, d
     bind = $mod, Left, movefocus, l
     bind = $mod, Right, movefocus, r
@@ -106,5 +106,43 @@
     bindd = $mod+Shift, P,Color Picker , exec, hyprpicker -a # Pick color (Hex) >> clipboard#
 
     bind = , XF86Calculator, exec, qalculate-gtk
+    bind = SUPER, tab, hyprtasking:toggle, cursor
+    bind = SUPER, space, hyprtasking:toggle, all
+
+    bind = SUPER, X, hyprtasking:killhovered
+
+    bind = SUPER, H, hyprtasking:move, left
+    bind = SUPER, J, hyprtasking:move, down
+    bind = SUPER, K, hyprtasking:move, up
+    bind = SUPER, L, hyprtasking:move, right
+
+    plugin {
+        hyprtasking {
+            layout = grid
+
+            gap_size = 20
+            bg_color = 0xff26233a
+            border_size = 4
+            exit_behavior = active interacted original hovered
+
+            gestures {
+                enabled = true
+                open_fingers = 3
+                open_distance = 300
+                open_positive = true
+            }
+
+            grid {
+                rows = 3
+                cols = 3
+            }
+
+            linear {
+                height = 400
+                scroll_speed = 1.1
+                blur = 0
+            }
+        }
+    }
   '';
 }
