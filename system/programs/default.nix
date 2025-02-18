@@ -39,6 +39,7 @@
     (pkgs.ffmpeg-full.override { withUnfree = true; withOpengl = true; withRtmp = true; })
     clapper
     selectdefaultapplication
+    libopus
   ];
   environment.shells = with pkgs; [ zsh ];
 
