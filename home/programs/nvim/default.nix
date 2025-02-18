@@ -32,6 +32,17 @@
 			};
 			blink-cmp = {
         enable = true;
+        settings = {
+          sources = {
+            default = [ "lsp" ];
+            providers = {
+              lsp = {
+                name = "lsp";
+                module = "blink.cmp.sources.lsp";
+              };
+            };
+          };
+        };
       };
       nvim-autopairs.enable = true;
       yanky.enable = true;
