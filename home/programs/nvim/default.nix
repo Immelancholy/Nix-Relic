@@ -10,8 +10,7 @@
 			lualine.enable = true;
 			snacks = {
 				enable = true;
-				lazyLoad.enable = false;
-				autoLoad = true;
+				lazyLoad.enable = true;
 				settings = {
 					bigfile = {
 						enabled = true;
@@ -43,8 +42,8 @@
       treesitter-textobjects.enable = true;
 			nix.enable = true;
 			nix-develop.enable = true;
-      cmp-nvim-lsp.enable = true;
       web-devicons.enable = true;
+      smear-cursor.enable = true;
 
 		};
 		opts = {
