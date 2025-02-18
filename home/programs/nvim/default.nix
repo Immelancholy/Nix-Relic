@@ -5,6 +5,11 @@
 		colorscheme = "catppuccin-mocha";
 		plugins = {
 			lualine.enable = true;
+			snacks = {
+				enable = true;
+				lazyLoad.enable = false;
+				autoLoad = true;
+			};
 		};
 		extraPlugins = with pkgs.vimPlugins; [
 			plenary-nvim
