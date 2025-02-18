@@ -47,10 +47,9 @@
 			nix-develop.enable = true;
       web-devicons.enable = true;
       smear-cursor.enable = true;
-      nvim-tree = {
+      indent-blankline = {
         enable = true;
       };
-      indent-blankline.enable = true;
 
 		};
 		opts = {
