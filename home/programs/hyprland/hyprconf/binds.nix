@@ -20,7 +20,7 @@
       "$mod, Delete, exec, uwsm stop"
       "$mod+Shift, 0, movetoworkspace, 10"
       ", Print, exec, grimblast --notify copysave output"
-      "$mod, tab, L, exec, swaylock-fancy"
+      "$mod, L, exec, swaylock-fancy"
     ]
     ++ (
         # workspaces
