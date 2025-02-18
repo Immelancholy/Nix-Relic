@@ -3,6 +3,9 @@
 		enable = true;
 		colorschemes.catppuccin.enable = true;
 		colorscheme = "catppuccin-mocha";
+		vimAlias = true;
+		withNodeJS = true;
+		withPerl = true;
 		plugins = {
 			lualine.enable = true;
 			snacks = {
@@ -17,7 +20,7 @@
 				};
 			};
 		};
-		globalOpts = {
+		opts = {
 			tabstop = 2;
 			shiftwidth = 0;
 		};
