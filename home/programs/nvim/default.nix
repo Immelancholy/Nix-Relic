@@ -56,12 +56,35 @@
       };
       nvim-autopairs.enable = true;
       yanky.enable = true;
-      blink-cmp-dictionary.enable = true;
-      blink-cmp-git.enable = true;
-      blink-cmp-spell.enable = true;
-      blink-ripgrep.enable = true;
-      blink-emoji.enable = true;
-      blink-compat.enable = true;
+      # blink-cmp-dictionary.enable = true;
+      # blink-cmp-git.enable = true;
+      # blink-cmp-spell.enable = true;
+      # blink-ripgrep.enable = true;
+      # blink-emoji.enable = true;
+      # blink-compat.enable = true;
+      cmp = {
+        enable = true;
+        autoEnableSources = true;
+        settings = {
+          sources = [
+            { name = "nvim_lsp"; }
+            { name = "path"; }
+            { name = "buffer"; }
+          ];
+        };
+      };
+      cmp-async-path.enable = true;
+      cmp-cmdline.enable = true;
+      cmp-buffer.enable = true;
+      cmp-dap.enable = true;
+      cmp-dictionary.enable = true;
+      cmp-nvim-lsp.enable = true;
+      cmp-nvim-lsp-document-symbol.enable = true;
+      cmp-spell.enable = true;
+      cmp_luasnip.enable = true;
+      cmp_yanky.enable = true;
+      cmp-treesitter.enable = true;
+      cmp-nvim-lua.enable = true;
       bufdelete.enable = true;
       treesitter.enable = true;
       treesitter-context.enable = true;
