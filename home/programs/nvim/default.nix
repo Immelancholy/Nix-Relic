@@ -51,8 +51,9 @@
       rustaceanvim.enable = true;
       lz-n.enable = true;
 			lualine.enable = true;
-			snacks = {
-      enable = true;
+      snacks = {
+        autoLoad = true;
+        enable = true;
         settings = {
           bigfile = {
             enabled = true;
@@ -73,6 +74,7 @@
       yanky.enable = true;
       precognition.enable = true;
       cmp = {
+        autoLoad = true;
         enable = true;
         autoEnableSources = true;
         settings = {
