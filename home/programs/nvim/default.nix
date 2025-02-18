@@ -40,6 +40,9 @@
 			nix-develop.enable = true;
       web-devicons.enable = true;
       smear-cursor.enable = true;
+      which-key.enable = true;
+      telescope.enable = true;
+      dashboard.enable = true;
       indent-blankline = {
         enable = true;
       };
