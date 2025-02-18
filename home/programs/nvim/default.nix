@@ -79,6 +79,7 @@
             "dashboard"
           ];
         };
+      };
       cmp = {
         autoLoad = true;
         enable = true;
@@ -212,7 +213,8 @@
 			tabstop = 2;
 			shiftwidth = 0;
       linenumber = true;
-      relativelinenumber = true;
+      number = true;
+      relativenumber = true;
 		};
 		extraPlugins = with pkgs.vimPlugins; [
 			plenary-nvim
