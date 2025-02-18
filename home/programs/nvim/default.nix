@@ -3,6 +3,7 @@
     overlays = [
       inputs.neovim-nightly-overlay.overlay
     ];
+  };
   programs.neovim = {
     package = pkgs.neovim-nightly;
     defaultEditor = true;
