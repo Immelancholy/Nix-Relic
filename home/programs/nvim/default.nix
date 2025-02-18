@@ -309,6 +309,13 @@
         action = "<Cmd>LazyGit<CR>";
         key = "<leader>lg";
         desc = "LazyGit";
+        mode = ["n"];
+      }
+      {
+        action = "<Cmd>Dashboard<CR>";
+        key = "q";
+        desc = "Return to Dashboard";
+        mode = ["n"];
       }
     ];
     clipboard = {
