@@ -26,9 +26,9 @@
         term_colors = true;
       };
     };
-		colorscheme = "catppuccin";
-		vimAlias = true;
-		withNodeJs = true;
+    colorscheme = "catppuccin";
+    vimAlias = true;
+    withNodeJs = true;
     withPerl = true;
     luaLoader.enable = true;
 		plugins = {
