@@ -84,7 +84,7 @@
         #       })
         #     '';
         #   };
-        };
+        # };
       };
       cmp-async-path.enable = true;
       cmp-cmdline.enable = true;
