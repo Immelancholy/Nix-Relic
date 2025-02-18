@@ -1,5 +1,10 @@
-{ pkgs, inputs, lib, ... }: { 
-	programs.nixvim = {
+{
+  pkgs,
+  inputs,
+  lib,
+  ...
+}: {
+  programs.nixvim = {
     enable = true;
     globals.mapleader = " ";
     colorschemes.catppuccin = {
@@ -31,7 +36,7 @@
     withNodeJs = true;
     withPerl = true;
     luaLoader.enable = true;
-		plugins = {
+    plugins = {
       lint = {
         enable = true;
         lintersByFt = {
@@ -48,8 +53,9 @@
       bufferline.enable = true;
       barbar.enable = true;
       rustaceanvim.enable = true;
-      lz-n.enable = true;
-			lualine.enable = true;
+      lazy.enable = true;
+      #lz-n.enable = true;
+      lualine.enable = true;
       snacks = {
         autoLoad = true;
         enable = true;
@@ -68,7 +74,7 @@
             enabled = false;
           };
         };
-			};
+      };
       nvim-autopairs.enable = true;
       yanky.enable = true;
       precognition = {
@@ -144,8 +150,8 @@
       treesitter-context.enable = true;
       treesitter-refactor.enable = true;
       treesitter-textobjects.enable = true;
-			nix.enable = true;
-			nix-develop.enable = true;
+      nix.enable = true;
+      nix-develop.enable = true;
       web-devicons.enable = true;
       smear-cursor.enable = true;
       which-key.enable = true;
@@ -289,7 +295,7 @@
       neo-tree = {
         enable = true;
         popupBorderStyle = "rounded";
-        window = { 
+        window = {
           mappings = {
             l = "open";
             h = "close_node";
@@ -304,7 +310,8 @@
               "alejandra"
             ];
           };
-          format_on_save = # Lua 
+          format_on_save =
+            # Lua
             ''
               function(bufnr)
                 local ignore_filetypes = { "sql", "jave" }
@@ -324,7 +331,8 @@
                 return { timeout_ms = 500, lsp_format = "fallback" }
               end
             '';
-          format_after_save = # Lua
+          format_after_save =
+            # Lua
             ''
               function(bufnr)
                 if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
@@ -344,20 +352,20 @@
           };
         };
       };
-		};
-		opts = {
-			tabstop = 2;
-			shiftwidth = 0;
+    };
+    opts = {
+      tabstop = 2;
+      shiftwidth = 0;
       number = true;
       relativenumber = true;
-		};
-		extraPlugins = with pkgs.vimPlugins; [
-			plenary-nvim
+    };
+    extraPlugins = with pkgs.vimPlugins; [
+      plenary-nvim
       nvim-window-picker
       neogit
       vimacs
     ];
-		package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
+    package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
     keymaps = [
       {
         action = "<Cmd>Neotree toggle<CR>";
@@ -380,5 +388,5 @@
     clipboard = {
       register = "unnamedplus";
     };
-	};
+  };
 }
