@@ -54,12 +54,14 @@
 			plenary-nvim
 		];
 		package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
-    keymaps = [
-      {
-        action = ":Neotree toggle<CR>";
-        key = "<leader>e";
-        mode = ["n" "v"];
-      }
-    ];
+    keymaps = {
+      "Open Neotree" = [
+        {
+          action = ":Neotree toggle<CR>";
+          key = "e";
+          mode = ["n" "v"];
+        }
+      ];
+    };
 	};
 }
