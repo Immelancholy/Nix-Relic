@@ -1,7 +1,8 @@
 { pkgs, inputs, ... }: {
 	programs.nixvim = {
 		enable = true;
-		colorscheme.catppuccin.enable = true;
+		colorschemes.catppuccin.enable = true;
+		colorscheme = "catppuccin-mocha";
 		plugins = {
 			lualine.enable = true;
 		};
