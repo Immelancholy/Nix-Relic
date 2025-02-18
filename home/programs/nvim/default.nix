@@ -212,7 +212,7 @@
 		opts = {
 			tabstop = 2;
 			shiftwidth = 0;
-      linenumber = true;
+      number = true;
       number = true;
       relativenumber = true;
 		};
