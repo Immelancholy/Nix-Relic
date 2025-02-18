@@ -20,7 +20,6 @@
 		globalOpts = {
 			tabstop = 2;
 			shiftwidth = 0;
-			softtabsop = 0;
 		};
 		extraPlugins = with pkgs.vimPlugins; [
 			plenary-nvim
