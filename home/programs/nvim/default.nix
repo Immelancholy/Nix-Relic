@@ -31,7 +31,6 @@
     withNodeJs = true;
     withPerl = true;
     luaLoader.enable = true;
-    oil.enable = true;
 		plugins = {
       lint = {
         enable = true;
@@ -45,6 +44,7 @@
         enable = true;
         autoLoad = true;
       };
+      oil.enable = true;
       bufferline.enable = true;
       barbar.enable = true;
       rustaceanvim.enable = true;
