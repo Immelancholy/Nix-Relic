@@ -102,6 +102,7 @@
       cmp-dictionary.enable = true;
       cmp-nvim-lsp.enable = true;
       cmp-nvim-lsp-document-symbol.enable = true;
+      cmp-nvim-lsp-signature-help.enable = true;
       cmp-spell.enable = true;
       cmp_luasnip.enable = true;
       cmp_yanky.enable = true;
@@ -150,6 +151,7 @@
       dap-ui.enable = true;
       lsp = {
         enable = true;
+        autoLoad = true;
         servers = {
           nixd.enable = true;
           hyprls.enable = true;
@@ -160,7 +162,37 @@
       lsp-format.enable = true;
       lsp-signature.enable = true;
       lsp-lines.enable = true;
-      lsp-status.enable = true;
+      lsp-status = {
+        autoLoad = true;
+        enable = true;
+        setting = {
+          diagnostics = true;
+          indicator_errors = "";
+          indicator_hint = "❗";
+          indicator_info = "🛈";
+          indicator_ok = "";
+          indictor_separator = " ";
+          indicator_warnings = "";
+          select_symbol = "";
+          show_filename = true;
+          spinner_frames = [
+            "⣾"
+            "⣽"
+            "⣻"
+            "⢿"
+            "⡿"
+            "⣟"
+            "⣯"
+            "⣷"
+          ];
+          status_symbol = " 🇻";
+          update_interval = 100;
+        };
+        lspkind = {
+          enable = true;
+          cmp.enable = true;
+        };
+      };
       harpoon = {
         enable = true;
       };
