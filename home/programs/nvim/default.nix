@@ -56,7 +56,7 @@
 		package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
     keymaps = [
       {
-        action = "<cmd>Neotree toggle<CR>";
+        action = ":Neotree toggle<CR>";
         key = "<leader>e";
       }
     ];
