@@ -273,10 +273,12 @@
       neo-tree = {
         enable = true;
         popupBorderStyle = "rounded";
-        popup.position = "20%";
         window = { 
-          l = "open";
-          h = "close_node";
+          popup.position = "20%";
+          mappings = {
+            l = "open";
+            h = "close_node";
+          };
         };
       };
 		};
