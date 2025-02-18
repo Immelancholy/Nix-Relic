@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, ... }: { 
 	programs.nixvim = {
     enable = true;
     globals.mapleader = " ";
@@ -58,7 +58,7 @@
       yanky.enable = true;
       cmp = {
         enable = true;
-        autoEnableSources = false;
+        autoEnableSources = true;
         settings = {
           mapping = {
             __raw = ''
@@ -112,10 +112,15 @@
             {
               name = "fuzzy_path";
             }
+            {
+              name = "emoji";
+            }
+            {
+              name = "spell";
+            }
           ];
         };
       };
-      cmp-nvim-lsp.enable = true;
       bufdelete.enable = true;
       treesitter = {
         enable = true;
@@ -133,7 +138,6 @@
           vimdoc
           xml
           yaml
-          nix
         ];
         settings = {
           auto_install = true;
