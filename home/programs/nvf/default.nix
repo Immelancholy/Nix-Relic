@@ -128,6 +128,17 @@
             }; 
           };
         };
+        extaPlugins = with pkgs.vimPlugins; {
+          "plenary.nvim" = {
+            package = plenary-nvim;
+            setup = "require('plenary').setup {}";
+          };
+          harpoon2 = {
+            package = harpoon2;
+            setup = "require('harpoon').setup {}";
+            after = ["plenary"];
+          };
+        };
       };
     };
   };
