@@ -34,6 +34,11 @@
 		plugins = {
       lint = {
         enable = true;
+        lintersByFt = {
+          nix = [
+            "nix"
+          ];
+        };
       };
       noice = {
         enable = true;
