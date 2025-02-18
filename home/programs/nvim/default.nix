@@ -217,7 +217,12 @@
       toggleterm.enable = true;
       treesj.enable = true;
       luasnip.enable = true;
-      lazygit.enable = true;
+      lazygit = {
+        enable = true;
+        settings = {
+          floating_window_use_plenary = 1;
+        };
+      };
       dap.enable = true;
       dap-go.enable = true;
       dap-python.enable = true;
@@ -274,7 +279,6 @@
         enable = true;
         popupBorderStyle = "rounded";
         window = { 
-          popup.position = "20%";
           mappings = {
             l = "open";
             h = "close_node";
