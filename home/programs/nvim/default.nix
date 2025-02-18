@@ -59,33 +59,31 @@
       cmp = {
         enable = true;
         autoEnableSources = true;
-        settings = {
-          mapping = {
-            __raw = ''
-              cmp.mapping.preset.insert({
-                ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-                ['<C-f>'] = cmp.mapping.scroll_docs(4),
-                ['<C-Space>'] = cmp.mapping.complete(),
-                ['<C-e>'] = cmp.mapping.abort(),
-                ['<CR>'] = cmp.mapping.confirm({ select = true }),
-              })
-            '';
-          };
-          snippet = {
-            expand = "function(args) require('luasnip').lsp_expand(args.body) end";
-          };
-          source = {
-            __raw = ''
-              cmp.config.sources({
-                { name = 'nvim_lsp' },
-                { name = 'luasnip' },
-                { name = 'nvim_lua' },
-                
-              }, {
-                { name = 'buffer' },
-              })
-            '';
-          };
+        # settings = {
+        #   mapping = {
+        #     __raw = ''
+        #       cmp.mapping.preset.insert({
+        #         ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+        #         ['<C-f>'] = cmp.mapping.scroll_docs(4),
+        #         ['<C-Space>'] = cmp.mapping.complete(),
+        #         ['<C-e>'] = cmp.mapping.abort(),
+        #         ['<CR>'] = cmp.mapping.confirm({ select = true }),
+        #       })
+        #     '';
+        #   };
+        #   source = {
+        #     __raw = ''
+        #       cmp.config.sources({
+        #         { name = 'nvim_lsp' },
+        #         { name = 'luasnip' },
+        #         { name = 'nvim_lua' },
+        #         { name = 'async_path' },
+        #
+        #       }, {
+        #         { name = 'buffer' },
+        #       })
+        #     '';
+        #   };
         };
       };
       cmp-async-path.enable = true;
@@ -158,29 +156,6 @@
       lsp-status = {
         autoLoad = true;
         enable = true;
-      #   settings = {
-      #     diagnostics = true;
-      #     indicator_errors = "";
-      #     indicator_hint = "❗";
-      #     indicator_info = "🛈";
-      #     indicator_ok = "";
-      #     indictor_separator = " ";
-      #     indicator_warnings = "";
-      #     select_symbol = "";
-      #     show_filename = true;
-      #     spinner_frames = [
-      #       "⣾"
-      #       "⣽"
-      #       "⣻"
-      #       "⢿"
-      #       "⡿"
-      #       "⣟"
-      #       "⣯"
-      #       "⣷"
-      #     ];
-      #     status_symbol = " 🇻";
-      #     update_interval = 100;
-      #   };
       };
       lspkind = {
         enable = true;
@@ -221,6 +196,7 @@
 			tabstop = 2;
 			shiftwidth = 0;
       number = true;
+      relativenumber = true;
 		};
 		extraPlugins = with pkgs.vimPlugins; [
 			plenary-nvim
