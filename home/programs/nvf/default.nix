@@ -128,7 +128,7 @@
             }; 
           };
         };
-        extaPlugins = with pkgs.vimPlugins; {
+        extraPlugins = with pkgs.vimPlugins; {
           "plenary.nvim" = {
             package = plenary-nvim;
             setup = "require('plenary').setup {}";
