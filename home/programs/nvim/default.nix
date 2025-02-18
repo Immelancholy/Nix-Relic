@@ -58,6 +58,7 @@
       {
         action = ":Neotree toggle<CR>";
         key = "<leader>e";
+        mode = ["n" "v"];
       }
     ];
 	};
