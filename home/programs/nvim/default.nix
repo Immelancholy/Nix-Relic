@@ -5,7 +5,8 @@
 		colorscheme = "catppuccin-mocha";
 		vimAlias = true;
 		withNodeJs = true;
-		withPerl = true;
+    withPerl = true;
+    lualoader.enable = true;
 		plugins = {
       lz-n.enable = true;
 			lualine.enable = true;
@@ -56,8 +57,8 @@
 		package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
     keymaps = [
       {
-        action = ":Neotree toggle<CR>";
-        key = "e";
+        action = "<Cmd>Neotree toggle<CR>";
+        key = "<leader>e";
         mode = ["n" "v"];
       }
     ];
