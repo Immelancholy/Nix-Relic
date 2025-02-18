@@ -27,9 +27,12 @@
       url = "github:raybbian/hyprtasking";
       inputs.hyprland.follows = "hyprland";
     };
-    lazyvim = {
-      url = "github:PaideiaDilemma/LazyVim";
-      flake = false;
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      # If you are not running an unstable channel of nixpkgs, select the corresponding branch of nixvim.
+      # url = "github:nix-community/nixvim/nixos-24.11";
+
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -59,6 +62,7 @@
                 ./home
                 catppuccin.homeManagerModules.catppuccin
                 inputs.nixcord.homeManagerModules.nixcord
+		inputs.nixvim.homeManagerModules.nixvim
               ];
             };
             # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
