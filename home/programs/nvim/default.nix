@@ -31,12 +31,13 @@
     withNodeJs = true;
     withPerl = true;
     luaLoader.enable = true;
+    oil.enable = true;
 		plugins = {
       lint = {
         enable = true;
         lintersByFt = {
           nix = [
-            "nix-linter"
+            "nixd"
           ];
         };
       };
@@ -87,47 +88,13 @@
               name = "nvim_lsp";
             }
             {
-              name = "cmp_luasnip";
-            }
-            {
               name = "buffer";
-            }
-            {
-              name = "cmp_yanky";
-            }
-            {
-              name = "calc";
             }
             {
               name = "async_path";
             }
             {
               name = "treesitter";
-            }
-            {
-              name = "dap";
-            }
-            {
-              name = "dictionary";
-              keyword_length = 2;
-            }
-            {
-              name = "zsh";
-            }
-            {
-              name = "cmdLine_history";
-            }
-            {
-              name = "fuzzy_buffer";
-            }
-            {
-              name = "fuzzy_path";
-            }
-            {
-              name = "emoji";
-            }
-            {
-              name = "spell";
             }
           ];
         };
