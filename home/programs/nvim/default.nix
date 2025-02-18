@@ -188,10 +188,10 @@
           status_symbol = " 🇻";
           update_interval = 100;
         };
-        lspkind = {
-          enable = true;
-          cmp.enable = true;
-        };
+      };
+      lspkind = {
+        enable = true;
+        cmp.enable = true;
       };
       harpoon = {
         enable = true;
