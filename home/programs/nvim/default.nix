@@ -53,7 +53,12 @@
       bufferline.enable = true;
       barbar.enable = true;
       rustaceanvim.enable = true;
-      lazy.enable = true;
+      lazy = {
+        enable = true;
+        plugins = [
+          pkgs.vimPlugins.trouble-nvim
+          pkgs.vimPlugins.which-key-nvim
+        ];
       #lz-n.enable = true;
       lualine.enable = true;
       snacks = {
