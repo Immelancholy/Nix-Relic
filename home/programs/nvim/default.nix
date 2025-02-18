@@ -46,7 +46,6 @@
                 name = "snippets";
                 enabled = true;
                 module = "blink.cmp.sources.snippets";
-                preset = "luasnip";
               };
             };
           };
