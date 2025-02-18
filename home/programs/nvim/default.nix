@@ -58,7 +58,7 @@
       yanky.enable = true;
       cmp = {
         enable = true;
-        autoEnableSources = true;
+        autoEnableSources = false;
         settings = {
           mapping = {
             __raw = ''
@@ -81,40 +81,41 @@
             {
               name = "buffer";
             }
-            # {
-            #   name = "cmp_yanky";
-            # }
-            # {
-            #   name = "calc";
-            # }
-            # {
-            #   name = "async_path";
-            # }
+            {
+              name = "cmp_yanky";
+            }
+            {
+              name = "calc";
+            }
+            {
+              name = "async_path";
+            }
             {
               name = "treesitter";
             }
-            # {
-            #   name = "dap";
-            # }
-            # {
-            #   name = "dictionary";
-            #   keyword_length = 2;
-            # }
-            # {
-            #   name = "zsh";
-            # }
-            # {
-            #   name = "cmdLine_history";
-            # }
-            # {
-            #   name = "fuzzy_buffer";
-            # }
-            # {
-            #   name = "fuzzy_path";
-            # }
+            {
+              name = "dap";
+            }
+            {
+              name = "dictionary";
+              keyword_length = 2;
+            }
+            {
+              name = "zsh";
+            }
+            {
+              name = "cmdLine_history";
+            }
+            {
+              name = "fuzzy_buffer";
+            }
+            {
+              name = "fuzzy_path";
+            }
           ];
         };
       };
+      cmp-nvim-lsp.enable = true;
       bufdelete.enable = true;
       treesitter = {
         enable = true;
