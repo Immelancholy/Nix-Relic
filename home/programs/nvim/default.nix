@@ -315,11 +315,7 @@
         mode = ["n"];
       }
       {
-        action = {
-          __raw = "
-            vim.cmd('Dashboard')
-          ";
-        };
+        action = "<Cmd>Dashboard<CR>";
         key = "<leader>q";
         options.desc = "Return to Dashboard";
         mode = ["n"];
