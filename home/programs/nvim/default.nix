@@ -305,6 +305,11 @@
         key = "<leader>e";
         mode = ["n" "v"];
       }
+      {
+        action = "<Cmd>LazyGit<CR>";
+        key = "<leader>lg";
+        desc = "LazyGit";
+      }
     ];
     clipboard = {
       register = "unnamedplus";
