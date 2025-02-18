@@ -97,15 +97,15 @@
             {
               name = "nvim_lsp";
             }
-            # {
-            #   name = "buffer";
-            # }
+            {
+              name = "buffer";
+            }
             # {
             #   name = "async_path";
             # }
-            # {
-            #   name = "treesitter";
-            # }
+            {
+              name = "treesitter";
+            }
             {
               name = "lspkind";
             }
