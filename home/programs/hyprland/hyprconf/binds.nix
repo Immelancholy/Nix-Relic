@@ -20,7 +20,7 @@
       "$mod, Delete, exec, uwsm stop"
       "$mod+Shift, 0, movetoworkspace, 10"
       ", Print, exec, grimblast --notify copysave output"
-      "Alt, L, exec, swaylock-fancy"
+      "$mod, tab, L, exec, swaylock-fancy"
     ]
     ++ (
         # workspaces
@@ -51,11 +51,10 @@
     bind = $mod, M, exec,[workspace 4 silent] $scr/patch.sh
     bind = $mod, M, exec,[workspace 4 silent] qpwgraph
 
-    #bind = $mod, H, movefocus, l
-    #bind = $mod, L, movefocus, r
-    #bind = $mod, K, movefocus, u
-    #bind = $mod, J, movefocus, d
-    bind = Alt, Tab, movefocus, d
+    bind = $mod, H, movefocus, l
+    bind = $mod, L, movefocus, r
+    bind = $mod, K, movefocus, u
+    bind = $mod, J, movefocus, d
     bind = $mod, Left, movefocus, l
     bind = $mod, Right, movefocus, r
     bind = $mod, Up, movefocus, u
@@ -106,15 +105,15 @@
     bindd = $mod+Shift, P,Color Picker , exec, hyprpicker -a # Pick color (Hex) >> clipboard#
 
     bind = , XF86Calculator, exec, qalculate-gtk
-    bind = SUPER, tab, hyprtasking:toggle, cursor
+    bind = Alt, tab, hyprtasking:toggle, cursor
     bind = SUPER, space, hyprtasking:toggle, all
 
-    bind = SUPER, X, hyprtasking:killhovered
+    bind = SUPER, Q, hyprtasking:killhovered
 
-    bind = SUPER, H, hyprtasking:move, left
-    bind = SUPER, J, hyprtasking:move, down
-    bind = SUPER, K, hyprtasking:move, up
-    bind = SUPER, L, hyprtasking:move, right
+    bind = Alt, H, hyprtasking:move, left
+    bind = Alt, J, hyprtasking:move, down
+    bind = Alt, K, hyprtasking:move, up
+    bind = Alt, L, hyprtasking:move, right
 
     plugin {
         hyprtasking {
@@ -122,7 +121,7 @@
 
             gap_size = 20
             bg_color = 0xff26233a
-            border_size = 4
+            border_size = 2
             exit_behavior = active interacted original hovered
 
             gestures {
