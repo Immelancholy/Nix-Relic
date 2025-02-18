@@ -10,7 +10,6 @@
     luaLoader.enable = true;
 		plugins = {
       rustaceanvim.enable = true;
-      rust-tools.enable = true;
       lz-n.enable = true;
 			lualine.enable = true;
 			snacks = {
