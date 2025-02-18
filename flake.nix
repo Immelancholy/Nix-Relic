@@ -27,6 +27,10 @@
       url = "github:raybbian/hyprtasking";
       inputs.hyprland.follows = "hyprland";
     };
+    lazyvim = {
+      url = "github:PaideiaDilemma/LazyVim";
+      flake = false;
+    };
   };
 
 
