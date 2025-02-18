@@ -1,4 +1,5 @@
 { pkgs, inputs, ... }: { 
+
 	programs.nixvim = {
     enable = true;
     globals.mapleader = " ";
@@ -70,6 +71,7 @@
 			};
       nvim-autopairs.enable = true;
       yanky.enable = true;
+      precognition.enable = true;
       cmp = {
         enable = true;
         autoEnableSources = true;
@@ -101,6 +103,7 @@
       };
       bufdelete.enable = true;
       treesitter = {
+        autoLoad = true;
         enable = true;
         nixGrammars = true;
         grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
