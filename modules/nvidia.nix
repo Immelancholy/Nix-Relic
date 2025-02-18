@@ -1,6 +1,6 @@
 { pkgs, config, lib, ... }: {
 
-    boot.blacklistedKernelModules = ["nouveau"];
+  boot.blacklistedKernelModules = ["nouveau"];
   environment.systemPackages = [
     pkgs.nvtopPackages.full # nvtop
     pkgs.mesa-demos
@@ -14,7 +14,9 @@
     
   hardware.graphics = {
   	enable = true;
+    package = pkgs-unstable.mesa.drivers;
   	enable32Bit = true;
+    package32 = pkgs-unstable.pkgsi686Linux.mesa.drivers;
     extraPackages = with pkgs; [
       libvdpau-va-gl
       libvdpau
