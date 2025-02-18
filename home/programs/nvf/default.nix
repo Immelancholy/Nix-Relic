@@ -125,12 +125,7 @@
               package = nvim-window-picker;
               setupModule = "window-picker";
               setupOpts = {};
-            };
-            "harpoon2" = {
-              package = harpoon2;
-              setupModule = "harpoon";
-              setupOpts = {};
-            };
+            }; 
           };
         };
       };
