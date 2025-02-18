@@ -373,7 +373,14 @@
         mode = ["n"];
       }
       {
-        action = "<Cmd>Dashboard<CR>";
+        action = # Lua
+          ''
+            if vim.bo.filetype == "Dashboard" then
+              vim.cmd('qa')
+            else
+              vim.cmd('Dashboard')
+            end
+          '';
         key = "<leader>q";
         options.desc = "Return to Dashboard";
         mode = ["n"];
