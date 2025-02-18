@@ -321,6 +321,7 @@
             vim.cmd('qa') 
           else 
             vim.cmd('Dashboard')
+          end,
           ";
         };
         key = "<leader>q";
