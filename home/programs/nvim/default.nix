@@ -4,7 +4,7 @@
 		colorschemes.catppuccin.enable = true;
 		colorscheme = "catppuccin-mocha";
 		vimAlias = true;
-		withNodeJS = true;
+		withNodeJs = true;
 		withPerl = true;
 		plugins = {
 			lualine.enable = true;
