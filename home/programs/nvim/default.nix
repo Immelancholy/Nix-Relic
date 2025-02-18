@@ -229,6 +229,10 @@
 		extraPlugins = with pkgs.vimPlugins; [
 			plenary-nvim
       nvim-window-picker
+      neogit
+      cmp-zsh
+      vimacs
+      tabby-nvim
     ];
 		package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
     keymaps = [
