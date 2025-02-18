@@ -97,14 +97,17 @@
             {
               name = "nvim_lsp";
             }
+            # {
+            #   name = "buffer";
+            # }
+            # {
+            #   name = "async_path";
+            # }
+            # {
+            #   name = "treesitter";
+            # }
             {
-              name = "buffer";
-            }
-            {
-              name = "async_path";
-            }
-            {
-              name = "treesitter";
+              name = "lspkind";
             }
           ];
         };
@@ -243,7 +246,6 @@
       lsp-signature.enable = true;
       lsp-lines.enable = true;
       lsp-status = {
-        autoLoad = true;
         enable = true;
       };
       lspkind = {
