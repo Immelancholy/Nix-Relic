@@ -22,6 +22,7 @@
     ./programs
     ./qtk.nix
     ./zsh.nix
+    ./env.nix
   ];
 
   # Packages that should be installed to the user profile.

@@ -1,12 +1,7 @@
 {
   wayland.windowManager.hyprland.settings = {
-    exec = [
-      "hyprctl setcursor Bibata-Modern-Ice 20"
-    ];
     exec-once = [
       "dbus-update-activation-environment --systemd --all"
-      ''dconf write /org/gnome/desktop/interface/cursor-theme "'Bibata-Modern-Ice'"''
-      "exec-once = dconf write /org/gnome/desktop/interface/cursor-size 20"
       "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       "$scr/swww.sh"
       "wl-paste --type text --watch cliphist store # Stores only image data"
@@ -19,7 +14,7 @@
       "[workspace 4 silent] qpwgraph"
       "[workspace 2 silent] $browser"
       "[workspace 2 silent] teams-for-linux --minimized"
-      "[workspace 3] sleep 3; discord"
+      "[workspace 3] discord"
       "[workspace 5 silent] easyeffects"
     ];
   };
