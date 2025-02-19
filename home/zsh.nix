@@ -8,7 +8,7 @@
     shellAliases = {
       ll = "ls -l";
       edit = "sudo -e";
-      nv = "/home/mela/.local/share/bin/kitty_nvim.sh";
+      nv = "/home/mela/.local/share/bin/nv.sh";
       yazi = "/home/mela/.local/share/bin/yazi.sh";
       neo = "/home/mela/.local/share/bin/neo.sh";
       rmpc = "/home/mela/.local/share/bin/rmpc.sh";
