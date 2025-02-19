@@ -371,38 +371,38 @@
               "alejandra"
             ];
           };
-          format_on_save =
-            # Lua
-            ''
-              function(bufnr)
-                local ignore_filetypes = { "sql", "jave" }
-                if vim.tbl_contains(ignore_filetypes, vim.bo[bufnr].filetype) then
-                  return
-                end
-
-                if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
-                  return
-                end
-
-                local bufname = vim.api.nvim_buf_get_name(bufnr)
-                if bufname:match("/node_modules/") then
-                  return
-                end
-                -- ...additional logic...
-                return { timeout_ms = 500, lsp_format = "fallback" }
-              end
-            '';
-          # format_after_save =
+          # format_on_save =
           #   # Lua
           #   ''
           #     function(bufnr)
+          #       local ignore_filetypes = { "sql", "jave" }
+          #       if vim.tbl_contains(ignore_filetypes, vim.bo[bufnr].filetype) then
+          #         return
+          #       end
+          #
           #       if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
           #         return
           #       end
-          #        -- ...additional logic...
-          #       return { lsp_format = "fallback" }
+          #
+          #       local bufname = vim.api.nvim_buf_get_name(bufnr)
+          #       if bufname:match("/node_modules/") then
+          #         return
+          #       end
+          #       -- ...additional logic...
+          #       return { timeout_ms = 500, lsp_format = "fallback" }
           #     end
           #   '';
+          format_after_save =
+            # Lua
+            ''
+              function(bufnr)
+                if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+                  return
+                end
+                 -- ...additional logic...
+                return { lsp_format = "fallback" }
+              end
+            '';
           log_level = "warn";
           notify_on_error = false;
           notify_no_formatters = false;
