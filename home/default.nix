@@ -1,6 +1,8 @@
-{ pkgs, lib, ... }:
-
 {
+  pkgs,
+  lib,
+  ...
+}: {
   # TODO please change the username & home directory to your own
   home.username = "mela";
   home.homeDirectory = "/home/mela";
@@ -27,7 +29,7 @@
   ];
 
   # Packages that should be installed to the user profile.
-  xdg.enable = true; 
+  xdg.enable = true;
   catppuccin = {
     enable = true;
     flavor = "mocha";
@@ -80,7 +82,7 @@
   };
 
   home.sessionVariables.GTK_THEME = "Catppuccin-mocha";
-  
+
   xdg.configFile."xfce4/helpers.rc" = {
     source = ./helpers.rc;
   };
@@ -136,15 +138,21 @@
     enable = true;
   };
 
+  home.pointerCursor = {
+    gtk.enable = true;
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Ice";
+    size = 20;
+  };
+
   xdg.mimeApps.defaultApplications = {
     "text/plain" = ["nvim.desktop"];
     "inode/directory" = ["thunar.desktop"];
     "video/mp4" = ["com.github.rafostar.Clapper.desktop"];
     "video/quicktime" = ["com.github.rafostar.Clapper.desktop"];
-
   };
 
   home.stateVersion = "24.11";
-   # Let home Manager install and manage itself.
+  # Let home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
