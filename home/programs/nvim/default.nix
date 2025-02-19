@@ -469,7 +469,7 @@
       }
       {
         event = [
-          "VimEnter"
+          "BufEnter"
         ];
         command = "<Cmd>cd %:p:h<CR>";
       }
