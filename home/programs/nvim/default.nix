@@ -354,7 +354,7 @@
           };
           position = "right";
         };
-        filesysem = {
+        filesystem = {
           hijackNetrwBehaviour = "open_current";
           bindToCwd = true;
           cwdTarget.sidebar = "tab";
