@@ -160,6 +160,6 @@
     NVD_BACKEND = "direct";
     LIBVA_DRIVER_NAME = "nvidia";
     AQ_TRACE = 1;
-    AQ_DRM_DEVICES = "";
+    AQ_DRM_DEVICES = "/dev/dri/card0";
   };
 }
