@@ -148,7 +148,9 @@
               virtualtext_mode = "foreground";
               sass = {
                 enable = true;
-                parsers = "css";
+                parsers = [
+                  "css"
+                ];
               };
             };
           };
