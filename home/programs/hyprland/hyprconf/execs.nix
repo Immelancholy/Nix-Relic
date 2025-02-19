@@ -5,6 +5,8 @@
     ];
     exec-once = [
       "dbus-update-activation-environment --systemd --all"
+      ''dconf write /org/gnome/desktop/interface/cursor-theme "'Bibata-Modern-Ice'"''
+      "exec-once = dconf write /org/gnome/desktop/interface/cursor-size 20"
       "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       "$scr/swww.sh"
       "[workspace 2 silent] mullvad-vpn"

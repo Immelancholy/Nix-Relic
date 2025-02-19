@@ -1,8 +1,4 @@
-{
-  pkgs,
-  lib,
-  ...
-}: {
+{pkgs, ...}: {
   # TODO please change the username & home directory to your own
   home.username = "mela";
   home.homeDirectory = "/home/mela";
@@ -136,13 +132,6 @@
 
   fonts.fontconfig = {
     enable = true;
-  };
-
-  home.pointerCursor = {
-    gtk.enable = true;
-    package = pkgs.bibata-cursors;
-    name = "Bibata-Modern-Ice";
-    size = 20;
   };
 
   xdg.mimeApps.defaultApplications = {
