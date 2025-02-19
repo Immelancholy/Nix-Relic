@@ -467,6 +467,12 @@
           '';
         };
       }
+      {
+        event = [
+          "VimEnter"
+        ];
+        command = "<Cmd>cd %:p:h<CR>";
+      }
     ];
   };
 }
