@@ -12,6 +12,8 @@
         "Alt, Return, fullscreen"
         "$mod+Ctrl+Alt, Right, movetoworkspace, r+1"
         "$mod+Ctrl+Alt, Left, movetoworkspace, r-1"
+        "$mod+Ctrl+Alt, L, movetoworkspace, r+1"
+        "$mod+Ctrl+Alt, H, movetoworkspace, r-1"
         "$mod, I, exec, [workspace 1 silent; float; size 854 555; move 646 40] $term sh $scr/rmpc.sh"
         "$mod, I, exec, [workspace 1 silent; float; size 854 465; move 646 605] $term sh $scr/cava.sh"
         "$mod, I, exec, [workspace 1 silent; float; size 626 666; move 10 404] $term sh $scr/btop.sh"
