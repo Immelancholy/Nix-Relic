@@ -502,12 +502,12 @@
           '';
         };
       }
-      # {
-      #   command = "cd %:p:h";
-      #   event = [
-      #     "BufEnter"
-      #   ];
-      # }
+      {
+        command = "cd %:p:h";
+        event = [
+          "BufEnter"
+        ];
+      }
     ];
   };
 }
