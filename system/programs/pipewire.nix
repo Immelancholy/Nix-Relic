@@ -1,5 +1,12 @@
 {
-  security.rtkit.enable = true;
+  security.rtkit = {
+    enable = true;
+    args = [
+      "--our-realtime-priority=90"
+      "--max-realtime-priority=89"
+      "--thread-per-user-max=16"
+    ];
+  };
   services.pipewire = {
     enable = true;
     alsa.enable = true;
