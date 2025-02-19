@@ -5,6 +5,7 @@
 }: {
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.blacklistedKernelModules = ["nouveau"];
   boot.initrd.systemd = {
     enable = true;
     tpm2.enable = true;
@@ -15,8 +16,6 @@
     "rw"
     "quiet"
     "splash"
-    "usbcore.blinkenlights=1"
     "discard"
-    "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
   ];
 }

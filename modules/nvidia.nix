@@ -4,7 +4,6 @@
   lib,
   ...
 }: {
-  boot.blacklistedKernelModules = ["nouveau"];
   environment.systemPackages = [
     pkgs.nvtopPackages.full # nvtop
     pkgs.mesa-demos
