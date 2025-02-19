@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -17,7 +17,8 @@
       fastfetch = "clear; fastfetch";
       nvn = "cd /etc/nixos/; nv";
       switch = "sudo nixos-rebuild switch --flake /etc/nixos/.";
-      update = "nix flake update --flake /etc/nixos/.";
+      update = "nix flake update --flake /etc/nixos/. --commit-lock-file";
+      boot = "sudo nixos-rebuild boot --flake /etc/nixos/.";
     };
 
     history.size = 10000;
@@ -26,9 +27,9 @@
     history.ignorePatterns = ["rm *" "pkill *" "cp *"];
     plugins = [
       {
-      name = "powerlevel10k";
-      src = pkgs.zsh-powerlevel10k;
-      file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+        name = "powerlevel10k";
+        src = pkgs.zsh-powerlevel10k;
+        file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
       }
     ];
     zplug = {
@@ -47,9 +48,9 @@
           builtin cd -- "$cwd"
         fi
         rm -f -- "$tmp"
-      } 
+      }
 
-      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh 
+      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
     '';
   };
 }
