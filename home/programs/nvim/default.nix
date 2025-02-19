@@ -352,7 +352,7 @@
             l = "open";
             h = "close_node";
           };
-          position = "right";
+          # position = "right";
         };
       };
       conform-nvim = {
@@ -428,7 +428,7 @@
       }
       {
         action = "<Cmd>LazyGit<CR>";
-        key = "<leader>lg";
+        key = "<leader>gg";
         options.desc = "LazyGit";
         mode = ["n"];
       }
