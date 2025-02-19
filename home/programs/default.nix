@@ -136,9 +136,6 @@
       withOpengl = true;
       withRtmp = true;
     })
-    (vesktop.override {
-      electron = pkgs.electron_33;
-    })
   ];
 
   programs.zoxide = {
