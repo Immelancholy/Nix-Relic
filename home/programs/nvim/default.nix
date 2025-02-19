@@ -125,7 +125,7 @@
           };
         };
       };
-      colorizor = {
+      colorizer = {
         enable = true;
         autoLoad = true;
         settings = {
