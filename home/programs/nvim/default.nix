@@ -392,17 +392,17 @@
                 return { timeout_ms = 500, lsp_format = "fallback" }
               end
             '';
-          format_after_save =
-            # Lua
-            ''
-              function(bufnr)
-                if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
-                  return
-                end
-                 -- ...additional logic...
-                return { lsp_format = "fallback" }
-              end
-            '';
+          # format_after_save =
+          #   # Lua
+          #   ''
+          #     function(bufnr)
+          #       if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+          #         return
+          #       end
+          #        -- ...additional logic...
+          #       return { lsp_format = "fallback" }
+          #     end
+          #   '';
           log_level = "warn";
           notify_on_error = false;
           notify_no_formatters = false;
@@ -457,5 +457,20 @@
       };
       virtual_text = true;
     };
+    autoCmd = [
+      {
+        event = [
+          "BufWritePre"
+        ];
+        pattern = [
+          "*"
+        ];
+        callback = {
+          __raw = ''
+            function(args) require("conform").format({ bufnr = args.buf }) end
+          '';
+        };
+      }
+    ];
   };
 }
