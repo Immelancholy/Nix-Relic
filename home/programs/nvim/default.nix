@@ -388,8 +388,8 @@
           position = "right";
         };
         filesystem = {
-          bind_to_cwd = true;
-          cwd_target = {
+          bindToCwd = true;
+          cwdTarget = {
             sidebar = "tab";
             current = "window";
           };
