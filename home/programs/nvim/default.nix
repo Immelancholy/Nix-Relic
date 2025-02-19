@@ -140,7 +140,7 @@
               css_fn = true;
               hsl_fn = true;
               mode = "background";
-              names = true;
+              names = false;
               rgb_fn = true;
               tailwind = "both";
               virtualtext = "■";
