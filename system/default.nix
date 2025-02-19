@@ -13,6 +13,7 @@
     algorithm = "zstd";
     memoryPercent = 50;
     swapDevices = 1;
+    priority = 100;
   };
 
   services.solaar.enable = true;
