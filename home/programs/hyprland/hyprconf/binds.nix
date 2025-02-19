@@ -91,7 +91,6 @@
 
     bindm = $mod, mouse:272, movewindow
     bindm = $mod, mouse:273, resizewindow
-    bind = $mod, z, easymotion, bgcolor:rgba(ff0000ff),bordersize:5,action:hyprctl dispatch closewindow address:{}
     bind = $mod+Alt, S, movetoworkspacesilent, special
     bind = $mod, S, togglespecialworkspace,
 
@@ -138,39 +137,6 @@
                 blur = 0
             }
         }
-    }
-
-    plugin {
-      easymotion {
-        #font size of the text
-        textsize=15
-
-        #color of the text, takes standard hyprland color format
-        textcolor=rgba(ffffffff)
-
-        #background color of the label box. alpha is respected
-        bgcolor=rgba(000000ff)
-
-        #font to use for the label. This is passed directly to the pango font description
-        textfont=Sans
-
-        #padding around the text (inside the label box) size in pixels, adjusted for
-        #monitor scaling. This is the same format as hyprland's gapsin/gapsout workspace layout rule
-        #example: textpadding=2 5 5 2 (spaces not commas)
-        textpadding=0
-
-        #size of the border around the label box. A border size of zero disables border rendering.
-        bordersize=0
-
-        #color of the border. takes the same format as hyprland's border (so it can be a gradient)
-        bordercolor=rgba(ffffffff)
-
-        #rounded corners? Same as hyprland's 'decoration:rounding' config
-        rounding=0
-
-        #which keys to use for labeling windows
-        motionkeys=abcdefghijklmnopqrstuvwxyz1234567890
-      }
     }
   '';
 }
