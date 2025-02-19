@@ -14,8 +14,6 @@
     pkgs.driversi686Linux.vdpauinfo
   ];
 
-  boot.initrd.kernelModules = ["nvidia"];
-
   services.xserver.videoDrivers = ["nvidia"];
 
   hardware.graphics = {
