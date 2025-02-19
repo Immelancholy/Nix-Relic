@@ -387,6 +387,13 @@
           };
           position = "right";
         };
+        filesystem = {
+          bind_to_cwd = true;
+          cwd_target = {
+            sidebar = "tab";
+            current = "window";
+          };
+        };
       };
       conform-nvim = {
         enable = true;
@@ -495,12 +502,12 @@
           '';
         };
       }
-      {
-        command = "cd %:p:h";
-        event = [
-          "BufEnter"
-        ];
-      }
+      # {
+      #   command = "cd %:p:h";
+      #   event = [
+      #     "BufEnter"
+      #   ];
+      # }
     ];
   };
 }
