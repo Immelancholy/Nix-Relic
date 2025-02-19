@@ -61,6 +61,7 @@
   programs.steam = {
     enable = true;
     gamescopeSession.enable = true;
+    extest.enable = true;
   };
   programs.gamemode.enable = true;
 
