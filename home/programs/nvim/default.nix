@@ -352,6 +352,7 @@
             l = "open";
             h = "close_node";
           };
+          position = "right";
         };
       };
       conform-nvim = {
