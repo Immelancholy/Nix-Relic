@@ -105,7 +105,6 @@
 
     bind = , XF86Calculator, exec, qalculate-gtk
     bind = Alt, tab, hyprtasking:toggle, cursor
-    bind = SUPER, space, hyprtasking:toggle, all
 
     bind = SUPER, Q, hyprtasking:killhovered
 
