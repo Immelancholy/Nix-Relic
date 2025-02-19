@@ -156,6 +156,7 @@
           lua
           make
           markdown
+          markdown_inline
           nix
           regex
           toml
