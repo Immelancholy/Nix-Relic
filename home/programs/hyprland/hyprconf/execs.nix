@@ -2,7 +2,7 @@
   wayland.windowManager.hyprland.settings = {
     exec-once = [
       "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-      "hyprctl setcursor Bibata-Modern-Classic 20"
+      "hyprctl setcursor Bibata-Modern-Ice 20"
       "$scr/swww.sh"
       "wl-paste --type text --watch cliphist store # Stores only image data"
       "wl-paste --type image --watch cliphist store # Stores only image data"
