@@ -9,6 +9,8 @@
       "exec-once = dconf write /org/gnome/desktop/interface/cursor-size 20"
       "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       "$scr/swww.sh"
+      "wl-paste --type text --watch cliphist store # Stores only image data"
+      "wl-paste --type image --watch cliphist store # Stores only image data"
       "[workspace 2 silent] mullvad-vpn"
       "[workspace 1 silent; float; size 854 555; move 646 40] $term sh $scr/rmpc.sh"
       "[workspace 1 silent; float; size 854 465; move 646 605] $term sh $scr/cava.sh"

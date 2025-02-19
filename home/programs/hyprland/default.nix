@@ -1,5 +1,8 @@
-{ pkgs, inputs, ... }: {
-
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   home.packages = with pkgs; [
     libsForQt5.qt5.qtwayland
     kdePackages.qtwayland
@@ -26,7 +29,19 @@
   programs.swaylock = {
     enable = true;
   };
-  
+
+  services.cliphist = {
+    enable = true;
+    allowImages = true;
+  };
+
+  services.udiskie = {
+    enable = true;
+    notify = true;
+    tray = "always";
+    automount = true;
+  };
+
   services.dunst = {
     enable = true;
     settings = {
