@@ -55,22 +55,24 @@
       rustaceanvim.enable = true;
       lz-n = {
         enable = true;
-        plugins = {
-          __unkeyed-1 = "trouble.nvim";
-          after = ''
-            function()
-              require("trouble").setup()
-            end
-          '';
-          cmd = ["Trouble"];
-          keys = [
-            {
-              __unkeyed-1 = "<leader>xx";
-              __unkeyed-2 = "<Cmd>Trouble diagnostics toggle<CR>";
-              desc = "Toggle diagnostics";
-            }
-          ];
-        };
+        plugins = [
+          {
+            __unkeyed-1 = "trouble.nvim";
+            after = ''
+              function()
+                require("trouble").setup()
+              end
+            '';
+            cmd = ["Trouble"];
+            keys = [
+              {
+                __unkeyed-1 = "<leader>xx";
+                __unkeyed-2 = "<Cmd>Trouble diagnostics toggle<CR>";
+                desc = "Toggle diagnostics";
+              }
+            ];
+          }
+        ];
       };
       lualine.enable = true;
       which-key.enable = true;
