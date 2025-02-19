@@ -419,7 +419,6 @@
       shiftwidth = 0;
       number = true;
       relativenumber = true;
-      autochdir = true;
     };
     extraPlugins = with pkgs.vimPlugins; [
       plenary-nvim
