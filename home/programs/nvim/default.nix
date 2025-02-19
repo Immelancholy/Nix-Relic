@@ -101,27 +101,24 @@
       };
       snacks = {
         enable = true;
-        lazyLoad = {
-          enable = true;
-          settings = {
-            bigfile = {
-              enabled = true;
-            };
-            notifier = {
-              enabled = true;
-              style = "fancy";
-              timeout = 3000;
-            };
-            quickfile = {
-              enabled = false;
-            };
-            statuscolumn = {
-              enabled = false;
-            };
-            words = {
-              debounce = 100;
-              enabled = true;
-            };
+        settings = {
+          bigfile = {
+            enabled = true;
+          };
+          notifier = {
+            enabled = true;
+            style = "fancy";
+            timeout = 3000;
+          };
+          quickfile = {
+            enabled = true;
+          };
+          statuscolumn = {
+            enabled = true;
+          };
+          words = {
+            debounce = 100;
+            enabled = true;
           };
         };
       };
