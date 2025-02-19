@@ -14,5 +14,7 @@
     AQ_TRACE = "1";
     AQ_DRM_DEVICES = "/dev/dri/card0";
     NIXOS_OZONE_WL = "1";
+    XCURSOR_THEME = "Bibata-Modern-Ice";
+    XCURSOR_SIZE = "20";
   };
 }
