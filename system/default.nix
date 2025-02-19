@@ -1,5 +1,4 @@
-{ pkgs, ... }: {
-
+{pkgs, ...}: {
   imports = [
     ./hardware-configuration.nix
     ./boot.nix
@@ -8,7 +7,14 @@
     ../modules
     ./extracache.nix
   ];
-  
+
+  zramSwap = {
+    enable = true;
+    algorithm = "zstd";
+    memoryPercent = 50;
+    swapDevices = 1;
+  };
+
   services.solaar.enable = true;
   services.input-remapper.enable = true;
 
@@ -34,25 +40,24 @@
     LC_TIME = "en_GB.UTF-8";
   };
 
-
   services.xserver.xkb = {
     layout = "gb";
     variant = "";
   };
   console.keyMap = "uk";
-  
+
   nixpkgs.config.allowUnfree = true;
 
   nix.settings = {
     experimental-features = ["nix-command" "flakes"];
-  }; 
+  };
 
   users.users.mela = {
     isNormalUser = true;
     description = "mela";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
   };
-  
+
   users.defaultUserShell = pkgs.zsh;
 
   catppuccin = {
