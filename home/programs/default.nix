@@ -130,12 +130,14 @@
     (discord.override {
       withOpenASAR = true; # can do this here too
       withVencord = true;
-      electron = pkgs.electron_32;
     })
     (pkgs.ffmpeg-full.override {
       withUnfree = true;
       withOpengl = true;
       withRtmp = true;
+    })
+    (vesktop.override {
+      electron = pkgs.electron_33;
     })
   ];
 
