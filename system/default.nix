@@ -75,7 +75,7 @@
   };
   nix.settings.auto-optimise-store = true;
 
-  environment.variables = {
+  environment.sessionVariables = {
     # Required to run the correct GBM backend for nvidia GPUs on wayland
     GBM_BACKEND = "nvidia-drm";
     # Apparently, without this nouveau may attempt to be used instead
