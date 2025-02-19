@@ -363,9 +363,7 @@
           position = "right";
         };
         filesystem = {
-          hijackNetrwBehavior = "open_current";
           bindToCwd = true;
-          cwdTarget.sidebar = "tab";
         };
       };
       conform-nvim = {
