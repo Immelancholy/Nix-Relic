@@ -352,7 +352,12 @@
             l = "open";
             h = "close_node";
           };
-          # position = "right";
+          position = "right";
+        };
+        filesysem = {
+          hijackNetrwBehaviour = "open_current";
+          bindToCwd = true;
+          cwdTarget.sidebar = "tab";
         };
       };
       conform-nvim = {
