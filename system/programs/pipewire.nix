@@ -4,6 +4,7 @@
     args = [
       "--our-realtime-priority=90"
       "--max-realtime-priority=89"
+      "--threads-per-user-max=16"
     ];
   };
   services.pipewire = {
