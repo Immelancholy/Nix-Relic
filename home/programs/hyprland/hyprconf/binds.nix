@@ -53,6 +53,7 @@
     bindl = , F9, pass, class:^(com.obsproject.Studio)$
     bind = $mod, M, exec,[workspace 4 silent] $scr/patch.sh
     bind = $mod, M, exec,[workspace 4 silent] qpwgraph
+    bind = $mod, M, exec,[workspace 4 silent] qpwgraph
 
     bind = $mod, H, movefocus, l
     bind = $mod, L, movefocus, r
