@@ -362,9 +362,6 @@
           };
           position = "right";
         };
-        filesystem = {
-          bindToCwd = true;
-        };
       };
       conform-nvim = {
         enable = true;
