@@ -146,6 +146,10 @@
               virtualtext = "■";
               virtualtext_inli = true;
               virtualtext_mode = "foreground";
+              sass = {
+                enable = true;
+                parsers = "css";
+              };
             };
           };
         };
