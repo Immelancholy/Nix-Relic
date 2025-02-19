@@ -1,4 +1,8 @@
-{ pkgs, inputs, ... }: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
     ./hyprland
     ./waybar
@@ -57,12 +61,12 @@
     # networking tools
     mtr # A network diagnostic tool
     iperf3
-    dnsutils  # `dig` + `nslookup`
+    dnsutils # `dig` + `nslookup`
     ldns # replacement of `dig`, it provide the command `drill`
     aria2 # A lightweight multi-protocol & multi-source command-line download utility
     socat # replacement of openbsd-netcat
     nmap # A utility for network discovery and security auditing
-    ipcalc  # it is a calculator for the IPv4/v6 addresses
+    ipcalc # it is a calculator for the IPv4/v6 addresses
 
     # misc
     cowsay
@@ -123,9 +127,8 @@
     qalculate-gtk
     libreoffice
     fd
-
   ];
-  
+
   programs.zoxide = {
     enable = true;
   };
@@ -136,11 +139,8 @@
     userEmail = "lenalowes0@gmail.com";
   };
   home.sessionVariables = {
-    STEAM_EXTRA_COMPAT_TOOLS_PATHS = 
-      "/home/mela/.steam/root/compatibilitytools.d";
-    EDITOR = 
-      "/home/mela/.local/share/bin/kitty_nvim.sh";
-    XDG_SCREENSHOTS_DIR = 
-      "$HOME/Pictures/screenshots";
+    STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/mela/.steam/root/compatibilitytools.d";
+    EDITOR = "/home/mela/.local/share/bin/kitty_nvim.sh";
+    XDG_SCREENSHOTS_DIR = "$HOME/Pictures/screenshots";
   };
 }
