@@ -101,25 +101,6 @@
       };
       lualine.enable = true;
       which-key.enable = true;
-      snacks = {
-        autoLoad = true;
-        enable = true;
-        settings = {
-          bigfile = {
-            enabled = true;
-          };
-          notifier = {
-            enabled = true;
-            timeout = 3000;
-          };
-          quickfile = {
-            enabled = false;
-          };
-          statuscolumn = {
-            enabled = false;
-          };
-        };
-      };
       nvim-autopairs.enable = true;
       yanky.enable = true;
       precognition = {
