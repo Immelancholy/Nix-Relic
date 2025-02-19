@@ -1,10 +1,12 @@
 {
   wayland.windowManager.hyprland.settings = {
+    exec = [
+      "hyprctl setcursor Bibata-Modern-Ice 20"
+    ];
     exec-once = [
       "dbus-update-activation-environment --systemd --all"
       ''dconf write /org/gnome/desktop/interface/cursor-theme "'Bibata-Modern-Ice'"''
-      "dconf write /org/gnome/desktop/interface/cursor-size 20"
-      "hyprctl setcursor Bibata-Modern-Ice 20"
+      "exec-once = dconf write /org/gnome/desktop/interface/cursor-size 20"
       "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       "$scr/swww.sh"
       "[workspace 2 silent] mullvad-vpn"
