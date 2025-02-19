@@ -2,6 +2,7 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
     catppuccin.url = "github:catppuccin/nix";
     nixcord.url = "github:kaylorben/nixcord";
     home-manager = {
@@ -36,10 +37,17 @@
     };
   };
 
-
-
-  outputs = inputs@{ self, nixpkgs, nixos-hardware, catppuccin, home-manager, yazi, solaar, ... }: {
-    nixosConfigurations = { 
+  outputs = inputs @ {
+    self,
+    nixpkgs,
+    nixos-hardware,
+    catppuccin,
+    home-manager,
+    yazi,
+    solaar,
+    ...
+  }: {
+    nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = {inherit inputs;};
@@ -62,7 +70,7 @@
                 ./home
                 catppuccin.homeManagerModules.catppuccin
                 inputs.nixcord.homeManagerModules.nixcord
-		inputs.nixvim.homeManagerModules.nixvim
+                inputs.nixvim.homeManagerModules.nixvim
               ];
             };
             # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
@@ -72,4 +80,3 @@
     };
   };
 }
-
