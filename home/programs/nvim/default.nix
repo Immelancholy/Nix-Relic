@@ -467,7 +467,7 @@
         ];
         callback = {
           __raw = ''
-            function(args) require("conform").format({ bufnr = args.buf }) vim.cmd('e!') end
+            function(args) require("conform").format({ bufnr = args.buf }) end
           '';
         };
       }
