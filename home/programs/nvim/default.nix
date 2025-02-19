@@ -468,10 +468,10 @@
         };
       }
       {
+        command = "cd %:p:h";
         event = [
           "BufEnter"
         ];
-        command = "<Cmd>pwd<CR>";
       }
     ];
   };
