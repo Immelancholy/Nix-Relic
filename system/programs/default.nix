@@ -1,4 +1,8 @@
-{ pkgs, inputs, ... }: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
     ./hyprland.nix
     ./pipewire.nix
@@ -36,7 +40,11 @@
     mangohud
     heroic
     networkmanagerapplet
-    (pkgs.ffmpeg-full.override { withUnfree = true; withOpengl = true; withRtmp = true; })
+    (pkgs.ffmpeg-full.override {
+      withUnfree = true;
+      withOpengl = true;
+      withRtmp = true;
+    })
     clapper
     selectdefaultapplication
     libopus
@@ -46,8 +54,9 @@
     })
     libvlc
     cachix
+    electron
   ];
-  environment.shells = with pkgs; [ zsh ];
+  environment.shells = with pkgs; [zsh];
 
   programs.steam = {
     enable = true;
