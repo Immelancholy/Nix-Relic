@@ -1,31 +1,33 @@
 {
   wayland.windowManager.hyprland.settings = {
-    bind = [ 
-      "$mod, T, exec, $term --hold sh $scr/poke.sh"
-      "$mod, F, exec, $browser"
-      "$mod, E, exec, $files"
-      "$mod, A, exec, $menu"
-      "$mod, C, exec, $edit"
-      "$mod, W, togglefloating"
-      "$mod, G, togglegroup"
-      "Alt, Return, fullscreen"
-      "$mod+Ctrl+Alt, Right, movetoworkspace, r+1"
-      "$mod+Ctrl+Alt, Left, movetoworkspace, r-1"
-      "$mod, I, exec, [workspace 1 silent; float; size 854 555; move 646 40] $term sh $scr/rmpc.sh"
-      "$mod, I, exec, [workspace 1 silent; float; size 854 465; move 646 605] $term sh $scr/cava.sh"
-      "$mod, I, exec, [workspace 1 silent; float; size 626 666; move 10 404] $term sh $scr/btop.sh"
-      "$mod, I, exec, [workspace 1 silent; float; size 400 1030; move 1510 40] $term sh $scr/neo.sh"
-      "$mod, I, exec, [workspace 1 silent; float; size 626 354; move 10 40] $term --hold fastfetch" 
-      "$mod, Delete, exec, uwsm stop"
-      "$mod+Shift, 0, movetoworkspace, 10"
-      ", Print, exec, grimblast --notify copysave output"
-      "$mod+Shift, L, exec, swaylock-fancy"
-    ]
-    ++ (
+    bind =
+      [
+        "$mod, T, exec, $term --hold sh $scr/poke.sh"
+        "$mod, F, exec, $browser"
+        "$mod, E, exec, $files"
+        "$mod, A, exec, $menu"
+        "$mod, C, exec, $edit"
+        "$mod, W, togglefloating"
+        "$mod, G, togglegroup"
+        "Alt, Return, fullscreen"
+        "$mod+Ctrl+Alt, Right, movetoworkspace, r+1"
+        "$mod+Ctrl+Alt, Left, movetoworkspace, r-1"
+        "$mod, I, exec, [workspace 1 silent; float; size 854 555; move 646 40] $term sh $scr/rmpc.sh"
+        "$mod, I, exec, [workspace 1 silent; float; size 854 465; move 646 605] $term sh $scr/cava.sh"
+        "$mod, I, exec, [workspace 1 silent; float; size 626 666; move 10 404] $term sh $scr/btop.sh"
+        "$mod, I, exec, [workspace 1 silent; float; size 400 1030; move 1510 40] $term sh $scr/neo.sh"
+        "$mod, I, exec, [workspace 1 silent; float; size 626 354; move 10 40] $term --hold fastfetch"
+        "$mod, Delete, exec, uwsm stop"
+        "$mod+Shift, 0, movetoworkspace, 10"
+        ", Print, exec, grimblast --notify copysave output"
+        "$mod+Shift, L, exec, swaylock-fancy"
+      ]
+      ++ (
         # workspaces
         # binds $mod + [shift +] {1..9} to [move to] workspace {1..9}
-        builtins.concatLists (builtins.genList (i:
-            let ws = i + 1;
+        builtins.concatLists (builtins.genList (
+            i: let
+              ws = i + 1;
             in [
               "$mod, code:1${toString i}, workspace, ${toString ws}"
               "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
@@ -34,7 +36,7 @@
           9)
       );
   };
-  wayland.windowManager.hyprland.extraConfig = '' 
+  wayland.windowManager.hyprland.extraConfig = ''
     bindl  = , XF86AudioMute, exec, playerctl --player=mpd play-pause #pause-play media
     bindel = , XF86AudioLowerVolume, exec, playerctl --player=mpd volume 0.01- # decrease volume
     bindel = , XF86AudioRaiseVolume, exec, playerctl --player=mpd volume 0.01+ # increase volume
@@ -64,7 +66,7 @@
     bind = $mod+Ctrl, Right, workspace, r+1
     bind = $mod+Ctrl, Left, workspace, r-1
 
-    bind = $mod+Ctrl, J, workspace, empty 
+    bind = $mod+Ctrl, J, workspace, empty
     bind = $mod+Ctrl, Down, workspace, empty
 
     binde = $mod+Shift, Left, resizeactive, 1 0
@@ -77,6 +79,10 @@
     binded = $mod+Shift+Ctrl, Right, Move activewindow right, exec, $moveactivewindow 30 0 || hyprctl dispatch movewindow r
     binded = $mod+Shift+Ctrl, Up, Move activewindow up, exec, $moveactivewindow  0 -30 || hyprctl dispatch movewindow u
     binded = $mod+Shift+Ctrl, Down, Move activewindow down, exec, $moveactivewindow 0 30 || hyprctl dispatch movewindow d
+    binded = $mod+Shift+Ctrl, H, Move activewindow left, exec, $moveactivewindow -30 0 || hyprctl dispatch movewindow l
+    binded = $mod+Shift+Ctrl, L, Move activewindow right, exec, $moveactivewindow 30 0 || hyprctl dispatch movewindow r
+    binded = $mod+Shift+Ctrl, K, Move activewindow up, exec, $moveactivewindow  0 -30 || hyprctl dispatch movewindow u
+    binded = $mod+Shift+Ctrl, J, Move activewindow down, exec, $moveactivewindow 0 30 || hyprctl dispatch movewindow d
 
     bind = $mod, mouse_up, workspace, e+1
     bind = $mod, mouse_down, workspace, e-1
@@ -92,7 +98,7 @@
     bind = $mod, R, togglesplit
 
     bind = Ctrl+Shift, Escape, exec, $term --title "btop" sh $scr/btop.sh
-    
+
     bindd = $mod+Shift, P,Color Picker , exec, hyprpicker -a # Pick color (Hex) >> clipboard#
 
     bind = , XF86Calculator, exec, qalculate-gtk
@@ -108,7 +114,7 @@
 
     plugin {
         hyprtasking {
-            layout = grid 
+            layout = grid
 
             gap_size = 15
             bg_color = 0x11111b
