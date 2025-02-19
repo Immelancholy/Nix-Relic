@@ -276,6 +276,14 @@
                 group = "Statement";
                 key = "n";
               }
+              {
+                action = {
+                  __raw = "function(path) vim.cmd('qa') end";
+                };
+                desc = "󰈆 Exit Neovim";
+                group = "Error";
+                key = "q";
+              }
             ];
             week_header = {
               enable = false;
