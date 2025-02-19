@@ -40,18 +40,9 @@
     mangohud
     heroic
     networkmanagerapplet
-    (pkgs.ffmpeg-full.override {
-      withUnfree = true;
-      withOpengl = true;
-      withRtmp = true;
-    })
     clapper
     selectdefaultapplication
     libopus
-    (discord.override {
-      withOpenASAR = true; # can do this here too
-      withVencord = true;
-    })
     libvlc
     cachix
     electron

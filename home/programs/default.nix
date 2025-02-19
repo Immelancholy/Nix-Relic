@@ -127,6 +127,15 @@
     qalculate-gtk
     libreoffice
     fd
+    (discord.override {
+      withOpenASAR = true; # can do this here too
+      withVencord = true;
+    })
+    (pkgs.ffmpeg-full.override {
+      #  withUnfree = true;
+      withOpengl = true;
+      #  withRtmp = true;
+    })
   ];
 
   programs.zoxide = {
