@@ -20,6 +20,7 @@
             enabled = true;
           };
           treesitter = true;
+          lazygit = true;
         };
         styles = {
           booleans = [
