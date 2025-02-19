@@ -28,6 +28,10 @@
       url = "github:raybbian/hyprtasking";
       inputs.hyprland.follows = "hyprland";
     };
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
+    };
     nixvim = {
       url = "github:nix-community/nixvim";
       # If you are not running an unstable channel of nixpkgs, select the corresponding branch of nixvim.
@@ -40,10 +44,8 @@
   outputs = inputs @ {
     self,
     nixpkgs,
-    nixos-hardware,
     catppuccin,
     home-manager,
-    yazi,
     solaar,
     ...
   }: {
