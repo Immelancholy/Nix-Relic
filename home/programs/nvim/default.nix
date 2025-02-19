@@ -241,7 +241,7 @@
             shortcut = [
               {
                 action = {
-                  __raw = "function(path) vim.cmd('Telescope find_files') end";
+                  __raw = "function(path) vim.cmd('cd / | Telescope find_files') end";
                 };
                 desc = "Files";
                 group = "Label";
