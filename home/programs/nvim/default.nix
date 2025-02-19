@@ -8,9 +8,11 @@
     enable = true;
     globals.mapleader = " ";
     colorschemes.catppuccin = {
+      autoLoad = true;
       enable = true;
       settings = {
         flavour = "mocha";
+        default_integrations = true;
         integrations = {
           cmp = true;
           gitsigns = true;
@@ -29,6 +31,7 @@
           ];
         };
         term_colors = true;
+        transparent_background = true;
       };
     };
     colorscheme = "catppuccin";
