@@ -1,9 +1,10 @@
 {
-  pkgs,
   config,
-  lib,
+  inputs,
   ...
-}: {
+}: let
+  pkgs = inputs.hyprland.inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system};
+in {
   environment.systemPackages = [
     pkgs.nvtopPackages.full # nvtop
     pkgs.mesa-demos
