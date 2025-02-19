@@ -169,7 +169,7 @@
       "node-force-quantum" = 256;
     };
   };
-  services.pipewire.extraConfig.client-rt."92-low-latency" = {
+  services.pipewire.extraConfig.client."92-low-latency" = {
     "stream.properties" = {
       "resample.quality" = 15;
     };
