@@ -1,11 +1,15 @@
-{ pkgs, config, ... }: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.initrd.systemd = {
-  	enable = true;
-	tpm2.enable = true;
+    enable = true;
+    tpm2.enable = true;
   };
-  boot.extraModulePackages = with config.boot.kernelPackages; [ bbswitch ];
+  boot.extraModulePackages = with config.boot.kernelPackages; [bbswitch];
   boot.kernelPackages = pkgs.linuxPackages_zen;
   boot.kernelParams = [
     "rw"
@@ -13,5 +17,6 @@
     "splash"
     "usbcore.blinkenlights=1"
     "discard"
+    "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
   ];
 }
