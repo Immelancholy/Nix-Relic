@@ -125,6 +125,31 @@
           };
         };
       };
+      colorizor = {
+        enable = true;
+        autoLoad = true;
+        settings = {
+          user = {
+            default_options = {
+              AARRGGBB = true;
+              RGB = true;
+              RRGGBB = true;
+              RRGGBBAA = true;
+              always_update = true;
+              css = true;
+              css_fn = true;
+              hsl_fn = true;
+              mode = "background";
+              names = true;
+              rgb_fn = true;
+              tailwind = "both";
+              virtualtext = "■";
+              virtualtext_inli = true;
+              virtualtext_mode = "foreground";
+            };
+          };
+        };
+      };
       lualine.enable = true;
       which-key.enable = true;
       nvim-autopairs.enable = true;
