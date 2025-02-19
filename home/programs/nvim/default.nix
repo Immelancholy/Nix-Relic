@@ -443,9 +443,9 @@
     };
     diagnostics = {
       virtual_lines = {
-        only_current_line = true;
+        only_current_line = false;
       };
-      virtual_text = false;
+      virtual_text = true;
     };
   };
 }
