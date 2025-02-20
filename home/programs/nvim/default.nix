@@ -75,17 +75,8 @@
                 module = "blink.cmp.sources.luasnip";
                 enabled = true;
               };
-              git = {
-                name = "Git";
-                module = "blink-cmp-git";
-                score_offset = 100;
-                opts = {
-                  commit = {};
-                };
-              };
             };
           };
-          blink-cmp-git.enable = true;
           blink-compat.enable = true;
           keymap = {
             preset = "default";
