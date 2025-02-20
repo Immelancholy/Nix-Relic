@@ -49,6 +49,11 @@
   ];
   environment.shells = with pkgs; [zsh];
 
+  programs.gamescope = {
+    enable = true;
+    capSysNice = true;
+  };
+
   programs.steam = {
     enable = true;
     gamescopeSession.enable = true;
@@ -56,7 +61,6 @@
   };
   programs.gamemode = {
     enable = true;
-    capSysNice = true;
   };
 
   programs.nm-applet = {
