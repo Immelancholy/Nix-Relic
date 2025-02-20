@@ -86,8 +86,6 @@
         windowrulev2 = opacity 0.90 0.90,class:^(com.github.wwmm.easyeffects)$
 
         windowrulev2 = noblur,class:^(kitty)$
-        windowrulev2 = noblur,class:^(org.rncbc.qpwgraph)$
-        windowrulev2 = noblur,class:^(com.github.wwmm.easyeffects)$
 
         windowrulev2 = float,title:^(rmpc)$
         windowrulev2 = size 900 580,title:^(rmpc)$
