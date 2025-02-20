@@ -7,6 +7,8 @@
     "$menu" = "rofi -show drun";
     "$browser" = "zen";
     "$edit" = "$term sh $scr/nv.sh";
+    "$player" = "mpd";
+    "$playerctl" = "playerctl player=$player";
     monitor = ", 1920x1080@144, auto, 1";
     input = {
       kb_layout = "gb";

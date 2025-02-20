@@ -39,14 +39,14 @@
       );
   };
   wayland.windowManager.hyprland.extraConfig = ''
-    bindl  = , XF86AudioMute, exec, playerctl --player=mpd play-pause #pause-play media
-    bindel = , XF86AudioLowerVolume, exec, rmpc volume -1 # decrease volume
-    bindel = , XF86AudioRaiseVolume, exec, rmpc volume +1 # increase volume
-    bindl  = , mouse:277, exec, playerctl --player=mpd play-pause # toggle between media play and pause
-    bindel  = , mouse:281, exec, rmpc volume +1 # volume up
-    bindel  = , mouse:282, exec, rmpc volume -1 # volume down
-    bindl  = $mod, mouse:282, exec, playerctl --player=mpd next #next
-    bindl  = $mod, mouse:281, exec, playerctl --player=mpd previous #previous,
+    bindl  = , XF86AudioMute, exec, $playerctl play-pause #pause-play media
+    bindel = , XF86AudioLowerVolume, exec, $playerctl volume -0.01 # decrease volume
+    bindel = , XF86AudioRaiseVolume, exec, $playerctl volume +0.01 # increase volume
+    bindl  = , mouse:277, exec, $playerctl play-pause # toggle between media play and pause
+    bindel  = , mouse:281, exec, $playerctl volume +0.01 # volume up
+    bindel  = , mouse:282, exec, $playerctl volume -0.01 # volume down
+    bindl  = $mod, mouse:282, exec, $playerctl next #next
+    bindl  = $mod, mouse:281, exec, $playerctl previous #previous,
     bindl = , mouse:275, pass, class:^(discord)$
     bindl = , F10, pass, class:^(com.obsproject.Studio)$
     bindl = , F12, pass, class:^(com.obsproject.Studio)$
