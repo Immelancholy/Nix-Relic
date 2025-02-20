@@ -74,6 +74,26 @@
   services.mullvad-vpn.enable = true;
   services.mullvad-vpn.package = pkgs.mullvad-vpn;
 
+  programs.gamescope = {
+    enable = true;
+    capSysNice = true;
+    package = pkgs.gamescope-wsi;
+    args = [
+      "--backed wayland"
+      "-h 1080"
+      "-w 1920"
+      "-f"
+      "-r 144"
+      "--force-grab-cursor"
+    ];
+    env = {
+      __GL_MaxFramesAllowed = "1";
+      LD_PRELOAD = "";
+      ENABLE_GAMESCOPE_WSI = "0";
+      DXVK_FILTER_DEVICE_NAME = "NVIDIA GeForce RTX 3070";
+    };
+  };
+
   programs.steam = {
     enable = true;
     gamescopeSession = {
@@ -88,18 +108,15 @@
         "--mangoapp"
       ];
       env = {
-        ENABLE_GAMESCOPE_WSI = 0;
-        STEAM_MULTIPLE_XWAYLANDS = 0;
-        STEAM_GAMESCOPE_HDR_SUPPORTED = 1;
-        STEAM_GAMESCOPE_VRR_SUPPORTED = 1;
-        STEAM_MANGOAPP_PRESETS_SUPPORTED = 1;
-        STEAM_DISABLE_MANGOAPP_ATOM_WORKAROUND = 1;
-        SRT_URLOPEN_PREFER_STEAM = 1;
-        __GL_MaxFramesAllowed = 1;
+        ENABLE_GAMESCOPE_WSI = "0";
+        STEAM_MULTIPLE_XWAYLANDS = "0";
+        STEAM_GAMESCOPE_HDR_SUPPORTED = "1";
+        STEAM_GAMESCOPE_VRR_SUPPORTED = "1";
+        STEAM_MANGOAPP_PRESETS_SUPPORTED = "1";
+        STEAM_DISABLE_MANGOAPP_ATOM_WORKAROUND = "1";
+        SRT_URLOPEN_PREFER_STEAM = "1";
+        __GL_MaxFramesAllowed = "1";
       };
     };
-    extraPackages = with pkgs; [
-      gamescope
-    ];
   };
 }
