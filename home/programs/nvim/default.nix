@@ -42,7 +42,9 @@
     plugins = {
       vim-suda = {
         enable = true;
-        smart_edit = true;
+        settings = {
+          smart_edit = true;
+        };
       };
       vim-surround = {
         enable = true;
