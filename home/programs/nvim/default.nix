@@ -103,15 +103,21 @@
           };
           keymap = {
             preset = "default";
-            "<C-b>" = [
-              "scroll_documentation_up"
+            "<S-Tab>" = [
+              "snippet_backward"
               "fallback"
             ];
-            "<C-e>" = [
-              "hide"
+            "<Tab>" = [
+              "snippet_forward"
+              "fallback"
             ];
-            "<C-f>" = [
-              "scroll_documentation_down"
+
+            "<Up>" = [
+              "select_prev"
+              "fallback"
+            ];
+            "<Down>" = [
+              "select_next"
               "fallback"
             ];
             "<C-n>" = [
@@ -122,28 +128,26 @@
               "select_prev"
               "fallback"
             ];
+            "<C-y>" = [
+              "select_and_accept"
+            ];
+
+            "<C-b>" = [
+              "scroll_documentation_up"
+              "fallback"
+            ];
+            "<C-f>" = [
+              "scroll_documentation_down"
+              "fallback"
+            ];
+
             "<C-space>" = [
               "show"
               "show_documentation"
               "hide_documentation"
             ];
-            "<C-y>" = [
-              "select_and_accept"
-            ];
-            "<Down>" = [
-              "select_next"
-              "fallback"
-            ];
-            "<S-Tab>" = [
-              "snippet_backward"
-              "fallback"
-            ];
-            "<Tab>" = [
-              "snippet_forward"
-              "fallback"
-            ];
-            "<Up>" = [
-              "select_prev"
+            "<C-e>" = [
+              "hide"
               "fallback"
             ];
           };
