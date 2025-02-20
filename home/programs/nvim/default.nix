@@ -45,6 +45,14 @@
         autoLoad = true;
         setupLspCapabilities = true;
         settings = {
+          sources = {
+            default = [
+              "lsp"
+              "path"
+              "luasnip"
+              "buffer"
+            ];
+          };
           keymap = {
             preset = "default";
           };
