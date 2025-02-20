@@ -55,6 +55,8 @@
     sqlite-utils
     vscode-extensions.vadimcn.vscode-lldb
     lldb
+    mangohud
+    gamemode
   ];
   environment.shells = with pkgs; [zsh];
 
@@ -79,9 +81,6 @@
     };
     extraPackages = with pkgs; [
       gamescope
-      mangohud
-      mangoapp
-      gamemode
     ];
   };
 }
