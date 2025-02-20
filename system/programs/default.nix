@@ -84,6 +84,7 @@
       "-f"
       "-r 144"
       "--force-grab-cursor"
+      "--rt"
     ];
     env = {
       ENABLE_GAMESCOPE_WSI = "0";
@@ -102,6 +103,7 @@
         "--force-grab-cursor"
         "-f"
         "--mangoapp"
+        "--rt"
       ];
       env = {
         ENABLE_GAMESCOPE_WSI = "0";
