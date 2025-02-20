@@ -55,7 +55,6 @@
     sqlite-utils
     vscode-extensions.vadimcn.vscode-lldb
     lldb
-    mangohud
     gamemode
   ];
   environment.shells = with pkgs; [zsh];
@@ -75,7 +74,6 @@
       enable = true;
       args = [
         "--backend wayland"
-        "--mangoapp"
         "--expose-wayland"
       ];
     };
