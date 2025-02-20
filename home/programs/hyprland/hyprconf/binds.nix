@@ -1,5 +1,11 @@
 {
   wayland.windowManager.hyprland.settings = {
+    bindl = [
+      "$mod+Tab, Right, movetoworkspace, r+1"
+      "$mod+Tab, Left, movetoworkspace, r-1"
+      "$mod+Tab, L, movetoworkspace, r+1"
+      "$mod+Tab, H, movetoworkspace, r-1"
+    ];
     bind =
       [
         "$mod, T, exec, $term $scr/poke.sh"
@@ -10,10 +16,6 @@
         "$mod, W, togglefloating"
         "$mod, G, togglegroup"
         "Alt, Return, fullscreen"
-        "$mod+Tab, Right, movetoworkspace, r+1"
-        "$mod+Tab, Left, movetoworkspace, r-1"
-        "$mod+Tab, L, movetoworkspace, r+1"
-        "$mod+Tab, H, movetoworkspace, r-1"
         "$mod, I, exec, [workspace 1 silent; float; size 854 555; move 646 40] $term $scr/rmpc.sh"
         "$mod, I, exec, [workspace 1 silent; float; size 854 465; move 646 605] $term $scr/cava.sh"
         "$mod, I, exec, [workspace 1 silent; float; size 626 666; move 10 404] $term $scr/btop.sh"
