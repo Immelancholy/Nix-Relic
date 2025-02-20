@@ -43,7 +43,7 @@
       vim-suda = {
         enable = true;
         settings = {
-          smart_edit = true;
+          smart_edit = 1;
         };
       };
       vim-surround = {
