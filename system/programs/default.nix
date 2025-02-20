@@ -59,20 +59,6 @@
   ];
   environment.shells = with pkgs; [zsh];
 
-  programs.gamescope = {
-    enable = true;
-    capSysNice = true;
-  };
-
-  programs.steam = {
-    enable = true;
-    gamescopeSession.enable = true;
-    extest.enable = true;
-  };
-  programs.gamemode = {
-    enable = true;
-  };
-
   programs.nm-applet = {
     enable = true;
     indicator = true;
@@ -81,4 +67,12 @@
 
   services.mullvad-vpn.enable = true;
   services.mullvad-vpn.package = pkgs.mullvad-vpn;
+
+  programs.steam = {
+    enable = true;
+    gamescopeSession.enable = true;
+    extraPackages = with pkgs; [
+      gamescope
+    ];
+  };
 }
