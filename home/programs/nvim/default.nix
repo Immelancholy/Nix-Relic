@@ -48,7 +48,7 @@
           keymap = {
             preset = "default";
           };
-          kind_icons = {
+          appearance.kind_icons = {
             Class = "󱡠";
             Color = "󰏘";
             Constant = "󰏿";
