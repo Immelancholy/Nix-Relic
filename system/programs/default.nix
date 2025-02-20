@@ -37,7 +37,6 @@
     libsForQt5.qt5.qtquickcontrols2
     libsForQt5.qt5.qtsvg
     bibata-cursors
-    mangohud
     heroic
     networkmanagerapplet
     clapper
@@ -70,9 +69,17 @@
 
   programs.steam = {
     enable = true;
-    gamescopeSession.enable = true;
+    gamescopeSession = {
+      enable = true;
+      args = [
+        "--generate-drm-mode"
+        "--backend wayland"
+        "--mangoapp"
+      ];
+    };
     extraPackages = with pkgs; [
       gamescope
+      mangohud
       gamemode
     ];
   };
