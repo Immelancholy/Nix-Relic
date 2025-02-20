@@ -11,12 +11,8 @@
     ./cava
     ./fastfetch
     ./nvim
+    ./easyeffects
   ];
-
-  services.easyeffects = {
-    enable = true;
-    preset = "Rode NT1";
-  };
 
   programs.kitty = {
     enable = true;
