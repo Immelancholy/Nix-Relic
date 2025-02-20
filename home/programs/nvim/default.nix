@@ -71,10 +71,9 @@
                 async = true;
               };
               luasnip = {
-                  name = "luasnip";
-                  module = "blink.cmp.sources.luasnip";
-                  enabled = true;
-                };
+                name = "luasnip";
+                module = "blink.cmp.sources.luasnip";
+                enabled = true;
               };
               git = {
                 name = "Git";
