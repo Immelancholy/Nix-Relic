@@ -86,10 +86,7 @@
       "--force-grab-cursor"
     ];
     env = {
-      __GL_MaxFramesAllowed = "1";
-      LD_PRELOAD = "";
       ENABLE_GAMESCOPE_WSI = "0";
-      DXVK_FILTER_DEVICE_NAME = "NVIDIA GeForce RTX 3070";
     };
   };
 
