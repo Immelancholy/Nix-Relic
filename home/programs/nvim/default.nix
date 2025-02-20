@@ -75,9 +75,17 @@
                 module = "blink.cmp.sources.luasnip";
                 enabled = true;
               };
+              git = {
+                name = "git";
+                module = "blink-cmp-git";
+                score_offset = 100;
+                opts = {
+                  commit = {};
+                  git_centers = {};
+                };
+              };
             };
           };
-          blink-compat.enable = true;
           keymap = {
             preset = "default";
           };
@@ -110,6 +118,8 @@
           };
         };
       };
+      blink-cmp-git.enable = true;
+      blink-compat.enable = true;
       vim-suda = {
         enable = true;
         settings = {
