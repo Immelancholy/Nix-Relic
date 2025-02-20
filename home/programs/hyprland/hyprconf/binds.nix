@@ -40,12 +40,12 @@
   };
   wayland.windowManager.hyprland.extraConfig = ''
     bindl  = , XF86AudioMute, exec, $playerctl play-pause #pause-play media
-    bindel = , XF86AudioLowerVolume, exec, $playerctl volume 0.02- # decrease volume
-    bindel = , XF86AudioRaiseVolume, exec, $playerctl volume 0.02+ # increase volume
+    bindel = , XF86AudioLowerVolume, exec, $playerctl volume 0.03- # decrease volume
+    bindel = , XF86AudioRaiseVolume, exec, $playerctl volume 0.03+ # increase volume
 
     bindl  = , mouse:277, exec, $playerctl play-pause # toggle between media play and pause
-    binde  = , mouse:281, exec, $playerctl volume 0.02+ # volume up
-    binde  = , mouse:282, exec, $playerctl volume 0.02- # volume down
+    binde  = , mouse:281, exec, $playerctl volume 0.03+ # volume up
+    binde  = , mouse:282, exec, $playerctl volume 0.03- # volume down
     bindl  = $mod, mouse:282, exec, $playerctl next #next
     bindl  = $mod, mouse:281, exec, $playerctl previous #previous,
     bindl = , mouse:275, pass, class:^(discord)$
