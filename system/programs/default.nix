@@ -46,9 +46,10 @@
     libvlc
     cachix
     electron
-    vk3d-proton
-    vkbasalt
     vkbasalt-cli
+    dxvk_2
+    nv-codec-headers-12
+    vivaldi-ffmpeg-codecs
   ];
   environment.shells = with pkgs; [zsh];
 
