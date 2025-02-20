@@ -2,7 +2,7 @@
   wayland.windowManager.hyprland.extraConfig = ''
     plugin {
       hyprtrails {
-        color = rgba(ffaa00ff)
+        color = rgba(cba6f7ff)
       }
     }
   '';
