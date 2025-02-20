@@ -36,6 +36,7 @@
       enable = true;
       plugins = [
         {name = "chrissicool/zsh-256color";}
+        {name = "jeffreytse/zsh-vi-mode";}
       ];
     };
     initExtra = ''
