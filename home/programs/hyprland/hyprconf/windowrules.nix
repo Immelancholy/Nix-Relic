@@ -36,7 +36,7 @@
         windowrulev2 = opacity 0.80 0.80,class:^(com.obsproject.Studio)$ # Obs-Qt
         windowrulev2 = opacity 0.80 0.80,class:^(gnome-boxes)$ # Boxes-Gtk
         windowrulev2 = opacity 0.80 0.80,class:^(vesktop)$ # Vesktop
-        windowrulev2 = opacity 0.80 0.80,class:^(discord)$ # Discord-Electron
+        #windowrulev2 = opacity 0.80 0.80,class:^(discord)$ # Discord-Electron
         windowrulev2 = opacity 0.80 0.80,class:^(WebCord)$ # WebCord-Electron
         windowrulev2 = opacity 0.80 0.80,class:^(ArmCord)$ # ArmCord-Electron
         windowrulev2 = opacity 0.80 0.80,class:^(app.drey.Warp)$ # Warp-Gtk
@@ -83,6 +83,7 @@
         windowrulev2 = float,class:^(io.missioncenter.MissionCenter)$ # MissionCenter-Gtk
 
         windowrulev2 = noblur,class:^(kitty)$
+        windowrulev2 = noblur,class:^(discord)$
 
         windowrulev2 = float,title:^(rmpc)$
         windowrulev2 = size 900 580,title:^(rmpc)$
