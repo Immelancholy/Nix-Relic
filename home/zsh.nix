@@ -4,7 +4,6 @@
     enableCompletion = true;
     autosuggestion = {
       enable = true;
-      async = true;
     };
     syntaxHighlighting.enable = true;
 
