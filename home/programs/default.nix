@@ -27,7 +27,7 @@
       listen_on = "unix:@kitty";
     };
     extraConfig = ''
-      background_opacity 0.85
+      background_opacity 0.8
     '';
   };
 
