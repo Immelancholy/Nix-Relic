@@ -2,7 +2,7 @@
   wayland.windowManager.hyprland.settings = {
     bind =
       [
-        "$mod, T, exec, $term --hold $scr/poke.sh"
+        "$mod, T, exec, $term $scr/poke.sh"
         "$mod, F, exec, $browser"
         "$mod, E, exec, $files"
         "$mod, A, exec, $menu"
