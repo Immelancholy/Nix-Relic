@@ -60,7 +60,7 @@
         specialArgs = {inherit inputs;};
         modules = [
           ({pkgs, ...}: {
-            nixpkgs.overlays = [fenix.overlays.default];
+            nixpkgs.overlays = [fenix.overlays.complete];
             environment.systemPackages = with pkgs; [
               (fenix.complete.withComponents [
                 "cargo"
