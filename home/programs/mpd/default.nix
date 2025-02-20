@@ -29,7 +29,7 @@
     mpdris2 = {
       enable = true;
       mpd.host = "/run/user/1000/mpd/socket";
-      notifivations = true;
+      notifications = true;
       mpd.musicDirectory = "$HOME/Music";
     };
   };
