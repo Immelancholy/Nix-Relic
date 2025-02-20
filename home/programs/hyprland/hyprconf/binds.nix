@@ -2,7 +2,7 @@
   wayland.windowManager.hyprland.settings = {
     bind =
       [
-        "$mod, T, exec, $term --hold sh $scr/poke.sh"
+        "$mod, T, exec, $scr/poke.sh"
         "$mod, F, exec, $browser"
         "$mod, E, exec, $files"
         "$mod, A, exec, $menu"
@@ -14,10 +14,10 @@
         "$mod+Ctrl+Alt, Left, movetoworkspace, r-1"
         "$mod+Ctrl+Alt, L, movetoworkspace, r+1"
         "$mod+Ctrl+Alt, H, movetoworkspace, r-1"
-        "$mod, I, exec, [workspace 1 silent; float; size 854 555; move 646 40] $term sh $scr/rmpc.sh"
-        "$mod, I, exec, [workspace 1 silent; float; size 854 465; move 646 605] $term sh $scr/cava.sh"
-        "$mod, I, exec, [workspace 1 silent; float; size 626 666; move 10 404] $term sh $scr/btop.sh"
-        "$mod, I, exec, [workspace 1 silent; float; size 400 1030; move 1510 40] $term sh $scr/neo.sh"
+        "$mod, I, exec, [workspace 1 silent; float; size 854 555; move 646 40] $scr/rmpc.sh"
+        "$mod, I, exec, [workspace 1 silent; float; size 854 465; move 646 605] $scr/cava.sh"
+        "$mod, I, exec, [workspace 1 silent; float; size 626 666; move 10 404] $scr/btop.sh"
+        "$mod, I, exec, [workspace 1 silent; float; size 400 1030; move 1510 40] $scr/neo.sh"
         "$mod, I, exec, [workspace 1 silent; float; size 626 354; move 10 40] $term --hold fastfetch"
         "$mod, Delete, exec, uwsm stop"
         "$mod+Shift, 0, movetoworkspace, 10"
