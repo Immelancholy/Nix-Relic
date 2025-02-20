@@ -97,7 +97,7 @@
 
     bind = $mod, R, togglesplit
 
-    bind = Ctrl+Shift, Escape, exec, $term --title "btop" sh $scr/btop.sh
+    bind = Ctrl+Shift, Escape, exec, --title "btop" sh $scr/btop.sh
 
     bindd = $mod+Shift, P,Color Picker , exec, hyprpicker -a # Pick color (Hex) >> clipboard#
 
