@@ -25,6 +25,9 @@
       window_padding_width = 15;
       allow_remote_control = true;
       listen_on = "unix:@kitty";
+      kitty.extraConfig = ''
+        background_opacity 0.8
+      '';
     };
   };
 
