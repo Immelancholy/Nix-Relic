@@ -40,6 +40,53 @@
     withPerl = true;
     luaLoader.enable = true;
     plugins = {
+      blink-cmp = {
+        enable = true;
+        autoLoad = true;
+        setupLspCapabilities = true;
+        settings = {
+          keymap = {
+            preset = "default";
+          };
+          kind_icons = {
+            Class = "󱡠";
+            Color = "󰏘";
+            Constant = "󰏿";
+            Constructor = "󰒓";
+            Enum = "󰦨";
+            EnumMember = "󰦨";
+            Event = "󱐋";
+            Field = "󰜢";
+            File = "󰈔";
+            Folder = "󰉋";
+            Function = "󰊕";
+            Interface = "󱡠";
+            Keyword = "󰻾";
+            Method = "󰊕";
+            Module = "󰅩";
+            Operator = "󰪚";
+            Property = "󰖷";
+            Reference = "󰬲";
+            Snippet = "󱄽";
+            Struct = "󱡠";
+            Text = "󰉿";
+            TypeParameter = "󰬛";
+            Unit = "󰪚";
+            Value = "󰦨";
+            Variable = "󰆦";
+          };
+          completion = {
+            sources = {
+              default = [
+                "lsp"
+                "buffer"
+                "luasnip"
+                "path"
+              ];
+            };
+          };
+        };
+      };
       vim-suda = {
         enable = true;
         settings = {
@@ -177,40 +224,40 @@
           ];
         };
       };
-      cmp = {
-        autoLoad = true;
-        enable = true;
-        autoEnableSources = true;
-        settings = {
-          mapping = {
-            "<C-Space>" = "cmp.mapping.complete()";
-            "<C-d>" = "cmp.mapping.scroll_docs(-4)";
-            "<C-e>" = "cmp.mapping.close()";
-            "<C-f>" = "cmp.mapping.scroll_docs(4)";
-            "<CR>" = "cmp.mapping.confirm({ select = true })";
-            "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
-            "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
-          };
-          sources = [
-            {
-              name = "nvim_lsp";
-            }
-            {
-              name = "buffer";
-            }
-            {
-              name = "async_path";
-            }
-            {
-              name = "treesitter";
-            }
-            {
-              name = "lspkind";
-            }
-          ];
-        };
-      };
-      cmp-nvim-lsp.enable = true;
+      # cmp = {
+      #   autoLoad = true;
+      #   enable = true;
+      #   autoEnableSources = true;
+      #   settings = {
+      #     mapping = {
+      #       "<C-Space>" = "cmp.mapping.complete()";
+      #       "<C-d>" = "cmp.mapping.scroll_docs(-4)";
+      #       "<C-e>" = "cmp.mapping.close()";
+      #       "<C-f>" = "cmp.mapping.scroll_docs(4)";
+      #       "<CR>" = "cmp.mapping.confirm({ select = true })";
+      #       "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
+      #       "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
+      #     };
+      #     sources = [
+      #       {
+      #         name = "nvim_lsp";
+      #       }
+      #       {
+      #         name = "buffer";
+      #       }
+      #       {
+      #         name = "async_path";
+      #       }
+      #       {
+      #         name = "treesitter";
+      #       }
+      #       {
+      #         name = "lspkind";
+      #       }
+      #     ];
+      #   };
+      # };
+      # cmp-nvim-lsp.enable = true;
       bufdelete.enable = true;
       treesitter = {
         autoLoad = true;
