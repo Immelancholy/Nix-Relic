@@ -8,7 +8,6 @@
     ./pipewire.nix
     ./sddm.nix
     ./obs.nix
-    ./zsh.nix
   ];
 
   programs.xfconf.enable = true;
