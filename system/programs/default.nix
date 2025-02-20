@@ -77,7 +77,6 @@
   programs.gamescope = {
     enable = true;
     capSysNice = true;
-    package = pkgs.gamescope-wsi;
     args = [
       "--backed wayland"
       "-h 1080"
