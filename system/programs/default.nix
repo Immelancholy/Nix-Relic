@@ -54,7 +54,7 @@
     sqlite
     lua53Packages.sqlite
     sqlite-utils
-    vscode-extension.vadimcn.vscode-lldb
+    vscode-extensions.vadimcn.vscode-lldb
   ];
   environment.shells = with pkgs; [zsh];
 
