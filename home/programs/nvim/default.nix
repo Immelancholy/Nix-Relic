@@ -74,6 +74,10 @@
                 module = "blink.cmp.sources.path";
                 async = true;
               };
+              git = {
+                name = "Git";
+                module = "blink-cmp-git";
+              };
             };
           };
           keymap = {
