@@ -50,8 +50,8 @@
     bindl = $mod, P, exec, $playerctl play-pause
     bindel  = , mouse:281, exec, rmpc volume +1 # volume up
     bindel  = , mouse:282, exec, rmpc volume -1 # volume down
-    bindel  = $mod, ;, exec, rmpc volume +1 # volume up
-    bindel  = $mod, ', exec, rmpc volume -1 # volume down
+    bindel  = $mod, =, exec, rmpc volume +1 # volume up
+    bindel  = $mod, -, exec, rmpc volume -1 # volume down
     bindl  = $mod, mouse:282, exec, $playerctl next #next
     bindl  = $mod, mouse:281, exec, $playerctl previous #previous,
     bindl = , mouse:275, pass, class:^(discord)$
