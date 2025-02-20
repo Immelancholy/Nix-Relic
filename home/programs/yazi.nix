@@ -1,4 +1,8 @@
-{ inputs, pkgs, ... }: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   programs.yazi = {
     enable = true;
     package = inputs.yazi.packages.${pkgs.system}.default;
@@ -8,8 +12,13 @@
       manager.show_hidden = true;
       opener = {
         edit = [
-          { run = ''$HOME/.local/share/bin/kitty_nvim.sh "$@"''; block = true; desc = ''nvim''; for = ''unix''; } 
-	];
+          {
+            run = ''$HOME/.local/share/bin/nv.sh "$@"'';
+            block = true;
+            desc = ''nvim'';
+            for = ''unix'';
+          }
+        ];
       };
     };
   };
