@@ -77,18 +77,6 @@
   programs.gamescope = {
     enable = true;
     capSysNice = true;
-    args = [
-      "--backend wayland"
-      "-h 1080"
-      "-w 1920"
-      "-f"
-      "-r 144"
-      "--force-grab-cursor"
-      "--rt"
-    ];
-    env = {
-      ENABLE_GAMESCOPE_WSI = "0";
-    };
   };
 
   programs.steam = {
