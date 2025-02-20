@@ -72,7 +72,6 @@
     gamescopeSession = {
       enable = true;
       args = [
-        "--generate-drm-mode"
         "--backend wayland"
         "--mangoapp"
         "--expose-wayland"
