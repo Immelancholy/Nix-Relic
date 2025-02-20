@@ -26,11 +26,9 @@
         }
       '';
     };
-    mpdris2 = {
+    mpd-mris = {
       enable = true;
       mpd.host = "/run/user/1000/mpd/socket";
-      notifications = true;
-      multimediaKeys = true;
       mpd.musicDirectory = "/home/mela/Music";
     };
   };
