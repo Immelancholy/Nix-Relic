@@ -73,11 +73,10 @@
     gamescopeSession = {
       enable = true;
       args = [
-        "--backend wayland"
+        "--backend drm"
         "-h 1080"
         "-w 1920"
         "-e"
-        "--force-grab-cursor"
       ];
     };
     extraPackages = with pkgs; [
