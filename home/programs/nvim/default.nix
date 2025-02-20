@@ -40,6 +40,13 @@
     withPerl = true;
     luaLoader.enable = true;
     plugins = {
+      vim-suda = {
+        enable = true;
+        smart_edit = true;
+      };
+      vim-surround = {
+        enable = true;
+      };
       lint = {
         enable = true;
         lintersByFt = {
