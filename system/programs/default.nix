@@ -73,6 +73,7 @@
     gamescopeSession.enable = true;
     extraPackages = with pkgs; [
       gamescope
+      gamemode
     ];
   };
 }
