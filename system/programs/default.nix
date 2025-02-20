@@ -78,7 +78,7 @@
     enable = true;
     capSysNice = true;
     args = [
-      "--backed wayland"
+      "--backend wayland"
       "-h 1080"
       "-w 1920"
       "-f"
