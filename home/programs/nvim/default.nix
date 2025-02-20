@@ -48,9 +48,9 @@
           sources = {
             default = [
               "lsp"
-              "buffer"
-              "path"
-              "luasnip"
+              # "buffer"
+              # "path"
+              # "luasnip"
             ];
             providers = {
               lsp = {
@@ -58,22 +58,22 @@
                 module = "blink.cmp.sources.lsp";
                 enabled = true;
               };
-              buffer = {
-                name = "buffer";
-                module = "blink.cmp.sources.buffer";
-                enabled = true;
-              };
-              path = {
-                name = "path";
-                modules = "blink.cmp.sources.path";
-                enabled = true;
-                async = true;
-              };
-              luasnip = {
-                name = "luasnip";
-                module = "blink.cmp.sources.luasnip";
-                enabled = true;
-              };
+              # buffer = {
+              #   name = "buffer";
+              #   module = "blink.cmp.sources.buffer";
+              #   enabled = true;
+              # };
+              # path = {
+              #   name = "path";
+              #   modules = "blink.cmp.sources.path";
+              #   enabled = true;
+              #   async = true;
+              # };
+              # luasnip = {
+              #   name = "luasnip";
+              #   module = "blink.cmp.sources.luasnip";
+              #   enabled = true;
+              # };
             };
           };
           keymap = {
