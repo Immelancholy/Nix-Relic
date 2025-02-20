@@ -75,6 +75,7 @@
         "--generate-drm-mode"
         "--backend wayland"
         "--mangoapp"
+        "--expose-wayland"
       ];
     };
     extraPackages = with pkgs; [
