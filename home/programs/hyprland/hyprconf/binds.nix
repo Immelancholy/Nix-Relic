@@ -68,8 +68,8 @@
     bind = $mod, Up, movefocus, u
     bind = $mod, Down, movefocus, d
 
-    bind = Alt, L, workspace, r+1
-    bind = Alt, H, workspace, r-1
+    # bind = Alt, L, workspace, r+1
+    # bind = Alt, H, workspace, r-1
     bind = Alt, Right, workspace, r+1
     bind = Alt, Left, workspace, r-1
 
@@ -110,7 +110,9 @@
 
     bind = SUPER, Q, hyprtasking:killhovered
 
+    bind = Alt, H, hyprtasking:move, left
     bind = Alt, J, hyprtasking:move, down
     bind = Alt, K, hyprtasking:move, up
+    bind = Alt, L, hyprtasking:move, right
   '';
 }
