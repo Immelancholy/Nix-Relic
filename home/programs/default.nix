@@ -12,6 +12,12 @@
     ./fastfetch
     ./nvim
   ];
+
+  services.easyeffects = {
+    enable = true;
+    preset = "Rode NT1";
+  };
+
   programs.kitty = {
     enable = true;
     shellIntegration.enableZshIntegration = true;
@@ -115,13 +121,11 @@
     rmpc
     mpd
     protonup
-    mpdris2
     playerctl
     pokemonsay
     fortune
     cowsay
     lz4
-    easyeffects
     qpwgraph
     ark
     parted
