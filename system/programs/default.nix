@@ -104,8 +104,8 @@
         __GL_MaxFramesAllowed = "1";
       };
     };
-    # extraPackages = with pkgs; [
-    #   gamescope
-    # ];
+    extraPackages = with pkgs; [
+      gamescope
+    ];
   };
 }
