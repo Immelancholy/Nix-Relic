@@ -42,76 +42,76 @@
       );
   };
   wayland.windowManager.hyprland.extraConfig = ''
-        bindl  = , XF86AudioMute, exec, $playerctl play-pause #pause-play media
-        bindel = , XF86AudioLowerVolume, exec, rmpc volume -1 # decrease volume
-        bindel = , XF86AudioRaiseVolume, exec, rmpc volume +1 # increase volume
+    bindl  = , XF86AudioMute, exec, $playerctl play-pause #pause-play media
+    bindel = , XF86AudioLowerVolume, exec, rmpc volume -1 # decrease volume
+    bindel = , XF86AudioRaiseVolume, exec, rmpc volume +1 # increase volume
 
-        bindl  = , mouse:277, exec, $playerctl play-pause # toggle between media play and pause
-        bindl = $mod, P, exec, $playerctl play-pause
-        bindel  = , mouse:281, exec, rmpc volume +1 # volume up
-        bindel  = , mouse:282, exec, rmpc volume -1 # volume down
-        bbindel  = $mod, P, exec, rmpc volume +1 # volume up
-        bindel  = $mod, P, exec, rmpc volume -1 # volume down
-    indl  = $mod, mouse:282, exec, $playerctl next #next
-        bindl  = $mod, mouse:281, exec, $playerctl previous #previous,
-        bindl = , mouse:275, pass, class:^(discord)$
-        bindl = , F10, pass, class:^(com.obsproject.Studio)$
-        bindl = , F12, pass, class:^(com.obsproject.Studio)$
-        bindl = , F9, pass, class:^(com.obsproject.Studio)$
-        bind = $mod, M, exec,[workspace 4 silent] $scr/patch.sh
-        bind = $mod, M, exec,[workspace 4 silent] qpwgraph
-        bind = $mod, M, exec,[workspace 4 silent] qpwgraph
+    bindl  = , mouse:277, exec, $playerctl play-pause # toggle between media play and pause
+    bindl = $mod, P, exec, $playerctl play-pause
+    bindel  = , mouse:281, exec, rmpc volume +1 # volume up
+    bindel  = , mouse:282, exec, rmpc volume -1 # volume down
+    bindel  = $mod, P, exec, rmpc volume +1 # volume up
+    bindel  = $mod, P, exec, rmpc volume -1 # volume down
+    bindl  = $mod, mouse:282, exec, $playerctl next #next
+    bindl  = $mod, mouse:281, exec, $playerctl previous #previous,
+    bindl = , mouse:275, pass, class:^(discord)$
+    bindl = , F10, pass, class:^(com.obsproject.Studio)$
+    bindl = , F12, pass, class:^(com.obsproject.Studio)$
+    bindl = , F9, pass, class:^(com.obsproject.Studio)$
+    bind = $mod, M, exec,[workspace 4 silent] $scr/patch.sh
+    bind = $mod, M, exec,[workspace 4 silent] qpwgraph
+    bind = $mod, M, exec,[workspace 4 silent] qpwgraph
 
-        bind = $mod, H, movefocus, l
-        bind = $mod, L, movefocus, r
-        bind = $mod, K, movefocus, u
-        bind = $mod, J, movefocus, d
-        bind = $mod, Left, movefocus, l
-        bind = $mod, Right, movefocus, r
-        bind = $mod, Up, movefocus, u
-        bind = $mod, Down, movefocus, d
+    bind = $mod, H, movefocus, l
+    bind = $mod, L, movefocus, r
+    bind = $mod, K, movefocus, u
+    bind = $mod, J, movefocus, d
+    bind = $mod, Left, movefocus, l
+    bind = $mod, Right, movefocus, r
+    bind = $mod, Up, movefocus, u
+    bind = $mod, Down, movefocus, d
 
-        bind = Alt, L, workspace, r+1
-        bind = Alt, H, workspace, r-1
-        bind = Alt, E, workspace, empty
+    bind = Alt, L, workspace, r+1
+    bind = Alt, H, workspace, r-1
+    bind = Alt, E, workspace, empty
 
-        binde = $mod+Shift, Left, resizeactive, 1 0
-        binde = $mod+Shift, Right, resizeactive, -1 0
-        binde = $mod+Shift, Up, resizeactive, 0 -1
-        binde = $mod+Shift, Down, resizeactive, 0 1
+    binde = $mod+Shift, Left, resizeactive, 1 0
+    binde = $mod+Shift, Right, resizeactive, -1 0
+    binde = $mod+Shift, Up, resizeactive, 0 -1
+    binde = $mod+Shift, Down, resizeactive, 0 1
 
-        $moveactivewindow=grep -q "true" <<< $(hyprctl activewindow -j | jq -r .floating) && hyprctl dispatch moveactive
-        binded = Alt+Shift, Left, Move activewindow left, exec, $moveactivewindow -30 0 || hyprctl dispatch movewindow l
-        binded = Alt+Shift, Right, Move activewindow right, exec, $moveactivewindow 30 0 || hyprctl dispatch movewindow r
-        binded = Alt+Shift, Up, Move activewindow up, exec, $moveactivewindow  0 -30 || hyprctl dispatch movewindow u
-        binded = Alt+Shift, Down, Move activewindow down, exec, $moveactivewindow 0 30 || hyprctl dispatch movewindow d
-        binded = Alt+Shift, H, Move activewindow left, exec, $moveactivewindow -30 0 || hyprctl dispatch movewindow l
-        binded = Alt+Shift, L, Move activewindow right, exec, $moveactivewindow 30 0 || hyprctl dispatch movewindow r
-        binded = Alt+Shift, K, Move activewindow up, exec, $moveactivewindow  0 -30 || hyprctl dispatch movewindow u
-        binded = Alt+Shift, J, Move activewindow down, exec, $moveactivewindow 0 30 || hyprctl dispatch movewindow d
+    $moveactivewindow=grep -q "true" <<< $(hyprctl activewindow -j | jq -r .floating) && hyprctl dispatch moveactive
+    binded = Alt+Shift, Left, Move activewindow left, exec, $moveactivewindow -30 0 || hyprctl dispatch movewindow l
+    binded = Alt+Shift, Right, Move activewindow right, exec, $moveactivewindow 30 0 || hyprctl dispatch movewindow r
+    binded = Alt+Shift, Up, Move activewindow up, exec, $moveactivewindow  0 -30 || hyprctl dispatch movewindow u
+    binded = Alt+Shift, Down, Move activewindow down, exec, $moveactivewindow 0 30 || hyprctl dispatch movewindow d
+    binded = Alt+Shift, H, Move activewindow left, exec, $moveactivewindow -30 0 || hyprctl dispatch movewindow l
+    binded = Alt+Shift, L, Move activewindow right, exec, $moveactivewindow 30 0 || hyprctl dispatch movewindow r
+    binded = Alt+Shift, K, Move activewindow up, exec, $moveactivewindow  0 -30 || hyprctl dispatch movewindow u
+    binded = Alt+Shift, J, Move activewindow down, exec, $moveactivewindow 0 30 || hyprctl dispatch movewindow d
 
-        bind = $mod, mouse_up, workspace, e+1
-        bind = $mod, mouse_down, workspace, e-1
+    bind = $mod, mouse_up, workspace, e+1
+    bind = $mod, mouse_down, workspace, e-1
 
-        bindm = $mod, mouse:272, movewindow
-        bindm = $mod, mouse:273, resizewindow
-        bind = $mod+Alt, S, movetoworkspacesilent, special
-        bind = $mod, S, togglespecialworkspace,
+    bindm = $mod, mouse:272, movewindow
+    bindm = $mod, mouse:273, resizewindow
+    bind = $mod+Alt, S, movetoworkspacesilent, special
+    bind = $mod, S, togglespecialworkspace,
 
-        bind = $mod, R, togglesplit
+    bind = $mod, R, togglesplit
 
-        bind = Ctrl+Shift, Escape, exec, $term --title "btop" sh $scr/btop.sh
+    bind = Ctrl+Shift, Escape, exec, $term --title "btop" sh $scr/btop.sh
 
-        bindd = $mod+Shift, P,Color Picker , exec, hyprpicker -a # Pick color (Hex) >> clipboard#
+    bindd = $mod+Shift, P,Color Picker , exec, hyprpicker -a # Pick color (Hex) >> clipboard#
 
-        bind = , XF86Calculator, exec, qalculate-gtk
-        # bind = Alt, tab, hyprtasking:toggle, cursor
-        #
-        # bind = SUPER, Q, hyprtasking:killhovered
+    bind = , XF86Calculator, exec, qalculate-gtk
+    # bind = Alt, tab, hyprtasking:toggle, cursor
+    #
+    # bind = SUPER, Q, hyprtasking:killhovered
 
-        # bind = Alt, H, hyprtasking:move, left
-        # bind = Alt, J, hyprtasking:move, down
-        # bind = Alt, K, hyprtasking:move, up
-        # bind = Alt, L, hyprtasking:move, right
+    # bind = Alt, H, hyprtasking:move, left
+    # bind = Alt, J, hyprtasking:move, down
+    # bind = Alt, K, hyprtasking:move, up
+    # bind = Alt, L, hyprtasking:move, right
   '';
 }
