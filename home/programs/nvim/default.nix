@@ -54,6 +54,7 @@
                 name = "LSP";
                 module = "blink.cmp.sources.lsp";
                 enabled = true;
+              };
             };
           };
           keymap = {
