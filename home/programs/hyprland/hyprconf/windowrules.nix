@@ -84,6 +84,7 @@
 
         windowrulev2 = opacity 0.80 0.80,class:^(org.rncbc.qpwgraph)$
         windowrulev2 = opacity 0.80 0.80,class:^(com.github.wwmm.easyeffects)$
+        windowrulev2 = xray, class:^(discord)$
 
         windowrulev2 = noblur,class:^(kitty)$
 
