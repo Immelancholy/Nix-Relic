@@ -48,13 +48,10 @@
           sources = {
             default = [
               "lsp"
-              "path"
-              "luasnip"
-              "buffer"
             ];
             providers = {
               lsp = {
-                name = "lsp";
+                name = "LSP";
                 module = "blink.cmp.sources.lsp";
                 timeout_ms = 2000;
                 fallbacks = [];
