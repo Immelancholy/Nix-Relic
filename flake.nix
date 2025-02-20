@@ -54,7 +54,7 @@
     fenix,
     ...
   } @ inputs: {
-    packages.x86_64-linux.default = fenix.packages.x86_64-linux.minimal.toolchain;
+    packages.x86_64-linux.default = fenix.packages.x86_64-linux.complete.toolchain;
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -63,7 +63,7 @@
           ({pkgs, ...}: {
             nixpkgs.overlays = [fenix.overlays.default];
             environment.systemPackages = with pkgs; [
-              (fenix.default.withComponents [
+              (fenix.complete.withComponents [
                 "cargo"
                 "clippy"
                 "rust-src"
