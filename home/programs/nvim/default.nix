@@ -131,7 +131,7 @@
           };
         };
       };
-      blink-ripgrep.enable = true; = true;
+      blink-ripgrep.enable = true;
       blink-cmp-git = {
         enable = true;
         autoLoad = true;
