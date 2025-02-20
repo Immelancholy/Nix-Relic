@@ -53,6 +53,14 @@
               "buffer"
             ];
           };
+          providers = {
+            lsp = {
+              name = "LSP";
+              module = "blink.cmp.sources.lsp";
+              timeour_ms = 2000;
+              fallbacks = [];
+            };
+          };
           keymap = {
             preset = "default";
           };
