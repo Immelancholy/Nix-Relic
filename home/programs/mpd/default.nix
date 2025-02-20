@@ -5,7 +5,7 @@
       network = {
         listenAddress = "/run/user/1000/mpd/socket";
       };
-      musicDirectory = "$HOME/Music";
+      musicDirectory = "~/Music";
       extraConfig = ''
         restore_paused "yes"
 
