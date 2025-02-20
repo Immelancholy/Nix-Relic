@@ -54,25 +54,12 @@
     fenix,
     ...
   } @ inputs: {
-    packages.x86_64-linux.default = fenix.packages.x86_64-linux.complete.toolchain;
+    packages.x86_64-linux.default = fenix.packages.x86_64-linux.minimal.toolchain;
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = {inherit inputs;};
         modules = [
-          ({pkgs, ...}: {
-            nixpkgs.overlays = [fenix.overlays.default];
-            environment.systemPackages = with pkgs; [
-              (fenix.withComponents [
-                "cargo"
-                "clippy"
-                "rust-src"
-                "rustc"
-                "rustfmt"
-              ])
-              rust-analyzer-nightly
-            ];
-          })
           solaar.nixosModules.default
           ./system
           catppuccin.nixosModules.catppuccin
@@ -96,6 +83,19 @@
             };
             # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
           }
+          ({pkgs, ...}: {
+            nixpkgs.overlays = [fenix.overlays.default];
+            environment.systemPackages = with pkgs; [
+              (fenix.complete.withComponents [
+                "cargo"
+                "clippy"
+                "rust-src"
+                "rustc"
+                "rustfmt"
+              ])
+              rust-analyzer-nightly
+            ];
+          })
         ];
       };
     };
