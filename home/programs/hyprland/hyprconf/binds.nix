@@ -70,11 +70,7 @@
 
     bind = Alt, L, workspace, r+1
     bind = Alt, H, workspace, r-1
-    bind = Alt, Right, workspace, r+1
-    bind = Alt, Left, workspace, r-1
-
     bind = Alt, E, workspace, empty
-    bind = $mod+Ctrl, Down, workspace, empty
 
     binde = $mod+Shift, Left, resizeactive, 1 0
     binde = $mod+Shift, Right, resizeactive, -1 0
@@ -110,9 +106,9 @@
 
     bind = SUPER, Q, hyprtasking:killhovered
 
-    bind = Alt, H, hyprtasking:move, left
+    # bind = Alt, H, hyprtasking:move, left
     bind = Alt, J, hyprtasking:move, down
     bind = Alt, K, hyprtasking:move, up
-    bind = Alt, L, hyprtasking:move, right
+    # bind = Alt, L, hyprtasking:move, right
   '';
 }
