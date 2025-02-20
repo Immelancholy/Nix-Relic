@@ -54,7 +54,10 @@
     gamescopeSession.enable = true;
     extest.enable = true;
   };
-  programs.gamemode.enable = true;
+  programs.gamemode = {
+    enable = true;
+    capSysNice = true;
+  };
 
   programs.nm-applet = {
     enable = true;
