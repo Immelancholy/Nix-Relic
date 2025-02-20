@@ -55,7 +55,7 @@
           };
           providers = {
             lsp = {
-              name = "LSP";
+              name = "lsp";
               module = "blink.cmp.sources.lsp";
               timeour_ms = 2000;
               fallbacks = [];
