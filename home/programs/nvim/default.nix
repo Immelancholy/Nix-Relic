@@ -198,9 +198,9 @@
             {
               name = "buffer";
             }
-            # {
-            #   name = "async_path";
-            # }
+            {
+              name = "async_path";
+            }
             {
               name = "treesitter";
             }
