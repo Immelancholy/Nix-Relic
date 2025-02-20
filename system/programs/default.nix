@@ -50,6 +50,7 @@
     dxvk_2
     nv-codec-headers-12
     vivaldi-ffmpeg-codecs
+    gcc
   ];
   environment.shells = with pkgs; [zsh];
 
