@@ -469,6 +469,7 @@
         };
       };
       dap.enable = true;
+      dap-lldb.enable = true;
       dap-go.enable = true;
       dap-python.enable = true;
       dap-ui.enable = true;
