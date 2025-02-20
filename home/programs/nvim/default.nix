@@ -83,6 +83,13 @@
                 "luasnip"
                 "path"
               ];
+              providers = {
+                lsp = {
+                  name = "LSP";
+                  modules = "blink.cmp.sources.lsp";
+                  fallbacks = [];
+                };
+              };
             };
           };
         };
