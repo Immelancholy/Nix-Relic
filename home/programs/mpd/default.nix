@@ -1,4 +1,7 @@
-{
+{pkgs, ...}: {
+  home.packages = with pkgs; [
+    mpd-notification
+  ];
   services = {
     mpd = {
       enable = true;
