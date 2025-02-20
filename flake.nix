@@ -63,7 +63,7 @@
           ({pkgs, ...}: {
             nixpkgs.overlays = [fenix.overlays.default];
             environment.systemPackages = with pkgs; [
-              fenix
+              fenix.complete
               rust-analyzer-nightly
             ];
           })
