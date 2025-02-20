@@ -1,14 +1,11 @@
-{pkgs, ...}: {
-  home.packages = with pkgs; [
-    mpd-notification
-  ];
+{
   services = {
     mpd = {
       enable = true;
       network = {
         listenAddress = "/run/user/1000/mpd/socket";
       };
-      musicDirectory = "~/Music";
+      musicDirectory = "$HOME/Music";
       extraConfig = ''
         restore_paused "yes"
 
@@ -29,9 +26,11 @@
         }
       '';
     };
-    mpd-mpris = {
+    mpdris2 = {
       enable = true;
       mpd.host = "/run/user/1000/mpd/socket";
+      notifivations = true;
+      musicDirectory = "$HOME/Music";
     };
   };
 }
