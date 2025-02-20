@@ -2,6 +2,7 @@
   services = {
     mpd = {
       enable = true;
+      startWhenNeeded = true;
       network = {
         listenAddress = "/run/user/1000/mpd/socket";
       };
