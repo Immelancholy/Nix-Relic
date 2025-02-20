@@ -61,6 +61,7 @@
     vscode-extensions.vadimcn.vscode-lldb
     lldb
     gamemode
+    mangohud
   ];
   environment.shells = with pkgs; [zsh];
 
@@ -82,7 +83,20 @@
         "-h 1080"
         "-w 1920"
         "-e"
+        "--force-grab-cursor"
+        "-f"
+        "--mangoapp"
       ];
+      env = {
+        ENABLE_GAMESCOPE_WSI = 0;
+        STEAM_MULTIPLE_XWAYLANDS = 0;
+        STEAM_GAMESCOPE_HDR_SUPPORTED = 1;
+        STEAM_GAMESCOPE_VRR_SUPPORTED = 1;
+        STEAM_MANGOAPP_PRESETS_SUPPORTED = 1;
+        STEAM_DISABLE_MANGOAPP_ATOM_WORKAROUND = 1;
+        SRT_URLOPEN_PREFER_STEAM = 1;
+        __GL_MaxFramesAllowed = 1;
+      };
     };
     extraPackages = with pkgs; [
       gamescope
