@@ -7,7 +7,7 @@
         windowrulev2 = opacity 0.80 0.80,class:^([Cc]ode)$
         windowrulev2 = opacity 0.80 0.80,class:^(code-url-handler)$
         windowrulev2 = opacity 0.80 0.80,class:^(code-insiders-url-handler)$
-        windowrulev2 = opacity 0.80 0.80,class:^(kitty)$
+        windowrulev2 = opacity 0.90 0.90,class:^(kitty)$
         windowrulev2 = opacity 0.80 0.80,class:^(org.kde.dolphin)$
         windowrulev2 = opacity 0.80 0.80,class:^(org.kde.ark)$
         windowrulev2 = opacity 0.80 0.80,class:^(nwg-look)$
