@@ -17,11 +17,11 @@
         "Ctrl+Shift+Alt, Left, movetoworkspace, r-1"
         "Ctrl+Shift+Alt, L, movetoworkspace, r+1"
         "Ctrl+Shift+Alt, H, movetoworkspace, r-1"
-        "$mod, I, exec, [workspace 1 silent; float; size 854 555; move 646 40] $term $scr/rmpc.sh"
-        "$mod, I, exec, [workspace 1 silent; float; size 854 465; move 646 605] $term $scr/cava.sh"
-        "$mod, I, exec, [workspace 1 silent; float; size 626 666; move 10 404] $term $scr/btop.sh"
-        "$mod, I, exec, [workspace 1 silent; float; size 400 1030; move 1510 40] $term $scr/neo.sh"
-        "$mod, I, exec, [workspace 1 silent; float; size 626 354; move 10 40] $term --hold fastfetch"
+        "$mod, U, exec, [workspace 1 silent; float; size 854 555; move 646 40] $term $scr/rmpc.sh"
+        "$mod, U, exec, [workspace 1 silent; float; size 854 465; move 646 605] $term $scr/cava.sh"
+        "$mod, U, exec, [workspace 1 silent; float; size 626 666; move 10 404] $term $scr/btop.sh"
+        "$mod, U, exec, [workspace 1 silent; float; size 400 1030; move 1510 40] $term $scr/neo.sh"
+        "$mod, U, exec, [workspace 1 silent; float; size 626 354; move 10 40] $term --hold fastfetch"
         "$mod, Delete, exec, uwsm stop"
         "$mod+Shift, 0, movetoworkspace, 10"
         ", Print, exec, grimblast --notify copysave output"
@@ -50,8 +50,8 @@
     bindl = $mod, P, exec, $playerctl play-pause
     bindel  = , mouse:281, exec, rmpc volume +1 # volume up
     bindel  = , mouse:282, exec, rmpc volume -1 # volume down
-    bindel  = $mod, =, exec, rmpc volume +1 # volume up
-    bindel  = $mod, -, exec, rmpc volume -1 # volume down
+    bindel  = $mod, O, exec, rmpc volume +1 # volume up
+    bindel  = $mod, I, exec, rmpc volume -1 # volume down
     bindl  = $mod, mouse:282, exec, $playerctl next #next
     bindl  = $mod, mouse:281, exec, $playerctl previous #previous,
     bindl = , mouse:275, pass, class:^(discord)$
