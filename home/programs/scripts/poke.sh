@@ -1,3 +1,3 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 fortune | pokemonsay -p fennekin -N
