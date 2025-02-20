@@ -2,7 +2,7 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    autosuggestions = {
+    autosuggestion = {
       enable = true;
       async = true;
     };
