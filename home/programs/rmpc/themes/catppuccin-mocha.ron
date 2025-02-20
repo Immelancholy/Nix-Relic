@@ -22,7 +22,7 @@
     symbols: (song: "󰝚", dir: "󰀥", marker: "", ellipsis: "..."),
     progress_bar: (
         symbols: ["=", "⭘", " "],
-        track_style: (fg: "#89dceb", bg:"#181825", modifiers: "Dim"),
+        track_style: (fg: "#89dceb", bg:"#181825"),
         elapsed_style: (fg: "#89dceb"),
         thumb_style: (fg: "#cba6f7"),
     ),
