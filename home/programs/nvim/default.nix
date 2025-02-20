@@ -354,6 +354,9 @@
           vimdoc
           xml
           yaml
+          css
+          norg
+          html
         ];
         settings = {
           highlight = {
