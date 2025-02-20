@@ -51,6 +51,7 @@
               "buffer"
               "path"
               "luasnip"
+              "git"
             ];
             providers = {
               lsp = {
@@ -70,16 +71,23 @@
                 async = true;
               };
               luasnip = {
-                luasnip = {
                   name = "luasnip";
                   module = "blink.cmp.sources.luasnip";
                   enabled = true;
                 };
               };
+              git = {
+                name = "Git";
+                module = "blink-cmp-git";
+                score_offset = 100;
+                opts = {
+                  commit = {};
+                };
+              };
             };
           };
           blink-cmp-git.enable = true;
-          blink-compa.enable = true;
+          blink-compat.enable = true;
           keymap = {
             preset = "default";
           };
