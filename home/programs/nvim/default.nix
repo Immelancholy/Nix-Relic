@@ -75,17 +75,6 @@
             Value = "󰦨";
             Variable = "󰆦";
           };
-          sources = {
-            default = [
-              "lsp"
-            ];
-            providers = {
-              lsp = {
-                modules = "blink.cmp.sources.lsp";
-                fallbacks = [];
-              };
-            };
-          };
         };
       };
       vim-suda = {
