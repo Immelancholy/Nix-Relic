@@ -5,7 +5,7 @@
       network = {
         listenAddress = "/run/user/1000/mpd/socket";
       };
-      musicDirectory = "~/Music";
+      musicDirectory = "$HOME/Music";
       extraConfig = ''
         restore_paused "yes"
 
@@ -30,7 +30,7 @@
       enable = true;
       mpd.host = "/run/user/1000/mpd/socket";
       notifications = true;
-      mpd.musicDirectory = "~/Music";
+      mpd.musicDirectory = "/home/mela/Music";
     };
   };
 }
