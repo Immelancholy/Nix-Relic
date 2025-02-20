@@ -74,11 +74,6 @@
   services.mullvad-vpn.enable = true;
   services.mullvad-vpn.package = pkgs.mullvad-vpn;
 
-  programs.gamescope = {
-    enable = true;
-    capSysNice = true;
-  };
-
   programs.steam = {
     enable = true;
     gamescopeSession = {
@@ -104,5 +99,8 @@
         __GL_MaxFramesAllowed = "1";
       };
     };
+    extraPackages = with pkgs; [
+      gamescope
+    ];
   };
 }
