@@ -15,7 +15,6 @@
       "[workspace 2 silent] $browser"
       "[workspace 2 silent] teams-for-linux --minimized"
       "[workspace 3] discord"
-      "[workspace 5 silent] easyeffects"
     ];
   };
 }
