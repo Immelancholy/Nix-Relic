@@ -76,13 +76,9 @@
                 enabled = true;
               };
               git = {
-                name = "Git";
+                name = "git";
                 module = "blink-cmp-git";
                 score_offset = 100;
-                opts = {
-                  commit = {};
-                  git_centers = {};
-                };
               };
             };
           };
@@ -118,7 +114,10 @@
           };
         };
       };
-      blink-cmp-git.enable = true;
+      blink-cmp-git = {
+        enable = true;
+        autoLoad = true;
+      };
       blink-compat.enable = true;
       vim-suda = {
         enable = true;
