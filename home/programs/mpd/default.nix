@@ -29,7 +29,6 @@
     mpd-mpris = {
       enable = true;
       mpd.host = "/run/user/1000/mpd/socket";
-      mpd.musicDirectory = "/home/mela/Music";
     };
   };
 }
