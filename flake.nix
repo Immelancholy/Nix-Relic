@@ -39,10 +39,6 @@
 
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    fenix = {
-      url = "github:nix-community/fenix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = {
@@ -51,10 +47,8 @@
     catppuccin,
     home-manager,
     solaar,
-    fenix,
     ...
   } @ inputs: {
-    packages.x86_64-linux.default = fenix.packages.x86_64-linux.minimal.toolchain;
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -83,19 +77,6 @@
             };
             # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
           }
-          ({pkgs, ...}: {
-            nixpkgs.overlays = [fenix.overlays.default];
-            environment.systemPackages = with pkgs; [
-              (fenix.complete.withComponents [
-                "cargo"
-                "clippy"
-                "rust-src"
-                "rustc"
-                "rustfmt"
-              ])
-              rust-analyzer-nightly
-            ];
-          })
         ];
       };
     };
