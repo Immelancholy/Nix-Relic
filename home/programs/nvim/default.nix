@@ -45,6 +45,9 @@
         autoLoad = true;
         setupLspCapabilities = true;
         settings = {
+          snippets = {
+            presets = "luasnip";
+          };
           sources = {
             default = [
               "lsp"
@@ -62,9 +65,9 @@
                 module = "blink.cmp.sources.buffer";
                 async = true;
               };
-              luasnip = {
-                name = "luansip";
-                module = "blink.cmp.sources.luasnip";
+              snippets = {
+                name = "snippets";
+                module = "blink.cmp.sources.snippets";
               };
             };
           };
