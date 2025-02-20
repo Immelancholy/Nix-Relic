@@ -62,6 +62,10 @@
                 module = "blink.cmp.sources.buffer";
                 async = true;
               };
+              luasnip = {
+                name = "luansip";
+                module = "blink.cmp.sources.luasnip";
+              };
             };
           };
           keymap = {
@@ -395,6 +399,7 @@
       toggleterm.enable = true;
       treesj.enable = true;
       luasnip.enable = true;
+      #nvim-snippets.enable = true;
       lazygit = {
         enable = true;
         settings = {
