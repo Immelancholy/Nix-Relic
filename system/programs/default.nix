@@ -51,6 +51,7 @@
     nv-codec-headers-12
     vivaldi-ffmpeg-codecs
     gcc
+    sqlite
   ];
   environment.shells = with pkgs; [zsh];
 
