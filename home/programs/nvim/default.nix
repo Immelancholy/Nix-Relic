@@ -48,6 +48,9 @@
           sources = {
             default = [
               "lsp"
+              "buffer"
+              "path"
+              "luasnip"
             ];
             providers = {
               lsp = {
@@ -55,8 +58,28 @@
                 module = "blink.cmp.sources.lsp";
                 enabled = true;
               };
+              buffer = {
+                name = "buffer";
+                module = "blink.cmp.sources.buffer";
+                enabled = true;
+              };
+              path = {
+                name = "path";
+                modules = "blink.cmp.sources.path";
+                enabled = true;
+                async = true;
+              };
+              luasnip = {
+                luasnip = {
+                  name = "luasnip";
+                  module = "blink.cmp.sources.luasnip";
+                  enabled = true;
+                };
+              };
             };
           };
+          blink-cmp-git.enable = true;
+          blink-compa.enable = true;
           keymap = {
             preset = "default";
           };
