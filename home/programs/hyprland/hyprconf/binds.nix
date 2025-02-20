@@ -11,6 +11,7 @@
         "$mod, C, exec, $edit"
         "$mod, W, togglefloating"
         "$mod, G, togglegroup"
+        "$mod, Q, killactive"
         "Alt, Return, fullscreen"
         "Shift+Ctrl+Alt, Right, movetoworkspace, r+1"
         "Shift+Ctrl+Alt, Left, movetoworkspace, r-1"
@@ -102,9 +103,9 @@
     bindd = $mod+Shift, P,Color Picker , exec, hyprpicker -a # Pick color (Hex) >> clipboard#
 
     bind = , XF86Calculator, exec, qalculate-gtk
-    bind = Alt, tab, hyprtasking:toggle, cursor
-
-    bind = SUPER, Q, hyprtasking:killhovered
+    # bind = Alt, tab, hyprtasking:toggle, cursor
+    #
+    # bind = SUPER, Q, hyprtasking:killhovered
 
     # bind = Alt, H, hyprtasking:move, left
     # bind = Alt, J, hyprtasking:move, down
