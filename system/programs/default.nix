@@ -25,6 +25,11 @@
 
   programs.dconf.enable = true;
 
+  services.input-remapper = {
+    enable = true;
+    enableUdevRules = true;
+  };
+
   programs.zsh.enable = true;
   services.dbus.enable = true;
   environment.systemPackages = with pkgs; [

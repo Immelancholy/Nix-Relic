@@ -18,9 +18,9 @@
   };
 
   services.solaar.enable = true;
-  services.input-remapper.enable = true;
 
   networking.hostName = "nixos";
+
   networking.firewall = {
     enable = true;
   };
