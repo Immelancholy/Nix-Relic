@@ -40,6 +40,8 @@
     withPerl = true;
     luaLoader.enable = true;
     plugins = {
+      render-markdown.enable = true;
+      refactoring.enable = true;
       blink-cmp = {
         enable = true;
         autoLoad = true;
@@ -161,7 +163,32 @@
       oil.enable = true;
       bufferline.enable = true;
       barbar.enable = true;
-      rustaceanvim.enable = true;
+      rustaceanvim = {
+        enable = true;
+        settings = {
+          server = {
+            cmd = [
+              "rustup"
+              "run"
+              "nightly"
+              "rust-analyzer"
+            ];
+            default_settings = {
+              rust-analyzer = {
+                check = {
+                  command = "clippy";
+                };
+                inlayHints = {
+                  lifetimeElisionHints = {
+                    enable = "always";
+                  };
+                };
+              };
+            };
+            standalone = false;
+          };
+        };
+      };
       lz-n = {
         enable = true;
         plugins = [
