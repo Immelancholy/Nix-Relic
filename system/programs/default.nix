@@ -52,7 +52,7 @@
     vivaldi-ffmpeg-codecs
     gcc
     sqlite
-    lua54Packages.sqlite
+    lua53Packages.sqlite
     sqlite-utils
   ];
   environment.shells = with pkgs; [zsh];
