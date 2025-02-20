@@ -55,18 +55,10 @@
               lsp = {
                 name = "LSP";
                 module = "blink.cmp.sources.lsp";
-                enabled = true;
               };
               buffer = {
                 name = "buffer";
                 module = "blink.cmp.sources.buffer";
-                enabled = true;
-              };
-              path = {
-                name = "path";
-                modules = "blink.cmp.sources.path";
-                enabled = true;
-                async = true;
               };
             };
           };
