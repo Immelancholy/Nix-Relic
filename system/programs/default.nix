@@ -74,9 +74,9 @@
       enable = true;
       args = [
         "--backend wayland"
-        "--expose-wayland"
         "-h 1080"
         "-w 1920"
+        "-e"
       ];
     };
     extraPackages = with pkgs; [
