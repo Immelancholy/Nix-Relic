@@ -52,13 +52,13 @@
               "luasnip"
               "buffer"
             ];
-          };
-          providers = {
-            lsp = {
-              name = "lsp";
-              module = "blink.cmp.sources.lsp";
-              timeour_ms = 2000;
-              fallbacks = [];
+            providers = {
+              lsp = {
+                name = "LSP";
+                module = "blink.cmp.sources.lsp";
+                timeour_ms = 2000;
+                fallbacks = [];
+              };
             };
           };
           keymap = {
