@@ -50,7 +50,6 @@
               "lsp"
               "buffer"
               "path"
-              "snippets"
             ];
             providers = {
               lsp = {
@@ -68,11 +67,6 @@
                 modules = "blink.cmp.sources.path";
                 enabled = true;
                 async = true;
-              };
-              snippets = {
-                name = "snippets";
-                module = "blink.cmp.sources.snippets";
-                enabled = true;
               };
             };
           };
