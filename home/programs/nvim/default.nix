@@ -79,6 +79,7 @@
                 name = "git";
                 module = "blink-cmp-git";
                 score_offset = 100;
+                enabled = true;
               };
             };
           };
