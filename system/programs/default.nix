@@ -46,6 +46,9 @@
     libvlc
     cachix
     electron
+    vk3d-proton
+    vkbasalt
+    vkbasalt-cli
   ];
   environment.shells = with pkgs; [zsh];
 
