@@ -107,8 +107,8 @@
     bind = SUPER, Q, hyprtasking:killhovered
 
     # bind = Alt, H, hyprtasking:move, left
-    bind = Alt, J, hyprtasking:move, down
-    bind = Alt, K, hyprtasking:move, up
+    # bind = Alt, J, hyprtasking:move, down
+    # bind = Alt, K, hyprtasking:move, up
     # bind = Alt, L, hyprtasking:move, right
   '';
 }

@@ -22,7 +22,7 @@
     package = null;
     portalPackage = null;
     plugins = [
-      inputs.hyprtasking.packages.${pkgs.system}.hyprtasking
+      # inputs.hyprtasking.packages.${pkgs.system}.hyprtasking
       inputs.hyprland-plugins.packages.${pkgs.system}.csgo-vulkan-fix
       inputs.hyprland-plugins.packages.${pkgs.system}.xtra-dispatchers
       inputs.hyprland-plugins.packages.${pkgs.system}.hyprtrails
