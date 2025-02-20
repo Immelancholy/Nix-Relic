@@ -46,7 +46,7 @@
         setupLspCapabilities = true;
         settings = {
           snippets = {
-            presets = "luasnip";
+            preset = "luasnip";
           };
           sources = {
             default = [
