@@ -54,6 +54,7 @@
     sqlite
     lua53Packages.sqlite
     sqlite-utils
+    lldb
   ];
   environment.shells = with pkgs; [zsh];
 
