@@ -75,19 +75,14 @@
             Value = "󰦨";
             Variable = "󰆦";
           };
-          completion = {
-            sources = {
-              default = [
-                "lsp"
-                "buffer"
-                "luasnip"
-                "path"
-              ];
-              providers = {
-                lsp = {
-                  modules = "blink.cmp.sources.lsp";
-                  fallbacks = [];
-                };
+          sources = {
+            default = [
+              "lsp"
+            ];
+            providers = {
+              lsp = {
+                modules = "blink.cmp.sources.lsp";
+                fallbacks = [];
               };
             };
           };
