@@ -80,6 +80,7 @@
     extraPackages = with pkgs; [
       gamescope
       mangohud
+      mangoapp
       gamemode
     ];
   };
