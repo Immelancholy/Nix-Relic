@@ -12,6 +12,7 @@
         "$mod, W, togglefloating"
         "$mod, G, togglegroup"
         "$mod, Q, killactive"
+        "$mod, R, exec, $term $scr/yazi.sh"
         "Alt, Return, fullscreen"
         "Ctrl+Shift+Alt, Right, movetoworkspace, r+1"
         "Ctrl+Shift+Alt, Left, movetoworkspace, r-1"
