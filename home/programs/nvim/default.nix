@@ -421,7 +421,6 @@
       harpoon = {
         enable = true;
         enableTelescope = true;
-        package = pkgs.vimPlugins.harpoon;
         keymaps = {
           addFile = "<leader>ha";
           toggleQuickMenu = "<leader>hm";
