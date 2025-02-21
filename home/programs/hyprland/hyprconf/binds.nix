@@ -99,7 +99,7 @@
     bind = $mod+Alt, S, movetoworkspacesilent, special
     bind = $mod, S, togglespecialworkspace,
 
-    bind = $mod, R, togglesplit
+    bind = $mod, B, togglesplit
 
     bind = Ctrl+Shift, Escape, exec, $term --title "btop" sh $scr/btop.sh
 
