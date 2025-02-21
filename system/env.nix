@@ -9,7 +9,7 @@
     XDG_SCREENSHOTS_DIR = "$HOME/Pictures/screenshots";
 
     # Not officially in the specification
-    XDG_BIN_HOME = "$HOME/.local/bin";
+    XDG_BIN_HOME = "$HOME/.local/share/bin";
     PATH = [
       "${XDG_BIN_HOME}"
     ];
