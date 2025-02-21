@@ -98,6 +98,7 @@
         SRT_URLOPEN_PREFER_STEAM = "1";
         __GL_MaxFramesAllowed = "1";
       };
+      protontricks.enable = true;
     };
     extraPackages = with pkgs; [
       gamescope
