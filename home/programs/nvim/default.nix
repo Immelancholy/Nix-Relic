@@ -282,7 +282,7 @@
             ];
           }
           {
-            __unkeyed-1 = "harpoon2";
+            __unkeyed-1 = "harpoon";
             after = ''
               function()
                 require("harpoon").setup()
@@ -301,9 +301,11 @@
               }
               {
                 __unkeyed-1 = "<leader>A";
-                __unkeyed-2 = {
-                  __raw = "function() harpoon.ui:toggle_quick_menu(harpoon:list()) end";
-                };
+                __unkeyed-2 = ''
+                  function()
+                    harpoon.ui:toggle_quick_menu(harpoon:list())
+                  end
+                '';
                 desc = "Toggle Quick Menu";
               }
             ];
