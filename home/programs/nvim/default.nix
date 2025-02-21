@@ -724,27 +724,27 @@
         mode = ["n"];
       }
       {
-        action = "<cmd>buffergoto 1<cr>";
+        action = "<cmd>BufferGoto 1<cr>";
         key = "<leader>b1";
         mode = ["n"];
       }
       {
-        action = "<cmd>buffergoto 2<cr>";
+        action = "<cmd>BufferGoto 2<cr>";
         key = "<leader>b2";
         mode = ["n"];
       }
       {
-        action = "<cmd>buffergoto 3<cr>";
+        action = "<cmd>BufferGoto 3<cr>";
         key = "<leader>b3";
         mode = ["n"];
       }
       {
-        action = "<cmd>buffergoto 4<cr>";
+        action = "<cmd>BufferGoto 4<cr>";
         key = "<leader>b4";
         mode = ["n"];
       }
       {
-        action = "<cmd>buffergoto 5<cr>";
+        action = "<cmd>BufferGoto 5<cr>";
         key = "<leader>b5";
         mode = ["n"];
       }
