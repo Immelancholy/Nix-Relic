@@ -703,6 +703,21 @@
         key = "ZZ";
         mode = ["n"];
       }
+      {
+        action = "<Cmd>BufferClose<CR>";
+        key = "<leader>bx";
+        mode = ["n"];
+      }
+      {
+        action = "<Cmd>BufferNext<CR>";
+        key = "<leader>bn";
+        mode = ["n"];
+      }
+      {
+        action = "<Cmd>BufferPrevious<CR>";
+        key = "<leader>bp";
+        mode = ["n"];
+      }
     ];
     clipboard = {
       register = "unnamedplus";
