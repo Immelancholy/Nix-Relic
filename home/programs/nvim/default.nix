@@ -288,11 +288,9 @@
                 require("harpoon").setup()
               end
             '';
-            enabled = ''
-              function()
-              return true
-              end
-            '';
+            cmd = [
+              "Harpoon"
+            ];
             keys = [
               {
                 __unkeyed-1 = "<leader>a";
