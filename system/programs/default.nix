@@ -62,6 +62,7 @@
     lldb
     gamemode
     mangohud
+    lutris-unwrapped
   ];
   environment.shells = with pkgs; [zsh];
 
