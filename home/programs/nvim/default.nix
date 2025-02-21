@@ -423,16 +423,16 @@
         enableTelescope = true;
         package = pkgs.vimPlugins.harpoon;
         keymaps = {
-          addFile = "<leader>a";
-          toggleQuickMenu = "<C-f>";
+          addFile = "<leader>ha";
+          toggleQuickMenu = "<leader>hm";
           navFile = {
-            "1" = "<C-h>";
-            "2" = "<C-j>";
-            "3" = "<C-k>";
-            "4" = "<C-l>";
+            "1" = "<leader>1";
+            "2" = "<leader>2";
+            "3" = "<leader>2";
+            "4" = "<leader>4";
           };
-          navNext = "<C-S-N>";
-          navPrev = "<C-S-N>";
+          navNext = "<leader>hn";
+          navPrev = "<leader>hp";
         };
       };
       nix-develop.enable = true;
