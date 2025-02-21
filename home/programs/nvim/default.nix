@@ -286,6 +286,26 @@
               }
             ];
           }
+          {
+            __unkeyed-1 = "harpoon2";
+            after = ''
+              function()
+                require("harpoon").setup()
+              end
+            '';
+            enabled = ''
+              function()
+              return true
+              end
+            '';
+            keys = [
+              {
+                __unkeyed-1 = "<leader>A";
+                __unkeyed-2 = "function() harpoon:list():add() end";
+                desc = "Mark Harpoon";
+              }
+            ];
+          }
         ];
       };
       snacks = {
