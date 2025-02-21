@@ -668,7 +668,7 @@
         mode = ["n"];
       }
       {
-        actions = "<Cmd>wqa<CR>";
+        action = "<Cmd>wqa<CR>";
         key = "ZZ";
         mode = ["n"];
       }
