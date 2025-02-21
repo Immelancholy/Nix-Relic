@@ -524,6 +524,9 @@
         enable = true;
         enableTelescope = true;
         package = pkgs.vimPlugins.harpoon2;
+        keymaps = {
+          addFile = "<leader>a";
+        };
       };
       spider.enable = true;
       lsp = {
