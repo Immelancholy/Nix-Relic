@@ -43,6 +43,11 @@
       vim-be-good.enable = true;
       render-markdown.enable = true;
       refactoring.enable = true;
+      harpoon = {
+        enable = true;
+        enableTelescope = true;
+        package = pkgs.vimPlugins.harpoon2;
+      };
       blink-cmp = {
         enable = true;
         autoLoad = true;
