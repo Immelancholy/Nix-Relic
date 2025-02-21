@@ -281,6 +281,21 @@
               }
             ];
           }
+          {
+            __unkeyed-1 = "harpoon2";
+            after = ''
+              function()
+                require("harpoon").setup()
+              end
+            '';
+            cmd = ["harpoon"];
+            keys = [
+              {
+                __unkeyed-1 = "<leader>a";
+                __unkeyed-2 = "<Cmd>Harpoon List Add";
+              }
+            ];
+          }
         ];
       };
       snacks = {
@@ -541,9 +556,6 @@
         enable = true;
         cmp.enable = true;
       };
-      harpoon = {
-        enable = true;
-      };
       mini = {
         enable = true;
       };
@@ -648,6 +660,7 @@
       neogit
       vimacs
       trouble-nvim
+      harpoon2
     ];
     package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
     keymaps = [
