@@ -63,6 +63,7 @@
     gamemode
     mangohud
     lutris-unwrapped
+    wine-wayland
   ];
   environment.shells = with pkgs; [zsh];
 
