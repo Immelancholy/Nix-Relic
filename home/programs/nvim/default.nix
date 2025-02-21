@@ -43,11 +43,6 @@
       vim-be-good.enable = true;
       render-markdown.enable = true;
       refactoring.enable = true;
-      harpoon = {
-        enable = true;
-        enableTelescope = true;
-        package = pkgs.vimPlugins.harpoon2;
-      };
       blink-cmp = {
         enable = true;
         autoLoad = true;
@@ -306,7 +301,9 @@
               }
               {
                 __unkeyed-1 = "<leader>A";
-                __unkeyed-2 = "function() harpoon.ui:toggle_quick_menu(harpoon:list()) end";
+                __unkeyed-2 = {
+                  __raw = "function() harpoon.ui:toggle_quick_menu(harpoon:list()) end";
+                };
                 desc = "Toggle Quick Menu";
               }
             ];
@@ -675,6 +672,7 @@
       neogit
       vimacs
       trouble-nvim
+      harpoon2
     ];
     package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
     keymaps = [
