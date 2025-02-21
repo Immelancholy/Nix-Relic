@@ -520,6 +520,11 @@
       dap-go.enable = true;
       dap-python.enable = true;
       dap-ui.enable = true;
+      harpoon = {
+        enable = true;
+        enableTelescope = true;
+        package = pkgs.vimPlugins.harpoon2;
+      };
       spider.enable = true;
       lsp = {
         enable = true;
@@ -645,6 +650,7 @@
       neogit
       vimacs
       trouble-nvim
+      harpoon2
     ];
     package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
     keymaps = [
