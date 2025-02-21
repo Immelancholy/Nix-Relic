@@ -87,7 +87,7 @@
     nvim = {
       name = "Neovim";
       genericName = "Text Editor";
-      exec = "nv.sh %F";
+      exec = "$HOME/.local/share/bin/nv.sh %F";
       type = "Application";
       terminal = false;
       categories = ["Utility" "TextEditor"];
