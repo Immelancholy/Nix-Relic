@@ -281,21 +281,6 @@
               }
             ];
           }
-          {
-            __unkeyed-1 = "harpoon";
-            after = ''
-              function()
-                require("harpoon").setup()
-              end
-            '';
-            cmd = ["harpoon"];
-            keys = [
-              {
-                __unkeyed-1 = "<leader>a";
-                __unkeyed-2 = "<Cmd>Harpoon List Add";
-              }
-            ];
-          }
         ];
       };
       snacks = {
@@ -433,6 +418,23 @@
       treesitter-refactor.enable = true;
       treesitter-textobjects.enable = true;
       nix.enable = true;
+      harpoon = {
+        enable = true;
+        enableTelescope = true;
+        package = pkgs.vimPlugins.harpoon2;
+        keymaps = {
+          addFile = "<leader>a";
+          toggleQuickMenu = "<C-f>";
+          navFile = {
+            "1" = "<C-h>";
+            "2" = "<C-j>";
+            "3" = "<C-k>";
+            "4" = "<C-l>";
+          };
+          navNext = "<C-S-N>";
+          navPrev = "<C-S-N>";
+        };
+      };
       nix-develop.enable = true;
       web-devicons.enable = true;
       smear-cursor.enable = true;
@@ -660,7 +662,6 @@
       neogit
       vimacs
       trouble-nvim
-      harpoon2
     ];
     package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
     keymaps = [
