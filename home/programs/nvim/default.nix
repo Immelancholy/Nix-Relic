@@ -282,7 +282,7 @@
             ];
           }
           {
-            __unkeyed-1 = "harpoon2";
+            __unkeyed-1 = "harpoon";
             after = ''
               function()
                 require("harpoon").setup()
