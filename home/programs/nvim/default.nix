@@ -40,6 +40,7 @@
     withPerl = true;
     luaLoader.enable = true;
     plugins = {
+      vim-be-good.enable = true;
       render-markdown.enable = true;
       refactoring.enable = true;
       blink-cmp = {
