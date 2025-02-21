@@ -418,22 +418,6 @@
       treesitter-refactor.enable = true;
       treesitter-textobjects.enable = true;
       nix.enable = true;
-      harpoon = {
-        enable = true;
-        enableTelescope = true;
-        keymaps = {
-          addFile = "<leader>ha";
-          toggleQuickMenu = "<leader>hm";
-          navFile = {
-            "1" = "<leader>1";
-            "2" = "<leader>2";
-            "3" = "<leader>2";
-            "4" = "<leader>4";
-          };
-          navNext = "<leader>hn";
-          navPrev = "<leader>hp";
-        };
-      };
       nix-develop.enable = true;
       web-devicons.enable = true;
       smear-cursor.enable = true;
