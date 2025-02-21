@@ -26,6 +26,9 @@
         "$mod, Delete, exec, uwsm stop"
         "$mod+Shift, 0, movetoworkspace, 10"
         ", Print, exec, grimblast --notify copysave output"
+        "$mod, Print, exec, grimblast --notify copysave area"
+        "$mod+Shift, Print, exec, grimblast --notify copysave active"
+        "$mod+Shift+Alt, Print, exec, grimblast --notify copysave screen"
         "Ctrl+Alt, L, exec, swaylock-fancy"
       ]
       ++ (
