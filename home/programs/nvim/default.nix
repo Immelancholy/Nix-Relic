@@ -288,23 +288,12 @@
                 require("harpoon").setup()
               end
             '';
-            cmd = [
-              "Harpoon"
-            ];
             keys = [
               {
-                __unkeyed-1 = "<leader>a";
-                __unkeyed-2 = "function() harpoon:list():add() end";
-                desc = "Mark Harpoon";
+                __raw = ''{ "<leader>A", function() require("harpoon"):list():append() end, desc = "harpoon file", }'';
               }
               {
-                __unkeyed-1 = "<leader>A";
-                __unkeyed-2 = ''
-                  function()
-                    harpoon.ui:toggle_quick_menu(harpoon:list())
-                  end
-                '';
-                desc = "Toggle Quick Menu";
+                __raw = ''{ "<leader>a", function() local harpoon = require("harpoon") harpoon.ui:toggle_quick_menu(harpoon:list()) end, desc = "harpoon quick menu", }'';
               }
             ];
           }
