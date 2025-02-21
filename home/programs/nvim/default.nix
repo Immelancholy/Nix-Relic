@@ -667,6 +667,11 @@
         options.desc = "Return to Dashboard";
         mode = ["n"];
       }
+      {
+        actions = "<Cmd>wqa<CR>";
+        key = "ZZ";
+        mode = ["n"];
+      }
     ];
     clipboard = {
       register = "unnamedplus";
