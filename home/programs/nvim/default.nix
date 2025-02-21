@@ -718,6 +718,11 @@
         key = "<leader>bp";
         mode = ["n"];
       }
+      {
+        action = "<Cmd>BufferCloseAllButCurrent<CR>";
+        key = "<leader>bc";
+        mode = ["n"];
+      }
     ];
     clipboard = {
       register = "unnamedplus";
