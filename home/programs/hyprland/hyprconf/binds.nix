@@ -81,9 +81,9 @@
     binde = $mod+Shift, Up, resizeactive, 0 -1
     binde = $mod+Shift, Down, resizeactive, 0 1
     binde = $mod+Shift, H, resizeactive, 1 0
-    binde = $mod+Shift, J, resizeactive, -1 0
+    binde = $mod+Shift, L, resizeactive, -1 0
     binde = $mod+Shift, K, resizeactive, 0 -1
-    binde = $mod+Shift, L, resizeactive, 0 1
+    binde = $mod+Shift, J, resizeactive, 0 1
 
     $moveactivewindow=grep -q "true" <<< $(hyprctl activewindow -j | jq -r .floating) && hyprctl dispatch moveactive
     binded = $mod+Ctrl+Shift, Left, Move activewindow left, exec, $moveactivewindow -30 0 || hyprctl dispatch movewindow l
