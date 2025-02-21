@@ -14,10 +14,10 @@
         "$mod, Q, killactive"
         "$mod, R, exec, $files2"
         "Alt, Return, fullscreen"
-        "Ctrl+Shift+Alt, Right, movetoworkspace, r+1"
-        "Ctrl+Shift+Alt, Left, movetoworkspace, r-1"
-        "Ctrl+Shift+Alt, L, movetoworkspace, r+1"
-        "Ctrl+Shift+Alt, H, movetoworkspace, r-1"
+        "$mod+Ctrl+Alt, Right, movetoworkspace, r+1"
+        "$mod+Ctrl+Alt, Left, movetoworkspace, r-1"
+        "$mod+Ctrl+Alt, L, movetoworkspace, r+1"
+        "$mod+Ctrl+Alt, H, movetoworkspace, r-1"
         "$mod, U, exec, [workspace 1 silent; float; size 854 555; move 646 40] $term $scr/rmpc.sh"
         "$mod, U, exec, [workspace 1 silent; float; size 854 465; move 646 605] $term $scr/cava.sh"
         "$mod, U, exec, [workspace 1 silent; float; size 626 666; move 10 404] $term $scr/btop.sh"
@@ -26,7 +26,7 @@
         "$mod, Delete, exec, uwsm stop"
         "$mod+Shift, 0, movetoworkspace, 10"
         ", Print, exec, grimblast --notify copysave output"
-        "$mod+Shift, L, exec, swaylock-fancy"
+        "Ctrl+Alt, L, exec, swaylock-fancy"
       ]
       ++ (
         # workspaces
@@ -72,24 +72,28 @@
     bind = $mod, Up, movefocus, u
     bind = $mod, Down, movefocus, d
 
-    bind = Alt, L, workspace, r+1
-    bind = Alt, H, workspace, r-1
-    bind = Alt, E, workspace, empty
+    bind = $mod+Ctrl, L, workspace, r+1
+    bind = $mod+Ctrl, H, workspace, r-1
+    bind = $mod+Ctrl, J, workspace, empty
 
     binde = $mod+Shift, Left, resizeactive, 1 0
     binde = $mod+Shift, Right, resizeactive, -1 0
     binde = $mod+Shift, Up, resizeactive, 0 -1
     binde = $mod+Shift, Down, resizeactive, 0 1
+    binde = $mod+Shift, H, resizeactive, 1 0
+    binde = $mod+Shift, J, resizeactive, -1 0
+    binde = $mod+Shift, K, resizeactive, 0 -1
+    binde = $mod+Shift, L, resizeactive, 0 1
 
     $moveactivewindow=grep -q "true" <<< $(hyprctl activewindow -j | jq -r .floating) && hyprctl dispatch moveactive
-    binded = Alt+Shift, Left, Move activewindow left, exec, $moveactivewindow -30 0 || hyprctl dispatch movewindow l
-    binded = Alt+Shift, Right, Move activewindow right, exec, $moveactivewindow 30 0 || hyprctl dispatch movewindow r
-    binded = Alt+Shift, Up, Move activewindow up, exec, $moveactivewindow  0 -30 || hyprctl dispatch movewindow u
-    binded = Alt+Shift, Down, Move activewindow down, exec, $moveactivewindow 0 30 || hyprctl dispatch movewindow d
-    binded = Alt+Shift, H, Move activewindow left, exec, $moveactivewindow -30 0 || hyprctl dispatch movewindow l
-    binded = Alt+Shift, L, Move activewindow right, exec, $moveactivewindow 30 0 || hyprctl dispatch movewindow r
-    binded = Alt+Shift, K, Move activewindow up, exec, $moveactivewindow  0 -30 || hyprctl dispatch movewindow u
-    binded = Alt+Shift, J, Move activewindow down, exec, $moveactivewindow 0 30 || hyprctl dispatch movewindow d
+    binded = $mod+Ctrl+Shift, Left, Move activewindow left, exec, $moveactivewindow -30 0 || hyprctl dispatch movewindow l
+    binded = $mod+Ctrl+Shift, Right, Move activewindow right, exec, $moveactivewindow 30 0 || hyprctl dispatch movewindow r
+    binded = $mod+Ctrl+Shift, Up, Move activewindow up, exec, $moveactivewindow  0 -30 || hyprctl dispatch movewindow u
+    binded = $mod+Ctrl+Shift, Down, Move activewindow down, exec, $moveactivewindow 0 30 || hyprctl dispatch movewindow d
+    binded = $mod+Ctrl+Shift, H, Move activewindow left, exec, $moveactivewindow -30 0 || hyprctl dispatch movewindow l
+    binded = $mod+Ctrl+Shift, L, Move activewindow right, exec, $moveactivewindow 30 0 || hyprctl dispatch movewindow r
+    binded = $mod+Ctrl+Shift, K, Move activewindow up, exec, $moveactivewindow  0 -30 || hyprctl dispatch movewindow u
+    binded = $mod+Ctrl+Shift, J, Move activewindow down, exec, $moveactivewindow 0 30 || hyprctl dispatch movewindow d
 
     bind = $mod, mouse_up, workspace, e+1
     bind = $mod, mouse_down, workspace, e-1
