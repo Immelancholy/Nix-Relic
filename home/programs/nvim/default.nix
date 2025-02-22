@@ -251,18 +251,7 @@
       obsidian = {
         enable = true;
         settings = {
-          new_notes_location = "current_dir";
           ui.enable = false;
-          dir = "~/obsidian/relationship";
-          follow_url_func = {
-            __raw = ''
-              function(url)
-                -- Open the URL in the default web browser.
-                vim.fn.jobstart({"open", url})  -- Mac OS
-                -- vim.fn.jobstart({"xdg-open", url})  -- linux
-              end
-            '';
-          };
         };
       };
       blink-cmp-spell.enable = true;
