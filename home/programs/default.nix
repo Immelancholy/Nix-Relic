@@ -142,6 +142,7 @@
     obsidian
     obsidian-export
     rofi-obsidian
+    wordnet
   ];
 
   programs.zoxide = {
