@@ -3,7 +3,7 @@
     "$scr" = "$HOME/.local/share/bin/";
     "$term" = "kitty";
     "$files" = "$term $scr/yazi.sh";
-    "$files2" = "thunar";
+    "$files2" = "nemo";
     "$mod" = "SUPER";
     "$menu" = "rofi -show drun";
     "$browser" = "zen";
