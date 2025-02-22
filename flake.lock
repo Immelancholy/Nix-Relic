@@ -1181,6 +1181,7 @@
         "nixpkgs": "nixpkgs_6",
         "nixpkgs-stable": "nixpkgs-stable",
         "nixvim": "nixvim",
+        "rust-overlay": "rust-overlay",
         "solaar": "solaar",
         "swww": "swww",
         "yazi": "yazi",
@@ -1188,6 +1189,26 @@
       }
     },
     "rust-overlay": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1740191166,
+        "narHash": "sha256-WqRxO1Afx8jPYG4CKwkvDFWFvDLCwCd4mxb97hFGYPg=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "74a3fb71b0cc67376ab9e7c31abcd68c813fc226",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "rust-overlay_2": {
       "inputs": {
         "nixpkgs": [
           "yazi",
@@ -1500,7 +1521,7 @@
       "inputs": {
         "flake-utils": "flake-utils_3",
         "nixpkgs": "nixpkgs_8",
-        "rust-overlay": "rust-overlay"
+        "rust-overlay": "rust-overlay_2"
       },
       "locked": {
         "lastModified": 1739960481,
