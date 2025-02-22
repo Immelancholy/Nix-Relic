@@ -62,11 +62,7 @@
           ({pkgs, ...}: {
             nixpkgs.overlays = [rust-overlay.overlays.default];
             environment.systemPackages = with pkgs; [
-              (rust-bin.stable.latest.default.override {
-                extensions = [
-                  "rust-analyzer"
-                ];
-              })
+              rust-bin.stable.latest.default.override
             ];
           })
           solaar.nixosModules.default

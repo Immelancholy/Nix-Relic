@@ -57,6 +57,7 @@
     p7zip
 
     prismlauncher-unwrapped
+    temurin-jre-bin
 
     # utils
     ripgrep # recursively searches directories for a regex pattern
