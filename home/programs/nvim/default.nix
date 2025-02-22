@@ -249,12 +249,12 @@
         };
       };
       obsidian = {
-        completion = {
-          min_chars = 2;
-          nvim_cmp = true;
-        };
         enable = true;
         settings = {
+          completion = {
+            min_chars = 2;
+            nvim_cmp = true;
+          };
           ui.enable = false;
           workspaces = [
             {
