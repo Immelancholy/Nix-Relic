@@ -55,7 +55,6 @@
     home-manager,
     solaar,
     rust-overlay,
-    prismlauncher,
     ...
   } @ inputs: {
     nixosConfigurations = {
