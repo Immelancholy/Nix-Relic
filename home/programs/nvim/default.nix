@@ -490,6 +490,7 @@
           css
           norg
           html
+          rust
         ];
         settings = {
           highlight = {
