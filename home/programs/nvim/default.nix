@@ -249,9 +249,9 @@
         };
       };
       obsidian = {
-        enable = false;
+        enable = true;
         settings = {
-          ui.enable = true;
+          ui.enable = false;
           workspaces = [
             {
               name = "relationship";
