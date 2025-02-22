@@ -38,7 +38,6 @@
     heroic
     networkmanagerapplet
     clapper
-    selectdefaultapplication
     libopus
     libvlc
     cachix
