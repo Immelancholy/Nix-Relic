@@ -31,7 +31,7 @@
   ];
 
   # Packages that should be installed to the user profile.
-  xdg.enable = true;
+  home.xdg.enable = true;
   catppuccin = {
     enable = true;
     flavor = "mocha";
