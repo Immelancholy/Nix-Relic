@@ -39,6 +39,10 @@
 
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    rust-overlay = {
+      url = "github:oxalica/rust-overlay";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -47,6 +51,7 @@
     catppuccin,
     home-manager,
     solaar,
+    rust-overlay,
     ...
   } @ inputs: {
     nixosConfigurations = {
@@ -54,6 +59,10 @@
         system = "x86_64-linux";
         specialArgs = {inherit inputs;};
         modules = [
+          ({pkgs, ...}: {
+            nixpkgs.overlays = [rust-overlay.overlays.default];
+            environment.systemPackages = [pkgs.rust-bin.stable.latest.default];
+          })
           solaar.nixosModules.default
           ./system
           catppuccin.nixosModules.catppuccin
