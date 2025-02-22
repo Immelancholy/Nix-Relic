@@ -58,6 +58,7 @@
 
     prismlauncher
     temurin-jre-bin
+    rustup
 
     # utils
     ripgrep # recursively searches directories for a regex pattern
