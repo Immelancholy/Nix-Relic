@@ -571,7 +571,7 @@
               }
               {
                 action = {
-                  __raw = "function(path) vim.cmd('cd ~/Documents/Notes | Telescope find_files') end";
+                  __raw = "function(path) vim.cmd('cd ~/obsidian/ | Telescope find_files') end";
                 };
                 desc = "󱓧 Notes";
                 group = "Statement";
