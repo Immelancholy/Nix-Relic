@@ -484,7 +484,6 @@
           css
           norg
           html
-          nvim-cmp
         ];
         settings = {
           highlight = {
@@ -734,6 +733,7 @@
       vimacs
       trouble-nvim
       harpoon2
+      nvim-cmp
     ];
     package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
     keymaps = [
