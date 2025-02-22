@@ -264,7 +264,6 @@
           ];
         };
       };
-      cmp.enable = true;
       blink-cmp-spell.enable = true;
       blink-cmp-dictionary.enable = true;
       blink-ripgrep.enable = true;
@@ -631,7 +630,6 @@
       };
       lspkind = {
         enable = true;
-        cmp.enable = true;
       };
       mini = {
         enable = true;
@@ -738,7 +736,7 @@
       vimacs
       trouble-nvim
       harpoon2
-      #nvim-cmp
+      nvim-cmp
     ];
     package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
     keymaps = [
