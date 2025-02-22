@@ -398,14 +398,6 @@
               }
             ];
           }
-          {
-            __unkeyed-1 = "nvim-cmp";
-            after = ''
-              funtion()
-                require("cmp").setup()
-              end
-            '';
-          }
         ];
       };
       snacks = {
@@ -615,6 +607,25 @@
           floating_window_use_plenary = 1;
         };
       };
+      cmp = {
+        autoEnableSources = true;
+        enable = true;
+        filetype = {
+          markdown = {
+            souces = [
+              {
+                name = "nvim_lsp";
+              }
+              {
+                name = "path";
+              }
+              {
+                name = "buffer";
+              }
+            ];
+          };
+        };
+      };
       dap.enable = true;
       dap-go.enable = true;
       dap-python.enable = true;
@@ -744,7 +755,6 @@
       vimacs
       trouble-nvim
       harpoon2
-      nvim-cmp
     ];
     package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
     keymaps = [
