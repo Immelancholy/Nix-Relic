@@ -14,14 +14,6 @@
 
   services.gvfs.enable = true; # Mount, trash, and other functionalities
   services.tumbler.enable = true; # Thumbnail support for images
-  # programs.thunar = {
-  #   enable = true;
-  #   plugins = with pkgs.xfce; [
-  #     thunar-archive-plugin # Requires an Archive manager like file-roller, ark, etc
-  #     thunar-volman
-  #     thunar-media-tags-plugin
-  #   ];
-  # };
 
   programs.dconf.enable = true;
 

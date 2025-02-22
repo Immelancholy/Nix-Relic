@@ -80,9 +80,6 @@
 
   home.sessionVariables.GTK_THEME = "Catppuccin-mocha";
 
-  # xdg.configFile."xfce4/helpers.rc" = {
-  #   source = ./helpers.rc;
-  # };
   xdg.desktopEntries = {
     nvim = {
       name = "Neovim";
