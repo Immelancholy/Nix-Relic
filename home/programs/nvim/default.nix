@@ -576,11 +576,19 @@
               }
               {
                 action = {
-                  __raw = "function(path) vim.cmd('cd /etc/nixos/home/programs/ | Telescope find_files') end";
+                  __raw = "function(path) vim.cmd('cd ~/ | Telescope find_files') end";
                 };
-                desc = " Apps";
+                desc = " Home";
                 group = "DiagnosticHint";
                 key = "a";
+              }
+              {
+                action = {
+                  __raw = "function(path) vim.cmd('cd ~/Documents/Projects/ | Telescope find_files') end";
+                };
+                desc = " Projects";
+                group = "Operator";
+                key = "p";
               }
               {
                 action = {
