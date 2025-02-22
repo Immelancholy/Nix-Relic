@@ -587,7 +587,7 @@
                   __raw = "function(path) vim.cmd('cd ~/Documents/Projects/ | Telescope find_files') end";
                 };
                 desc = " Projects";
-                group = "Operator";
+                group = "Tag";
                 key = "p";
               }
               {
