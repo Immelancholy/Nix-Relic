@@ -56,8 +56,12 @@
     unzip
     p7zip
 
-    prismlauncher
-    temurin-jre-bin
+    (prismlauncher.override {
+      addtionalPrograms = [ffmpeg];
+      jdks = [
+        temurin-jre-bin
+      ];
+    })
 
     # utils
     ripgrep # recursively searches directories for a regex pattern
