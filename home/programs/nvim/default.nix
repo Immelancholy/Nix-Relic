@@ -249,6 +249,10 @@
         };
       };
       obsidian = {
+        completion = {
+          min_chars = 2;
+          nvim_cmp = true;
+        };
         enable = true;
         settings = {
           ui.enable = false;
@@ -260,6 +264,7 @@
           ];
         };
       };
+      cmp.enable = true;
       blink-cmp-spell.enable = true;
       blink-cmp-dictionary.enable = true;
       blink-ripgrep.enable = true;
@@ -733,7 +738,7 @@
       vimacs
       trouble-nvim
       harpoon2
-      nvim-cmp
+      #nvim-cmp
     ];
     package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
     keymaps = [
