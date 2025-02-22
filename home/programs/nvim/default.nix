@@ -161,6 +161,9 @@
                 min_keyword_length = 3;
                 # Optional configurations
                 opts = {
+                  dictionary_directories = {
+                    __raw = ''{ vim.fn.expand("~/.config/nvim/dictionary/") }'';
+                  };
                 };
               };
               spell = {
