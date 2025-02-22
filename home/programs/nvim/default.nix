@@ -251,10 +251,6 @@
       obsidian = {
         enable = true;
         settings = {
-          completion = {
-            min_chars = 2;
-            nvim_cmp = true;
-          };
           new_notes_location = "current_dir";
           dir = "~/obsidian/relationship";
           follow_url_func = {
