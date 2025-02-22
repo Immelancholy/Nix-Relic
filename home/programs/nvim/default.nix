@@ -610,20 +610,24 @@
       cmp = {
         autoEnableSources = true;
         enable = true;
-        filetype = {
-          markdown = {
-            souces = [
-              {
-                name = "nvim_lsp";
-              }
-              {
-                name = "path";
-              }
-              {
-                name = "buffer";
-              }
-            ];
-          };
+        settings = {
+          sources = [
+            {
+              name = "nvim_lsp";
+            }
+            {
+              name = "path";
+            }
+            {
+              name = "buffer";
+            }
+            {
+              name = "dictionary";
+            }
+            {
+              name = "luasnip";
+            }
+          ];
         };
       };
       dap.enable = true;
