@@ -137,7 +137,7 @@
 
   xdg.mimeApps.defaultApplications = {
     "text/plain" = ["nvim.desktop"];
-    "inode/directory" = ["thunar.desktop"];
+    "inode/directory" = ["nemo.desktop"];
     "video/mp4" = ["com.github.rafostar.Clapper.desktop"];
     "video/quicktime" = ["com.github.rafostar.Clapper.desktop"];
   };
