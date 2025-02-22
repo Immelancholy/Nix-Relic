@@ -304,7 +304,7 @@
           rustanalyzerPackafe = null;
           server = {
             cmd = [
-              "rust-analyzer"
+              "/run/current-system/sw/bin/rust-analyzer"
             ];
             default_settings = {
               rust-analyzer = {
