@@ -256,16 +256,7 @@
             nvim_cmp = true;
           };
           new_notes_location = "current_dir";
-          workspaces = [
-            {
-              name = "work";
-              path = "~/obsidian/work";
-            }
-            {
-              name = "relationship";
-              path = "~/obsidian/relationship";
-            }
-          ];
+          dir = "~/obsidian/relationship";
           follow_url_func = {
             __raw = ''
               function(url)
