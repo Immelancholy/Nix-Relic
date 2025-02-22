@@ -152,12 +152,14 @@
                 };
               };
               dictionary = {
+                async = true;
                 module = "blink-cmp-dictionary";
                 name = "Dict";
                 score_offset = 100;
                 min_keyword_length = 3;
                 # Optional configurations
                 opts = {
+                  dictionary_directories = "~/.config/dictionary";
                 };
               };
               spell = {
@@ -857,5 +859,8 @@
         ];
       }
     ];
+  };
+  xdgConfig.file."nvim/dictionary" = {
+    source = ./dictionary;
   };
 }
