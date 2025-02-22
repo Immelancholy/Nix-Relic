@@ -251,7 +251,7 @@
       obsidian = {
         enable = true;
         settings = {
-          ui.enable = false;
+          ui.enable = true;
           workspaces = [
             {
               name = "relationship";
