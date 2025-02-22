@@ -56,7 +56,7 @@
     unzip
     p7zip
 
-    prismlauncher-unwrapped
+    prismlauncher
     temurin-jre-bin
 
     # utils
