@@ -579,7 +579,7 @@
                   __raw = "function(path) vim.cmd('cd ~/ | Telescope find_files') end";
                 };
                 desc = " Home";
-                group = "diffNewFile";
+                group = "diffChanged";
                 key = "h";
               }
               {
