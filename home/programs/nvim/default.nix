@@ -161,7 +161,6 @@
                 min_keyword_length = 3;
                 # Optional configurations
                 opts = {
-                  dictionary_directories = "~/.config/nvim/dictionary";
                 };
               };
               spell = {
