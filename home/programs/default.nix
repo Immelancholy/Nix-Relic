@@ -139,6 +139,9 @@
       withOpengl = true;
       withRtmp = true;
     })
+    obsidian
+    obsidian-export
+    rofi-obsidian
   ];
 
   programs.zoxide = {

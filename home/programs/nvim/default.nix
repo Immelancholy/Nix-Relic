@@ -75,6 +75,7 @@
           nested_checkboxes = 0;
         };
       };
+      illuminate.enable = true;
       render-markdown.enable = true;
       refactoring.enable = true;
       blink-cmp = {
@@ -244,6 +245,35 @@
             Unit = "󰪚";
             Value = "󰦨";
             Variable = "󰆦";
+          };
+        };
+      };
+      obsidian = {
+        enable = true;
+        settings = {
+          completion = {
+            min_chars = 2;
+            nvim_cmp = true;
+          };
+          new_notes_location = "current_dir";
+          workspaces = [
+            {
+              name = "work";
+              path = "~/obsidian/work";
+            }
+            {
+              name = "relationship";
+              path = "~/obsidian/relationship";
+            }
+          ];
+          follow_url_func = {
+            __raw = ''
+              function(url)
+                -- Open the URL in the default web browser.
+                vim.fn.jobstart({"open", url})  -- Mac OS
+                -- vim.fn.jobstart({"xdg-open", url})  -- linux
+              end
+            '';
           };
         };
       };
