@@ -31,7 +31,7 @@
   ];
 
   # Packages that should be installed to the user profile.
-  home.xdg.enable = true;
+  xdg.enable = true;
   catppuccin = {
     enable = true;
     flavor = "mocha";
@@ -140,17 +140,32 @@
     source = "${nixosConfig.services.input-remapper.package}/share/applications/input-remapper-autoload.desktop";
   };
 
-  xdg.mimeApps.defaultApplications = {
-    "text/plain" = ["nvim.desktop"];
-    "text/html" = ["zen.desktop"];
-    "text/css" = ["nvim.desktop"];
-    "test/csv" = ["nvim.desktop"];
-    "test/javascript" = ["nvim.desktop"];
-    "application/json" = ["nvim.desktop"];
-    "application.xml" = ["nvim.desktop"];
-    "inode/directory" = ["nemo.desktop"];
-    "video/mp4" = ["com.github.rafostar.Clapper.desktop"];
-    "video/quicktime" = ["com.github.rafostar.Clapper.desktop"];
+  xdg.mimeApps = {
+    enable = true;
+    associations.added = {
+      "text/plain" = ["nvim.desktop"];
+      "text/html" = ["zen.desktop"];
+      "text/css" = ["nvim.desktop"];
+      "test/csv" = ["nvim.desktop"];
+      "test/javascript" = ["nvim.desktop"];
+      "application/json" = ["nvim.desktop"];
+      "application.xml" = ["nvim.desktop"];
+      "inode/directory" = ["nemo.desktop"];
+      "video/mp4" = ["com.github.rafostar.Clapper.desktop"];
+      "video/quicktime" = ["com.github.rafostar.Clapper.desktop"];
+    };
+    defaultApplications = {
+      "text/plain" = ["nvim.desktop"];
+      "text/html" = ["zen.desktop"];
+      "text/css" = ["nvim.desktop"];
+      "test/csv" = ["nvim.desktop"];
+      "test/javascript" = ["nvim.desktop"];
+      "application/json" = ["nvim.desktop"];
+      "application.xml" = ["nvim.desktop"];
+      "inode/directory" = ["nemo.desktop"];
+      "video/mp4" = ["com.github.rafostar.Clapper.desktop"];
+      "video/quicktime" = ["com.github.rafostar.Clapper.desktop"];
+    };
   };
 
   home.stateVersion = "24.11";
