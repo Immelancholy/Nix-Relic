@@ -56,13 +56,6 @@
     unzip
     p7zip
 
-    (prismlauncher.override {
-      addtionalPrograms = [ffmpeg];
-      jdks = [
-        temurin-jre-bin
-      ];
-    })
-
     # utils
     ripgrep # recursively searches directories for a regex pattern
     jq # A lightweight and flexible command-line JSON processor

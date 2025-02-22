@@ -43,6 +43,9 @@
       url = "github:oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    prismlauncher = {
+      url = "github:PrismLauncher/PrismLauncher";
+    };
   };
 
   outputs = {
@@ -52,6 +55,7 @@
     home-manager,
     solaar,
     rust-overlay,
+    prismlauncher,
     ...
   } @ inputs: {
     nixosConfigurations = {

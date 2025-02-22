@@ -26,6 +26,7 @@
   services.dbus.enable = true;
   environment.systemPackages = with pkgs; [
     inputs.zen-browser.packages."${system}".beta
+    prismlauncher.packages.${pkgs.system}.prismlauncher
     kitty
     inputs.yazi.packages.${pkgs.system}.default
     qpwgraph
