@@ -39,5 +39,9 @@
       cursor-theme = "Bibata-Modern-Ice";
       cursor-size = 20;
     };
+    "org/cinnamon/desktop/applications/terminal" = {
+      exec = "kitty";
+      # exec-arg = ""; # argument
+    };
   };
 }
