@@ -860,7 +860,7 @@
       }
     ];
   };
-  xdgConfig.file."nvim/dictionary" = {
+  xdg.configFile."nvim/dictionary" = {
     source = ./dictionary;
   };
 }
