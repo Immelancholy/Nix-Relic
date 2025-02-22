@@ -65,6 +65,8 @@
     nemo-with-extensions
     lutris-unwrapped
     wine-wayland
+    xdg-user-dirs
+    xdg-user-dirs-gtk
   ];
   environment.shells = with pkgs; [zsh];
 
