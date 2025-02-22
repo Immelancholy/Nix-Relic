@@ -252,6 +252,7 @@
         enable = true;
         settings = {
           new_notes_location = "current_dir";
+          ui.enable = false;
           dir = "~/obsidian/relationship";
           follow_url_func = {
             __raw = ''
