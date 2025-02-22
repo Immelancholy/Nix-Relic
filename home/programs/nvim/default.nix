@@ -398,6 +398,14 @@
               }
             ];
           }
+          {
+            __unkeyed-1 = "nvim-cmp";
+            after = ''
+              funtion()
+                require("cmp").setup()
+              end
+            '';
+          }
         ];
       };
       snacks = {
