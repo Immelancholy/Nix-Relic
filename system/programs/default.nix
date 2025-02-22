@@ -26,7 +26,17 @@
   services.dbus.enable = true;
   environment.systemPackages = with pkgs; [
     inputs.zen-browser.packages."${system}".beta
-    inputs.prismlauncher.packages.${pkgs.system}.prismlauncher
+    # inputs.prismlauncher.packages.${pkgs.system}.prismlauncher
+    (prismlauncher.override {
+      additionalPrograms = [ffmpeg];
+      jdks = [
+        graalvm-ce
+        zulu8
+        zulu17
+        zulu
+        temurin-bin
+      ];
+    })
     kitty
     inputs.yazi.packages.${pkgs.system}.default
     qpwgraph
