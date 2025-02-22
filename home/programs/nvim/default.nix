@@ -78,176 +78,176 @@
       illuminate.enable = true;
       render-markdown.enable = true;
       refactoring.enable = true;
-      # blink-cmp = {
-      #   enable = true;
-      #   autoLoad = true;
-      #   setupLspCapabilities = true;
-      #   settings = {
-      #     snippets = {
-      #       preset = "luasnip";
-      #     };
-      #     sources = {
-      #       default = [
-      #         "lsp"
-      #         "buffer"
-      #         "path"
-      #         "snippets"
-      #       ];
-      #       per_filetype = {
-      #         text = [
-      #           "buffer"
-      #           "path"
-      #           "snippets"
-      #           "dictionary"
-      #           "spell"
-      #         ];
-      #         markdown = [
-      #           "buffer"
-      #           "path"
-      #           "snippets"
-      #           "dictionary"
-      #           "spell"
-      #         ];
-      #       };
-      #       providers = {
-      #         lsp = {
-      #           name = "LSP";
-      #           module = "blink.cmp.sources.lsp";
-      #           fallbacks = [];
-      #         };
-      #         buffer = {
-      #           name = "buffer";
-      #           module = "blink.cmp.sources.buffer";
-      #         };
-      #         snippets = {
-      #           name = "snippets";
-      #           module = "blink.cmp.sources.snippets";
-      #         };
-      #         path = {
-      #           name = "path";
-      #           module = "blink.cmp.sources.path";
-      #           async = true;
-      #         };
-      #         git = {
-      #           name = "Git";
-      #           module = "blink-cmp-git";
-      #         };
-      #         ripgrep = {
-      #           async = true;
-      #           module = "blink-ripgrep";
-      #           name = "Ripgrep";
-      #           score_offset = 100;
-      #           opts = {
-      #             prefix_min_len = 3;
-      #             context_size = 5;
-      #             max_filesize = "1M";
-      #             project_root_marker = ".git";
-      #             project_root_fallback = true;
-      #             search_casing = "--ignore-case";
-      #             additional_rg_options = {};
-      #             fallback_to_regex_highlighting = true;
-      #             ignore_paths = {};
-      #             additional_paths = {};
-      #             debug = false;
-      #           };
-      #         };
-      #         dictionary = {
-      #           module = "blink-cmp-dictionary";
-      #           name = "Dict";
-      #           score_offset = 100;
-      #           min_keyword_length = 3;
-      #           # Optional configurations
-      #           opts = {
-      #           };
-      #         };
-      #         spell = {
-      #           module = "blink-cmp-spell";
-      #           name = "Spell";
-      #           score_offset = 100;
-      #           opts = {
-      #           };
-      #         };
-      #       };
-      #     };
-      #     keymap = {
-      #       preset = "default";
-      #       "<S-Tab>" = [
-      #         "snippet_backward"
-      #         "fallback"
-      #       ];
-      #       "<Tab>" = [
-      #         "snippet_forward"
-      #         "fallback"
-      #       ];
-      #
-      #       "<Up>" = [
-      #         "select_prev"
-      #         "fallback"
-      #       ];
-      #       "<Down>" = [
-      #         "select_next"
-      #         "fallback"
-      #       ];
-      #       "<C-n>" = [
-      #         "select_next"
-      #         "fallback"
-      #       ];
-      #       "<C-p>" = [
-      #         "select_prev"
-      #         "fallback"
-      #       ];
-      #       "<C-y>" = [
-      #         "select_and_accept"
-      #       ];
-      #
-      #       "<C-b>" = [
-      #         "scroll_documentation_up"
-      #         "fallback"
-      #       ];
-      #       "<C-f>" = [
-      #         "scroll_documentation_down"
-      #         "fallback"
-      #       ];
-      #
-      #       "<C-space>" = [
-      #         "show"
-      #         "show_documentation"
-      #         "hide_documentation"
-      #       ];
-      #       "<C-e>" = [
-      #         "hide"
-      #         "fallback"
-      #       ];
-      #     };
-      #     appearance.kind_icons = {
-      #       Class = "󱡠";
-      #       Color = "󰏘";
-      #       Constant = "󰏿";
-      #       Constructor = "󰒓";
-      #       Enum = "󰦨";
-      #       EnumMember = "󰦨";
-      #       Event = "󱐋";
-      #       Field = "󰜢";
-      #       File = "󰈔";
-      #       Folder = "󰉋";
-      #       Function = "󰊕";
-      #       Interface = "󱡠";
-      #       Keyword = "󰻾";
-      #       Method = "󰊕";
-      #       Module = "󰅩";
-      #       Operator = "󰪚";
-      #       Property = "󰖷";
-      #       Reference = "󰬲";
-      #       Snippet = "󱄽";
-      #       Struct = "󱡠";
-      #       Text = "󰉿";
-      #       TypeParameter = "󰬛";
-      #       Unit = "󰪚";
-      #       Value = "󰦨";
-      #       Variable = "󰆦";
-      #     };
-      #   };
-      # };
+      blink-cmp = {
+        enable = true;
+        autoLoad = true;
+        setupLspCapabilities = true;
+        settings = {
+          snippets = {
+            preset = "luasnip";
+          };
+          sources = {
+            default = [
+              "lsp"
+              "buffer"
+              "path"
+              "snippets"
+            ];
+            per_filetype = {
+              text = [
+                "buffer"
+                "path"
+                "snippets"
+                "dictionary"
+                "spell"
+              ];
+              markdown = [
+                "buffer"
+                "path"
+                "snippets"
+                "dictionary"
+                "spell"
+              ];
+            };
+            providers = {
+              lsp = {
+                name = "LSP";
+                module = "blink.cmp.sources.lsp";
+                fallbacks = [];
+              };
+              buffer = {
+                name = "buffer";
+                module = "blink.cmp.sources.buffer";
+              };
+              snippets = {
+                name = "snippets";
+                module = "blink.cmp.sources.snippets";
+              };
+              path = {
+                name = "path";
+                module = "blink.cmp.sources.path";
+                async = true;
+              };
+              git = {
+                name = "Git";
+                module = "blink-cmp-git";
+              };
+              ripgrep = {
+                async = true;
+                module = "blink-ripgrep";
+                name = "Ripgrep";
+                score_offset = 100;
+                opts = {
+                  prefix_min_len = 3;
+                  context_size = 5;
+                  max_filesize = "1M";
+                  project_root_marker = ".git";
+                  project_root_fallback = true;
+                  search_casing = "--ignore-case";
+                  additional_rg_options = {};
+                  fallback_to_regex_highlighting = true;
+                  ignore_paths = {};
+                  additional_paths = {};
+                  debug = false;
+                };
+              };
+              dictionary = {
+                module = "blink-cmp-dictionary";
+                name = "Dict";
+                score_offset = 100;
+                min_keyword_length = 3;
+                # Optional configurations
+                opts = {
+                };
+              };
+              spell = {
+                module = "blink-cmp-spell";
+                name = "Spell";
+                score_offset = 100;
+                opts = {
+                };
+              };
+            };
+          };
+          keymap = {
+            preset = "default";
+            "<S-Tab>" = [
+              "snippet_backward"
+              "fallback"
+            ];
+            "<Tab>" = [
+              "snippet_forward"
+              "fallback"
+            ];
+
+            "<Up>" = [
+              "select_prev"
+              "fallback"
+            ];
+            "<Down>" = [
+              "select_next"
+              "fallback"
+            ];
+            "<C-n>" = [
+              "select_next"
+              "fallback"
+            ];
+            "<C-p>" = [
+              "select_prev"
+              "fallback"
+            ];
+            "<C-y>" = [
+              "select_and_accept"
+            ];
+
+            "<C-b>" = [
+              "scroll_documentation_up"
+              "fallback"
+            ];
+            "<C-f>" = [
+              "scroll_documentation_down"
+              "fallback"
+            ];
+
+            "<C-space>" = [
+              "show"
+              "show_documentation"
+              "hide_documentation"
+            ];
+            "<C-e>" = [
+              "hide"
+              "fallback"
+            ];
+          };
+          appearance.kind_icons = {
+            Class = "󱡠";
+            Color = "󰏘";
+            Constant = "󰏿";
+            Constructor = "󰒓";
+            Enum = "󰦨";
+            EnumMember = "󰦨";
+            Event = "󱐋";
+            Field = "󰜢";
+            File = "󰈔";
+            Folder = "󰉋";
+            Function = "󰊕";
+            Interface = "󱡠";
+            Keyword = "󰻾";
+            Method = "󰊕";
+            Module = "󰅩";
+            Operator = "󰪚";
+            Property = "󰖷";
+            Reference = "󰬲";
+            Snippet = "󱄽";
+            Struct = "󱡠";
+            Text = "󰉿";
+            TypeParameter = "󰬛";
+            Unit = "󰪚";
+            Value = "󰦨";
+            Variable = "󰆦";
+          };
+        };
+      };
       obsidian = {
         enable = true;
         settings = {
@@ -260,14 +260,14 @@
           ];
         };
       };
-      # blink-cmp-spell.enable = true;
-      # blink-cmp-dictionary.enable = true;
-      # blink-ripgrep.enable = true;
-      # blink-cmp-git = {
-      #   enable = true;
-      #   autoLoad = true;
-      # };
-      # blink-compat.enable = true;
+      blink-cmp-spell.enable = true;
+      blink-cmp-dictionary.enable = true;
+      blink-ripgrep.enable = true;
+      blink-cmp-git = {
+        enable = true;
+        autoLoad = true;
+      };
+      blink-compat.enable = true;
       vim-suda = {
         enable = true;
         settings = {
@@ -603,29 +603,29 @@
           floating_window_use_plenary = 1;
         };
       };
-      cmp = {
-        autoEnableSources = true;
-        enable = true;
-        settings = {
-          sources = [
-            {
-              name = "nvim_lsp";
-            }
-            {
-              name = "path";
-            }
-            {
-              name = "buffer";
-            }
-            {
-              name = "dictionary";
-            }
-            {
-              name = "luasnip";
-            }
-          ];
-        };
-      };
+      # cmp = {
+      #   autoEnableSources = true;
+      #   enable = true;
+      #   settings = {
+      #     sources = [
+      #       {
+      #         name = "nvim_lsp";
+      #       }
+      #       {
+      #         name = "path";
+      #       }
+      #       {
+      #         name = "buffer";
+      #       }
+      #       {
+      #         name = "dictionary";
+      #       }
+      #       {
+      #         name = "luasnip";
+      #       }
+      #     ];
+      #   };
+      # };
       dap.enable = true;
       dap-go.enable = true;
       dap-python.enable = true;
