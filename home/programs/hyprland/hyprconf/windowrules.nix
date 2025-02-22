@@ -13,6 +13,7 @@
         windowrulev2 = opacity 0.80 0.80,class:^(nwg-look)$
         windowrulev2 = opacity 0.80 0.80,class:^(qt5ct)$
         windowrulev2 = opacity 0.80 0.80,class:^(qt6ct)$
+        windowrulev2 = opacity 0.80 0,80,class:^(obsidian)$
         windowrulev2 = opacity 0.80 0.80,class:^(kvantummanager)$
         windowrulev2 = opacity 0.80 0.70,class:^(org.pulseaudio.pavucontrol)$
         windowrulev2 = opacity 0.80 0.70,class:^(blueman-manager)$

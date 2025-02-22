@@ -252,6 +252,7 @@
         enable = true;
         settings = {
           ui.enable = false;
+          dir = "~/obsidian/relationship";
         };
       };
       blink-cmp-spell.enable = true;
