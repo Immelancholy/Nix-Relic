@@ -301,6 +301,7 @@
       rustaceanvim = {
         enable = true;
         settings = {
+          rustanalyzerPackafe = null;
           server = {
             cmd = [
               "rust-analyzer"
