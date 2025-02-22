@@ -38,9 +38,43 @@
     vimAlias = true;
     withNodeJs = true;
     withPerl = true;
+    withRuby = true;
+    withPython3 = true;
     luaLoader.enable = true;
     plugins = {
+      aerial = {
+        enable = true;
+        settings = {
+          attach_mode = "global";
+          backends = [
+            "treesitter"
+            "lsp"
+            "markdown"
+            "man"
+          ];
+          disable_max_lines = 5000;
+          highlight_on_hover = true;
+          ignore = {
+            filetypes = [
+              "gomod"
+            ];
+          };
+        };
+      };
       vim-be-good.enable = true;
+      bullets = {
+        enable = true;
+        settings = {
+          enable_in_empty_buffers = 0;
+          enabled_file_types = [
+            "markdown"
+            "text"
+            "gitcommit"
+            "scratch"
+          ];
+          nested_checkboxes = 0;
+        };
+      };
       render-markdown.enable = true;
       refactoring.enable = true;
       blink-cmp = {
@@ -58,6 +92,15 @@
               "path"
               "snippets"
             ];
+            per_filetype = {
+              text = [
+                "buffer"
+                "path"
+                "snippets"
+                "dictionary"
+                "spell"
+              ];
+            };
             providers = {
               lsp = {
                 name = "LSP";
@@ -98,6 +141,22 @@
                   ignore_paths = {};
                   additional_paths = {};
                   debug = false;
+                };
+              };
+              dictionary = {
+                module = "blink-cmp-dictionary";
+                name = "Dict";
+                score_offset = 100;
+                min_keyword_length = 3;
+                # Optional configurations
+                opts = {
+                };
+              };
+              spell = {
+                module = "blink-cmp-spell";
+                name = "Spell";
+                score_offset = 100;
+                opts = {
                 };
               };
             };
@@ -181,6 +240,8 @@
           };
         };
       };
+      blink-cmp-spell.enable = true;
+      blink-cmp-dictionary.enable = true;
       blink-ripgrep.enable = true;
       blink-cmp-git = {
         enable = true;
