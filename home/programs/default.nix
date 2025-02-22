@@ -143,7 +143,6 @@
     obsidian-export
     rofi-obsidian
     wordnet
-    nemo
   ];
 
   programs.zoxide = {
