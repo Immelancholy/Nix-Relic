@@ -100,6 +100,13 @@
                 "dictionary"
                 "spell"
               ];
+              markdown = [
+                "buffer"
+                "path"
+                "snippets"
+                "dictionary"
+                "spell"
+              ];
             };
             providers = {
               lsp = {
