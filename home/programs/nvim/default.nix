@@ -95,6 +95,7 @@
             ];
             per_filetype = {
               text = [
+                "lsp"
                 "buffer"
                 "path"
                 "snippets"
@@ -102,6 +103,7 @@
                 "spell"
               ];
               markdown = [
+                "lsp"
                 "buffer"
                 "path"
                 "snippets"
