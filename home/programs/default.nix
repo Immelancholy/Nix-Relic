@@ -87,7 +87,6 @@
     zstd
     gnupg
     neo
-    rustup
 
     # nix related
     #
