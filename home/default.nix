@@ -1,4 +1,9 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  nixosConfig,
+  lib,
+  ...
+}: {
   # TODO please change the username & home directory to your own
   home.username = "mela";
   home.homeDirectory = "/home/mela";
@@ -130,6 +135,9 @@
 
   fonts.fontconfig = {
     enable = true;
+  };
+  xdg.configFile."autostart/input-mapper-autoload.desktop" = lib.mkIf nixosConfig.services.input-remapper.enable {
+    source = "${nixosConfig.services.input-remapper.package}/share/applications/input-remapper-autoload.desktop";
   };
 
   xdg.mimeApps.defaultApplications = {
