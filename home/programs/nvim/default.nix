@@ -251,10 +251,6 @@
       obsidian = {
         enable = true;
         settings = {
-          completion = {
-            min_chars = 2;
-            nvim_cmp = true;
-          };
           ui.enable = false;
           workspaces = [
             {
@@ -620,6 +616,7 @@
           hyprls.enable = true;
           lua_ls.enable = true;
           pylyzer.enable = true;
+          marksman.enable = true;
         };
       };
       lsp-format.enable = true;
@@ -736,7 +733,6 @@
       vimacs
       trouble-nvim
       harpoon2
-      nvim-cmp
     ];
     package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
     keymaps = [
