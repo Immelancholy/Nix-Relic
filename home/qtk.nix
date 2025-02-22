@@ -40,7 +40,7 @@
       cursor-size = 20;
     };
     "org/cinnamon/desktop/applications/terminal" = {
-      exec = "kitty poke.sh";
+      exec = "kitty ~/.local/share/bin/poke.sh";
       # exec-arg = ""; # argument
     };
   };
