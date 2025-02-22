@@ -134,6 +134,12 @@
 
   xdg.mimeApps.defaultApplications = {
     "text/plain" = ["nvim.desktop"];
+    "text/html" = ["zen.desktop"];
+    "text/css" = ["nvim.desktop"];
+    "test/csv" = ["nvim.desktop"];
+    "test/javascript" = ["nvim.desktop"];
+    "application/json" = ["nvim.desktop"];
+    "application.xml" = ["nvim.desktop"];
     "inode/directory" = ["nemo.desktop"];
     "video/mp4" = ["com.github.rafostar.Clapper.desktop"];
     "video/quicktime" = ["com.github.rafostar.Clapper.desktop"];
