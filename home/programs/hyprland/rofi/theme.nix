@@ -28,7 +28,7 @@
       };
       "window" = {
         location = mkLiteral "north";
-        y-offset = mkLiteral "calc(50% - 176px)";
+        y-offset = mkLiteral "calc(30% - 176px)";
         width = mkLiteral "480";
         border-radius = mkLiteral "24px";
 
