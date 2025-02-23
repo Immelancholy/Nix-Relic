@@ -1,4 +1,4 @@
-{
+{config, ...}: {
   programs.rofi.theme = (
     let
       # Use `mkLiteral` for string-like values that should show without
