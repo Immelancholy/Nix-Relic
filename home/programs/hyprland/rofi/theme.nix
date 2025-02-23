@@ -92,6 +92,12 @@
         text-color = mkLiteral "inherit";
       };
       "mode-swicher" = {
+        "Window" = {
+          expand = mkLiteral "false";
+          content = "Windows";
+          vertical-align = "0.5";
+          action = "rofi -show window";
+        };
       };
     }
   );
