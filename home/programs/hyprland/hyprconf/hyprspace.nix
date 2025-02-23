@@ -14,14 +14,13 @@
       plugin {
         overview {
           onBottom = true
-          workspaceMargin = 12
+          workspaceMargin = 13
           workspaceBorderSize = 3
           centerAligned = true
           panelHeight = 320
           drawActiveWorkspace = true
-          gapsIn = 3
-          gapsOut = 8
           switchOnDrop = true
+          affectStrut = false
 
           workspaceActiveBorder = rgba(cba6f7ff)
           workspaceInactiveBorder = rgba(b4befecc)
