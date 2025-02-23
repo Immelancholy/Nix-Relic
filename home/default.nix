@@ -153,6 +153,11 @@
       "inode/directory" = ["nemo.desktop"];
       "video/mp4" = ["com.github.rafostar.Clapper.desktop"];
       "video/quicktime" = ["com.github.rafostar.Clapper.desktop"];
+      "x-scheme-handler/http" = ["zen.desktop"];
+      "x-scheme-handler/https" = ["zen.desktop"];
+      "x-scheme-handler/about" = ["zen.desktop"];
+      "x-scheme-handler/unknown" = ["zen.desktop"];
+      "default-web-browser" = ["zen.desktop"];
     };
     defaultApplications = {
       "text/plain" = ["nvim.desktop"];
@@ -165,6 +170,11 @@
       "inode/directory" = ["nemo.desktop"];
       "video/mp4" = ["com.github.rafostar.Clapper.desktop"];
       "video/quicktime" = ["com.github.rafostar.Clapper.desktop"];
+      "x-scheme-handler/http" = ["zen.desktop"];
+      "x-scheme-handler/https" = ["zen.desktop"];
+      "x-scheme-handler/about" = ["zen.desktop"];
+      "x-scheme-handler/unknown" = ["zen.desktop"];
+      "default-web-browser" = ["zen.desktop"];
     };
   };
 

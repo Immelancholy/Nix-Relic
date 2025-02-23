@@ -8,7 +8,6 @@
       }
     ];
     packages = [
-      "dev.vencord.Vesktop"
     ];
   };
 }
