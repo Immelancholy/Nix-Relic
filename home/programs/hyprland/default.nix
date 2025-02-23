@@ -6,7 +6,6 @@
   home.packages = with pkgs; [
     libsForQt5.qt5.qtwayland
     kdePackages.qtwayland
-    rofi-wayland
     inputs.swww.packages.${pkgs.system}.swww
     libnotify
     hypridle

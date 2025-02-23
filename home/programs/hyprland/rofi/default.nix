@@ -1,8 +1,4 @@
-{
-  pkgs,
-  lib,
-  ...
-}: {
+{pkgs, ...}: {
   programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland-unwrapped;
@@ -13,7 +9,7 @@
       rofi-mpd
     ];
   };
-  home.file.".local/share/rofi/themes/mytheme.rasi".text = ''
-
-  '';
+  imports = [
+    ./theme.nix
+  ];
 }
