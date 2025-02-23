@@ -9,8 +9,8 @@
       display-window = "Windows";
       drun-display-format = "{icon} {name}";
       show-icons = true;
-      # icon-theme = "Papirus-Dark";
-      icon-theme = "Tela-circle-dracula";
+      icon-theme = "Papirus-Dark";
+      # icon-theme = "Tela-circle-dracula";
     };
   };
   imports = [
