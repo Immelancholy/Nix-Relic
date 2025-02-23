@@ -117,13 +117,6 @@
     bindd = $mod+Shift, P,Color Picker , exec, hyprpicker -a # Pick color (Hex) >> clipboard#
 
     bind = , XF86Calculator, exec, qalculate-gtk
-    # bind = Alt, tab, hyprtasking:toggle, cursor
-    #
-    # bind = SUPER, Q, hyprtasking:killhovered
-
-    # bind = Alt, H, hyprtasking:move, left
-    # bind = Alt, J, hyprtasking:move, down
-    # bind = Alt, K, hyprtasking:move, up
-    # bind = Alt, L, hyprtasking:move, right
+    bind = Alt, Tab, hyprexpo:expo, toggle
   '';
 }

@@ -34,6 +34,6 @@
     ./execs.nix
     ./windowrules.nix
     ./plugins.nix
-    # ./hyprtasking.nix
+    ./hyprexpo.nix
   ];
 }
