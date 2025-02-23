@@ -44,6 +44,10 @@
       "promp" = {
         text-color = mkLiteral "#cdd6f4";
       };
+      "entry" = {
+        placeholder = mkLiteral "Search";
+        placeholder-color = mkLiteral "#cdd6f4";
+      };
     }
   );
 }
