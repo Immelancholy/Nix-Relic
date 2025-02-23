@@ -45,8 +45,14 @@
         text-color = mkLiteral "#cdd6f4";
       };
       "entry" = {
-        placeholder = mkLiteral "Search";
+        placeholder = "Search";
         placeholder-color = mkLiteral "#cdd6f4";
+      };
+      "message" = {
+        margin = mkLiteral "12px 0 0";
+        border-radius = mkLiteral "16px";
+        border-color = mkLiteral "#cba6f7";
+        background-color = mkLiteral "#cba6f7";
       };
     }
   );
