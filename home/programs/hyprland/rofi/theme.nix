@@ -10,7 +10,7 @@
       inherit (config.lib.formats.rasi) mkLiteral;
     in {
       "*" = {
-        font = "JetBrainsMono Nerd Font";
+        font = "CaskaydiaCove Nerd Font Mono";
 
         background-color = mkLiteral "transparent";
         text-color = mkLiteral "#cdd6f4";
