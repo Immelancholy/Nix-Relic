@@ -14,8 +14,8 @@
       plugin {
         overview {
           onBottom = true
-          workspaceMargin = 8
-          workspaceBorderSize = 3
+          workspaceMargin = 11
+          workspaceBorderSize = 2
           centerAligned = true
           panelHeight = 320
           drawActiveWorkspace = true
