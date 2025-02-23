@@ -21,8 +21,8 @@
           panelBorderWidth = 4
           drawActiveWorkspace = true
 
-          panelColor = rgba(b4befecc) rgba(6c7086cc) 45deg
-          panelBorderColor = rgba(cba6f7ff) rgba(89dcebff) rgba(f5e0dcff) 40deg
+          panelColor = rgba(b4befecc)
+          panelBorderColor = rgba(cba6f7ff)
         }
       }
     '';
