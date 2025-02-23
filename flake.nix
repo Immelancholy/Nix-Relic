@@ -52,6 +52,10 @@
       # Hyprspace uses latest Hyprland. We declare this to keep them in sync.
       inputs.hyprland.follows = "hyprland";
     };
+    hyprland-easymotion = {
+      url = "github:zakk4223/hyprland-easymotion";
+      inputs.hyprland.follows = "hyprland";
+    };
   };
 
   outputs = {
@@ -61,6 +65,7 @@
     home-manager,
     solaar,
     rust-overlay,
+    hyprland,
     ...
   } @ inputs: {
     nixosConfigurations = {
