@@ -88,7 +88,7 @@
         size = mkLiteral "1em";
         vertical-align = mkLiteral "0.5";
       };
-      element-text = {
+      "element-text" = {
         text-color = mkLiteral "inherit";
       };
     }
