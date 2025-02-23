@@ -35,5 +35,6 @@
     ./windowrules.nix
     ./plugins.nix
     # ./hyprexpo.nix
+    ./hyprspace.nix
   ];
 }
