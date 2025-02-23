@@ -18,7 +18,7 @@
         "dracula"
       ];
     };
-    iconTheme.name = "tela-circle-icon-theme";
+    iconTheme.name = "Tela-Circle-Icon-Theme";
   };
 
   home.pointerCursor = {
