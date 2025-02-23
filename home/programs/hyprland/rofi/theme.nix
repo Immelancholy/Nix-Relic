@@ -38,12 +38,10 @@
         padding = mkLiteral "12px";
       };
       "mode-swicher" = {
-        "button" = {
-          expand = mkLiteral "false";
-          content = "Windows";
-          vertical-align = "0.5";
-          action = "rofi -show window";
-        };
+        expand = mkLiteral "false";
+        content = "Windows";
+        vertical-align = "0.5";
+        action = "rofi -show window";
       };
       "inputbar" = {
         background-color = mkLiteral "@bg1";
