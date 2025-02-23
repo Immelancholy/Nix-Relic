@@ -20,6 +20,8 @@
           panelHeight = 320
           drawActiveWorkspace = true
 
+          workspaceActiveBorder = rgba(cba6f7ff) rgba(89dcebff) rgba(f5e0dcff) 40deg
+
         }
       }
     '';
