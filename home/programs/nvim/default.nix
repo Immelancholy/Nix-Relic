@@ -78,6 +78,12 @@
       presence-nvim = {
         enable = true;
         enableLineNumber = true;
+        buttons = [
+          {
+            label = "Nix Dotfiles";
+            url = "https://github.com/Immelancholy/Nix-Dotfiles";
+          }
+        ];
         fileAssets = {
           js = ["Javascript" "javascript"];
           ts = ["Typescript" "typescript"];
