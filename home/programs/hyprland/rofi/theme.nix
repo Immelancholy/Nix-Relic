@@ -37,12 +37,6 @@
       "mainbox" = {
         padding = mkLiteral "12px";
       };
-      "mode-swicher" = {
-        expand = mkLiteral "false";
-        content = "Windows";
-        vertical-align = "0.5";
-        action = "rofi -show window";
-      };
       "inputbar" = {
         background-color = mkLiteral "@bg1";
         border-color = mkLiteral "@bg3";
