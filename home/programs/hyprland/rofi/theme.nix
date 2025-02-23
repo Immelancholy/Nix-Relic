@@ -10,8 +10,17 @@
       inherit (config.lib.formats.rasi) mkLiteral;
     in {
       "*" = {
+        bg0 = mkLiteral "#1e1e2e";
+        bg1 = mkLiteral "#1e1e2e";
+        bg2 = mkLiteral "#1e1e2e";
+        bg3 = mkLiteral "#cba6f7";
+        fg0 = mkLiteral "#cdd6f4";
+        fg1 = mkLiteral "#a6adc8";
+        fg2 = mkLiteral "#bac2de";
+        fg3 = mkLiteral "#a6adc8";
+
         background-color = mkLiteral "transparent";
-        text-color = mkLiteral "#cdd6f4";
+        text-color = mkLiteral "@fg0";
 
         margin = mkLiteral "0px";
         padding = mkLiteral "0px";
@@ -23,14 +32,14 @@
         width = mkLiteral "480";
         border-radius = mkLiteral "24px";
 
-        background-color = mkLiteral "#1e1e2e";
+        background-color = mkLiteral "@bg0";
       };
       "mainbox" = {
         padding = mkLiteral "12px";
       };
       "inputbar" = {
-        background-color = mkLiteral "#1e1e2e";
-        border-color = mkLiteral "#cba6f7";
+        background-color = mkLiteral "@bg1";
+        border-color = mkLiteral "@bg3";
 
         border = mkLiteral "2px";
         border-radius = mkLiteral "16px";
@@ -40,17 +49,17 @@
         childern = mkLiteral "[ prompt, entry ]";
       };
       "promp" = {
-        text-color = mkLiteral "#cdd6f4";
+        text-color = mkLiteral "@fg2";
       };
       "entry" = {
         placeholder = "Search";
-        placeholder-color = mkLiteral "#cdd6f4";
+        placeholder-color = mkLiteral "@fg3";
       };
       "message" = {
         margin = mkLiteral "12px 0 0";
         border-radius = mkLiteral "16px";
-        border-color = mkLiteral "#cba6f7";
-        background-color = mkLiteral "#cba6f7";
+        border-color = mkLiteral "@bg2";
+        background-color = mkLiteral "@bg2";
       };
     }
   );
