@@ -61,6 +61,18 @@
         border-color = mkLiteral "@bg2";
         background-color = mkLiteral "@bg2";
       };
+      "textbox" = {
+        padding = mkLiteral "8px 24px";
+      };
+      "listview" = {
+        background-color = mkLiteral "transparent";
+
+        margin = mkLiteral "12px 0 0";
+        lines = mkLiteral "8";
+        columns = mkLiteral "1";
+
+        fixed-heigh = mkLiteral "false";
+      };
     }
   );
 }
