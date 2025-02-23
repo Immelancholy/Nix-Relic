@@ -2,7 +2,7 @@
   home.sessionVariables = {
     STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/mela/.steam/root/compatibilitytools.d";
     EDITOR = "kitty /home/mela/.local/share/bin/kitty_nvim.sh";
-    BROWSER = "zen.desktop";
+    BROWSER = "zen";
     TERMINAL = "kitty";
     # Required to run the correct GBM backend for nvidia GPUs on wayland
     GBM_BACKEND = "nvidia-drm";

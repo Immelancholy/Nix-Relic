@@ -146,25 +146,8 @@
       "text/plain" = ["nvim.desktop"];
       "text/html" = ["zen.desktop"];
       "text/css" = ["nvim.desktop"];
-      "test/csv" = ["nvim.desktop"];
-      "test/javascript" = ["nvim.desktop"];
-      "application/json" = ["nvim.desktop"];
-      "application.xml" = ["nvim.desktop"];
-      "inode/directory" = ["nemo.desktop"];
-      "video/mp4" = ["com.github.rafostar.Clapper.desktop"];
-      "video/quicktime" = ["com.github.rafostar.Clapper.desktop"];
-      "x-scheme-handler/http" = ["zen.desktop"];
-      "x-scheme-handler/https" = ["zen.desktop"];
-      "x-scheme-handler/about" = ["zen.desktop"];
-      "x-scheme-handler/unknown" = ["zen.desktop"];
-      "default-web-browser" = ["zen.desktop"];
-    };
-    defaultApplications = {
-      "text/plain" = ["nvim.desktop"];
-      "text/html" = ["zen.desktop"];
-      "text/css" = ["nvim.desktop"];
-      "test/csv" = ["nvim.desktop"];
-      "test/javascript" = ["nvim.desktop"];
+      "text/csv" = ["nvim.desktop"];
+      "text/javascript" = ["nvim.desktop"];
       "application/json" = ["nvim.desktop"];
       "application.xml" = ["nvim.desktop"];
       "inode/directory" = ["nemo.desktop"];
@@ -176,6 +159,28 @@
       "x-scheme-handler/unknown" = ["zen.desktop"];
       "default-web-browser" = ["zen.desktop"];
       "application/pdf" = ["zen.desktop"];
+      "application/xhtml+xml" = ["zen.desktop"];
+      "application/xhtml_xml" = ["zen.desltop"];
+    };
+    defaultApplications = {
+      "text/plain" = ["nvim.desktop"];
+      "text/html" = ["zen.desktop"];
+      "text/css" = ["nvim.desktop"];
+      "text/csv" = ["nvim.desktop"];
+      "text/javascript" = ["nvim.desktop"];
+      "application/json" = ["nvim.desktop"];
+      "application.xml" = ["nvim.desktop"];
+      "inode/directory" = ["nemo.desktop"];
+      "video/mp4" = ["com.github.rafostar.Clapper.desktop"];
+      "video/quicktime" = ["com.github.rafostar.Clapper.desktop"];
+      "x-scheme-handler/http" = ["zen.desktop"];
+      "x-scheme-handler/https" = ["zen.desktop"];
+      "x-scheme-handler/about" = ["zen.desktop"];
+      "x-scheme-handler/unknown" = ["zen.desktop"];
+      "default-web-browser" = ["zen.desktop"];
+      "application/pdf" = ["zen.desktop"];
+      "application/xhtml+xml" = ["zen.desktop"];
+      "application/xhtml_xml" = ["zen.desltop"];
     };
   };
 
