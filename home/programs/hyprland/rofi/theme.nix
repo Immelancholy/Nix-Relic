@@ -11,11 +11,11 @@
     in {
       "*" = {
         bg0 = mkLiteral "#1e1e2ecc";
-        bg1 = mkLiteral "#181825cc";
+        bg1 = mkLiteral "#1e1e2ecc";
         bg2 = mkLiteral "#b4befecc";
         bg3 = mkLiteral "#cba6f7cc";
         fg0 = mkLiteral "#cdd6f4";
-        fg1 = mkLiteral "#a6adc8";
+        fg1 = mkLiteral "#11111b";
         fg2 = mkLiteral "#bac2de";
         fg3 = mkLiteral "#9399b2";
 
@@ -89,7 +89,7 @@
         vertical-align = mkLiteral "0.5";
       };
       "element-text" = {
-        text-color = mkLiteral "inherit";
+        text-color = mkLiteral "@bg1";
       };
     }
   );
