@@ -75,6 +75,17 @@
           nested_checkboxes = 0;
         };
       };
+      presence-nvim = {
+        enable = true;
+        enableLineNumber = true;
+        fileAssets = {
+          js = ["Javascript" "javascript"];
+          ts = ["Typescript" "typescript"];
+          rs = ["Rust" "https://www.rust-lang.org/logos/rust-logo-512x512.png"];
+          go = ["Go" "https://go.dev/blog/go-brand/Go-Logo/PNG/Go-Logo_Aqua.png"];
+          nix = ["Nix" "https://raw.githubusercontent.com/NixOS/nixos-artwork/refs/heads/master/logo/nix-snowflake-white.svg"];
+        };
+      };
       illuminate.enable = true;
       render-markdown.enable = true;
       refactoring.enable = true;
