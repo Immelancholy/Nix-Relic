@@ -12,7 +12,7 @@
       "*" = {
         bg0 = mkLiteral "#1e1e2e";
         bg1 = mkLiteral "#1e1e2e";
-        bg2 = mkLiteral "#1e1e2e";
+        bg2 = mkLiteral "#b4befe";
         bg3 = mkLiteral "#cba6f7";
         fg0 = mkLiteral "#cdd6f4";
         fg1 = mkLiteral "#a6adc8";
