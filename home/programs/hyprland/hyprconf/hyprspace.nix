@@ -19,8 +19,11 @@
           centerAligned = true
           panelHeight = 320
           drawActiveWorkspace = true
+          gapsIn = 3
+          gapsOut = 8
 
           workspaceActiveBorder = rgba(cba6f7ff)
+          workspaceInactiveBorder = rgba(b4befecc)
         }
       }
     '';
