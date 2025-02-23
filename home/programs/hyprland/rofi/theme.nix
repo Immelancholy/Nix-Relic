@@ -10,10 +10,22 @@
       inherit (config.lib.formats.rasi) mkLiteral;
     in {
       "*" = {
-        background-color = mkLiteral "#000000";
-        foreground-color = mkLiteral "rgba ( 250, 251, 252, 100 % )";
-        border-color = mkLiteral "#FFFFFF";
-        width = 512;
+        font = mkLiteral "JetBrainsMono";
+
+        background-color = mkLiteral "transparent";
+        text-color = mkLiteral "#cdd6f4";
+
+        margin = mkLiteral "0px";
+        padding = mkLiteral "0px";
+        spacing = mkLiteral "0px";
+      };
+      "window" = {
+        location = mkLiteral "north";
+        y-offset = mkLiteral "calc(50% - 176px)";
+        width = mkLiteral "480";
+        border-radius = mkLiteral "24px";
+
+        background-color = mkLiteral "#1e1e2e";
       };
 
       "#inputbar" = {
