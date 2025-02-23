@@ -9,7 +9,7 @@
     ];
     extraConfig = ''
       bind = Alt, Tab, overview:toggle
-      bind = Alt+Shift, Tab, overview:toggle all
+      bind = Alt+Shift, Tab, overview:toggle, all
 
       plugin {
         overview {
@@ -17,7 +17,7 @@
           workspaceMargin = 5
           workspaceBorderSize = 4
           centerAligned = true
-          panelHeight = 50
+          panelHeight = 320
           panelBorderWidth = 4
         }
       }
