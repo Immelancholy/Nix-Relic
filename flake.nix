@@ -52,6 +52,7 @@
       # Hyprspace uses latest Hyprland. We declare this to keep them in sync.
       inputs.hyprland.follows = "hyprland";
     };
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
   outputs = {
@@ -61,7 +62,7 @@
     home-manager,
     solaar,
     rust-overlay,
-    hyprland,
+    nix-flatpak,
     ...
   } @ inputs: {
     nixosConfigurations = {
@@ -81,6 +82,7 @@
               )
             ];
           })
+          nix-flatpak.nixosModules.nix-flatpak
           solaar.nixosModules.default
           ./system
           catppuccin.nixosModules.catppuccin

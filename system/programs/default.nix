@@ -7,6 +7,7 @@
     ./hyprland.nix
     ./pipewire.nix
     ./sddm.nix
+    ./flatpak.nix
     ./obs.nix
   ];
 
