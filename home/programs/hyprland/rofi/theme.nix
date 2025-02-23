@@ -85,7 +85,7 @@
         background-color = mkLiteral "@bg3";
       };
       "element-icon" = {
-        size = mkLiteral "3em";
+        size = mkLiteral "2em";
         vertical-align = mkLiteral "0.5";
       };
       "element-text" = {
