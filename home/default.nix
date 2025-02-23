@@ -51,7 +51,7 @@
       flavor = "mocha";
     };
     rofi = {
-      enable = true;
+      enable = false;
       flavor = "mocha";
     };
     waybar.enable = false;

@@ -141,7 +141,6 @@
     })
     obsidian
     obsidian-export
-    rofi-obsidian
     wordnet
     rustlings
   ];
