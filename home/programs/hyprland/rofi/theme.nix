@@ -89,7 +89,9 @@
         vertical-align = mkLiteral "0.5";
       };
       "element-text" = {
-        text-color = mkLiteral "@bg1";
+        text-color = mkLiteral "inherit";
+      };
+      "mode-swicher" = {
       };
     }
   );
