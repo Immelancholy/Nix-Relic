@@ -27,6 +27,23 @@
 
         background-color = mkLiteral "#1e1e2e";
       };
+      "mainbox" = {
+        padding = mkLiteral "12px";
+      };
+      "inputbar" = {
+        background-color = mkLiteral "#1e1e2e";
+        border-color = mkLiteral "#cba6f7";
+
+        border = mkLiteral "2px";
+        border-radius = mkLiteral "16px";
+
+        padding = mkLiteral "8px 16px";
+        spacing = mkLiteral "8px";
+        childern = mkLiteral "[ prompt, entry ]";
+      };
+      "promp" = {
+        text-color = mkLiteral "#cdd6f4";
+      };
     }
   );
 }
