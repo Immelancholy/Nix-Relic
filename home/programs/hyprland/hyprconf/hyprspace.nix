@@ -19,6 +19,9 @@
           centerAligned = true
           panelHeight = 320
           panelBorderWidth = 4
+          drawActiveWorkspace = true
+
+          panelColor = rgba(1e1e2eff)
         }
       }
     '';
