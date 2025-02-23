@@ -35,12 +35,14 @@
     };
     mpd-discord-rpc = {
       enable = true;
-      hosts = [
-        "/run/user/1000/mpd/socket"
-      ];
-      format = {
-        details = "$title";
-        state = "$On $album by $artist";
+      settings = {
+        hosts = [
+          "/run/user/1000/mpd/socket"
+        ];
+        format = {
+          details = "$title";
+          state = "$On $album by $artist";
+        };
       };
     };
   };
