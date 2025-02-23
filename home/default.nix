@@ -175,6 +175,7 @@
       "x-scheme-handler/about" = ["zen.desktop"];
       "x-scheme-handler/unknown" = ["zen.desktop"];
       "default-web-browser" = ["zen.desktop"];
+      "application/pdf" = ["zen.desktop"];
     };
   };
 
