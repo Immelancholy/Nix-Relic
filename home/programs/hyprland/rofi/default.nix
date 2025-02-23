@@ -11,6 +11,12 @@
       show-icons = true;
       icon-theme = "Papirus-Dark";
       # icon-theme = "Tela-circle-dracula";
+      modi = [
+        "drun"
+        "window"
+        "filebrowser"
+        "run"
+      ];
     };
   };
   imports = [
