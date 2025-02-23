@@ -73,6 +73,24 @@
 
         fixed-heigh = mkLiteral "false";
       };
+      "element" = {
+        padding = mkLiteral "8px 16px";
+        spacing = mkLiteral "8px";
+        border-radius = mkLiteral "16px";
+      };
+      "element normal active" = {
+        text-color = mkLiteral "@bg3";
+      };
+      "element selected normal, element selected active" = {
+        background-color = mkLiteral "@bg3";
+      };
+      "element-icon" = {
+        size = mkLiteral "1em";
+        vertical-align = mkLiteral "0.5";
+      };
+      element-text = {
+        text-color = mkLiteral "inherit";
+      };
     }
   );
 }
