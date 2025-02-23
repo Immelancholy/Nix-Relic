@@ -19,8 +19,8 @@
           centerAligned = true
           panelHeight = 320
           drawActiveWorkspace = true
-          #gapsIn = 3
-          #gapsOut = 8
+          gapsIn = 3
+          gapsOut = 8
           switchOnDrop = true
 
           workspaceActiveBorder = rgba(cba6f7ff)
