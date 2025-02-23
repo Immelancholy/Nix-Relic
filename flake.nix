@@ -46,6 +46,12 @@
     prismlauncher = {
       url = "github:PrismLauncher/PrismLauncher";
     };
+    Hyprspace = {
+      url = "github:KZDKM/Hyprspace";
+
+      # Hyprspace uses latest Hyprland. We declare this to keep them in sync.
+      inputs.hyprland.follows = "hyprland";
+    };
   };
 
   outputs = {
