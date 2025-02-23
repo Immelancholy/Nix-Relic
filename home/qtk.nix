@@ -13,7 +13,11 @@
     #   accent = "mauve";
     # };
     # iconTheme.name = "Papirus-Dark";
-    iconTheme.package = pkgs.tela-circle-icon-theme;
+    iconTheme.package = pkgs.tela-circle-icon-theme.override {
+      colorVariants = [
+        "dracula"
+      ];
+    };
     iconTheme.name = "Tela-Circle-Dracula";
   };
 
