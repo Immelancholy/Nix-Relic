@@ -17,8 +17,8 @@
           }
         }
       bind = Alt, Tab, hyprexpo:expo, toggle
-      bind = Alt, L, movetoworkspacesilent r+1
-      bind = Alt, H, movetoworkspacesilent r-1
+      bind = Alt, L, movetoworkspacesilent, r+1
+      bind = Alt, H, movetoworkspacesilent, r-1
     '';
   };
 }
