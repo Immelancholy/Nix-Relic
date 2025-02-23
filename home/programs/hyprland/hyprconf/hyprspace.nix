@@ -17,6 +17,8 @@
           workspaceMargin = 5
           workspaceBorderSize = 4
           centerAligned = true
+          panelHeight = 50
+          panelBorderWidth = 4
         }
       }
     '';
