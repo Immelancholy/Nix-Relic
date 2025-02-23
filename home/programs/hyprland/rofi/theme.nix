@@ -17,7 +17,7 @@
         fg0 = mkLiteral "#cdd6f4";
         fg1 = mkLiteral "#a6adc8";
         fg2 = mkLiteral "#bac2de";
-        fg3 = mkLiteral "#a6adc8";
+        fg3 = mkLiteral "#7f849c";
 
         background-color = mkLiteral "transparent";
         text-color = mkLiteral "@fg0";
