@@ -24,7 +24,7 @@
 
           workspaceActiveBorder = rgba(cba6f7ff)
           workspaceInactiveBorder = rgba(b4befecc)
-          disableBlur = true
+          disableBlur = false
         }
       }
     '';
