@@ -10,7 +10,7 @@
       inherit (config.lib.formats.rasi) mkLiteral;
     in {
       "*" = {
-        font = mkLiteral "JetBrainsMono";
+        font = "JetBrainsMono";
 
         background-color = mkLiteral "transparent";
         text-color = mkLiteral "#cdd6f4";
@@ -26,17 +26,6 @@
         border-radius = mkLiteral "24px";
 
         background-color = mkLiteral "#1e1e2e";
-      };
-
-      "#inputbar" = {
-        children = map mkLiteral ["prompt" "entry"];
-      };
-
-      "#textbox-prompt-colon" = {
-        expand = false;
-        str = ":";
-        margin = mkLiteral "0px 0.3em 0em 0em";
-        text-color = mkLiteral "@foreground-color";
       };
     }
   );
