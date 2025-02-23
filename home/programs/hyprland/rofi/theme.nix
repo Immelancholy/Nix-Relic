@@ -37,6 +37,14 @@
       "mainbox" = {
         padding = mkLiteral "12px";
       };
+      "mode-swicher" = {
+        "button" = {
+          expand = mkLiteral "false";
+          content = "Windows";
+          vertical-align = "0.5";
+          action = "rofi -show window";
+        };
+      };
       "inputbar" = {
         background-color = mkLiteral "@bg1";
         border-color = mkLiteral "@bg3";
@@ -90,14 +98,6 @@
       };
       "element-text" = {
         text-color = mkLiteral "inherit";
-      };
-      "mode-swicher" = {
-        "Window" = {
-          expand = mkLiteral "false";
-          content = "Windows";
-          vertical-align = "0.5";
-          action = "rofi -show window";
-        };
       };
     }
   );
