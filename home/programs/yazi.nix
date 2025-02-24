@@ -19,7 +19,7 @@
         -- Available values: ui.Border.PLAIN, ui.Border.ROUNDED
         type = ui.Border.ROUNDED,
       }
-      requie("git"):setup()
+      require("git"):setup()
     '';
     settings = {
       manager.show_hidden = true;
