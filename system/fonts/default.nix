@@ -13,6 +13,7 @@
       nerd-fonts.fantasque-sans-mono
       nerd-fonts.symbols-only
       nerd-fonts.sauce-code-pro
+      nerd-fonts.noto
       font-awesome
       roboto
     ];
@@ -21,8 +22,8 @@
     enable = true;
     defaultFonts = {
       monospace = ["CaskaydiaCove Nerd Font Mono"];
-      serif = ["JetBrainsMono Nerd Font"];
-      sansSerif = ["JetBrainsMono Nerd Font"];
+      serif = ["Noto Serif Nerd Font"];
+      sansSerif = ["Noto Sans Nerd Font"];
       emoji = ["Noto Color Emoji" "Symbols Only Nerd Font"];
     };
   };
