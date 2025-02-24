@@ -39,6 +39,7 @@
 
   programs.kitty = {
     enable = true;
+    font_family = "JetBrainsMono Nerd Font Mono 12";
     shellIntegration.enableZshIntegration = true;
     settings = {
       bold_font = "auto";
