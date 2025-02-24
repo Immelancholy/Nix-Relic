@@ -25,7 +25,7 @@
 
   imports = [
     ./programs
-    ./theming.nix
+    ./themeing.nix
     ./zsh.nix
     ./env.nix
     ./mimeapps.nix
