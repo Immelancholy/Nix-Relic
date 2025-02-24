@@ -15,7 +15,7 @@ in {
     package = inputs.yazi.packages.${pkgs.system}.default;
     enableZshIntegration = true;
     plugins = {
-      full-border = "${plugins-repo}/full-border.yazi";
+      full-border = "${inputs.yazi-plugins}/full-border.yazi";
     };
     initLua = ''
       require("full-border"):setup {

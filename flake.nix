@@ -1,5 +1,5 @@
 # flake.nix
-{
+{stdenv, ...}: {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
@@ -20,6 +20,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     yazi.url = "github:sxyazi/yazi";
+    yazi-plugins = {
+      url = "github:yazi-rs/plugins";
+      flake = false;
+    };
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     swww.url = "github:LGFae/swww";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
@@ -63,8 +67,12 @@
     solaar,
     rust-overlay,
     nix-flatpak,
+    yazi-plugins,
     ...
   } @ inputs: {
+    packages.x86_64-linux.yazi-plugins = stdenv.mkDerivation {
+      src = yazi-plugins;
+    };
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
