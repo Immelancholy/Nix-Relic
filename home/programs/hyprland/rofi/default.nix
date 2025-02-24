@@ -5,7 +5,7 @@
     package = pkgs.rofi-wayland;
     terminal = "kitty";
     extraConfig = {
-      display-drun = "Apps:";
+      display-drun = "Applications:";
       display-window = "Windows:";
       drun-display-format = "{icon} {name}";
       show-icons = true;
