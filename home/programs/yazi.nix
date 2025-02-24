@@ -48,14 +48,14 @@
           run = "git";
         }
       ];
-      keymap = {
-        manager.prepend_keymap = [
-          {
-            on = "M";
-            run = "plugin mount";
-          }
-        ];
-      };
+    };
+    keymap = {
+      manager.prepend_keymap = [
+        {
+          on = "M";
+          run = "plugin mount";
+        }
+      ];
     };
   };
 }
