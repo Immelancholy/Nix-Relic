@@ -20,10 +20,13 @@
           set -ag status-right "#{E:@catppuccin_status_session}"
           set -ag status-right "#{E:@catppuccin_status_uptime}"
           set -agF status-right "#{E:@catppuccin_status_battery}"
-
-          run ~/.config/tmux/plugins/tmux-plugins/tmux-cpu/cpu.tmux
-          run ~/.config/tmux/plugins/tmux-plugins/tmux-battery/battery.tmux
         '';
+      }
+      {
+        plugin = tmuxPlugins.battery;
+      }
+      {
+        plugin = tmuxPlugins.cpu;
       }
     ];
     extraConfig = ''
