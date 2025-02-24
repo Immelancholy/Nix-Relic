@@ -91,42 +91,42 @@
         }
         {
           on = ["u" "a"];
-          run = "plugin yamb --args=save";
+          run = "plugin yamb save";
           desc = "Add bookmark";
         }
         {
           on = ["u" "g"];
-          run = "plugin yamb --args=jump_by_key";
+          run = "plugin yamb jump_by_key";
           desc = "Jump bookmark by key";
         }
         {
           on = ["u" "G"];
-          run = "plugin yamb --args=jump_by_fzf";
+          run = "plugin yamb jump_by_fzf";
           desc = "Jump bookmark by fzf";
         }
         {
           on = ["u" "d"];
-          run = "plugin yamb --args=delete_by_key";
+          run = "plugin yamb delete_by_key";
           desc = "Delete bookmarks by key";
         }
         {
           on = ["u" "D"];
-          run = "plugin yamb --args=delete_by_fzf";
+          run = "plugin yamb delete_by_fzf";
           desc = "Delete bookmark by fzf";
         }
         {
           on = ["u" "A"];
-          run = "plugin yamb --args=delete_all";
+          run = "plugin yamb delete_all";
           desc = "Delete all bookmarks";
         }
         {
           on = ["u" "r"];
-          run = "plugin yamb --args=rename_by_key";
+          run = "plugin yamb rename_by_key";
           desc = "Rename bookmark by key";
         }
         {
           on = ["u" "R"];
-          run = "plugin yamb --args=rename_by_fzf";
+          run = "plugin yamb rename_by_fzf";
           desc = "Rename bookmark by fzf";
         }
       ];
