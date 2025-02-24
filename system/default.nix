@@ -76,7 +76,6 @@
     flavor = "mocha";
     accent = "mauve";
     sddm.enable = false;
-    tmux.enable = false;
   };
 
   nix.gc = {
