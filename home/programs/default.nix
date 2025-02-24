@@ -41,7 +41,7 @@
     enable = true;
     shellIntegration.enableZshIntegration = true;
     settings = {
-      font_family = "CaskaydiaCove Nerd Font Mono 12";
+      font_family = "CaskaydiaCove Nerd Font Mono 11";
       bold_font = "auto";
       italic_font = "auto";
       bold_italic_font = "auto";
