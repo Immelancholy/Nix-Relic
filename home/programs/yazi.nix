@@ -9,6 +9,7 @@
     enableZshIntegration = true;
     plugins = {
       full-border = "${inputs.yazi-plugins}/full-border.yazi";
+      git = "${inputs.yazi-plugins}/git.yazi";
     };
     flavors = {
       catppuccin-mocha = "${inputs.yazi-flavors}/catppuccin-mocha.yazi";
@@ -18,6 +19,7 @@
         -- Available values: ui.Border.PLAIN, ui.Border.ROUNDED
         type = ui.Border.ROUNDED,
       }
+      requie("git"):setup()
     '';
     settings = {
       manager.show_hidden = true;
@@ -31,6 +33,18 @@
           }
         ];
       };
+      plugin.prepend_fetchers = [
+        {
+          id = "git";
+          name = "*";
+          run = "git";
+        }
+        {
+          id = "git";
+          name = "*/";
+          run = "git";
+        }
+      ];
     };
   };
 }
