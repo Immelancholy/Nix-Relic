@@ -12,7 +12,8 @@
       bind-key -r C-h select-window -t :-
       bind-key -r C-l select-window -t :+
 
-      set -g prefix2 C-s
+      unbind C-b
+      set -g prefix C-s
     '';
   };
 }
