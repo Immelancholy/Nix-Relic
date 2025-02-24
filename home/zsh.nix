@@ -42,6 +42,7 @@
       ];
     };
     initExtra = ''
+      source <(fzf --zsh)
       function y() {
         local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
         kitty @ set-spacing padding=10
