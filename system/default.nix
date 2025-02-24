@@ -19,6 +19,9 @@
 
   security.apparmor = {
     enable = true;
+    packages = with pkgs; [
+      roddhjav-apparmor-rules
+    ];
   };
 
   services.dbus.apparmor = "enabled";

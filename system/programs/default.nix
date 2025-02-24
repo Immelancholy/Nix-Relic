@@ -26,7 +26,6 @@
   programs.zsh.enable = true;
   services.dbus.enable = true;
   environment.systemPackages = with pkgs; [
-    roddhjav-apparmor-rules
     inputs.zen-browser.packages."${system}".beta
     # inputs.prismlauncher.packages.${pkgs.system}.prismlauncher
     (prismlauncher.override {
