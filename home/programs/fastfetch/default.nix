@@ -13,9 +13,9 @@
       modules = [
         {
           type = "command";
-          key = "  󰁘";
+          key = "  ";
           keyColor = "blue";
-          text = ''splash="TeeHee";echo $splash'';
+          text = ''splash="Enūma Eliš";echo $splash'';
         }
         {
           type = "custom";
