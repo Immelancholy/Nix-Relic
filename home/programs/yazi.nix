@@ -17,6 +17,12 @@ in {
     plugins = {
       full-border = "${plugins-repo}/full-border.yazi";
     };
+    initLua = ''
+      require("full-border"):setup {
+        -- Available values: ui.Border.PLAIN, ui.Border.ROUNDED
+        type = ui.Border.ROUNDED,
+      }
+    '';
     settings = {
       manager.show_hidden = true;
       opener = {
