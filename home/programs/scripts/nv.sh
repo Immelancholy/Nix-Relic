@@ -2,11 +2,11 @@
 
 # Use the Kitty socket name to keep it unique per Kitty window
 sock_basename="$(basename "${KITTY_LISTEN_ON#unix:}" 2>/dev/null)"
-count_file="/tmp/kitty_padding_count_${sock_basename}"
+count_file="/run/user/1000/kitty_padding_count_${sock_basename}"
 
 # We'll also create a lock file so multiple parallel nvim starts
 # won't clobber each other's reference count.
-lock_file="/tmp/kitty_padding_count_${sock_basename}.lock"
+lock_file="/run/user/1000/kitty_padding_count_${sock_basename}.lock"
 
 increase_padding_refcount() {
   exec 9>"$lock_file"
