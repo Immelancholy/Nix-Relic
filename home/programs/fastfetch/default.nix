@@ -15,7 +15,7 @@
           type = "command";
           key = "  ";
           keyColor = "blue";
-          text = ''splash="Enūma Eliš";echo $splash'';
+          text = ''splash="Enūma Eliš!";echo $splash'';
         }
         {
           type = "custom";
