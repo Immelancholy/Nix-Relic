@@ -17,5 +17,6 @@
     "quiet"
     "splash"
     "discard"
+    "pci=noaer"
   ];
 }

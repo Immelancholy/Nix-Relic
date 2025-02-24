@@ -17,6 +17,12 @@
     priority = 100;
   };
 
+  security.apparmor = {
+    enable = true;
+  };
+
+  services.dbus.apparmor = "enabled";
+
   services.solaar.enable = true;
 
   networking.hostName = "nixos";
