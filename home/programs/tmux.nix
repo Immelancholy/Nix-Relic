@@ -7,6 +7,10 @@
     disableConfirmationPrompt = true;
     prefix = "C-s";
     plugins = with pkgs; [
+      tmuxPlugins.sensible
+      tmuxPlugins.pain-control
+      tmuxPlugins.battery
+      tmuxPlugins.cpu
       {
         plugin = tmuxPlugins.catppuccin;
         extraConfig = ''
@@ -22,10 +26,6 @@
           set -agF status-right "#{E:@catppuccin_status_battery}"
         '';
       }
-      tmuxPlugins.sensible
-      tmuxPlugins.pain-control
-      tmuxPlugins.battery
-      tmuxPlugins.cpu
     ];
   };
 }
