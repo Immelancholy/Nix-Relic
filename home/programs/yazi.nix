@@ -13,11 +13,6 @@
     flavors = {
       catppuccin-mocha = "${inputs.yazi-flavors}/catppuccin-mocha.yazi";
     };
-    theme = {
-      flavor = {
-        dark = "catppuccin-mocha";
-      };
-    };
     initLua = ''
       require("full-border"):setup {
         -- Available values: ui.Border.PLAIN, ui.Border.ROUNDED
