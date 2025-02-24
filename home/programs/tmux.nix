@@ -10,7 +10,7 @@
       {
         plugin = catppuccin;
         extraConfig = ''
-          set -g @catppuccin_flavor 'mocha'
+          set -g @catppuccin_flavor 'frappe'
           set -g @catppuccin_window_status_style "rounded"
         '';
       }
