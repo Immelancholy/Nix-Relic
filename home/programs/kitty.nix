@@ -17,7 +17,7 @@
       background_opacity 0.8
       confirm_os_window_close 0
       placement_strategy top
-      cursor_trail 6
+      cursor_trail 4
       cursor_trail_start_threshold 0
       shell_integration no-cursor
       cursor_trail_decay 0.01 0.15
