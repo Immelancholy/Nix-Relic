@@ -21,6 +21,7 @@
       switch = "sudo nixos-rebuild switch --flake /etc/nixos/.";
       update = "nix flake update --flake /etc/nixos/. --commit-lock-file";
       boot = "sudo nixos-rebuild boot --flake /etc/nixos/.";
+      tmux = "tmux.sh";
     };
 
     history.size = 10000;
