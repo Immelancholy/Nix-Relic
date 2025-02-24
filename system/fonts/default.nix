@@ -20,9 +20,9 @@
   fonts.fontconfig = {
     enable = true;
     defaultFonts = {
-      monospace = ["CaskaydiaCove Nerd Font Mono" "JetBrainsMono Nerd Font Mono"];
-      serif = ["Noto Serif" "Symbols Only Nerd Font"];
-      sansSerif = ["Noto Sans" "Symbols Only Nerd Font"];
+      monospace = ["CaskaydiaCove Nerd Font Mono"];
+      serif = ["JetBrainsMono Nerd Font"];
+      sansSerif = ["JetBrainsMono Nerd Font"];
       emoji = ["Noto Color Emoji" "Symbols Only Nerd Font"];
     };
   };
