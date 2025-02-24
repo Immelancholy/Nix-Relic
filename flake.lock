@@ -1309,6 +1309,7 @@
         "solaar": "solaar",
         "swww": "swww",
         "yazi": "yazi",
+        "yazi-flavors": "yazi-flavors",
         "yazi-plugins": "yazi-plugins",
         "zen-browser": "zen-browser"
       }
@@ -1674,6 +1675,22 @@
       "original": {
         "owner": "sxyazi",
         "repo": "yazi",
+        "type": "github"
+      }
+    },
+    "yazi-flavors": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1740249719,
+        "narHash": "sha256-zE/GT9fYi9H6c7iCtcfk5bpnLkv1u6tn/HcofNYtc0c=",
+        "owner": "yazi-rs",
+        "repo": "flavors",
+        "rev": "df959305aedc6919658ab7c8406a5372760863e5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "yazi-rs",
+        "repo": "flavors",
         "type": "github"
       }
     },
