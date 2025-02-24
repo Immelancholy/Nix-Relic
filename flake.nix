@@ -1,5 +1,5 @@
 # flake.nix
-{stdenv, ...}: {
+{
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
@@ -70,9 +70,6 @@
     yazi-plugins,
     ...
   } @ inputs: {
-    packages.x86_64-linux.yazi-plugins = stdenv.mkDerivation {
-      src = yazi-plugins;
-    };
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
