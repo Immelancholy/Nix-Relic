@@ -15,11 +15,6 @@
       unbind C-b
       set -g prefix C-s
 
-      bind-key | split-window -h
-      bind-key - split-window -v
-      unbind '"'
-      unbind %
-
       set -g mouse on
     '';
   };
