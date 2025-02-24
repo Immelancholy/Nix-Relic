@@ -1309,6 +1309,7 @@
         "solaar": "solaar",
         "swww": "swww",
         "yazi": "yazi",
+        "yazi-plugins": "yazi-plugins",
         "zen-browser": "zen-browser"
       }
     },
@@ -1673,6 +1674,22 @@
       "original": {
         "owner": "sxyazi",
         "repo": "yazi",
+        "type": "github"
+      }
+    },
+    "yazi-plugins": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1740134867,
+        "narHash": "sha256-Cw5iMljJJkxOzAGjWGIlCa7gnItvBln60laFMf6PSPM=",
+        "owner": "yazi-rs",
+        "repo": "plugins",
+        "rev": "5186af7984aa8cb0550358aefe751201d7a6b5a8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "yazi-rs",
+        "repo": "plugins",
         "type": "github"
       }
     },
