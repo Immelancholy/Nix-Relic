@@ -43,6 +43,11 @@
       source = ./programs/zen;
       recursive = true;
     };
+    ".local/share/bin" = {
+      source = ./programs/scripts;
+      recursive = true;
+      executable = true;
+    };
   };
 
   fonts.fontconfig = {

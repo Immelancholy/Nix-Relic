@@ -13,7 +13,6 @@
     ./nvim
     ./easyeffects
     ./rmpc
-    ./scripts
   ];
   programs.mpv = {
     enable = true;
