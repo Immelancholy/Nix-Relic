@@ -19,7 +19,7 @@
   fonts.fontconfig = {
     enable = true;
     defaultFonts = {
-      monospace = ["CaskaydiaCove Nerd Font Mono"];
+      monospace = ["SauceCodePro Nerd Font Mono"];
     };
   };
 }
