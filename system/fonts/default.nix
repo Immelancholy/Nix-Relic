@@ -5,6 +5,7 @@
       noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-emoji
+      noto-fonts-extra
       powerline
       powerline-symbols
       nerd-fonts.jetbrains-mono
@@ -19,7 +20,10 @@
   fonts.fontconfig = {
     enable = true;
     defaultFonts = {
-      monospace = ["JetBrainsMono Nerd Font Mono"];
+      monospace = ["CaskaydiaCove Nerd Font Mono" "JetBrainsMono Nerd Font Mono"];
+      serif = ["Noto Serif"];
+      sansSerif = ["Noto Sans"];
+      emoji = ["Noto Color Emoji"];
     };
   };
 }
