@@ -26,7 +26,7 @@
       enable = false;
     };
     tmux = {
-      enable = true;
+      enable = false;
       flavor = "mocha";
       extraConfig = ''
 
