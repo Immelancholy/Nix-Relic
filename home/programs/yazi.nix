@@ -68,6 +68,9 @@
           run = "plugin mount";
         }
         {
+          on = ["u" "a"];
+          run = "plugin yamb --args=save";
+          desc = "Add bookmark";
         }
       ];
     };

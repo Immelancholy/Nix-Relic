@@ -1308,6 +1308,7 @@
         "rust-overlay": "rust-overlay",
         "solaar": "solaar",
         "swww": "swww",
+        "yamb": "yamb",
         "yazi": "yazi",
         "yazi-flavors": "yazi-flavors",
         "yazi-plugins": "yazi-plugins",
@@ -1655,6 +1656,22 @@
       "original": {
         "owner": "hyprwm",
         "repo": "xdg-desktop-portal-hyprland",
+        "type": "github"
+      }
+    },
+    "yamb": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1740367601,
+        "narHash": "sha256-swQiS3KYyxkB0PhF45xucKwpehKcTB5vDy4k6LqqZ0w=",
+        "owner": "Immelancholy",
+        "repo": "yamb.yazi",
+        "rev": "3d77ba960216815dd809663f62f516f5576d6b3f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Immelancholy",
+        "repo": "yamb.yazi",
         "type": "github"
       }
     },
