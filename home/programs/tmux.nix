@@ -1,9 +1,12 @@
-{
+{pkgs, ...}: {
   programs.tmux = {
     enable = true;
     keyMode = "vi";
     terminal = "screen-256color";
     secureSocket = true;
+    plugins = with pkgs.tmuxPlugins; [
+      catppuccin
+    ];
     extraConfig = ''
       bind-key h select-pane -L
       bind-key j select-pane -D
@@ -16,6 +19,8 @@
       set -g prefix C-s
 
       set -g mouse on
+
+      set -g @catppuccin_flavor 'mocha'
     '';
   };
 }
