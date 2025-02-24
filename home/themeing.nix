@@ -25,7 +25,13 @@
     dunst = {
       enable = false;
     };
-    tmux.enable = false;
+    tmux = {
+      enable = true;
+      flavor = "mocha";
+      extraConfig = ''
+        set -g @catppuccin_window_status_style "rounded"
+      '';
+    };
   };
 
   gtk = {

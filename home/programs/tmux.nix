@@ -7,13 +7,6 @@
     mouse = true;
     prefix = "C-s";
     plugins = with pkgs.tmuxPlugins; [
-      {
-        plugin = catppuccin;
-        extraConfig = ''
-          set -g @catppuccin_flavor 'frappe'
-          set -g @catppuccin_window_status_style "rounded"
-        '';
-      }
     ];
     extraConfig = ''
       bind-key h select-pane -L
@@ -22,9 +15,6 @@
       bind-key l select-pane -R
       bind-key -r C-h select-window -t :-
       bind-key -r C-l select-window -t :+
-
-
-
     '';
   };
 }
