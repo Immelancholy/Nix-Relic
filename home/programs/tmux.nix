@@ -6,7 +6,14 @@
     secureSocket = true;
     mouse = true;
     prefix = "C-s";
-    plugins = with pkgs.tmuxPlugins; [
+    plugins = with pkgs; [
+      {
+        plugin = tmuxPlugins.catppuccin;
+        extraConfig = ''
+          set -g @catppuccin_flavor "mocha"
+          set -g @catppuccin_window_status_style "rounded"
+        '';
+      }
     ];
     extraConfig = ''
       bind-key h select-pane -L
