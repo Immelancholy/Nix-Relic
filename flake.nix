@@ -72,6 +72,7 @@
     rust-overlay,
     nix-flatpak,
     yazi-plugins,
+    yazi-flavors,
     ...
   } @ inputs: {
     nixosConfigurations = {
