@@ -4,8 +4,23 @@
     keyMode = "vi";
     terminal = "screen-256color";
     secureSocket = true;
+    mouse = true;
+    prefix = "C-s";
     plugins = with pkgs.tmuxPlugins; [
-      catppuccin
+      {
+        plugin = catppuccin;
+        extraConfig = ''
+          set -g @catppuccin_flavor 'mocha'
+          set -g status-right-length 100
+          set -g status-left-length 100
+          set -g status-left ""
+          set -g status-right "#{E:@catppuccin_status_application}"
+          set -agF status-right "#{E:@catppuccin_status_cpu}"
+          set -ag status-right "#{E:@catppuccin_status_session}"
+          set -ag status-right "#{E:@catppuccin_status_uptime}"
+          set -agF status-right "#{E:@catppuccin_status_battery}"
+        '';
+      }
     ];
     extraConfig = ''
       bind-key h select-pane -L
@@ -15,12 +30,6 @@
       bind-key -r C-h select-window -t :-
       bind-key -r C-l select-window -t :+
 
-      unbind C-b
-      set -g prefix C-s
-
-      set -g mouse on
-
-      set -g @catppuccin_flavor 'mocha'
     '';
   };
 }
