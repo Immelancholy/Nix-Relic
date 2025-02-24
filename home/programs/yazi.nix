@@ -34,11 +34,6 @@
           key = "P"
         })
       end
-      table.insert(bookmarks, {
-        tag = "Desktop",
-        path = home_path .. path_sep .. "Desktop" .. path_sep,
-        key = "d"
-      })
       require("full-border"):setup {
         -- Available values: ui.Border.PLAIN, ui.Border.ROUNDED
         type = ui.Border.ROUNDED,
