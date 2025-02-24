@@ -15,8 +15,8 @@
       unbind C-b
       set -g prefix C-s
 
-      bind | split-window -h
-      bind - split-window -v
+      bind-key | split-window -h
+      bind-key - split-window -v
       unbind '"'
       unbind %
 
