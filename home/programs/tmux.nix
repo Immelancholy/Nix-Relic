@@ -15,6 +15,8 @@
       bind-key l select-pane -R
       bind-key -r C-h select-window -t :-
       bind-key -r C-l select-window -t :+
+
+      set -g @catppuccin_window_status_style "rounded"
     '';
   };
 }
