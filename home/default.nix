@@ -98,10 +98,10 @@
     };
   };
 
-  xdg.configFile."rmpc" = {
-    source = ./programs/rmpc;
-    recursive = true;
-  };
+  # xdg.configFile."rmpc" = {
+  #   source = ./programs/rmpc;
+  #   recursive = true;
+  # };
   home.file = {
     ".local/share/bin" = {
       source = ./programs/scripts;
@@ -126,12 +126,12 @@
       recursive = true;
     };
   };
-  home.file = {
-    "Pictures/screenshots" = {
-      source = ./screenshots;
-      recursive = true;
-    };
-  };
+  # home.file = {
+  #   "Pictures/screenshots" = {
+  #     source = ./screenshots;
+  #     recursive = true;
+  #   };
+  # };
 
   fonts.fontconfig = {
     enable = true;

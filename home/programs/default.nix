@@ -12,6 +12,7 @@
     ./fastfetch
     ./nvim
     ./easyeffects
+    ./rmpc
   ];
 
   programs.kitty = {
