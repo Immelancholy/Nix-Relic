@@ -50,7 +50,7 @@
       font_size = 9.5;
       window_padding_width = 15;
       allow_remote_control = true;
-      listen_on = "unix:/run/user/1000/kitty/socket";
+      listen_on = "unix:/run/user/1000/mykitty";
     };
     extraConfig = ''
       background_opacity 0.8
