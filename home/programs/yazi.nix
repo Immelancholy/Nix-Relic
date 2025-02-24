@@ -27,7 +27,7 @@
 
         jump_notify = true,
 
-        cli = "fzf"
+        cli = "fzf",
 
         keys = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
 
