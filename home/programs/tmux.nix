@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   programs.tmux = {
     enable = true;
-    keyMode = "vi";
+    keyMode = "emacs";
     terminal = "screen-256color";
     secureSocket = true;
     mouse = true;
@@ -22,18 +22,9 @@
           set -agF status-right "#{E:@catppuccin_status_battery}"
         '';
       }
+      tmuxPlugins.sensible
       tmuxPlugins.battery
       tmuxPlugins.cpu
     ];
-    extraConfig = ''
-      bind-key h select-pane -L
-      bind-key j select-pane -D
-      bind-key k select-pane -U
-      bind-key l select-pane -R
-      bind-key -r C-h select-window -t :-
-      bind-key -r C-l select-window -t :+
-
-
-    '';
   };
 }
