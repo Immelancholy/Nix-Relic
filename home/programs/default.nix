@@ -13,6 +13,7 @@
     ./nvim
     ./easyeffects
     ./rmpc
+    ./tmux.nix
   ];
   programs.mpv = {
     enable = true;
