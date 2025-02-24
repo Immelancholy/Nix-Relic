@@ -25,12 +25,6 @@
     settings = {
       manager = {
         show_hidden = true;
-        prepend_keymap = [
-          {
-            on = "M";
-            run = "plugin mount";
-          }
-        ];
       };
       opener = {
         edit = [
@@ -54,6 +48,14 @@
           run = "git";
         }
       ];
+      keymap = {
+        manager.prepend_keymap = [
+          {
+            on = "M";
+            run = "plugin mount";
+          }
+        ];
+      };
     };
   };
 }
