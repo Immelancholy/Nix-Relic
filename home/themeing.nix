@@ -25,6 +25,10 @@
     dunst = {
       enable = false;
     };
+    tmux = {
+      enable = true;
+      flavor = "mocha";
+    };
   };
 
   gtk = {
