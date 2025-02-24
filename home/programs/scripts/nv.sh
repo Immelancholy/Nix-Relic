@@ -10,11 +10,11 @@ lock_file="/tmp/kitty_padding_count_${sock_basename}.lock"
 
 increase_padding_refcount() {
   exec 9>"$lock_file"
-  flock 9 # Acquire exclusive lock
+  flock 9            # Acquire exclusive lock
 
   # Read current count (0 if no file)
   if [[ -f "$count_file" ]]; then
-    read -r count <"$count_file"
+    read -r count < "$count_file"
   else
     count=0
   fi
@@ -25,33 +25,33 @@ increase_padding_refcount() {
   fi
 
   # Increase count
-  count=$((count + 1))
-  echo "$count" >"$count_file"
+  count=$((count+1))
+  echo "$count" > "$count_file"
 
-  flock -u 9 # Release lock
+  flock -u 9         # Release lock
 }
 
 decrease_padding_refcount() {
   exec 9>"$lock_file"
-  flock 9 # Acquire exclusive lock
+  flock 9            # Acquire exclusive lock
 
   # Read current count (assume 1 if no file for safety)
   if [[ -f "$count_file" ]]; then
-    read -r count <"$count_file"
+    read -r count < "$count_file"
   else
     count=1
   fi
 
   # Decrease count
-  count=$((count - 1))
-  echo "$count" >"$count_file"
+  count=$((count-1))
+  echo "$count" > "$count_file"
 
   # If count=0 => no more nvim sessions => restore
   if [[ "$count" -eq 0 ]]; then
     kitty @ --to "$KITTY_LISTEN_ON" set-spacing padding=default
   fi
 
-  flock -u 9 # Release lock
+  flock -u 9         # Release lock
 }
 
 if [[ -n "$KITTY_LISTEN_ON" ]]; then
