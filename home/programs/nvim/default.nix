@@ -528,7 +528,7 @@
       nix.enable = true;
       nix-develop.enable = true;
       web-devicons.enable = true;
-      smear-cursor.enable = true;
+      # smear-cursor.enable = true;
       telescope = {
         enable = true;
         extensions = {
