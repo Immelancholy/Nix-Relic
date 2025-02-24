@@ -11,6 +11,7 @@
       full-border = "${inputs.yazi-plugins}/full-border.yazi";
       git = "${inputs.yazi-plugins}/git.yazi";
       mount = "${inputs.yazi-plugins}/mount.yazi";
+      yamb = "${inputs.yamb}";
     };
     flavors = {
       catppuccin-mocha = "${inputs.yazi-flavors}/catppuccin-mocha.yazi";
@@ -21,6 +22,17 @@
         type = ui.Border.ROUNDED,
       }
       require("git"):setup()
+      require("yamb"):setup {
+        bookmarks = bookmarks,
+
+        jump_notify = true,
+
+        cli = "fzf"
+
+        keys = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
+
+        path = (os.getenv("HOME") .. "/.config/yazi/bookmark"),
+      }
     '';
     settings = {
       manager = {
@@ -54,6 +66,8 @@
         {
           on = "M";
           run = "plugin mount";
+        }
+        {
         }
       ];
     };

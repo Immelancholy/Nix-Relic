@@ -28,6 +28,10 @@
       url = "github:yazi-rs/flavors";
       flake = false;
     };
+    yamb = {
+      url = "github:Immelancholy/yamb.yazi";
+      flake = false;
+    };
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     swww.url = "github:LGFae/swww";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
