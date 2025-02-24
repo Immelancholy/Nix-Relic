@@ -10,6 +10,7 @@
     plugins = {
       full-border = "${inputs.yazi-plugins}/full-border.yazi";
       git = "${inputs.yazi-plugins}/git.yazi";
+      mount = "${inputs.yazi-plugins}/mount.yazi";
     };
     flavors = {
       catppuccin-mocha = "${inputs.yazi-flavors}/catppuccin-mocha.yazi";
@@ -22,7 +23,15 @@
       require("git"):setup()
     '';
     settings = {
-      manager.show_hidden = true;
+      manager = {
+        show_hidden = true;
+        prepend_keymap = [
+          {
+            on = "M";
+            run = "plugin mount";
+          }
+        ];
+      };
       opener = {
         edit = [
           {
