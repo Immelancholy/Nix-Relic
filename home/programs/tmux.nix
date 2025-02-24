@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   programs.tmux = {
     enable = true;
-    keyMode = "emacs";
+    keyMode = "vi";
     terminal = "screen-256color";
     secureSocket = true;
     mouse = true;
