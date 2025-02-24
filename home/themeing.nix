@@ -1,4 +1,32 @@
 {pkgs, ...}: {
+  catppuccin = {
+    enable = true;
+    flavor = "mocha";
+    accent = "mauve";
+    yazi = {
+      enable = true;
+      accent = "mauve";
+      flavor = "mocha";
+    };
+    gtk = {
+      enable = true;
+      accent = "mauve";
+      flavor = "mocha";
+    };
+    btop = {
+      enable = true;
+      flavor = "mocha";
+    };
+    rofi = {
+      enable = false;
+      flavor = "mocha";
+    };
+    waybar.enable = false;
+    dunst = {
+      enable = false;
+    };
+  };
+
   gtk = {
     enable = true;
 

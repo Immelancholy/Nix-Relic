@@ -25,40 +25,14 @@
 
   imports = [
     ./programs
-    ./qtk.nix
+    ./theming.nix
     ./zsh.nix
     ./env.nix
+    ./mimeapps.nix
   ];
 
   # Packages that should be installed to the user profile.
   xdg.enable = true;
-  catppuccin = {
-    enable = true;
-    flavor = "mocha";
-    accent = "mauve";
-    yazi = {
-      enable = true;
-      accent = "mauve";
-      flavor = "mocha";
-    };
-    gtk = {
-      enable = true;
-      accent = "mauve";
-      flavor = "mocha";
-    };
-    btop = {
-      enable = true;
-      flavor = "mocha";
-    };
-    rofi = {
-      enable = false;
-      flavor = "mocha";
-    };
-    waybar.enable = false;
-    dunst = {
-      enable = false;
-    };
-  };
 
   programs.mpv = {
     enable = true;
@@ -83,25 +57,6 @@
     };
   };
 
-  home.sessionVariables.GTK_THEME = "Catppuccin-mocha";
-
-  xdg.desktopEntries = {
-    nvim = {
-      name = "Neovim";
-      genericName = "Text Editor";
-      exec = "kitty sh /home/mela/.local/share/bin/nv.sh";
-      type = "Application";
-      terminal = false;
-      categories = ["Utility" "TextEditor"];
-      icon = "nvim";
-      mimeType = ["text/english" "text/plain" "text/x-makefile" "text/x-c++hdr" "text/x-c++src" "text/x-chdr" "text/x-csrc" "text/x-java" "text/x-moc" "text/x-pascal" "text/x-tcl" "text/x-tex" "application/x-shellscript" "text/x-c" "text/x-c++"];
-    };
-  };
-
-  # xdg.configFile."rmpc" = {
-  #   source = ./programs/rmpc;
-  #   recursive = true;
-  # };
   home.file = {
     ".local/share/bin" = {
       source = ./programs/scripts;
@@ -126,74 +81,12 @@
       recursive = true;
     };
   };
-  # home.file = {
-  #   "Pictures/screenshots" = {
-  #     source = ./screenshots;
-  #     recursive = true;
-  #   };
-  # };
 
   fonts.fontconfig = {
     enable = true;
   };
   xdg.configFile."autostart/input-mapper-autoload.desktop" = lib.mkIf nixosConfig.services.input-remapper.enable {
     source = "${nixosConfig.services.input-remapper.package}/share/applications/input-remapper-autoload.desktop";
-  };
-
-  xdg.mimeApps = {
-    enable = true;
-    associations.added = {
-      "text/plain" = ["nvim.desktop"];
-      "text/html" = ["userapp-Zen-OM2912.desktop"];
-      "text/css" = ["nvim.desktop"];
-      "text/csv" = ["nvim.desktop"];
-      "text/javascript" = ["nvim.desktop"];
-      "application/json" = ["nvim.desktop"];
-      "application/xml" = ["nvim.desktop"];
-      "inode/directory" = ["nemo.desktop"];
-      "video/mp4" = ["com.github.rafostar.Clapper.desktop"];
-      "video/quicktime" = ["com.github.rafostar.Clapper.desktop"];
-      "x-scheme-handler/http" = ["userapp-Zen-OM2912.desktop"];
-      "x-scheme-handler/https" = ["userapp-Zen-OM2912.desktop;"];
-      "x-scheme-handler/chrome" = ["userapp-Zen-OM2912.desktop"];
-      "x-scheme-handler/about" = ["zen.desktop"];
-      "x-scheme-handler/unknown" = ["zen.desktop"];
-      "default-web-browser" = ["zen.desktop"];
-      "application/pdf" = ["zen.desktop"];
-      "application/xhtml+xml" = ["userapp-Zen-OM2912.desktop"];
-      "application/xhtml_xml" = ["zen.desltop"];
-      "application/x-extension-htm" = ["userapp-Zen-OM2912.desktop"];
-      "application/x-extension-html" = ["userapp-Zen-OM2912.desktop"];
-      "application/x-extension-shtml" = ["userapp-Zen-OM2912.desktop"];
-      "application/x-extension-xhtml" = ["userapp-Zen-OM2912.desktop"];
-      "application/x-extension-xht" = ["userapp-Zen-OM2912.desktop"];
-    };
-    defaultApplications = {
-      "text/plain" = ["nvim.desktop"];
-      "text/html" = ["userapp-Zen-OM2912.desktop"];
-      "text/css" = ["nvim.desktop"];
-      "text/csv" = ["nvim.desktop"];
-      "text/javascript" = ["nvim.desktop"];
-      "application/json" = ["nvim.desktop"];
-      "application/xml" = ["nvim.desktop"];
-      "inode/directory" = ["nemo.desktop"];
-      "video/mp4" = ["com.github.rafostar.Clapper.desktop"];
-      "video/quicktime" = ["com.github.rafostar.Clapper.desktop"];
-      "x-scheme-handler/http" = ["userapp-Zen-OM2912.desktop"];
-      "x-scheme-handler/https" = ["userapp-Zen-OM2912.desktop;"];
-      "x-scheme-handler/chrome" = ["userapp-Zen-OM2912.desktop"];
-      "x-scheme-handler/about" = ["zen.desktop"];
-      "x-scheme-handler/unknown" = ["zen.desktop"];
-      "default-web-browser" = ["zen.desktop"];
-      "application/pdf" = ["zen.desktop"];
-      "application/xhtml+xml" = ["userapp-Zen-OM2912.desktop"];
-      "application/xhtml_xml" = ["zen.desltop"];
-      "application/x-extension-htm" = ["userapp-Zen-OM2912.desktop"];
-      "application/x-extension-html" = ["userapp-Zen-OM2912.desktop"];
-      "application/x-extension-shtml" = ["userapp-Zen-OM2912.desktop"];
-      "application/x-extension-xhtml" = ["userapp-Zen-OM2912.desktop"];
-      "application/x-extension-xht" = ["userapp-Zen-OM2912.desktop"];
-    };
   };
 
   home.stateVersion = "24.11";
