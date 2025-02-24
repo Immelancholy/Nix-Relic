@@ -1,7 +1,7 @@
 {
   home.file = {
     ".local/share/bin" = {
-      source = ./programs/scripts;
+      source = ../scripts;
       recursive = true;
       executable = true;
     };
