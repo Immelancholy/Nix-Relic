@@ -21,9 +21,9 @@
     enable = true;
     defaultFonts = {
       monospace = ["CaskaydiaCove Nerd Font Mono" "JetBrainsMono Nerd Font Mono"];
-      serif = ["Noto Serif"];
-      sansSerif = ["Noto Sans"];
-      emoji = ["Noto Color Emoji"];
+      serif = ["Noto Serif" "Symbols Only Nerd Font"];
+      sansSerif = ["Noto Sans" "Symbols Only Nerd Font"];
+      emoji = ["Noto Color Emoji" "Symbols Only Nerd Font"];
     };
   };
 }
