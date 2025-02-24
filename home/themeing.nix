@@ -25,6 +25,7 @@
     dunst = {
       enable = false;
     };
+    tmux.enable = false;
   };
 
   gtk = {
