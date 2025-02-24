@@ -1,10 +1,10 @@
 {pkgs, ...}: {
   programs.tmux = {
     enable = true;
-    keyMode = "vi";
     terminal = "screen-256color";
     secureSocket = true;
     mouse = true;
+    disableConfirmationPrompt = true;
     prefix = "C-s";
     plugins = with pkgs; [
       {
