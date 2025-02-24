@@ -39,16 +39,13 @@
 
   programs.kitty = {
     enable = true;
-    font = {
-      name = "JetBrainsMono Nerd Font Mono";
-      size = 12;
-    };
     shellIntegration.enableZshIntegration = true;
     settings = {
       bold_font = "auto";
       italic_font = "auto";
       bold_italic_font = "auto";
       enable_audio_bell = false;
+      font_family = "JetBrainsMono Nerd Font Mono";
       font_size = 9.5;
       window_padding_width = 15;
       allow_remote_control = true;
