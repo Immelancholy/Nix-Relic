@@ -13,7 +13,7 @@ tmux new-window 'lazygit; $SHELL'
 
 tmux split-window -v
 
-tmux resize-pane -t 0 -D 2
+tmux resize-pane -t 0 -D 20
 
 tmux previous-window
 
