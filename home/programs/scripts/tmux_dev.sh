@@ -11,9 +11,9 @@ tmux new -d -s $sesh
 
 tmux new-window 
 
-tmux previous-window
-
 tmux split-window -v
+
+tmux previous-window
 
 tmux send-keys -t 0 'nv.sh' C-m
 
