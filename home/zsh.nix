@@ -15,7 +15,6 @@
       neo = "neo.sh";
       rmpc = "rmpc.sh";
       cava = "cava.sh";
-      nvim = "nv";
       fastfetch = "clear; fastfetch";
       nvn = "cd /etc/nixos/; nv";
       switch = "sudo nixos-rebuild switch --flake /etc/nixos/.";
