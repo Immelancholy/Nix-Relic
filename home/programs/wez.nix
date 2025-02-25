@@ -16,7 +16,7 @@
 
       config.font = wezterm.font ({
         family = 'CaskaydiaCove Nerd Font',
-        stretch = 'Normal',
+        stretch = 'Condensed',
         weight = 'Regular',
       })
 
