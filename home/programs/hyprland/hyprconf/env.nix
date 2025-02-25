@@ -9,7 +9,7 @@
       env = QT_AUTO_SCREEN_SCALE_FACTOR,1
       env = MOZ_ENABLE_WAYLAND,1
       env = GDK_SCALE,1
-      env = GRIMBLAST_EDITOR,loupe
+      env = GRIMBLAST_EDITOR,swappy
     '';
   };
 }

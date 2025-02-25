@@ -55,6 +55,7 @@
     lazygit
     loupe
     glycin-loaders
+    swappy
 
     manix
 
