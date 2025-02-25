@@ -25,6 +25,8 @@
 
       config.window_background_opacity = 0.8
 
+      config.enable_kitty_graphics = true
+
       return config
     '';
   };
