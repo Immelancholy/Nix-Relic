@@ -54,6 +54,7 @@
     inputs.zen-browser.packages."${system}".beta
     lazygit
     loupe
+    glycin-loaders
 
     manix
 
