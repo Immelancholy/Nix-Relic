@@ -8,7 +8,7 @@
       bold_italic_font = "auto";
       enable_audio_bell = false;
       font_family = "CaskaydiaCove Nerd Font Mono";
-      font_size = 9.5;
+      font_size = 10;
       window_padding_width = 10;
       allow_remote_control = true;
       listen_on = "unix:/run/user/1000/mykitty";
