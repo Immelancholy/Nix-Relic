@@ -11,10 +11,8 @@ tmux new -d -s $sesh -n "NeoVim" 'nv.sh; $SHELL'
 
 tmux split-window -v 
 
-tmux resize-pane -t 0 -D 2 
+tmux new-window  -n "LazyGit" 'lazygit; $SHELL'
 
-# tmux new-window  -n "LazyGit" 'lazygit; $SHELL'
-#
-# tmux previous-window
+tmux previous-window
 
 tmux attach-session -t $sesh
