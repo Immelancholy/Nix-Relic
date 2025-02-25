@@ -25,7 +25,12 @@
       cdn = "cd /etc/nixos/";
       tnix = "tmux_nix.sh";
     };
-
+    antidote = {
+      enable = true;
+      plugins = [
+        "chrissicool/zsh-256color"
+      ];
+    };
     history.size = 10000;
     history.ignoreAllDups = true;
     history.path = "$HOME/.zsh_history";
@@ -37,13 +42,6 @@
         file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
       }
     ];
-    # zplug = {
-    #   enable = true;
-    #   plugins = [
-    #     {name = "chrissicool/zsh-256color";}
-    #     {name = "jeffreytse/zsh-vi-mode";}
-    #   ];
-    # };
     initExtra = ''
       source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
       source <(fzf --zsh)
