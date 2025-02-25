@@ -37,12 +37,12 @@ fi
 
 confDir="${confDir:-$XDG_CONFIG_HOME}"
 save_dir="${XDG_SCREENSHOTS_DIR}"
+mkdir -p "$save_dir"
 save_file=$(date +'%y%m%d_%Hh%Mm%Ss_screenshot.png')
 temp_screenshot="/tmp/screenshot.png"
 annotation_tool=${GRIMBLAST_EDITOR}
 annotation_args=("-o" "${save_dir}/${save_file}" "-f" "${temp_screenshot}")
 
-mkdir -p"$save_dir"
 
 swpy_dir="${configDir}/swappy"
 mkdir -p "$swpy_dir"
