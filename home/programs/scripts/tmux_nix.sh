@@ -8,7 +8,7 @@ while tmux has-session -t $sesh 2>/dev/null; do
 	((i++))
 	sesh="dev$i"
 done
-tmux new -d -s $sesh 'nv.sh; $SHELL' 
+tmux new -d -s $sesh -c /etc/nixos 'nv.sh; $SHELL' 
 
 tmux new-window 'lazygit; $SHELL' 
 
