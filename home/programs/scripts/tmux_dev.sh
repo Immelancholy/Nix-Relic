@@ -13,11 +13,11 @@ tmux new-window 'lazygit; $SHELL'
 
 tmux split-window -v
 
-tmux resize-pane -t 0 -D 60
-
 tmux select-pane -t 0
 
-tmux previous-window
+tmux resize-pane -D 60
+
+tmux select-window 0 
 
 tmux attach-session -t $sesh
 
