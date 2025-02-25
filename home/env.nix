@@ -31,5 +31,6 @@
     MOZ_ENABLE_WAYLAND = "1";
     GDK_SCALE = "1";
     GTK_THEME = "Catppuccin-mocha";
+    GRIMBLAST_EDITOR = "eog";
   };
 }

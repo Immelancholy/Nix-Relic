@@ -30,9 +30,9 @@
         "$mod, Print, exec, grimblast --notify copysave area"
         "$mod+Shift, Print, exec, grimblast --notify copysave active"
         "$mod+Shift+Alt, Print, exec, grimblast --notify copysave screen"
-        "Alt, P, exec, grimblast --notify copysave output"
-        "Alt+Shift, P, exec, grimblast --notify copysave active"
-        "Alt+Shift+Ctrl, P, exec, grimblast --notify copysave area"
+        "Alt, P, exec, grimblast --notify edit output || grimblast copy output"
+        "Alt+Shift, P, exec, grimblast --notify edit active || grimblast copy active"
+        "Alt+Shift+Ctrl, P, exec, grimblast --notify edit area || grimblast copy area"
         "Ctrl+Alt, L, exec, swaylock-fancy"
       ]
       ++ (
