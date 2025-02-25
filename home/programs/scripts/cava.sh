@@ -2,7 +2,7 @@
 
 # Toggle kitty padding when starting/quitting a vim instance
 kitty @ set-spacing padding=0
-kitty @ set-font-size 5 
+kitty @ set-font-size 2.5 
 cava "$@"
 kitty @ set-spacing padding=default
 kitty @ set-font-size default
