@@ -13,6 +13,8 @@ tmux new-window
 
 tmux split-window -v
 
+send-keys -t 0 'lazygit' C-m
+
 tmux previous-window
 
 tmux send-keys -t 0 'nv.sh' C-m
