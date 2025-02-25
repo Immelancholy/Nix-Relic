@@ -9,10 +9,10 @@ while tmux has-session -t $sesh 2>/dev/null; do
 done
 tmux new -d -s $sesh -n "NeoVim" 'nv.sh; $SHELL' 
 
-tmux split-window -v 
-
 tmux new-window  -n "LazyGit" 'lazygit; $SHELL'
 
 tmux previous-window
+
+tmux split-window -v
 
 tmux attach-session -t $sesh
