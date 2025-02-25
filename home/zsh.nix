@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   programs.zsh = {
     enable = true;
-    enableCompletion = true;
+    enableCompletion = false;
     autosuggestion = {
       enable = true;
     };
