@@ -5,7 +5,7 @@
     bind =
       [
         "$mod, T, exec, $term --hold $scr/poke.sh"
-        "$mod+Shift, T, exec, $term tmux"
+        "$mod+Shift, T, exec, $term $scr/tmux_start.sh"
         "$mod, F, exec, $browser"
         "$mod, E, exec, $files"
         "$mod, A, exec, $menu"
