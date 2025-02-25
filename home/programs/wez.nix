@@ -20,7 +20,7 @@
         weight = 'Bold',
       })
 
-      config.font_size = 9.5
+      config.font_size = 9
 
       config.enable_tab_bar = false
 
