@@ -7,7 +7,7 @@ sesh="dev$i"
 while tmux has-session -t $sesh 2>/dev/null; do
 	((i++))
 done
-tmux new -d -s $sesh 'nv.sh; $SHELL' 
+tmux new -n -d -s $sesh 'nv.sh; $SHELL' 
 
 tmux new-window 'lazygit; $SHELL' 
 
@@ -17,7 +17,7 @@ tmux select-pane -t 0
 
 tmux resize-pane -D 60
 
-tmux select-window 0 
+tmux select-window {start}
 
 tmux attach-session -t $sesh
 
