@@ -22,8 +22,9 @@
       update = "nix flake update --flake /etc/nixos/. --commit-lock-file";
       boot = "sudo nixos-rebuild boot --flake /etc/nixos/.";
       tmux = "tmux_start.sh";
-      dev = "tmux_dev.sh";
+      tdev = "tmux_dev.sh";
       cdn = "cd /etc/nixos/";
+      tnix = "tmux_nix.sh";
     };
 
     history.size = 10000;

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 i=0
-sesh="dev$i"
+sesh="NixDots$i"
 
 # Check if the session already exists
 while tmux has-session -t $sesh 2>/dev/null; do
