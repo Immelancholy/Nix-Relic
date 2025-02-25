@@ -45,7 +45,13 @@
     #   ];
     # };
     initExtra = ''
+      source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
       source <(fzf --zsh)
+
+      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+      export PATH="$PATH:$HOME/.local/share/bin"
+
       function y() {
         local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
         kitty @ set-spacing padding=10
@@ -57,8 +63,6 @@
         rm -f -- "$tmp"
       }
 
-      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-      export PATH="$PATH:$HOME/.local/share/bin"
     '';
   };
 }
