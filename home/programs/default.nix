@@ -15,6 +15,7 @@
     ./rmpc
     ./tmux.nix
     ./kitty.nix
+    ./wez.nix
   ];
   programs.mpv = {
     enable = true;
