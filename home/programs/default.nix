@@ -57,6 +57,7 @@
     loupe
     glycin-loaders
     swappy
+    eza
 
     manix
 
