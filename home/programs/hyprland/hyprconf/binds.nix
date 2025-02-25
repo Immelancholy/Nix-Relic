@@ -26,7 +26,7 @@
         "$mod, U, exec, [workspace 1 silent; float; size 626 354; move 10 40] $term --hold fastfetch"
         "$mod, Delete, exec, uwsm stop"
         "$mod+Shift, 0, movetoworkspace, 10"
-        ", Print, exec, grimblast --notify copysave output"
+        ", Print, exec, grimblast --notify copy output | qimgv"
         "$mod, Print, exec, grimblast --notify copysave area"
         "$mod+Shift, Print, exec, grimblast --notify copysave active"
         "$mod+Shift+Alt, Print, exec, grimblast --notify copysave screen"
