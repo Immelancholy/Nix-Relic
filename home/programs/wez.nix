@@ -14,13 +14,11 @@
 
       config.color_scheme = 'Catppuccin Mocha (Gogh)'
 
-      return {
-        font = wezterm.font {
-          family = 'CaskaydiaCove Nerd Font',
-          stretch = 'Regular',
-          weight = 'Regular',
-        },
-      }
+      config.font = wezterm.font ({
+        family = 'CaskaydiaCove Nerd Font',
+        stretch = 'Regular',
+        weight = 'Regular',
+      })
 
       config.font_size = 9.5
 
