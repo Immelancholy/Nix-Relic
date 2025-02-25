@@ -10,11 +10,11 @@
     shellAliases = {
       ll = "ls -l";
       edit = "sudo -e";
-      nv = "/home/mela/.local/share/bin/nv.sh";
-      yazi = "/home/mela/.local/share/bin/yazi.sh";
-      neo = "/home/mela/.local/share/bin/neo.sh";
-      rmpc = "/home/mela/.local/share/bin/rmpc.sh";
-      cava = "$HOME/.local/share/bin/cava.sh";
+      nv = "nv.sh";
+      yazi = "yazi.sh";
+      neo = "neo.sh";
+      rmpc = "rmpc.sh";
+      cava = "cava.sh";
       nvim = "nv";
       fastfetch = "clear; fastfetch";
       nvn = "cd /etc/nixos/; nv";
@@ -22,6 +22,8 @@
       update = "nix flake update --flake /etc/nixos/. --commit-lock-file";
       boot = "sudo nixos-rebuild boot --flake /etc/nixos/.";
       tmux = "tmux_start.sh";
+      dev = "tmux_dev.sh";
+      cdn = "cd /etc/nixos/";
     };
 
     history.size = 10000;
