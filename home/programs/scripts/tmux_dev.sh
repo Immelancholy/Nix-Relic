@@ -11,7 +11,7 @@ tmux new -d -s $sesh 'nv.sh; $SHELL' -t "Neovim"
 
 tmux split-window -v -t "zsh"
 
-tmux select-layout main-horizontal main-pane-height 316
+tmux resize-pane -D -t "zsh" 2
 
 tmux new-window lazygit -T "LazyGit"
 
