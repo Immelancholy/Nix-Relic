@@ -15,6 +15,7 @@ tmux previous-window
 
 tmux split-window -v
 
+tmux send-keys -t 0 'nv.sh' C-m
+
 tmux attach-session -t $sesh
 
-tmux send-keys -t 0 'nv' C-m
