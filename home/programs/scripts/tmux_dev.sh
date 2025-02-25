@@ -17,7 +17,7 @@ tmux select-pane -t 0
 
 tmux resize-pane -D 60
 
-tmux select-window ^ 
+tmux select-window -t ^ 
 
 tmux attach-session -t $sesh
 
