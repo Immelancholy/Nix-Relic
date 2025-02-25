@@ -34,7 +34,7 @@
         "Alt+Shift, P, exec, $scr/screenshot.sh sf"
         "Alt+Shift+Ctrl, P, exec, $scr/screenshot.sh p"
         "Ctrl+Alt, L, exec, swaylock-fancy"
-        "$mod, D, exec, $term $scr/tmux_dev.sh"
+        "$mod, D, exec,cd /etc/nixos/ || $term $scr/tmux_dev.sh"
       ]
       ++ (
         # workspaces
