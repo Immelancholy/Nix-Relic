@@ -3,10 +3,9 @@
     enable = true;
     settings = {
       logo = {
-        type = "kitty-direct";
+        type = "kitty-icat";
         source = "$HOME/Pictures/fastfetch_logos/tomoe.png";
-        width = 18;
-        height = 28;
+        width = 28;
       };
       display = {
         separator = " : ";
