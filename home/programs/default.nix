@@ -53,7 +53,7 @@
   home.packages = with pkgs; [
     inputs.zen-browser.packages."${system}".beta
     lazygit
-    eog
+    loupe
 
     manix
 
