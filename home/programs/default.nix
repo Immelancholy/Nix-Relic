@@ -130,7 +130,7 @@
     cowsay
     lz4
     qpwgraph
-    ark
+    kdePackages.ark
     parted
     teams-for-linux
     retroarch-free
