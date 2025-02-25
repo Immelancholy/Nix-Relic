@@ -5,7 +5,7 @@
       logo = {
         type = "kitty-icat";
         source = "$HOME/Pictures/fastfetch_logos/tomoe.png";
-        width = 27;
+        width = 26;
         # height = 18;
       };
       display = {
