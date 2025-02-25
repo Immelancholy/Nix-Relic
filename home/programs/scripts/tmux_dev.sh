@@ -7,13 +7,13 @@ sesh="dev$i"
 while tmux has-session -t $sesh 2>/dev/null; do
 	((i++))
 done
-tmux new -d -s $sesh 'nv.sh; $SHELL' -t "Neovim"
+tmux new -d -s $sesh -n "NeoVim" 'nv.sh; $SHELL' 
 
-tmux split-window -v -t "zsh"
+tmux split-window -v -t 
 
-tmux resize-pane -D -t "zsh" 2
+tmux resize-pane -D -t 2 -t "Neovim"
 
-tmux new-window lazygit -T "LazyGit"
+tmux new-window lazygit -T -n "LazyGit"
 
 tmux previous-window
 
