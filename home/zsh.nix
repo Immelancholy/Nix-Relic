@@ -37,13 +37,13 @@
         file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
       }
     ];
-    zplug = {
-      enable = true;
-      plugins = [
-        {name = "chrissicool/zsh-256color";}
-        {name = "jeffreytse/zsh-vi-mode";}
-      ];
-    };
+    # zplug = {
+    #   enable = true;
+    #   plugins = [
+    #     {name = "chrissicool/zsh-256color";}
+    #     {name = "jeffreytse/zsh-vi-mode";}
+    #   ];
+    # };
     initExtra = ''
       source <(fzf --zsh)
       function y() {
