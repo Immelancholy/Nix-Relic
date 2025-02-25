@@ -57,25 +57,21 @@ case $1 in
 p) # print all outputs
 	# timeout 0.2 slurp # capture animation lol
 	# shellcheck disable=SC2086
-	grimblast copysave screen $temp_screenshot && "${annotation_tool}" ${evaluated_annotation_args} # intended globbing
+	grimblast --notify copysave screen $temp_screenshot && "${annotation_tool}" ${evaluated_annotation_args} # intended globbing
 	;;
 s) # drag to manually snip an area / click on a window to print it
 	# shellcheck disable=SC2086
-	grimblast copysave area $temp_screenshot && "${annotation_tool}" ${evaluated_annotation_args} ;; # intended globbing
+	grimblast --notify copysave area $temp_screenshot && "${annotation_tool}" ${evaluated_annotation_args} ;; # intended globbing
 sf)                                                                                                               # frozen screen, drag to manually snip an area / click on a window to print it
 	# shellcheck disable=SC2086
-	grimblast --freeze --cursor copysave area $temp_screenshot && "${annotation_tool}" ${evaluated_annotation_args} ;; # intended globbing
+	grimblast --freeze --cursor --notify copysave area $temp_screenshot && "${annotation_tool}" ${evaluated_annotation_args} ;; # intended globbing
 m)                                                                                                                                  # print focused monitor
 	# timeout 0.2 slurp                                                                                                                  # capture animation lol
 	# shellcheck disable=SC2086
-	grimblast copysave output $temp_screenshot && "${annotation_tool}" ${evaluated_annotation_args} # intended globbing
+	grimblast --notify copysave output $temp_screenshot && "${annotation_tool}" ${evaluated_annotation_args} # intended globbing
 	;;
 *) # invalid option
 	USAGE ;;
 esac
 
 [ -f "$temp_screenshot" ] && rm "$temp_screenshot"
-
-if [ -f "${save_dir}/${save_file}" ]; then
-	notify-send -a "Screenshot" -i "${save_dir}/${save_file}" "saved in ${save_dir}"
-fi
