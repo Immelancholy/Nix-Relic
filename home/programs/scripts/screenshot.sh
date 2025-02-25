@@ -10,7 +10,13 @@ USAGE() {
 		m     Screenshot focused monitor
 
 USAGE
+}
 
+SCREENSHOT_POST_COMMAND+=(
+)
+
+SCREENSHOT_PRE_COMMAND+=(
+)
 
 pre_cmd() {
 	for cmd in "${SCREENSHOT_PRE_COMMAND[@]}"; do
@@ -73,5 +79,3 @@ esac
 if [ -f "${save_dir}/${save_file}" ]; then
 	notify-send -a "Screenshot" -i "${save_dir}/${save_file}" "saved in ${save_dir}"
 fi
-
-
