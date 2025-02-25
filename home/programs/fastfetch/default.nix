@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       logo = {
-        type = "kitty-direct";
+        type = "kitty";
         source = "$HOME/Pictures/fastfetch_logos/tomoe.png";
         width = 28;
         height = 18;
