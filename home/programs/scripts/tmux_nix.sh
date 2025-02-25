@@ -10,7 +10,7 @@ while tmux has-session -t $sesh 2>/dev/null; do
 done
 tmux new -d -s $sesh -c /etc/nixos 'nv.sh; $SHELL' 
 
-tmux new-window 'lazygit; $SHELL' 
+tmux new-window -c /etc/nixos 'lazygit; $SHELL' 
 
 tmux split-window -v
 
