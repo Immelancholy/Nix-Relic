@@ -65,7 +65,7 @@
       inputs.hyprland.follows = "hyprland";
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
-    inputs.wezterm.url = "github:wezterm/wezterm?dir=nix";
+    wezterm.url = "github:wezterm/wezterm?dir=nix";
   };
 
   outputs = {
