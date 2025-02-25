@@ -7,10 +7,8 @@ sesh="dev$i"
 while tmux has-session -t $sesh 2>/dev/null; do
 	((i++))
 done
-tmux new-session -d -s $sesh
+tmux new -d -s $sesh 'nv; $SHELL'
 
-tmux split-window -v
-
-tmux send-keys -t 0 'nv' C-m
+tmux split-window -v 'lazygit; $SHELL'
 
 tmux attach-session -t $sesh
