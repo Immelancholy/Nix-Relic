@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
 i=0
-sesh="NixDots$i"
+sesh="NixDots"
 
 # Check if the session already exists
 while tmux has-session -t $sesh 2>/dev/null; do
 	((i++))
-	sesh="dev$i"
+	sesh="NixDots$i"
 done
 tmux new -d -s $sesh -c /etc/nixos 'nv.sh; $SHELL' 
 
