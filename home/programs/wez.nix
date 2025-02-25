@@ -7,5 +7,23 @@
     enable = true;
     package = inputs.wezterm.packages.${pkgs.system}.default;
     enableZshIntegration = true;
+    extraConfig = ''
+      local wezterm = require("wezterm")
+
+      local config = wezterm.config_builder()
+
+      config.color_scheme = 'Catppuccin Mocha (Gogh)'
+
+      config.font = wezterm.font("JetBrainsMono Nerd Font Mono")
+      config.font_size = 9.5
+
+      config.enable_tab_bar = false
+
+      config.window_decorations = "RESIZE"
+
+      config.window_background_opacity = 0.8
+
+      return config
+    '';
   };
 }
