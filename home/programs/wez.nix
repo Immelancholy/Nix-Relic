@@ -5,7 +5,7 @@
 }: {
   programs.wezterm = {
     enable = true;
-    package = inputs.wezterm.packages.${pkgs.system}.nightly;
+    package = inputs.wezterm.packages.${pkgs.system}.default;
     enableZshIntegration = true;
   };
 }
