@@ -16,7 +16,7 @@
     extraConfig = ''
       background_opacity 0.8
       confirm_os_window_close 0
-      placement_strategy center
+      placement_strategy top
       cursor_trail 10
       cursor_trail_start_threshold 0
       shell_integration no-cursor
