@@ -54,6 +54,7 @@
     inputs.zen-browser.packages."${system}".beta
     chromium
     lazygit
+    qimgv
 
     manix
 
