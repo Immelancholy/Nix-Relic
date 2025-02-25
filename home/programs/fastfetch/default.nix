@@ -5,8 +5,8 @@
       logo = {
         type = "kitty-direct";
         source = "$HOME/Pictures/fastfetch_logos/tomoe.png";
-        width = 18;
-        height = 28;
+        width = 28;
+        height = 18;
       };
       display = {
         separator = " : ";
