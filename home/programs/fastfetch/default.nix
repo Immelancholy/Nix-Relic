@@ -6,7 +6,7 @@
         type = "kitty-icat";
         source = "$HOME/Pictures/fastfetch_logos/tomoe.png";
         width = 28;
-        height = 18;
+        # height = 18;
       };
       display = {
         separator = " : ";

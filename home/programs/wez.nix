@@ -12,10 +12,11 @@
 
       local config = wezterm.config_builder()
 
-      config.color_scheme = 'Catppuccin Mocha'
+      config.color_scheme = 'catppuccin-mocha'
 
       config.font = wezterm.font ({
         family = 'CaskaydiaCove Nerd Font Mono',
+        weight = 'Bold',
       })
 
       config.font_size = 10
