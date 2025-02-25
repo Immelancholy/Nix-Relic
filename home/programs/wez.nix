@@ -14,7 +14,10 @@
 
       config.color_scheme = 'Catppuccin Mocha (Gogh)'
 
-      config.font = wezterm.font("CaskaydiaCove Nerd Font Mono")
+      config.font = wezterm.font(
+      'CaskaydiaCove Nerd Font Mono',
+      { stretch = 'Condensed', weight = 'Bold' }
+      ),
       config.font_size = 9.5
 
       config.enable_tab_bar = false
