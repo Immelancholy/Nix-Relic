@@ -33,7 +33,7 @@
         "Alt, P, exec, $scr/screenshot.sh m"
         "Alt+Shift, P, exec, $scr/screenshot.sh sf"
         "Alt+Shift+Ctrl, P, exec, $scr/screenshot.sh p"
-        "Ctrl+Alt, L, exec, swaylock-fancy"
+        "Ctrl+Alt, L, exec, swaylock"
         "$mod, D, exec, $term $scr/tmux_nix.sh"
       ]
       ++ (

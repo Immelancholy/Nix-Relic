@@ -1,5 +1,8 @@
 {pkgs, ...}: {
   stylix = {
+    homeManagerIntergration = {
+      #autoImport = false;
+    };
     enable = true;
     autoEnable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
@@ -33,6 +36,7 @@
         popups = 10;
       };
     };
+    image = "$HOME/Pictures/wallpapers/anime-girl-wings.jpg";
     targets = {
       dunst.enable = false;
       rofi.enable = false;

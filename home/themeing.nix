@@ -44,6 +44,7 @@
       '';
     };
     kvantum.enable = false;
+    swaylock.enable = false;
   };
 
   gtk = {

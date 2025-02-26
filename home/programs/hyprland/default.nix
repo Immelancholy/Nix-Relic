@@ -14,7 +14,6 @@
     xdg-desktop-portal-gtk
     grimblast
     wl-clipboard
-    swaylock-fancy
   ];
 
   wayland.windowManager.hyprland = {
