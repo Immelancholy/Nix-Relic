@@ -1,5 +1,9 @@
-{config, ...}: {
-  programs.rofi.theme = (
+{
+  config,
+  lib,
+  ...
+}: {
+  programs.rofi.theme = lib.mkDefault (
     let
       # Use `mkLiteral` for string-like values that should show without
       # quotes, e.g.:

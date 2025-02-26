@@ -1,5 +1,9 @@
-{pkgs, ...}: {
-  programs.rofi = {
+{
+  pkgs,
+  lib,
+  ...
+}: {
+  programs.rofi = lib.mkDefault {
     enable = true;
     font = "JetBrainsMono Nerd Font Mono 12";
     package = pkgs.rofi-wayland;

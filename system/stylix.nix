@@ -7,5 +7,23 @@
       name = "Bibata-Modern-Ice";
       size = 20;
     };
+    fonts = {
+      monospace = {
+        package = pkgs.nerd-fonts.caskaydia-cove;
+        name = "Caskaydia Cove Nerd Font Mono";
+      };
+      serif = {
+        package = pkgs.nerd-fonts.noto;
+        name = "Noto Serif Nerd Font";
+      };
+      sansSerif = {
+        package = pkgs.nerd-fonts.noto;
+        name = "Noto Sans Nerd Font";
+      };
+      emoji = {
+        package = pkgs.noto-fonts-emoji;
+        name = "Noto Color Emoji";
+      };
+    };
   };
 }
