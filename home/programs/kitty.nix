@@ -7,7 +7,6 @@
       bold_font = "CaskaydiaCove Nerd Font Mono Bold";
       italic_font = "CaskaydiaCove Nerd Fonr Mono Italic";
       bold_italic_font = "CaskaydiaCove Nerd Font Mono Bold Italic";
-      enable_audio_bell = true;
       font_size = 10;
       window_padding_width = 5;
       allow_remote_control = true;
