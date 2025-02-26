@@ -3,6 +3,7 @@
     enable = true;
     autoEnable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+    polarity = "dark";
     cursor = {
       package = pkgs.bibata-cursors;
       name = "Bibata-Modern-Ice";
@@ -24,6 +25,10 @@
       emoji = {
         package = pkgs.noto-fonts-emoji;
         name = "Noto Color Emoji";
+      };
+      sizes = {
+        applications = 11;
+        terminal = 10;
       };
     };
   };
