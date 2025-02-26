@@ -120,7 +120,7 @@
         HoverVirtualKeyboardButtonTextColor = "#91d7e3";
 
         BlurMax = "30";
-        Blur = "2.0";
+        Blur = "3.0";
       };
     })
   ];
