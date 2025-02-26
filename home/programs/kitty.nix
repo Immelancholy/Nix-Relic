@@ -3,7 +3,7 @@
     enable = true;
     shellIntegration.enableZshIntegration = true;
     settings = {
-      bold_font = "auto";
+      bold_font = "CaskaydiaCove Nerd Font Mono Bold";
       italic_font = "auto";
       bold_italic_font = "auto";
       enable_audio_bell = true;
