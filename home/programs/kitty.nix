@@ -7,8 +7,8 @@
       italic_font = "auto";
       bold_italic_font = "auto";
       enable_audio_bell = false;
-      font_family = "CaskaydiaCove Nerd Font Mono";
-      # font_family = "JetBrainsMono Nerd Font Mono";
+      # font_family = "CaskaydiaCove Nerd Font Mono";
+      font_family = "FiraCode Nerd Font Mono";
       font_size = 10;
       window_padding_width = 10;
       allow_remote_control = true;

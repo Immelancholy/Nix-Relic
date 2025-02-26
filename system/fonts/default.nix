@@ -14,6 +14,7 @@
       nerd-fonts.symbols-only
       nerd-fonts.sauce-code-pro
       nerd-fonts.noto
+      nerd-fonts.fira-code
       font-awesome
       roboto
     ];
