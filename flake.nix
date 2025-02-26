@@ -114,11 +114,11 @@
             # TODO replace ryan with your own username ;
             home-manager.users.mela = {
               imports = [
+                stylix.homeManagerModules.stylix
                 ./home
                 catppuccin.homeManagerModules.catppuccin
                 inputs.nixcord.homeManagerModules.nixcord
                 inputs.nixvim.homeManagerModules.nixvim
-                stylix.homeManagerModules.stylix
               ];
             };
             # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
