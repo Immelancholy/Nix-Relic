@@ -43,6 +43,9 @@
       enable = true;
       iconStyle = "wleave";
     };
+    obs = {
+      enable = true;
+    };
   };
 
   gtk = {

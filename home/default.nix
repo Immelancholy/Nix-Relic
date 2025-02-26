@@ -29,6 +29,7 @@
     ./env.nix
     ./mimeapps.nix
     ./stylix.nix
+    ./obs.nix
   ];
 
   home.file = {

@@ -8,7 +8,6 @@
     ./pipewire.nix
     ./sddm.nix
     ./flatpak.nix
-    ./obs.nix
   ];
 
   programs.xfconf.enable = true;
