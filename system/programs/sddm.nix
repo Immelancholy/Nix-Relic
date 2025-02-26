@@ -12,5 +12,12 @@
         CursorSize = 20;
       };
     };
+    extraPackages = with pkgs; [
+      kdePackages.qtsvg
+      kdePackages.qtvirtualkeyboard
+      kdePackages.qtmultimedia
+      kdePackages.qtdeclarative
+      kdePackages.qtshadertools
+    ];
   };
 }

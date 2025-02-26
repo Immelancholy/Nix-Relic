@@ -70,7 +70,6 @@
     wine-wayland
     xdg-user-dirs
     xdg-user-dirs-gtk
-    kdePackages.qtbase
     kdePackages.qtsvg
     kdePackages.qtvirtualkeyboard
     kdePackages.qtmultimedia
