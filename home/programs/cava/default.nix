@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{
   programs.cava = {
     enable = true;
     settings = {
@@ -22,7 +22,8 @@
       };
       smoothing = {
         monstercat = 1;
-        waves = 1;
+        waves = 0;
+        noise_reduction = 90;
       };
     };
   };
