@@ -45,11 +45,11 @@
   gtk = {
     enable = true;
 
-    cursorTheme = {
-      package = pkgs.bibata-cursors;
-      name = "Bibata-Modern-Ice";
-      size = 20;
-    };
+    # cursorTheme = {
+    #   package = pkgs.bibata-cursors;
+    #   name = "Bibata-Modern-Ice";
+    #   size = 20;
+    # };
 
     iconTheme.package = pkgs.catppuccin-papirus-folders.override {
       flavor = "mocha";

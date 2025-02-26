@@ -48,7 +48,7 @@
 
   services.dunst = {
     enable = true;
-    settings = lib.mkDefault {
+    settings = {
       global = {
         frame_color = "#cba6f7c0";
         separator_color = "frame";
