@@ -1,8 +1,4 @@
-{
-  pkgs,
-  config,
-  ...
-}: {
+{pkgs, ...}: {
   catppuccin = {
     flavor = "mocha";
     accent = "mauve";
