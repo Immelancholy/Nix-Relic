@@ -70,9 +70,9 @@
     wine-wayland
     xdg-user-dirs
     xdg-user-dirs-gtk
-    # kdePackages.qtsvg
-    # kdePackages.qtvirtualkeyboard
-    # kdePackages.qtmultimedia
+    kdePackages.qtsvg
+    kdePackages.qtvirtualkeyboard
+    kdePackages.qtmultimedia
     kdePackages.qtdeclarative
     (sddm-astronaut.override {
       embeddedTheme = "hyprland_kath";
