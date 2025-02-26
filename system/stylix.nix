@@ -24,6 +24,10 @@
         package = pkgs.noto-fonts-emoji;
         name = "Noto Color Emoji";
       };
+      targets = {
+        dunst.enable = false;
+        rofi.enable = false;
+      };
     };
   };
 }
