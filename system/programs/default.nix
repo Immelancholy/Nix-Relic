@@ -79,8 +79,37 @@
       themeConfig = {
         background = "${../../home/backgrounds/anime-girl-wings.jpg}";
         Font = "Noto Sans Nerd Font";
-        FontSize = "12";
+        FontSize = "13.5";
         FormPosition = "left";
+        HeaderTextColor = "#cdd6f4";
+        DateTextColor = "#cdd6f4";
+        TimeTextColor = "#cdd6f4";
+
+        FormBackgroundColor = "#1e1e2e";
+        BackgroundColor = "#1e1e2e";
+        DimBackgroundColor = "#1e1e2e";
+
+        LoginFieldBackgroundColor = "#181825";
+        PasswordFieldBackgroundColor = "#181825";
+        LoginFieldTextColo = "#cdd6f4";
+        PasswordFieldTestColor = "#cdd6f4";
+        UserIconColor = "#cdd6f4";
+        PasswordIconColor = "#cdd6f4";
+
+        PlaceholderTextColor = "#a6adc8";
+        WarningColor = "#f38ba8";
+
+        LoginButtonTextColor = "#cdd6f4";
+        LoginButtonBackgroundColor = "#181825";
+        SystemButtonsIconsColor = "#cba6f7";
+        SessionButtonTextColor = "#cba6f7";
+        VirtualKeyboardButtonTextColor = "#cba6f7";
+
+        # DropdownTextColor = "";
+        # DropdownSelectedBackgroundColorrr = "";
+        # DropdownBackgroundColor = "";
+
+        HighlightTextColor = "#cba6f7";
       };
     })
   ];
