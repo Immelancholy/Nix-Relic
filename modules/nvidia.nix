@@ -3,9 +3,7 @@
   config,
   inputs,
   ...
-}: let
-  pkgs-unstable = inputs.hyprland.inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system};
-in {
+}: {
   environment.systemPackages = [
     pkgs.nvtopPackages.full # nvtop
     pkgs.mesa-demos
@@ -19,9 +17,9 @@ in {
 
   hardware.graphics = {
     enable = true;
-    package = pkgs-unstable.mesa.drivers;
+    # package = pkgs.mesa.drivers;
     enable32Bit = true;
-    package32 = pkgs-unstable.pkgsi686Linux.mesa.drivers;
+    # package32 = pkgs.pkgsi686Linux.mesa.drivers;
     extraPackages = with pkgs; [
       libvdpau-va-gl
       libvdpau
