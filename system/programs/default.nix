@@ -78,8 +78,8 @@
     (sddm-astronaut.override {
       themeConfig = {
         background = "${../../home/backgrounds/anime-girl-wings.jpg}";
-        Font = "JetBrainsMono Nerd Font";
-        FontSize = "13.5";
+        Font = "Noto Sans Nerd Font";
+        FontSize = "12";
         FormPosition = "left";
         HeaderTextColor = "#cdd6f4";
         DateTextColor = "#cdd6f4";
@@ -118,6 +118,9 @@
         HoverSystemButtonsIconColor = "#91d7e3";
         HoverSessionButtonTextColor = "#91d7e3";
         HoverVirtualKeyboardButtonTextColor = "#91d7e3";
+
+        BlurMax = "30";
+        Blur = "2.0";
       };
     })
   ];
