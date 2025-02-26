@@ -81,11 +81,13 @@
   } @ inputs: let
     system = "x86_64-linux";
     user = "mela";
+    git = "Immelancholy";
+    email = "lenalowes0@gmail.com";
   in {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = {inherit inputs;};
+        specialArgs = {inherit inputs user git email;};
         modules = [
           ({pkgs, ...}: {
             nixpkgs.config.allowUnfree = true;
@@ -111,7 +113,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              extraSpecialArgs = {inherit inputs user;};
+              extraSpecialArgs = {inherit inputs user git email;};
             };
 
             # TODO replace ryan with your own username ;

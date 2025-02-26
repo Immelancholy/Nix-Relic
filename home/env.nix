@@ -4,8 +4,8 @@
   ...
 }: {
   home.sessionVariables = {
-    STEAM_EXTRA_COMPAT_TOOLS_PATHS = "/home/mela/.steam/root/compatibilitytools.d";
-    EDITOR = "kitty /home/mela/.local/share/bin/kitty_nvim.sh";
+    STEAM_EXTRA_COMPAT_TOOLS_PATHS = "$HOME/.steam/root/compatibilitytools.d";
+    EDITOR = "kitty $HOME/.local/share/bin/kitty_nvim.sh";
     BROWSER = "zen";
     TERMINAL = "${lib.getExe pkgs.kitty}";
     # Required to run the correct GBM backend for nvidia GPUs on wayland
@@ -30,7 +30,6 @@
     QT_AUTO_SCREEN_SCALE_FACTOR = "1";
     MOZ_ENABLE_WAYLAND = "1";
     GDK_SCALE = "1";
-    GTK_THEME = "Catppuccin-mocha";
     GRIMBLAST_EDITOR = "swappy";
   };
 }
