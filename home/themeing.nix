@@ -45,7 +45,7 @@
     };
   };
 
-  gtk = lib.mkDefault {
+  gtk = {
     enable = true;
 
     cursorTheme = {
