@@ -7,7 +7,7 @@
         windowrulev2 = opacity 0.80 0.80,class:^([Cc]ode)$
         windowrulev2 = opacity 0.80 0.80,class:^(code-url-handler)$
         windowrulev2 = opacity 0.80 0.80,class:^(code-insiders-url-handler)$
-        #windowrulev2 = opacity 0.90 0.90,class:^(kitty)$
+        #windowrulev2 = opacity 0.70 0.70,class:^(kitty)$
         windowrulev2 = opacity 0.80 0.80,class:^(org.kde.dolphin)$
         windowrulev2 = opacity 0.80 0.80,class:^(org.kde.ark)$
         windowrulev2 = opacity 0.80 0.80,class:^(nwg-look)$
@@ -85,9 +85,6 @@
 
         windowrulev2 = opacity 0.90 0.90,class:^(org.rncbc.qpwgraph)$
         windowrulev2 = opacity 0.90 0.90,class:^(com.github.wwmm.easyeffects)$
-
-        windowrulev2 = noblur,class:^(kitty)$
-        windowrulev2 = noblur,class:^(org.wezfurlong.wezterm)$
 
         windowrulev2 = float,title:^(rmpc)$
         windowrulev2 = size 900 580,title:^(rmpc)$
