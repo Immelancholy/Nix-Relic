@@ -9,6 +9,8 @@
     ./env.nix
   ];
 
+  nixpkgs.config.allowUnfree = true;
+
   zramSwap = {
     enable = true;
     algorithm = "zstd";

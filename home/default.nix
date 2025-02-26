@@ -29,7 +29,6 @@
     ./mimeapps.nix
     ./stylix.nix
   ];
-  nixpkgs.config.allowUnfree = true;
 
   home.file = {
     "Pictures/fastfetch_logos" = {
