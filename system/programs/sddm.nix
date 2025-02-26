@@ -5,7 +5,7 @@
     package = pkgs.kdePackages.sddm;
     enableHidpi = true;
     #theme = "${import ./sddm-theme.nix { inherit pkgs; }}";
-    theme = "hyprland_kath";
+    theme = "Astronaut";
     settings = {
       Theme = {
         CursorTheme = "Bibata-Modern-Ice";
