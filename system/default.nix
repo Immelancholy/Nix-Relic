@@ -7,7 +7,6 @@
     ../modules
     ./extracache.nix
     ./env.nix
-    ./stylix.nix
   ];
 
   zramSwap = {
