@@ -23,7 +23,7 @@
       smoothing = {
         monstercat = 1;
         waves = 0;
-        noise_reduction = 72;
+        noise_reduction = 74;
       };
     };
   };
