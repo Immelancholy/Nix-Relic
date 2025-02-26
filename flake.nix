@@ -77,7 +77,6 @@
     solaar,
     rust-overlay,
     nix-flatpak,
-    stylix,
     ...
   } @ inputs: {
     nixosConfigurations = {
@@ -97,7 +96,6 @@
               )
             ];
           })
-          stylix.nixosModules.stylix
           nix-flatpak.nixosModules.nix-flatpak
           solaar.nixosModules.default
           ./system
