@@ -72,6 +72,7 @@
   outputs = {
     self,
     nixpkgs,
+    stylix,
     catppuccin,
     home-manager,
     solaar,
@@ -120,6 +121,7 @@
             };
             # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
           }
+          stylix.nixosModules.stylix
         ];
       };
     };
