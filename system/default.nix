@@ -83,6 +83,9 @@
       background = ../home/backgrounds/anime-girl-wings.jpg;
       loginBackground = true;
     };
+    obs = {
+      enable = true;
+    };
   };
 
   nix.gc = {
