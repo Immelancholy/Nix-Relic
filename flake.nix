@@ -98,7 +98,6 @@
             ];
           })
 
-          stylix.nixosModules.stylix
           nix-flatpak.nixosModules.nix-flatpak
           solaar.nixosModules.default
           ./system
@@ -119,6 +118,7 @@
                 catppuccin.homeManagerModules.catppuccin
                 inputs.nixcord.homeManagerModules.nixcord
                 inputs.nixvim.homeManagerModules.nixvim
+                stylix.homeManagerModules.stylix
               ];
             };
             # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
