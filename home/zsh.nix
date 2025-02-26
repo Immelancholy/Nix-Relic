@@ -20,7 +20,7 @@
       switch = "sudo nixos-rebuild switch --flake /etc/nixos/.";
       update = "nix flake update --flake /etc/nixos/. --commit-lock-file";
       boot = "sudo nixos-rebuild boot --flake /etc/nixos/.";
-      tmux = "tmux_start.sh";
+      tmuxs = "tmux_start.sh";
       tdev = "tmux_dev.sh";
       cdn = "cd /etc/nixos/";
       tnix = "tmux_nix.sh";
