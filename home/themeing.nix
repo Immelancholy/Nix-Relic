@@ -13,10 +13,10 @@
     #   accent = "mauve";
     #   flavor = "mocha";
     # };
-    btop = {
-      enable = true;
-      flavor = "mocha";
-    };
+    # btop = {
+    #   enable = true;
+    #   flavor = "mocha";
+    # };
     rofi = {
       enable = false;
       flavor = "mocha";
