@@ -678,7 +678,7 @@
           hyprls.enable = true;
           lua_ls.enable = true;
           pylyzer.enable = true;
-          marksman.enabler = true;
+          marksman.enable = true;
           bashls.enable = true;
         };
       };
