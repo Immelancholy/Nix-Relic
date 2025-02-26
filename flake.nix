@@ -98,6 +98,7 @@
             ];
           })
 
+          stylix.nixosModules.stylix
           nix-flatpak.nixosModules.nix-flatpak
           solaar.nixosModules.default
           ./system
@@ -114,7 +115,6 @@
             # TODO replace ryan with your own username ;
             home-manager.users.mela = {
               imports = [
-                stylix.homeManagerModules.stylix
                 ./home
                 catppuccin.homeManagerModules.catppuccin
                 inputs.nixcord.homeManagerModules.nixcord
