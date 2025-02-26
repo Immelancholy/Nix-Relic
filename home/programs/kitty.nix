@@ -3,10 +3,10 @@
     enable = true;
     shellIntegration.enableZshIntegration = true;
     settings = {
-      font_family = "CaskaydiaCove Nerd Font Mono";
+      font_family = "CaskaydiaCove Nerd Font Mono Regular";
       bold_font = "CaskaydiaCove Nerd Font Mono Bold";
-      italic_font = "auto";
-      bold_italic_font = "auto";
+      italic_font = "CaskaydiaCove Nerd Fonr Mono Italic";
+      bold_italic_font = "CaskaydiaCove Nerd Font Mono Bold Italic";
       enable_audio_bell = true;
       font_size = 10;
       window_padding_width = 5;
