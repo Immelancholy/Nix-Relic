@@ -97,6 +97,8 @@
               )
             ];
           })
+
+          stylix.nixosModules.stylix
           nix-flatpak.nixosModules.nix-flatpak
           solaar.nixosModules.default
           ./system
@@ -121,7 +123,6 @@
             };
             # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
           }
-          stylix.nixosModules.stylix
         ];
       };
     };

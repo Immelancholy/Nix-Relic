@@ -22,8 +22,6 @@
   #     xxx
   # '';
 
-  stylix.enable = true;
-
   imports = [
     ./programs
     ./themeing.nix
