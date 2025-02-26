@@ -117,6 +117,8 @@
         windowrule = float,title:^(Confirm to replace files)$
         windowrule = float,title:^(File Operation Progress)$
         windowrulev2 = float,class:^(xdg-desktop-portal-gtk)$
+        windowrulev2 = opacity 0.80 0.80,class:^(xdg-desktop-portal-gtk)$
+        windowrulev2 = opacity 0.80 0.80,title:^(MainPicker)$
 
         layerrule = blur,rofi
         layerrule = ignorezero,rofi
