@@ -31,7 +31,7 @@
       enable = true;
       mpd.host = "/run/user/1000/mpd/socket";
       notifications = true;
-      mpd.musicDirectory = "$HOME/Music";
+      mpd.musicDirectory = "{$HOME}/Music";
     };
     mpd-discord-rpc = {
       enable = true;
