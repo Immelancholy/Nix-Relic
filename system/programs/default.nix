@@ -77,6 +77,9 @@
     kdePackages.qtshadertools
     (sddm-astronaut.override {
       embeddedTheme = "hyprland_kath";
+      themeConfig = {
+        background = ../../home/backgrounds/anime-girl-wings.jpg;
+      };
     })
   ];
   environment.shells = with pkgs; [zsh];
