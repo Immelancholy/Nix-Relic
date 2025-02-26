@@ -31,6 +31,7 @@
       waybar.enable = false;
       tmux.enable = false;
       swaylock.enable = false;
+      yazi.enable = false;
     };
   };
 }
