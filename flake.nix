@@ -89,16 +89,16 @@
         modules = [
           ({pkgs, ...}: {
             nixpkgs.config.allowUnfree = true;
-            nixpkgs.overlays = [rust-overlay.overlays.default];
-            environment.systemPackages = with pkgs; [
-              (
-                rust-bin.selectLatestNightlyWith
-                (toolchain:
-                  toolchain.default.override {
-                    extensions = ["rust-src" "rust-analyzer"];
-                  })
-              )
-            ];
+            # nixpkgs.overlays = [rust-overlay.overlays.default];
+            # environment.systemPackages = with pkgs; [
+            #   (
+            #     rust-bin.selectLatestNightlyWith
+            #     (toolchain:
+            #       toolchain.default.override {
+            #         extensions = ["rust-src" "rust-analyzer"];
+            #       })
+            #   )
+            # ];
           })
 
           nix-flatpak.nixosModules.nix-flatpak
