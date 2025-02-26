@@ -49,15 +49,6 @@
     wlogout = {
       enable = true;
       iconStyle = "wleave";
-      extraStyle = ''
-        button {
-            border-radius: 2px;
-          }
-
-          #lock {
-            background-image: url("${config.gtk.iconTheme.package}/share/icons/${config.gtk.iconTheme.name}/apps/scalable/system-lock-screen.svg");
-          }
-      '';
     };
   };
 
