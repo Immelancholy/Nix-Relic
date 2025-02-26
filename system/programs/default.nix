@@ -74,6 +74,7 @@
     kdePackages.qtvirtualkeyboard
     kdePackages.qtmultimedia
     kdePackages.qtdeclarative
+    kdePackages.qtshadertools
     (sddm-astronaut.override {
       embeddedTheme = "hyprland_kath";
     })
