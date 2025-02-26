@@ -22,7 +22,7 @@
   fonts.fontconfig = {
     enable = true;
     defaultFonts = {
-      monospace = ["FantasqeSansM Nerd Font Mono"];
+      monospace = ["JetBrainsMono Nerd Font Mono"];
       serif = ["Noto Serif Nerd Font"];
       sansSerif = ["Noto Sans Nerd Font"];
       emoji = ["Noto Color Emoji" "Symbols Only Nerd Font"];
