@@ -8,7 +8,7 @@
       bold_italic_font = "auto";
       enable_audio_bell = true;
       font_size = 10;
-      window_padding_width = 5;
+      window_padding_width = 8;
       allow_remote_control = true;
       listen_on = "unix:/run/user/1000/mykitty";
     };
