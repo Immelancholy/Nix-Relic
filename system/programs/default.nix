@@ -75,7 +75,7 @@
     kdePackages.qtmultimedia
     kdePackages.qtdeclarative
     (sddm-astronaut.override {
-      embededTheme = "hyprland_kath";
+      embeddedTheme = "hyprland_kath";
     })
   ];
   environment.shells = with pkgs; [zsh];
