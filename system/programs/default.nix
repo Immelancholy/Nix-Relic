@@ -78,7 +78,7 @@
     (sddm-astronaut.override {
       embeddedTheme = "hyprland_kath";
       themeConfig = {
-        background = ../../home/backgrounds/anime-girl-wings.jpg;
+        background = "${../../home/backgrounds/anime-girl-wings.jpg}";
       };
     })
   ];
