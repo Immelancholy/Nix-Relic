@@ -84,7 +84,7 @@
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {
-      color-scheme = "prefer-dark";
+      # color-scheme = "prefer-dark";
       cursor-theme = "Bibata-Modern-Ice";
       cursor-size = 20;
     };
