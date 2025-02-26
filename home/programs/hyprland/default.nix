@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  lib,
   ...
 }: {
   home.packages = with pkgs; [
@@ -47,7 +48,7 @@
 
   services.dunst = {
     enable = true;
-    settings = {
+    settings = lib.mkDefault {
       global = {
         frame_color = "#cba6f7c0";
         separator_color = "frame";
