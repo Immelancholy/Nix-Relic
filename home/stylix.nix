@@ -8,6 +8,7 @@
       swaylock.enable = false;
       yazi.enable = false;
       nixvim.enable = false;
+      btop.enable = false;
     };
   };
 }

@@ -18,7 +18,7 @@
     #   flavor = "mocha";
     # };
     btop = {
-      enable = false;
+      enable = true;
       flavor = "mocha";
     };
     rofi = {
