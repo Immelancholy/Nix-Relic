@@ -79,8 +79,8 @@
       themeConfig = {
         background = "${../../home/backgrounds/anime-girl-wings.jpg}";
         font = "Noto Sans Nerd Font";
-        fontSize = "13";
-        formPosition = "center";
+        fontSize = "12";
+        formPosition = "left";
       };
     })
   ];
