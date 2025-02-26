@@ -1,6 +1,5 @@
 {pkgs, ...}: {
   catppuccin = {
-    enable = true;
     flavor = "mocha";
     accent = "mauve";
     yazi = {
@@ -8,17 +7,8 @@
       accent = "mauve";
       flavor = "mocha";
     };
-    # gtk = {
-    #   enable = true;
-    #   accent = "mauve";
-    #   flavor = "mocha";
-    # };
     btop = {
       enable = true;
-      flavor = "mocha";
-    };
-    rofi = {
-      enable = false;
       flavor = "mocha";
     };
     waybar.enable = false;
@@ -39,8 +29,12 @@
         set -ag status-right "#{E:@catppuccin_status_uptime}"
       '';
     };
-    kvantum.enable = false;
-    swaylock.enable = false;
+    kitty = {
+      enable = true;
+    };
+    cava = {
+      enable = true;
+    };
   };
 
   gtk = {
