@@ -43,7 +43,7 @@
         set -ag status-right "#{E:@catppuccin_status_uptime}"
       '';
     };
-    qt.enable = false;
+    kvantum.enable = false;
   };
 
   gtk = {
