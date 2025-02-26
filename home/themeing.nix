@@ -8,11 +8,11 @@
       accent = "mauve";
       flavor = "mocha";
     };
-    gtk = {
-      enable = true;
-      accent = "mauve";
-      flavor = "mocha";
-    };
+    # gtk = {
+    #   enable = true;
+    #   accent = "mauve";
+    #   flavor = "mocha";
+    # };
     btop = {
       enable = true;
       flavor = "mocha";
