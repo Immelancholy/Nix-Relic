@@ -74,7 +74,7 @@
     kdePackages.qtsvg
     kdePackages.qtvirtualkeyboard
     kdePackages.qtmultimedia
-    kdePackages.qt6-declarative
+    kdePackages.qtdeclarative
   ];
   environment.shells = with pkgs; [zsh];
 
