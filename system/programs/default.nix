@@ -70,11 +70,13 @@
     wine-wayland
     xdg-user-dirs
     xdg-user-dirs-gtk
-    sddm-astronaut
     kdePackages.qtsvg
     kdePackages.qtvirtualkeyboard
     kdePackages.qtmultimedia
     kdePackages.qtdeclarative
+    (sddm-astronaut.override {
+      embededTheme = "hyprland_kath";
+    })
   ];
   environment.shells = with pkgs; [zsh];
 
