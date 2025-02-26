@@ -19,6 +19,10 @@
     priority = 100;
   };
 
+  programs.obs-studio = {
+    enableVirtualCamera = true;
+  };
+
   security.apparmor = {
     enable = true;
     packages = with pkgs; [
