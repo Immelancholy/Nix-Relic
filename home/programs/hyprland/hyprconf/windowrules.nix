@@ -103,7 +103,7 @@
 
         windowrulev2 = opacity 0.80 0.80,class:^(dev.zed.Zed-Dev)$
 
-        windowrulev2 = noblur, class:^(kitty)$
+        # windowrulev2 = noblur, class:^(kitty)$
 
     # common modals
         windowrule = float,title:^(Open)$

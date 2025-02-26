@@ -22,7 +22,7 @@
 
         blur {
             enabled = yes
-            size = 6
+            size = 3
             passes = 2
             vibrancy = 0.5
             new_optimizations = true
