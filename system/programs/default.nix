@@ -77,10 +77,16 @@
     kdePackages.qtshadertools
     (sddm-astronaut.override {
       themeConfig = {
-        background = "${../../home/backgrounds/anime-girl-wings.jpg}";
+        ScreenWidth = "1920";
+        ScreenHeight = "1080";
+
         Font = "Noto Sans Nerd Font";
         FontSize = "12";
-        FormPosition = "left";
+
+        RoundCorners = "20";
+
+        background = "${../../home/backgrounds/anime-girl-wings.jpg}";
+        DimBackground = "0.0";
         HeaderTextColor = "#cdd6f4";
         DateTextColor = "#cdd6f4";
         TimeTextColor = "#cdd6f4";
@@ -91,15 +97,15 @@
 
         LoginFieldBackgroundColor = "##1e1e2e";
         PasswordFieldBackgroundColor = "#1e1e2e";
-        LoginFieldTextColo = "#cdd6f4";
-        PasswordFieldTestColor = "#cdd6f4";
+        LoginFieldTextColo = "#cba6f7";
+        PasswordFieldTestColor = "#cba6f7";
         UserIconColor = "#cba6f7";
         PasswordIconColor = "#cba6f7";
 
         PlaceholderTextColor = "#a6adc8";
         WarningColor = "#f38ba8";
 
-        LoginButtonTextColor = "#cdd6f4";
+        LoginButtonTextColor = "#cba6f7";
         LoginButtonBackgroundColor = "#1e1e2e";
         SystemButtonsIconsColor = "#cba6f7";
         SessionButtonTextColor = "#cba6f7";
@@ -119,8 +125,12 @@
         HoverSessionButtonTextColor = "#91d7e3";
         HoverVirtualKeyboardButtonTextColor = "#91d7e3";
 
+        PartialBlue = "true";
         BlurMax = "30";
         Blur = "3.0";
+
+        HaveFormBackground = "false";
+        FormPosition = "left";
       };
     })
   ];
