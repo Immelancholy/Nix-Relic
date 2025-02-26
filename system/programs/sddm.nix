@@ -4,7 +4,6 @@
     wayland.enable = true;
     package = pkgs.kdePackages.sddm;
     enableHidpi = true;
-    #theme = "${import ./sddm-theme.nix { inherit pkgs; }}";
     theme = "sddm-astronaut-theme";
     settings = {
       Theme = {

@@ -93,8 +93,8 @@
         PasswordFieldBackgroundColor = "#1e1e2e";
         LoginFieldTextColo = "#cdd6f4";
         PasswordFieldTestColor = "#cdd6f4";
-        UserIconColor = "#cdd6f4";
-        PasswordIconColor = "#cdd6f4";
+        UserIconColor = "#cba6f7";
+        PasswordIconColor = "#cba6f7";
 
         PlaceholderTextColor = "#a6adc8";
         WarningColor = "#f38ba8";
@@ -110,7 +110,7 @@
         DropdownBackgroundColor = "#1e1e2e";
 
         HighlightTextColor = "#cba6f7";
-        HighlightBackgroundColor = "#1e1e2e";
+        HighlightBackgroundColor = "#cba6f7";
         HighlightBorderColor = "#cba6f7";
 
         HoverUserIconColor = "#91d7e3";
