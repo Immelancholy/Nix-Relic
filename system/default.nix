@@ -76,7 +76,7 @@
     flavor = "mocha";
     accent = "mauve";
     sddm = {
-      enable = true;
+      enable = false;
       flavor = "mocha";
       font = "Noto Sans Nerd Font";
       fontSize = "12";
