@@ -78,9 +78,9 @@
     (sddm-astronaut.override {
       themeConfig = {
         background = "${../../home/backgrounds/anime-girl-wings.jpg}";
-        Font = "Noto Sans Nerd Font";
-        FontSize = "13";
-        FormPosition = "center";
+        font = "Noto Sans Nerd Font";
+        fontSize = "13";
+        formPosition = "center";
       };
     })
   ];
