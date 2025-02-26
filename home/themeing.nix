@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   catppuccin = {
     enable = true;
     flavor = "mocha";
@@ -41,7 +45,7 @@
     };
   };
 
-  gtk = {
+  gtk = lib.mkDefault {
     enable = true;
 
     cursorTheme = {
