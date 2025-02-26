@@ -30,6 +30,7 @@
       rofi.enable = false;
       waybar.enable = false;
       tmux.enable = false;
+      swaylock.enable = false;
     };
   };
 }
