@@ -26,6 +26,11 @@
     ];
   };
 
+  programs.obs-studio = {
+    enable = true;
+    enableVirtualCamera = true;
+  };
+
   services.dbus.apparmor = "enabled";
 
   services.solaar.enable = true;
