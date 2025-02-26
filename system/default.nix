@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  user,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
     ./boot.nix
@@ -68,9 +72,9 @@
     experimental-features = ["nix-command" "flakes"];
   };
 
-  users.users.mela = {
+  users.users.${user} = {
     isNormalUser = true;
-    description = "mela";
+    description = "Account for ${user}";
     extraGroups = ["networkmanager" "wheel"];
   };
 
