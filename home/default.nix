@@ -28,6 +28,7 @@
     ./zsh.nix
     ./env.nix
     ./mimeapps.nix
+    ./stylix.nix
   ];
 
   home.file = {
