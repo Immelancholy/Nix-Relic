@@ -1,9 +1,11 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
+    package = pkgs.kdePackages.sddm;
     enableHidpi = true;
-    theme = "${import ./sddm-theme.nix { inherit pkgs; }}";
+    #theme = "${import ./sddm-theme.nix { inherit pkgs; }}";
+    theme = "";
     settings = {
       Theme = {
         CursorTheme = "Bibata-Modern-Ice";

@@ -122,11 +122,9 @@
     ethtool
     pciutils # lspci
     usbutils # lsusb
-    libsForQt5.qtstyleplugin-kvantum
+    kdePackages.qtstyleplugin-kvantum
     libsForQt5.qt5ct
     kdePackages.qt6ct
-    xfce.exo
-    xfce.xfce4-settings
     rmpc
     mpd
     protonup

@@ -75,7 +75,14 @@
     enable = true;
     flavor = "mocha";
     accent = "mauve";
-    sddm.enable = false;
+    sddm = {
+      enable = true;
+      flavor = "mocha";
+      font = "Noto Sans Nerd Font";
+      fontSize = 12;
+      background = ../home/backgrounds/anime-girl-wings.jpg;
+      loginBackground = true;
+    };
   };
 
   nix.gc = {

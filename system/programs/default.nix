@@ -70,6 +70,11 @@
     wine-wayland
     xdg-user-dirs
     xdg-user-dirs-gtk
+    sddm-astronaut
+    kdePackages.qtsvg
+    kdePackages.qtvirtualkeyboard
+    kdePackages.qtmultimedia
+    kdePackages.qt6-declarative
   ];
   environment.shells = with pkgs; [zsh];
 
