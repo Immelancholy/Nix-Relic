@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
     ./boot.nix
@@ -8,6 +12,8 @@
     ./extracache.nix
     ./env.nix
   ];
+
+  nixpkgs.overlays = lib.mkForce null;
 
   nixpkgs.config.allowUnfree = true;
 
