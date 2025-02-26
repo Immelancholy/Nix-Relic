@@ -42,7 +42,7 @@
   programs.btop = {
     enable = true;
     settings = {
-      theme = "catppuccin-mocha";
+      # theme = "catppuccin-mocha";
       vim_keys = true;
     };
   };
