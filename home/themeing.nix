@@ -34,6 +34,10 @@
     };
     cava = {
       enable = true;
+      transparent = true;
+    };
+    lazygit = {
+      enable = true;
     };
   };
 
