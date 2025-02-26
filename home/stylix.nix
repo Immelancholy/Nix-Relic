@@ -33,7 +33,7 @@
         popups = 10;
       };
     };
-    image = /${"$HOME"}/wallpapers/anime-girl-wings.jpg;
+    image = ./backgrounds/anime-girl-wings.jpg;
     targets = {
       dunst.enable = false;
       rofi.enable = false;
