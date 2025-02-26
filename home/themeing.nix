@@ -76,11 +76,10 @@
   home.file = {
     ".icons/bibata".source = "${pkgs.bibata-cursors}/share/icons/Bibata-Modern-Classic";
   };
-  # qt = {
-  #   enable = true;
-  #   platformTheme.name = "kvantum";
-  #   style.name = "kvantum";
-  # };
+  qt = {
+    enable = true;
+    platformTheme = "qtct";
+  };
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {
