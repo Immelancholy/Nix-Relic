@@ -1,4 +1,9 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
+  nixpkgs.overlays = lib.mkForce null;
   stylix = {
     enable = true;
     autoEnable = true;
