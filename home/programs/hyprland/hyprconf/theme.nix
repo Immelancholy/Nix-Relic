@@ -22,8 +22,9 @@
 
         blur {
             enabled = yes
-            size = 8
+            size = 4
             passes = 2
+            vibrancy = 0.5
             new_optimizations = true
             ignore_opacity = true
             xray = false
