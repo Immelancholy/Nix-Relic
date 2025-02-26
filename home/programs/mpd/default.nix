@@ -1,4 +1,4 @@
-{user, ...}: {
+{
   services = {
     mpd = {
       enable = true;
