@@ -22,10 +22,10 @@
 
         blur {
             enabled = yes
-            size = 6
-            passes = 3
-            new_optimizations = on
-            ignore_opacity = on
+            size = 8
+            passes = 2
+            new_optimizations = true
+            ignore_opacity = true
             xray = false
         }
     }
@@ -35,7 +35,7 @@
     decoration {
         dim_special = 0.3
         blur {
-            special = true
+          special = true
         }
     }
   '';
