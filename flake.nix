@@ -66,6 +66,7 @@
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     wezterm.url = "github:wezterm/wezterm?dir=nix";
+    stylix.url = "github:danth/stylix";
   };
 
   outputs = {
@@ -76,8 +77,7 @@
     solaar,
     rust-overlay,
     nix-flatpak,
-    yazi-plugins,
-    yazi-flavors,
+    stylix,
     ...
   } @ inputs: {
     nixosConfigurations = {
@@ -97,6 +97,7 @@
               )
             ];
           })
+          stylix.nixosModules.stylix
           nix-flatpak.nixosModules.nix-flatpak
           solaar.nixosModules.default
           ./system
