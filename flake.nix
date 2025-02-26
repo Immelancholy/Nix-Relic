@@ -65,7 +65,6 @@
       inputs.hyprland.follows = "hyprland";
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
-    wezterm.url = "github:wezterm/wezterm?dir=nix";
     stylix.url = "github:danth/stylix";
   };
 
@@ -79,13 +78,17 @@
     rust-overlay,
     nix-flatpak,
     ...
-  } @ inputs: {
+  } @ inputs: let
+    system = "x86_64-linux";
+    user = "mela";
+  in {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+        inherit system;
         specialArgs = {inherit inputs;};
         modules = [
           ({pkgs, ...}: {
+            nixpkgs.config.allowUnfree = true;
             nixpkgs.overlays = [rust-overlay.overlays.default];
             environment.systemPackages = with pkgs; [
               (
@@ -108,11 +111,11 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              extraSpecialArgs = {inherit inputs;};
+              extraSpecialArgs = {inherit inputs user;};
             };
 
             # TODO replace ryan with your own username ;
-            home-manager.users.mela = {
+            home-manager.users.${user} = {
               imports = [
                 stylix.homeManagerModules.stylix
                 ./home
