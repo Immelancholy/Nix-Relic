@@ -7,7 +7,6 @@
       obs-vaapi
       obs-pipewire-audio-capture
       obs-composite-blur
-      obs-nvfbc
     ];
   };
 }
