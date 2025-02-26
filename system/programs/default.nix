@@ -78,7 +78,7 @@
     (sddm-astronaut.override {
       themeConfig = {
         background = "${../../home/backgrounds/anime-girl-wings.jpg}";
-        Font = "Noto Sans Nerd Font";
+        Font = "JetBrainsMono Nerd Font";
         FontSize = "13.5";
         FormPosition = "left";
         HeaderTextColor = "#cdd6f4";
@@ -89,8 +89,8 @@
         BackgroundColor = "#1e1e2e";
         DimBackgroundColor = "#1e1e2e";
 
-        LoginFieldBackgroundColor = "#181825";
-        PasswordFieldBackgroundColor = "#181825";
+        LoginFieldBackgroundColor = "##1e1e2e";
+        PasswordFieldBackgroundColor = "#1e1e2e";
         LoginFieldTextColo = "#cdd6f4";
         PasswordFieldTestColor = "#cdd6f4";
         UserIconColor = "#cdd6f4";
@@ -100,16 +100,24 @@
         WarningColor = "#f38ba8";
 
         LoginButtonTextColor = "#cdd6f4";
-        LoginButtonBackgroundColor = "#181825";
+        LoginButtonBackgroundColor = "#1e1e2e";
         SystemButtonsIconsColor = "#cba6f7";
         SessionButtonTextColor = "#cba6f7";
         VirtualKeyboardButtonTextColor = "#cba6f7";
 
-        # DropdownTextColor = "";
-        # DropdownSelectedBackgroundColorrr = "";
-        # DropdownBackgroundColor = "";
+        DropdownTextColor = "#cba6f7";
+        DropdownSelectedBackgroundColorrr = "#1e1e2e";
+        DropdownBackgroundColor = "#1e1e2e";
 
         HighlightTextColor = "#cba6f7";
+        HighlightBackgroundColor = "#1e1e2e";
+        HighlightBorderColor = "#cba6f7";
+
+        HoverUserIconColor = "#91d7e3";
+        HoverPasswordIconColor = "#91d7e3";
+        HoverSystemButtonsIconColor = "#91d7e3";
+        HoverSessionButtonTextColor = "#91d7e3";
+        HoverVirtualKeyboardButtonTextColor = "#91d7e3";
       };
     })
   ];
