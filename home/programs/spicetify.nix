@@ -14,5 +14,6 @@ in {
     theme = spicePkgs.themes.catppuccin;
 
     colorScheme = "mocha";
+    windowManagerPatch = true;
   };
 }
