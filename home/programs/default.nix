@@ -61,6 +61,8 @@
     eza
     libsixel
 
+    krita
+
     manix
 
     # archives
