@@ -4,7 +4,7 @@
     settings = {
       logo = {
         type = "kitty-icat";
-        source = "$HOME/Pictures/fastfetch_logos/DemonGirl.jpg";
+        source = ''$(find \"$HOME/Pictures/fastfetch_logos/\" -name \"*.jpg\" | shuf'';
         width = 24;
         # height = 18;
       };
