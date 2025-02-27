@@ -29,7 +29,9 @@
     git = "Immelancholy"; #Replace with your GitHub username
     email = "lenalowes0@gmail.com"; # Replace with your GitHub email
   in {```
+
 * Then go into the modules folder and edit default.nix and comment/uncomment these modules to switch the GPU drivers for your pc.
+
 ```{
   imports = [
     ./nvidia.nix # For Nvidia Drivers
