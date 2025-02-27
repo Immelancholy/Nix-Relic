@@ -11,6 +11,11 @@ in {
       adblockify
       shuffle
     ];
+    enabledCustomApps = with spicePkgs.apps; [
+      ncsVisualizer
+      lyricsPlus
+      newReleases
+    ];
     theme = spicePkgs.themes.catppuccin;
 
     colorScheme = "mocha";
