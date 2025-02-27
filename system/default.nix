@@ -97,6 +97,15 @@
     };
   };
 
+  programs.git = {
+    enable = true;
+    config = {
+      init = {
+        defaultBranch = "main";
+      };
+    };
+  };
+
   nix.gc = {
     automatic = true;
     dates = "daily";
