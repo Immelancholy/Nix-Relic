@@ -37,8 +37,7 @@
     ./nvidia.nix # For Nvidia Drivers
     #./amd.nix # For AMD Drivers
   ];
-}
-```
+}```
 * go into the system folder in this repo and delete hardware-configuration.nix, then run ```sudo nixos-generate-config --show-hardware-config > hardware-configuration.nix```
 * delete the contents of /etc/nixos and copy the contents of this repo there.
 * then in the /etc/nixos folder run ```git init && git add.```
