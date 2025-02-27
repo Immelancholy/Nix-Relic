@@ -62,5 +62,13 @@ git init && git add .
 ```
 sudo nixos-rebuild switch --flake .
 ```
+### Image Sources
+* [Backgound](https://www.uhdpaper.com/2025/02/3565c-anime-girl-angel-devil-wings-4k.html?m=0)
+* [CatGirl.jpg](https://x.com/yoroikemomimi/status/1885903024549417009)
+* [FallenAngel.jpg](https://x.com/yoroikemomimi/status/1881620165252788451)
+* [DragonGirl.jpg](https://x.com/yoroikemomimi/status/1875533808394805415)
+* [GhostGirl.jpg](https://x.com/yoroikemomimi/status/1883359123867312141)
+* [Morrigan.jpg](https://x.com/yoroikemomimi/status/1849691722772844834)
+* [tomoe.png](https://www.pngwing.com/en/free-png-pjhwm/)
 
 
