@@ -1,5 +1,5 @@
 # My NixOS Dots
-### My NixOS Dotfiles, basically being updated near constantly as I change them.
+#### My NixOS Dotfiles, basically being updated near constantly as I change them.
 ![SS1](https://raw.githubusercontent.com/Immelancholy/Nix-Dotfiles/refs/heads/main/Screenshots/SS1.png)
 ![SS2](https://raw.githubusercontent.com/Immelancholy/Nix-Dotfiles/refs/heads/main/Screenshots/SS2.png)
 ![SS3](https://raw.githubusercontent.com/Immelancholy/Nix-Dotfiles/refs/heads/main/Screenshots/SS3.png)
