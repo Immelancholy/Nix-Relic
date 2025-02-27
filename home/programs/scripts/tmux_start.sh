@@ -6,5 +6,5 @@ i=0
 while tmux has-session -t $i 2>/dev/null; do
 	((i++))
 done
-tmux new -s $i 'poke.sh; $SHELL'
+tmux new -s $i "poke.sh; $SHELL"
 
