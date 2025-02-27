@@ -1,5 +1,6 @@
 # My NixOS Dots
 * My NixOS Dotfiles, basically being updated near constantly as I change them.
+![SS1](https://raw.githubusercontent.com/Immelancholy/Nix-Dotfiles/refs/heads/main/Screenshots/SS1.png)
 
 ## Installation
 * Add this line to your configuration.nix in /etc/nixos/
