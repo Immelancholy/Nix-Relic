@@ -126,6 +126,7 @@
                 catppuccin.homeManagerModules.catppuccin
                 inputs.nixcord.homeManagerModules.nixcord
                 inputs.nixvim.homeManagerModules.nixvim
+                inputs.spicetify-nix.homeManagerModules.default
               ];
             };
             # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
