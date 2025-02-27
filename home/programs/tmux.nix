@@ -17,7 +17,6 @@
           set -g update-environment 'KITTY_LISTEN_ON'
 
           bind-key k confirm-before -p "kill-session? (y/n)" kill-session
-          bind-key r set -g update-environment 'KITTY_LISTEN_ON'
         '';
       }
     ];
