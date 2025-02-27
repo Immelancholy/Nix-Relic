@@ -3,8 +3,8 @@
         windowrulev2 = opacity 0.90 0.90,class:^(firefox)$
         windowrulev2 = opacity 0.90 0.90,class:^(Google-chrome)$
         windowrulev2 = opacity 0.90 0.90,class:^(Brave-browser)$
-        windowrulev2 = opacity 0.90 0.90,class:^(zen)$
-        windowrulev2 = opacity 0.80 0.80,class:^(org.prismlauncher.PrismLaunche)$
+        windowrulev2 = opacity 0.95 0.95,class:^(zen)$
+        windowrulev2 = opacity 0.80 0.80,class:^(org.prismlauncher.PrismLauncher)$
         windowrulev2 = opacity 0.80 0.80,class:^(code-oss)$
         windowrulev2 = opacity 0.80 0.80,class:^([Cc]ode)$
         windowrulev2 = opacity 0.80 0.80,class:^(code-url-handler)$
