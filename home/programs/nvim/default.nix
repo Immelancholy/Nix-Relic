@@ -8,7 +8,7 @@
     nvim = {
       name = "Neovim";
       genericName = "Text Editor";
-      exec = "kitty sh /home/mela/.local/share/bin/nv.sh";
+      exec = "kitty sh /$HOME/.local/share/bin/nv.sh";
       type = "Application";
       terminal = false;
       categories = ["Utility" "TextEditor"];
