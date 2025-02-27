@@ -4,7 +4,7 @@
     settings = {
       logo = {
         type = "kitty-icat";
-        source = "$HOME/Pictures/fastfetch_logos/GhostGirl.jpg";
+        source = "$HOME/Pictures/fastfetch_logos/Morrigan.jpg";
         width = 25;
         # height = 18;
       };
