@@ -52,9 +52,9 @@
         }
         {
           type = "command";
-          key = " Shell";
+          key = "  Shell";
           KeyColor = "yellow";
-          text = "ps -o fname --no-headers $$";
+          text = ''shell="ps -o fname --no-headers $$";echo $shell'';
         }
         {
           type = "WM";
