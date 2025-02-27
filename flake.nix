@@ -80,9 +80,9 @@
     ...
   } @ inputs: let
     system = "x86_64-linux";
-    user = "mela";
-    git = "Immelancholy";
-    email = "lenalowes0@gmail.com";
+    user = "mela"; # Replace with your username
+    git = "Immelancholy"; #Replace with your GitHub username
+    email = "lenalowes0@gmail.com"; # Replace with your GitHub email
   in {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
@@ -107,7 +107,7 @@
           solaar.nixosModules.default
           catppuccin.nixosModules.catppuccin
           ./system
-          ./modules
+          ./modules # Comment and uncomment to change between amd and nvidia drivers
 
           home-manager.nixosModules.home-manager
           {
