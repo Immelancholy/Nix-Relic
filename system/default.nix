@@ -102,8 +102,6 @@
     config = {
       init = {
         defaultBranch = "main";
-        userName = "${git}";
-        userEmail = "${email}";
       };
     };
   };
