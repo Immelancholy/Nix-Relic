@@ -8,9 +8,18 @@
     experimental-features = ["nix-command" "flakes"];
   };
 ```
-* Run ```sudo nixos-rebuild switch```
-* install git temporarily with ```nix-shell -p git```
-* Clone this repo ```git clone https://github.com/Immelancholy/Nix-Dotfiles.git```
+* Run: 
+```
+sudo nixos-rebuild switch
+```
+* install git temporarily with: 
+```
+nix-shell -p git
+```
+* Clone this repo: 
+```
+git clone https://github.com/Immelancholy/Nix-Dotfiles.git
+```
 * To use please do as instructed in these comments in the flake.nix file
 ```
   outputs = {
@@ -40,9 +49,18 @@
   ];
 }
 ```
-* go into the system folder in this repo and delete hardware-configuration.nix, then run ```sudo nixos-generate-config --show-hardware-config > hardware-configuration.nix```
+* go into the system folder in this repo and delete hardware-configuration.nix, then run:
+```
+sudo nixos-generate-config --show-hardware-config > hardware-configuration.nix
+```
 * delete the contents of /etc/nixos and copy the contents of this repo there.
-* then in the /etc/nixos folder run ```git init && git add.```
-* then still in the /etc/nixos folder run ```sudo nixos-rebuild switch --flake .```
+* then in the /etc/nixos folder run:
+```
+git init && git add .
+```
+* then still in the /etc/nixos folder run:
+```
+sudo nixos-rebuild switch --flake .
+```
 
 
