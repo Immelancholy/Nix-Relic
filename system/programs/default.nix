@@ -155,7 +155,6 @@
         "-e"
         "--force-grab-cursor"
         "-f"
-        "--mangoapp"
         "--rt"
       ];
       env = {
