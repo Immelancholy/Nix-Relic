@@ -5,7 +5,7 @@
       logo = {
         type = "kitty-icat";
         source = "$HOME/Pictures/fastfetch_logos/DemonGirl.jpg";
-        width = 27;
+        width = 25;
         # height = 18;
       };
       display = {
