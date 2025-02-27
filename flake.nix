@@ -82,8 +82,8 @@
   } @ inputs: let
     system = "x86_64-linux";
     user = "mela"; # Replace with your username
-    git = "mela"; #Replace with your Git username
-    email = "mela@nixos.com"; # Replace with your Git email
+    git = "Immelancholy"; #Replace with your Git username
+    email = "lenalowes0@gmail.com"; # Replace with your Git email
   in {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
