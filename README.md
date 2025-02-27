@@ -40,8 +40,8 @@ git clone https://github.com/Immelancholy/Nix-Dotfiles.git
   } @ inputs: let
     system = "x86_64-linux";
     user = "mela"; # Replace with your username
-    git = "Immelancholy"; #Replace with your GitHub username
-    email = "lenalowes0@gmail.com"; # Replace with your GitHub email
+    git = "Immelancholy"; #Replace with your Git username
+    email = "lenalowes0@gmail.com"; # Replace with your Git email
   in {
 ```
 
