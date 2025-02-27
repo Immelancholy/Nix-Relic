@@ -1,6 +1,8 @@
 {
   pkgs,
   user,
+  git,
+  email,
   ...
 }: {
   imports = [
