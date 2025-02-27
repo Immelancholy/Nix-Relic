@@ -1,6 +1,6 @@
 {
   imports = [
-    ./nvidia.nix
-    #./amd.nix
+    ./nvidia.nix # For Nvidia Drivers
+    #./amd.nix # For AMD Drivers
   ];
 }
