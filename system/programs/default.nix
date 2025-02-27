@@ -25,6 +25,15 @@
   programs.zsh.enable = true;
   services.dbus.enable = true;
   environment.systemPackages = with pkgs; [
+    libsForQt5.qt5.qtwayland
+    kdePackages.qtwayland
+    inputs.swww.packages.${pkgs.system}.swww
+    libnotify
+    hypridle
+    hyprpicker
+    xdg-desktop-portal-gtk
+    grimblast
+    wl-clipboard
     inputs.zen-browser.packages."${system}".beta
     # inputs.prismlauncher.packages.${pkgs.system}.prismlauncher
     (prismlauncher.override {

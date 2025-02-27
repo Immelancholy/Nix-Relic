@@ -3,18 +3,6 @@
   inputs,
   ...
 }: {
-  home.packages = with pkgs; [
-    libsForQt5.qt5.qtwayland
-    kdePackages.qtwayland
-    inputs.swww.packages.${pkgs.system}.swww
-    libnotify
-    hypridle
-    hyprpicker
-    xdg-desktop-portal-gtk
-    grimblast
-    wl-clipboard
-  ];
-
   wayland.windowManager.hyprland = {
     enable = true;
     package = null;
