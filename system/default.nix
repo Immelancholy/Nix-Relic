@@ -8,7 +8,6 @@
     ./boot.nix
     ./fonts
     ./programs
-    ../modules
     ./extracache.nix
     ./env.nix
   ];

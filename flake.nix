@@ -105,8 +105,9 @@
 
           nix-flatpak.nixosModules.nix-flatpak
           solaar.nixosModules.default
-          ./system
           catppuccin.nixosModules.catppuccin
+          ./system
+          ./modules
 
           home-manager.nixosModules.home-manager
           {
