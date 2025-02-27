@@ -65,6 +65,7 @@
     dxvk_2
     nv-codec-headers-12
     vivaldi-ffmpeg-codecs
+    w3m-full
     gcc
     sqlite
     lua53Packages.sqlite
