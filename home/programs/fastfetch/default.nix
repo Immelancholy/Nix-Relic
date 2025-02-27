@@ -4,7 +4,7 @@
     settings = {
       logo = {
         type = "kitty-icat";
-        source = "$HOME/Pictures/fastfetch_logos/tomoe.png";
+        source = "$HOME/Pictures/fastfetch_logos/DemonGirl.jpg";
         width = 27;
         # height = 18;
       };
