@@ -54,7 +54,7 @@
           type = "command";
           key = "   Shell";
           KeyColor = "yellow";
-          text = ''shell=$(ps -o fname --no-headers $$);echo $shell'';
+          text = ''shell=$($SHELL --version);echo $shell'';
         }
         {
           type = "WM";
