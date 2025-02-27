@@ -61,10 +61,6 @@
     eza
     libsixel
 
-    spotify-unwrapped
-    spotify-tray
-    spicetify-cli
-
     krita
 
     manix
