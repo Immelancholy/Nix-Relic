@@ -66,7 +66,7 @@
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     stylix.url = "github:danth/stylix";
-    # spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
   };
 
   outputs = {
@@ -82,8 +82,8 @@
   } @ inputs: let
     system = "x86_64-linux";
     user = "mela"; # Replace with your username
-    git = "Immelancholy"; #Replace with your GitHub username
-    email = "lenalowes0@gmail.com"; # Replace with your GitHub email
+    git = "mela"; #Replace with your Git username
+    email = "mela@nixos.com"; # Replace with your Git email
   in {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {

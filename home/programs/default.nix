@@ -165,7 +165,7 @@
   # basic configuration of git, please change to your own
   programs.git = {
     enable = true;
-    userName = "Immelancholy";
-    userEmail = "lenalowes0@gmail.com";
+    userName = "${git}";
+    userEmail = "${email}";
   };
 }
