@@ -26,6 +26,8 @@
       "application/x-extension-shtml" = ["userapp-Zen-OM2912.desktop"];
       "application/x-extension-xhtml" = ["userapp-Zen-OM2912.desktop"];
       "application/x-extension-xht" = ["userapp-Zen-OM2912.desktop"];
+      "image/png" = ["org.gnome.Loupe.desktop;"];
+      "image/jpg" = ["org.gnome.Loupe.desktop;"];
     };
     defaultApplications = {
       "text/plain" = ["nvim.desktop"];
@@ -52,6 +54,8 @@
       "application/x-extension-shtml" = ["userapp-Zen-OM2912.desktop"];
       "application/x-extension-xhtml" = ["userapp-Zen-OM2912.desktop"];
       "application/x-extension-xht" = ["userapp-Zen-OM2912.desktop"];
+      "image/png" = ["org.gnome.Loupe.desktop;"];
+      "image/jpg" = ["org.gnome.Loupe.desktop;"];
     };
   };
 }
