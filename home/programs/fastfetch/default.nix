@@ -51,6 +51,12 @@
           keyColor = "yellow";
         }
         {
+          type = "command";
+          key = " Shell";
+          KeyColor = "yellow";
+          text = "ps -o fname --no-headers $$";
+        }
+        {
           type = "WM";
           key = "  󱗃 WM";
           format = "{2}";
