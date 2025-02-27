@@ -17,9 +17,9 @@
       cava = "cava.sh";
       fastfetch = "clear; fastfetch";
       nvn = "cd /etc/nixos/; nv";
-      switch = "sudo nixos-rebuild switch --flake /etc/nixos/.";
-      update = "nix flake update --flake /etc/nixos/. --commit-lock-file";
-      boot = "sudo nixos-rebuild boot --flake /etc/nixos/.";
+      switch = ''clear; fastfetch; git add .; git commit -m "switch"; sudo nixos-rebuild switch --flake /etc/nixos/. --commit-lock-file'';
+      update = "clear; fastfetch; nix flake update --flake /etc/nixos/. --commit-lock-file";
+      boot = "clear; fastfetch; sudo nixos-rebuild boot --flake /etc/nixos/. --commit-lock-file";
       tmuxs = "tmux_start.sh";
       tdev = "tmux_dev.sh";
       cdn = "cd /etc/nixos/";
