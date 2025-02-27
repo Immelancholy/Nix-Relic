@@ -17,6 +17,7 @@
     ./rmpc
     ./tmux.nix
     ./kitty.nix
+    ./spicetify.nix
   ];
   # programs.mpv = {
   #   enable = true;
