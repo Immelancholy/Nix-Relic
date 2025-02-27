@@ -1,4 +1,13 @@
 {pkgs, ...}: {
+  environment.systemPackages = [
+    pkgs.nvtopPackages.full # nvtop
+    pkgs.mesa-demos
+    pkgs.vulkan-tools
+    pkgs.libva-utils
+    pkgs.vdpauinfo
+    pkgs.driversi686Linux.vdpauinfo
+  ];
+
   services.xserver.videoDrivers = ["amdgpu"];
 
   hardware.graphics = {
@@ -10,12 +19,17 @@
       libvdpau-va-gl
       libvdpau
       vaapiVdpau
-      amdvlk
     ];
     extraPackages32 = with pkgs.driversi686Linux; [
       libvdpau-va-gl
       libva-vdpau-driver
-      amdvlk
     ];
+  };
+  harware.amdgpu = {
+    amdvlk = {
+      enable = true;
+      support32Bit = true;
+    };
+    initrd.enable = true;
   };
 }
