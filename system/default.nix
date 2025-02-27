@@ -13,6 +13,7 @@
     ./extracache.nix
     ./env.nix
   ];
+  services.gnome.gnome-keyring.enable = true;
 
   nixpkgs.config.allowUnfree = true;
 
