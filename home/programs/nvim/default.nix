@@ -2,13 +2,14 @@
   pkgs,
   inputs,
   lib,
+  user,
   ...
 }: {
   xdg.desktopEntries = {
     nvim = {
       name = "Neovim";
       genericName = "Text Editor";
-      exec = "kitty sh /$HOME/.local/share/bin/nv.sh";
+      exec = "kitty sh /home/${user}/.local/share/bin/nv.sh";
       type = "Application";
       terminal = false;
       categories = ["Utility" "TextEditor"];
