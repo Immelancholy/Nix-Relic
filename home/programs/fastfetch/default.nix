@@ -4,8 +4,8 @@
     settings = {
       logo = {
         type = "kitty-icat";
-        source = ''$(find $HOME/Pictures/fastfetch_logos/ -name "*.jpg" | shuf -n 1)'';
-        width = 24;
+        source = ''$(find $HOME/Pictures/fastfetch_logos/ -name "*.jpg" -o -name "*.png" | shuf -n 1)'';
+        width = 23;
         # height = 18;
       };
       display = {
