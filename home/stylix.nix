@@ -47,6 +47,7 @@
       yazi.enable = false;
       nixvim.enable = false;
       btop.enable = false;
+      spicetify.enable = false;
     };
   };
 }
