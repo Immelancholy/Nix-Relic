@@ -7,7 +7,7 @@
 in {
   programs.spicetify = {
     enable = true;
-    enabledExtensions = with spicePkgs.extension; [
+    enabledExtensions = with spicePkgs.extensions; [
       adblockify
       shuffle
     ];
