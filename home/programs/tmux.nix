@@ -15,6 +15,9 @@
           set -agF status-right "#{E:@catppuccin_status_cpu}"
           set -gq allow-passthrough on
           set -g update-environment 'KITTY_LISTEN_ON'
+
+          bind-key k confirm-before -p "kill-session? (y/n)" kill-session
+          bind-key r update-environment 'KITTY_LISTEN_ON'
         '';
       }
     ];
