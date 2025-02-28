@@ -111,6 +111,11 @@
     };
   };
 
+  xdg.portal.extraPortals = with pkgs; [
+    xdg-desktop-portal-gtk
+    lxqt.xdg-desktop-portal-lxqt
+  ];
+
   nix.gc = {
     automatic = true;
     dates = "daily";
