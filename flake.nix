@@ -29,7 +29,7 @@
       flake = false;
     };
     yamb = {
-      url = "github:Immelancholy/yamb.yazi";
+      url = "github:h-hg/yamb.yazi";
       flake = false;
     };
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
