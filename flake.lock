@@ -1998,15 +1998,15 @@
     "yamb": {
       "flake": false,
       "locked": {
-        "lastModified": 1740369357,
+        "lastModified": 1740743840,
         "narHash": "sha256-NMxZ8/7HQgs+BsZeH4nEglWsRH2ibAzq7hRSyrtFDTA=",
-        "owner": "Immelancholy",
+        "owner": "h-hg",
         "repo": "yamb.yazi",
-        "rev": "480d5ca96e062a059cbf96d73bb16d379bf9299c",
+        "rev": "22af0033be18eead7b04c2768767d38ccfbaa05b",
         "type": "github"
       },
       "original": {
-        "owner": "Immelancholy",
+        "owner": "h-hg",
         "repo": "yamb.yazi",
         "type": "github"
       }
