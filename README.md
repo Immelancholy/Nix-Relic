@@ -7,6 +7,8 @@
 ![SS3](https://raw.githubusercontent.com/Immelancholy/Nix-Dotfiles/refs/heads/main/Screenshots/SS3.png)
 
 ## Installation
+> [!WARNING]
+> This config is what I use on my pc, it will have software you have no need for. I have tried my best to make it more accessible by setting up variables for user and git and having all home paths use either $HOME or /home/${user}/ but I can't guarantee I fixed it all, if you notice something along those lines please make an issue and I'll try to fix it fast. These dotfiles also change constantly according to my needs so if you update with these you will lose or gain software that was/wasn't installed before.
 * Add this line to your configuration.nix in /etc/nixos/
 ```
   nix.settings = {
