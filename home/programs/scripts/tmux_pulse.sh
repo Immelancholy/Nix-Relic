@@ -10,11 +10,5 @@ while tmux has-session -t $sesh 2>/dev/null; do
 done
 tmux new -d -s $sesh "pulsemixer; $SHELL" 
 
-tmux split-window -v
-
-tmux select-pane -t 0
-
-tmux resize-pane -D 10
-
 tmux attach-session -t $sesh
 
