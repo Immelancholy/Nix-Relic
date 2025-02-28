@@ -14,7 +14,7 @@
     ./env.nix
   ];
   services.gnome.gnome-keyring.enable = true;
-  security.pam.services.Hyprland.enableGnomeKeyring = true;
+  security.pam.services.sddm.enableGnomeKeyring = true;
   programs.seahorse.enable = true;
   programs.ssh.startAgent = true;
 
