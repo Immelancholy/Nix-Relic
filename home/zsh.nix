@@ -42,9 +42,9 @@
         file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
       }
     ];
-    profileExtra = ''
-      eval $(gnome-keyring-daemon --start --daemonize)
-    '';
+    # profileExtra = ''
+    #   eval $(gnome-keyring-daemon --start --daemonize)
+    # '';
     loginExtra = ''
       eval $(gnome-keyring-daemon --start --daemonize)
     '';
