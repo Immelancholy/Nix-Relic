@@ -8,7 +8,7 @@
       exclusive = true;
       gtk-layer-shell = true;
       height = 28;
-      
+
       modules-left = [
         "custom/padd"
         "custom/l_end"
@@ -54,7 +54,7 @@
         persistent-workspaces = {
         };
       };
-      
+
       "hyprland/window" = {
         format = " 󱄅 {}";
         separate-outputs = true;
@@ -113,8 +113,8 @@
         critical-threshold = 80;
         format = "{temperatureC}°C {icon}";
         format-icons = [
-          "" 
-          "" 
+          ""
+          ""
           ""
         ];
       };
@@ -144,14 +144,15 @@
             " "
           ];
         };
-        on-click = "pavucontrol";
+        on-click = ''hyprctl dispatch exec "[float; size 960 560]" kitty tmux_pulse.sh'';
       };
       "pulseaudio#mic" = {
         scroll-step = 1;
         format = "{format_source}";
         format-source = "󰍬";
         format-source-muted = "󰍭";
-        on-click = "pavucontrol";
+        on-click = ''hyprctl dispatch exec "[float; size 960 560]" kitty tmux_pulse.sh'';
+
         tooltip-format = "{format_source} {source_desc} // {source_volume}%";
       };
       "custom/power" = {
