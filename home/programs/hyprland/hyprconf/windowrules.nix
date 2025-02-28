@@ -18,7 +18,7 @@
         windowrulev2 = opacity 0.80 0.80,class:^(qt6ct)$
         windowrulev2 = opacity 0.90 0.90,class:^(obsidian)$
         windowrulev2 = opacity 0.80 0.80,class:^(kvantummanager)$
-        windowrulev2 = opacity 0.80 0.70,class:^(org.pulseaudio.pavucontrol)$
+        windowrulev2 = opacity 0.90 0.80,class:^(org.pulseaudio.pavucontrol)$
         windowrulev2 = opacity 0.80 0.70,class:^(blueman-manager)$
         windowrulev2 = opacity 0.80 0.70,class:^(nm-applet)$
         windowrulev2 = opacity 0.80 0.70,class:^(nm-connection-editor)$
