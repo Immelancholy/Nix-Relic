@@ -13,7 +13,7 @@
     PATH = [
       "${XDG_BIN_HOME}"
     ];
-    #SSH_AUTH_SOCK = "/run/user/1000/keyring/ssh";
+    SSH_AUTH_SOCK = "/run/user/1000/keyring/ssh";
   };
   environment.etc."xdg/user-dirs.defaults".text = ''
     DESKTOP=Desktop
