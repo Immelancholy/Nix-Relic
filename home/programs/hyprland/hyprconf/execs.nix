@@ -3,7 +3,7 @@
     exec-once = [
       "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       "hyprctl setcursor Bibata-Modern-Ice 20"
-      "eval $(/run/wrappers/bin/gnome-keyring-daemon --start --daemonize)"
+      "eval $(/run/wrappers/bin/gnome-keyring-daemon --start --components=ssh)"
       "export SSH_AUTH_SOCK"
       "$scr/swww.sh"
       "wl-paste --type text --watch cliphist store # Stores only image data"
