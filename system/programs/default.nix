@@ -46,6 +46,7 @@
         temurin-bin
       ];
     })
+    seahorse
     kitty
     inputs.yazi.packages.${pkgs.system}.default
     qpwgraph
