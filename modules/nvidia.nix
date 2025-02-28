@@ -10,6 +10,7 @@
     pkgs.libva-utils
     pkgs.vdpauinfo
     pkgs.driversi686Linux.vdpauinfo
+    pkgs.vulkan-validation-layers
   ];
 
   environment.variables = {
