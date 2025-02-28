@@ -4,7 +4,7 @@
       "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       "hyprctl setcursor Bibata-Modern-Ice 20"
       "$scr/swww.sh"
-      "eval $(gnome-keyring-daemon --start --daemonize)"
+      #"eval $(gnome-keyring-daemon --start --daemonize)"
       "wl-paste --type text --watch cliphist store # Stores only image data"
       "wl-paste --type image --watch cliphist store # Stores only image data"
       "[workspace 1 silent; float; size 858 559; move 640 40] $term $scr/rmpc.sh"
