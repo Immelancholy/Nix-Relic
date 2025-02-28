@@ -46,7 +46,6 @@
         temurin-bin
       ];
     })
-    seahorse
     kitty
     inputs.yazi.packages.${pkgs.system}.default
     qpwgraph
@@ -67,6 +66,7 @@
     nv-codec-headers-12
     vivaldi-ffmpeg-codecs
     w3m-full
+    libsecret
     gcc
     sqlite
     lua53Packages.sqlite
