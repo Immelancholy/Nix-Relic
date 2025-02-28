@@ -50,7 +50,7 @@
       recursive = true;
       executable = true;
     };
-    ".zprofile".text = ''
+    ".zshenv".text = ''
       eval $(gnome-keyring-daemon --start --daemonize)
       export SSH_AUTH_SOCK
     '';
