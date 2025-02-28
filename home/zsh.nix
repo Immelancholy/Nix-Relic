@@ -46,10 +46,13 @@
       eval $(gnome-keyring-daemon --start --daemonize)
       export SSH_AUTH_SOCK
     '';
-    # envExtra = ''
-    #   eval $(gnome-keyring-daemon --start --daemonize)
-    #   export SSH_AUTH_SOCK
-    # '';
+    loginExtra = ''
+      eval $(gnome-keyring-daemon --start --daemonize)
+      export SSH_AUTH_SOCK
+    '';
+    envExtra = ''
+      export SSH_AUTH_SOCK
+    '';
     initExtra = ''
       source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
       source <(fzf --zsh)
