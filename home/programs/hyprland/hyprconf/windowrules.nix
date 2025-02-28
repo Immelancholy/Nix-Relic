@@ -119,6 +119,7 @@
         windowrulev2 = float,class:^(xdg-desktop-portal-gtk)$
         windowrulev2 = opacity 0.80 0.80,class:^(xdg-desktop-portal-gtk)$
         windowrulev2 = opacity 0.80 0.80,title:^(MainPicker)$
+        windowrulev2 = opacity 0.80 0.80,title:^(File Upload)$
 
         layerrule = blur,rofi
         layerrule = ignorezero,rofi
