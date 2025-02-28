@@ -24,6 +24,7 @@
       tdev = "tmux_dev.sh";
       cdn = "cd /etc/nixos/";
       tnix = "tmux_nix.sh";
+      nixp = "cd /etc/nixos; git push -u origin main; cd -";
     };
     antidote = {
       enable = true;
