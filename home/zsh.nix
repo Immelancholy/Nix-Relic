@@ -43,7 +43,7 @@
       }
     ];
     initExtra = ''
-      #eval $(/run/wrappers/bin/gnome-keyring-daemon --start --components=ssh)
+      ##eval $(/run/wrappers/bin/gnome-keyring-daemon --start --components=ssh)
       source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
       source <(fzf --zsh)
 
