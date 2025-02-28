@@ -42,6 +42,14 @@
         file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
       }
     ];
+    profileExtra = ''
+      eval $(gnome-keyring-daemon --start --daemonize)
+      export SSH_AUTH_SOCK
+    '';
+    envExtra = ''
+      eval $(gnome-keyring-daemon --start --daemonize)
+      export SSH_AUTH_SOCK
+    '';
     initExtra = ''
       #eval $(/run/wrappers/bin/gnome-keyring-daemon --start --components=ssh)
       source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
