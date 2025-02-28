@@ -14,7 +14,7 @@ tmux split-window -v
 
 tmux select-pane -t 0
 
-tmux resize-pane -D 5
+tmux resize-pane -D 10
 
 tmux attach-session -t $sesh
 
