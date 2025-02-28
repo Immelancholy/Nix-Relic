@@ -106,7 +106,7 @@
         windowrulev2 = opacity 0.80 0.80, title:^(Qalculate!)$
 
         windowrulev2 = opacity 0.80 0.80,class:^(dev.zed.Zed-Dev)$
-        windowrulev2 = size 855 550,class:^(org.pulseaudio.pavucontrol)$
+        windowrulev2 = size 850 540,class:^(org.pulseaudio.pavucontrol)$
 
         # windowrulev2 = noblur, class:^(kitty)$
 
