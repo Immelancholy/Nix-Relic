@@ -12,6 +12,7 @@
       {
         plugin = tmuxPlugins.cpu;
         extraConfig = ''
+          set -g default-command -i "${SHELL}"
           set -agF status-right "#{E:@catppuccin_status_cpu}"
           set -gq allow-passthrough on
           set -g update-environment 'KITTY_LISTEN_ON'
