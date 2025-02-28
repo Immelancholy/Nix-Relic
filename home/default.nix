@@ -6,6 +6,7 @@
 }: {
   home.username = "${user}";
   home.homeDirectory = "/home/${user}";
+  systemd.user.sessionVariables.SSH_AUTH_SOCK = "/run/user/1000/keyring/ssh";
 
   # link the configuration file in current directory to the specified location in home directory
   # home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;

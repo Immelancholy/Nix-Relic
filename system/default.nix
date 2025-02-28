@@ -14,7 +14,6 @@
     ./env.nix
   ];
   services.gnome.gnome-keyring.enable = true;
-  systemd.user.sessionVariables.SSH_AUTH_SOCK = "/run/user/1000/keyring/ssh";
 
   nixpkgs.config.allowUnfree = true;
 
