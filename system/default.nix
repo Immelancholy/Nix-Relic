@@ -14,6 +14,7 @@
     ./env.nix
   ];
   services.gnome.gnome-keyring.enable = true;
+  security.pam.services.hyprland.enableGnomeKeyring = true;
 
   nixpkgs.config.allowUnfree = true;
 
