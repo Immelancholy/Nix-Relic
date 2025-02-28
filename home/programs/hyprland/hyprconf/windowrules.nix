@@ -4,6 +4,7 @@
         # windowrulev2 = opacity 0.90 0.90,class:^(Google-chrome)$
         # windowrulev2 = opacity 0.90 0.90,class:^(Brave-browser)$
         # windowrulev2 = opacity 0.90 0.90,class:^(zen)$
+        windowrulev2 = opacity 0.80 0.80,class:^(gcr-prompter)$
         windowrulev2 = opacity 0.80 0.80,class:^(org.gnome.seahorse.Application)$
         windowrulev2 = opacity 0.80 0.80,class:^(org.prismlauncher.PrismLauncher)$
         windowrulev2 = opacity 0.80 0.80,class:^(code-oss)$
