@@ -45,9 +45,6 @@
     profileExtra = ''
       eval $(gnome-keyring-daemon --start --daemonize)
     '';
-    # loginExtra = ''
-    #   eval $(gnome-keyring-daemon --start --daemonize)
-    # '';
     initExtra = ''
       source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
       source <(fzf --zsh)
