@@ -144,14 +144,16 @@
             " "
           ];
         };
-        on-click = ''hyprctl dispatch exec "[float; size 960 560]" kitty tmux_pulse.sh'';
+        # on-click = ''hyprctl dispatch exec "[float; size 960 560]" kitty tmux_pulse.sh'';
+        on-click = "pavucontrol";
       };
       "pulseaudio#mic" = {
         scroll-step = 1;
         format = "{format_source}";
         format-source = "󰍬";
         format-source-muted = "󰍭";
-        on-click = ''hyprctl dispatch exec "[float; size 960 560]" kitty tmux_pulse.sh'';
+        # on-click = ''hyprctl dispatch exec "[float; size 960 560]" kitty tmux_pulse.sh'';
+        on-click = "pavucontrol";
 
         tooltip-format = "{format_source} {source_desc} // {source_volume}%";
       };
