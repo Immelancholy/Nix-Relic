@@ -47,7 +47,7 @@ git clone https://github.com/Immelancholy/Nix-Dotfiles.git
     email = "lenalowes0@gmail.com"; # Replace with your Git email
   in {
 ```
-* enable/disable secureboot (you'll want this disabled on first boot and then set it up using the guide [here](https://github.com/nix-community/lanzaboote/blob/master/docs/QUICK_START.md))
+* enable/disable secureboot (you'll want this disabled on first boot and then set it up using the guide [here](https://github.com/nix-community/lanzaboote/blob/master/docs/QUICK_START.md)).
 ```
 } @ inputs: let
     system = "x86_64-linux";
