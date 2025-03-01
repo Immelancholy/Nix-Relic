@@ -25,6 +25,7 @@
       cdn = "cd /etc/nixos/";
       tnix = "tmux_nix.sh";
       nixp = "cd /etc/nixos; git push -u origin main; cd -";
+      firmware = "sudo systemctl reboot --firmware-setup";
     };
     antidote = {
       enable = true;
