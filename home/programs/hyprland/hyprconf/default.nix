@@ -5,7 +5,7 @@
     "$files" = "$term $scr/yazi.sh";
     "$files2" = "nemo";
     "$mod" = "SUPER";
-    "$menu" = "rofi -show drun";
+    "$menu" = ''rofi -show drun -run-command "uwsm app -- {cmd}"'';
     "$browser" = "zen";
     "$edit" = "$term sh $scr/nv.sh";
     "$player" = "mpd";
