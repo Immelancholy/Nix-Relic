@@ -13,6 +13,9 @@
     pkgs.vulkan-validation-layers
     pkgs.egl-wayland
   ];
+  boot.kernelParams = [
+    "module_blacklist=amdgpu"
+  ];
 
   environment.variables = {
     # Required to run the correct GBM backend for nvidia GPUs on wayland
