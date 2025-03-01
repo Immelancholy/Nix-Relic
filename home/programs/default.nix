@@ -19,7 +19,7 @@
     ./kitty.nix
     ./spicetify.nix
     ./wlogout
-    ./BespokeSynth
+    ./DAW
   ];
   # programs.mpv = {
   #   enable = true;
