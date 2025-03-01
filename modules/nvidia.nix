@@ -13,10 +13,6 @@
     pkgs.vulkan-validation-layers
     pkgs.egl-wayland
   ];
-  boot.kernelParams = [
-    "module_blacklist=amdgpu"
-    "module_blacklist=i915"
-  ];
   boot.blacklistedKernelModules = ["nouveau"];
 
   environment.variables = {
