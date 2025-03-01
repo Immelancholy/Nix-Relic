@@ -47,6 +47,7 @@
         temurin-bin
       ];
     })
+    sbctl
     kitty
     inputs.yazi.packages.${pkgs.system}.default
     qpwgraph
