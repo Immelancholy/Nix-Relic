@@ -16,7 +16,7 @@
       }
       {
         label = "logout";
-        action = "uwsm stop";
+        action = "kitty";
         text = "Logout";
         keybind = "e";
       }
