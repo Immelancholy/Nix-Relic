@@ -11,6 +11,7 @@
     pkgs.vdpauinfo
     pkgs.driversi686Linux.vdpauinfo
     pkgs.vulkan-validation-layers
+    pkgs.egl-wayland
   ];
 
   environment.variables = {
