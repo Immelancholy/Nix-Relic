@@ -11,7 +11,6 @@
       ll = "ls -l";
       edit = "sudo -e";
       nv = "nv.sh";
-      yazi = "yazi.sh";
       neo = "neo.sh";
       rmpc = "rmpc.sh";
       cava = "cava.sh";
@@ -54,17 +53,6 @@
       [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
       export PATH="$PATH:$HOME/.local/share/bin"
-
-      function y() {
-        local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-        kitty @ set-spacing padding=10
-        yazi "$@" --cwd-file="$tmp"
-        kitty @ set-spacing padding=default
-        if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-          builtin cd -- "$cwd"
-        fi
-        rm -f -- "$tmp"
-      }
 
     '';
   };

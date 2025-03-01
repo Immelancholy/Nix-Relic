@@ -7,6 +7,7 @@
     enable = true;
     package = inputs.yazi.packages.${pkgs.system}.default;
     enableZshIntegration = true;
+    shellWrapperName = "y";
     plugins = {
       full-border = "${inputs.yazi-plugins}/full-border.yazi";
       git = "${inputs.yazi-plugins}/git.yazi";
