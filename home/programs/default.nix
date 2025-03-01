@@ -18,6 +18,7 @@
     ./tmux.nix
     ./kitty.nix
     ./spicetify.nix
+    ./wlogout
   ];
   # programs.mpv = {
   #   enable = true;
