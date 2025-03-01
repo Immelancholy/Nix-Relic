@@ -16,7 +16,7 @@
       }
       {
         label = "logout";
-        action = "kitty";
+        action = "pkill -u $USER";
         text = "Logout";
         keybind = "e";
       }
