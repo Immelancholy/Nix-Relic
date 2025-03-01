@@ -4,7 +4,7 @@
     layout = [
       {
         label = "lock";
-        action = "swaylock; loginctl suspend";
+        action = "swaylock";
         text = "Lock";
         keybind = "l";
       }
