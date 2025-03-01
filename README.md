@@ -47,7 +47,22 @@ git clone https://github.com/Immelancholy/Nix-Dotfiles.git
     email = "lenalowes0@gmail.com"; # Replace with your Git email
   in {
 ```
+* enable/disable secureboot (you'll want this disabled on first boot and then set it up using the guide [here](https://github.com/nix-community/lanzaboote/blob/master/docs/QUICK_START.md))
+```
+} @ inputs: let
+    system = "x86_64-linux";
+    user = "mela"; # Replace with your username
+    git = "Immelancholy"; #Replace with your Git username
+    email = "lenalowes0@gmail.com"; # Replace with your Git email
+  in {
+    nixosConfigurations = {
+      nixos = nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = {inherit inputs user git email;};
+        modules = [
+          ./system/secboot.nix # uncomment this to disable secureboot
 
+```
 * Then go into the modules folder and edit default.nix and comment/uncomment these modules to switch the GPU drivers for your pc.
 
 ```{
