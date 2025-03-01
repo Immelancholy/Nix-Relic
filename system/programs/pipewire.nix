@@ -173,7 +173,7 @@
       "node.latency" = "256/96000";
       "node.rate" = "1/96000";
       "node.quantum" = "256/96000";
-      "node-force-quantum" = 256;
+      "node-force-quantum" = 128;
     };
   };
   services.pipewire.extraConfig.client."92-low-latency" = {
