@@ -1,7 +1,7 @@
-{
+{lib, ...}: {
   programs.wlogout = {
     enable = true;
-    layout = [
+    layout = lib.mkDefault [
       {
         label = "lock";
         action = "swaylock; loginctl suspend";
