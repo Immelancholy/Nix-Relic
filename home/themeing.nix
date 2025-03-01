@@ -40,7 +40,7 @@
       enable = true;
     };
     wlogout = {
-      enable = false;
+      enable = true;
       iconStyle = "wleave";
     };
     obs = {
