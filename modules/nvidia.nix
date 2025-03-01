@@ -15,7 +15,9 @@
   ];
   boot.kernelParams = [
     "module_blacklist=amdgpu"
+    "module_blacklist=i915"
   ];
+  boot.blacklistedKernelModules = ["nouveau"];
 
   environment.variables = {
     # Required to run the correct GBM backend for nvidia GPUs on wayland
