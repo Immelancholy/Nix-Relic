@@ -65,6 +65,7 @@
   };
   home.packages = with pkgs; [
     inputs.zen-browser.packages."${system}".beta
+    pipes
     lazygit
     loupe
     glycin-loaders
