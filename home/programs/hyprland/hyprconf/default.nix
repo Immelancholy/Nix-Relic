@@ -2,12 +2,12 @@
   wayland.windowManager.hyprland.settings = {
     "$scr" = "$HOME/.local/share/bin/";
     "$term" = "kitty";
-    "$files" = "yazi";
+    "$files" = "$term yazi";
     "$files2" = "nemo";
     "$mod" = "SUPER";
     "$menu" = ''rofi -show drun -run-command "uwsm app -- {cmd}"'';
     "$browser" = "zen";
-    "$edit" = "$term sh $scr/nv.sh";
+    "$edit" = "$term $scr/nv.sh";
     "$player" = "mpd";
     "$playerctl" = "playerctl --player=$player";
     monitor = ", 1920x1080@144, auto, 1";
