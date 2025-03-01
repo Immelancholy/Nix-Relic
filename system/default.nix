@@ -70,6 +70,8 @@
     LC_TIME = "en_GB.UTF-8";
   };
 
+  services.xserver.enable = true;
+
   services.xserver.xkb = {
     layout = "gb";
     variant = "";
