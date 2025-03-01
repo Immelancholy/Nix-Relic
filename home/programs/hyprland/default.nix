@@ -14,6 +14,11 @@
       inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
       inputs.hyprland-plugins.packages.${pkgs.system}.hyprtrails
     ];
+    systemd = {
+      # disable the systemd integration, as it conflicts with uwsm.
+      enable = false;
+      variables = ["--all"];
+    };
   };
 
   programs.swaylock = {
