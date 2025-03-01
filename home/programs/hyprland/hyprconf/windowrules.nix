@@ -120,7 +120,7 @@
         windowrulev2 = opacity 0.80 0.80,class:^(xdg-desktop-portal-gtk)$
         windowrulev2 = opacity 0.80 0.80,title:^(MainPicker)$
         windowrulev2 = opacity 0.90 0.80,title:^(File Upload)$
-        windowrulev2 = opacity 0.90 0.80,title:^(Hyprland Polkit Agent)$
+        windowrulev2 = opacity 0.80 0.70,title:^(Hyprland Polkit Agent)$
 
         layerrule = blur,rofi
         layerrule = ignorezero,rofi
