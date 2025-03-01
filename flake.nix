@@ -67,6 +67,12 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     stylix.url = "github:danth/stylix";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v0.4.2";
+
+      # Optional but recommended to limit the size of your system closure.
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -78,6 +84,7 @@
     solaar,
     rust-overlay,
     nix-flatpak,
+    lanzaboote,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -103,7 +110,7 @@
               )
             ];
           })
-
+          lanzaboote.nixosModules.lanzaboote
           nix-flatpak.nixosModules.nix-flatpak
           solaar.nixosModules.default
           catppuccin.nixosModules.catppuccin
