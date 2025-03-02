@@ -1,4 +1,4 @@
-{
+{user, ...}: {
   programs.kitty = {
     enable = true;
     shellIntegration.enableZshIntegration = true;
@@ -24,5 +24,14 @@
       cursor_shape beam
       cursor_blink_interval 0.5 ease-in-out
     '';
+  };
+  xdg.desktopEntries = {
+    kitty = {
+      name = "Kitty";
+      genericName = "Terminal";
+      exec = "kitty sh /home/${user}/.local/share/bin/poke.sh";
+      type = "Application";
+      terminal = false;
+    };
   };
 }
