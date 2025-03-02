@@ -4,10 +4,7 @@
 #----- Pretty much yoinked this from the HYDE project --------
 
 # Default values
-scrDir="$(dirname "$(realpath "$0")")"
 # shellcheck disable=SC1091
-source "${scrDir}/globalcontrol.sh"
-
 help_msg() {
     cat <<HELP
 Usage: $(basename "$0") [command] [OPTIONS]
