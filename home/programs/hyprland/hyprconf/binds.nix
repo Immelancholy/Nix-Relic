@@ -117,7 +117,7 @@
 
     bind = $mod, B, togglesplit
 
-    bind = Ctrl+Shift, Escape, exec, uwsm app -- $term --title "btop" sh $scr/btop.sh
+    bind = Ctrl+Shift, Escape, exec, uwsm app -- $term --title "btop" btop
 
     bindd = $mod+Shift, P,Color Picker , exec, hyprpicker -a # Pick color (Hex) >> clipboard#
 
