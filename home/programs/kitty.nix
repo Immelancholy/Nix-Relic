@@ -29,9 +29,10 @@
     kitty = {
       name = "Kitty";
       genericName = "Terminal";
-      exec = "kitty sh /home/${user}/.local/share/bin/poke.sh";
+      exec = "kitty --hold sh /home/${user}/.local/share/bin/poke.sh";
       type = "Application";
       terminal = false;
+      icon = "kitty";
     };
   };
 }
