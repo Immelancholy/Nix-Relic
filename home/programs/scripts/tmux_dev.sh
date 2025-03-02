@@ -8,7 +8,9 @@ while tmux has-session -t $sesh 2>/dev/null; do
 	((i++))
 	sesh="dev$i"
 done
-tmux new -d -s $sesh "nv.sh; $SHELL" 
+tmux new -d -s $sesh 
+
+tmux send-keys 'yazi' C-m
 
 tmux new-window "lazygit; $SHELL" 
 
