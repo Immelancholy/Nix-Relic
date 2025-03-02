@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 #----- Optimized bars animation without much CPU usage increase --------
 #----- Optimized bars animation without much CPU usage increase pt2 --------
+#----- Pretty much yoinked this from the HYDE project --------
 
 # Default values
 scrDir="$(dirname "$(realpath "$0")")"
@@ -15,7 +16,7 @@ Commands:
     waybar - Generate a cava bar for waybar.
     hyprlock - Generate a cava bar for hyprlock.
 
-    Note: Configurations are set in ~/.config/hyde/config.toml
+    Note: Configurations are set in ~/.config/cavaway/config.toml
 
 Options:
     stdout:
@@ -34,7 +35,7 @@ HELP
 }
 
 stdout() {
-    local temp_dir=${HYDE_RUNTIME_DIR:-/tmp}
+    local temp_dir=${XDG_CONFIG_HOME:-/cavaway/tmp}
     local name="${cava_cmd:-"stdout"}"
     local config_file="${temp_dir}/cava.${name}"
 
