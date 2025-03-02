@@ -20,6 +20,7 @@
     ./spicetify.nix
     ./wlogout
     ./DAW
+    ./swayidle.nix
   ];
   # programs.mpv = {
   #   enable = true;
