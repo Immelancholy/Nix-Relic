@@ -157,6 +157,7 @@ sudo nixos-rebuild switch --flake .
 ```
 * in the /etc/nixos folder
 * or just use the alias ```switch``` that I added that automatically adds and commits changes to the git repo and runs the above command.
+* Do this after making any changes in the /etc/nixos/ folder.
 I also have aliases for switch on boot and updating with:
 ```
 boot
