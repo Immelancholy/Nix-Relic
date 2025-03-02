@@ -27,9 +27,7 @@
       "application/x-extension-xhtml" = ["userapp-Zen-OM2912.desktop"];
       "application/x-extension-xht" = ["userapp-Zen-OM2912.desktop"];
       "image/png" = ["org.gnome.Loupe.desktop;"];
-      "image/jpg" = ["org.gnome.Loupe.desktop;"];
-      "application/jpg" = ["org.gnome.Loupe.desktop;"];
-
+      "image/jpeg" = ["org.gnome.Loupe.desktop;"];
       "application/x-gnome-saved-search" = ["nemo.desktop"];
     };
     defaultApplications = {
@@ -58,8 +56,7 @@
       "application/x-extension-xhtml" = ["userapp-Zen-OM2912.desktop"];
       "application/x-extension-xht" = ["userapp-Zen-OM2912.desktop"];
       "image/png" = ["org.gnome.Loupe.desktop;"];
-      "image/jpg" = ["org.gnome.Loupe.desktop;"];
-      "application/jpg" = ["org.gnome.Loupe.desktop;"];
+      "image/jpeg" = ["org.gnome.Loupe.desktop;"];
       "application/x-gnome-saved-search" = ["nemo.desktop"];
     };
   };
