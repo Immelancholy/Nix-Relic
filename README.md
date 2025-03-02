@@ -20,7 +20,7 @@
 ```
 sudo nixos-rebuild switch
 ```
-* install git temporarily wit: 
+* install git temporarily with: 
 ```
 nix-shell -p git
 ```
