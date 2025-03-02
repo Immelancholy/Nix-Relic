@@ -48,6 +48,7 @@
       nixvim.enable = false;
       btop.enable = false;
       spicetify.enable = false;
+      kitty.enable = false;
     };
   };
 }
