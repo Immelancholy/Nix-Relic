@@ -33,7 +33,6 @@ HELP
 
 stdout() {
     local temp_dir=${XDG_CONFIG_HOME:-/cavaway/tmp}
-		mkdir -p "$temp_dir"
     local name="${cava_cmd:-"stdout"}"
     local config_file="${temp_dir}/cava.${name}"
 
