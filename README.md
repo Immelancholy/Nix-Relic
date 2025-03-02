@@ -116,6 +116,39 @@ git init && git add .
 ```
 sudo nixos-rebuild switch --flake .
 ```
+## POST-INSTALL
+* Remember to set default device to Desktop Output and Desktop Input in pavucontrol (Not necessary but I would recommended)
+* Set default device to Commes Output and Commes Input in discord lol (Again not necessary but splitting desktop and commes audio is useful)
+* You'll want to configure mpd to use your actual audio device as the output in home/programs/mpd/default.nix
+```
+        audio_output {
+          type  "pipewire"
+          name  "Pipewire Sound Server"
+          target  "alsa_output.usb-Audient_Audient_iD4-00.pro-output-0"
+        }
+```
+* Same with cava except you want to set it to the object.serial of virtual cable. Can be found with 
+```
+wpctl status
+```
+followed by 
+```
+wpctl inspect ID of Virtual Cable from wpctl status
+```
+In my case for example
+```
+wpctl inspect 43
+```
+Which give me an object.serial of 44, then I'd input that in home/programs/cava/default.nix
+```
+      };
+      input = {
+        method = "pipewire";
+        source = "44";
+        sample_rate = 48000;
+        sample_bits = 32;
+      };
+```
 ### Image Sources
 * [Backgound](https://www.uhdpaper.com/2025/02/3565c-anime-girl-angel-devil-wings-4k.html?m=0)
 * [CatGirl.jpg](https://x.com/yoroikemomimi/status/1885903024549417009)
