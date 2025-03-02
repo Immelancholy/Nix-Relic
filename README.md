@@ -151,6 +151,20 @@ Which give me an object.serial of 44, then I'd input that in home/programs/cava/
       };
 ```
 * You also need to make a patchbay in qpwgraph routing Desktop Output/Input and Commes Output/Input to your audio sink and audio source.
+* Remember to run either
+```
+sudo nixos-rebuild switch --flake .
+```
+* in the /etc/nixos folder
+* or just use the alias ```switch``` that I added that automatically adds and commits changes to the git repo and runs the above command.
+I also have aliases for switch on boot and updating with:
+```
+boot
+```
+and
+```
+update
+```
 ### Image Sources
 * [Backgound](https://www.uhdpaper.com/2025/02/3565c-anime-girl-angel-devil-wings-4k.html?m=0)
 * [CatGirl.jpg](https://x.com/yoroikemomimi/status/1885903024549417009)
