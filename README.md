@@ -149,6 +149,7 @@ Which give me an object.serial of 44, then I'd input that in home/programs/cava/
         sample_bits = 32;
       };
 ```
+* You also need to make a patchbay in qpwgraph routing Desktop Output/Input and Commes Output/Input to your audio sink and audio source.
 ### Image Sources
 * [Backgound](https://www.uhdpaper.com/2025/02/3565c-anime-girl-angel-devil-wings-4k.html?m=0)
 * [CatGirl.jpg](https://x.com/yoroikemomimi/status/1885903024549417009)
