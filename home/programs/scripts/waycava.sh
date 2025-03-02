@@ -131,7 +131,7 @@ HELP
         ;;
     esac
 
-		# Fine object.serial of virtual cable
+		# Find object.serial of virtual cable
 		id=$(wpctl status | grep "Virtual Cable" | awk '{print $2}' | grep -m1 "" | cut -f1 -d ".")
 		serial=$(wpctl inspect "${id}" | sed -n 's/.*object.serial = //p')
 		serial=${serial#\"}
