@@ -132,9 +132,10 @@ HELP
     esac
 
 		# Fine object.serial of virtual cable
-		id="$(wpctl status | grep "Virtual Cable" | awk '{print $2}' | grep -m1 "" | cut -f1 -d ".")"
-		serial="$(wpctl inspect "${id}" | sed -n 's/.*object.serial = //p')"
-		serial="${serial#\"}"
+		id=$(wpctl status | grep "Virtual Cable" | awk '{print $2}' | grep -m1 "" | cut -f1 -d ".")
+		serial=$(wpctl inspect "${id}" | sed -n 's/.*object.serial = //p')
+		serial=${serial#\"}
+		serial=$(echo "${serial}" | tr -d '\"')
     # Calculate the length of the bar outside the loop
     bar_length=${#bar}
     bar_width=${cava_width:-${bar_length}}
