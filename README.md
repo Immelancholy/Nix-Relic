@@ -114,8 +114,9 @@ git init && git add .
 ```
 * then still in the /etc/nixos folder run:
 ```
-sudo nixos-rebuild switch --flake .
+sudo nixos-rebuild boot --flake .
 ```
+* reboot your pc.
 ## POST-INSTALL
 * Remember to set default device to Desktop Output and Desktop Input in pavucontrol (Not necessary but I would recommended)
 * Set default device to Commes Output and Commes Input in discord lol (Again not necessary but splitting desktop and commes audio is useful)
