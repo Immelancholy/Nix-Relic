@@ -54,7 +54,7 @@
           type = "command";
           key = "   Shell";
           KeyColor = "yellow";
-          text = ''checkshell.sh'';
+          text = ''shell=$($SHELL --version | cut -d ' ' -f 1);echo $shell'';
         }
         {
           type = "WM";
