@@ -21,6 +21,7 @@
     ./wlogout
     ./DAW
     ./swayidle.nix
+    ./eww
   ];
 
   programs.btop = {
