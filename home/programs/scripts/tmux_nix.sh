@@ -8,9 +8,7 @@ while tmux has-session -t $sesh 2>/dev/null; do
 	((i++))
 	sesh="NixDots$i"
 done
-tmux new -d -s $sesh -c /etc/nixos
-
-tmux send-keys 'yazi' C-m
+tmux new -d -s $sesh -c /etc/nixos "nv.sh; $SHELL"
 
 tmux new-window -c /etc/nixos "lazygit; $SHELL" 
 
