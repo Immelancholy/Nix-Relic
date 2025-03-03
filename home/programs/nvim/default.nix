@@ -21,6 +21,7 @@
   programs.nixvim = {
     enable = true;
     globals.mapleader = " ";
+    enableMan = true;
     colorschemes.catppuccin = {
       autoLoad = true;
       enable = true;
