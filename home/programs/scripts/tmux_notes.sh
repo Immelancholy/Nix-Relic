@@ -8,7 +8,7 @@ while tmux has-session -t $sesh 2>/dev/null; do
 	((i++))
 	sesh="dev$i"
 done
-tmux new -d -s $sesh -c "$HOME/obsidian/" "nvh.sh; $SHELL"
+tmux new -d -s $sesh -c "$HOME/obsidian/" "nv.sh; $SHELL"
 
 tmux new-window -c "$HOME/obsidian/" "lazygit; $SHELL" 
 
