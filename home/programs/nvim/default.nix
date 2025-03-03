@@ -514,6 +514,7 @@
           norg
           html
           rust
+          yuck
         ];
         settings = {
           highlight = {
@@ -797,6 +798,7 @@
       vimacs
       trouble-nvim
       harpoon2
+      yuck-vim
     ];
     package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
     keymaps = [
