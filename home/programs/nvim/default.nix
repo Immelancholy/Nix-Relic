@@ -425,11 +425,6 @@
           }
           {
             __unkeyed-1 = "yuck.vim";
-            after = ''
-              function()
-                require("yuck").setup()
-              end
-            '';
           }
         ];
       };
