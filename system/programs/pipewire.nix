@@ -171,9 +171,9 @@
   services.pipewire.extraConfig.jack."92-low-latency" = {
     "jack.properties" = {
       "rt.prio" = 88;
-      "node.latency" = "256/96000";
+      "node.latency" = "128/96000";
       "node.rate" = "1/96000";
-      "node.quantum" = "256/96000";
+      "node.quantum" = "128/96000";
       "node-force-quantum" = 128;
     };
   };
