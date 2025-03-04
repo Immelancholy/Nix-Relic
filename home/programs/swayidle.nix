@@ -13,11 +13,11 @@
     ];
     timeouts = [
       {
-        timeout = 900;
+        timeout = 10;
         command = "${pkgs.swaylock}/bin/swaylock -fF";
       }
       {
-        timeout = 905;
+        timeout = 15;
         command = "${inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland}/bin/hyprctl dispatch dpms off";
         resumeCommand = "${inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland}/bin/hyprctl dispatch dpms on";
       }
