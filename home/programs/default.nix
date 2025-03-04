@@ -151,7 +151,7 @@
       icon = "discord";
       mimeType = "x-scheme-handler/discord";
       categories = ["Network" "InstantMessaging"];
-      startupWMClass = "discord";
+      startupWmClass = "discord";
       version = "1.4";
     };
   };
