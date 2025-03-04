@@ -15,7 +15,7 @@
       "[workspace 4 silent] uwsm app -- qpwgraph"
       "[workspace 2 silent] uwsm app -- $browser"
       "[workspace 2 silent] uwsm app -- teams-for-linux --minimized"
-      "[workspace 3] uwsm app -- discord"
+      "[workspace 3] uwsm app -- Discord --enable-features=UseOzonePlatform --ozone-platform=x11"
     ];
   };
 }
