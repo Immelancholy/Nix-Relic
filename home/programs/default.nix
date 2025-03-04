@@ -142,6 +142,20 @@
     rustlings
   ];
 
+  xdg.desktopEntries = {
+    discord = {
+      name = "Discord";
+      genericName = "All-in-one cross-platform voice and text chat for gamers";
+      type = "Application";
+      exec = "Discord --enable-features=UseOzonePlatform --ozone-platform=x11";
+      icon = "discord";
+      mimeType = "x-scheme-handler/discord";
+      categories = ["Network" "InstantMessaging"];
+      startupWMClass = "discord";
+      version = "1.4";
+    };
+  };
+
   programs.zoxide = {
     enable = true;
   };
