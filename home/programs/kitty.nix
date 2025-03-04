@@ -13,7 +13,7 @@
       listen_on = "unix:/run/user/1000/mykitty";
     };
     extraConfig = ''
-      background_opacity 0.68
+      background_opacity 0.67
       confirm_os_window_close 0
       placement_strategy center
       resize_in_steps yes
