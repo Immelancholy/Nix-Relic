@@ -23,7 +23,7 @@
         "$mod, U, exec, [workspace 1 silent; float; size 858 462; move 640 609] uwsm app -- $term $scr/cava.sh"
         "$mod, U, exec, [workspace 1 silent; float; size 620 666; move 10 404] uwsm app -- $term $scr/btop.sh"
         "$mod, U, exec, [workspace 1 silent; float; size 402 1030; move 1508 40] uwsm app -- $term $scr/neo.sh"
-        "$mod, U, exec, [workspace 1 silent; float; size 620 354; move 10 40] uwsm app -- $term --hold fastfetch"
+        "$mod, U, exec, [workspace 1 silent; float; size 620 354; move 10 40] uwsm app -- $term --hold fastfetch --logo $HOME/Pictures/fastfetch_logos/FallenAngel.jpg"
         "$mod, Delete, exec, uwsm stop"
         "$mod+Shift, 0, movetoworkspace, 10"
         ", Print, exec, $scr/screenshot.sh m"

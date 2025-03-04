@@ -11,7 +11,7 @@
       "[workspace 1 silent; float; size 858 462; move 640 609] uwsm app -- $term $scr/cava.sh"
       "[workspace 1 silent; float; size 620 666; move 10 404] uwsm app -- $term $scr/btop.sh"
       "[workspace 1 silent; float; size 402 1030; move 1508 40] uwsm app -- $term $scr/neo.sh"
-      "[workspace 1 silent; float; size 620 354; move 10 40] uwsm app -- $term --hold fastfetch"
+      "[workspace 1 silent; float; size 620 354; move 10 40] uwsm app -- $term --hold fastfetch --logo $HOME/Pictures/fastfetch_logos/FallenAngel.jpg"
       "[workspace 4 silent] uwsm app -- qpwgraph"
       "[workspace 2 silent] uwsm app -- $browser"
       "[workspace 2 silent] uwsm app -- teams-for-linux --minimized"
