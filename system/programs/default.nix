@@ -36,17 +36,12 @@
     grimblast
     wl-clipboard
     inputs.zen-browser.packages."${system}".beta
-    # inputs.prismlauncher.packages.${pkgs.system}.prismlauncher
-    (prismlauncher.override {
-      additionalPrograms = [ffmpeg];
-      jdks = [
-        graalvm-ce
-        zulu8
-        zulu17
-        zulu
-        temurin-bin
-      ];
-    })
+    graalvm-ce
+    zulu8
+    zulu17
+    zulu
+    temurin-bin
+    inputs.prismlauncher.packages.${pkgs.system}.prismlauncher
     sbctl
     kitty
     inputs.yazi.packages.${pkgs.system}.default
