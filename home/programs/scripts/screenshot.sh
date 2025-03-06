@@ -64,7 +64,7 @@ s) # drag to manually snip an area / click on a window to print it
 	grimblast --notify copysave area $temp_screenshot && "${annotation_tool}" ${evaluated_annotation_args} ;; # intended globbing
 sf)                                                                                                               # frozen screen, drag to manually snip an area / click on a window to print it
 	# shellcheck disable=SC2086
-	grimblast --freeze --cursor --notify copysave area $temp_screenshot && "${annotation_tool}" ${evaluated_annotation_args} ;; # intended globbing
+	grimblast --freeze --notify copysave area $temp_screenshot && "${annotation_tool}" ${evaluated_annotation_args} ;; # intended globbing
 m)                                                                                                                                  # print focused monitor
 	# timeout 0.2 slurp                                                                                                                  # capture animation lol
 	# shellcheck disable=SC2086
