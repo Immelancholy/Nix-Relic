@@ -22,7 +22,6 @@
     ./DAW
     ./swayidle.nix
     ./eww
-    ./floorp
   ];
 
   programs.btop = {
