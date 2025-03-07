@@ -52,10 +52,12 @@
         ];
       };
       isDefault = true;
-      extensions = with pkgs.nur.repos.rycee.firefox-addons; [
-        ublock-origin
-        tampermonkey
-      ];
+      extensions = {
+        packages = with pkgs.nur.repos.rycee.firefox-addons; [
+          ublock-origin
+          tampermonkey
+        ];
+      };
       settings = {
         "browser.aboutConfig.showWarning" = false;
         "browser.startup.page" = 3;
