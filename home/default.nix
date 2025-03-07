@@ -41,7 +41,7 @@
       source = ./backgrounds;
       recursive = true;
     };
-    ".zen/yzyavqg4.default" = {
+    ".zen/${user}.default" = {
       source = ./programs/zen;
       recursive = true;
     };
@@ -50,6 +50,18 @@
       recursive = true;
       executable = true;
     };
+    ".zen/profiles.ini".text = ''
+      [Profile0]
+      Name=default
+      IsRelative=1
+      Path=${user}.default
+      ZenAvatarPath=chrome://browser/content/zen-avatars/avatar-82.svg
+      Default=1
+
+      [General]
+      StartWithLastProfile=1
+      Version=2
+    '';
   };
 
   xdg = {
