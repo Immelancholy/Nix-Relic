@@ -52,7 +52,7 @@
     };
     ".zen/profiles.ini".text = ''
       [Profile0]
-      Name=default
+      Name=${user}Default
       IsRelative=1
       Path=${user}.default
       ZenAvatarPath=chrome://browser/content/zen-avatars/avatar-82.svg
