@@ -117,7 +117,6 @@
             ];
           })
           nur.modules.nixos.default
-          nur.legacyPackages."${system}".repos.rycee.modules.firefox-addons
           lanzaboote.nixosModules.lanzaboote
           nix-flatpak.nixosModules.nix-flatpak
           solaar.nixosModules.default
