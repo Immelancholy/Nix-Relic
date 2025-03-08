@@ -35,7 +35,7 @@
         "Alt+Shift+Ctrl, P, exec, $scr/screenshot.sh p"
         "Ctrl+Alt, L, exec, uwsm app -- swaylock -fF"
         "$mod, D, exec, uwsm app -- $term $scr/tmux_nix.sh"
-        "$mod, N, exec, uwsm app -- mpvpaper '*' $HOME/Pictures/wallpapers/Neon-Beast-Girl.mp4"
+        ''$mod, N, exec, uwsm app -- mpvpaper -o "--loop" '*' $HOME/Pictures/wallpapers/Neon-Beast-Girl.mp4''
       ]
       ++ (
         # workspaces

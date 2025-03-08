@@ -5,7 +5,7 @@
       "uwsm app -- hyprctl setcursor Bibata-Modern-Ice 20"
       # "uwsm app -- $scr/swww.sh"
       # "swayidle -w"
-      "uwsm app -- mpvpaper '*' $HOME/Pictures/wallpapers/Neon-Beast-Girl.mp4"
+      ''uwsm app -- mpvpaper -o "--loop" '*' $HOME/Pictures/wallpapers/Neon-Beast-Girl.mp4''
       "uwsm app -- wl-paste --type text --watch cliphist store # Stores only image data"
       "uwsm app -- wl-paste --type image --watch cliphist store # Stores only image data"
       "[workspace 1 silent; float; size 858 559; move 640 40] uwsm app -- $term $scr/rmpc.sh"
