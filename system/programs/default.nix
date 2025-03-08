@@ -92,7 +92,7 @@
 
         RoundCorners = "20";
 
-        background = "${../../home/backgrounds/anime-girl-wings.jpg}";
+        background = "${../../home/backgrounds/Neon-Beast-Girl.mp4}";
         DimBackground = "0.0";
         HeaderTextColor = "#cdd6f4";
         DateTextColor = "#cdd6f4";
