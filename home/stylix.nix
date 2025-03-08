@@ -38,7 +38,7 @@
         popups = 10;
       };
     };
-    image = ./backgrounds/anime-girl-wings.jpg;
+    image = ./backgrounds/Neon-Beast-Girl.png;
     targets = {
       dunst.enable = false;
       rofi.enable = false;
