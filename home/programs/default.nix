@@ -45,6 +45,8 @@
     eza
     libsixel
 
+    shotcut
+
     krita
 
     manix
