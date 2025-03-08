@@ -5,7 +5,7 @@
       "uwsm app -- hyprctl setcursor Bibata-Modern-Ice 20"
       "uwsm app -- $scr/swww.sh"
       # "swayidle -w"
-      "uwsm app -- linux-wallpaperengine --screen-root HDMI-A-1 /home/mela/.local/share/Steam/steamapps/workshop/content/431960/3293827865 --fps 144"
+      "uwsm app -- linux-wallpaperengine --screen-root HDMI-A-1 $HOME/.local/share/Steam/steamapps/workshop/content/431960/3293827865 --fps 144"
       "uwsm app -- wl-paste --type text --watch cliphist store # Stores only image data"
       "uwsm app -- wl-paste --type image --watch cliphist store # Stores only image data"
       "[workspace 1 silent; float; size 858 559; move 640 40] uwsm app -- $term $scr/rmpc.sh"
