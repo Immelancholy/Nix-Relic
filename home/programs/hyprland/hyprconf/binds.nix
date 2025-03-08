@@ -35,7 +35,7 @@
         "Alt+Shift+Ctrl, P, exec, $scr/screenshot.sh p"
         "Ctrl+Alt, L, exec, uwsm app -- swaylock -fF"
         "$mod, D, exec, uwsm app -- $term $scr/tmux_nix.sh"
-        "$mod, N, exec, uwsm app -- linux-wallpaperengine --screen-root HDMI-A-1 $HOME/.local/share/Steam/steamapps/workshop/content/431960/3293827865 --fps 144"
+        "$mod, N, exec, uwsm app -- mpvpaper '*' $HOME/Pictures/wallpapers/Neon-Beast-Girl.mp4"
       ]
       ++ (
         # workspaces
