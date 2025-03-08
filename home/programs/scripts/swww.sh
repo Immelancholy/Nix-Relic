@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 # Check swww daemon
-wall="$HOME/Pictures/wallpapers/anime-girl-wings.jpg"
+wall="$HOME/Pictures/wallpapers/Neon-Beast-Girl.png"
 swww query
 if [ $? -eq 1 ]; then
 	swww-daemon
