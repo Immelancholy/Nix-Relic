@@ -14,8 +14,8 @@
       inherit (config.lib.formats.rasi) mkLiteral;
     in {
       "*" = {
-        bg0 = mkLiteral "#1e1e2e88";
-        bg1 = mkLiteral "#1e1e2e88";
+        bg0 = mkLiteral "#1e1e2eAA";
+        bg1 = mkLiteral "#1e1e2eAA";
         bg2 = mkLiteral "#b4befeCC";
         bg3 = mkLiteral "#cba6f7CC";
         fg0 = mkLiteral "#cdd6f4";
