@@ -17,8 +17,9 @@
     }
 
     decoration {
-        rounding = 10
-        shadow:enabled = false
+        rounding = 20
+        # shadow:enabled = false
+        shadow:enabled = true
 
         blur {
             enabled = yes
