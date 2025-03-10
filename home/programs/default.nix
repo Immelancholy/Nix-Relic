@@ -47,6 +47,8 @@
 
     shotcut
 
+    hyprcursor
+
     krita
 
     manix
