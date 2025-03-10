@@ -25,7 +25,7 @@
       libva-vdpau-driver
     ];
   };
-  harware.amdgpu = {
+  hardware.amdgpu = {
     amdvlk = {
       enable = true;
       support32Bit = true;
