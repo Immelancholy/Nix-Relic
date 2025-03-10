@@ -13,7 +13,7 @@
       inputs.hyprland-plugins.packages.${pkgs.system}.xtra-dispatchers
       inputs.hyprland-plugins.packages.${pkgs.system}.hyprexpo
       inputs.hyprland-plugins.packages.${pkgs.system}.hyprtrails
-      inputs.hyprland-plugins.packages.${pkgs.system}.hyprwinwrap
+      # inputs.hyprland-plugins.packages.${pkgs.system}.hyprwinwrap
     ];
     systemd = {
       # disable the systemd integration, as it conflicts with uwsm.
