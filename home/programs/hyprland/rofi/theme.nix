@@ -16,8 +16,8 @@
       "*" = {
         bg0 = mkLiteral "#1e1e2eAB";
         bg1 = mkLiteral "#1e1e2eAB";
-        bg2 = mkLiteral "#b4befeCC";
-        bg3 = mkLiteral "#cba6f7CC";
+        bg2 = mkLiteral "#b4befeDD";
+        bg3 = mkLiteral "#cba6f7DD";
         fg0 = mkLiteral "#cdd6f4";
         fg1 = mkLiteral "#11111b";
         fg2 = mkLiteral "#bac2de";
