@@ -35,6 +35,7 @@
         "Alt+Shift+Ctrl, P, exec, $scr/screenshot.sh p"
         "Ctrl+Alt, L, exec, uwsm app -- swaylock -fF"
         "$mod, D, exec, uwsm app -- $term $scr/tmux_nix.sh"
+        "$mod, N, exec, cliphist list || rofi -dmenu || cliphist decode || wl-copy"
       ]
       ++ (
         # workspaces
