@@ -289,6 +289,10 @@
               name = "relationship";
               path = "~/obsidian/relationship";
             }
+            {
+              name = "Witchey Notes";
+              path = "~/obsidian/Witchey_Stuffs";
+            }
           ];
         };
       };
