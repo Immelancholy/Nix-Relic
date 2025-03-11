@@ -60,7 +60,7 @@
     xz
     unzip
     p7zip
-
+    ventoy
     # utils
     ripgrep # recursively searches directories for a regex pattern
     jq # A lightweight and flexible command-line JSON processor
