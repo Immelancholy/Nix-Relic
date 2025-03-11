@@ -9,7 +9,6 @@
     pkgs.vulkan-tools
     pkgs.libva-utils
     pkgs.vdpauinfo
-    pkgs.driversi686Linux.vdpauinfo
     pkgs.vulkan-validation-layers
     pkgs.egl-wayland
   ];
@@ -32,18 +31,16 @@
 
   hardware.graphics = {
     enable = true;
-    # package = pkgs.mesa.drivers;
     enable32Bit = true;
-    # package32 = pkgs.pkgsi686Linux.mesa.drivers;
-    extraPackages = with pkgs; [
-      libvdpau-va-gl
-      libvdpau
-      vaapiVdpau
-    ];
-    extraPackages32 = with pkgs.driversi686Linux; [
-      libvdpau-va-gl
-      libva-vdpau-driver
-    ];
+    # extraPackages = with pkgs; [
+    #   libvdpau-va-gl
+    #   libvdpau
+    #   vaapiVdpau
+    # ];
+    # extraPackages32 = with pkgs.driversi686Linux; [
+    #   libvdpau-va-gl
+    #   libva-vdpau-driver
+    # ];
   };
 
   hardware.nvidia = {
