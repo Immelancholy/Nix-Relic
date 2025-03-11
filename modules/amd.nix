@@ -8,7 +8,7 @@
     pkgs.driversi686Linux.vdpauinfo
   ];
 
-  services.xserver.videoDrivers = ["amdgpu"];
+  # services.xserver.videoDrivers = ["amdgpu"];
 
   hardware.graphics = {
     enable = true;
