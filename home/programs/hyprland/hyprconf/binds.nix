@@ -4,16 +4,16 @@
     ];
     bind =
       [
-        "$mod, T, exec, uwsm-app -- $term --hold $scr/poke.sh"
-        "$mod+Shift, T, exec, uwsm-app -- $term $scr/tmux_start.sh"
-        "$mod, F, exec, uwsm-app -- $browser"
-        "$mod, E, exec, uwsm-app -- $files"
+        "$mod, T, exec, $term --hold uwsm-app -- $scr/poke.sh"
+        "$mod+Shift, T, exec, $term uwsm-app -- $scr/tmux_start.sh"
+        "$mod, F, exec, $browser"
+        "$mod, E, exec, $files"
         "$mod, A, exec, $menu"
-        "$mod, C, exec, uwsm-app -- $edit"
+        "$mod, C, exec, $edit"
         "$mod, W, togglefloating"
         "$mod, G, togglegroup"
         "$mod, Q, killactive"
-        "$mod, R, exec, uwsm-app -- $files2"
+        "$mod, R, exec, $files2"
         "Alt, Return, fullscreen"
         "$mod+Ctrl+Alt, Right, movetoworkspace, r+1"
         "$mod+Ctrl+Alt, Left, movetoworkspace, r-1"
@@ -68,9 +68,9 @@
     bindl = , F10, pass, class:^(com.obsproject.Studio)$
     bindl = , F12, pass, class:^(com.obsproject.Studio)$
     bindl = , F9, pass, class:^(com.obsproject.Studio)$
-    bind = $mod, M, exec,[workspace 4 silent] $scr/patch.sh
-    bind = $mod, M, exec,[workspace 4 silent] qpwgraph
-    bind = $mod, M, exec,[workspace 4 silent] qpwgraph
+    bind = $mod, M, exec,[workspace 4 silent] uwsm-app -- $scr/patch.sh
+    bind = $mod, M, exec,[workspace 4 silent] uwsm-app -- qpwgraph
+    bind = $mod, M, exec,[workspace 4 silent] uwsm-app -- qpwgraph
 
     bind = $mod, H, movefocus, l
     bind = $mod, L, movefocus, r
@@ -118,7 +118,7 @@
 
     bind = $mod, B, togglesplit
 
-    bind = Ctrl+Shift, Escape, exec, uwsm app -- $term --title "btop" btop
+    bind = Ctrl+Shift, Escape, exec, $term --title "btop" uwsm app -- btop
 
     bindd = $mod+Shift, P,Color Picker , exec, hyprpicker -a # Pick color (Hex) >> clipboard#
 
