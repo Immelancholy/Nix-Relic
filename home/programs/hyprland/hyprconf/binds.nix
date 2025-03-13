@@ -4,38 +4,38 @@
     ];
     bind =
       [
-        "$mod, T, exec, uwsm app -- $term --hold $scr/poke.sh"
-        "$mod+Shift, T, exec, uwsm app -- $term $scr/tmux_start.sh"
-        "$mod, F, exec, uwsm app -- $browser"
-        "$mod, E, exec, uwsm app -- $files"
+        "$mod, T, exec, uwsm-app -- $term --hold $scr/poke.sh"
+        "$mod+Shift, T, exec, uwsm-app -- $term $scr/tmux_start.sh"
+        "$mod, F, exec, uwsm-app -- $browser"
+        "$mod, E, exec, uwsm-app -- $files"
         "$mod, A, exec, $menu"
-        "$mod, C, exec, uwsm app -- $edit"
+        "$mod, C, exec, uwsm-app -- $edit"
         "$mod, W, togglefloating"
         "$mod, G, togglegroup"
         "$mod, Q, killactive"
-        "$mod, R, exec, uwsm app -- $files2"
+        "$mod, R, exec, uwsm-app -- $files2"
         "Alt, Return, fullscreen"
         "$mod+Ctrl+Alt, Right, movetoworkspace, r+1"
         "$mod+Ctrl+Alt, Left, movetoworkspace, r-1"
         "$mod+Ctrl+Alt, L, movetoworkspace, r+1"
         "$mod+Ctrl+Alt, H, movetoworkspace, r-1"
-        "$mod, U, exec, [workspace 1 silent; float; size 858 559; move 640 40] uwsm app -- $term $scr/rmpc.sh"
-        "$mod, U, exec, [workspace 1 silent; float; size 858 462; move 640 609] uwsm app -- $term $scr/cava.sh"
-        "$mod, U, exec, [workspace 1 silent; float; size 620 666; move 10 404] uwsm app -- $term $scr/btop.sh"
-        "$mod, U, exec, [workspace 1 silent; float; size 402 1030; move 1508 40] uwsm app -- $term $scr/neo.sh"
-        "$mod, U, exec, [workspace 1 silent; float; size 620 354; move 10 40] uwsm app -- $term --hold fastfetch --logo $HOME/Pictures/fastfetch_logos/FallenAngel.jpg"
+        "$mod, U, exec, [workspace 1 silent; float; size 858 559; move 640 40] uwsm-app -- $term $scr/rmpc.sh"
+        "$mod, U, exec, [workspace 1 silent; float; size 858 462; move 640 609] uwsm-app -- $term $scr/cava.sh"
+        "$mod, U, exec, [workspace 1 silent; float; size 620 666; move 10 404] uwsm-app -- $term $scr/btop.sh"
+        "$mod, U, exec, [workspace 1 silent; float; size 402 1030; move 1508 40] uwsm-app -- $term $scr/neo.sh"
+        "$mod, U, exec, [workspace 1 silent; float; size 620 354; move 10 40] uwsm-app -- $term --hold fastfetch --logo $HOME/Pictures/fastfetch_logos/FallenAngel.jpg"
         "$mod, Delete, exec, uwsm stop"
         "$mod+Shift, 0, movetoworkspace, 10"
-        ", Print, exec, $scr/screenshot.sh m"
-        "$mod, Print, exec, $scr/screenshot.sh sf"
-        "$mod+Shift, Print, exec, $scr/screenshot.sh s"
-        "$mod+Shift+Alt, Print, exec, $scr/screenshot.sh p"
-        "Alt, P, exec, $scr/screenshot.sh m"
-        "Alt+Shift, P, exec, $scr/screenshot.sh sf"
-        "Alt+Shift+Ctrl, P, exec, $scr/screenshot.sh p"
-        "Ctrl+Alt, L, exec, uwsm app -- swaylock -fF"
-        "$mod, D, exec, uwsm app -- $term $scr/tmux_nix.sh"
-        "$mod, N, exec, $scr/cliphist.sh"
+        ", Print, exec, uwsm-app -- $scr/screenshot.sh m"
+        "$mod, Print, exec, uwsm-app -- $scr/screenshot.sh sf"
+        "$mod+Shift, Print, exec, uwsm-app -- $scr/screenshot.sh s"
+        "$mod+Shift+Alt, Print, exec, uwsm-app -- $scr/screenshot.sh p"
+        "Alt, P, exec, uwsm-app -- $scr/screenshot.sh m"
+        "Alt+Shift, P, exec, uwsm-app -- $scr/screenshot.sh sf"
+        "Alt+Shift+Ctrl, P, exec, uwsm-app -- $scr/screenshot.sh p"
+        "Ctrl+Alt, L, exec, uwsm-app -- swaylock -fF"
+        "$mod, D, exec, uwsm-app -- $term $scr/tmux_nix.sh"
+        "$mod, N, exec, uwsm-app -- $scr/cliphist.sh"
       ]
       ++ (
         # workspaces
@@ -53,15 +53,15 @@
   };
   wayland.windowManager.hyprland.extraConfig = ''
     bindl  = , XF86AudioMute, exec, $playerctl play-pause #pause-play media
-    bindel = , XF86AudioLowerVolume, exec, rmpc volume -1 # decrease volume
-    bindel = , XF86AudioRaiseVolume, exec, rmpc volume +1 # increase volume
+    bindel = , XF86AudioLowerVolume, exec, uwsm-app -- rmpc volume -1 # decrease volume
+    bindel = , XF86AudioRaiseVolume, exec, uwsm-app -- rmpc volume +1 # increase volume
 
     bindl  = , mouse:277, exec, $playerctl play-pause # toggle between media play and pause
     bindl = $mod, P, exec, $playerctl play-pause
-    bindel  = , mouse:281, exec, rmpc volume +1 # volume up
-    bindel  = , mouse:282, exec, rmpc volume -1 # volume down
-    bindel  = $mod, O, exec, rmpc volume +1 # volume up
-    bindel  = $mod, I, exec, rmpc volume -1 # volume down
+    bindel  = , mouse:281, exec, uwsm-app -- rmpc volume +1 # volume up
+    bindel  = , mouse:282, exec, uwsm-app -- rmpc volume -1 # volume down
+    bindel  = $mod, O, exec, uwsm-app -- rmpc volume +1 # volume up
+    bindel  = $mod, I, exec, uwsm-app -- rmpc volume -1 # volume down
     bindl  = $mod, mouse:282, exec, $playerctl next #next
     bindl  = $mod, mouse:281, exec, $playerctl previous #previous,
     bindl = , mouse:275, pass, class:^(discord)$

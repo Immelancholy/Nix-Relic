@@ -5,11 +5,11 @@
     "$files" = "$term yazi";
     "$files2" = "nemo";
     "$mod" = "SUPER";
-    "$menu" = ''rofi -show drun -run-command "uwsm app -- {cmd}"'';
+    "$menu" = ''rofi -show drun -run-command "uwsm-app -- {cmd}"'';
     "$browser" = "zen";
     "$edit" = "$term $scr/nv.sh";
-    "$player" = "mpd";
-    "$playerctl" = "playerctl --player=$player";
+    "$player" = "uwsm-app -- mpd";
+    "$playerctl" = "uwsm-app -- playerctl --player=$player";
     monitor = ", 1920x1080@144, auto, 1";
     input = {
       kb_layout = "gb";
