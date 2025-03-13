@@ -8,8 +8,8 @@
     "$menu" = ''rofi -show drun -run-command "uwsm-app -- {cmd}"'';
     "$browser" = "uwsm-app -- zen";
     "$edit" = "$term uwsm-app -- $scr/nv.sh";
-    "$player" = "uwsm-app -- mpd";
-    "$playerctl" = "playerctl --player=$player";
+    "$player" = "mpd";
+    "$playerctl" = "uwsm-app -- playerctl --player=$player";
     monitor = ", 1920x1080@144, auto, 1";
     input = {
       kb_layout = "gb";
