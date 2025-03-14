@@ -1,15 +1,15 @@
 {
   wayland.windowManager.hyprland.settings = {
     "$scr" = "$HOME/.local/share/bin/";
-    "$term" = "uwsm-app -- kitty";
-    "$files" = "$term uwsm-app -- yazi";
-    "$files2" = "uwsm-app -- nemo";
+    "$term" = "uwsm app -- kitty";
+    "$files" = "$term uwsm app -- yazi";
+    "$files2" = "uwsm app -- nemo";
     "$mod" = "SUPER";
     "$menu" = ''rofi -show drun -run-command "uwsm-app -- {cmd}"'';
-    "$browser" = "uwsm-app -- zen";
+    "$browser" = "uwsm app -- zen";
     "$edit" = "$term $scr/nv.sh";
     "$player" = "mpd";
-    "$playerctl" = "uwsm-app -- playerctl --player=$player";
+    "$playerctl" = "uwsm app -- playerctl --player=$player";
     monitor = ", 1920x1080@144, auto, 1";
     input = {
       kb_layout = "gb";
