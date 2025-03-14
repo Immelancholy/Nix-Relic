@@ -16,7 +16,7 @@
       }
       {
         label = "logout";
-        action = "pkill -u $USER";
+        action = "uwsm stop";
         text = "Logout";
         keybind = "e";
       }
