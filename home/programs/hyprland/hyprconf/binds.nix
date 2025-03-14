@@ -118,10 +118,10 @@
 
     bind = $mod, B, togglesplit
 
-    bind = Ctrl+Shift, Escape, exec, $term --title "btop" uwsm app -- btop
+    bind = Ctrl+Shift, Escape, exec, $term --title "btop" uwsm-app -- btop
 
-    bindd = $mod+Shift, P,Color Picker , exec, hyprpicker -a # Pick color (Hex) >> clipboard#
+    bindd = $mod+Shift, P,Color Picker , exec, uwsm-app -- hyprpicker -a # Pick color (Hex) >> clipboard#
 
-    bind = , XF86Calculator, exec, uwsm app -- qalculate-gtk
+    bind = , XF86Calculator, exec, uwsm-app -- qalculate-gtk
   '';
 }
