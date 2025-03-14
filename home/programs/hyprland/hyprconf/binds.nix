@@ -4,8 +4,8 @@
     ];
     bind =
       [
-        "$mod, T, exec, $term --hold uwsm-app -- $scr/poke.sh"
-        "$mod+Shift, T, exec, $term uwsm-app -- $scr/tmux_start.sh"
+        "$mod, T, exec, $term --hold $scr/poke.sh"
+        "$mod+Shift, T, exec, $term $scr/tmux_start.sh"
         "$mod, F, exec, $browser"
         "$mod, E, exec, $files"
         "$mod, A, exec, $menu"
@@ -19,11 +19,11 @@
         "$mod+Ctrl+Alt, Left, movetoworkspace, r-1"
         "$mod+Ctrl+Alt, L, movetoworkspace, r+1"
         "$mod+Ctrl+Alt, H, movetoworkspace, r-1"
-        "$mod, U, exec, [workspace 1 silent; float; size 858 559; move 640 40] $term uwsm-app -- $scr/rmpc.sh"
-        "$mod, U, exec, [workspace 1 silent; float; size 858 462; move 640 609] $term uwsm-app -- $scr/cava.sh"
-        "$mod, U, exec, [workspace 1 silent; float; size 620 666; move 10 404] $term uwsm-app -- $scr/btop.sh"
-        "$mod, U, exec, [workspace 1 silent; float; size 402 1030; move 1508 40] $term uwsm-app -- $scr/neo.sh"
-        "$mod, U, exec, [workspace 1 silent; float; size 620 354; move 10 40] $term --hold uwsm-app -- fastfetch --logo $HOME/Pictures/fastfetch_logos/FallenAngel.jpg"
+        "$mod, U, exec, [workspace 1 silent; float; size 858 559; move 640 40] $term $scr/rmpc.sh"
+        "$mod, U, exec, [workspace 1 silent; float; size 858 462; move 640 609] $term $scr/cava.sh"
+        "$mod, U, exec, [workspace 1 silent; float; size 620 666; move 10 404] $term $scr/btop.sh"
+        "$mod, U, exec, [workspace 1 silent; float; size 402 1030; move 1508 40] $term $scr/neo.sh"
+        "$mod, U, exec, [workspace 1 silent; float; size 620 354; move 10 40] $term --hold fastfetch --logo $HOME/Pictures/fastfetch_logos/FallenAngel.jpg"
         "$mod, Delete, exec, uwsm stop"
         "$mod+Shift, 0, movetoworkspace, 10"
         ", Print, exec, uwsm-app -- $scr/screenshot.sh m"
@@ -34,7 +34,7 @@
         "Alt+Shift, P, exec, uwsm-app -- $scr/screenshot.sh sf"
         "Alt+Shift+Ctrl, P, exec, uwsm-app -- $scr/screenshot.sh p"
         "Ctrl+Alt, L, exec, uwsm-app -- swaylock -fF"
-        "$mod, D, exec, $term uwsm-app -- $scr/tmux_nix.sh"
+        "$mod, D, exec, $term $scr/tmux_nix.sh"
         "$mod, N, exec, uwsm-app -- $scr/cliphist.sh"
       ]
       ++ (
@@ -118,7 +118,7 @@
 
     bind = $mod, B, togglesplit
 
-    bind = Ctrl+Shift, Escape, exec, $term --title "btop" uwsm-app -- btop
+    bind = Ctrl+Shift, Escape, exec, $term --title "btop" btop
 
     bindd = $mod+Shift, P,Color Picker , exec, uwsm-app -- hyprpicker -a # Pick color (Hex) >> clipboard#
 

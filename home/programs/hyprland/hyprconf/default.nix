@@ -7,7 +7,7 @@
     "$mod" = "SUPER";
     "$menu" = ''rofi -show drun -run-command "uwsm-app -- {cmd}"'';
     "$browser" = "uwsm-app -- zen";
-    "$edit" = "$term uwsm-app -- $scr/nv.sh";
+    "$edit" = "$term $scr/nv.sh";
     "$player" = "mpd";
     "$playerctl" = "uwsm-app -- playerctl --player=$player";
     monitor = ", 1920x1080@144, auto, 1";
