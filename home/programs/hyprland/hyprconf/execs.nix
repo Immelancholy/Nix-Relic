@@ -14,6 +14,7 @@
       "[workspace 1 silent; float; size 402 1030; move 1508 40] $term $scr/neo.sh"
       "[workspace 1 silent; float; size 620 354; move 10 40] $term --hold fastfetch --logo $HOME/Pictures/fastfetch_logos/FallenAngel.jpg"
       "[workspace 4 silent] uwsm app -- qpwgraph"
+      "[workspace 4 silent] uwsm app -- qpwgraph"
       "[workspace 2 silent] $browser"
       "[workspace 2 silent] uwsm app -- teams-for-linux --minimized"
       "[workspace 3] uwsm app -- Discord --enable-features=UseOzonePlatform --ozone-platform=x11"
