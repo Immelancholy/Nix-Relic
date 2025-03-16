@@ -33,7 +33,7 @@
     ./animations.nix
     ./execs.nix
     ./windowrules.nix
-    ./plugins.nix
+    # ./plugins.nix
     ./hyprspace.nix
   ];
 }
