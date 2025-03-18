@@ -21,14 +21,14 @@
         rosewater = mkLiteral "#f5e0dc";
         flamingo = mkLiteral "#f2cdcd";
         pink = mkLiteral "#f5c2e7";
-        mauve = mkLiteral "#cba6f7EA";
-        red = mkLiteral "#f38ba8EA";
+        mauve = mkLiteral "#cba6f7EC";
+        red = mkLiteral "#f38ba8EC";
         maroon = mkLiteral "#eba0ac";
         peach = mkLiteral "#fab387";
         yellow = mkLiteral "#f9e2af";
         green = mkLiteral "#a6e3a1";
         teal = mkLiteral "#94e2d5";
-        sky = mkLiteral "#89dcebEA";
+        sky = mkLiteral "#89dcebEC";
         sapphire = mkLiteral "#74c7ec";
         blue = mkLiteral "#89b4fa";
         lavender = mkLiteral "#b4befe";
