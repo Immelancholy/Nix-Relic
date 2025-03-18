@@ -12,6 +12,7 @@
         "drun"
         "run"
         "filebrowser"
+        "power-menu"
         # "window"
       ];
       show-icons = true;
@@ -25,6 +26,9 @@
       # icon-theme = "Tela-circle-dracula";
     };
   };
+  home.packages = with pkgs; [
+    rofi-power-menu
+  ];
   imports = [
     ./theme.nix
   ];
