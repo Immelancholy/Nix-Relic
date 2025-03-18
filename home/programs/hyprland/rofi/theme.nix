@@ -176,6 +176,7 @@
       "element selected.normal" = {
         background-color = mkLiteral "@mauve";
         text-color = mkLiteral "@text-dark";
+        text-style = "bold";
       };
       "element selected.urgent" = {
         background-color = mkLiteral "@red";
