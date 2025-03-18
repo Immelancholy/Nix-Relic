@@ -129,6 +129,86 @@
         background-color = mkLiteral "@mauve";
         text-color = mkLiteral "@text";
       };
+      "listview" = {
+        enabled = mkLiteral "true";
+        columns = mkLiteral "@columns";
+        lines = mkLiteral "@lines";
+        cycle = mkLiteral "@cycle";
+        dynamic = mkLiteral "true";
+        scrollbar = mkLiteral "false";
+        layout = mkLiteral "vertical";
+        reverse = mkLiteral "true";
+        fixed-height = mkLiteral "true";
+        fixed-columns = mkLiteral "true";
+        spacing = mkLiteral "10px";
+        background-color = mkLiteral "transparent";
+        text-color = mkLiteral "@text";
+        cursor = "default";
+      };
+      "element" = {
+        enabled = mkLiteral "true";
+        spacing = mkLiteral "5px";
+        padding = mkLiteral "25px";
+        border-radius = mkLiteral "15px";
+        background-color = mkLiteral "transparent";
+        text-color = mkLiteral "@text";
+        cursor = mkLiteral "pointer";
+        orientation = mkLiteral "vertical";
+      };
+      "element normal.normal" = {
+        background-color = mkLiteral "inherit";
+        text-color = mkLiteral "inherit";
+      };
+      "element normal.urgent" = {
+        background-color = mkLiteral "@red";
+        text-color = mkLiteral "@text";
+      };
+      "element normal.active" = {
+        background-color = mkLiteral "@sky";
+        text-color = mkLiteral "@text";
+      };
+      "element selected.normal" = {
+        background-color = mkLiteral "@mauve";
+        text-color = mkLiteral "@text";
+      };
+      "element selected.urgent" = {
+        background-color = mkLiteral "@red";
+        text-color = mkLiteral "@text";
+      };
+      "element selected.active" = {
+        background-color = mkLiteral "@sky";
+        text-color = mkLiteral "@text";
+      };
+      "element-icon" = {
+        background-color = mkLiteral "transparent";
+        text-color = mkLiteral "inherit";
+        size = mkLiteral "64px";
+        cursor = mkLiteral "inherit";
+      };
+      "element-text" = {
+        background-color = mkLiteral "transparent";
+        text-color = mkLiteral "inherit";
+        cursor = mkLiteral "inherit";
+        vertical-align = mkLiteral "0.5";
+        horizontal-align = mkLiteral "0.5";
+      };
+      "message" = {
+        background-color = mkLiteral "transparent";
+      };
+      "textbox" = {
+        padding = mkLiteral "15px";
+        border-radius = mkLiteral "15px";
+        background-color = mkLiteral "@crust";
+        text-color = mkLiteral "@text";
+        vertical-align = mkLiteral "0.5";
+        horizontal-align = mkLiteral "0.5";
+      };
+      "error-message" = {
+        padding = mkLiteral "15px";
+        border-radius = mkLiteral "15px";
+        background-color = mkLiteral "@base";
+        text-color = mkLiteral "@text";
+      };
     }
   );
 }
