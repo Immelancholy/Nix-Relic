@@ -39,10 +39,6 @@
     lazygit = {
       enable = true;
     };
-    wlogout = {
-      enable = true;
-      iconStyle = "wleave";
-    };
     obs = {
       enable = true;
     };
