@@ -160,7 +160,7 @@
       "custom/power" = {
         format = "⏻ ";
         tooltip = false;
-        on-click = "wlogout";
+        on-click = "rofi -show power-menu -modi power-menu:rofi-power-menu ";
       };
       #Custom padding mmodules
       "custom/l_end" = {

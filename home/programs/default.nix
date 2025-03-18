@@ -18,7 +18,7 @@
     ./tmux.nix
     ./kitty.nix
     ./spicetify.nix
-    ./wlogout
+    # ./wlogout
     ./DAW
     ./swayidle.nix
     ./eww
