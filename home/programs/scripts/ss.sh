@@ -53,23 +53,23 @@ case $1 in
 o) # print output
 	hyprshot -z -m output -o $temp_dir -f "$temp_name"
 	sleep 1
-	swappy -f $temp_screenshot -o "${save_dir}/${save_file}" 
+	swappy -f $temp_screenshot #-o "${save_dir}/${save_file}" 
 	;;
 
 a) # drag to manually snip an area
 	hyprshot -m region -o $temp_dir -f "$temp_name"
 	sleep 1
-	swappy -f $temp_screenshot -o "${save_dir}/${save_file}"
+	swappy -f $temp_screenshot #-o "${save_dir}/${save_file}"
 	;;
 af) # frozen screen, drag to manually snip an area
 	hyprshot -z -m region -o $temp_dir -f "$temp_name"
 	sleep 1
-	swappy -f $temp_screenshot -o "${save_dir}/${save_file}"
+	swappy -f $temp_screenshot #-o "${save_dir}/${save_file}"
 	;;
 w) # frozen screen, click window to screenshot
 	hyprshot -z -m window -o $temp_dir -f "$temp_name"
 	sleep 1
-	swappy -f $temp_screenshot -o "${save_dir}/${save_file}"
+	swappy -f $temp_screenshot #-o "${save_dir}/${save_file}"
 	;;
 *) # invalid option
 	USAGE ;;
