@@ -3,10 +3,10 @@
   lib,
   ...
 }: {
-  # Original Author : Aditya Shakya (adi1090x)
-  # Original Github : @adi1090x
-  # Adapted by : @GeodeArc
-  # Adapted for NixOS and modified by : @Immelancholy
+  ## Original Author : Aditya Shakya (adi1090x)
+  ## Original Github : @adi1090x
+  ## Adapted by : @GeodeArc
+  ## Adapted for NixOS and modified by : @Immelancholy
   programs.rofi.theme = lib.mkDefault (
     let
       # Use `mkLiteral` for string-like values that should show without
