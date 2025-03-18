@@ -55,7 +55,7 @@
         location = mkLiteral "center";
         anchor = mkLiteral "center";
         fullscreen = mkLiteral "false";
-        width = mkLiteral "780px";
+        width = mkLiteral "680px";
         x-offset = mkLiteral "0px";
         y-offset = mkLiteral "0px";
 
@@ -122,7 +122,7 @@
         text-color = mkLiteral "@text";
       };
       "button" = {
-        width = mkLiteral "75px";
+        width = mkLiteral "90px";
         padding = mkLiteral "0px";
         border-radius = mkLiteral "100%";
         background-color = mkLiteral "@crust";
