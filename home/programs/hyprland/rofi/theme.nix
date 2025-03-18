@@ -166,10 +166,12 @@
       "element normal.urgent" = {
         background-color = mkLiteral "@red";
         text-color = mkLiteral "@text-dark";
+        text-style = "bold";
       };
       "element normal.active" = {
         background-color = mkLiteral "@sky";
         text-color = mkLiteral "@text-dark";
+        text-style = "bold";
       };
       "element selected.normal" = {
         background-color = mkLiteral "@mauve";
@@ -178,10 +180,12 @@
       "element selected.urgent" = {
         background-color = mkLiteral "@red";
         text-color = mkLiteral "@text";
+        text-style = "bold";
       };
       "element selected.active" = {
         background-color = mkLiteral "@mauve";
         text-color = mkLiteral "@text-dark";
+        text-style = "bold";
       };
       "element-icon" = {
         background-color = mkLiteral "transparent";
