@@ -5,9 +5,9 @@
     package = pkgs.rofi-wayland;
     terminal = "kitty";
     extraConfig = {
-      hover-select = true;
-      me-select-entry = "";
-      me-accept-entry = "MousePrimary";
+      # hover-select = true;
+      # me-select-entry = "";
+      # me-accept-entry = "MousePrimary";
       modi = [
         "drun"
         "run"
