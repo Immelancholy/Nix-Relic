@@ -59,7 +59,7 @@
         border = mkLiteral "2px solid";
         border-radius = mkLiteral "15px";
         border-color = mkLiteral "@mauve";
-        cursor = mkLiteral "default";
+        cursor = "default";
         background-color = mkLiteral "@base";
       };
       "mainbox" = {
@@ -89,7 +89,7 @@
       "textbox-prompt-colon" = {
         enabled = mkLiteral "true";
         expand = mkLiteral "false";
-        str = mkLiteral " :";
+        str = " :";
         padding = mkLiteral "12px 15px";
         border-radius = mkLiteral "100%";
         background-color = mkLiteral "@crust";
@@ -104,7 +104,7 @@
         background-color = mkLiteral "@crust";
         text-color = mkLiteral "inherit";
         cursor = mkLiteral "text";
-        placeholder = mkLiteral "Search";
+        placeholder = "Search";
         placeholder-color = mkLiteral "@subext0";
       };
       "dummy" = {
@@ -115,7 +115,7 @@
         enabled = mkLiteral "true";
         spacing = mkLiteral "10px";
         background-color = mkLiteral "transparent";
-        text-color = "@text";
+        text-color = mkLiteral "@text";
       };
       "button" = {
         width = mkLiteral "80px";
