@@ -41,9 +41,9 @@
         surface2 = mkLiteral "#585b70";
         surface1 = mkLiteral "#45475a";
         surface0 = mkLiteral "#313244";
-        base = mkLiteral "#1e1e2eAB";
-        mantle = mkLiteral "#181825AB";
-        crust = mkLiteral "#11111bAB";
+        base = mkLiteral "#1e1e2eBB";
+        mantle = mkLiteral "#181825BB";
+        crust = mkLiteral "#11111bBB";
         wallpaper = mkLiteral ''url("${../../../backgrounds/Neon-Beast-Girl.png}", width)'';
 
         lines = mkLiteral "6";
