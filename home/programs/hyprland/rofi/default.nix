@@ -15,8 +15,8 @@
       # icon-theme = "Tela-circle-dracula";
       modi = [
         "drun"
-        "filebrowser"
         "run"
+        "filebrowser"
       ];
     };
   };
