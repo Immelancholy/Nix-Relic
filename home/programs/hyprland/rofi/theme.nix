@@ -55,7 +55,7 @@
         location = mkLiteral "center";
         anchor = mkLiteral "center";
         fullscreen = mkLiteral "false";
-        width = mkLiteral "680px";
+        width = mkLiteral "780px";
         x-offset = mkLiteral "0px";
         y-offset = mkLiteral "0px";
 
@@ -153,7 +153,7 @@
         enabled = mkLiteral "true";
         spacing = mkLiteral "5px";
         padding = mkLiteral "10px";
-        border-radius = mkLiteral "10px";
+        border-radius = mkLiteral "20px";
         background-color = mkLiteral "transparent";
         text-color = mkLiteral "@text";
         cursor = mkLiteral "pointer";
