@@ -122,7 +122,7 @@
         text-color = mkLiteral "@text";
       };
       "button" = {
-        width = mkLiteral "90px";
+        width = mkLiteral "85px";
         padding = mkLiteral "0px";
         border-radius = mkLiteral "100%";
         background-color = mkLiteral "@crust";
