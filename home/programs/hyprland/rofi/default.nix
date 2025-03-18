@@ -14,7 +14,7 @@
       display-drun = " APPS";
       display-run = "󰲌 RUN";
       display-filebrowser = " FILES";
-      drun-display-format = "{icon} {name}";
+      drun-display-format = "{name}";
       window-format = "{w} · {c}";
       icon-theme = "Papirus-Dark";
       # icon-theme = "Tela-circle-dracula";

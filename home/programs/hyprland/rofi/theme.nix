@@ -179,18 +179,18 @@
         background-color = mkLiteral "@sky";
         text-color = mkLiteral "@text";
       };
-      "element-icon" = {
-        background-color = mkLiteral "transparent";
-        text-color = mkLiteral "inherit";
-        size = mkLiteral "32px";
-        cursor = mkLiteral "inherit";
-      };
       "element-text" = {
         background-color = mkLiteral "transparent";
         text-color = mkLiteral "inherit";
         cursor = mkLiteral "inherit";
         vertical-align = mkLiteral "0.5";
         horizontal-align = mkLiteral "0.0";
+      };
+      "element-icon" = {
+        background-color = mkLiteral "transparent";
+        text-color = mkLiteral "inherit";
+        size = mkLiteral "32px";
+        cursor = mkLiteral "inherit";
       };
       "message" = {
         background-color = mkLiteral "transparent";
