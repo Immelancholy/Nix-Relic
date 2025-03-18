@@ -153,7 +153,6 @@
         background-color = mkLiteral "transparent";
         text-color = mkLiteral "@text";
         cursor = mkLiteral "pointer";
-        orientation = mkLiteral "vertical";
       };
       "element normal.normal" = {
         background-color = mkLiteral "inherit";
@@ -188,6 +187,7 @@
       "element-text" = {
         background-color = mkLiteral "transparent";
         text-color = mkLiteral "inherit";
+        highlight = mkLiteral "inherit";
         cursor = mkLiteral "inherit";
         vertical-align = mkLiteral "0.5";
         horizontal-align = mkLiteral "0.0";
