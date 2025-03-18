@@ -58,7 +58,7 @@
         enabled = mkLiteral "true";
         border = mkLiteral "2px solid";
         border-radius = mkLiteral "15px";
-        border-color = mkLiteral "@crust";
+        border-color = mkLiteral "@surface0";
         cursor = "default";
         background-color = mkLiteral "@base";
       };
