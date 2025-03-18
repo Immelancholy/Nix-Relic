@@ -181,7 +181,7 @@
       "element-icon" = {
         background-color = mkLiteral "transparent";
         text-color = mkLiteral "inherit";
-        size = mkLiteral "32px";
+        size = mkLiteral "64px";
         cursor = mkLiteral "inherit";
       };
       "element-text" = {

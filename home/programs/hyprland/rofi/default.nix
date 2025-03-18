@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   programs.rofi = {
     enable = true;
-    font = "JetBrainsMono Nerd Font Mono 12";
+    font = "JetBrainsMono Nerd Font Mono 11";
     package = pkgs.rofi-wayland;
     terminal = "kitty";
     extraConfig = {
