@@ -35,6 +35,7 @@
     addRdpMimeTypeAssoc = true;
   };
   home.packages = with pkgs; [
+    hyprshot
     inputs.zen-browser.packages."${system}".beta
     pipes
     lazygit
