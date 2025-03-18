@@ -98,7 +98,7 @@
       "entry" = {
         enabled = mkLiteral "true";
         expand = mkLiteral "false";
-        width = mkLiteral "300px";
+        width = mkLiteral "250px";
         padding = mkLiteral "12px 16px";
         border-radius = mkLiteral "100%";
         background-color = mkLiteral "@crust";
@@ -118,8 +118,8 @@
         text-color = mkLiteral "@text";
       };
       "button" = {
-        width = mkLiteral "80px";
-        padding = mkLiteral "12px";
+        width = mkLiteral "75px";
+        padding = mkLiteral "0px";
         border-radius = mkLiteral "100%";
         background-color = mkLiteral "@crust";
         text-color = mkLiteral "inherit";
@@ -148,8 +148,8 @@
       "element" = {
         enabled = mkLiteral "true";
         spacing = mkLiteral "5px";
-        padding = mkLiteral "25px";
-        border-radius = mkLiteral "15px";
+        padding = mkLiteral "10px";
+        border-radius = mkLiteral "10px";
         background-color = mkLiteral "transparent";
         text-color = mkLiteral "@text";
         cursor = mkLiteral "pointer";
@@ -182,7 +182,7 @@
       "element-icon" = {
         background-color = mkLiteral "transparent";
         text-color = mkLiteral "inherit";
-        size = mkLiteral "64px";
+        size = mkLiteral "32px";
         cursor = mkLiteral "inherit";
       };
       "element-text" = {
@@ -190,7 +190,7 @@
         text-color = mkLiteral "inherit";
         cursor = mkLiteral "inherit";
         vertical-align = mkLiteral "0.5";
-        horizontal-align = mkLiteral "0.5";
+        horizontal-align = mkLiteral "0.0";
       };
       "message" = {
         background-color = mkLiteral "transparent";
