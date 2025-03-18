@@ -42,8 +42,8 @@
         crust = mkLiteral "#11111b";
         wallpaper = mkLiteral ''url("$HOME/Pictures/wallpapers/Neon-Beast-Girl.png", width)'';
 
-        line = mkLiteral "1";
-        columns = mkLiteral "6";
+        line = mkLiteral "6";
+        columns = mkLiteral "1";
         cycles = mkLiteral "false";
       };
       "window" = {
