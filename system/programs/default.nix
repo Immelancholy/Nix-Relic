@@ -30,8 +30,6 @@
     kdePackages.qtwayland
     inputs.swww.packages.${pkgs.system}.swww
     libnotify
-    hypridle
-    hyprpicker
     wl-clipboard
     inputs.zen-browser.packages."${system}".beta
     graalvm-ce
