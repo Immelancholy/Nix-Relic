@@ -33,6 +33,7 @@
         blue = mkLiteral "#89b4fa";
         lavender = mkLiteral "#b4befe";
         text = mkLiteral "#cdd6f4";
+        text-dark = mkLiteral "#1e1e2e";
         subtext1 = mkLiteral "#bac2de";
         subtext0 = mkLiteral "#a6adc8";
         overlay2 = mkLiteral "#9399b2";
@@ -164,15 +165,15 @@
       };
       "element normal.urgent" = {
         background-color = mkLiteral "@red";
-        text-color = mkLiteral "@text";
+        text-color = mkLiteral "@text-dark";
       };
       "element normal.active" = {
         background-color = mkLiteral "@sky";
-        text-color = mkLiteral "@text";
+        text-color = mkLiteral "@text-dark";
       };
       "element selected.normal" = {
         background-color = mkLiteral "@mauve";
-        text-color = mkLiteral "@text";
+        text-color = mkLiteral "@text-dark";
       };
       "element selected.urgent" = {
         background-color = mkLiteral "@red";
@@ -180,7 +181,7 @@
       };
       "element selected.active" = {
         background-color = mkLiteral "@sky";
-        text-color = mkLiteral "@text";
+        text-color = mkLiteral "@text-dark";
       };
       "element-icon" = {
         background-color = mkLiteral "transparent";
