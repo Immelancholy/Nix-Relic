@@ -29,6 +29,9 @@
         "Ctrl+Alt, L, exec, uwsm-app -- swaylock -fF"
         "$mod, D, exec, $term $scr/tmux_nix.sh"
         "$mod, N, exec, uwsm-app -- $scr/cliphist.sh"
+        " , Print, exec, uwsm-app -- $scr/ss.sh o"
+        "Ctrl, Print, exec, uwsm-app -- $scr/ss.sh af"
+        "Ctrl Shift, Print, exec, uwsm-app -- $scr/ssh.sh w"
       ]
       ++ (
         # workspaces
