@@ -15,10 +15,10 @@
         "window"
       ];
       show-icons = true;
-      display-drun = " Apps";
-      display-run = "󰲌 Run";
-      display-filebrowser = " Files";
-      display-window = " Windows";
+      display-drun = "";
+      display-run = "󰲌";
+      display-filebrowser = "";
+      display-window = "";
       drun-display-format = "{name}";
       window-format = "{w} · {c}";
       icon-theme = "Papirus-Dark";
