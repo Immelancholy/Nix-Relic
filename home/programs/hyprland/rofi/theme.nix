@@ -44,7 +44,7 @@
 
         lines = mkLiteral "6";
         columns = mkLiteral "1";
-        cycles = mkLiteral "false";
+        cycle = mkLiteral "false";
       };
       "window" = {
         transparency = "real";
