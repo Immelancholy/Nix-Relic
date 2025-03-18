@@ -42,7 +42,7 @@
         crust = mkLiteral "#11111b";
         wallpaper = mkLiteral ''url("$HOME/Pictures/wallpapers/Neon-Beast-Girl.png", width)'';
 
-        line = mkLiteral "6";
+        lines = mkLiteral "6";
         columns = mkLiteral "1";
         cycles = mkLiteral "false";
       };
@@ -51,7 +51,7 @@
         location = mkLiteral "center";
         anchor = mkLiteral "center";
         fullscreen = mkLiteral "false";
-        width = mkLiteral "980px";
+        width = mkLiteral "680px";
         x-offset = mkLiteral "0px";
         y-offset = mkLiteral "0px";
 
@@ -137,7 +137,7 @@
         dynamic = mkLiteral "true";
         scrollbar = mkLiteral "false";
         layout = mkLiteral "vertical";
-        reverse = mkLiteral "true";
+        reverse = mkLiteral "false";
         fixed-height = mkLiteral "true";
         fixed-columns = mkLiteral "true";
         spacing = mkLiteral "10px";
@@ -201,7 +201,7 @@
         background-color = mkLiteral "@crust";
         text-color = mkLiteral "@text";
         vertical-align = mkLiteral "0.5";
-        horizontal-align = mkLiteral "0.5";
+        horizontal-align = mkLiteral "0.0";
       };
       "error-message" = {
         padding = mkLiteral "15px";
