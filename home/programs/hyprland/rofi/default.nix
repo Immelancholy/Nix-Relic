@@ -2,7 +2,7 @@
   programs.rofi = {
     enable = true;
     font = "JetBrainsMono Nerd Font Mono 12";
-    package = pkgs.rofi-wayland;
+    package = pkgs.rofi-wayland-unwrapped;
     terminal = "${pkgs.kitty}/bin/kitty";
     extraConfig = {
       # hover-select = true;
@@ -12,7 +12,6 @@
         "drun"
         "run"
         "filebrowser"
-        "power-menu"
         # "window"
       ];
       show-icons = true;
