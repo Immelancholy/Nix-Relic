@@ -17,14 +17,14 @@
         rosewater = mkLiteral "#f5e0dc";
         flamingo = mkLiteral "#f2cdcd";
         pink = mkLiteral "#f5c2e7";
-        mauve = mkLiteral "#cba6f7";
-        red = mkLiteral "#f38ba8";
+        mauve = mkLiteral "#cba6f7CD";
+        red = mkLiteral "#f38ba8CD";
         maroon = mkLiteral "#eba0ac";
         peach = mkLiteral "#fab387";
         yellow = mkLiteral "#f9e2af";
         green = mkLiteral "#a6e3a1";
         teal = mkLiteral "#94e2d5";
-        sky = mkLiteral "#89dceb";
+        sky = mkLiteral "#89dcebCD";
         sapphire = mkLiteral "#74c7ec";
         blue = mkLiteral "#89b4fa";
         lavender = mkLiteral "#b4befe";
@@ -37,9 +37,9 @@
         surface2 = mkLiteral "#585b70";
         surface1 = mkLiteral "#45475a";
         surface0 = mkLiteral "#313244";
-        base = mkLiteral "#1e1e2e";
-        mantle = mkLiteral "#181825";
-        crust = mkLiteral "#11111b";
+        base = mkLiteral "#1e1e2eCD";
+        mantle = mkLiteral "#181825CD";
+        crust = mkLiteral "#11111bCD";
         wallpaper = mkLiteral ''url("${../../../backgrounds/Neon-Beast-Girl.png}", width)'';
 
         lines = mkLiteral "6";
@@ -181,7 +181,7 @@
       "element-icon" = {
         background-color = mkLiteral "transparent";
         text-color = mkLiteral "inherit";
-        size = mkLiteral "64px";
+        size = mkLiteral "48px";
         cursor = mkLiteral "inherit";
       };
       "element-text" = {
