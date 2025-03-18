@@ -105,7 +105,7 @@
         text-color = mkLiteral "inherit";
         cursor = mkLiteral "text";
         placeholder = "Search";
-        placeholder-color = mkLiteral "@subext0";
+        placeholder-color = mkLiteral "@subtext0";
       };
       "dummy" = {
         expand = mkLiteral "true";
