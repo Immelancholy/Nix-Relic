@@ -24,7 +24,7 @@
         "$mod, U, exec, [workspace 1 silent; float; size 620 666; move 10 404] $term $scr/btop.sh"
         "$mod, U, exec, [workspace 1 silent; float; size 402 1030; move 1508 40] $term $scr/neo.sh"
         "$mod, U, exec, [workspace 1 silent; float; size 620 354; move 10 40] $term --hold fastfetch --logo $HOME/Pictures/fastfetch_logos/FallenAngel.jpg"
-        "$mod, Delete, exec, uwsm stop"
+        "$mod, Delete, exec, rofi -show power-menu -modi power-menu:rofi-power-menu"
         "$mod+Shift, 0, movetoworkspace, 10"
         ", Print, exec, uwsm-app -- $scr/screenshot.sh m"
         ", Print, exec, sleep 1; systemctl restart --user waybar"
