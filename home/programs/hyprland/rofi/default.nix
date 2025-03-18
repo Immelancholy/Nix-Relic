@@ -13,7 +13,7 @@
       display-run = "󰲌 RUN";
       display-filebrowser = " FILES";
       window-format = "{w} · {c}";
-      drun-display-format = "{icon} {name}";
+      drun-display-format = "{name}";
       show-icons = true;
       icon-theme = "Papirus-Dark";
       # icon-theme = "Tela-circle-dracula";
