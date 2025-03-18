@@ -32,9 +32,6 @@
     libnotify
     hypridle
     hyprpicker
-    # xdg-desktop-portal-gtk
-    # lxqt.xdg-desktop-portal-lxqt
-    grimblast
     wl-clipboard
     inputs.zen-browser.packages."${system}".beta
     graalvm-ce
