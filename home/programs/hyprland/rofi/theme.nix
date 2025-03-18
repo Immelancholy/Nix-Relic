@@ -61,7 +61,7 @@
 
         enabled = mkLiteral "true";
         border = mkLiteral "2px solid";
-        border-radius = mkLiteral "20px";
+        border-radius = mkLiteral "25px";
         border-color = mkLiteral "@lavender";
         cursor = "default";
         background-color = mkLiteral "@base";
