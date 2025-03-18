@@ -9,15 +9,16 @@
     package = pkgs.rofi-wayland;
     terminal = "kitty";
     extraConfig = {
-      display-drun = "Apps:";
-      display-window = "Windows:";
+      display-drun = " APPS";
+      display-run = "󰲌 RUN";
+      display-filebrowser = " FILES";
+      window-format = "{w} · {c}";
       drun-display-format = "{icon} {name}";
       show-icons = true;
       icon-theme = "Papirus-Dark";
       # icon-theme = "Tela-circle-dracula";
       modi = [
         "drun"
-        "window"
         "filebrowser"
         "run"
       ];

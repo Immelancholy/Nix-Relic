@@ -14,86 +14,120 @@
       inherit (config.lib.formats.rasi) mkLiteral;
     in {
       "*" = {
-        bg0 = mkLiteral "#1e1e2eAB";
-        bg1 = mkLiteral "#1e1e2eAB";
-        bg2 = mkLiteral "#b4befeDD";
-        bg3 = mkLiteral "#cba6f7DD";
-        fg0 = mkLiteral "#cdd6f4";
-        fg1 = mkLiteral "#11111b";
-        fg2 = mkLiteral "#bac2de";
-        fg3 = mkLiteral "#9399b2";
+        rosewater = mkLiteral "#f5e0dc";
+        flamingo = mkLiteral "#f2cdcd";
+        pink = mkLiteral "#f5c2e7";
+        mauve = mkLiteral "#cba6f7";
+        red = mkLiteral "#f38ba8";
+        maroon = mkLiteral "#eba0ac";
+        peach = mkLiteral "#fab387";
+        yellow = mkLiteral "#f9e2af";
+        green = mkLiteral "#a6e3a1";
+        teal = mkLiteral "#94e2d5";
+        sky = mkLiteral "#89dceb";
+        sapphire = mkLiteral "#74c7ec";
+        blue = mkLiteral "#89b4fa";
+        lavender = mkLiteral "#b4befe";
+        text = mkLiteral "#cdd6f4";
+        subtext1 = mkLiteral "#bac2de";
+        subtext0 = mkLiteral "#a6adc8";
+        overlay2 = mkLiteral "#9399b2";
+        overlay1 = mkLiteral "#7f849c";
+        overlay0 = mkLiteral "#6c7086";
+        surface2 = mkLiteral "#585b70";
+        surface1 = mkLiteral "#45475a";
+        surface0 = mkLiteral "#313244";
+        base = mkLiteral "#1e1e2e";
+        mantle = mkLiteral "#181825";
+        crust = mkLiteral "#11111b";
+        wallpaper = mkLiteral ''url("$HOME/Pictures/wallpapers/Neon-Beast-Girl.png", width)'';
 
-        background-color = mkLiteral "transparent";
-        text-color = mkLiteral "@fg0";
-
-        margin = mkLiteral "0px";
-        padding = mkLiteral "0px";
-        spacing = mkLiteral "0px";
+        line = mkLiteral "1";
+        columns = mkLiteral "6";
+        cycles = mkLiteral "false";
       };
       "window" = {
-        location = mkLiteral "north";
-        y-offset = mkLiteral "calc(45% - 176px)";
-        width = mkLiteral "480";
-        border-radius = mkLiteral "24px";
+        transparency = "real";
+        location = mkLiteral "center";
+        anchor = mkLiteral "center";
+        fullscreen = mkLiteral "false";
+        width = mkLiteral "980px";
+        x-offset = mkLiteral "0px";
+        y-offset = mkLiteral "0px";
 
-        background-color = mkLiteral "@bg0";
+        enabled = mkLiteral "true";
+        border = mkLiteral "2px solid";
+        border-radius = mkLiteral "15px";
+        border-color = mkLiteral "@mauve";
+        cursor = mkLiteral "default";
+        background-color = mkLiteral "@base";
       };
       "mainbox" = {
-        padding = mkLiteral "12px";
+        enabled = mkLiteral "true";
+        spacing = mkLiteral "0px";
+        background-color = mkLiteral "transparent";
+        orientation = mkLiteral "vertical";
+        children = mkLiteral ''[ "inputbar", "listbox" ]'';
+      };
+      "listbox" = {
+        spacing = mkLiteral "20px";
+        padding = mkLiteral "20px";
+        background-color = mkLiteral "transparent";
+        orientation = mkLiteral "vertical";
+        children = mkLiteral ''[ "message", "listview" ]'';
       };
       "inputbar" = {
-        background-color = mkLiteral "@bg1";
-        border-color = mkLiteral "@bg3";
-
-        border = mkLiteral "2px";
-        border-radius = mkLiteral "16px";
-
-        padding = mkLiteral "8px 16px";
-        spacing = mkLiteral "8px";
-        childern = mkLiteral "[ prompt, entry ]";
+        enabled = mkLiteral "true";
+        spacing = mkLiteral "10px";
+        padding = mkLiteral "50px 60px";
+        background-color = mkLiteral "transparent";
+        background-image = mkLiteral "@wallpaper";
+        text-color = mkLiteral "@text";
+        orientation = mkLiteral "horizontal";
+        children = mkLiteral ''[ "textbox-prompt-colon", "entry", "dummy", "mode-switcher" ]'';
       };
-      "promp" = {
-        text-color = mkLiteral "@fg2";
+      "textbox-prompt-colon" = {
+        enabled = mkLiteral "true";
+        expand = mkLiteral "false";
+        str = mkLiteral " :";
+        padding = mkLiteral "12px 15px";
+        border-radius = mkLiteral "100%";
+        background-color = mkLiteral "@crust";
+        text-color = mkLiteral "inherit";
       };
       "entry" = {
-        placeholder = "Search";
-        placeholder-color = mkLiteral "@fg3";
-      };
-      "message" = {
-        margin = mkLiteral "12px 0 0";
-        border-radius = mkLiteral "16px";
-        border-color = mkLiteral "@bg2";
-        background-color = mkLiteral "@bg2";
-      };
-      "textbox" = {
-        padding = mkLiteral "8px 24px";
-      };
-      "listview" = {
-        background-color = mkLiteral "transparent";
-
-        margin = mkLiteral "12px 0 0";
-        lines = mkLiteral "8";
-        columns = mkLiteral "1";
-
-        fixed-heigh = mkLiteral "false";
-      };
-      "element" = {
-        padding = mkLiteral "8px 16px";
-        spacing = mkLiteral "8px";
-        border-radius = mkLiteral "16px";
-      };
-      "element normal active" = {
-        text-color = mkLiteral "@bg3";
-      };
-      "element selected normal, element selected active" = {
-        background-color = mkLiteral "@bg3";
-      };
-      "element-icon" = {
-        size = mkLiteral "2em";
-        vertical-align = mkLiteral "0.5";
-      };
-      "element-text" = {
+        enabled = mkLiteral "true";
+        expand = mkLiteral "false";
+        width = mkLiteral "300px";
+        padding = mkLiteral "12px 16px";
+        border-radius = mkLiteral "100%";
+        background-color = mkLiteral "@crust";
         text-color = mkLiteral "inherit";
+        cursor = mkLiteral "text";
+        placeholder = mkLiteral "Search";
+        placeholder-color = mkLiteral "@subext0";
+      };
+      "dummy" = {
+        expand = mkLiteral "true";
+        background-color = mkLiteral "transparent";
+      };
+      "mode-switcher" = {
+        enabled = mkLiteral "true";
+        spacing = mkLiteral "10px";
+        background-color = mkLiteral "transparent";
+        text-color = "@text";
+      };
+      "button" = {
+        width = mkLiteral "80px";
+        padding = mkLiteral "12px";
+        border-radius = mkLiteral "100%";
+        background-color = mkLiteral "@crust";
+        text-color = mkLiteral "inherit";
+        cursor = mkLiteral "pointer";
+      };
+      "button selected" = {
+        background-color = mkLiteral "@mauve";
+        text-color = mkLiteral "@text";
       };
     }
   );
