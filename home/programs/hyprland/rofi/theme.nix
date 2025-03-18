@@ -180,7 +180,7 @@
         text-color = mkLiteral "@text";
       };
       "element selected.active" = {
-        background-color = mkLiteral "@sky";
+        background-color = mkLiteral "@mauve";
         text-color = mkLiteral "@text-dark";
       };
       "element-icon" = {
