@@ -18,7 +18,7 @@
       display-drun = "";
       display-run = "󰲌";
       display-filebrowser = "";
-      display-window = "";
+      display-window = "";
       drun-display-format = "{name}";
       window-format = "{w} · {c}";
       icon-theme = "Papirus-Dark";
