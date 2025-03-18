@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   programs.rofi = {
     enable = true;
-    font = "JetBrainsMono Nerd Font Mono 11";
+    font = "JetBrainsMono Nerd Font Mono 12";
     package = pkgs.rofi-wayland;
     terminal = "kitty";
     extraConfig = {
@@ -14,9 +14,9 @@
         "filebrowser"
       ];
       show-icons = true;
-      display-drun = " APPS";
-      display-run = "󰲌 RUN";
-      display-filebrowser = " FILES";
+      display-drun = " Apps";
+      display-run = "󰲌 Run";
+      display-filebrowser = " Files";
       drun-display-format = "{name}";
       window-format = "{w} · {c}";
       icon-theme = "Papirus-Dark";
