@@ -19,15 +19,12 @@
       display-run = "󰲌 Run";
       display-filebrowser = " Files";
       # display-window = " Windows";
-      drun-display-format = "{name}";
+      drun-display-format = "{icon} {name}";
       window-format = "{w} · {c}";
       icon-theme = "Papirus-Dark";
       # icon-theme = "Tela-circle-dracula";
     };
   };
-  # home.packages = with pkgs; [
-  #   rofi-power-menu
-  # ];
   imports = [
     ./theme.nix
   ];
