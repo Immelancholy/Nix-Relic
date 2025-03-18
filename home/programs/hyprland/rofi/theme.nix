@@ -132,7 +132,7 @@
       };
       "button selected" = {
         background-color = mkLiteral "@mauve";
-        text-color = mkLiteral "@text";
+        text-color = mkLiteral "@text-dark";
       };
       "listview" = {
         enabled = mkLiteral "true";
