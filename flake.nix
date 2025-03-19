@@ -105,7 +105,6 @@
           ./system/secboot.nix # uncomment this to disable secureboot
           ({pkgs, ...}: {
             nixpkgs.config.allowUnfree = true;
-            nixpkgs.config.cudaSupport = true;
             nixpkgs.overlays = [rust-overlay.overlays.default];
             environment.systemPackages = with pkgs; [
               (
