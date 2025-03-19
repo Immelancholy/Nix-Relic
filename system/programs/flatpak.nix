@@ -10,6 +10,7 @@
     packages = [
       "com.obsproject.Studio"
       "com.obsproject.Studio.Plugin.DroidCam"
+      "com.obsproject.Studio.Plugin.OBSVkCapture"
     ];
   };
 }
