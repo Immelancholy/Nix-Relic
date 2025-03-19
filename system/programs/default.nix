@@ -26,7 +26,7 @@
   services.dbus.enable = true;
   environment.systemPackages = with pkgs; [
     mpvpaper
-    (pkgs.ffmpeg.override {
+    (pkgs.ffmpeg-full.override {
       withUnfree = true;
       withOpengl = true;
       withNvcodec = true;
