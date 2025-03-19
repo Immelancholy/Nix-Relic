@@ -21,6 +21,7 @@
     ./DAW
     ./swayidle.nix
     ./eww
+    ./obs.nix
   ];
 
   programs.btop = {
