@@ -65,8 +65,7 @@
     bindl = , F12, pass, class:^(com.obsproject.Studio)$
     bindl = , F9, pass, class:^(com.obsproject.Studio)$
     bind = $mod, M, exec,[workspace 4 silent] uwsm-app -- $scr/patch.sh
-    bind = $mod, M, exec,[workspace 4 silent] uwsm app -- qpwgraph
-    bind = $mod, M, exec,[workspace 4 silent] uwsm app -- qpwgraph
+    bind = $mod, M, exec,[workspace 4 silent] uwsm-app -- qpwgraph
 
     bind = $mod, H, movefocus, l
     bind = $mod, L, movefocus, r
