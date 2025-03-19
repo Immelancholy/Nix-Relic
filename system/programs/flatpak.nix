@@ -9,7 +9,7 @@
     ];
     packages = [
       "com.obsproject.Studio"
-      "org.freedesktop.Platform.VulkanLayer.OBSVkCapture"
+      "com.obsproject.Studio.Plugin.DroidCam"
     ];
   };
 }
