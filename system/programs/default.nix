@@ -25,6 +25,7 @@
   programs.zsh.enable = true;
   services.dbus.enable = true;
   environment.systemPackages = with pkgs; [
+    nv-codec-headers
     mpvpaper
     libsForQt5.qt5.qtwayland
     kdePackages.qtwayland
