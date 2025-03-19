@@ -62,9 +62,9 @@
     bindl  = $mod, mouse:282, exec, $playerctl next #next
     bindl  = $mod, mouse:281, exec, $playerctl previous #previous,
     bindl = , mouse:275, pass, class:^(discord)$
-    bindl = , F10, pass, class:^(com.obsproject.Studio)$
-    bindl = , F12, pass, class:^(com.obsproject.Studio)$
-    bindl = , F9, pass, class:^(com.obsproject.Studio)$
+    # bindl = , F10, pass, class:^(com.obsproject.Studio)$
+    # bindl = , F12, pass, class:^(com.obsproject.Studio)$
+    # bindl = , F9, pass, class:^(com.obsproject.Studio)$
     bind = $mod, M, exec,[workspace 4 silent] uwsm app -- $scr/patch.sh
     bind = $mod, M, exec,[workspace 4 silent] uwsm app -- qpwgraph
 
