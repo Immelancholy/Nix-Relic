@@ -3,6 +3,7 @@
     enable = true;
     plugins = with pkgs.obs-studio-plugins; [
       obs-vkcapture
+      wlrobs
       obs-vaapi
       obs-pipewire-audio-capture
       obs-composite-blur
