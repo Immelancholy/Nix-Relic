@@ -8,7 +8,6 @@
       }
     ];
     packages = [
-      "com.obsproject.Studio"
     ];
   };
 }
