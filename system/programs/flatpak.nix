@@ -9,6 +9,7 @@
     ];
     packages = [
       "com.obsproject.Studio"
+      "org.freedesktop.Platform.VulkanLayer.OBSVkCapture"
     ];
   };
 }
