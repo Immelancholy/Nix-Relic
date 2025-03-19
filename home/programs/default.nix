@@ -142,8 +142,6 @@
     (pkgs.ffmpeg-full.override {
       withUnfree = true;
       withOpengl = true;
-      withRtmp = true;
-      withNvenc = true;
     })
     obsidian
     obsidian-export
