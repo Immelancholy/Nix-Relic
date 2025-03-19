@@ -25,8 +25,14 @@
   programs.zsh.enable = true;
   services.dbus.enable = true;
   environment.systemPackages = with pkgs; [
-    nv-codec-headers-12
     mpvpaper
+    (pkgs.ffmpeg.override {
+      withUnfree = true;
+      withOpengl = true;
+      withNvcodec = true;
+      withCuda = true;
+      withGPL = true;
+    })
     libsForQt5.qt5.qtwayland
     kdePackages.qtwayland
     inputs.swww.packages.${pkgs.system}.swww

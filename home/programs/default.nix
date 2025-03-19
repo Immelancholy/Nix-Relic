@@ -139,11 +139,6 @@
       withOpenASAR = true; # can do this here too
       withVencord = true;
     })
-    (pkgs.ffmpeg-full.override {
-      withUnfree = true;
-      withOpengl = true;
-      withNvcodec = true;
-    })
     obsidian
     obsidian-export
     wordnet
