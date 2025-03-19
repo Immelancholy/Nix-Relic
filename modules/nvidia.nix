@@ -22,7 +22,7 @@
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
     # Hardware cursors are currently broken on wlroots
     NVD_BACKEND = "direct";
-    LIBVA_DRIVER_NAME = "nvidia";
+    # LIBVA_DRIVER_NAME = "nvidia";
     AQ_TRACE = "1";
     AQ_DRM_DEVICES = "/dev/dri/card0";
   };
