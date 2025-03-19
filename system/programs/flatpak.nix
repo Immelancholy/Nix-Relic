@@ -11,7 +11,7 @@
       "com.obsproject.Studio"
       "com.obsproject.Studio.Plugin.DroidCam"
       "com.obsproject.Studio.Plugin.OBSVkCapture"
-      "org.freedesktop.Platform.VulkanLayer.OBSVkCapture"
+      "org.freedesktop.Platform.VulkanLayer.OBSVkCapture.24.08"
     ];
   };
 }
