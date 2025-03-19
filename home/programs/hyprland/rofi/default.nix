@@ -12,13 +12,13 @@
         "drun"
         "run"
         "filebrowser"
-        # "window"
+        "window"
       ];
       show-icons = true;
       display-drun = " Apps";
       display-run = "󰲌 Run";
       display-filebrowser = " Files";
-      # display-window = " Windows";
+      display-window = " Windows";
       drun-display-format = "{icon} {name}";
       window-format = "{w} · {c}";
       icon-theme = "Papirus-Dark";
