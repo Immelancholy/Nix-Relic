@@ -38,7 +38,6 @@
     hyprpicker
     hyprshot
     inputs.zen-browser.packages."${system}".beta
-    obs-studio-plugins.obs-vkcapture
     pipes
     lazygit
     loupe
