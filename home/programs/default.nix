@@ -142,7 +142,7 @@
       withUnfree = true;
       withOpengl = true;
       withRtmp = true;
-      withNvenc = "withFullDeps && withNvcodec";
+      withNvenc = true;
     })
     obsidian
     obsidian-export
