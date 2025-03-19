@@ -18,7 +18,7 @@
       display-drun = " Apps";
       display-run = "󰲌 Run";
       display-filebrowser = " Files";
-      display-window = " Window";
+      display-window = " Win";
       drun-display-format = "{icon} {name}";
       window-format = "{w} · {c}";
       icon-theme = "Papirus-Dark";
