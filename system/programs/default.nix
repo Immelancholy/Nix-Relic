@@ -32,6 +32,8 @@
       withNvcodec = true;
       withCuda = true;
       withGPL = true;
+      withVaapi = true;
+      withVdpau = true;
     })
     libsForQt5.qt5.qtwayland
     kdePackages.qtwayland
