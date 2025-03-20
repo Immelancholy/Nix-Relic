@@ -46,7 +46,7 @@
       {
         name = "zsh-nix-shell";
         src = pkgs.zsh-nix-shell;
-        file = "nix-shell.plugin.zsh";
+        file = "share/zsh-nix-shell/nix-shell.plugin.zsh";
       }
     ];
     profileExtra = ''
