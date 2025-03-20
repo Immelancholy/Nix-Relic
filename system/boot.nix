@@ -12,7 +12,8 @@
   boot.extraModulePackages = with config.boot.kernelPackages; [
     bbswitch
   ];
-  boot.kernelPackages = pkgs.linuxPackages_zen;
+  # boot.kernelPackages = pkgs.linuxPackages_zen;
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
   boot.kernelParams = [
     "rw"
     "quiet"
