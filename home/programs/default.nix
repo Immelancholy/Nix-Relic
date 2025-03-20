@@ -36,6 +36,7 @@
     addRdpMimeTypeAssoc = true;
   };
   home.packages = with pkgs; [
+    vesktop
     hyprpicker
     hyprshot
     inputs.zen-browser.packages."${system}".beta
