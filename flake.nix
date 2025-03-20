@@ -137,7 +137,6 @@
                 stylix.homeManagerModules.stylix
                 ./home
                 catppuccin.homeManagerModules.catppuccin
-                inputs.nixcord.homeManagerModules.nixcord
                 inputs.nixvim.homeManagerModules.nixvim
                 inputs.spicetify-nix.homeManagerModules.default
               ];
