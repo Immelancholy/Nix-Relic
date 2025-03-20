@@ -29,7 +29,7 @@
     (pkgs.ffmpeg-full.override {
       withUnfree = true;
       withOpengl = true;
-      withRmtp = true;
+      withRtmp = true;
       # withNvcodec = true;
       # withCuda = true;
       # withGPL = true;
