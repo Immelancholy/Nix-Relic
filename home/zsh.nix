@@ -43,6 +43,11 @@
         src = pkgs.zsh-powerlevel10k;
         file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
       }
+      {
+        name = "zsh-nix-shell";
+        src = pkgs.zsh-nix-shell;
+        file = "nix-shell.plugin.zsh";
+      }
     ];
     profileExtra = ''
       eval $(gnome-keyring-daemon --start --daemonize)
