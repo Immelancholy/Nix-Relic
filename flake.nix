@@ -4,7 +4,6 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
     catppuccin.url = "github:catppuccin/nix";
-    nixcord.url = "github:kaylorben/nixcord";
     home-manager = {
       url = "github:nix-community/home-manager";
       # The `follows` keyword in inputs is used for inheritance.
