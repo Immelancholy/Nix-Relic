@@ -139,6 +139,7 @@
                 catppuccin.homeManagerModules.catppuccin
                 inputs.nixvim.homeManagerModules.nixvim
                 inputs.spicetify-nix.homeManagerModules.default
+                nix-flatpak.homeManagerModules.nix-flatpak
               ];
             };
             # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
