@@ -45,6 +45,8 @@
     # })
     (ffmpeg.override {
       withUnfree = true;
+      withOpengl = true;
+      withRtmp = true;
     })
     libsForQt5.qt5.qtwayland
     kdePackages.qtwayland
