@@ -1,7 +1,7 @@
 # My NixOS Dots
 ### My NixOS Dotfiles, basically being updated near constantly as I change them.
 
-https://github.com/user-attachments/assets/107042c3-25db-4baf-a1cc-f68c739536ee
+https://github.com/user-attachments/assets/669d0a3e-0035-4646-9147-a5affd1d3237
 
 ![SS1](https://raw.githubusercontent.com/Immelancholy/Nix-Dotfiles/refs/heads/main/Screenshots/SS1.png)
 
