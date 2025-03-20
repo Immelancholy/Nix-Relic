@@ -27,19 +27,24 @@
     enableVirtualCamera = true;
   };
 
+  nixpkgs.config.cudaSupport = true;
+
   programs.zsh.enable = true;
   services.dbus.enable = true;
   environment.systemPackages = with pkgs; [
     mpvpaper
-    (pkgs.ffmpeg-full.override {
+    # (ffmpeg-full.override {
+    #   withUnfree = true;
+    #   withOpengl = true;
+    #   withRtmp = true;
+    #   # withNvcodec = true;
+    #   # withCuda = true;
+    #   # withGPL = true;
+    #   # withVaapi = true;
+    #   # withVdpau = true;
+    # })
+    (ffmpeg.override {
       withUnfree = true;
-      withOpengl = true;
-      withRtmp = true;
-      # withNvcodec = true;
-      # withCuda = true;
-      # withGPL = true;
-      # withVaapi = true;
-      # withVdpau = true;
     })
     libsForQt5.qt5.qtwayland
     kdePackages.qtwayland
