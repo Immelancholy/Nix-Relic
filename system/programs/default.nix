@@ -27,8 +27,6 @@
     enableVirtualCamera = true;
   };
 
-  nixpkgs.config.cudaSupport = true;
-
   programs.zsh.enable = true;
   services.dbus.enable = true;
   environment.systemPackages = with pkgs; [
