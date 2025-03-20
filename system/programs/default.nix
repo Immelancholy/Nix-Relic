@@ -29,11 +29,12 @@
     (pkgs.ffmpeg-full.override {
       withUnfree = true;
       withOpengl = true;
-      withNvcodec = true;
-      withCuda = true;
-      withGPL = true;
-      withVaapi = true;
-      withVdpau = true;
+      withRmtp = true;
+      # withNvcodec = true;
+      # withCuda = true;
+      # withGPL = true;
+      # withVaapi = true;
+      # withVdpau = true;
     })
     libsForQt5.qt5.qtwayland
     kdePackages.qtwayland
