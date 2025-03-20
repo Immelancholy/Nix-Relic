@@ -7,7 +7,6 @@
     ./hyprland.nix
     ./pipewire.nix
     ./sddm.nix
-    ./flatpak.nix
   ];
 
   programs.xfconf.enable = true;
