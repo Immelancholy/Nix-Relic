@@ -146,12 +146,12 @@
   ];
 
   xdg.desktopEntries = {
-    discord = {
-      name = "Discord";
+    discord-canary = {
+      name = "Discord Canary";
       genericName = "All-in-one cross-platform voice and text chat for gamers";
       type = "Application";
-      exec = "Discord --enable-features=UseOzonePlatform --ozone-platform=x11";
-      icon = "discord";
+      exec = "DiscordCanary --enable-features=UseOzonePlatform --ozone-platform=x11";
+      icon = "discord-canary";
       mimeType = ["x-scheme-handler/discord"];
       categories = ["Network" "InstantMessaging"];
     };
