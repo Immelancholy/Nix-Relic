@@ -23,7 +23,7 @@
     # Hardware cursors are currently broken on wlroots
     WLR_NO_HARDWARE_CURSORS = "1";
     NVD_BACKEND = "direct";
-    # LIBVA_DRIVER_NAME = "nvidia";
+    LIBVA_DRIVER_NAME = "nvidia";
     AQ_TRACE = "1";
     AQ_DRM_DEVICES = "/dev/dri/card0";
   };
