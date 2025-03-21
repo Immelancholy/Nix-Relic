@@ -30,6 +30,8 @@
         ''$mod, D, exec, $term --class "NixDots" $scr/tmux_nix.sh''
         "$mod, N, exec, uwsm-app -- $scr/cliphist.sh"
         " , Print, exec, uwsm-app -- $scr/ss.sh o"
+        "$mod, Print, exec, uwsm-app -- $scr/ss.sh af"
+        "$mods, Print, exec, uwsm-app -- $scr/ss.sh w"
         "Ctrl, Print, exec, uwsm-app -- $scr/ss.sh af"
         "Ctrl Shift, Print, exec, uwsm-app -- $scr/ss.sh w"
         "Alt, Tab, exec, rofi -show window -modi window"
