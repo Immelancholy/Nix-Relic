@@ -12,7 +12,7 @@
       edit = "sudo -e";
       nv = "nv.sh";
       neo = "neo.sh";
-      rmpc = "rmpc.sh";
+      rmpcs = "rmpc.sh";
       cava = "cava.sh";
       fastfetch = "clear; fastfetch";
       nvn = "cd /etc/nixos/; nv";
