@@ -66,6 +66,6 @@
     nvidiaSettings = true;
 
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    package = lib.mkForce config.boot.kernelPackages.nvidiaPackages.beta;
+    package = lib.mkDefault config.boot.kernelPackages.nvidiaPackages.beta;
   };
 }
