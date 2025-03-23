@@ -7,6 +7,7 @@
     enable = true;
     package = null;
     portalPackage = null;
+    xwayland.enable = true;
     plugins = [
       # inputs.hyprtasking.packages.${pkgs.system}.hyprtasking
       inputs.hyprland-plugins.packages.${pkgs.system}.csgo-vulkan-fix
