@@ -8,7 +8,7 @@
     EDITOR = "kitty $HOME/.local/share/bin/kitty_nvim.sh";
     BROWSER = "zen";
     TERMINAL = "${lib.getExe pkgs.kitty}";
-    NIXOS_OZONE_WL = "1";
+    # NIXOS_OZONE_WL = "1";
     XCURSOR_THEME = "Bibata-Modern-Ice";
     XCURSOR_SIZE = "20";
     ENABLE_VKBASALT = "1";
