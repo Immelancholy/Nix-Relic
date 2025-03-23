@@ -36,6 +36,8 @@
     addRdpMimeTypeAssoc = true;
   };
   home.packages = with pkgs; [
+    grim
+    slurp
     hyprpicker
     hyprshot
     inputs.zen-browser.packages."${system}".beta
