@@ -15,7 +15,7 @@
   security.polkit = {
     enable = true;
   };
-  boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
+  boot.kernelPackages = pkgs.linuxPackages_zen;
   boot.kernelParams = [
     "rw"
     "quiet"
