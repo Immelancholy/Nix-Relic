@@ -2,7 +2,7 @@
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
+    # nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
     catppuccin.url = "github:catppuccin/nix";
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -121,7 +121,7 @@
           solaar.nixosModules.default
           catppuccin.nixosModules.catppuccin
           ./system
-          ./modules # Comment and uncomment to change between amd and nvidia drivers
+          ./modules # Comment and uncomment in the default.nix file in the modules folder to change between amd and nvidia drivers
 
           home-manager.nixosModules.home-manager
           {
