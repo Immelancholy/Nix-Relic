@@ -36,7 +36,6 @@
     addRdpMimeTypeAssoc = true;
   };
   home.packages = with pkgs; [
-    webcord-vencord
     grim
     slurp
     hyprpicker
