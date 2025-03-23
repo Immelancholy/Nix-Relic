@@ -80,7 +80,7 @@
   users.users.${user} = {
     isNormalUser = true;
     description = "Account for ${user}";
-    extraGroups = ["networkmanager" "wheel" "uinput"];
+    extraGroups = ["networkmanager" "wheel"];
   };
 
   users.defaultUserShell = pkgs.zsh;
