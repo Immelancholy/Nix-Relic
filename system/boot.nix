@@ -12,6 +12,9 @@
   boot.extraModulePackages = with config.boot.kernelPackages; [
     bbswitch
   ];
+  security.polkit = {
+    enable = true;
+  };
   boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
   boot.kernelParams = [
     "rw"
