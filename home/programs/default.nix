@@ -22,7 +22,6 @@
     ./swayidle.nix
     ./eww
     ./obs.nix
-    ./weylus.nix
   ];
 
   programs.btop = {

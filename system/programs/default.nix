@@ -8,6 +8,7 @@
     ./pipewire.nix
     ./sddm.nix
     ./flatpak.nix
+    ./weylus.nix
   ];
 
   programs.xfconf.enable = true;
