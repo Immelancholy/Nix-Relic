@@ -42,10 +42,11 @@
     #   # withVaapi = true;
     #   # withVdpau = true;
     # })
-    (ffmpeg.override {
+    (ffmpeg-full.override {
       withUnfree = true;
       withOpengl = true;
       withRtmp = true;
+      withCudaNVCC = false;
     })
     libsForQt5.qt5.qtwayland
     kdePackages.qtwayland
