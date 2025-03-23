@@ -14,8 +14,6 @@
   ];
   boot.blacklistedKernelModules = ["nouveau"];
 
-  nixpkgs.config.cudaSupport = true;
-
   environment.variables = {
     # Required to run the correct GBM backend for nvidia GPUs on wayland
     GBM_BACKEND = "nvidia-drm";
@@ -67,6 +65,6 @@
     nvidiaSettings = true;
 
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    package = config.boot.kernelPackages.nvidiaPackages.beta;
+    package = config.boot.kernelPackages.nvidiaPackages.production;
   };
 }
