@@ -11,8 +11,10 @@
       plugin {
         hy3 {
           tabs {
-            text_font = Caskaydia Cove Nerd Font Mono # default: Sans
-            text_height = 10
+            radius = 10
+            padding = 4
+            text_font = JetBrainsMono Nerd Font Mono # default: Sans
+            text_height = 9
             border_width = 2
             col.active = rgba(1e1e2eB5)
             col.active.border = rgba(cba6f7ff)
