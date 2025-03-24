@@ -23,7 +23,7 @@
             col.focused.border = rgba(6c7086cc)
             col.focuse.text = rgba(7f849cff)
             col.inactive = rgba(1e1e2eB5)
-            col.inactive.border = rgba(b4befeB5)
+            col.inactive.border = rgba(b4befecc)
             col.inactive.text = rgba(7f849cff)
             col.urgent = rgba(1e1e2eB5)
             col.urgent.border = rgba(f9e2afff)
