@@ -28,11 +28,11 @@
         "$mod+Ctrl+Alt, Left, hy3:movetoworkspace, r-1, follow"
         "$mod+Ctrl+Alt, L, hy3:movetoworkspace, r+1, follow"
         "$mod+Ctrl+Alt, H, hy3:movetoworkspace, r-1, follow"
-        ''$mod, U, exec, [workspace 1 silent; float; size 858 559; move 640 40] $term --class "rmpc" $scr/rmpc.sh''
-        ''$mod, U, exec, [workspace 1 silent; float; size 858 462; move 640 609] $term --class "cava" $scr/cava.sh''
-        ''$mod, U, exec, [workspace 1 silent; float; size 620 666; move 10 404] $term --class "btop" $scr/btop.sh''
-        ''$mod, U, exec, [workspace 1 silent; float; size 402 1030; move 1508 40] $term --class "neo" $scr/neo.sh''
-        ''$mod, U, exec, [workspace 1 silent; float; size 620 354; move 10 40] $term --class "fastfetch" --hold fastfetch --logo $HOME/Pictures/fastfetch_logos/FallenAngel.jpg''
+        ''$mods, U, exec, [workspace 1 silent; float; size 858 559; move 640 40] $term --class "rmpc" $scr/rmpc.sh''
+        ''$mods, U, exec, [workspace 1 silent; float; size 858 462; move 640 609] $term --class "cava" $scr/cava.sh''
+        ''$mods, U, exec, [workspace 1 silent; float; size 620 666; move 10 404] $term --class "btop" $scr/btop.sh''
+        ''$mods, U, exec, [workspace 1 silent; float; size 402 1030; move 1508 40] $term --class "neo" $scr/neo.sh''
+        ''$mods, U, exec, [workspace 1 silent; float; size 620 354; move 10 40] $term --class "fastfetch" --hold fastfetch --logo $HOME/Pictures/fastfetch_logos/FallenAngel.jpg''
         "$mod, Delete, exec, rofi -show power-menu -modi power-menu:rofi-power-menu"
         "$mods, 0, hy3:movetoworkspace, 10, follow"
         "Ctrl+Alt, L, exec, uwsm-app -- swaylock -fF"
@@ -124,8 +124,8 @@
     bindn = , mouse_down, hy3:focustab, r, require_hovered
     bindn = , mouse_up, hy3:focustab, l, require_hovered
     bind = $mod, Q, hy3:warpcursor
-    bind = $mod, Y, hy3:movetoworkspace, special
-    bind = $mods, Y, togglespecialworkspace,
+    bind = $mods, Y, hy3:movetoworkspace, special
+    bind = $mod, Y, togglespecialworkspace,
 
     # bind = $mod, B, togglesplit
     bind = $mod, B, hy3:changegroup, opposite
