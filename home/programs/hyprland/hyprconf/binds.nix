@@ -16,17 +16,17 @@
         "$mod, Q, hy3:killactive"
         "$mod, R, exec, $files2"
         "Alt, Return, fullscreen"
-        "$mod+Ctrl+Alt, Right, movetoworkspace, r+1"
-        "$mod+Ctrl+Alt, Left, movetoworkspace, r-1"
-        "$mod+Ctrl+Alt, L, movetoworkspace, r+1"
-        "$mod+Ctrl+Alt, H, movetoworkspace, r-1"
+        "$mod+Ctrl+Alt, Right, hy3:movetoworkspace, r+1, follow"
+        "$mod+Ctrl+Alt, Left, hy3:movetoworkspace, r-1, follow"
+        "$mod+Ctrl+Alt, L, hy3:movetoworkspace, r+1, follow"
+        "$mod+Ctrl+Alt, H, hy3:movetoworkspace, r-1, follow"
         ''$mod, U, exec, [workspace 1 silent; float; size 858 559; move 640 40] $term --class "rmpc" $scr/rmpc.sh''
         ''$mod, U, exec, [workspace 1 silent; float; size 858 462; move 640 609] $term --class "cava" $scr/cava.sh''
         ''$mod, U, exec, [workspace 1 silent; float; size 620 666; move 10 404] $term --class "btop" $scr/btop.sh''
         ''$mod, U, exec, [workspace 1 silent; float; size 402 1030; move 1508 40] $term --class "neo" $scr/neo.sh''
         ''$mod, U, exec, [workspace 1 silent; float; size 620 354; move 10 40] $term --class "fastfetch" --hold fastfetch --logo $HOME/Pictures/fastfetch_logos/FallenAngel.jpg''
         "$mod, Delete, exec, rofi -show power-menu -modi power-menu:rofi-power-menu"
-        "$mod+Shift, 0, hy3:movetoworkspace, 10"
+        "$mod+Shift, 0, hy3:movetoworkspace, 10, follow"
         "Ctrl+Alt, L, exec, uwsm-app -- swaylock -fF"
         ''$mod, D, exec, $term --class "NixDots" $scr/tmux_nix.sh''
         "$mod, N, exec, uwsm-app -- $scr/cliphist.sh"
@@ -45,7 +45,7 @@
               ws = i + 1;
             in [
               "$mod, code:1${toString i}, workspace, ${toString ws}"
-              "$mod SHIFT, code:1${toString i}, hy3:movetoworkspace, ${toString ws}"
+              "$mod SHIFT, code:1${toString i}, hy3:movetoworkspace, ${toString ws}, follow"
             ]
           )
           9)
@@ -113,7 +113,7 @@
 
     bindm = $mod, mouse:272, movewindow
     bindm = $mod, mouse:273, resizewindow
-    bind = $mod+Alt, S, movetoworkspacesilent, special
+    bind = $mod+Alt, S, hy3:movetoworkspace, special
     bind = $mod, S, togglespecialworkspace,
 
     # bind = $mod, B, togglesplit
