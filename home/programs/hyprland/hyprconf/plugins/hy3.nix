@@ -11,8 +11,8 @@
       plugin {
         hy3 {
           tabs {
-            radius = 10
-            padding = 4
+            radius = 8
+            padding = 3
             text_font = JetBrainsMono Nerd Font Mono # default: Sans
             text_height = 9
             border_width = 2
