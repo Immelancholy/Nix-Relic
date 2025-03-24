@@ -10,7 +10,9 @@
     extraConfig = ''
       plugin {
         hy3 {
-
+          autotile {
+            enable = true
+          }
         }
       }
     '';
