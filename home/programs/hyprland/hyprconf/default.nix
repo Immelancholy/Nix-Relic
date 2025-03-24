@@ -31,12 +31,9 @@
 
   imports = [
     ./binds.nix
-    # ./env.nix
-    ./theme.nix
-    ./animations.nix
+    ./theme
     ./execs.nix
     ./windowrules.nix
-    ./plugins.nix
-    ./hyprspace.nix
+    ./plugins
   ];
 }

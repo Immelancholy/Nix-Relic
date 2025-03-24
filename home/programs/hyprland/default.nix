@@ -9,10 +9,8 @@
     portalPackage = null;
     xwayland.enable = true;
     plugins = [
-      # inputs.hyprtasking.packages.${pkgs.system}.hyprtasking
       inputs.hyprland-plugins.packages.${pkgs.system}.csgo-vulkan-fix
       inputs.hyprland-plugins.packages.${pkgs.system}.xtra-dispatchers
-      inputs.hyprland-plugins.packages.${pkgs.system}.hyprtrails
     ];
     systemd = {
       # disable the systemd integration, as it conflicts with uwsm.

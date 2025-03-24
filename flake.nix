@@ -43,6 +43,19 @@
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
+    Hyprspace = {
+      url = "github:KZDKM/Hyprspace";
+
+      # Hyprspace uses latest Hyprland. We declare this to keep them in sync.
+      inputs.hyprland.follows = "hyprland";
+    };
+
+    hy3 = {
+      url = "github:outfoxxed/hy3?ref=hl{version}"; # where {version} is the hyprland release version
+      # or "github:outfoxxed/hy3" to follow the development branch.
+      # (you may encounter issues if you dont do the same for hyprland)
+      inputs.hyprland.follows = "hyprland";
+    };
     nixvim = {
       url = "github:nix-community/nixvim";
       # If you are not running an unstable channel of nixpkgs, select the corresponding branch of nixvim.
@@ -56,12 +69,6 @@
     };
     prismlauncher = {
       url = "github:PrismLauncher/PrismLauncher";
-    };
-    Hyprspace = {
-      url = "github:KZDKM/Hyprspace";
-
-      # Hyprspace uses latest Hyprland. We declare this to keep them in sync.
-      inputs.hyprland.follows = "hyprland";
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     stylix.url = "github:danth/stylix";
