@@ -12,7 +12,7 @@
         hy3 {
           autotile {
             enable = true
-            trigger_width = 480
+            trigger_width = 640
 
             trigger_height = 300
           }
