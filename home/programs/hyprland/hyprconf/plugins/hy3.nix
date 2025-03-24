@@ -11,7 +11,7 @@
       plugin {
         hy3 {
           # no_gaps_when_only = 1
-          group_inset = 0
+          group_inset = 4
           autotile {
             enable = true
             ephemeral_groups = false
