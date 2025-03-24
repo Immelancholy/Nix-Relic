@@ -24,7 +24,7 @@
             col.focused.text = rgba(7f849cff)
             col.inactive = rgba(1e1e2eB5)
             col.inactive.border = rgba(b4befecc)
-            col.inactive.text = rgba(a6adc8ff)
+            col.inactive.text = rgba(9399b2ff)
             col.urgent = rgba(1e1e2eB5)
             col.urgent.border = rgba(f9e2afff)
             col.urgent.text = rgba(cdd6f4ff)
