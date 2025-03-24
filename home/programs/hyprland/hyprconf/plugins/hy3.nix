@@ -7,5 +7,12 @@
     plugins = [
       inputs.hy3.packages.${pkgs.system}.hy3
     ];
+    extraConfig = ''
+      plugin {
+        hy3 {
+
+        }
+      }
+    '';
   };
 }

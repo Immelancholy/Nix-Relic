@@ -22,11 +22,11 @@
       force_no_accel = "1";
       numlock_by_default = "true";
     };
-    dwindle = {
-      pseudotile = true;
-      preserve_split = true;
-      # smart_split = true;
-    };
+    # dwindle = {
+    #   pseudotile = true;
+    #   preserve_split = true;
+    #   # smart_split = true;
+    # };
   };
 
   imports = [
