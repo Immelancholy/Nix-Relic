@@ -108,9 +108,12 @@
     };
   };
 
-  xdg.portal.extraPortals = with pkgs; [
-    xdg-desktop-portal-gtk
-  ];
+  xdg.portal = {
+    xdgOpenUsePortal = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+    ];
+  };
 
   nix.gc = {
     automatic = true;
