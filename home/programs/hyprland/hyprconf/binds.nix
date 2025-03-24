@@ -115,7 +115,8 @@
     bind = $mod+Alt, S, movetoworkspacesilent, special
     bind = $mod, S, togglespecialworkspace,
 
-    bind = $mod, B, togglesplit
+    # bind = $mod, B, togglesplit
+    bind = $mod, B, hy3:changegroup, opposite
 
     bind = Ctrl+Shift, Escape, exec, $term --class "btop" btop
 
