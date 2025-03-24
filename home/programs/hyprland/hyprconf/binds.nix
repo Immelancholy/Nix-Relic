@@ -15,17 +15,17 @@
         "$mod, Q, killactive"
         "$mod, R, exec, $files2"
         "Alt, Return, fullscreen"
-        "$mod+Ctrl+Alt, Right, movetoworkspace, r+1"
-        "$mod+Ctrl+Alt, Left, movetoworkspace, r-1"
-        "$mod+Ctrl+Alt, L, movetoworkspace, r+1"
-        "$mod+Ctrl+Alt, H, movetoworkspace, r-1"
+        "$mod+Ctrl+Alt, Right, hy3:movetoworkspace, r+1"
+        "$mod+Ctrl+Alt, Left, hy3:movetoworkspace, r-1"
+        "$mod+Ctrl+Alt, L, hy3:movetoworkspace, r+1"
+        "$mod+Ctrl+Alt, H, hy3:movetoworkspace, r-1"
         ''$mod, U, exec, [workspace 1 silent; float; size 858 559; move 640 40] $term --class "rmpc" $scr/rmpc.sh''
         ''$mod, U, exec, [workspace 1 silent; float; size 858 462; move 640 609] $term --class "cava" $scr/cava.sh''
         ''$mod, U, exec, [workspace 1 silent; float; size 620 666; move 10 404] $term --class "btop" $scr/btop.sh''
         ''$mod, U, exec, [workspace 1 silent; float; size 402 1030; move 1508 40] $term --class "neo" $scr/neo.sh''
         ''$mod, U, exec, [workspace 1 silent; float; size 620 354; move 10 40] $term --class "fastfetch" --hold fastfetch --logo $HOME/Pictures/fastfetch_logos/FallenAngel.jpg''
         "$mod, Delete, exec, rofi -show power-menu -modi power-menu:rofi-power-menu"
-        "$mod+Shift, 0, movetoworkspace, 10"
+        "$mod+Shift, 0, hy3:movetoworkspace, 10"
         "Ctrl+Alt, L, exec, uwsm-app -- swaylock -fF"
         ''$mod, D, exec, $term --class "NixDots" $scr/tmux_nix.sh''
         "$mod, N, exec, uwsm-app -- $scr/cliphist.sh"
@@ -44,7 +44,7 @@
               ws = i + 1;
             in [
               "$mod, code:1${toString i}, workspace, ${toString ws}"
-              "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
+              "$mod SHIFT, code:1${toString i}, hy3:movetoworkspace, ${toString ws}"
             ]
           )
           9)
@@ -75,10 +75,10 @@
     bind = $mod, L, hy3:movefocus, r
     bind = $mod, K, hy3:movefocus, u
     bind = $mod, J, hy3:movefocus, d
-    bind = $mod, Left, movefocus, l
-    bind = $mod, Right, movefocus, r
-    bind = $mod, Up, movefocus, u
-    bind = $mod, Down, movefocus, d
+    bind = $mod, Left, hy3:movefocus, l
+    bind = $mod, Right, hy3:movefocus, r
+    bind = $mod, Up, hy3:movefocus, u
+    bind = $mod, Down, hy3:movefocus, d
 
     bind = $mod+Ctrl, L, workspace, r+1
     bind = $mod+Ctrl, H, workspace, r-1
@@ -98,19 +98,19 @@
     binde = $mod+Shift, J, resizeactive, 0 30
 
     $moveactivewindow=grep -q "true" <<< $(hyprctl activewindow -j | jq -r .floating) && hyprctl dispatch moveactive
-    binded = $mod+Ctrl+Shift, Left, Move activewindow left, exec, $moveactivewindow -30 0 || hyprctl dispatch movewindow l
-    binded = $mod+Ctrl+Shift, Right, Move activewindow right, exec, $moveactivewindow 30 0 || hyprctl dispatch movewindow r
-    binded = $mod+Ctrl+Shift, Up, Move activewindow up, exec, $moveactivewindow  0 -30 || hyprctl dispatch movewindow u
-    binded = $mod+Ctrl+Shift, Down, Move activewindow down, exec, $moveactivewindow 0 30 || hyprctl dispatch movewindow d
-    binded = $mod+Ctrl+Shift, H, Move activewindow left, exec, $moveactivewindow -30 0 || hyprctl dispatch movewindow l
-    binded = $mod+Ctrl+Shift, L, Move activewindow right, exec, $moveactivewindow 30 0 || hyprctl dispatch movewindow r
-    binded = $mod+Ctrl+Shift, K, Move activewindow up, exec, $moveactivewindow  0 -30 || hyprctl dispatch movewindow u
-    binded = $mod+Ctrl+Shift, J, Move activewindow down, exec, $moveactivewindow 0 30 || hyprctl dispatch movewindow d
+    binded = $mod+Ctrl+Shift, Left, Move activewindow left, exec, $moveactivewindow -30 0 || hyprctl dispatch hy3:movewindow l
+    binded = $mod+Ctrl+Shift, Right, Move activewindow right, exec, $moveactivewindow 30 0 || hyprctl dispatch hy3:movewindow r
+    binded = $mod+Ctrl+Shift, Up, Move activewindow up, exec, $moveactivewindow  0 -30 || hyprctl dispatch hy3:movewindow u
+    binded = $mod+Ctrl+Shift, Down, Move activewindow down, exec, $moveactivewindow 0 30 || hyprctl dispatch hy3:movewindow d
+    binded = $mod+Ctrl+Shift, H, Move activewindow left, exec, $moveactivewindow -30 0 || hyprctl dispatch hy3:movewindow l
+    binded = $mod+Ctrl+Shift, L, Move activewindow right, exec, $moveactivewindow 30 0 || hyprctl dispatch hy3:movewindow r
+    binded = $mod+Ctrl+Shift, K, Move activewindow up, exec, $moveactivewindow  0 -30 || hyprctl dispatch hy3:movewindow u
+    binded = $mod+Ctrl+Shift, J, Move activewindow down, exec, $moveactivewindow 0 30 || hyprctl dispatch hy3:movewindow d
 
     bind = $mod, mouse_up, workspace, e+1
     bind = $mod, mouse_down, workspace, e-1
 
-    bindm = $mod, mouse:272, movewindow
+    bindm = $mod, mouse:272, hy3:movewindow
     bindm = $mod, mouse:273, resizewindow
     bind = $mod+Alt, S, movetoworkspacesilent, special
     bind = $mod, S, togglespecialworkspace,
