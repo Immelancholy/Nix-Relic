@@ -12,7 +12,7 @@
         "$mod, C, exec, $edit"
         "$mod, W, togglefloating"
         "$mod, G, togglegroup"
-        "$mod, Q, killactive"
+        "$mod, Q, hy3:killactive"
         "$mod, R, exec, $files2"
         "Alt, Return, fullscreen"
         "$mod+Ctrl+Alt, Right, hy3:movetoworkspace, r+1"
