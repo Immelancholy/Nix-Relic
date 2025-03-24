@@ -14,7 +14,7 @@
           group_inset = 4
           autotile {
             enable = true
-            # ephemeral_groups = false
+            ephemeral_groups = false
             trigger_width = 640
             trigger_height = 340
           }
