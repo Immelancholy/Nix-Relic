@@ -13,7 +13,6 @@
         "$mod, W, togglefloating"
         # "$mod, G, togglegroup"
         "$mod, G, hy3:makegroup, opposite"
-        "$mod, Shift, G, hy3:makegroup, ephemeral"
         "$mod, Q, hy3:killactive"
         "$mod, R, exec, $files2"
         "Alt, Return, fullscreen"
