@@ -12,6 +12,7 @@
         hy3 {
           tabs {
             text_font = Caskaydia Cove Nerd Font Mono # default: Sans
+            text_height = 10
             border_width = 2
             col.active = rgba(1e1e2eB5)
             col.active.border = rgba(cba6f7ff)
