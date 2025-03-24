@@ -71,14 +71,14 @@
     bind = $mod, M, exec,[workspace 4 silent] uwsm app -- $scr/patch.sh
     bind = $mod, M, exec,[workspace 4 silent] uwsm app -- qpwgraph
 
-    bind = $mod, H, hy3:movefocus, l
-    bind = $mod, L, hy3:movefocus, r
-    bind = $mod, K, hy3:movefocus, u
-    bind = $mod, J, hy3:movefocus, d
-    bind = $mod, Left, hy3:movefocus, l
-    bind = $mod, Right, hy3:movefocus, r
-    bind = $mod, Up, hy3:movefocus, u
-    bind = $mod, Down, hy3:movefocus, d
+    bind = $mod, H, hy3:movefocus, l, once
+    bind = $mod, L, hy3:movefocus, r, once
+    bind = $mod, K, hy3:movefocus, u, once
+    bind = $mod, J, hy3:movefocus, d, once
+    bind = $mod, Left, hy3:movefocus, l, once
+    bind = $mod, Right, hy3:movefocus, r, once
+    bind = $mod, Up, hy3:movefocus, u, once
+    bind = $mod, Down, hy3:movefocus, d, once
 
     bind = $mod+Ctrl, L, workspace, r+1
     bind = $mod+Ctrl, H, workspace, r-1
