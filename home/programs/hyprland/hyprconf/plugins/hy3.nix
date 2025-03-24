@@ -12,11 +12,11 @@
         hy3 {
           tabs {
             border_width = 2
-            col.active = rgba(1e1e2eCC)
+            col.active = rgba(1e1e2eBB)
             col.active.border = rgba(cba6f7ff)
-            col.inactive = rgba(1e1e2eCC)
+            col.inactive = rgba(1e1e2eBB)
             col.inactive.border = rgba(b4befeff)
-            col.urgent = rgba(1e1e2eCC)
+            col.urgent = rgba(1e1e2eBB)
             col.urgent.border = rgba(f9e2afff)
           }
           # no_gaps_when_only = 1
