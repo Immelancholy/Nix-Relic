@@ -110,7 +110,7 @@
     bind = $mod, mouse_up, workspace, e+1
     bind = $mod, mouse_down, workspace, e-1
 
-    bindm = $mod, mouse:272, hy3:movewindow
+    bindm = $mod, mouse:272, movewindow
     bindm = $mod, mouse:273, resizewindow
     bind = $mod+Alt, S, movetoworkspacesilent, special
     bind = $mod, S, togglespecialworkspace,
