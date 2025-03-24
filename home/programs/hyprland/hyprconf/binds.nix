@@ -53,7 +53,8 @@
               ws = i + 1;
             in [
               "$mod, code:1${toString i}, workspace, ${toString ws}"
-              "$mod SHIFT, code:1${toString i}, hy3:movetoworkspace, ${toString ws}, follow"
+              "$mods, code:1${toString i}, hy3:movetoworkspace, ${toString ws}, follow"
+              "$mod+Ctrl, code:${toString i}, hy3:focustab, index, 0${toString ws}"
             ]
           )
           9)
@@ -81,13 +82,23 @@
     bind = $mod, M, exec,[workspace 4 silent] uwsm app -- qpwgraph
 
     bind = $mod, H, hy3:movefocus, l, once
-    bind = $mod, L, hy3:movefocus, r, once
-    bind = $mod, K, hy3:movefocus, u, once
     bind = $mod, J, hy3:movefocus, d, once
+    bind = $mod, K, hy3:movefocus, u, once
+    bind = $mod, L, hy3:movefocus, r, once
     bind = $mod, Left, hy3:movefocus, l, once
-    bind = $mod, Right, hy3:movefocus, r, once
-    bind = $mod, Up, hy3:movefocus, u, once
+
     bind = $mod, Down, hy3:movefocus, d, once
+    bind = $mod, Up, hy3:movefocus, u, once
+    bind = $mod, Right, hy3:movefocus, r, once
+
+    bind = $mods+Alt, H, hy3:movefocus, l, visible, nowarp
+    bind = $mods+Alt, J, hy3:movefocus, d, visible, nowarp
+    bind = $mods+Alt, K, hy3:movefocus, u, visible, nowarp
+    bind = $mods+Alt, L, hy3:movefocus, r, visible, nowarp
+    bind = $mods+Alt, Left, hy3:movefocus, l, visible, nowarp
+    bind = $mods+Alt, Down, hy3:movefocus, d, visible, nowarp
+    bind = $mods+Alt, Up, hy3:movefocus, u, visible, nowarp
+    bind = $mods+Alt, Right, hy3:movefocus, r, visible, nowarp
 
     bind = $mod+Ctrl, L, workspace, r+1
     bind = $mod+Ctrl, H, workspace, r-1
