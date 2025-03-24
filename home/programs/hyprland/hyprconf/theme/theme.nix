@@ -6,7 +6,7 @@
       border_size = 2
       col.active_border = rgba(cba6f7ff) rgba(89dcebff) rgba(f5e0dcff) 40deg
       col.inactive_border = rgba(b4befecc) rgba(6c7086cc) 45deg
-      layout = dwindle
+      layout = hy3
       resize_on_border = true
     }
     group {
