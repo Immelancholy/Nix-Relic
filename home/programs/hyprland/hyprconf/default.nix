@@ -23,8 +23,9 @@
       numlock_by_default = "true";
     };
     dwindle = {
-      pseudotile = "yes";
-      preserve_split = "yes";
+      pseudotile = true;
+      preserve_split = true;
+      smart_split = true;
     };
   };
 
