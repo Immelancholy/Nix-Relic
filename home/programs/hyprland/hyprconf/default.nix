@@ -22,6 +22,11 @@
       force_no_accel = "1";
       numlock_by_default = "true";
     };
+    misc = {
+      disable_hyprland_logo = true;
+      disavle_splash_rendering = true;
+      key_press_enables_dpms = true;
+    };
     # dwindle = {
     #   pseudotile = true;
     #   preserve_split = true;
