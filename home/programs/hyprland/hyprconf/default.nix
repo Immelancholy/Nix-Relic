@@ -2,8 +2,8 @@
   wayland.windowManager.hyprland.settings = {
     "$scr" = "$HOME/.local/share/bin/";
     "$term" = "uwsm app -- kitty";
-    "$files" = "$term uwsm app -- yazi";
-    "$files2" = "uwsm app -- nemo";
+    "$files" = "uwsm app -- nemo";
+    "$filest" = "$term uwsm app -- yazi";
     "$mod" = "SUPER";
     "$mods" = "SUPERSHIFT";
     "$menu" = ''rofi -show drun -run-command "uwsm-app -- {cmd}" run filebrowser power-menu -modi drun,run,filebrowser,power-menu:rofi-power-menu'';

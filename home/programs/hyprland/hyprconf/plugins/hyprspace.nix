@@ -8,8 +8,8 @@
       inputs.Hyprspace.packages.${pkgs.system}.Hyprspace
     ];
     extraConfig = ''
-      bind = $mod, Tab, overview:toggle
-      bind = $mod+Shift, Tab, overview:toggle, all
+      bind = $Alt, Tab, overview:toggle
+      # bind = $mod+Shift, Tab, overview:toggle, all
 
       plugin {
         overview {

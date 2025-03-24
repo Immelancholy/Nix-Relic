@@ -5,16 +5,24 @@
     bind =
       [
         "$mod, T, exec, $term --hold $scr/poke.sh"
-        ''$mod+Shift, T, exec, $term --class "tmux" $scr/tmux_start.sh''
+        ''$mods, T, exec, $term --class "tmux" $scr/tmux_start.sh''
         "$mod, F, exec, $browser"
         "$mod, E, exec, $files"
-        "$mod, A, exec, $menu"
-        "$mod, C, exec, $edit"
+        "$mod, grave, exec, $menu"
+        "$mod, V, exec, $edit"
         "$mod, W, togglefloating"
         # "$mod, D, togglegroup"
-        "$mod, G, hy3:makegroup, opposite"
-        "$mod, Q, hy3:killactive"
-        "$mod, R, exec, $files2"
+        "$mod, Tab, hy3:togglefocuslayer"
+        "$mod, D, hy3:makegroup, h"
+        "$mod, S, hy3:makegroup, v"
+        "$mod, Z, hy3:makegroup, tab"
+        "$mod, A, hy3:changefocus, raise"
+        "$mods, A, hy3:changefocus, lower"
+        "$mod, C, hy3:expand, expand"
+        "$mods, C, hy3:expand, base"
+        "$mod, R, hy3:changegroup, opposite"
+
+        "$mods, Q, hy3:killactive"
         "Alt, Return, fullscreen"
         "$mod+Ctrl+Alt, Right, hy3:movetoworkspace, r+1, follow"
         "$mod+Ctrl+Alt, Left, hy3:movetoworkspace, r-1, follow"
@@ -26,16 +34,16 @@
         ''$mod, U, exec, [workspace 1 silent; float; size 402 1030; move 1508 40] $term --class "neo" $scr/neo.sh''
         ''$mod, U, exec, [workspace 1 silent; float; size 620 354; move 10 40] $term --class "fastfetch" --hold fastfetch --logo $HOME/Pictures/fastfetch_logos/FallenAngel.jpg''
         "$mod, Delete, exec, rofi -show power-menu -modi power-menu:rofi-power-menu"
-        "$mod+Shift, 0, hy3:movetoworkspace, 10, follow"
+        "$mods, 0, hy3:movetoworkspace, 10, follow"
         "Ctrl+Alt, L, exec, uwsm-app -- swaylock -fF"
-        ''$mod, D, exec, $term --class "NixDots" $scr/tmux_nix.sh''
+        ''$mod, G, exec, $term --class "NixDots" $scr/tmux_nix.sh''
         "$mod, N, exec, uwsm-app -- $scr/cliphist.sh"
         " , Print, exec, uwsm-app -- $scr/ss.sh o"
         "$mod, Print, exec, uwsm-app -- $scr/ss.sh af"
         "$mods, Print, exec, uwsm-app -- $scr/ss.sh w"
         "Ctrl, Print, exec, uwsm-app -- $scr/ss.sh af"
         "Ctrl Shift, Print, exec, uwsm-app -- $scr/ss.sh w"
-        "Alt, Tab, exec, rofi -show window -modi window"
+        "Alt+Shift, Tab, exec, rofi -show window -modi window"
       ]
       ++ (
         # workspaces
@@ -113,8 +121,11 @@
 
     bindm = $mod, mouse:272, movewindow
     bindm = $mod, mouse:273, resizewindow
-    bind = $mod+Shift, S, hy3:movetoworkspace, special
-    bind = $mod, S, togglespecialworkspace,
+    bindn = , mouse_down, hy3:focustab, r, require_hovered
+    bindn = , mouse_up, hy3:focustab, l, require_hovered
+    bind = $mod, Q, hy3:warpcursor
+    bind = $mod, Y, hy3:movetoworkspace, special
+    bind = $mods, Y, togglespecialworkspace,
 
     # bind = $mod, B, togglesplit
     bind = $mod, B, hy3:changegroup, opposite
