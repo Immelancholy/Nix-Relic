@@ -11,13 +11,20 @@
       plugin {
         hy3 {
           tabs {
+            text_font = Caskaydia Cove Nerd Font Mono # default: Sans
             border_width = 2
             col.active = rgba(1e1e2eB5)
             col.active.border = rgba(cba6f7ff)
+            col.active.text = rgba(cdd6f4ff)
+            col.focused = rgba(1e1e2eB5)
+            col.focused.border = rgba(b4befeB5)
+            col.focuse.text = rgba(7f849cff)
             col.inactive = rgba(1e1e2eB5)
-            col.inactive.border = rgba(b4befeff)
+            col.inactive.border = rgba(b4befeB5)
+            col.inactive.text = rgba(6c7086ff)
             col.urgent = rgba(1e1e2eB5)
             col.urgent.border = rgba(f9e2afff)
+            col.urgent.text = rgba(cdd6f4ff)
           }
           # no_gaps_when_only = 1
           group_inset = 4
