@@ -12,7 +12,7 @@
         "$mod, C, exec, $edit"
         "$mod, W, togglefloating"
         # "$mod, D, togglegroup"
-        "$mod, G, hy3:makegroup, opposite, toggle"
+        "$mod, G, hy3:makegroup, opposite"
         "$mod, Q, hy3:killactive"
         "$mod, R, exec, $files2"
         "Alt, Return, fullscreen"
