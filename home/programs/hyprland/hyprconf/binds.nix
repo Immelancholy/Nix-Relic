@@ -15,10 +15,10 @@
         "$mod, Q, hy3:killactive"
         "$mod, R, exec, $files2"
         "Alt, Return, fullscreen"
-        "$mod+Ctrl+Alt, Right, hy3:movetoworkspace, r+1"
-        "$mod+Ctrl+Alt, Left, hy3:movetoworkspace, r-1"
-        "$mod+Ctrl+Alt, L, hy3:movetoworkspace, r+1"
-        "$mod+Ctrl+Alt, H, hy3:movetoworkspace, r-1"
+        "$mod+Ctrl+Alt, Right, movetoworkspace, r+1"
+        "$mod+Ctrl+Alt, Left, movetoworkspace, r-1"
+        "$mod+Ctrl+Alt, L, movetoworkspace, r+1"
+        "$mod+Ctrl+Alt, H, movetoworkspace, r-1"
         ''$mod, U, exec, [workspace 1 silent; float; size 858 559; move 640 40] $term --class "rmpc" $scr/rmpc.sh''
         ''$mod, U, exec, [workspace 1 silent; float; size 858 462; move 640 609] $term --class "cava" $scr/cava.sh''
         ''$mod, U, exec, [workspace 1 silent; float; size 620 666; move 10 404] $term --class "btop" $scr/btop.sh''

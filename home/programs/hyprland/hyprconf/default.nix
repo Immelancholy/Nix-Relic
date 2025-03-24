@@ -28,11 +28,11 @@
       key_press_enables_dpms = true;
       vfr = true;
     };
-    # dwindle = {
-    #   pseudotile = true;
-    #   preserve_split = true;
-    #   # smart_split = true;
-    # };
+    dwindle = {
+      pseudotile = true;
+      preserve_split = true;
+      # smart_split = true;
+    };
   };
 
   imports = [
