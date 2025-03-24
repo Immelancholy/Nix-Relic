@@ -16,7 +16,7 @@
             enable = true
             # ephemeral_groups = false
             trigger_width = 640
-            trigger_height = -1
+            trigger_height = 340
           }
         }
       }

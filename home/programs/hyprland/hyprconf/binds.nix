@@ -11,8 +11,8 @@
         "$mod, A, exec, $menu"
         "$mod, C, exec, $edit"
         "$mod, W, togglefloating"
-        # "$mod, G, togglegroup"
-        "$mod, G, hy3:makegroup, opposite"
+        # "$mod, D, togglegroup"
+        "$mod, D, hy3:makegroup, opposite"
         "$mod, Q, hy3:killactive"
         "$mod, R, exec, $files2"
         "Alt, Return, fullscreen"
@@ -28,7 +28,7 @@
         "$mod, Delete, exec, rofi -show power-menu -modi power-menu:rofi-power-menu"
         "$mod+Shift, 0, hy3:movetoworkspace, 10, follow"
         "Ctrl+Alt, L, exec, uwsm-app -- swaylock -fF"
-        ''$mod, D, exec, $term --class "NixDots" $scr/tmux_nix.sh''
+        ''$mod, G, exec, $term --class "NixDots" $scr/tmux_nix.sh''
         "$mod, N, exec, uwsm-app -- $scr/cliphist.sh"
         " , Print, exec, uwsm-app -- $scr/ss.sh o"
         "$mod, Print, exec, uwsm-app -- $scr/ss.sh af"
