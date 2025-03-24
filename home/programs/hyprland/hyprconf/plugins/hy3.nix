@@ -13,7 +13,7 @@
           autotile {
             enable = true
             trigger_height = 0
-            trigger_width = 360
+            trigger_width = 640
           }
         }
       }
