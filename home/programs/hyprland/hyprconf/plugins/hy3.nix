@@ -14,7 +14,7 @@
             enable = true
             trigger_width = 640
 
-            trigger_height = 340
+            trigger_height = -1
           }
         }
       }
