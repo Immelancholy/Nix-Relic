@@ -12,9 +12,9 @@
         hy3 {
           tabs {
             radius = 10
-            padding = 8
+            padding = 4
             text_font = JetBrainsMono Nerd Font Mono # default: Sans
-            text_height = 10
+            text_height = 8
             border_width = 2
             col.active = rgba(1e1e2eB5)
             col.active.border = rgba(cba6f7ff)
