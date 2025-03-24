@@ -53,7 +53,7 @@
               ws = i + 1;
             in [
               "$mod, code:1${toString i}, workspace, ${toString ws}"
-              "$mods, code:1${toString i}, hy3:movetoworkspace, ${toString ws}, follow"
+              "$mods, code:1${toString i}, hy3:movetoworkspace, ${toString ws}"
               "$mod+Ctrl, code:1${toString i}, hy3:focustab, index, 0${toString ws}"
             ]
           )
