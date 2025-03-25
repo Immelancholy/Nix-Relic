@@ -28,7 +28,7 @@
         "$mod+Ctrl+Alt, Left, hy3:movetoworkspace, r-1, follow"
         "$mod+Ctrl+Alt, L, hy3:movetoworkspace, r+1, follow"
         "$mod+Ctrl+Alt, H, hy3:movetoworkspace, r-1, follow"
-        ''$mods, U, exec, [workspace 1 silent; float; size 858 559; move 640 40] $term --class "rmpc" $scr/rmpc.sh''
+        ''$mods, U, exec, [workspace 1 silent; float; size 858 559; move 640 40] $term --class "rmpc" uwsm app -- $scr/rmpc.sh''
         ''$mods, U, exec, [workspace 1 silent; float; size 858 462; move 640 609] $term --class "cava" $scr/cava.sh''
         ''$mods, U, exec, [workspace 1 silent; float; size 620 666; move 10 404] $term --class "btop" $scr/btop.sh''
         ''$mods, U, exec, [workspace 1 silent; float; size 402 1030; move 1508 40] $term --class "neo" $scr/neo.sh''
