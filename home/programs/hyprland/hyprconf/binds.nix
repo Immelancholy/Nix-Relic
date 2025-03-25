@@ -4,8 +4,8 @@
     ];
     bind =
       [
-        "$mod, T, exec, $term --hold $scr/poke.sh"
-        ''$mods, T, exec, $term --class "tmux" $scr/tmux_start.sh''
+        "$mod, T, exec, $term --hold uwsm app -- $scr/poke.sh"
+        ''$mods, T, exec, $term --class "tmux" uwsm app -- $scr/tmux_start.sh''
         "$mod, F, exec, $browser"
         "$mod, E, exec, $files"
         "$mod, grave, exec, $menu"
@@ -36,7 +36,7 @@
         "$mod, Delete, exec, rofi -show power-menu -modi power-menu:rofi-power-menu"
         "$mods, 0, hy3:movetoworkspace, 10, follow"
         "Ctrl+Alt, L, exec, uwsm-app -- swaylock -fF"
-        ''$mod, G, exec, $term --class "NixDots" $scr/tmux_nix.sh''
+        ''$mod, G, exec, $term --class "NixDots" uwsm app -- $scr/tmux_nix.sh''
         "$mod, N, exec, uwsm-app -- $scr/cliphist.sh"
         " , Print, exec, uwsm-app -- $scr/ss.sh o"
         "$mod, Print, exec, uwsm-app -- $scr/ss.sh af"
@@ -140,7 +140,7 @@
     # bind = $mod, B, togglesplit
     bind = $mod, B, hy3:changegroup, opposite
 
-    bind = Ctrl+Shift, Escape, exec, $term --class "btop" btop
+    bind = Ctrl+Shift, Escape, exec, $term --class "btop" uwsm app -- btop
 
     bindd = $mod+Shift, P,Color Picker , exec, uwsm-app -- hyprpicker -a # Pick color (Hex) >> clipboard#
 
