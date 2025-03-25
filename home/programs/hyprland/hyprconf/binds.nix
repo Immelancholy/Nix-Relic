@@ -135,8 +135,8 @@
     bindn = , mouse_down, hy3:focustab, r, require_hovered
     bindn = , mouse_up, hy3:focustab, l, require_hovered
     bind = $mod, Q, hy3:warpcursor
-    bind = $mods, Y, hy3:movetoworkspace, special
-    bind = $mod, Y, togglespecialworkspace,
+    bind = $mods, X, hy3:movetoworkspace, special
+    bind = $mod, X, togglespecialworkspace,
 
     # bind = $mod, B, togglesplit
     bind = $mod, B, hy3:changegroup, opposite
