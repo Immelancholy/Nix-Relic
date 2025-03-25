@@ -8,7 +8,7 @@
     "$mods" = "SUPERSHIFT";
     "$menu" = ''rofi -show drun -run-command "uwsm-app -- {cmd}" run filebrowser power-menu -modi drun,run,filebrowser,power-menu:rofi-power-menu'';
     "$browser" = "uwsm app -- zen";
-    "$edit" = "$term $scr/nv.sh";
+    "$edit" = "$term uwsm app -- $scr/nv.sh";
     "$player" = "mpd";
     "$playerctl" = "uwsm app -- playerctl --player=$player";
     # monitor = ", preferred, auto, 1";
