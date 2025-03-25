@@ -86,7 +86,6 @@
     bind = $mod, K, hy3:movefocus, u, once
     bind = $mod, L, hy3:movefocus, r, once
     bind = $mod, Left, hy3:movefocus, l, once
-
     bind = $mod, Down, hy3:movefocus, d, once
     bind = $mod, Up, hy3:movefocus, u, once
     bind = $mod, Right, hy3:movefocus, r, once
