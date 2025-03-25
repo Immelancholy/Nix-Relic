@@ -9,6 +9,7 @@
     ./sddm.nix
     ./flatpak.nix
     ./weylus.nix
+    ./bluetooth.nix
   ];
 
   programs.xfconf.enable = true;
