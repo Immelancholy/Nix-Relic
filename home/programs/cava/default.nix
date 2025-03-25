@@ -11,7 +11,7 @@
       };
       input = {
         method = "pipewire";
-        source = "44";
+        source = "38";
         sample_rate = 48000;
         sample_bits = 32;
       };
