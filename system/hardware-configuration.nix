@@ -8,7 +8,7 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
+  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
@@ -22,6 +22,11 @@
     { device = "/dev/disk/by-uuid/9D77-E353";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
+    };
+
+  fileSystems."/home/mela/mnt/HDD0" =
+    { device = "/dev/disk/by-uuid/7d302399-723e-4504-9aeb-824cf055225f";
+      fsType = "ext4";
     };
 
   swapDevices =
