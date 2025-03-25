@@ -108,7 +108,7 @@
         inherit system;
         specialArgs = {inherit inputs user git email;};
         modules = [
-          ./system/secboot.nix # uncomment this to disable secureboot
+          # ./system/secboot.nix # uncomment this to disable secureboot
           ({pkgs, ...}: {
             nixpkgs.config.allowUnfree = true;
             nixpkgs.overlays = [rust-overlay.overlays.default];
