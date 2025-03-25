@@ -31,6 +31,10 @@
     };
   };
 
+  services.mpris-proxy = {
+    enable = true;
+  };
+
   services.remmina = {
     enable = true;
     addRdpMimeTypeAssoc = true;
