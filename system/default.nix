@@ -38,7 +38,10 @@
     ];
   };
 
-  services.dbus.apparmor = "enabled";
+  services.dbus = {
+    apparmor = "enabled";
+    implementation = "broker";
+  };
 
   services.solaar.enable = true;
 
