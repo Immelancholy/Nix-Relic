@@ -1,6 +1,7 @@
 {
   wayland.windowManager.hyprland.settings = {
     exec-once = [
+      "systemctl restart --user cliphist cliphist-images nm-applet remmina"
       "uwsm app -- $scr/mpdchck.sh"
       ''uwsm app -- mpvpaper -o "--loop" '*' $HOME/Pictures/wallpapers/Neon-Beast-Girl.mp4''
       # "uwsm app -- wl-paste --type text --watch cliphist store # Stores only image data"
