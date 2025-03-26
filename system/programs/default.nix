@@ -44,7 +44,7 @@
       pkgs.pipewire
       pkgs.qpwgraph
       pkgs.procps
-      pkgs.hyprland
+      inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland
     ];
     script = ''
       /home/${user}/.local/share/bin/mpdchck.sh
