@@ -13,17 +13,6 @@ do
 
 	if [ "$currentRate" != "$pwrate" ];
 	then
-		# if [ "$currentRate" = "$err" ];
-		# then
-		# 	while [ "$pwrate" != "0" ]; 
-		# 	do
-		# 		pw-metadata -n settings 0 clock.force-rate 0
-		# 		pwrate=$(pw-metadata -n settings | grep 'clock.force-rate' | cut -d "'" -f 4)
-		# 	done
-		# else
-		# 	pw-metadata -n settings 0 clock.force-rate "$currentRate"
-		# 	pwrate=$(pw-metadata -n settings | grep 'clock.force-rate' | cut -d "'" -f 4)
-		# fi
 		pw-metadata -n settings 0 clock.force-rate "$currentRate"
 		pwrate=$(pw-metadata -n settings | grep 'clock.force-rate' | cut -d "'" -f 4)
 	fi
