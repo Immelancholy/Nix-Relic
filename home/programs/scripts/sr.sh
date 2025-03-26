@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
+rmpc stop
 currentRateNext=$(mpc status %samplerate%)
 err="%samplerate%"
 pwrate=$(pw-metadata -n settings | grep 'clock.force-rate' | cut -d "'" -f 4)
-rmpc stop
 while :
 do
 	currentRateCurrent=$(mpc status %samplerate%)
