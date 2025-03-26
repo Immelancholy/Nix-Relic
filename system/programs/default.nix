@@ -56,7 +56,7 @@
     environment = {
       MPD_HOST = "/run/user/1000/mpd/socket";
     };
-    after = ["qpwgraph"];
+    after = ["pipewire.service"];
   };
 
   programs.zsh.enable = true;
