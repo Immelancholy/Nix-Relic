@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 currentRateNext=$(mpc status %samplerate%)
 err="%samplerate%"
+rmpc stop
 while :
 do
 	currentRateCurrent=$(mpc status %samplerate%)
