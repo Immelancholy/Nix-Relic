@@ -31,6 +31,8 @@
   };
 
   systemd.user.services.mpdchck = {
+    name = "MPD Play Checker";
+    description = "Checks if mpd is playing and runs a script to change samplerate";
     enable = true;
     wantedBy = ["default.target"];
     path = [
