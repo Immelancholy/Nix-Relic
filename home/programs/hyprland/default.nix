@@ -26,6 +26,7 @@
   services.cliphist = {
     enable = true;
     allowImages = true;
+    systemdTargets = ["wayland-session.target"];
   };
 
   services.udiskie = {
