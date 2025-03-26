@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-pid=$(pgrep qpwgraph)
 pwrate=$(pw-metadata -n settings | grep 'clock.force-rate' | cut -d "'" -f 4)
 while :
 do
 	state=$(mpc status %state%)
 	if [ "$state" = "paused" ] || [ "$state" = "stopped" ];
 	then
+		pid=$(pgrep qpwgraph)
 		kill $pid
 		pw-metadata -n settings 0 clock.force-rate 0
 		uwsm app -- qpwgraph
@@ -16,6 +16,7 @@ do
 
 	if [ "$currentRate" != "$pwrate" ];
 	then
+		pid=$(pgrep qpwgraph)
 		kill $pid
 		pw-metadata -n settings 0 clock.force-rate "$currentRate"
 		pwrate=$(pw-metadata -n settings | grep 'clock.force-rate' | cut -d "'" -f 4)
