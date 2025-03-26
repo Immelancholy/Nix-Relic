@@ -165,7 +165,7 @@
       "default.clock.min-quantum" = 64;
       "default.clock.max-quantum" = 128;
       "default.clock.quantum-limit" = 4096;
-      "default.clocl.quantum-floor" = 32;
+      "default.clock.quantum-floor" = 32;
     };
   };
   services.pipewire.extraConfig.jack."92-low-latency" = {
@@ -174,7 +174,7 @@
       "node.latency" = "128/96000";
       "node.rate" = "1/96000";
       "node.quantum" = "128/96000";
-      "node-force-quantum" = 128;
+      "node.force-quantum" = 128;
     };
   };
   services.pipewire.extraConfig.client."92-low-latency" = {
