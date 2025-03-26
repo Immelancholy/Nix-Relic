@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
 rmpc stop
-currentRateNext=$(mpc status %samplerate%)
 err="%samplerate%"
 pwrate=$(pw-metadata -n settings | grep 'clock.force-rate' | cut -d "'" -f 4)
 while :
 do
-	currentRateCurrent=$(mpc status %samplerate%)
-	if [ "$currentRateCurrent" = "$err" ];
+	currentRate=$(mpc status %samplerate%)
+	if [ "$currentRate" = "$err" ];
 	then
 		while [ "$pwrate" != "0" ]; 
 		do
@@ -15,10 +14,10 @@ do
 		done
 
 	fi
-	if [ "$currentRateCurrent" != "$currentRateNext" ];
+	if [ "$currentRate" != "$pwrate" ];
 	then
-		currentRateNext=$(mpc status %samplerate%)
-		pw-metadata -n settings 0 clock.force-rate "$currentRateNext"
+		pw-metadata -n settings 0 clock.force-rate "$currentRate"
+		pwrate=$(pw-metadata -n settings | grep 'clock.force-rate' | cut -d "'" -f 4)
 	fi
 
 done
