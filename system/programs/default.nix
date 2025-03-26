@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  user,
   ...
 }: {
   imports = [
@@ -27,6 +28,21 @@
   programs.obs-studio = {
     enable = true;
     enableVirtualCamera = true;
+  };
+
+  systemd.user.services.mpdchck = {
+    enable = true;
+    wantedBy = "default.target";
+    path = [
+      "/run/current-system/sw"
+      "/home/${user}/.local/share"
+    ];
+    script = ''
+      /home/${user}/.local/share/bin/mpdchck.sh
+    '';
+    environment = {
+      MPD_HOST = "/run/user/1000/mpd/socket";
+    };
   };
 
   programs.zsh.enable = true;
