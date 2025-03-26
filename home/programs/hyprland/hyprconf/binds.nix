@@ -36,7 +36,7 @@
         "$mod, Delete, exec, rofi -show power-menu -modi power-menu:rofi-power-menu"
         "$mods, 0, hy3:movetoworkspace, 10"
         "$mod, 0, workspace, 10"
-        "$mod+Ctrl, 0, hy3:focustab 10"
+        "$mod+Ctrl, 0, hy3:focustab, index, 10"
         "Ctrl+Alt, L, exec, uwsm-app -- swaylock -fF"
         ''$mod, G, exec, $term --class "NixDots" uwsm app -- $scr/tmux_nix.sh''
         "$mod, N, exec, uwsm-app -- $scr/cliphist.sh"
