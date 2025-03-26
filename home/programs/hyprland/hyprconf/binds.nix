@@ -34,7 +34,7 @@
         ''$mods, U, exec, [workspace 1 silent; float; size 402 1030; move 1508 40] $term --class "neo" uwsm app -- $scr/neo.sh''
         ''$mods, U, exec, [workspace 1 silent; float; size 620 354; move 10 40] $term --class "fastfetch" --hold uwsm app -- fastfetch --logo $HOME/Pictures/fastfetch_logos/FallenAngel.jpg''
         "$mod, Delete, exec, rofi -show power-menu -modi power-menu:rofi-power-menu"
-        "$mods, 0, hy3:movetoworkspace, 10, follow"
+        "$mods, 0, hy3:movetoworkspace, 10"
         "Ctrl+Alt, L, exec, uwsm-app -- swaylock -fF"
         ''$mod, G, exec, $term --class "NixDots" uwsm app -- $scr/tmux_nix.sh''
         "$mod, N, exec, uwsm-app -- $scr/cliphist.sh"
