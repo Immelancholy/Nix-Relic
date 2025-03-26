@@ -36,7 +36,7 @@
     enable = true;
     wantedBy = ["default.target"];
     path = [
-      "/run/current-system/sw"
+      # "/run/current-system/sw"
       "/home/${user}/.local/share"
       pkgs.uwsm
       pkgs.bash
