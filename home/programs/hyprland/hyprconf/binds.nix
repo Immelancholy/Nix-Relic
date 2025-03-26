@@ -115,15 +115,24 @@
     binde = $mod+Ctrl+Shift, K, resizeactive, 0 -30
     binde = $mod+Ctrl+Shift, J, resizeactive, 0 30
 
-    $moveactivewindow=grep -q "true" <<< $(hyprctl activewindow -j | jq -r .floating) && hyprctl dispatch moveactive
-    binded = $mod+Shift, Left, Move activewindow left, exec, $moveactivewindow -30 0 || hyprctl dispatch hy3:movewindow l
-    binded = $mod+Shift, Right, Move activewindow right, exec, $moveactivewindow 30 0 || hyprctl dispatch hy3:movewindow r
-    binded = $mod+Shift, Up, Move activewindow up, exec, $moveactivewindow  0 -30 || hyprctl dispatch hy3:movewindow u
-    binded = $mod+Shift, Down, Move activewindow down, exec, $moveactivewindow 0 30 || hyprctl dispatch hy3:movewindow d
-    binded = $mod+Shift, H, Move activewindow left, exec, $moveactivewindow -30 0 || hyprctl dispatch hy3:movewindow l
-    binded = $mod+Shift, L, Move activewindow right, exec, $moveactivewindow 30 0 || hyprctl dispatch hy3:movewindow r
-    binded = $mod+Shift, K, Move activewindow up, exec, $moveactivewindow  0 -30 || hyprctl dispatch hy3:movewindow u
-    binded = $mod+Shift, J, Move activewindow down, exec, $moveactivewindow 0 30 || hyprctl dispatch hy3:movewindow d
+    # $moveactivewindow=grep -q "true" <<< $(hyprctl activewindow -j | jq -r .floating) && hyprctl dispatch moveactive
+    # binded = $mod+Shift, Left, Move activewindow left, exec, $moveactivewindow -30 0 || hyprctl dispatch hy3:movewindow l
+    # binded = $mod+Shift, Right, Move activewindow right, exec, $moveactivewindow 30 0 || hyprctl dispatch hy3:movewindow r
+    # binded = $mod+Shift, Up, Move activewindow up, exec, $moveactivewindow  0 -30 || hyprctl dispatch hy3:movewindow u
+    # binded = $mod+Shift, Down, Move activewindow down, exec, $moveactivewindow 0 30 || hyprctl dispatch hy3:movewindow d
+    # binded = $mod+Shift, H, Move activewindow left, exec, $moveactivewindow -30 0 || hyprctl dispatch hy3:movewindow l
+    # binded = $mod+Shift, L, Move activewindow right, exec, $moveactivewindow 30 0 || hyprctl dispatch hy3:movewindow r
+    # binded = $mod+Shift, K, Move activewindow up, exec, $moveactivewindow  0 -30 || hyprctl dispatch hy3:movewindow u
+    # binded = $mod+Shift, J, Move activewindow down, exec, $moveactivewindow 0 30 || hyprctl dispatch hy3:movewindow d
+
+    bind = $mod+Shift, H, hy3:movewindow, r
+    bind = $mod+Shift, J, hy3:movewindow, d
+    bind = $mod+Shift, K, hy3:movewindow, u
+    bind = $mod+Shift, L, hy3:movewindow, l
+    bind = $mod+Shift, Right, hy3:movewindow, r
+    bind = $mod+Shift, Down, hy3:movewindow, d
+    bind = $mod+Shift, Up, hy3:movewindow, u
+    bind = $mod+Shift, Left, hy3:movewindow, l
 
     bind = $mod, mouse_up, workspace, e+1
     bind = $mod, mouse_down, workspace, e-1
