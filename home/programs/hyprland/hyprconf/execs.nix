@@ -19,7 +19,7 @@
       "[workspace 3] sleep 1; uwsm app -- DiscordCanary"
       "sleep 12; systemctl restart --user cliphist"
       "sleep 1; systemctl restart --user cliphist-images"
-      "sleep 1;systemctl restart --user remmina"
+      "sleep 1; systemctl restart --user remmina"
     ];
   };
 }
