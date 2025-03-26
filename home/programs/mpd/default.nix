@@ -18,7 +18,8 @@
         audio_output {
           type  "pipewire"
           name  "Pipewire Sound Server"
-          target  "alsa_output.usb-Audient_Audient_iD4-00.pro-output-0"
+          # target  "alsa_output.usb-Audient_Audient_iD4-00.pro-output-0"
+          target  "easyeffects_sink"
         }
         audio_output {
           type  "pipewire"
