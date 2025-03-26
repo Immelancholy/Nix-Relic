@@ -36,7 +36,7 @@
     enable = true;
     wantedBy = ["default.target"];
     path = [
-      # "/run/current-system/sw"
+      "/run/current-system/sw"
       "/home/${user}/.local/share"
       pkgs.uwsm
       pkgs.bash
@@ -44,6 +44,7 @@
       pkgs.pipewire
       pkgs.qpwgraph
       pkgs.procps
+      pkgs.hyprland
     ];
     script = ''
       /home/${user}/.local/share/bin/mpdchck.sh
