@@ -1,11 +1,6 @@
 {
   wayland.windowManager.hyprland.settings = {
     exec-once = [
-      # "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-      # "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-      # "uwsm app -- hyprctl setcursor Bibata-Modern-Ice 20"
-      # "uwsm app -- $scr/swww.sh"
-      # "swayidle -w"
       ''uwsm app -- mpvpaper -o "--loop" '*' $HOME/Pictures/wallpapers/Neon-Beast-Girl.mp4''
       "uwsm app -- wl-paste --type text --watch cliphist store # Stores only image data"
       "uwsm app -- wl-paste --type image --watch cliphist store # Stores only image data"

@@ -11,7 +11,6 @@
         "$mod, grave, exec, $menu"
         "$mod, V, exec, $edit"
         "$mod, W, togglefloating"
-        # "$mod, D, togglegroup"
         "$mod, Tab, hy3:togglefocuslayer"
         "$mod, D, hy3:makegroup, h"
         "$mod, S, hy3:makegroup, v"
