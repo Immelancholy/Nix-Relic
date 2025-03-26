@@ -43,7 +43,7 @@
       pkgs.mpc
       pkgs.pipewire
       pkgs.qpwgraph
-      pkgs.coreutils-full
+      pkgs.procps
     ];
     script = ''
       /home/${user}/.local/share/bin/mpdchck.sh
