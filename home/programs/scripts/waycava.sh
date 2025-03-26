@@ -162,6 +162,8 @@ sleep_timer = 1
 [input]
 method = pipewire
 source = ${serial} 
+sample_rate = 96000
+sample_bits = 32
 [output]
 method = raw
 raw_target = /dev/stdout

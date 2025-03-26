@@ -12,7 +12,7 @@
       input = {
         method = "pipewire";
         source = "38";
-        sample_rate = 48000;
+        sample_rate = 96000;
         sample_bits = 32;
       };
       output = {
