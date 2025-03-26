@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-err="%samplerate%"
 pwrate=$(pw-metadata -n settings | grep 'clock.force-rate' | cut -d "'" -f 4)
 while :
 do
