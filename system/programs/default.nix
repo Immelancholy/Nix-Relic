@@ -34,7 +34,8 @@
     name = "MPD Play Checker";
     description = "Checks if mpd is playing and runs a script to change samplerate";
     enable = true;
-    wantedBy = ["default.target"];
+    # wantedBy = ["default.target"];
+    wantedBy = ["app-graphical.slice"];
     path = [
       # "/run/current-system/sw"
       "/home/${user}/.local/share"
