@@ -163,7 +163,7 @@
     "context.properties" = {
       "default.clock.allowed-rates" = [44100 48000 88200 96000];
       "default.clock.min-quantum" = 64;
-      "default.clock.max-quantum" = 128;
+      "default.clock.max-quantum" = 512;
       "default.clock.quantum-limit" = 4096;
       "default.clock.quantum-floor" = 32;
     };
@@ -171,10 +171,10 @@
   services.pipewire.extraConfig.jack."92-low-latency" = {
     "jack.properties" = {
       "rt.prio" = 88;
-      "node.latency" = "128/96000";
+      "node.latency" = "256/96000";
       "node.rate" = "1/96000";
-      "node.quantum" = "128/96000";
-      "node.force-quantum" = 128;
+      "node.quantum" = "256/96000";
+      "node.force-quantum" = 256;
     };
   };
   services.pipewire.extraConfig.client."92-low-latency" = {
