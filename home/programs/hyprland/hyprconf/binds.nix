@@ -125,14 +125,22 @@
     # binded = $mod+Shift, K, Move activewindow up, exec, $moveactivewindow  0 -30 || hyprctl dispatch hy3:movewindow u
     # binded = $mod+Shift, J, Move activewindow down, exec, $moveactivewindow 0 30 || hyprctl dispatch hy3:movewindow d
 
-    bind = $mod+Shift, H, hy3:movewindow, r
+    bind = $mod+Shift, H, hy3:movewindow, l
+    bind = $mod+Shift, H, hy3:warpcursor
     bind = $mod+Shift, J, hy3:movewindow, d
+    bind = $mod+Shift, J, hy3:warpcursor
     bind = $mod+Shift, K, hy3:movewindow, u
-    bind = $mod+Shift, L, hy3:movewindow, l
+    bind = $mod+Shift, K, hy3:warpcursor
+    bind = $mod+Shift, L, hy3:movewindow, r
+    bind = $mod+Shift, L, hy3:warpcursor
     bind = $mod+Shift, Right, hy3:movewindow, r
+    bind = $mod+Shift, Right, hy3:warpcursor
     bind = $mod+Shift, Down, hy3:movewindow, d
+    bind = $mod+Shift, Down, hy3:warpcursor
     bind = $mod+Shift, Up, hy3:movewindow, u
+    bind = $mod+Shift, Up, hy3:warpcursor
     bind = $mod+Shift, Left, hy3:movewindow, l
+    bind = $mod+Shift, Left, hy3:warpcursor
 
     bind = $mod, mouse_up, workspace, e+1
     bind = $mod, mouse_down, workspace, e-1
