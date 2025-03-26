@@ -1,6 +1,7 @@
 {
   wayland.windowManager.hyprland.settings = {
     exec-once = [
+      "systemctl restart --user nm-applet"
       "uwsm app -- $scr/mpdchck.sh"
       ''uwsm app -- mpvpaper -o "--loop" '*' $HOME/Pictures/wallpapers/Neon-Beast-Girl.mp4''
       # "uwsm app -- wl-paste --type text --watch cliphist store # Stores only image data"
@@ -15,10 +16,7 @@
       "[workspace 2 silent] $browser"
       "[workspace 2 silent] uwsm app -- teams-for-linux --minimized"
       "[workspace 3] sleep 1; uwsm app -- DiscordCanary"
-      "sleep 1; systemctl restart --user cliphist"
-      "sleep 1; systemctl restart --user cliphist-images"
-      "sleep 1; systemctl restart --user nm-applet"
-      "sleep 1; systemctl restart --user remmina"
+      "sleep 10; systemctl restart --user cliphist cliphist-images remmina"
     ];
   };
 }
