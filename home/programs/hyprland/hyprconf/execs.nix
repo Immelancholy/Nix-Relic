@@ -15,7 +15,10 @@
       "[workspace 2 silent] $browser"
       "[workspace 2 silent] uwsm app -- teams-for-linux --minimized"
       "[workspace 3] sleep 1; uwsm app -- DiscordCanary"
-      "systemctl restart --user cliphist cliphist-images nm-applet remmina"
+      "sleep 1; systemctl restart --user cliphist"
+      "sleep 1; systemctl restart --user cliphist-images"
+      "sleep 1; systemctl restart --user nm-applet"
+      "sleep 1; systemctl restart --user remmina"
     ];
   };
 }
