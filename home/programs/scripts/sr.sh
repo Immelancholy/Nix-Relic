@@ -8,7 +8,7 @@ do
 		pkill qpwgraph
 		pw-metadata -n settings 0 clock.force-rate 0
 		uwsm app -- qpwgraph
-		uwsm app -- qpwgraph
+		hyprctl dispatch exec "[workspace 4 silent]" uwsm app -- qpwgraph
 		break
 	fi
 	currentRate=$(mpc status %samplerate%)
@@ -20,7 +20,7 @@ do
 		pwrate=$(pw-metadata -n settings | grep 'clock.force-rate' | cut -d "'" -f 4)
 
 		uwsm app -- qpwgraph
-		uwsm app -- qpwgraph
+		hyprctl dispatch exec "[workspace 4 silent]" uwsm app -- qpwgraph
 
 	fi
 
