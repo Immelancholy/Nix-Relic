@@ -32,7 +32,7 @@
 
   systemd.user.services.mpdchck = {
     enable = true;
-    wantedBy = "default.target";
+    wantedBy = ["default.target"];
     path = [
       "/run/current-system/sw"
       "/home/${user}/.local/share"
