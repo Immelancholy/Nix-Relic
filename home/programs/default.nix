@@ -41,7 +41,6 @@
     systemdService.enable = true;
   };
   home.packages = with pkgs; [
-    mpc
     grim
     slurp
     hyprpicker

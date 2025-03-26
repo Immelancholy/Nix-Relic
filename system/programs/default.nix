@@ -32,6 +32,7 @@
   programs.zsh.enable = true;
   services.dbus.enable = true;
   environment.systemPackages = with pkgs; [
+    mpc
     libcamera
     mpvpaper
     # (ffmpeg-full.override {
