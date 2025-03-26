@@ -30,30 +30,34 @@
     enableVirtualCamera = true;
   };
 
-  # systemd.user.services.mpdchck = {
-  #   name = "MPD Play Checker";
-  #   description = "Checks if mpd is playing and runs a script to change samplerate";
-  #   enable = true;
-  #   # wantedBy = ["default.target"];
-  #   wantedBy = ["app-graphical.slice"];
-  #   path = [
-  #     # "/run/current-system/sw"
-  #     "/home/${user}/.local/share"
-  #     pkgs.uwsm
-  #     pkgs.bash
-  #     pkgs.mpc
-  #     pkgs.pipewire
-  #     pkgs.qpwgraph
-  #     pkgs.procps
-  #     inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland
-  #   ];
-  #   script = ''
-  #     /home/${user}/.local/share/bin/mpdchck.sh
-  #   '';
-  #   environment = {
-  #     MPD_HOST = "/run/user/1000/mpd/socket";
-  #   };
-  # };
+  systemd.user.services.mpdchck = {
+    name = "MPD Play Checker";
+    description = "Checks if mpd is playing and runs a script to change samplerate";
+    enable = true;
+    # wantedBy = ["default.target"];
+    wantedBy = ["graphical-session.target"];
+    serviceConfig = {
+      Type = "exec";
+    };
+    path = [
+      # "/run/current-system/sw"
+      "/home/${user}/.local/share"
+      pkgs.uwsm
+      pkgs.bash
+      pkgs.mpc
+      pkgs.pipewire
+      pkgs.qpwgraph
+      pkgs.procps
+      inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland
+    ];
+    script = ''
+      /home/${user}/.local/share/bin/mpdchck.sh
+    '';
+    environment = {
+      MPD_HOST = "/run/user/1000/mpd/socket";
+    };
+    after = ["qpwgraph"];
+  };
 
   programs.zsh.enable = true;
   services.dbus.enable = true;
