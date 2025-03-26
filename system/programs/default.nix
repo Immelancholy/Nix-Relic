@@ -38,6 +38,7 @@
     path = [
       # "/run/current-system/sw"
       "/home/${user}/.local/share"
+      pkgs.bash
       pkgs.mpc
       pkgs.pipewire
     ];
