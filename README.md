@@ -42,12 +42,17 @@ git clone https://github.com/Immelancholy/Nix-Dotfiles.git
     solaar,
     rust-overlay,
     nix-flatpak,
+    lanzaboote,
+    nur,
     ...
   } @ inputs: let
     system = "x86_64-linux";
     user = "mela"; # Replace with your username
     git = "Immelancholy"; #Replace with your Git username
     email = "lenalowes0@gmail.com"; # Replace with your Git email
+    scriptBin = "/home/${user}/.local/share/bin"; #path to scripts must point to a home folder dir i.e /home/${user}/path/to/scripts cos I used home.file to import them.
+    hyprMonitor = ", preferred, auto, 1"; # monitor for hyprland to use
+    # hyprMonitor = "HDMI-A-1, 1920x1080@144, 0x0, 1, bitdepth, 8"; #example and also my monitor lol
   in {
 ```
 * enable/disable secureboot (you'll want this disabled on first boot and then set it up using the guide [here](https://github.com/nix-community/lanzaboote/blob/master/docs/QUICK_START.md)).
