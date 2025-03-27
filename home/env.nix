@@ -1,11 +1,12 @@
 {
   pkgs,
   lib,
+  scriptBin,
   ...
 }: {
   home.sessionVariables = {
     STEAM_EXTRA_COMPAT_TOOLS_PATHS = "$HOME/.steam/root/compatibilitytools.d";
-    EDITOR = "kitty $HOME/.local/share/bin/kitty_nvim.sh";
+    EDITOR = "${lib.getExe pkgs.kitty} ${scriptBin}/nv.sh";
     BROWSER = "zen";
     TERMINAL = "${lib.getExe pkgs.kitty}";
     # NIXOS_OZONE_WL = "1";

@@ -1,7 +1,7 @@
 {
-  user,
   pkgs,
   lib,
+  scriptBin,
   ...
 }: {
   programs.kitty = {
@@ -35,7 +35,7 @@
     kitty = {
       name = "Kitty";
       genericName = "Terminal";
-      exec = "${lib.getExe pkgs.kitty} --hold /home/${user}/.local/share/bin/poke.sh";
+      exec = "${lib.getExe pkgs.kitty} --hold ${scriptBin}/poke.sh";
       type = "Application";
       terminal = false;
       icon = "kitty";

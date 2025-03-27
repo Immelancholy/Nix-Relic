@@ -102,11 +102,12 @@
     user = "mela"; # Replace with your username
     git = "Immelancholy"; #Replace with your Git username
     email = "lenalowes0@gmail.com"; # Replace with your Git email
+    scriptBin = "/home/${user}/.local/share/bin"; #path to scripts
   in {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = {inherit inputs user git email;};
+        specialArgs = {inherit inputs user git email scriptBin;};
         modules = [
           ./system/secboot.nix # uncomment this to disable secureboot
           ({pkgs, ...}: {
@@ -135,7 +136,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              extraSpecialArgs = {inherit inputs user git email;};
+              extraSpecialArgs = {inherit inputs user git email scriptBin;};
             };
 
             home-manager.users.${user} = {
