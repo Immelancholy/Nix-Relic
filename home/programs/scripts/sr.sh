@@ -6,7 +6,7 @@ do
 	if [ "$state" = "paused" ] || [ "$state" = "stopped" ];
 	then
 		pid=$(pgrep qpwgraph)
-		kill $pid
+		kill "$pid"
 		pw-metadata -n settings 0 clock.force-rate 0
 		uwsm app -- qpwgraph
 		hyprctl dispatch exec "[workspace 4 silent]" uwsm app -- qpwgraph
@@ -17,7 +17,7 @@ do
 	if [ "$currentRate" != "$pwrate" ];
 	then
 		pid=$(pgrep qpwgraph)
-		kill $pid
+		kill "$pid"
 		pw-metadata -n settings 0 clock.force-rate "$currentRate"
 		pwrate=$(pw-metadata -n settings | grep 'clock.force-rate' | cut -d "'" -f 4)
 
