@@ -51,7 +51,7 @@ git clone https://github.com/Immelancholy/Nix-Dotfiles.git
     git = "Immelancholy"; #Replace with your Git username
     email = "lenalowes0@gmail.com"; # Replace with your Git email
     scriptBin = "/home/${user}/.local/share/bin"; #path to scripts must point to a home folder dir i.e /home/${user}/path/to/scripts cos I used home.file to import them.
-    hyprMonitor = ", preferred, auto, 1"; # monitor for hyprland to use
+    hyprMonitor = ", preferred, auto, 1"; # monitor for hyprland to use, leave this default and then edit it in post install by using hyprctl monitors to find your monitor
     # hyprMonitor = "HDMI-A-1, 1920x1080@144, 0x0, 1, bitdepth, 8"; #example and also my monitor lol
   in {
 ```
@@ -128,12 +128,26 @@ sudo nixos-rebuild boot --flake .
 ## POST-INSTALL
 * Remember to set default device to Desktop Output and Desktop Input in pavucontrol (Not necessary but I would recommended)
 * Set default device to Commes Output and Commes Input in discord lol (Again not necessary but splitting desktop and commes audio is useful)
-* You'll want to configure mpd to use your actual audio device as the output in home/programs/mpd/default.nix
+* Then set up a qpwgraph patchbay (this launches on workspace 4 on boot) to pin the output and input virtual devices to your audio device.
+* Set up your monitor (optional)
+```
+
+  } @ inputs: let
+    system = "x86_64-linux";
+    user = "mela"; # Replace with your username
+    git = "Immelancholy"; #Replace with your Git username
+    email = "lenalowes0@gmail.com"; # Replace with your Git email
+    scriptBin = "/home/${user}/.local/share/bin"; #path to scripts must point to a home folder dir i.e /home/${user}/path/to/scripts cos I used home.file to import them.
+    hyprMonitor = ", preferred, auto, 1"; # monitor for hyprland to use, leave this default and then edit it in post install by using hyprctl monitors to find your monitor
+    # hyprMonitor = "HDMI-A-1, 1920x1080@144, 0x0, 1, bitdepth, 8"; #example and also my monitor lol
+  in {
+```
+* You'll want to configure mpd to use your actual audio device as the output in home/programs/mpd/default.nix (currently uses easyeffects sink so optional)
 ```
         audio_output {
           type  "pipewire"
           name  "Pipewire Sound Server"
-          target  "alsa_output.usb-Audient_Audient_iD4-00.pro-output-0"
+          target  "easyeffects_sink"
         }
 ```
 * Same with cava except you want to set it to the object.serial of virtual cable. Can be found with 
