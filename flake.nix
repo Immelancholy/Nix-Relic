@@ -103,6 +103,8 @@
     git = "Immelancholy"; #Replace with your Git username
     email = "lenalowes0@gmail.com"; # Replace with your Git email
     scriptBin = "/home/${user}/.local/share/bin"; #path to scripts must point to a home folder dir i.e /home/${user}/path/to/scripts cos I used home.file to import them.
+    # hyprMonitor = ", preferred, auto, 1"; # monitor for hyprland to use
+    hyprMonitor = "HDMI-A-1, 1920x1080@144, 0x0, 1, bitdepth, 8"; #example and also my monitor lol
   in {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
@@ -136,7 +138,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              extraSpecialArgs = {inherit inputs user git email scriptBin;};
+              extraSpecialArgs = {inherit inputs user git email scriptBin hyprMonitor;};
             };
 
             home-manager.users.${user} = {
