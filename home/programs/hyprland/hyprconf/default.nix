@@ -11,8 +11,8 @@
     "$edit" = "$term uwsm app -- $scr/nv.sh";
     "$player" = "mpd";
     "$playerctl" = "uwsm app -- playerctl --player=$player";
-    monitor = ", preferred, auto, 1";
-    # monitor = "HDMI-A-1, 1920x1080@144, 0x0, 1, bitdepth, 8";
+    # monitor = ", preferred, auto, 1";
+    monitor = "HDMI-A-1, 1920x1080@144, 0x0, 1, bitdepth, 8";
     input = {
       kb_layout = "gb";
       kb_options = "fkeys:basic_13-24";
