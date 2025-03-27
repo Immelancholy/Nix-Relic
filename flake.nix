@@ -138,7 +138,6 @@
               extraSpecialArgs = {inherit inputs user git email;};
             };
 
-            # TODO replace ryan with your own username ;
             home-manager.users.${user} = {
               imports = [
                 stylix.homeManagerModules.stylix
