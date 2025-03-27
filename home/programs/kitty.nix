@@ -1,4 +1,9 @@
-{user, ...}: {
+{
+  user,
+  pkgs,
+  lib,
+  ...
+}: {
   programs.kitty = {
     enable = true;
     shellIntegration.enableZshIntegration = true;
@@ -30,7 +35,7 @@
     kitty = {
       name = "Kitty";
       genericName = "Terminal";
-      exec = "kitty --hold sh /home/${user}/.local/share/bin/poke.sh";
+      exec = "${lib.getExe pkgs.kitty} --hold /home/${user}/.local/share/bin/poke.sh";
       type = "Application";
       terminal = false;
       icon = "kitty";
