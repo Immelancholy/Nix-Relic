@@ -2,7 +2,6 @@
   pkgs,
   inputs,
   lib,
-  scriptBin,
   ...
 }: {
   xdg.desktopEntries = {

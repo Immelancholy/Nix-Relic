@@ -1,6 +1,6 @@
-{
+{scriptBin, ...}: {
   wayland.windowManager.hyprland.settings = {
-    "$scr" = "$HOME/.local/share/bin/";
+    "$scr" = "${scriptBin}";
     "$term" = "uwsm app -- kitty";
     "$files" = "uwsm app -- nemo";
     "$filest" = "$term uwsm app -- yazi";

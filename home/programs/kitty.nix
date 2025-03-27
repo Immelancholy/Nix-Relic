@@ -35,7 +35,7 @@
     kitty = {
       name = "Kitty";
       genericName = "Terminal";
-      exec = "${lib.getExe pkgs.kitty} --hold ${scriptBin}/poke.sh";
+      exec = "${lib.getExe pkgs.kitty} --hold ${./scripts/poke.sh}";
       type = "Application";
       terminal = false;
       icon = "kitty";
