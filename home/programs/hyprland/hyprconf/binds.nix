@@ -89,14 +89,14 @@
     bind = $mod, Up, hy3:movefocus, u, once
     bind = $mod, Right, hy3:movefocus, r, once
 
-    bind = $mods+Alt, H, hy3:movefocus, l, visible, nowarp
-    bind = $mods+Alt, J, hy3:movefocus, d, visible, nowarp
-    bind = $mods+Alt, K, hy3:movefocus, u, visible, nowarp
-    bind = $mods+Alt, L, hy3:movefocus, r, visible, nowarp
-    bind = $mods+Alt, Left, hy3:movefocus, l, visible, nowarp
-    bind = $mods+Alt, Down, hy3:movefocus, d, visible, nowarp
-    bind = $mods+Alt, Up, hy3:movefocus, u, visible, nowarp
-    bind = $mods+Alt, Right, hy3:movefocus, r, visible, nowarp
+    bind = $mod+Alt, H, hy3:movefocus, l, visible, nowarp
+    bind = $mod+Alt, J, hy3:movefocus, d, visible, nowarp
+    bind = $mod+Alt, K, hy3:movefocus, u, visible, nowarp
+    bind = $mod+Alt, L, hy3:movefocus, r, visible, nowarp
+    bind = $mod+Alt, Left, hy3:movefocus, l, visible, nowarp
+    bind = $mod+Alt, Down, hy3:movefocus, d, visible, nowarp
+    bind = $mod+Alt, Up, hy3:movefocus, u, visible, nowarp
+    bind = $mod+Alt, Right, hy3:movefocus, r, visible, nowarp
 
     bind = $mod+Ctrl, L, workspace, r+1
     bind = $mod+Ctrl, H, workspace, r-1
