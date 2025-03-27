@@ -2,8 +2,11 @@
   nixosConfig,
   lib,
   user,
+  scriptBin,
   ...
-}: {
+}: let
+  scriptBinHome = lib.strings.removePrefix "/home/${user}/" "${scriptBin}";
+in {
   home.username = "${user}";
   home.homeDirectory = "/home/${user}";
 
@@ -44,7 +47,7 @@
       source = ./programs/zen;
       recursive = true;
     };
-    ".local/share/bin" = {
+    "${scriptBinHome}" = {
       source = ./programs/scripts;
       recursive = true;
       executable = true;
