@@ -102,7 +102,7 @@
     user = "mela"; # Replace with your username
     git = "Immelancholy"; #Replace with your Git username
     email = "lenalowes0@gmail.com"; # Replace with your Git email
-    scriptBin = "/home/${user}/.local/share/bin"; #path to scripts must point to a home folder dir cos I used home.file to import them.
+    scriptBin = "/home/${user}/.local/share/bin"; #path to scripts must point to a home folder dir i.e /home/${user}/path/to/scripts cos I used home.file to import them.
   in {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
