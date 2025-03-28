@@ -2,6 +2,7 @@
   pkgs,
   inputs,
   lib,
+  scriptBin,
   ...
 }: {
   xdg.desktopEntries = {
@@ -10,7 +11,7 @@
       genericName = "Text Editor";
       # exec = "${lib.getExe pkgs.kitty} ${../scripts/nv.sh}";
       comment = "Edit test files";
-      exec = ''sh -c "${../scripts/nv.sh}" %F'';
+      exec = ''sh -c "${scriptBin}/nv.sh" %F'';
       type = "Application";
       terminal = true;
       categories = ["Utility" "TextEditor"];
