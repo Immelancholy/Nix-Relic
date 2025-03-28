@@ -12,7 +12,7 @@
       exec = "${lib.getExe pkgs.kitty} ${../scripts/nv.sh}";
       comment = "Edit test files";
       type = "Application";
-      terminal = true;
+      terminal = false;
       categories = ["Utility" "TextEditor"];
       icon = "nvim";
       startupNotify = false;
