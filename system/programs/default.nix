@@ -18,7 +18,7 @@
     enable = true;
     settings = {
       default = [
-        "kitty.desktop"
+        "kitty-open.desktop"
       ];
     };
   };
