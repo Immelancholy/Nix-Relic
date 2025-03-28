@@ -10,13 +10,7 @@ while tmux has-session -t $sesh 2>/dev/null; do
 done
 tmux new -d -s $sesh -c "$HOME/obsidian/" "nv.sh; $SHELL"
 
-tmux new-window -c "$HOME/obsidian/" "lazygit; $SHELL" 
-
-tmux split-window -v -c "$HOME/obsidian/"
-
-tmux select-pane -t 0
-
-tmux resize-pane -D 60
+tmux new-window -c "$HOME/obsidian/" 
 
 tmux select-window -t ^ 
 
