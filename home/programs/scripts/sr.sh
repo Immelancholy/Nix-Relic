@@ -9,6 +9,8 @@ do
 		pid=$(pgrep qpwgraph)
 		kill "$pid"
 		pw-metadata -n settings 0 clock.force-rate 0
+
+		hyprctl dispatch exec "[workspace 4 silent]" uwsm app -- qpwgraph
 		hyprctl dispatch exec "[workspace 4 silent]" uwsm app -- qpwgraph
 		break
 	fi
@@ -24,6 +26,7 @@ do
 			pwrate=$(pw-metadata -n settings | grep 'clock.force-rate' | cut -d "'" -f 4)
 
 			hyprctl dispatch exec "[workspace 4 silent]" uwsm app -- qpwgraph
+			hyprctl dispatch exec "[workspace 4 silent]" uwsm app -- qpwgraph
 
 		elif [ $(( currentRate % 48000 )) -eq 0 ];
 		then
@@ -33,7 +36,10 @@ do
 				kill "$pid"
 				pw-metadata -n settings 0 clock.force-rate 192000
 				pwrate=${currentRate}
+
 				hyprctl dispatch exec "[workspace 4 silent]" uwsm app -- qpwgraph
+				hyprctl dispatch exec "[workspace 4 silent]" uwsm app -- qpwgraph
+
 			elif [[ " ${allowedRates[*]}" =~ [[:space:]]96000[[:space:]] ]];
 			then
 				pid=$(pgrep qpwgraph)
@@ -42,6 +48,8 @@ do
 				pwrate=${currentRate}
 
 				hyprctl dispatch exec "[workspace 4 silent]" uwsm app -- qpwgraph
+				hyprctl dispatch exec "[workspace 4 silent]" uwsm app -- qpwgraph
+
 			elif [[ " ${allowedRates[*]}" =~ [[:space:]]48000[[:space:]] ]];
 			then
 				pid=$(pgrep qpwgraph)
@@ -50,6 +58,8 @@ do
 				pwrate=${currentRate}
 
 				hyprctl dispatch exec "[workspace 4 silent]" uwsm app -- qpwgraph
+				hyprctl dispatch exec "[workspace 4 silent]" uwsm app -- qpwgraph
+
 			else
 				pid=$(pgrep qpwgraph)
 				kill "$pid"
@@ -57,6 +67,8 @@ do
 				pwrate=${currentRate}
 
 				hyprctl dispatch exec "[workspace 4 silent]" uwsm app -- qpwgraph
+				hyprctl dispatch exec "[workspace 4 silent]" uwsm app -- qpwgraph
+
 			fi
 
 		else
@@ -68,6 +80,8 @@ do
 				pwrate=${currentRate}
 
 				hyprctl dispatch exec "[workspace 4 silent]" uwsm app -- qpwgraph
+				hyprctl dispatch exec "[workspace 4 silent]" uwsm app -- qpwgraph
+
 			else
 				pid=$(pgrep qpwgraph)
 				kill "$pid"
@@ -75,6 +89,8 @@ do
 				pwrate=${currentRate}
 
 				hyprctl dispatch exec "[workspace 4 silent]" uwsm app -- qpwgraph
+				hyprctl dispatch exec "[workspace 4 silent]" uwsm app -- qpwgraph
+
 			fi
 		fi
 
