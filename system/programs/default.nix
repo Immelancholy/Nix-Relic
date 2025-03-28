@@ -76,6 +76,7 @@
     implementation = "broker";
   };
   environment.systemPackages = with pkgs; [
+    hyprpolkitagent
     mpc
     ffmpegthumbnailer
     libcamera
