@@ -14,9 +14,7 @@ tmux new-window -c /etc/nixos
 
 tmux select-window -t ^ 
 
-sleep 0.4
+tmux attach-session -t $sesh
 
 tmux send-keys "nv.sh" C-m
-
-tmux attach-session -t $sesh
 
