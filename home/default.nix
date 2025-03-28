@@ -72,6 +72,30 @@ in {
       "autostart/input-mapper-autoload.desktop" = lib.mkIf nixosConfig.services.input-remapper.enable {
         source = "${nixosConfig.services.input-remapper.package}/share/applications/input-remapper-autoload.desktop";
       };
+      "discordcanary/settings.json".text = ''
+        {
+          "SKIP_HOST_UPDATE": true,
+          "DANGEROUS_ENABLE_DEVTOOLS_ONLY_ENABLE_IF_YOU_KNOW_WHAT_YOURE_DOING": true,
+          "MIN_WIDTH": 940,
+          "MIN_HEIGHT": 500,
+          "openasar": {
+            "setup": true,
+            "noTyping": true,
+            "css": "@import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha-mauve.theme.css");"
+          },
+          "BACKGROUND_COLOR": "#121214",
+          "chromiumSwitches": {},
+          "IS_MAXIMIZED": false,
+          "IS_MINIMIZED": false,
+          "WINDOW_BOUNDS": {
+            "x": 10,
+            "y": 40,
+            "width": 1900,
+            "height": 1030
+          },
+          "trayBalloonShown": true
+        }
+      '';
     };
   };
 
