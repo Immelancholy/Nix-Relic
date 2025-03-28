@@ -6,7 +6,7 @@
 }: {
   home.sessionVariables = {
     STEAM_EXTRA_COMPAT_TOOLS_PATHS = "$HOME/.steam/root/compatibilitytools.d";
-    EDITOR = "${lib.getExe pkgs.kitty} ${scriptBin}/nv.sh";
+    EDITOR = "${./programs/scripts/nv.sh}";
     BROWSER = "zen";
     TERMINAL = "${lib.getExe pkgs.kitty}";
     # NIXOS_OZONE_WL = "1";
