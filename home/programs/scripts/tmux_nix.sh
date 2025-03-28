@@ -16,5 +16,5 @@ tmux select-window -t ^
 
 tmux attach-session -t $sesh
 
-tmux send-keys "nv.sh" C-m
+tmux send-keys -t $sesh "nv.sh" C-m
 
