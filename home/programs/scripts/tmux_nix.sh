@@ -14,7 +14,7 @@ tmux new-window -c /etc/nixos
 
 tmux select-window -t ^ 
 
-sleep 0.03
+sleep 0.05
 
 tmux send-keys "nv.sh" C-m
 
