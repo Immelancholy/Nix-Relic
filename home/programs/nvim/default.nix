@@ -4,20 +4,25 @@
   lib,
   ...
 }: {
-  # xdg.desktopEntries = {
-  #   nvim = {
-  #     name = "Neovim";
-  #     genericName = "Text Editor";
-  #     # exec = "${lib.getExe pkgs.kitty} ${../scripts/nv.sh}";
-  #     comment = "Edit test files";
-  #     exec = "${../scripts/nv.sh} %F";
-  #     type = "Application";
-  #     terminal = true;
-  #     categories = ["Utility" "TextEditor"];
-  #     icon = "nvim";
-  #     mimeType = ["text/english" "text/plain" "text/x-makefile" "text/x-c++hdr" "text/x-c++src" "text/x-chdr" "text/x-csrc" "text/x-java" "text/x-moc" "text/x-pascal" "text/x-tcl" "text/x-tex" "application/x-shellscript" "text/x-c" "text/x-c++"];
-  #   };
-  # };
+  xdg.desktopEntries = {
+    nvim = {
+      name = "Neovim";
+      genericName = "Text Editor";
+      # exec = "${lib.getExe pkgs.kitty} ${../scripts/nv.sh}";
+      comment = "Edit test files";
+      exec = "${../scripts/nv.sh} %F";
+      type = "Application";
+      terminal = true;
+      categories = ["Utility" "TextEditor"];
+      icon = "nvim";
+      startupNotify = false;
+      mimeType = ["text/english" "text/plain" "text/x-makefile" "text/x-c++hdr" "text/x-c++src" "text/x-chdr" "text/x-csrc" "text/x-java" "text/x-moc" "text/x-pascal" "text/x-tcl" "text/x-tex" "application/x-shellscript" "text/x-c" "text/x-c++"];
+      settings = {
+        Keywords = ["Text" "Editor"];
+        TryExec = "${../scripts/nv.sh}";
+      };
+    };
+  };
 
   programs.nixvim = {
     enable = true;

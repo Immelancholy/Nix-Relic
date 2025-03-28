@@ -47,6 +47,7 @@
         X-TerminalArgAppId = "--class";
         X-TerminalArgDir = "--working-directory";
         X-TerminalArgHold = "--hold";
+        TryExec = "${lib.getExe pkgs.kitty} --hold ${./scripts/poke.sh}";
       };
     };
   };
