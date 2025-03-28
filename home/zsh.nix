@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  scriptBin,
+  ...
+}: {
   programs.zsh = {
     enable = true;
     enableCompletion = false;
@@ -57,7 +61,7 @@
 
       [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-      export PATH="$PATH:$HOME/.local/share/bin"
+      export PATH="$PATH:${scriptBin}"
       # export class=$(hyprctl activewindow | grep class)
       # class=''${class[9,''${#class}]}
 
