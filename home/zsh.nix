@@ -60,6 +60,7 @@
 
       export PATH="$PATH:$HOME/.local/share/bin"
       export class=$(hyprctl activewindow | grep class)
+      export classlength=`expr "$class" : '.*'`
       poke.sh
       #fastfetch --logo $HOME/Pictures/fastfetch_logos/FallenAngel.jpg
 
