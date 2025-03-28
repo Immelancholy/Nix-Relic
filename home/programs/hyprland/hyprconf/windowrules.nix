@@ -85,6 +85,7 @@
         windowrule = float,class:^(com.github.unrud.VideoDownloader)$ # VideoDownloader-Gkk
         windowrule = float,class:^(io.gitlab.adhami3310.Impression)$ # Impression-Gtk
         windowrule = float,class:^(io.missioncenter.MissionCenter)$ # MissionCenter-Gtk
+        windowrule = float,title:^(Friends List)$
 
         windowrule = opacity 0.90 0.90,class:^(org.rncbc.qpwgraph)$
         windowrule = opacity 0.90 0.90,class:^(com.github.wwmm.easyeffects)$
