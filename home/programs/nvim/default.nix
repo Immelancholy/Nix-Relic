@@ -9,9 +9,8 @@
     nvim = {
       name = "Neovim";
       genericName = "Text Editor";
-      # exec = "${lib.getExe pkgs.kitty} ${../scripts/nv.sh}";
+      exec = "${lib.getExe pkgs.kitty} ${../scripts/nv.sh} %F";
       comment = "Edit test files";
-      exec = ''${scriptBin}/nv.sh'';
       type = "Application";
       terminal = true;
       categories = ["Utility" "TextEditor"];
