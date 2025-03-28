@@ -9,7 +9,6 @@ do
 		pid=$(pgrep qpwgraph)
 		kill "$pid"
 		pw-metadata -n settings 0 clock.force-rate 0
-		uwsm app -- qpwgraph
 		hyprctl dispatch exec "[workspace 4 silent]" uwsm app -- qpwgraph
 		break
 	fi
