@@ -34,11 +34,20 @@
   xdg.desktopEntries = {
     kitty = {
       name = "Kitty";
-      genericName = "Terminal";
+      genericName = "Terminal emulator";
+      comment = "Fast, feature-rich, GPU based terminal";
       exec = "${lib.getExe pkgs.kitty} --hold ${./scripts/poke.sh}";
       type = "Application";
-      terminal = false;
+      categories = ["System" "TerminalEmulator"];
       icon = "kitty";
+      startupNotify = true;
+      settings = {
+        X-TerminalArgExec = "--";
+        X-TerminalArgTitle = "--title";
+        X-TerminalArgAppId = "--class";
+        X-TerminalArgDir = "--working-directory";
+        X-TerminalArgHold = "--hold";
+      };
     };
   };
 }
