@@ -31,7 +31,7 @@
         ''$mods, U, exec, [workspace 1 silent; float; size 858 462; move 640 609] $term --class "cava" uwsm app -- $scr/cava.sh''
         ''$mods, U, exec, [workspace 1 silent; float; size 620 666; move 10 404] $term --class "btop" uwsm app -- $scr/btop.sh''
         ''$mods, U, exec, [workspace 1 silent; float; size 402 1030; move 1508 40] $term --class "neo" uwsm app -- $scr/neo.sh''
-        ''$mods, U, exec, [workspace 1 silent; float; size 620 354; move 10 40] $term --class "fastfetch"''
+        ''$mods, U, exec, [workspace 1 silent; float; size 620 354; move 10 40] $term @ launch --var class=fastfetch''
         "$mod, Delete, exec, rofi -show power-menu -modi power-menu:rofi-power-menu"
         "$mods, 0, hy3:movetoworkspace, 10"
         "$mod, 0, workspace, 10"
