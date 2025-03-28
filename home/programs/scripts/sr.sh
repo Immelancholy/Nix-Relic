@@ -32,7 +32,7 @@ do
 			pid=$(pgrep qpwgraph)
 			kill "$pid"
 			pw-metadata -n settings 0 clock.force-rate 48000
-			pwrate=$(pw-metadata -n settings | grep 'clock.force-rate' | cut -d "'" -f 4)
+			pwrate=48000
 
 			uwsm app -- qpwgraph
 			hyprctl dispatch exec "[workspace 4 silent]" uwsm app -- qpwgraph
@@ -41,7 +41,7 @@ do
 			pid=$(pgrep qpwgraph)
 			kill "$pid"
 			pw-metadata -n settings 0 clock.force-rate 41000
-			pwrate=$(pw-metadata -n settings | grep 'clock.force-rate' | cut -d "'" -f 4)
+			pwrate=41000
 
 			uwsm app -- qpwgraph
 			hyprctl dispatch exec "[workspace 4 silent]" uwsm app -- qpwgraph
