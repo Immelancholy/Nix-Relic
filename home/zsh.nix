@@ -60,6 +60,7 @@
 
       export PATH="$PATH:$HOME/.local/share/bin"
       poke.sh
+      #fastfetch --logo $HOME/Pictures/fastfetch_logos/FallenAngel.jpg
 
     '';
   };
