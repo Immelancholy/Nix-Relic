@@ -10,7 +10,7 @@ while tmux has-session -t $sesh 2>/dev/null; do
 done
 tmux new -d -s $sesh -c /etc/nixos
 
-sleep 0.3
+sleep 0.2
 
 tmux send-keys "nv.sh" C-m
 
