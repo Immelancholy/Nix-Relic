@@ -8,11 +8,7 @@ while tmux has-session -t $sesh 2>/dev/null; do
 	((i++))
 	sesh="NixDots$i"
 done
-tmux new -d -s $sesh -c /etc/nixos
-
-sleep 1
-
-tmux send-keys "nv.sh" C-m
+tmux new -d -s $sesh -c /etc/nixos "nv.sh; $SHELL"
 
 tmux new-window -c /etc/nixos 
 
