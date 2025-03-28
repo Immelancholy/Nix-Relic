@@ -10,7 +10,7 @@ while tmux has-session -t $sesh 2>/dev/null; do
 done
 tmux new -d -s $sesh -c /etc/nixos
 
-tmux send-keys "nv.sh"
+tmux send-keys "nv.sh" C-m
 
 tmux new-window -c /etc/nixos 
 
