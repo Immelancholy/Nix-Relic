@@ -19,6 +19,8 @@
     };
   };
 
+  services.hyprpolkitagent.enable = true;
+
   programs.swaylock = {
     enable = true;
   };
