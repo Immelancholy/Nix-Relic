@@ -11,6 +11,7 @@
     ./flatpak.nix
     ./weylus.nix
     ./bluetooth.nix
+    ./gnome-terminal-symlink.nix
   ];
 
   programs.xfconf.enable = true;
@@ -85,7 +86,6 @@
       withOpengl = true;
       withRtmp = true;
     })
-    gnome-terminal
     libsForQt5.qt5.qtwayland
     kdePackages.qtwayland
     inputs.swww.packages.${pkgs.system}.swww
