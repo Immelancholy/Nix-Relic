@@ -59,6 +59,7 @@
       [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
       export PATH="$PATH:$HOME/.local/share/bin"
+      export class=$(hyprctl activewindow | grep class)
       poke.sh
       #fastfetch --logo $HOME/Pictures/fastfetch_logos/FallenAngel.jpg
 
