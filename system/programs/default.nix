@@ -67,6 +67,7 @@
   };
   environment.systemPackages = with pkgs; [
     mpc
+    ffmpegthumbnailer
     libcamera
     mpvpaper
     # (ffmpeg-full.override {
