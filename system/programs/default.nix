@@ -11,7 +11,7 @@
     ./flatpak.nix
     ./weylus.nix
     ./bluetooth.nix
-    ./gnome-terminal-symlink.nix
+    # ./gnome-terminal-symlink.nix
   ];
 
   xdg.terminal-exec = {
