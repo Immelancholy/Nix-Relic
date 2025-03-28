@@ -4,7 +4,7 @@
     ];
     bind =
       [
-        "$mod, T, exec, $term --hold uwsm app -- $scr/poke.sh"
+        "$mod, T, exec, $term"
         ''$mods, T, exec, $term --class "tmux" uwsm app -- $scr/tmux_start.sh''
         "$mod, F, exec, $browser"
         "$mod, E, exec, $files"
