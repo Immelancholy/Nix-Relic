@@ -58,8 +58,8 @@
       [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
       export PATH="$PATH:$HOME/.local/share/bin"
-      export class=$(hyprctl activewindow | grep class)
-      class=''${class[9,''${#class}]}
+      # export class=$(hyprctl activewindow | grep class)
+      # class=''${class[9,''${#class}]}
 
       if [ "$class" = "fastfetch" ];
       then
