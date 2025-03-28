@@ -85,6 +85,7 @@
       withOpengl = true;
       withRtmp = true;
     })
+    gnome-terminal
     libsForQt5.qt5.qtwayland
     kdePackages.qtwayland
     inputs.swww.packages.${pkgs.system}.swww
