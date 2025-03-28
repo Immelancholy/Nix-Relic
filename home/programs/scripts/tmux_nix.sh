@@ -10,13 +10,7 @@ while tmux has-session -t $sesh 2>/dev/null; do
 done
 tmux new -d -s $sesh -c /etc/nixos "nv.sh"
 
-tmux new-window -c /etc/nixos "lazygit" 
-
-tmux split-window -v -c /etc/nixos
-
-tmux select-pane -t 0
-
-tmux resize-pane -D 60
+tmux new-window -c /etc/nixos 
 
 tmux select-window -t ^ 
 
