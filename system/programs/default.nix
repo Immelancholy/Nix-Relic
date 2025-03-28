@@ -14,6 +14,15 @@
     ./gnome-terminal-symlink.nix
   ];
 
+  xdg.terminal-exec = {
+    enable = true;
+    settings = {
+      default = [
+        "kitty.desktop"
+      ];
+    };
+  };
+
   programs.xfconf.enable = true;
 
   services.gvfs.enable = true; # Mount, trash, and other functionalities
