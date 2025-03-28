@@ -10,7 +10,7 @@
       name = "Neovim";
       genericName = "Text Editor";
       # exec = "${lib.getExe pkgs.kitty} ${../scripts/nv.sh}";
-      exec = ''sh -c "${../scripts/nv.sh}" %F'';
+      exec = ''${../scripts/nv.sh} %U'';
       comment = "Edit test files";
       type = "Application";
       terminal = true;
