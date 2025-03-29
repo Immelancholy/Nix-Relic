@@ -160,6 +160,10 @@
 
   services.mullvad-vpn.enable = true;
   services.mullvad-vpn.package = pkgs.mullvad-vpn;
+  programs.gamescope = {
+    enable = true;
+    capSysNice = true;
+  };
 
   programs.steam = {
     enable = true;
@@ -175,7 +179,6 @@
       };
     };
     extraPackages = with pkgs; [
-      gamescope
       libkrb5
       keyutils
     ];
