@@ -168,16 +168,11 @@
     gamescopeSession = {
       enable = true;
       args = [
-        "--backend drm"
-        "-h 1080"
-        "-w 1920"
-        "-e"
-        "--force-grab-cursor"
         "-r 144"
       ];
-      #   env = {
-      #     ENABLE_GAMESCOPE_WSI = "0";
-      #   };
+      env = {
+        ENABLE_GAMESCOPE_WSI = "0";
+      };
     };
     extraPackages = with pkgs; [
       gamescope
