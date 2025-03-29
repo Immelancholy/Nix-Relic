@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   services.displayManager.sddm = {
     enable = true;
-    stopScript = "pkill sddm";
     wayland = {
       enable = true;
       compositor = "kwin";
