@@ -1,4 +1,5 @@
 {pkgs, ...}: {
+  security.pam.services.greetd.enableGnomeKeyring = true;
   services.greetd = {
     enable = true;
     settings = {
