@@ -29,8 +29,8 @@
 
           RoundCorners = "20";
 
-          BackgroundPlaceholder = "${../../home/backgrounds/Neon-Beast-Girl.png}";
-          Background = "${../../home/backgrounds/Neon-Beast-Girl.mp4}";
+          BackgroundPlaceholder = "${../../../home/backgrounds/Neon-Beast-Girl.png}";
+          Background = "${../../../home/backgrounds/Neon-Beast-Girl.mp4}";
           BackgroundSpeed = "1.0";
           PauseBackground = "";
           CropBackground = "false";
