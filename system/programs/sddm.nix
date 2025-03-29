@@ -2,7 +2,10 @@
   services.displayManager.sddm = {
     enable = true;
     stopScript = "pkill sddm";
-    wayland.enable = true;
+    wayland = {
+      enable = true;
+      compositor = "kwin";
+    };
     package = pkgs.kdePackages.sddm;
     enableHidpi = true;
     theme = "sddm-astronaut-theme";
@@ -16,6 +19,8 @@
       kdePackages.qtsvg
       kdePackages.qtvirtualkeyboard
       kdePackages.qtmultimedia
+      kdePackages.layer-shell-qt
+
       # kdePackages.qtdeclarative
       # kdePackages.qtshadertools
     ];
