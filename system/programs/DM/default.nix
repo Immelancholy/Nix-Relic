@@ -1,6 +1,6 @@
 {
   imports = [
-    ./sddm.nix
-    # ./ly.nix
+    # ./sddm.nix
+    ./ly.nix
   ];
 }
