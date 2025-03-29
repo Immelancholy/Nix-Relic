@@ -7,11 +7,10 @@
   imports = [
     ./hyprland.nix
     ./pipewire.nix
-    ./sddm.nix
     ./flatpak.nix
     ./weylus.nix
     ./bluetooth.nix
-    # ./gnome-terminal-symlink.nix
+    ./DM
   ];
 
   xdg.terminal-exec = {
@@ -150,70 +149,6 @@
     kdePackages.qtmultimedia
     kdePackages.qtdeclarative
     kdePackages.qtshadertools
-    (sddm-astronaut.override {
-      themeConfig = {
-        ScreenWidth = "1920";
-        ScreenHeight = "1080";
-
-        Font = "Noto Sans Nerd Font";
-        FontSize = "12";
-
-        RoundCorners = "20";
-
-        BackgroundPlaceholder = "${../../home/backgrounds/Neon-Beast-Girl.png}";
-        Background = "${../../home/backgrounds/Neon-Beast-Girl.mp4}";
-        BackgroundSpeed = "1.0";
-        PauseBackground = "";
-        CropBackground = "false";
-        BackgroundHorizontalAlignment = "center";
-        BackgroundVerticalAlignment = "center";
-        DimBackground = "0.0";
-        HeaderTextColor = "#cdd6f4";
-        DateTextColor = "#cdd6f4";
-        TimeTextColor = "#cdd6f4";
-
-        FormBackgroundColor = "#1e1e2e";
-        BackgroundColor = "#1e1e2e";
-        DimBackgroundColor = "#1e1e2e";
-
-        LoginFieldBackgroundColor = "##1e1e2e";
-        PasswordFieldBackgroundColor = "#1e1e2e";
-        LoginFieldTextColo = "#cba6f7";
-        PasswordFieldTestColor = "#cba6f7";
-        UserIconColor = "#cba6f7";
-        PasswordIconColor = "#cba6f7";
-
-        PlaceholderTextColor = "#a6adc8";
-        WarningColor = "#f38ba8";
-
-        LoginButtonTextColor = "#cba6f7";
-        LoginButtonBackgroundColor = "#1e1e2e";
-        SystemButtonsIconsColor = "#cba6f7";
-        SessionButtonTextColor = "#cba6f7";
-        VirtualKeyboardButtonTextColor = "#cba6f7";
-
-        DropdownTextColor = "#cba6f7";
-        DropdownSelectedBackgroundColorrr = "#1e1e2e";
-        DropdownBackgroundColor = "#1e1e2e";
-
-        HighlightTextColor = "#cba6f7";
-        HighlightBackgroundColor = "#cba6f7";
-        HighlightBorderColor = "#cba6f7";
-
-        HoverUserIconColor = "#91d7e3";
-        HoverPasswordIconColor = "#91d7e3";
-        HoverSystemButtonsIconColor = "#91d7e3";
-        HoverSessionButtonTextColor = "#91d7e3";
-        HoverVirtualKeyboardButtonTextColor = "#91d7e3";
-
-        PartialBlue = "true";
-        BlurMax = "35";
-        Blur = "2.0";
-
-        HaveFormBackground = "false";
-        FormPosition = "left";
-      };
-    })
   ];
   environment.shells = with pkgs; [zsh];
 
