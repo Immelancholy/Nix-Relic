@@ -15,8 +15,8 @@
       kdePackages.qtsvg
       kdePackages.qtvirtualkeyboard
       kdePackages.qtmultimedia
-      kdePackages.qtdeclarative
-      kdePackages.qtshadertools
+      # kdePackages.qtdeclarative
+      # kdePackages.qtshadertools
     ];
   };
 }
