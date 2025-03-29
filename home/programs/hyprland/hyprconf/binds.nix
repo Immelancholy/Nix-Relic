@@ -23,10 +23,14 @@
 
         "$mods, Q, hy3:killactive"
         "Alt, Return, fullscreen"
-        "$mod+Ctrl+Alt, Right, hy3:movetoworkspace, r+1, follow"
-        "$mod+Ctrl+Alt, Left, hy3:movetoworkspace, r-1, follow"
-        "$mod+Ctrl+Alt, L, hy3:movetoworkspace, r+1, follow"
-        "$mod+Ctrl+Alt, H, hy3:movetoworkspace, r-1, follow"
+        # "$mod+Ctrl+Alt, Right, hy3:movetoworkspace, r+1, follow"
+        # "$mod+Ctrl+Alt, Left, hy3:movetoworkspace, r-1, follow"
+        # "$mod+Ctrl+Alt, L, hy3:movetoworkspace, r+1, follow"
+        # "$mod+Ctrl+Alt, H, hy3:movetoworkspace, r-1, follow"
+        "$mod+Ctrl+Alt, Right, movetoworkspace, r+1"
+        "$mod+Ctrl+Alt, Left, movetoworkspace, r-1"
+        "$mod+Ctrl+Alt, L, movetoworkspace, r+1"
+        "$mod+Ctrl+Alt, H, movetoworkspace, r-1"
         ''$mods, U, exec, [workspace 1 silent; float; size 858 559; move 640 40] $term --class "rmpc" uwsm app -- $scr/rmpc.sh''
         ''$mods, U, exec, [workspace 1 silent; float; size 858 462; move 640 609] $term --class "cava" uwsm app -- $scr/cava.sh''
         ''$mods, U, exec, [workspace 1 silent; float; size 620 666; move 10 404] $term --class "btop" uwsm app -- $scr/btop.sh''
