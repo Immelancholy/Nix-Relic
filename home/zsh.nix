@@ -55,7 +55,7 @@
     profileExtra = ''
       eval $(gnome-keyring-daemon --start --daemonize)
       if uwsm check may-start; then
-        exec uwsm start hyprland.desktop
+        exec ${pkgs.uwsm}/bin/uwsm start hyprland-uwsm.desktop
       fi
     '';
     initExtra = ''
