@@ -1,8 +1,6 @@
 {
   wayland.windowManager.hyprland.settings = {
     exec-once = [
-      # "eval $(gnome-keyring-daemon --start --daemonize)"
-      "source $HOME/.zprofile"
       "systemctl restart --user nm-applet"
       "systemctl stop --user cliphist cliphist-images remmina"
       "uwsm app -- $scr/mpdchck.sh"
