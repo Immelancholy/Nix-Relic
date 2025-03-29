@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  user,
+  ...
+}: {
   security.pam.services.greetd.enableGnomeKeyring = true;
   services.greetd = {
     enable = true;
@@ -8,5 +12,8 @@
         user = "greeter";
       };
     };
+  };
+  services.seatd = {
+    enable = true;
   };
 }
