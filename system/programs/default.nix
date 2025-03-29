@@ -171,7 +171,7 @@
         "--backend drm"
         "-h 1080"
         "-w 1920"
-        # "-e"
+        "-e"
         "--force-grab-cursor"
         "-r 144"
       ];
