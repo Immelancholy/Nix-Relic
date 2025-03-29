@@ -76,6 +76,8 @@
     implementation = "broker";
   };
   environment.systemPackages = with pkgs; [
+    libsForQt5.layer-shell-qt
+    kdePackages.layer-shell-qt
     mpc
     ffmpegthumbnailer
     libcamera
