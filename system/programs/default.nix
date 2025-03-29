@@ -76,6 +76,7 @@
     implementation = "broker";
   };
   environment.systemPackages = with pkgs; [
+    weston
     libsForQt5.layer-shell-qt
     kdePackages.layer-shell-qt
     mpc
