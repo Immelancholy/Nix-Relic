@@ -15,5 +15,6 @@
   };
   services.seatd = {
     enable = true;
+    user = "${user}";
   };
 }
