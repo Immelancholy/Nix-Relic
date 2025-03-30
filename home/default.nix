@@ -70,7 +70,7 @@ in {
         #!/bin/sh
         Selection=true
         LoginShel=${pkgs.zsh}/bin/zsh --login
-        Environment="wayland"
+        # Environment="wayland"
 
         exec dbus-launch $@
 
