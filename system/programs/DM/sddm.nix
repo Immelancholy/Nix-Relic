@@ -1,10 +1,9 @@
 {pkgs, ...}: {
-  services.xserver.enable = true;
   security.pam.services.sddm.enableGnomeKeyring = true;
   services.displayManager.sddm = {
     enable = true;
     wayland = {
-      enable = false;
+      enable = true;
       compositor = "weston";
     };
     package = pkgs.kdePackages.sddm;

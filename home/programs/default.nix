@@ -62,8 +62,6 @@
 
     manix
 
-    linux-wallpaperengine
-
     # archives
     zip
     xz

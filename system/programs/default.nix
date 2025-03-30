@@ -75,9 +75,6 @@
     implementation = "broker";
   };
   environment.systemPackages = with pkgs; [
-    weston
-    libsForQt5.layer-shell-qt
-    kdePackages.layer-shell-qt
     mpc
     ffmpegthumbnailer
     libcamera
@@ -115,9 +112,6 @@
     qpwgraph
     pavucontrol
     pulsemixer
-    libsForQt5.qt5.qtgraphicaleffects
-    libsForQt5.qt5.qtquickcontrols2
-    libsForQt5.qt5.qtsvg
     bibata-cursors
     heroic
     networkmanagerapplet
