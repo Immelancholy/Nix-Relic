@@ -68,14 +68,21 @@ in {
     ".config/emptty" = {
       text = ''
         #!/bin/sh
-        Selection=false
+        Selection=true
         LoginShel=${pkgs.zsh}/bin/zsh --login
-        Environment="wayland"
+        # Environment="wayland"
 
-        exec ${pkgs.uwsm}/bin/uwsm start default
+        exec dbus-launch $@
 
       '';
       executable = true;
+    };
+    ".config/emptty-custom-sessions/Hyprland.desktop" = {
+      text = ''
+        Name=Hyprland (UWSM Managed)
+        Exec=${pkgs.uwsm} start hyprland-uwsm.desktop
+        Environment=wayland
+      '';
     };
   };
 

@@ -9,7 +9,7 @@
   security.pam.services.emptty.enableGnomeKeyring = true;
   environment.etc."emptty/conf".text = ''
     # TTY, where emptty will start.
-    TTY_NUMBER=7
+    TTY_NUMBER=1
 
     # Enables switching to defined TTY number.
     SWITCH_TTY=true
