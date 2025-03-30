@@ -109,7 +109,7 @@
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = {inherit inputs user git email scriptBin;};
+        specialArgs = {inherit inputs user git email scriptBin hyprMonitor;};
         modules = [
           ./system/secboot.nix # uncomment this to disable secureboot
           ({pkgs, ...}: {

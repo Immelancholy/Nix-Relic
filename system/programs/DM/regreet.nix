@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  hyprMonitor,
+  ...
+}: {
   services.greetd = {
     enable = true;
     settings = {
@@ -9,6 +13,7 @@
     };
   };
   environment.etc."greetd/hyprland.conf".text = ''
+    monitor = ${hyprMonitor}
     exec-once = regreet; hyprctl dispatch exit
     misc {
       disable_hyprland_logo = true
