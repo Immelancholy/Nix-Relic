@@ -45,7 +45,7 @@
         base = mkLiteral "#1e1e2eBB";
         mantle = mkLiteral "#181825BB";
         crust = mkLiteral "#11111bBB";
-        wallpaper = mkLiteral ''url("${../../../backgrounds/Neon-Beast-Girl.png}", width)'';
+        wallpaper = mkLiteral ''url("${../../backgrounds/Neon-Beast-Girl.png}", width)'';
 
         lines = mkLiteral "6";
         columns = mkLiteral "1";
