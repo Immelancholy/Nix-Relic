@@ -67,7 +67,7 @@ in {
     '';
     ".config/emptty" = {
       text = ''
-        #!${pkgs.zsh}/bin/zsh
+        #!/bin/sh
         Selection=false
         LoginShel=${pkgs.zsh}/bin/zsh --login
         Environment="wayland"
