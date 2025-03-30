@@ -69,7 +69,6 @@
   console = {
     earlySetup = true;
     keyMap = "uk";
-    font = "CaskaydiaCove Nerd Font Mono";
   };
 
   nix.settings = {
