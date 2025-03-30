@@ -12,6 +12,7 @@
     ./bluetooth.nix
     ./DM
     ./uwsm.nix
+    ./steam.nix
   ];
 
   xdg.terminal-exec = {
