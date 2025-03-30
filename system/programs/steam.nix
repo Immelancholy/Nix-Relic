@@ -12,6 +12,7 @@
         -pipewire-dmabuf
         -tenfoot
         -steamos3
+        -steamdeck
         -gamepadui
     )
     # mangoConfig=(
