@@ -16,6 +16,8 @@
   };
   programs.seahorse.enable = true;
 
+  services.logind.killUserProcesses = true;
+
   nixpkgs.config.allowUnfree = true;
 
   zramSwap = {
@@ -75,7 +77,7 @@
   users.users.${user} = {
     isNormalUser = true;
     description = "Account for ${user}";
-    extraGroups = ["networkmanager" "wheel" "video" "seat"];
+    extraGroups = ["networkmanager" "wheel" "video"];
   };
 
   users.defaultUserShell = pkgs.zsh;
