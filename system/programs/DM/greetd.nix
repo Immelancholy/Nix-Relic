@@ -6,9 +6,11 @@
   services.greetd = {
     enabe = true;
     vt = 1;
-    default_session = {
-      command = "${config.programs.regreet.package}";
-      user = "greeter";
+    settings = {
+      default_session = {
+        command = "${config.programs.regreet.package}";
+        user = "greeter";
+      };
     };
   };
   programs.regreet = {
