@@ -76,6 +76,9 @@
     implementation = "broker";
   };
   environment.systemPackages = with pkgs; [
+    (writeShellScriptBin "steamos-session-select" ''
+      steam -shutdown
+    '')
     mpc
     ffmpegthumbnailer
     libcamera
