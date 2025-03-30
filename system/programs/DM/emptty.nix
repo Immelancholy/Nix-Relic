@@ -6,6 +6,7 @@
   environment.systemPackages = with pkgs; [
     emptty
   ];
+  security.pam.services.emptty.enableGnomeKeyring = true;
   environment.etc."emptty/conf".text = ''
     # TTY, where emptty will start.
     TTY_NUMBER=7

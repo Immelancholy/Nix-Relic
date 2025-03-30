@@ -65,6 +65,17 @@ in {
       StartWithLastProfile=1
       Version=2
     '';
+    ".config/emptty" = {
+      text = ''
+        #!${pkgs.zsh}/bin/zsh
+        Selection=true
+        LoginShel=${pkgs.zsh}/bin/zsh --login
+
+        exec dbus-launch $@
+
+      '';
+      executable = true;
+    };
   };
 
   xdg = {
