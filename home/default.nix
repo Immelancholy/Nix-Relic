@@ -71,7 +71,7 @@ in {
         Selection=false
         LoginShel=${pkgs.zsh}/bin/zsh --login
 
-        exec uwsm start default
+        exec ${pkgs.uwsm}/bin/uwsm start default
 
       '';
       executable = true;
