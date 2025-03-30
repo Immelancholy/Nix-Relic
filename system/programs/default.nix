@@ -168,6 +168,7 @@
         "-h 1080"
         "-r 144"
         "-f"
+        "-steamos3"
       ];
       env = {
         ENABLE_GAMESCOPE_WSI = "0";
