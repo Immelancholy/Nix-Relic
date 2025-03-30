@@ -4,7 +4,7 @@
   ...
 }: {
   services.greetd = {
-    enabe = true;
+    enable = true;
     vt = 1;
     settings = {
       default_session = {
