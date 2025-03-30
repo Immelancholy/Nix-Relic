@@ -79,6 +79,34 @@
     (writeShellScriptBin "steamos-session-select" ''
       steam -shutdown
     '')
+    (writeShellScriptBin "gs" ''
+      set -xeuo pipefail
+
+      gamescopeArgs=(
+          --rt
+          --steam
+      )
+      steamArgs=(
+          -pipewire-dmabuf
+          -tenfoot
+          -steamos3
+          -steamdeck
+          -gamepadui
+      )
+      mangoConfig=(
+          cpu_temp
+          gpu_temp
+          ram
+          vram
+      )
+      mangoVars=(
+          MANGOHUD=1
+          MANGOHUD_CONFIG="$(IFS=,; echo "$\{mangoConfig[*]}")"
+      )
+
+      export "$\{mangoVars[@]}"
+      exec gamescope "$\{gamescopeArgs[@]}" -- steam "$\{steamArgs[@]}"
+    '')
     mpc
     ffmpegthumbnailer
     libcamera
@@ -164,19 +192,6 @@
     dedicatedServer.openFirewall = true;
     gamescopeSession = {
       enable = true;
-      args = [
-        "-W 1920"
-        "-H 1080"
-        "-w 1920"
-        "-h 1080"
-        "-r 144"
-        "-steamdeck"
-        "-gamepadui"
-        "-steamos3"
-      ];
-      env = {
-        ENABLE_GAMESCOPE_WSI = "0";
-      };
     };
     extraPackages = with pkgs; [
       xorg.libXcursor
