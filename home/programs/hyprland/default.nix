@@ -68,6 +68,5 @@
 
   imports = [
     ./hyprconf
-    ./rofi
   ];
 }

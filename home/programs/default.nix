@@ -22,6 +22,7 @@
     ./swayidle.nix
     ./eww
     ./obs.nix
+    ./rofi
   ];
 
   programs.btop = {
