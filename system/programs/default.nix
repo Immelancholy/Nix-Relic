@@ -11,6 +11,7 @@
     ./weylus.nix
     ./bluetooth.nix
     ./DM
+    ./uwsm.nix
   ];
 
   xdg.terminal-exec = {
