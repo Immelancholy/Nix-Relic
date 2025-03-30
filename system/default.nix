@@ -76,6 +76,11 @@
     isNormalUser = true;
     description = "Account for ${user}";
     extraGroups = ["networkmanager" "wheel" "video"];
+    shell = pkgs.zsh;
+  };
+
+  users.users."greeter" = {
+    shell = pkgs.zsh;
   };
 
   users.defaultUserShell = pkgs.zsh;
