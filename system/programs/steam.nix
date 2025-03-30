@@ -30,5 +30,12 @@
 in {
   environment.systemPackages = [
     gs
+    (pkgs.writeTextDir "share/wayland-sessions/steam.desktop" ''
+      [Desktop Entry]
+      Name=Steam (gamescope)
+      Comment=A digital distribution platform
+      Exec=${gs}/bin/gs
+      Type=Application
+    '')
   ];
 }
