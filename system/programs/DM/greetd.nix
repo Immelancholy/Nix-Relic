@@ -8,17 +8,17 @@
     vt = 1;
     settings = {
       default_session = {
-        command = "${config.programs.regreet.package}/bin/regreet";
+        command = "${pkgs.cage}/bin/cage -s -mlast ${pkgs.regreet}/bin/regreet";
         user = "greeter";
       };
     };
   };
-  programs.regreet = {
-    enable = true;
-    cageArgs = [
-      "-s"
-      "-m"
-      "last"
-    ];
-  };
+  # programs.regreet = {
+  #   enable = true;
+  #   cageArgs = [
+  #     "-s"
+  #     "-m"
+  #     "last"
+  #   ];
+  # };
 }
