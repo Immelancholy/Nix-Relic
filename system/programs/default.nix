@@ -171,7 +171,6 @@
         "--force-grab-cursor"
         "-g"
         "-steamos3"
-        "-gamepadui"
       ];
       env = {
         ENABLE_GAMESCOPE_WSI = "0";
