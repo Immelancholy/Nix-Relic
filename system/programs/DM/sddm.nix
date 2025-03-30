@@ -3,8 +3,8 @@
   services.displayManager.sddm = {
     enable = true;
     wayland = {
-      enable = true;
-      compositor = "kwin";
+      enable = false;
+      compositor = "weston";
     };
     package = pkgs.kdePackages.sddm;
     enableHidpi = true;
@@ -19,8 +19,6 @@
       kdePackages.qtsvg
       kdePackages.qtvirtualkeyboard
       kdePackages.qtmultimedia
-      kdePackages.layer-shell-qt
-
       # kdePackages.qtdeclarative
       # kdePackages.qtshadertools
     ];
