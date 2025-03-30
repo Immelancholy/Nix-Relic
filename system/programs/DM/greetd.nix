@@ -8,7 +8,7 @@
     vt = 1;
     settings = {
       default_session = {
-        command = "${pkgs.cage}/bin/cage -s -mlast ${pkgs.regreet}/bin/regreet";
+        command = "${pkgs.cage}/bin/cage -s -mlast ${pkgs.greetd.regreet}/bin/regreet";
         user = "greeter";
       };
     };
