@@ -93,18 +93,6 @@
           -steamdeck
           -gamepadui
       )
-      mangoConfig=(
-          cpu_temp
-          gpu_temp
-          ram
-          vram
-      )
-      mangoVars=(
-          MANGOHUD=1
-          MANGOHUD_CONFIG="$(IFS=,; echo "$\{mangoConfig[*]}")"
-      )
-
-      export "$\{mangoVars[@]}"
       exec gamescope "$\{gamescopeArgs[@]}" -- steam "$\{steamArgs[@]}"
     '')
     mpc
