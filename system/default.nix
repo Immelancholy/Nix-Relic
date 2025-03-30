@@ -16,8 +16,6 @@
   };
   programs.seahorse.enable = true;
 
-  services.logind.killUserProcesses = true;
-
   nixpkgs.config.allowUnfree = true;
 
   zramSwap = {

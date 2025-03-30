@@ -40,7 +40,7 @@ icons[cancel]="\Uf0156"
 declare -A actions
 actions[lockscreen]="uwsm-app -- swaylock -fF"
 #actions[switchuser]="???"
-actions[logout]="loginctl terminate-user """
+actions[logout]="loginctl terminate-session $XDG_SESSION_ID"
 actions[suspend]="systemctl suspend"
 actions[hibernate]="systemctl hibernate"
 actions[reboot]="systemctl reboot"
