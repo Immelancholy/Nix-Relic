@@ -66,7 +66,11 @@
     layout = "gb";
     variant = "";
   };
-  console.keyMap = "uk";
+  console = {
+    earlySetup = true;
+    keyMap = "uk";
+    font = "CaskaydiaCove Nerd Font Mono";
+  };
 
   nix.settings = {
     experimental-features = ["nix-command" "flakes"];
