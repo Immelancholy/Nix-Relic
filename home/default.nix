@@ -84,14 +84,6 @@ in {
       "autostart/input-mapper-autoload.desktop" = lib.mkIf nixosConfig.services.input-remapper.enable {
         source = "${nixosConfig.services.input-remapper.package}/share/applications/input-remapper-autoload.desktop";
       };
-      "emptty".text = ''
-        #!${pkgs.zsh}/bin/zsh
-        Selection=true
-        LoginShel=${pkgs.zsh}/bin/zsh --login
-
-        exec dbus-launch $@
-
-      '';
     };
   };
 
