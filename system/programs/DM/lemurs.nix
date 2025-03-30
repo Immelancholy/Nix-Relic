@@ -8,6 +8,6 @@
       #!/bin/sh
       zsh --login -c 'uwsm start hyprland-uwsm.desktop'
     '';
-    executable = true;
+    mode = "755";
   };
 }
