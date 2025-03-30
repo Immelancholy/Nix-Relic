@@ -193,6 +193,9 @@
       stdenv.cc.cc.lib
       libkrb5
       keyutils
+      (writeShellScriptBin "steamos-session-select" ''
+        steam -shutdown
+      '')
     ];
     protontricks.enable = true;
   };
