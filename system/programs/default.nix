@@ -93,7 +93,7 @@
           -steamdeck
           -gamepadui
       )
-      exec gamescope "$\{gamescopeArgs[@]}" -- steam "$\{steamArgs[@]}"
+      exec gamescope "''${gamescopeArgs[@]}" -- steam "''${steamArgs[@]}"
     '')
     mpc
     ffmpegthumbnailer
