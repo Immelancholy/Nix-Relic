@@ -70,9 +70,9 @@ in {
         #!/bin/sh
         Selection=true
         LoginShel=${pkgs.zsh}/bin/zsh --login
-        # Environment="wayland"
+        Environment="wayland"
 
-        exec $@
+        exec dbus-launch $@
 
       '';
       executable = true;
@@ -80,7 +80,7 @@ in {
     ".config/emptty-custom-sessions/Hyprland.desktop" = {
       text = ''
         Name=Hyprland (UWSM Managed)
-        Exec=${pkgs.uwsm} start hyprland-uwsm.desktop
+        Exec=${pkgs.uwsm}/bin/uwsm start hyprland-uwsm.desktop
         Environment=wayland
       '';
     };
