@@ -76,26 +76,6 @@
     implementation = "broker";
   };
   environment.systemPackages = with pkgs; [
-    (writeShellScriptBin "steamos-session-select" ''
-      steam -shutdown
-    '')
-    (writeShellScriptBin "gs" ''
-      set -xeuo pipefail
-
-      gamescopeArgs=(
-          --rt
-          -e
-          -r 144
-          -f
-      )
-      steamArgs=(
-          -pipewire-dmabuf
-          -tenfoot
-          -steamos3
-          -gamepadui
-      )
-      exec gamescope "''${gamescopeArgs[@]}" -- steam "''${steamArgs[@]}"
-    '')
     mpc
     ffmpegthumbnailer
     libcamera
@@ -195,6 +175,23 @@
       keyutils
       (writeShellScriptBin "steamos-session-select" ''
         steam -shutdown
+      '')
+      (writeShellScriptBin "gs" ''
+        set -xeuo pipefail
+
+        gamescopeArgs=(
+            --rt
+            -e
+            -r 144
+            -f
+        )
+        steamArgs=(
+            -pipewire-dmabuf
+            -tenfoot
+            -steamos3
+            -gamepadui
+        )
+        exec gamescope "''${gamescopeArgs[@]}" -- steam "''${steamArgs[@]}"
       '')
     ];
     protontricks.enable = true;
