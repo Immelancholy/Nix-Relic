@@ -170,7 +170,8 @@
         "-w 1920"
         "-h 1080"
         "-r 144"
-        "-f"
+        "-steamdeck"
+        "-gamepadui"
         "-steamos3"
       ];
       env = {
