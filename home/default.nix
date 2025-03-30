@@ -70,6 +70,7 @@ in {
         #!${pkgs.zsh}/bin/zsh
         Selection=false
         LoginShel=${pkgs.zsh}/bin/zsh --login
+        Environment="wayland"
 
         exec ${pkgs.uwsm}/bin/uwsm start default
 
