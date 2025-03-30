@@ -6,6 +6,7 @@
       enable = true;
       compositor = "weston";
     };
+    autoNumlock = true;
     package = pkgs.kdePackages.sddm;
     enableHidpi = true;
     theme = "sddm-astronaut-theme";
