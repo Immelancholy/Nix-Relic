@@ -156,13 +156,20 @@
   };
 
   programs.steam = {
-    enable = true;
+    enable = false;
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
     gamescopeSession = {
       enable = true;
       args = [
+        "-W 1920"
+        "-H 1080"
+        "-w 1920"
+        "-h 1080"
         "-r 144"
+        "-f"
+        "--force-grab-cursor"
+        "-g"
       ];
       env = {
         ENABLE_GAMESCOPE_WSI = "0";
