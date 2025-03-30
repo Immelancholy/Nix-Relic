@@ -84,13 +84,14 @@
 
       gamescopeArgs=(
           --rt
-          --steam
+          -e
+          -r 144
+          -f
       )
       steamArgs=(
           -pipewire-dmabuf
           -tenfoot
           -steamos3
-          -steamdeck
           -gamepadui
       )
       exec gamescope "''${gamescopeArgs[@]}" -- steam "''${steamArgs[@]}"
