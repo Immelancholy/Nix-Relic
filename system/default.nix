@@ -79,10 +79,6 @@
     shell = pkgs.zsh;
   };
 
-  users.users."greeter" = {
-    shell = pkgs.zsh;
-  };
-
   users.defaultUserShell = pkgs.zsh;
 
   catppuccin = {
