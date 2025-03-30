@@ -8,7 +8,7 @@
     vt = 1;
     settings = {
       default_session = {
-        command = "${config.programs.regreet.package}";
+        command = "${config.programs.regreet.package}/bin/regreet";
         user = "greeter";
       };
     };
