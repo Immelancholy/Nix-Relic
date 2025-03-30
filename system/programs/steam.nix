@@ -27,9 +27,9 @@
     export "''${mangoVars[@]}"
     exec gamescope "''${gamescopeArgs[@]}" -- steam "''${steamArgs[@]}"
   '';
-    steamos-session-select =  pkgs.writeShellScriptBin "steamos-session-select" ''
-      steam -shutdown
-    '')
+  steamos-session-select = pkgs.writeShellScriptBin "steamos-session-select" ''
+    steam -shutdown
+  '';
 in {
   environment.systemPackages = [
     gs
