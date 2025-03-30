@@ -168,9 +168,6 @@
         "-h 1080"
         "-r 144"
         "-f"
-        "--force-grab-cursor"
-        "-g"
-        "-steamos3"
       ];
       env = {
         ENABLE_GAMESCOPE_WSI = "0";
