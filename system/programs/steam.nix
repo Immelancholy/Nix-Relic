@@ -27,6 +27,9 @@
     export "''${mangoVars[@]}"
     exec gamescope "''${gamescopeArgs[@]}" -- steam "''${steamArgs[@]}"
   '';
+    steamos-session-select =  pkgs.writeShellScriptBin "steamos-session-select" ''
+      steam -shutdown
+    '')
 in {
   environment.systemPackages = [
     gs
@@ -38,4 +41,26 @@ in {
       Type=Application
     '')
   ];
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true;
+    dedicatedServer.openFirewall = true;
+    gamescopeSession = {
+      enable = true;
+    };
+    extraPackages = [
+      pkgs.xorg.libXcursor
+      pkgs.xorg.libXi
+      pkgs.xorg.libXinerama
+      pkgs.xorg.libXScrnSaver
+      pkgs.libpng
+      pkgs.libpulseaudio
+      pkgs.libvorbis
+      pkgs.stdenv.cc.cc.lib
+      pkgs.libkrb5
+      pkgs.keyutils
+      steamos-session-select
+    ];
+    protontricks.enable = true;
+  };
 }

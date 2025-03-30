@@ -155,29 +155,4 @@
     enable = true;
     capSysNice = true;
   };
-
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true;
-    dedicatedServer.openFirewall = true;
-    gamescopeSession = {
-      enable = true;
-    };
-    extraPackages = with pkgs; [
-      xorg.libXcursor
-      xorg.libXi
-      xorg.libXinerama
-      xorg.libXScrnSaver
-      libpng
-      libpulseaudio
-      libvorbis
-      stdenv.cc.cc.lib
-      libkrb5
-      keyutils
-      (writeShellScriptBin "steamos-session-select" ''
-        steam -shutdown
-      '')
-    ];
-    protontricks.enable = true;
-  };
 }
