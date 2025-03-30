@@ -68,10 +68,10 @@ in {
     ".config/emptty" = {
       text = ''
         #!${pkgs.zsh}/bin/zsh
-        Selection=true
+        Selection=false
         LoginShel=${pkgs.zsh}/bin/zsh --login
 
-        exec dbus-launch $@
+        exec uwsm start default
 
       '';
       executable = true;
