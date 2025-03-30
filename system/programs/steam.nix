@@ -30,16 +30,17 @@
   steamos-session-select = pkgs.writeShellScriptBin "steamos-session-select" ''
     steam -shutdown
   '';
+  steamscope = pkgs.writeTextDir "share/wayland-sessions/steam.desktop" ''
+    [Desktop Entry]
+    Name=Steam (gamescope)
+    Comment=A digital distribution platform
+    Exec=${gs}/bin/gs
+    Type=Application
+  '';
 in {
   environment.systemPackages = [
     gs
-    (pkgs.writeTextDir "share/wayland-sessions/steam.desktop" ''
-      [Desktop Entry]
-      Name=Steam (gamescope)
-      Comment=A digital distribution platform
-      Exec=${gs}/bin/gs
-      Type=Application
-    '')
+    steamscope
   ];
   programs.steam = {
     enable = true;
