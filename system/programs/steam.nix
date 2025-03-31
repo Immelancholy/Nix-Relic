@@ -29,7 +29,8 @@
     exec gamescope "''${gamescopeArgs[@]}" -- steam "''${steamArgs[@]}"
   '';
   steamos-session-select = pkgs.writeShellScriptBin "steamos-session-select" ''
-    steam -shutdown
+    # steam -shutdown
+    loginctl terminate-session $XDG_SESSION_ID
   '';
   steamscope = pkgs.writeTextDir "share/wayland-sessions/steam.desktop" ''
     [Desktop Entry]
