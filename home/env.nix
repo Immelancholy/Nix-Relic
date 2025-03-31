@@ -19,5 +19,6 @@
     GDK_SCALE = "1";
     GRIMBLAST_EDITOR = "swappy";
     MPD_HOST = "/run/user/1000/mpd/socket";
+    MANGOHUD = "1";
   };
 }
