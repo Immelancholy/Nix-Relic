@@ -9,7 +9,6 @@
     nvim = {
       name = "Neovim";
       genericName = "Text Editor";
-      # exec = "${lib.getExe pkgs.kitty} ${../scripts/nv.sh}";
       exec = ''${../scripts/nv.sh} %F'';
       comment = "Edit test files";
       type = "Application";
@@ -287,17 +286,13 @@
         };
       };
       obsidian = {
-        enable = false;
+        enable = true;
         settings = {
           ui.enable = false;
           workspaces = [
             {
-              name = "relationship";
-              path = "~/obsidian/relationship";
-            }
-            {
-              name = "Witchey Notes";
-              path = "~/obsidian/Witchey_Stuffs";
+              name = "Obsidian Vault";
+              path = "~/Documents/Obsidian Vault/";
             }
           ];
         };
@@ -626,7 +621,7 @@
               }
               {
                 action = {
-                  __raw = "function(path) vim.cmd('cd ~/obsidian/ | Telescope find_files') end";
+                  __raw = "function(path) vim.cmd('cd ~/Documents/Obsidian Vault/ | Telescope find_files') end";
                 };
                 desc = "󱓧 Notes";
                 group = "Statement";
