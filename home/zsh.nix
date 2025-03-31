@@ -57,6 +57,8 @@
       if ${pkgs.uwsm}/bin/uwsm check may-start && ${pkgs.uwsm}/bin/uwsm select; then
         exec ${pkgs.uwsm}/bin/uwsm start default
       fi
+      ds="/share/wayland-sessions/steam.desktop"
+      dbus-launch $ds
     '';
     initExtra = ''
       source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
