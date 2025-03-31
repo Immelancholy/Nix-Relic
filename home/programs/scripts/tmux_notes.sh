@@ -8,9 +8,9 @@ while tmux has-session -t $sesh 2>/dev/null; do
 	((i++))
 	sesh="Notes$i"
 done
-tmux new -d -s $sesh -c "$HOME/obsidian/"
+tmux new -d -s $sesh -c "$HOME/Documents/Obsidian Vault/"
 
-tmux new-window -c "$HOME/obsidian/" 
+tmux new-window -c "$HOME/Documents/Obsidian Vault/" 
 
 tmux select-window -t ^ 
 
