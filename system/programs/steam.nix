@@ -31,11 +31,11 @@
     exec gamescope "''${gamescopeArgs[@]}" -- steam "''${steamArgs[@]}"
   '';
   steamos-session-select = pkgs.writeShellScriptBin "steamos-session-select" ''
+    pw-metadata -n default 0 default.audio.sink '{ "name": "desktop_output" }' 'Spa:String:JSON'
+    pw-metadata -n default 0 default.audio.source '{ "name": "desktop_input" }' 'Spa:String:JSON'
     steam -shutdown
     if [ "$tty" = "/dev/tty1" ]; then
       chvt 2
-      pw-metadata -n default 0 default.audio.sink '{ "name": "desktop_output" }' 'Spa:String:JSON'
-      pw-metadata -n default 0 default.audio.source '{ "name": "desktop_input" }' 'Spa:String:JSON'
     else
       chvt 1
     fi
