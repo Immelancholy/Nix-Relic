@@ -10,9 +10,8 @@
     )
     steamArgs=(
         # -tenfoot
-        # -steamos3
         # -steamdeck
-        -steamos
+        -steamos3
         -pipewire-dmabuf
         -gamepadui
     )
