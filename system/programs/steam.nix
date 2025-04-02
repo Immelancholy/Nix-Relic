@@ -29,6 +29,8 @@
     export ENABLE_GAMESCCOPE_WSI=0
     export "''${mangoVars[@]}"
     dbus-launch gamescope "''${gamescopeArgs[@]}" -- steam "''${steamArgs[@]}"
+    pw-metadata -n default 0 default.audio.sink '{ "name": "desktop_output" }' 'Spa:String:JSON'
+    pw-metadata -n default 0 default.audio.source '{ "name": "desktop_input" }' 'Spa:String:JSON'
   '';
   steamos-session-select = pkgs.writeShellScriptBin "steamos-session-select" ''
     steam -shutdown
@@ -53,8 +55,6 @@
     '')
     .overrideAttrs (_: {passthru.providedSessions = ["steam"];});
   steamos-update = pkgs.writeShellScriptBin "steamos-update" ''
-    pw-metadata -n default 0 default.audio.sink '{ "name": "desktop_output" }' 'Spa:String:JSON'
-    pw-metadata -n default 0 default.audio.source '{ "name": "desktop_input" }' 'Spa:String:JSON'
     exit 7;
   '';
   jupiter-biosupdate = pkgs.writeShellScriptBin "jupiter-biosupdate" ''
