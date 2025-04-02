@@ -25,6 +25,7 @@
         MANGOHUD=1
         MANGOHUD_CONFIG="''$(IFS=,; echo "''${mangoConfig[*]}")"
     )
+    export ENABLE_GAMESCCOPE_WSI=0
     export "''${mangoVars[@]}"
     exec gamescope "''${gamescopeArgs[@]}" -- steam "''${steamArgs[@]}"
   '';
