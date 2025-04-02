@@ -58,10 +58,6 @@ in {
     enable = true;
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
-    # extest.enable = true;
-    gamescopeSession = {
-      enable = true;
-    };
     extraPackages = [
       pkgs.xorg.libXcursor
       pkgs.xorg.libXi
