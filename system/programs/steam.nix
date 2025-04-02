@@ -58,7 +58,7 @@ in {
     gs
     steamscope
   ];
-  services.displayManager.sessionPakcages = lib.mkForce [steamscope];
+  services.displayManager.sessionPackages = lib.mkForce [steamscope];
   programs.steam = {
     enable = true;
     package = pkgs.steam.override {
