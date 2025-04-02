@@ -31,7 +31,9 @@
   '';
   steamos-session-select = pkgs.writeShellScriptBin "steamos-session-select" ''
     steam -shutdown
-    chvt 2
+    if [ "$(tty)" = "/dev/tty1"]; then
+      chvt 2
+    fi
   '';
   steamos-select-branch = pkgs.writeShellScriptBin "steamos-select-branch" ''
     echo "Not applicable for this OS"
