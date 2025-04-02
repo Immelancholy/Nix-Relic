@@ -5,7 +5,7 @@
     gamescopeArgs=(
         --rt
         -e
-        -r 250
+        -r 144
         -f
     )
     steamArgs=(
