@@ -42,8 +42,6 @@
   '';
   steamos-select-branch = pkgs.writeShellScriptBin "steamos-select-branch" ''
     echo "Not applicable for this OS"
-    pw-metadata -n default 0 default.audio.sink '{ "name": "desktop_output" }' 'Spa:String:JSON'
-    pw-metadata -n default 0 default.audio.source '{ "name": "desktop_input" }' 'Spa:String:JSON'
   '';
   steamscope =
     (pkgs.writeTextDir "share/wayland-sessions/steam.desktop" ''

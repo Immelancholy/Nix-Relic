@@ -18,6 +18,18 @@
       enable = true;
     };
   };
+  services.pipewire.extraConfig.pipewire."default" = {
+    "context.properties" = [
+      {
+        default.configured.audio.sink = {
+          "name" = "desktop_output";
+        };
+        default.configured.audio.source = {
+          "name" = "desktop_input";
+        };
+      }
+    ];
+  };
   services.pipewire.extraConfig.pipewire."91-null-sinks" = {
     "context.objects" = [
       {
