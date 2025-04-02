@@ -31,7 +31,7 @@
   '';
   steamos-session-select = pkgs.writeShellScriptBin "steamos-session-select" ''
     steam -shutdown
-    if [ "$(tty)" = "/dev/tty1"]; then
+    if [ "$tty" = "/dev/tty1"]; then
       chvt 2
     fi
   '';
