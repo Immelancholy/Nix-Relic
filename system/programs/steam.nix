@@ -34,6 +34,8 @@
     steam -shutdown
     if [ "$tty" = "/dev/tty1" ]; then
       chvt 2
+    elif [ $(pgrep -x sddm) = 1822 ]; then
+      :
     else
       chvt 1
     fi
