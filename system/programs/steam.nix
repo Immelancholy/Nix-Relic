@@ -14,6 +14,7 @@
         -steamos3
         -pipewire-dmabuf
         -gamepadui
+        -pipewire
     )
     mangoConfig=(
         cpu_temp
@@ -34,8 +35,6 @@
     steam -shutdown
     if [ "$tty" = "/dev/tty1" ]; then
       chvt 2
-    elif [ pgrep -x "sddm-helper" > /dev/null ]; then
-      break
     else
       chvt 1
     fi
