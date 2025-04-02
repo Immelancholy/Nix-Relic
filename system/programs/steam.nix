@@ -59,6 +59,7 @@ in {
   environment.systemPackages = [
     gs
     steamscope
+    steamos-session-select
   ];
   services.displayManager.sessionPackages = [steamscope];
   programs.steam = {
