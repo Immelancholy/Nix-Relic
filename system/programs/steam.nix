@@ -64,7 +64,9 @@ in {
   programs.steam = {
     enable = true;
     package = pkgs.steam.override {
-      OBS_VKCAPTURE = true;
+      extraEnv = {
+        OBS_VKCAPTURE = true;
+      };
     };
     gamescopeSession.enable = true;
     remotePlay.openFirewall = true;
