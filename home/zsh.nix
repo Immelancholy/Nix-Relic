@@ -54,9 +54,9 @@
     ];
     profileExtra = ''
       eval $(gnome-keyring-daemon --start --daemonize)
-      if ${pkgs.uwsm}/bin/uwsm check may-start; then
-        exec ${pkgs.uwsm}/bin/uwsm start hyprland-uwsm.desktop
-      fi
+      # if ${pkgs.uwsm}/bin/uwsm check may-start; then
+      #   exec ${pkgs.uwsm}/bin/uwsm start hyprland-uwsm.desktop
+      # fi
     '';
     initExtra = ''
       source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
@@ -65,8 +65,6 @@
       [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
       export PATH="$PATH:${scriptBin}"
-      # export class=$(hyprctl activewindow | grep class)
-      # class=''${class[9,''${#class}]}
 
       if [ "$class" = "fastfetch" ];
       then
