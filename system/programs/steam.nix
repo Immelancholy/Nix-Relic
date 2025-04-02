@@ -10,9 +10,9 @@
     )
     steamArgs=(
         -pipewire-dmabuf
-        -tenfoot
+        # -tenfoot
         -steamos3
-        -steamdeck
+        # -steamdeck
         -gamepadui
     )
     mangoConfig=(
