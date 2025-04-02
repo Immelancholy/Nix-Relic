@@ -25,6 +25,7 @@
         MANGOHUD=1
         MANGOHUD_CONFIG="''$(IFS=,; echo "''${mangoConfig[*]}")"
     )
+    export tty=$(tty)
     export ENABLE_GAMESCCOPE_WSI=0
     export "''${mangoVars[@]}"
     exec gamescope "''${gamescopeArgs[@]}" -- steam "''${steamArgs[@]}"
@@ -33,6 +34,8 @@
     steam -shutdown
     if [ "$tty" = "/dev/tty1" ]; then
       chvt 2
+    else
+      chvt 1
     fi
   '';
   steamos-select-branch = pkgs.writeShellScriptBin "steamos-select-branch" ''
