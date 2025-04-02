@@ -1,8 +1,4 @@
-{
-  pkgs,
-  lib,
-  ...
-}: let
+{pkgs, ...}: let
   gs = pkgs.writeShellScriptBin "gs" ''
     set -xeuo pipefail
 
