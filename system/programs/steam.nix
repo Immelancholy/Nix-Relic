@@ -66,6 +66,7 @@ in {
     package = pkgs.steam.override {
       extraEnv = {
         OBS_VKCAPTURE = true;
+        MANGOHUD = true;
       };
     };
     gamescopeSession.enable = true;
