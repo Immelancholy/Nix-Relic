@@ -73,7 +73,6 @@
   programs.zsh.enable = true;
   services.dbus = {
     enable = true;
-    apparmor = "enabled";
     implementation = "broker";
   };
   environment.systemPackages = with pkgs; [
