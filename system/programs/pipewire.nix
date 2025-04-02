@@ -21,10 +21,10 @@
   services.pipewire.extraConfig.pipewire."default" = {
     "context.properties" = [
       {
-        default.configured.audio.sink = {
+        "default.configured.audio.sink" = {
           "name" = "desktop_output";
         };
-        default.configured.audio.source = {
+        "default.configured.audio.source" = {
           "name" = "desktop_input";
         };
       }
