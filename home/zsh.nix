@@ -54,6 +54,8 @@
     ];
     profileExtra = ''
       eval $(gnome-keyring-daemon --start --daemonize)
+      pw-metadata -n default 0 default.audio.sink '{ "name": "desktop_output" }' 'Spa:String:JSON'
+      pw-metadata -n default 0 default.audio.source '{ "name": "desktop_input" }' 'Spa:String:JSON'
       # if ${pkgs.uwsm}/bin/uwsm check may-start; then
       #   exec ${pkgs.uwsm}/bin/uwsm start hyprland-uwsm.desktop
       # fi
