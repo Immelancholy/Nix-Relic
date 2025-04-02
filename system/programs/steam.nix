@@ -14,7 +14,6 @@
         -steamos3
         -pipewire-dmabuf
         -gamepadui
-        -pipewire
     )
     mangoConfig=(
         cpu_temp
