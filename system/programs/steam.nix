@@ -29,7 +29,7 @@
     export ENABLE_GAMESCCOPE_WSI=0
     export "''${mangoVars[@]}"
     dbus-launch gamescope "''${gamescopeArgs[@]}" -- steam "''${steamArgs[@]}"
-    sleep 5
+    sleep 15
     pw-metadata -n default 0 default.audio.sink '{ "name": "desktop_output" }' 'Spa:String:JSON'
     pw-metadata -n default 0 default.audio.source '{ "name": "desktop_input" }' 'Spa:String:JSON'
   '';
