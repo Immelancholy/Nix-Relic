@@ -1,4 +1,8 @@
-{pkgs, ...}: let
+{
+  pkgs,
+  lib,
+  ...
+}: let
   gs = pkgs.writeShellScriptBin "gs" ''
     set -xeuo pipefail
 
@@ -54,8 +58,13 @@ in {
     gs
     steamscope
   ];
+  services.displayManager.sessionPakcages = lib.mkForce [steamscope];
   programs.steam = {
     enable = true;
+    package = pkgs.steam.override {
+      OBS_VKCAPTURE = true;
+    };
+    gamescopeSession.enable = true;
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
     extraPackages = [
