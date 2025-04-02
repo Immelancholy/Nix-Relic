@@ -5,13 +5,13 @@
     gamescopeArgs=(
         --rt
         -e
-        -r 144
+        -r 250
         -f
     )
     steamArgs=(
         # -tenfoot
         -steamdeck
-        # -steamos3
+        -steamos3
         -pipewire-dmabuf
         -gamepadui
     )
@@ -29,15 +29,25 @@
     exec gamescope "''${gamescopeArgs[@]}" -- steam "''${steamArgs[@]}"
   '';
   steamos-session-select = pkgs.writeShellScriptBin "steamos-session-select" ''
-    # steam -shutdown
-    loginctl terminate-session $XDG_SESSION_ID
+    steam -shutdown
+  '';
+  steamos-select-branch = pkgs.writeShellScriptBin "steamos-select-branch" ''
+    echo "Not applicable for this OS"
   '';
   steamscope = pkgs.writeTextDir "share/wayland-sessions/steam.desktop" ''
     [Desktop Entry]
+    Encoding=UTF-8
     Name=Steam (gamescope)
-    Comment=A digital distribution platform
+    Comment=Launch Steam within Gamescope
     Exec=${gs}/bin/gs
     Type=Application
+    DesktopNames=gamescope
+  '';
+  steamos-update = pkgs.writeShellScriptBin "steamos-update" ''
+    exit 7;
+  '';
+  jupiter-biosupdate = pkgs.writeShellScriptBin "jupiter-biosupdate" ''
+    exit 0;
   '';
 in {
   environment.systemPackages = [
@@ -64,6 +74,9 @@ in {
       pkgs.libkrb5
       pkgs.keyutils
       steamos-session-select
+      steamos-select-branch
+      steamos-update
+      jupiter-biosupdate
     ];
     protontricks.enable = true;
   };
