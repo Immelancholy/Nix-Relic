@@ -145,7 +145,7 @@
               imports = [
                 stylix.homeManagerModules.stylix
                 ./home
-                catppuccin.homeManagerModules.catppuccin
+                catppuccin.homeModules.catppuccin
                 inputs.nixvim.homeManagerModules.nixvim
                 inputs.spicetify-nix.homeManagerModules.default
                 nix-flatpak.homeManagerModules.nix-flatpak
