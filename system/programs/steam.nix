@@ -38,15 +38,17 @@
   steamos-select-branch = pkgs.writeShellScriptBin "steamos-select-branch" ''
     echo "Not applicable for this OS"
   '';
-  steamscope = pkgs.writeTextDir "share/wayland-sessions/steam.desktop" ''
-    [Desktop Entry]
-    Encoding=UTF-8
-    Name=Steam (gamescope)
-    Comment=Launch Steam within Gamescope
-    Exec=${gs}/bin/gs
-    Type=Application
-    DesktopNames=gamescope
-  '';
+  steamscope =
+    (pkgs.writeTextDir "share/wayland-sessions/steam.desktop" ''
+      [Desktop Entry]
+      Encoding=UTF-8
+      Name=Steam (gamescope)
+      Comment=Launch Steam within Gamescope
+      Exec=${gs}/bin/gs
+      Type=Application
+      DesktopNames=gamescope
+    '')
+    .overrideAttrs (_: {passthru.providedSessions = ["steam"];});
   steamos-update = pkgs.writeShellScriptBin "steamos-update" ''
     exit 7;
   '';
