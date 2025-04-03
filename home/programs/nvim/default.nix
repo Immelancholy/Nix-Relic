@@ -4,23 +4,23 @@
   lib,
   ...
 }: {
-  # xdg.desktopEntries = {
-  #   nvim = {
-  #     name = "Neovim";
-  #     genericName = "Text Editor";
-  #     exec = ''nv %F'';
-  #     comment = "Edit test files";
-  #     type = "Application";
-  #     terminal = true;
-  #     categories = ["Utility" "TextEditor"];
-  #     icon = "nvim";
-  #     startupNotify = false;
-  #     mimeType = ["text/english" "text/plain" "text/x-makefile" "text/x-c++hdr" "text/x-c++src" "text/x-chdr" "text/x-csrc" "text/x-java" "text/x-moc" "text/x-pascal" "text/x-tcl" "text/x-tex" "application/x-shellscript" "text/x-c" "text/x-c++"];
-  #     settings = {
-  #       Keywords = "Text;editor";
-  #     };
-  #   };
-  # };
+  xdg.desktopEntries = {
+    nvim = {
+      name = "Neovim";
+      genericName = "Text Editor";
+      exec = ''nvim'';
+      comment = "Edit test files";
+      type = "Application";
+      terminal = true;
+      categories = ["Utility" "TextEditor"];
+      icon = "nvim";
+      startupNotify = false;
+      mimeType = ["text/english" "text/plain" "text/x-makefile" "text/x-c++hdr" "text/x-c++src" "text/x-chdr" "text/x-csrc" "text/x-java" "text/x-moc" "text/x-pascal" "text/x-tcl" "text/x-tex" "application/x-shellscript" "text/x-c" "text/x-c++"];
+      settings = {
+        Keywords = "Text;editor";
+      };
+    };
+  };
 
   programs.nixvim = {
     enable = true;
@@ -887,27 +887,27 @@
       };
       virtual_text = true;
     };
-    # autoCmd = [
-    #   {
-    #     event = [
-    #       "BufWritePre"
-    #     ];
-    #     pattern = [
-    #       "*"
-    #     ];
-    #     callback = {
-    #       __raw = ''
-    #         function(args) require("conform").format({ bufnr = args.buf }) end
-    #       '';
-    #     };
-    #   }
-    #   {
-    #     command = "cd %:p:h";
-    #     event = [
-    #       "BufEnter"
-    #     ];
-    #   }
-    # ];
+    autoCmd = [
+      {
+        event = [
+          "BufWritePre"
+        ];
+        pattern = [
+          "*"
+        ];
+        callback = {
+          __raw = ''
+            function(args) require("conform").format({ bufnr = args.buf }) end
+          '';
+        };
+      }
+      {
+        command = "cd %:p:h";
+        event = [
+          "BufEnter"
+        ];
+      }
+    ];
   };
   xdg.configFile."nvim/dictionary" = {
     source = ./dictionary;
