@@ -65,25 +65,21 @@
               keyword layerrule noanim,rofi
               "
               hyprctl 'keyword windowrulev2 opaque,class:(.*)' # ensure all windows are opaque
-              hyprctl -q --batch "\
-              dispatch signalwindow class:neo,9
-              dispatch signalwindow class:cava,9
-              dispatch signalwindow class:btop,9
-              dispatch signalwindow class:rmpc,9
-              dispatch signalwindow class:fastfetch,9
-              "
+              hyprctl dispatch signalwindow class:neo,9
+              hyprctl dispatch signalwindow class:cava,9
+              hyprctl dispatch signalwindow class:btop,9
+              hyprctl dispatch signalwindow class:rmpc,9
+              hyprctl dispatch signalwindow class:fastfetch,9
               pkill mpvpaper
               exit
       else
               hyprctl reload config-only -q
-              hyprctl -q --batch "\
-              dispatch exec 'uwsm app -- mpvpaper -o "--loop" '*' $HOME/Pictures/wallpapers/Neon-Beast-Girl.mp4'
-              dispatch exec '[workspace 1 silent; float; size 858 559; move 640 40] kitty --class "rmpc" uwsm app -- rmpc.sh'
-              dispatch exec '[workspace 1 silent; float; size 858 462; move 640 609] kitty --class "cava" uwsm app -- cava.sh'
-              dispatch exec '[workspace 1 silent; float; size 620 666; move 10 404] kitty --class "btop" uwsm app -- btop.sh'
-              dispatch exec '[workspace 1 silent; float; size 402 1030; move 1508 40] kitty --class "neo" uwsm app -- neo.sh'
-              dispatch exec '[workspace 1 silent; float; size 620 354; move 10 40] kitty --class "fastfetch" kitty @ launch --type overlay --env class="fastfetch"'
-              "
+              hyprctl dispatch exec 'uwsm app -- mpvpaper -o "--loop" '*' $HOME/Pictures/wallpapers/Neon-Beast-Girl.mp4'
+              hyprctl dispatch exec '[workspace 1 silent; float; size 858 559; move 640 40] kitty --class "rmpc" uwsm app -- rmpc.sh'
+              hyprctl dispatch exec '[workspace 1 silent; float; size 858 462; move 640 609] kitty --class "cava" uwsm app -- cava.sh'
+              hyprctl dispatch exec '[workspace 1 silent; float; size 620 666; move 10 404] kitty --class "btop" uwsm app -- btop.sh'
+              hyprctl dispatch exec '[workspace 1 silent; float; size 402 1030; move 1508 40] kitty --class "neo" uwsm app -- neo.sh'
+              hyprctl dispatch exec '[workspace 1 silent; float; size 620 354; move 10 40] kitty --class "fastfetch" kitty @ launch --type overlay --env class="fastfetch"'
       fi
     '')
     grim
