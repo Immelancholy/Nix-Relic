@@ -34,7 +34,7 @@
       else
               hyprctl reload config-only -q
               uwsm app -- mpvpaper -f -p -o "--loop" '*' $HOME/Pictures/wallpapers/Neon-Beast-Girl.mp4
-              hyprctl dispatch exec mpdchck.sh
+              hyprctl dispatch exec uwsm app -- mpdchck.sh
               hyprctl dispatch exec '[workspace 1 silent; float; size 858 559; move 640 40] uwsm app -- kitty --class "rmpc" uwsm app -- rmpc.sh'
               hyprctl dispatch exec '[workspace 1 silent; float; size 858 462; move 640 609] uwsm app -- kitty --class "cava" uwsm app -- cava.sh'
               hyprctl dispatch exec '[workspace 1 silent; float; size 620 666; move 10 404] uwsm app -- kitty --class "btop" uwsm app -- btop.sh'
