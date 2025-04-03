@@ -54,9 +54,9 @@
     ];
     profileExtra = ''
       eval $(gnome-keyring-daemon --start --daemonize)
-      # if ${pkgs.uwsm}/bin/uwsm check may-start; then
-      #   exec ${pkgs.uwsm}/bin/uwsm start hyprland-uwsm.desktop
-      # fi
+      if ${pkgs.uwsm}/bin/uwsm check may-start && uwsm select; then
+        exec ${pkgs.uwsm}/bin/uwsm start default
+      fi
     '';
     initExtra = ''
       source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
