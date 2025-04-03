@@ -24,14 +24,6 @@
         "$mods, Q, hy3:killactive"
         "Alt, Return, fullscreen, 1"
         "Alt+Shift, Return, fullscreen"
-        # "$mod+Ctrl+Alt, Right, hy3:movetoworkspace, r+1, follow"
-        # "$mod+Ctrl+Alt, Left, hy3:movetoworkspace, r-1, follow"
-        # "$mod+Ctrl+Alt, L, hy3:movetoworkspace, r+1, follow"
-        # "$mod+Ctrl+Alt, H, hy3:movetoworkspace, r-1, follow"
-        "$mod+Ctrl+Alt, Right, movetoworkspace, r+1"
-        "$mod+Ctrl+Alt, Left, movetoworkspace, r-1"
-        "$mod+Ctrl+Alt, L, movetoworkspace, r+1"
-        "$mod+Ctrl+Alt, H, movetoworkspace, r-1"
         ''$mods, U, exec, [workspace 1 silent; float; size 858 559; move 640 40] $term --class "rmpc" uwsm app -- rmpc.sh''
         ''$mods, U, exec, [workspace 1 silent; float; size 858 462; move 640 609] $term --class "cava" uwsm app -- cava.sh''
         ''$mods, U, exec, [workspace 1 silent; float; size 620 666; move 10 404] $term --class "btop" uwsm app -- btop.sh''
@@ -86,67 +78,66 @@
     bindl = , F9, pass, class:^(com.obsproject.Studio)$
     bindl = Alt, F10, pass, class:^(com.obsproject.Studio)$
 
-    bind = $mod, H, hy3:movefocus, l, once
-    bind = $mod, J, hy3:movefocus, d, once
-    bind = $mod, K, hy3:movefocus, u, once
-    bind = $mod, L, hy3:movefocus, r, once
-    bind = $mod, Left, hy3:movefocus, l, once
-    bind = $mod, Down, hy3:movefocus, d, once
-    bind = $mod, Up, hy3:movefocus, u, once
-    bind = $mod, Right, hy3:movefocus, r, once
+    bind = $mod, J, submap, move
+    submap = move
+    bind = , H, hy3:movefocus, l, once
+    bind = , J, hy3:movefocus, d, once
+    bind = , K, hy3:movefocus, u, once
+    bind = , L, hy3:movefocus, r, once
+    bind = , Left, hy3:movefocus, l, once
+    bind = , Down, hy3:movefocus, d, once
+    bind = , Up, hy3:movefocus, u, once
+    bind = , Right, hy3:movefocus, r, once
 
-    bind = $mod+Alt, H, hy3:movefocus, l, visible, nowarp
-    bind = $mod+Alt, J, hy3:movefocus, d, visible, nowarp
-    bind = $mod+Alt, K, hy3:movefocus, u, visible, nowarp
-    bind = $mod+Alt, L, hy3:movefocus, r, visible, nowarp
-    bind = $mod+Alt, Left, hy3:movefocus, l, visible, nowarp
-    bind = $mod+Alt, Down, hy3:movefocus, d, visible, nowarp
-    bind = $mod+Alt, Up, hy3:movefocus, u, visible, nowarp
-    bind = $mod+Alt, Right, hy3:movefocus, r, visible, nowarp
+    bind = Ctrl+Alt, Right, movetoworkspace, r+1
+    bind = Ctrl+Alt, Left, movetoworkspace, r-1
+    bind = Ctrl+Alt, L, movetoworkspace, r+1
+    bind = Ctrl+Alt, H, movetoworkspace, r-1
 
-    bind = $mod+Ctrl, L, workspace, r+1
-    bind = $mod+Ctrl, H, workspace, r-1
-    bind = $mod+Ctrl, J, workspace, empty
-    bind = $mod+Ctrl, Right, workspace, r+1
-    bind = $mod+Ctrl, Left, workspace, r-1
-    bind = $mod+Ctrl, Down, workspace, empty
+    bind = Alt, H, hy3:movefocus, l, visible, nowarp
+    bind = Alt, J, hy3:movefocus, d, visible, nowarp
+    bind = Alt, K, hy3:movefocus, u, visible, nowarp
+    bind = Alt, L, hy3:movefocus, r, visible, nowarp
+    bind = Alt, Left, hy3:movefocus, l, visible, nowarp
+    bind = Alt, Down, hy3:movefocus, d, visible, nowarp
+    bind = Alt, Up, hy3:movefocus, u, visible, nowarp
+    bind = Alt, Right, hy3:movefocus, r, visible, nowarp
+
+    bind = Ctrl, L, workspace, r+1
+    bind = Ctrl, H, workspace, r-1
+    bind = Ctrl, J, workspace, empty
+    bind = Ctrl, Right, workspace, r+1
+    bind = Ctrl, Left, workspace, r-1
+    bind = Ctrl, Down, workspace, empty
 
 
-    binde = $mod+Ctrl+Shift, Left, resizeactive, 1 0
-    binde = $mod+Ctrl+Shift, Right, resizeactive, -1 0
-    binde = $mod+Ctrl+Shift, Up, resizeactive, 0 -1
-    binde = $mod+Ctrl+Shift, Down, resizeactive, 0 1
-    binde = $mod+Ctrl+Shift, H, resizeactive, 30 0
-    binde = $mod+Ctrl+Shift, L, resizeactive, -30 0
-    binde = $mod+Ctrl+Shift, K, resizeactive, 0 -30
-    binde = $mod+Ctrl+Shift, J, resizeactive, 0 30
+    binde = Ctrl+Shift, Left, resizeactive, 1 0
+    binde = Ctrl+Shift, Right, resizeactive, -1 0
+    binde = Ctrl+Shift, Up, resizeactive, 0 -1
+    binde = Ctrl+Shift, Down, resizeactive, 0 1
+    binde = Ctrl+Shift, H, resizeactive, 30 0
+    binde = Ctrl+Shift, L, resizeactive, -30 0
+    binde = Ctrl+Shift, K, resizeactive, 0 -30
+    binde = Ctrl+Shift, J, resizeactive, 0 30
 
-    # $moveactivewindow=grep -q "true" <<< $(hyprctl activewindow -j | jq -r .floating) && hyprctl dispatch moveactive
-    # binded = $mod+Shift, Left, Move activewindow left, exec, $moveactivewindow -30 0 || hyprctl dispatch hy3:movewindow l
-    # binded = $mod+Shift, Right, Move activewindow right, exec, $moveactivewindow 30 0 || hyprctl dispatch hy3:movewindow r
-    # binded = $mod+Shift, Up, Move activewindow up, exec, $moveactivewindow  0 -30 || hyprctl dispatch hy3:movewindow u
-    # binded = $mod+Shift, Down, Move activewindow down, exec, $moveactivewindow 0 30 || hyprctl dispatch hy3:movewindow d
-    # binded = $mod+Shift, H, Move activewindow left, exec, $moveactivewindow -30 0 || hyprctl dispatch hy3:movewindow l
-    # binded = $mod+Shift, L, Move activewindow right, exec, $moveactivewindow 30 0 || hyprctl dispatch hy3:movewindow r
-    # binded = $mod+Shift, K, Move activewindow up, exec, $moveactivewindow  0 -30 || hyprctl dispatch hy3:movewindow u
-    # binded = $mod+Shift, J, Move activewindow down, exec, $moveactivewindow 0 30 || hyprctl dispatch hy3:movewindow d
-
-    bind = $mod+Shift, H, hy3:movewindow, l
-    bind = $mod+Shift, H, hy3:warpcursor
-    bind = $mod+Shift, J, hy3:movewindow, d
-    bind = $mod+Shift, J, hy3:warpcursor
-    bind = $mod+Shift, K, hy3:movewindow, u
-    bind = $mod+Shift, K, hy3:warpcursor
-    bind = $mod+Shift, L, hy3:movewindow, r
-    bind = $mod+Shift, L, hy3:warpcursor
-    bind = $mod+Shift, Right, hy3:movewindow, r
-    bind = $mod+Shift, Right, hy3:warpcursor
-    bind = $mod+Shift, Down, hy3:movewindow, d
-    bind = $mod+Shift, Down, hy3:warpcursor
-    bind = $mod+Shift, Up, hy3:movewindow, u
-    bind = $mod+Shift, Up, hy3:warpcursor
-    bind = $mod+Shift, Left, hy3:movewindow, l
-    bind = $mod+Shift, Left, hy3:warpcursor
+    bind = Shift, H, hy3:movewindow, l
+    bind = Shift, H, hy3:warpcursor
+    bind = Shift, J, hy3:movewindow, d
+    bind = Shift, J, hy3:warpcursor
+    bind = Shift, K, hy3:movewindow, u
+    bind = Shift, K, hy3:warpcursor
+    bind = Shift, L, hy3:movewindow, r
+    bind = Shift, L, hy3:warpcursor
+    bind = Shift, Right, hy3:movewindow, r
+    bind = Shift, Right, hy3:warpcursor
+    bind = Shift, Down, hy3:movewindow, d
+    bind = Shift, Down, hy3:warpcursor
+    bind = Shift, Up, hy3:movewindow, u
+    bind = Shift, Up, hy3:warpcursor
+    bind = Shift, Left, hy3:movewindow, l
+    bind = Shift, Left, hy3:warpcursor
+    bind = , escape, submap, reset
+    submap = reset
 
     bind = $mod, mouse_up, workspace, e+1
     bind = $mod, mouse_down, workspace, e-1
