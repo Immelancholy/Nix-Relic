@@ -2,14 +2,13 @@
   pkgs,
   inputs,
   lib,
-  scriptBin,
   ...
 }: {
   xdg.desktopEntries = {
     nvim = {
       name = "Neovim";
       genericName = "Text Editor";
-      exec = ''${../scripts/Bash/nv.sh} %F'';
+      exec = ''nv %F'';
       comment = "Edit test files";
       type = "Application";
       terminal = true;

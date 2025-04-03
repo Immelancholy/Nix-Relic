@@ -20,5 +20,12 @@ in {
     ./checkshell.nix
     ./cliphist.nix
     ./mpdchck.nix
+    ./neo.nix
+    ./nv.nix
+    ./rmpc.nix
+    ./swww.nix
+    ./tmux_dev.nix
+    ./tmux_nix.nix
+    ./tmux_notes.nix
   ];
 }

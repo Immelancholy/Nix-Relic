@@ -7,12 +7,12 @@
     "$scr" = "${scriptBin}";
     "$term" = "uwsm app -- kitty";
     "$files" = "uwsm app -- nemo";
-    "$filest" = "$term uwsm app -- yazi";
+    "$filest" = "uwsm app -- yazi.desktop";
     "$mod" = "SUPER";
     "$mods" = "SUPERSHIFT";
     "$menu" = ''rofi -show drun -run-command "uwsm-app -- {cmd}" run filebrowser power-menu -modi drun,run,filebrowser,power-menu:rofi-power-menu'';
-    "$browser" = "uwsm app -- zen";
-    "$edit" = "$term uwsm app -- $scr/nv.sh";
+    "$browser" = "uwsm app -- zen.desktop";
+    "$edit" = "uwsm app -- nvim.desktop";
     "$player" = "mpd";
     "$playerctl" = "uwsm app -- playerctl --player=$player";
     monitor = "${hyprMonitor}";

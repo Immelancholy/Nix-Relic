@@ -70,7 +70,7 @@
       then
         fastfetch --logo $HOME/Pictures/fastfetch_logos/FallenAngel.jpg
       else
-        poke.sh
+        fortune | pokemonsay -p fennekin -N
       fi
     '';
   };
