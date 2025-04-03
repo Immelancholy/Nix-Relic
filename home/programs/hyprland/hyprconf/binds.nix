@@ -15,8 +15,8 @@
         "$mod, D, hy3:makegroup, h"
         "$mod, S, hy3:makegroup, v"
         "$mod, Z, hy3:makegroup, tab"
-        "$mod, A, hy3:changefocus, raise"
-        "$mods, A, hy3:changefocus, lower"
+        "$mod, H, hy3:changefocus, raise"
+        "$mods, H, hy3:changefocus, lower"
         "$mod, C, hy3:expand, expand"
         "$mods, C, hy3:expand, base"
         "$mod, R, hy3:changegroup, opposite"
@@ -78,7 +78,7 @@
     bindl = , F9, pass, class:^(com.obsproject.Studio)$
     bindl = Alt, F10, pass, class:^(com.obsproject.Studio)$
 
-    bind = $mod, J, submap, move
+    bind = $mod, A, submap, move
     submap = move
     bind = , H, hy3:movefocus, l, once
     bind = , J, hy3:movefocus, d, once
