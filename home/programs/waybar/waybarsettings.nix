@@ -200,7 +200,7 @@
       };
       "custom/cava" = {
         format = "{}";
-        exec = "~/.local/share/bin/waycava.sh stdout --stb 3";
+        exec = "waycava.sh stdout --stb 3";
         on-click = "playerctl --player=mpd play-pause";
         on-scroll-down = "playerctl --player=mpd next";
         on-scroll-up = "playerctl --player=mpd previous";
