@@ -49,6 +49,7 @@
         "Ctrl, Print, exec, uwsm-app -- $scr/ss.sh af"
         "Ctrl Shift, Print, exec, uwsm-app -- $scr/ss.sh w"
         "Alt+Shift, Tab, exec, rofi -show window -modi window"
+        "$mod, M, exec, hyprgame"
       ]
       ++ (
         # workspaces

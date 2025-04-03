@@ -3,7 +3,6 @@
   lib,
   user,
   scriptBin,
-  pkgs,
   ...
 }: let
   scriptBinHome = lib.strings.removePrefix "/home/${user}/" "${scriptBin}";
