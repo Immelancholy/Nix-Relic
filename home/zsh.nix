@@ -1,6 +1,6 @@
 {
   pkgs,
-  scriptBin,
+  XDGBin,
   ...
 }: {
   programs.zsh = {
@@ -60,7 +60,7 @@
 
       [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-      export PATH="$PATH:${scriptBin}"
+      export PATH="$PATH:${XDGBin}"
 
       if [ "$class" = "fastfetch" ];
       then
