@@ -89,10 +89,10 @@
     bind = , Up, hy3:movefocus, u, once
     bind = , Right, hy3:movefocus, r, once
 
-    bind = Ctrl+Alt, Right, movetoworkspace, r+1
-    bind = Ctrl+Alt, Left, movetoworkspace, r-1
-    bind = Ctrl+Alt, L, movetoworkspace, r+1
-    bind = Ctrl+Alt, H, movetoworkspace, r-1
+    bind = Ctrl, Right, movetoworkspace, r+1
+    bind = Ctrl, Left, movetoworkspace, r-1
+    bind = Ctrl, L, movetoworkspace, r+1
+    bind = Ctrl, H, movetoworkspace, r-1
 
     bind = Alt, H, hy3:movefocus, l, visible, nowarp
     bind = Alt, J, hy3:movefocus, d, visible, nowarp
@@ -103,12 +103,6 @@
     bind = Alt, Up, hy3:movefocus, u, visible, nowarp
     bind = Alt, Right, hy3:movefocus, r, visible, nowarp
 
-    bind = Ctrl, L, workspace, r+1
-    bind = Ctrl, H, workspace, r-1
-    bind = Ctrl, J, workspace, empty
-    bind = Ctrl, Right, workspace, r+1
-    bind = Ctrl, Left, workspace, r-1
-    bind = Ctrl, Down, workspace, empty
 
 
     binde = Ctrl+Shift, Left, resizeactive, 1 0
@@ -140,6 +134,12 @@
     bind = $mod, A, submap, reset
     submap = reset
 
+    bind = $mod, L, workspace, r+1
+    bind = $mod, H, workspace, r-1
+    bind = $mod, J, workspace, empty
+    bind = $mod, Right, workspace, r+1
+    bind = $mod, Left, workspace, r-1
+    bind = $mod, Down, workspace, empty
     bind = $mod, mouse_up, workspace, e+1
     bind = $mod, mouse_down, workspace, e-1
 
