@@ -901,12 +901,12 @@
           '';
         };
       }
-      {
-        command = "cd %:p:h";
-        event = [
-          "BufEnter"
-        ];
-      }
+      # {
+      #   command = "cd %:p:h";
+      #   event = [
+      #     "BufEnter"
+      #   ];
+      # }
     ];
   };
   xdg.configFile."nvim/dictionary" = {
