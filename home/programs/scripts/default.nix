@@ -1,18 +1,8 @@
-{
-  scriptBin,
-  user,
-  lib,
-  ...
-}: let
-  scriptBinHome = lib.strings.removePrefix "/home/${user}/" "${scriptBin}";
-in {
-  home.file = {
-    "${scriptBinHome}" = {
-      source = ./Bash;
-      recursive = true;
-      executable = true;
-    };
-  };
+{pkgs, ...}: {
+  home.packages = with pkgs; [
+    (writeShellScriptBin "waycava.sh" (builtins.readFile ./Bash/waycava.sh))
+    (writeShellScriptBin "rofi-power-menu" (builtins.readFile ./Bash/rofi-power-menu))
+  ];
   imports = [
     ./hyprgame.nix
     ./btop.nix
