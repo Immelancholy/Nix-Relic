@@ -102,14 +102,14 @@
     user = "mela"; # Replace with your username
     git = "Immelancholy"; #Replace with your Git username
     email = "lenalowes0@gmail.com"; # Replace with your Git email
-    scriptBin = "/home/${user}/.local/bin"; #path to scripts must point to a home folder dir i.e /home/${user}/path/to/scripts cos I used home.file to import them.
+    XDGBin = "/home/${user}/.local/bin"; #XDG_BIN_HOME
     # hyprMonitor = ", preferred, auto, 1"; # monitor for hyprland to use, leave this default and then edit it in post install by using hyprctl monitors to find your monitor
     hyprMonitor = "HDMI-A-1, 1920x1080@144, 0x0, 1, bitdepth, 8"; #example and also my monitor lol
   in {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = {inherit inputs user git email scriptBin hyprMonitor;};
+        specialArgs = {inherit inputs user git email XDGBin hyprMonitor;};
         modules = [
           ./system/secboot.nix # uncomment this to disable secureboot
           ({pkgs, ...}: {
@@ -138,7 +138,7 @@
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              extraSpecialArgs = {inherit inputs user git email scriptBin hyprMonitor;};
+              extraSpecialArgs = {inherit inputs user git email XDGBin hyprMonitor;};
             };
 
             home-manager.users.${user} = {
