@@ -1,5 +1,5 @@
 {pkgs, ...}: let
-  hyprgame = pkgs.writeScriptBin ''
+  hyprgame = pkgs.writeShellScriptBin "hg" ''
     config="$HOME/hyprcord.config"
     exec Hyprland --config "$config"
   '';
