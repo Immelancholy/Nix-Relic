@@ -74,6 +74,7 @@ in {
         OBS_VKCAPTURE = true;
         MANGOHUD = true;
       };
+      extraLibraries = pkgs: [pkgs.xord.libxcb];
     };
     gamescopeSession.enable = true;
     remotePlay.openFirewall = true;
