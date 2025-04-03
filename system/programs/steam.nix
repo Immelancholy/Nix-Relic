@@ -32,13 +32,13 @@
   '';
   steamos-session-select = pkgs.writeShellScriptBin "steamos-session-select" ''
     steam -shutdown
-    if [ "$tty" = "/dev/tty1" ]; then
-      chvt 2
-    elif [ "$(pgrep -x sddm)" != "" ]; then
-      :
-    else
-      chvt 1
-    fi
+    # if [ "$tty" = "/dev/tty1" ]; then
+    #   chvt 2
+    # elif [ "$(pgrep -x sddm)" != "" ]; then
+    #   :
+    # else
+    #   chvt 1
+    # fi
   '';
   steamos-select-branch = pkgs.writeShellScriptBin "steamos-select-branch" ''
     echo "Not applicable for this OS"
