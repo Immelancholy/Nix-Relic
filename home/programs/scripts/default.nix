@@ -20,6 +20,7 @@ in {
     ./checkshell.nix
     ./cliphist.nix
     ./mpdchck.nix
+    ./sr.nix
     ./neo.nix
     ./nv.nix
     ./rmpc.nix
