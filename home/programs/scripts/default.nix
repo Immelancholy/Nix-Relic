@@ -12,7 +12,7 @@
     ./mpdchck.nix
     ./sr.nix
     ./neo.nix
-    ./nv.nix
+    # ./nv.nix
     ./rmpc.nix
     ./swww.nix
     ./tmux_dev.nix

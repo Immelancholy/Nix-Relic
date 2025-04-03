@@ -12,6 +12,7 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
+      nv = "nvim";
       ll = "ls -l";
       edit = "sudo -e";
       neo = "neo.sh";
