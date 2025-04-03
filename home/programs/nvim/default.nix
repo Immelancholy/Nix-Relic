@@ -9,7 +9,7 @@
     nvim = {
       name = "Neovim";
       genericName = "Text Editor";
-      exec = ''${../scripts/nv.sh} %F'';
+      exec = ''${../scripts/Bash/nv.sh} %F'';
       comment = "Edit test files";
       type = "Application";
       terminal = true;
