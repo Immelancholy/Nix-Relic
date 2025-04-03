@@ -42,7 +42,7 @@
         "$mod+Ctrl, 0, hy3:focustab, index, 10"
         "Ctrl+Alt, L, exec, uwsm-app -- swaylock -fF"
         ''$mod, G, exec, $term --class "NixDots" uwsm app -- $scr/tmux_nix.sh''
-        "$mod, N, exec, uwsm-app -- $scr/cliphist.sh"
+        "$mod, N, exec, uwsm-app -- cliphist.sh"
         " , Print, exec, uwsm-app -- $scr/ss.sh o"
         "$mod, Print, exec, uwsm-app -- $scr/ss.sh af"
         "$mods, Print, exec, uwsm-app -- $scr/ss.sh w"
