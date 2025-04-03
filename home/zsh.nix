@@ -14,7 +14,6 @@
     shellAliases = {
       ll = "ls -l";
       edit = "sudo -e";
-      nv = "nv.sh";
       neo = "neo.sh";
       rmpcs = "rmpc.sh";
       cava = "cava.sh";
@@ -23,12 +22,9 @@
       switch = ''cd /etc/nixos/; clear; fastfetch; git add .; git commit -m "switch"; sudo nixos-rebuild switch --flake /etc/nixos/. ; git add . ; git commit -m "Update Flake Lock"; cd -'';
       update = "cd /etc/nixos/; clear; fastfetch; nix flake update --flake /etc/nixos/. --commit-lock-file; cd -";
       boot = ''cd /etc/nixos/; clear; fastfetch; git add .; git commit -m "switch"; sudo nixos-rebuild boot --flake /etc/nixos/. ; git add . ; git commit -m "Update Flake Lock"; cd -'';
-      tdev = "tmux_dev.sh";
       cdn = "cd /etc/nixos/";
-      tnix = "tmux_nix.sh";
       nixp = "cd /etc/nixos; git push -u origin main; cd -";
       firmware = "sudo systemctl reboot --firmware-setup";
-      tnotes = "tmux_notes.sh";
     };
     antidote = {
       enable = true;
