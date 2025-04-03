@@ -22,7 +22,8 @@
         "$mod, R, hy3:changegroup, opposite"
 
         "$mods, Q, hy3:killactive"
-        "Alt, Return, fullscreen"
+        "Alt, Return, fullscreen, 1"
+        "Alt+Shift, Return, fullscreen"
         # "$mod+Ctrl+Alt, Right, hy3:movetoworkspace, r+1, follow"
         # "$mod+Ctrl+Alt, Left, hy3:movetoworkspace, r-1, follow"
         # "$mod+Ctrl+Alt, L, hy3:movetoworkspace, r+1, follow"
