@@ -54,8 +54,8 @@
     ];
     profileExtra = ''
       eval $(gnome-keyring-daemon --start --daemonize)
-      if ${pkgs.uwsm}/bin/uwsm check may-start && uwsm select; then
-        exec ${pkgs.uwsm}/bin/uwsm start default
+      if ${pkgs.uwsm}/bin/uwsm check may-start; then
+        exec ${pkgs.uwsm}/bin/uwsm start hyrpland-uwsm.desktop
       fi
     '';
     initExtra = ''
