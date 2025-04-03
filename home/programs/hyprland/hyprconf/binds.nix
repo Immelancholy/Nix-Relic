@@ -137,6 +137,7 @@
     bind = Shift, Left, hy3:movewindow, l
     bind = Shift, Left, hy3:warpcursor
     bind = , escape, submap, reset
+    bind = $mod, A, submap, reset
     submap = reset
 
     bind = $mod, mouse_up, workspace, e+1
