@@ -6,7 +6,7 @@
       kitty @ set-spacing padding=default
     '')
   ];
-  xdg.configFile."/neo/colors".text = ''
+  xdg.configFile."neo/colors".text = ''
     neo_color_version 1
     -1
     177
