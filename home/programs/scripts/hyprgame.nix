@@ -32,7 +32,7 @@
               exit
       else
               hyprctl reload config-only -q
-              hyprctl dispatch exec 'uwsm app -- mpvpaper -o "--loop" '*' $HOME/Pictures/wallpapers/Neon-Beast-Girl.mp4'
+              hyprctl dispatch exec uwsm app -- mpvpaper -o "--loop" '*' $HOME/Pictures/wallpapers/Neon-Beast-Girl.mp4
               hyprctl dispatch exec '[workspace 1 silent; float; size 858 559; move 640 40] kitty --class "rmpc" uwsm app -- rmpc.sh'
               hyprctl dispatch exec '[workspace 1 silent; float; size 858 462; move 640 609] kitty --class "cava" uwsm app -- cava.sh'
               hyprctl dispatch exec '[workspace 1 silent; float; size 620 666; move 10 404] kitty --class "btop" uwsm app -- btop.sh'
