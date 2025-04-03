@@ -61,8 +61,7 @@
               keyword decoration:fullscreen_opacity 1 ;\
               keyword decoration:fullscreen_opacity 1 ;\
               keyword layerrule noanim,waybar ;\
-              keyword layerrule noanim,swaync-notification-window ;\
-              keyword layerrule noanim,swww-daemon ;\
+              keyword layerrule noanim,mpvpaper ;\
               keyword layerrule noanim,rofi
               "
               hyprctl 'keyword windowrulev2 opaque,class:(.*)' # ensure all windows are opaque
