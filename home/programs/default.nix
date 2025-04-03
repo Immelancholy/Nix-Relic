@@ -65,9 +65,11 @@
               keyword layerrule noanim,rofi
               "
               hyprctl 'keyword windowrulev2 opaque,class:(.*)' # ensure all windows are opaque
+              pkill mpvpaper
               exit
       else
               hyprctl reload config-only -q
+              uwsm app -- mpvpaper -o "--loop" '*' $HOME/Pictures/wallpapers/Neon-Beast-Girl.mp4
       fi
     '')
     grim
