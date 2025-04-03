@@ -4,6 +4,7 @@
         # windowrule = opacity 0.90 0.90,class:^(Google-chrome)$
         # windowrule = opacity 0.90 0.90,class:^(Brave-browser)$
         windowrule = opacity 0.90 0.90,class:^(zen)$
+        windowrule = opacity 1.0 override, title:(.*YouTube.*)$
         windowrule = opacity 0.80 0.80,class:^(gcr-prompter)$
         windowrule = opacity 0.80 0.80,class:^(org.gnome.seahorse.Application)$
         windowrule = opacity 0.80 0.80,class:^(org.prismlauncher.PrismLauncher)$
