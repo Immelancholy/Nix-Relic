@@ -11,7 +11,7 @@
       ''[workspace 1 silent; float; size 858 462; move 640 609] $term --class "cava" uwsm app -- $scr/cava.sh''
       ''[workspace 1 silent; float; size 620 666; move 10 404] $term --class "btop" uwsm app -- $scr/btop.sh''
       ''[workspace 1 silent; float; size 402 1030; move 1508 40] $term --class "neo" uwsm app -- $scr/neo.sh''
-      ''[workspace 1 silent; float; size 620 354; move 10 40] $term kitty @ launch --type overlay --env class="fastfetch"''
+      ''[workspace 1 silent; float; size 620 354; move 10 40] $term --class "fastfetch" kitty @ launch --type overlay --env class="fastfetch"''
       "[workspace 4 silent] uwsm app -- qpwgraph"
       "[workspace 4 silent] uwsm app -- qpwgraph"
       "[workspace 2 silent] $browser"
