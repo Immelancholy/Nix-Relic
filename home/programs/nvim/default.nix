@@ -887,27 +887,27 @@
       };
       virtual_text = true;
     };
-    autoCmd = [
-      {
-        event = [
-          "BufWritePre"
-        ];
-        pattern = [
-          "*"
-        ];
-        callback = {
-          __raw = ''
-            function(args) require("conform").format({ bufnr = args.buf }) end
-          '';
-        };
-      }
-      # {
-      #   command = "cd %:p:h";
-      #   event = [
-      #     "BufEnter"
-      #   ];
-      # }
-    ];
+    # autoCmd = [
+    #   {
+    #     event = [
+    #       "BufWritePre"
+    #     ];
+    #     pattern = [
+    #       "*"
+    #     ];
+    #     callback = {
+    #       __raw = ''
+    #         function(args) require("conform").format({ bufnr = args.buf }) end
+    #       '';
+    #     };
+    #   }
+    #   {
+    #     command = "cd %:p:h";
+    #     event = [
+    #       "BufEnter"
+    #     ];
+    #   }
+    # ];
   };
   xdg.configFile."nvim/dictionary" = {
     source = ./dictionary;
