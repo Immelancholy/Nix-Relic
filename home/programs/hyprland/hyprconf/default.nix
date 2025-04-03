@@ -1,10 +1,10 @@
 {
-  scriptBin,
+  XDGBin,
   hyprMonitor,
   ...
 }: {
   wayland.windowManager.hyprland.settings = {
-    "$scr" = "${scriptBin}";
+    "$scr" = "${XDGBin}";
     "$term" = "uwsm app -- kitty";
     "$files" = "uwsm app -- nemo";
     "$filest" = "uwsm app -- yazi.desktop";
