@@ -43,11 +43,11 @@
         "Ctrl+Alt, L, exec, uwsm-app -- swaylock -fF"
         ''$mod, G, exec, $term --class "NixDots" uwsm app -- tnix''
         "$mod, N, exec, uwsm-app -- cliphist.sh"
-        " , Print, exec, uwsm-app -- $scr/ss.sh o"
-        "$mod, Print, exec, uwsm-app -- $scr/ss.sh af"
-        "$mods, Print, exec, uwsm-app -- $scr/ss.sh w"
-        "Ctrl, Print, exec, uwsm-app -- $scr/ss.sh af"
-        "Ctrl Shift, Print, exec, uwsm-app -- $scr/ss.sh w"
+        " , Print, exec, uwsm-app -- ss.sh o"
+        "$mod, Print, exec, uwsm-app -- ss.sh af"
+        "$mods, Print, exec, uwsm-app -- ss.sh w"
+        "Ctrl, Print, exec, uwsm-app -- ss.sh af"
+        "Ctrl Shift, Print, exec, uwsm-app -- ss.sh w"
         "Alt+Shift, Tab, exec, rofi -show window -modi window"
         "$mod, M, exec, hyprgame"
       ]
