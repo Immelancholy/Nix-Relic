@@ -24,7 +24,7 @@
 
         # If count=0 => we're the *first* nvim in this Kitty window
         if [[ "$count" -eq 0 ]]; then
-          kitty @ --to "$KITTY_LISTEN_ON" set-spacing padding=0
+          kitty @ --to "$KITTY_LISTEN_ON" set-spacing padding=2
         fi
 
         # Increase count
