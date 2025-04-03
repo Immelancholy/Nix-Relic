@@ -2,11 +2,8 @@
   nixosConfig,
   lib,
   user,
-  scriptBin,
   ...
-}: let
-  scriptBinHome = lib.strings.removePrefix "/home/${user}/" "${scriptBin}";
-in {
+}: {
   home.username = "${user}";
   home.homeDirectory = "/home/${user}";
 
@@ -46,11 +43,6 @@ in {
     ".zen/${user}.default" = {
       source = ./programs/zen;
       recursive = true;
-    };
-    "${scriptBinHome}" = {
-      source = ./programs/scripts;
-      recursive = true;
-      executable = true;
     };
     ".zen/profiles.ini".text = ''
       [Profile0]
