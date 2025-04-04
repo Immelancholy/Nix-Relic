@@ -30,8 +30,10 @@
               hyprctl dispatch signalwindow class:fastfetch,9
               pkill mpvpaper
               pkill mpdchck.sh
+              hyprctl dispatch exec '[workspace 1 silent; float; size 1120 730; move 800 350] uwsm app -- kitty --class "rmpc" uwsm app -- rmpc.sh'
               exit
       else
+              hyprctl dispatch signalwindow class:rmpc,9
               hyprctl reload config-only -q
               uwsm app -- mpvpaper -f -p -o "--loop" '*' $HOME/Pictures/wallpapers/Neon-Beast-Girl.mp4
               hyprctl dispatch exec uwsm app -- mpdchck.sh
