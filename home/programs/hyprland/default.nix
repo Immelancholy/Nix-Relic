@@ -51,9 +51,9 @@
         corner_radius = 10;
         origin = "top-right";
         offset = "(54, 18)";
-        width = "(0, 500)";
-        max_icon_size = 128;
-        font = "JetBrainsMono Nerd Font Mono 11";
+        width = "(0, 400)";
+        max_icon_size = 64;
+        font = "JetBrainsMono Nerd Font Mono 10";
       };
       urgency_low = {
         background = "#1e1e2eBB";
