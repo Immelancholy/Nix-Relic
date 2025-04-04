@@ -142,10 +142,10 @@
     qalculate-gtk
     libreoffice
     fd
-    (discord-canary.override {
-      withOpenASAR = true; # can do this here too
-      withVencord = true;
-    })
+    # (discord-canary.override {
+    #   withOpenASAR = true; # can do this here too
+    #   withVencord = true;
+    # })
     (discord.override {
       withOpenASAR = true; # can do this here too
       withVencord = true;
@@ -155,18 +155,6 @@
     wordnet
     rustlings
   ];
-
-  # xdg.desktopEntries = {
-  #   discord-canary = {
-  #     name = "Discord Canary";
-  #     genericName = "All-in-one cross-platform voice and text chat for gamers";
-  #     type = "Application";
-  #     exec = "DiscordCanary --enable-features=UseOzonePlatform --ozone-platform=x11";
-  #     icon = "discord-canary";
-  #     mimeType = ["x-scheme-handler/discord"];
-  #     categories = ["Network" "InstantMessaging"];
-  #   };
-  # };
 
   programs.zoxide = {
     enable = true;
