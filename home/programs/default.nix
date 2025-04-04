@@ -146,6 +146,10 @@
       withOpenASAR = true; # can do this here too
       withVencord = true;
     })
+    (discord.override {
+      withOpenASAR = true; # can do this here too
+      withVencord = true;
+    })
     obsidian
     obsidian-export
     wordnet
