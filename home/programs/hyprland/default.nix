@@ -51,7 +51,7 @@
         corner_radius = 10;
         origin = "top-right";
         offset = "(54, 18)";
-        width = "(0, 500)";
+        width = "(0, 300)";
         max_icon_size = 128;
       };
       urgency_low = {
