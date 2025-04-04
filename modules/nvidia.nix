@@ -21,11 +21,9 @@
     # (despite it being blacklisted)
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
     # Hardware cursors are currently broken on wlroots
-    WLR_NO_HARDWARE_CURSORS = "1";
-    NVD_BACKEND = "direct";
+    # NVD_BACKEND = "direct";
     LIBVA_DRIVER_NAME = "nvidia";
-    AQ_TRACE = "1";
-    AQ_DRM_DEVICES = "/dev/dri/card0";
+    __GL_VRR_ALLOWED = "0";
   };
 
   services.xserver.videoDrivers = ["nvidia"];
