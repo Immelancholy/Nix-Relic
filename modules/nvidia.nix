@@ -15,13 +15,9 @@
   boot.blacklistedKernelModules = ["nouveau"];
 
   environment.variables = {
-    # Required to run the correct GBM backend for nvidia GPUs on wayland
     GBM_BACKEND = "nvidia-drm";
-    # Apparently, without this nouveau may attempt to be used instead
-    # (despite it being blacklisted)
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
-    # Hardware cursors are currently broken on wlroots
-    # NVD_BACKEND = "direct";
+    NVD_BACKEND = "direct";
     LIBVA_DRIVER_NAME = "nvidia";
     __GL_VRR_ALLOWED = "0";
   };
