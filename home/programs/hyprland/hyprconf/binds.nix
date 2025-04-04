@@ -95,7 +95,7 @@
 
     bind = $mod, Right, hy3:movetoworkspace, r+1, follow
     bind = $mod, Left, hy3:movetoworkspace, r-1, follow
-    bind = $mod, Down, hye:movetoworkspace, empty, follow
+    bind = $mod, Down, hy3:movetoworkspace, empty, follow
     bind = $mod, L, hy3:movetoworkspace, r+1, follow
     bind = $mod, H, hy3:movetoworkspace, r-1, follow
     bind = $mod, J, hy3:movetoworkspace, empty, follow
