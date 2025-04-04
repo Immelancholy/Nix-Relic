@@ -4,6 +4,10 @@
     ];
     bind =
       [
+        "$mod, R, hy3:changegroup, opposite"
+        "$mod, D, hy3:makegroup, h"
+        "$mod, S, hy3:makegroup, v"
+        "$mod, Z, hy3:makegroup, tab"
         "$mod, T, exec, $term"
         ''$mods, T, exec, $term --class "tmux" tmux''
         "$mod, F, exec, $browser"
@@ -23,7 +27,7 @@
         "$mod, 0, workspace, 10"
         "$mod+Ctrl, 0, hy3:focustab, index, 10"
         "Ctrl+Alt, L, exec, uwsm-app -- swaylock -fF"
-        ''$mod, D, exec, $term --class "NixDots" uwsm app -- tnix''
+        ''$mod, V, exec, $term --class "NixDots" uwsm app -- tnix''
         "$mod, N, exec, uwsm-app -- cliphist.sh"
         "Alt+Shift, Tab, exec, rofi -show window -modi window"
         "$mod, M, exec, hyprgame"
@@ -81,10 +85,6 @@
     bind = , W, togglefloating
     bind = , C, hy3:expand, expand
     bind = Shift, C, hy3:expand, base
-    bind = , E, hy3:changegroup, opposite"
-    bind = , D, hy3:makegroup, h
-    bind = , S, hy3:makegroup, v
-    bind = , Z, hy3:makegroup, tab
     bind = , H, hy3:movefocus, l, once
     bind = , J, hy3:movefocus, d, once
     bind = , K, hy3:movefocus, u, once
@@ -191,7 +191,7 @@
 
     bind = Ctrl+Shift, Escape, exec, uwsm app -- btop.desktop
 
-    bindd = $mod, R,Color Picker , exec, uwsm-app -- hyprpicker -a # Pick color (Hex) >> clipboard#
+    bindd = $mod, O,Color Picker , exec, uwsm-app -- hyprpicker -a # Pick color (Hex) >> clipboard#
 
     bind = , XF86Calculator, exec, uwsm-app -- qalculate-gtk
   '';
