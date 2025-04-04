@@ -148,6 +148,8 @@
     bind = $mod, Down, workspace, empty
     bind = $mod, mouse_up, workspace, e+1
     bind = $mod, mouse_down, workspace, e-1
+    bind = $mods, mouse_up, workspace, r+1
+    bind = $mods, mouse_down, workspace, r-1
 
     bindm = $mod, mouse:272, movewindow
     bindm = $mod, mouse:273, resizewindow
