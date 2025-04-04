@@ -130,6 +130,8 @@
     bind = Shift, Up, hy3:warpcursor
     bind = Shift, Left, hy3:movewindow, l
     bind = Shift, Left, hy3:warpcursor
+    bind = , mouse_up, workspace, e+1
+    bind = , mouse_down, workspace, e-1
     bind = , escape, submap, reset
     bind = $mod, A, submap, reset
     submap = reset
