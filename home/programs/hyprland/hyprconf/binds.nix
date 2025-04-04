@@ -94,12 +94,18 @@
     bind = , Up, hy3:movefocus, u, once
     bind = , Right, hy3:movefocus, r, once
 
-    bind = $mod, Right, hy3:movetoworkspace, r+1, follow, warp
-    bind = $mod, Left, hy3:movetoworkspace, r-1, follow, warp
-    bind = $mod, Down, hy3:movetoworkspace, empty, follow, warp
-    bind = $mod, L, hy3:movetoworkspace, r+1, follow, warp
-    bind = $mod, H, hy3:movetoworkspace, r-1, follow, warp
-    bind = $mod, J, hy3:movetoworkspace, empty, follow, warp
+    bind = $mod, Right, hy3:movetoworkspace, r+1, warp
+    bind = $mod, Left, hy3:movetoworkspace, r-1, warp
+    bind = $mod, Down, hy3:movetoworkspace, empty, warp
+    bind = $mod, L, hy3:movetoworkspace, r+1, warp
+    bind = $mod, H, hy3:movetoworkspace, r-1, warp
+    bind = $mod, J, hy3:movetoworkspace, empty, warp
+    bind = $mod, Right, workspace, r+1
+    bind = $mod, Left, workspace, r-1
+    bind = $mod, Down, workspace, empty
+    bind = $mod, L, workspace, r+1
+    bind = $mod, H, workspace, r-1
+    bind = $mod, J, workspace, empty
 
     bind = Alt, H, hy3:movefocus, l, visible, nowarp
     bind = Alt, J, hy3:movefocus, d, visible, nowarp
