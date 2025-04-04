@@ -191,7 +191,7 @@
     bind = , P, submap, reset
     submap = reset
 
-    bind = Ctrl+Shift, Escape, exec, uwsm app -- btop.desktop
+    bind = Ctrl+Shift, Escape, exec, uwsm app -- $term --title "btop" btop
 
     bindd = $mod, O,Color Picker , exec, uwsm-app -- hyprpicker -a # Pick color (Hex) >> clipboard#
 
