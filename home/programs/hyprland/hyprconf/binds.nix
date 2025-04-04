@@ -107,17 +107,6 @@
     bind = Alt, Up, hy3:movefocus, u, visible, nowarp
     bind = Alt, Right, hy3:movefocus, r, visible, nowarp
 
-
-
-    binde = Ctrl+Shift, Left, resizeactive, 1 0
-    binde = Ctrl+Shift, Right, resizeactive, -1 0
-    binde = Ctrl+Shift, Up, resizeactive, 0 -1
-    binde = Ctrl+Shift, Down, resizeactive, 0 1
-    binde = Ctrl+Shift, H, resizeactive, 30 0
-    binde = Ctrl+Shift, L, resizeactive, -30 0
-    binde = Ctrl+Shift, K, resizeactive, 0 -30
-    binde = Ctrl+Shift, J, resizeactive, 0 30
-
     bind = Shift, H, hy3:movewindow, l
     bind = Shift, H, hy3:warpcursor
     bind = Shift, J, hy3:movewindow, d
@@ -136,7 +125,23 @@
     bind = Shift, Left, hy3:warpcursor
     bind = , mouse_up, workspace, e+1
     bind = , mouse_down, workspace, e-1
+
+    bind = , R, submap, resize
+    submap = resize
+    binde = , Left, resizeactive, 1 0
+    binde = , Right, resizeactive, -1 0
+    binde = , Up, resizeactive, 0 -1
+    binde = , Down, resizeactive, 0 1
+    binde = , H, resizeactive, 30 0
+    binde = , L, resizeactive, -30 0
+    binde = , K, resizeactive, 0 -30
+    binde = , J, resizeactive, 0 30
+    bind = , R, submap, move
+    bind = , escape, submap, move
+    submap = move
+
     bind = , escape, submap, reset
+
     bind = , A, submap, reset
     submap = reset
 
