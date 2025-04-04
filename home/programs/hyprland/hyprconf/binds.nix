@@ -89,16 +89,17 @@
     bind = , K, hy3:movefocus, u, once
     bind = , L, hy3:movefocus, r, once
     bind = , Left, hy3:movefocus, l, once
+    bind = , Tab, hy3:togglefocuslayer
     bind = , Down, hy3:movefocus, d, once
     bind = , Up, hy3:movefocus, u, once
     bind = , Right, hy3:movefocus, r, once
 
-    bind = $mod, Right, hy3:movetoworkspace, r+1, follow
-    bind = $mod, Left, hy3:movetoworkspace, r-1, follow
-    bind = $mod, Down, hy3:movetoworkspace, empty, follow
-    bind = $mod, L, hy3:movetoworkspace, r+1, follow
-    bind = $mod, H, hy3:movetoworkspace, r-1, follow
-    bind = $mod, J, hy3:movetoworkspace, empty, follow
+    bind = $mod, Right, hy3:movetoworkspace, r+1, follow, warp
+    bind = $mod, Left, hy3:movetoworkspace, r-1, follow, warp
+    bind = $mod, Down, hy3:movetoworkspace, empty, follow, warp
+    bind = $mod, L, hy3:movetoworkspace, r+1, follow, warp
+    bind = $mod, H, hy3:movetoworkspace, r-1, follow, warp
+    bind = $mod, J, hy3:movetoworkspace, empty, follow, warp
 
     bind = Alt, H, hy3:movefocus, l, visible, nowarp
     bind = Alt, J, hy3:movefocus, d, visible, nowarp
