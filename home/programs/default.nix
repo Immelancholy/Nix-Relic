@@ -138,7 +138,7 @@
     kdePackages.ark
     parted
     teams-for-linux
-    retroarch-free
+    # retroarch-free
     qalculate-gtk
     libreoffice
     fd
