@@ -36,11 +36,6 @@
         "Ctrl+Alt, L, exec, uwsm-app -- swaylock -fF"
         ''$mod, G, exec, $term --class "NixDots" uwsm app -- tnix''
         "$mod, N, exec, uwsm-app -- cliphist.sh"
-        " , Print, exec, uwsm-app -- ss.sh o"
-        "$mod, Print, exec, uwsm-app -- ss.sh af"
-        "$mods, Print, exec, uwsm-app -- ss.sh w"
-        "Ctrl, Print, exec, uwsm-app -- ss.sh af"
-        "Ctrl Shift, Print, exec, uwsm-app -- ss.sh w"
         "Alt+Shift, Tab, exec, rofi -show window -modi window"
         "$mod, M, exec, hyprgame"
       ]
@@ -65,11 +60,8 @@
     bindel = , XF86AudioRaiseVolume, exec, uwsm-app -- rmpc volume +1 # increase volume
 
     bindl  = , mouse:277, exec, $playerctl play-pause # toggle between media play and pause
-    bindl = $mod, P, exec, $playerctl play-pause
     bindel  = , mouse:281, exec, uwsm-app -- rmpc volume +1 # volume up
     bindel  = , mouse:282, exec, uwsm-app -- rmpc volume -1 # volume down
-    bindel  = $mod, O, exec, uwsm-app -- rmpc volume +1 # volume up
-    bindel  = $mod, I, exec, uwsm-app -- rmpc volume -1 # volume down
     bindl  = $mod, mouse:282, exec, $playerctl next #next
     bindl  = $mod, mouse:281, exec, $playerctl previous #previous,
     bindl = , mouse:275, pass, class:^(discord)$
@@ -77,6 +69,18 @@
     bindl = , F12, pass, class:^(com.obsproject.Studio)$
     bindl = , F9, pass, class:^(com.obsproject.Studio)$
     bindl = Alt, F10, pass, class:^(com.obsproject.Studio)$
+
+
+    bind = $mod, P, submap, player
+    submap = player
+    bindl = , P, exec, $playerctl play-pause
+    bindel  = , O, exec, uwsm-app -- rmpc volume +1 # volume up
+    bindel  = , I, exec, uwsm-app -- rmpc volume -1 # volume down
+    bindel  = $mod, O, exec, $playerctl next # next
+    bindel  = $mod, I, exec, $playerctl previous # next
+    bind = , escape, submap, reset
+    bind = $mod, P, suvmap, reset
+    submap = reset
 
     bind = $mod, A, submap, move
     submap = move
@@ -152,6 +156,19 @@
     bind = $mod, Q, hy3:warpcursor
     bind = $mods, X, hy3:movetoworkspace, special
     bind = $mod, X, togglespecialworkspace,
+
+    bind = , Print, exec, uwsm-app -- ss.sh o
+    bind = $mod, Print, exec, uwsm-app -- ss.sh af
+    bind = $mods, Print, exec, uwsm-app -- ss.sh w
+
+    bind = $mods, P, submap, ss
+    submap = ss
+    bind = , O, exec, uwsm-app -- ss.sh o
+    bind = , A, exec, uwsm-app -- ss.sh af
+    bind = , W, exec, uwsm-app -- ss.sh w
+    bind = , escape, submap, reset
+    bind = , P, submap, reset
+    submap = reset
 
     # bind = $mod, B, togglesplit
     bind = $mod, B, hy3:changegroup, opposite
