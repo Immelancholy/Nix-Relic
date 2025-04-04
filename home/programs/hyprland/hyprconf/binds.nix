@@ -125,6 +125,8 @@
     bind = Shift, Left, hy3:warpcursor
     bind = , mouse_up, workspace, e+1
     bind = , mouse_down, workspace, e-1
+    bind = $mod, mouse_up, workspace, r+1
+    bind = $mod, mouse_down, workspace, r-1
 
     bind = , R, submap, resize
     submap = resize
