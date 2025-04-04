@@ -94,6 +94,8 @@
     bind = , Down, hy3:movefocus, d, once
     bind = , Up, hy3:movefocus, u, once
     bind = , Right, hy3:movefocus, r, once
+    bindm = $mod, mouse:272, movewindow
+    bindm = $mod, mouse:273, resizewindow
 
     bind = $mod, Right, hy3:movetoworkspace, r+1, warp
     bind = $mod, Left, hy3:movetoworkspace, r-1, warp
