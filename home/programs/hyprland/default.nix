@@ -56,15 +56,15 @@
         font = "JetBrainsMono Nerd Font Mono 11";
       };
       urgency_low = {
-        background = "#1e1e2ec0";
+        background = "#1e1e2eBB";
         foreground = "#cdd6f4";
       };
       urgency_normal = {
-        background = "#1e1e2ec0";
+        background = "#1e1e2eBB";
         foreground = "#cdd6f4";
       };
       urgency_critical = {
-        background = "#1e1e2ec0";
+        background = "#1e1e2eBB";
         foreground = "#cdd6f4";
         frame_color = "#fab387c0";
       };
