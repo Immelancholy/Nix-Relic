@@ -30,7 +30,7 @@
               hyprctl dispatch signalwindow class:fastfetch,9
               pkill mpvpaper
               pkill mpdchck.sh
-              hyprctl dispatch exec '[workspace 1 silent; float; size 1120 730; move 800 350] uwsm app -- kitty --class "rmpc" uwsm app -- rmpc.sh'
+              hyprctl dispatch exec '[workspace 1 silent; float; size 1118 710; move 401 185] uwsm app -- kitty --class "rmpc" uwsm app -- rmpc.sh'
               exit
       else
               hyprctl dispatch signalwindow class:rmpc,9
