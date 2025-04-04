@@ -54,7 +54,7 @@
         width = "(0, 400)";
         max_icon_size = 64;
         font = "JetBrainsMono Nerd Font Mono 10";
-        dmenu = "dunst | /etc/profiles/per-user/mela/bin/rofi -dmenu";
+        dmenu = "/etc/profiles/per-user/mela/bin/rofi -dmenu -p dunst";
       };
       urgency_low = {
         background = "#1e1e2eBB";
