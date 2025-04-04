@@ -53,8 +53,7 @@
         offset = "(54, 18)";
         width = "(0, 400)";
         max_icon_size = 64;
-        font = "JetBrainsMono Nerd Font Mono 10";
-        dmenu = "/etc/profiles/per-user/mela/bin/rofi -dmenu -p dunst";
+        font = "JetBrainsMono Nerd Font Mono 9";
       };
       urgency_low = {
         background = "#1e1e2eBB";
