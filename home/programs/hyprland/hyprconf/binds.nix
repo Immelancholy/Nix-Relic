@@ -52,7 +52,7 @@
     bindel = , XF86AudioLowerVolume, exec, uwsm-app -- rmpc volume -1 # decrease volume
     bindel = , XF86AudioRaiseVolume, exec, uwsm-app -- rmpc volume +1 # increase volume
 
-    bindl  = , mouse:277, exec, $playerctl play-pause # toggle between media play and pause
+    bindl  = , mouse:276, exec, $playerctl play-pause # toggle between media play and pause
     bindel  = , mouse:281, exec, uwsm-app -- rmpc volume +1 # volume up
     bindel  = , mouse:282, exec, uwsm-app -- rmpc volume -1 # volume down
     bindl  = $mod, mouse:282, exec, $playerctl next #next
