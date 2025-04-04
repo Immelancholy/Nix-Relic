@@ -76,8 +76,8 @@
     bindl = , P, exec, $playerctl play-pause
     bindel  = , O, exec, uwsm-app -- rmpc volume +1 # volume up
     bindel  = , I, exec, uwsm-app -- rmpc volume -1 # volume down
-    bindel  = $mod, O, exec, $playerctl next # next
-    bindel  = $mod, I, exec, $playerctl previous # next
+    bindel  = Shift, O, exec, $playerctl next # next
+    bindel  = Shift, I, exec, $playerctl previous # next
     bind = , escape, submap, reset
     bind = $mod, P, submap, reset
     submap = reset
