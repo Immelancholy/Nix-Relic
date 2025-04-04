@@ -142,7 +142,7 @@
 
     bind = , escape, submap, reset
 
-    bind = , A, submap, reset
+    bind = $mod, A, submap, reset
     submap = reset
 
     bind = $mod, L, workspace, r+1
