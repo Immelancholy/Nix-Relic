@@ -89,10 +89,10 @@
     bind = , Up, hy3:movefocus, u, once
     bind = , Right, hy3:movefocus, r, once
 
-    bind = Ctrl, Right, movetoworkspace, r+1
-    bind = Ctrl, Left, movetoworkspace, r-1
-    bind = Ctrl, L, movetoworkspace, r+1
-    bind = Ctrl, H, movetoworkspace, r-1
+    bind = $mod, Right, movetoworkspace, r+1
+    bind = $mod, Left, movetoworkspace, r-1
+    bind = $mod, L, movetoworkspace, r+1
+    bind = $mod, H, movetoworkspace, r-1
 
     bind = Alt, H, hy3:movefocus, l, visible, nowarp
     bind = Alt, J, hy3:movefocus, d, visible, nowarp
