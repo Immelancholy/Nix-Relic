@@ -71,7 +71,7 @@
     bindl = Alt, F10, pass, class:^(com.obsproject.Studio)$
 
 
-    bind = $mod, P, submap, player
+    bind = $mods, P, submap, player
     submap = player
     bindl = , P, exec, $playerctl play-pause
     bindel  = , O, exec, uwsm-app -- rmpc volume +1 # volume up
@@ -79,7 +79,7 @@
     bindel  = $mod, O, exec, $playerctl next # next
     bindel  = $mod, I, exec, $playerctl previous # next
     bind = , escape, submap, reset
-    bind = $mod, P, suvmap, reset
+    bind = $mod, P, submap, reset
     submap = reset
 
     bind = $mod, A, submap, move
@@ -137,7 +137,7 @@
     bind = , mouse_up, workspace, e+1
     bind = , mouse_down, workspace, e-1
     bind = , escape, submap, reset
-    bind = $mod, A, submap, reset
+    bind = , A, submap, reset
     submap = reset
 
     bind = $mod, L, workspace, r+1
@@ -158,10 +158,10 @@
     bind = $mod, X, togglespecialworkspace,
 
     bind = , Print, exec, uwsm-app -- ss.sh o
-    bind = $mod, Print, exec, uwsm-app -- ss.sh af
-    bind = $mods, Print, exec, uwsm-app -- ss.sh w
+    bind = Ctrl, Print, exec, uwsm-app -- ss.sh af
+    bind = Ctrl+Shift, Print, exec, uwsm-app -- ss.sh w
 
-    bind = $mods, P, submap, ss
+    bind = $mod, P, submap, ss
     submap = ss
     bind = , O, exec, uwsm-app -- ss.sh o
     bind = , A, exec, uwsm-app -- ss.sh af
