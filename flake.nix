@@ -3,6 +3,10 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     # nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
+    alejandra = {
+      url = "github:kamadorueda/alejandra/3.1.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     catppuccin.url = "github:catppuccin/nix";
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -96,6 +100,7 @@
     nix-flatpak,
     lanzaboote,
     nur,
+    alejandra,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -106,7 +111,7 @@
     # hyprMonitor = ", preferred, auto, 1"; # monitor for hyprland to use, leave this default and then edit it in post install by using hyprctl monitors to find your monitor
     hyprMonitor = "HDMI-A-1, 1920x1080@144, 0x0, 1, bitdepth, 8"; #example and also my monitor lol
   in {
-    formatter = nixpkgs.alejandra.system;
+    formatter = alejandra.defaultPackage.${system};
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         inherit system;
