@@ -9,18 +9,7 @@
         "$mod, F, exec, $browser"
         "$mod, E, exec, $files"
         "$mod, grave, exec, $menu"
-        "$mod, V, exec, $edit"
-        "$mod, W, togglefloating"
-        "$mod, Tab, hy3:togglefocuslayer"
-        "$mod, D, hy3:makegroup, h"
-        "$mod, S, hy3:makegroup, v"
-        "$mod, Z, hy3:makegroup, tab"
-        "$mod, I, hy3:changefocus, raise"
-        "$mods, I, hy3:changefocus, lower"
-        "$mod, C, hy3:expand, expand"
-        "$mods, C, hy3:expand, base"
-        "$mod, R, hy3:changegroup, opposite"
-
+        "$mod, C, exec, $edit"
         "$mods, Q, hy3:killactive"
         "Alt, Return, fullscreen, 1"
         "Alt+Shift, Return, fullscreen"
@@ -34,7 +23,7 @@
         "$mod, 0, workspace, 10"
         "$mod+Ctrl, 0, hy3:focustab, index, 10"
         "Ctrl+Alt, L, exec, uwsm-app -- swaylock -fF"
-        ''$mod, G, exec, $term --class "NixDots" uwsm app -- tnix''
+        ''$mod, D, exec, $term --class "NixDots" uwsm app -- tnix''
         "$mod, N, exec, uwsm-app -- cliphist.sh"
         "Alt+Shift, Tab, exec, rofi -show window -modi window"
         "$mod, M, exec, hyprgame"
@@ -84,6 +73,18 @@
 
     bind = $mod, A, submap, move
     submap = move
+    bind = Alt, Return, fullscreen, 1
+    bind = Alt+Shift, Return, fullscreen
+    bind = , Q, hy3:warpcursor
+    bind = , I, hy3:changefocus, raise
+    bind = $mod, I, hy3:changefocus, lower
+    bind = , W, togglefloating
+    bind = , C, hy3:expand, expand
+    bind = $mod, C, hy3:expand, base
+    bind = , E, hy3:changegroup, opposite"
+    bind = , D, hy3:makegroup, h
+    bind = , S, hy3:makegroup, v
+    bind = , Z, hy3:makegroup, tab
     bind = , H, hy3:movefocus, l, once
     bind = , J, hy3:movefocus, d, once
     bind = , K, hy3:movefocus, u, once
@@ -188,12 +189,9 @@
     bind = , P, submap, reset
     submap = reset
 
-    # bind = $mod, B, togglesplit
-    bind = $mod, B, hy3:changegroup, opposite
-
     bind = Ctrl+Shift, Escape, exec, uwsm app -- btop.desktop
 
-    bindd = $mod+Shift, P,Color Picker , exec, uwsm-app -- hyprpicker -a # Pick color (Hex) >> clipboard#
+    bindd = $mod, R,Color Picker , exec, uwsm-app -- hyprpicker -a # Pick color (Hex) >> clipboard#
 
     bind = , XF86Calculator, exec, uwsm-app -- qalculate-gtk
   '';
