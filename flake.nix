@@ -111,7 +111,7 @@
     # hyprMonitor = ", preferred, auto, 1"; # monitor for hyprland to use, leave this default and then edit it in post install by using hyprctl monitors to find your monitor
     hyprMonitor = "HDMI-A-1, 1920x1080@144, 0x0, 1, bitdepth, 8"; #example and also my monitor lol
   in {
-    formatter = alejandra.defaultPackage.${system};
+    formatter.${system} = nixpkgs.legacyPackages.${system}.alejandra;
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         inherit system;
