@@ -53,7 +53,7 @@
         offset = "(54, 18)";
         width = "(0, 300)";
         max_icon_size = 128;
-        font = "JetBrainsMono Nerd Font Mono 12";
+        font = "JetBrainsMono Nerd Font Mono 11";
       };
       urgency_low = {
         background = "#1e1e2ec0";
