@@ -18,7 +18,6 @@
     monitor = "${hyprMonitor}";
     input = {
       kb_layout = "gb";
-      kb_options = "fkeys:basic_13-24";
       follow_mouse = "1";
 
       sensitivity = "0";
