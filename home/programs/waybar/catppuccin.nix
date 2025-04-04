@@ -1,5 +1,5 @@
 {
-  programs.waybar.style =''
+  programs.waybar.style = ''
     @define-color rosewater #f5e0dc;
     @define-color flamingo #f2cdcd;
     @define-color pink #f5c2e7;
@@ -25,6 +25,6 @@
     @define-color surface0 #313244;
     @define-color base #1e1e2e;
     @define-color mantle #181825;
-    @define-color crust #11111b;  
+    @define-color crust #11111b;
   '';
 }
