@@ -77,10 +77,10 @@
     bind = Alt+Shift, Return, fullscreen
     bind = , Q, hy3:warpcursor
     bind = , I, hy3:changefocus, raise
-    bind = $mod, I, hy3:changefocus, lower
+    bind = Shift, I, hy3:changefocus, lower
     bind = , W, togglefloating
     bind = , C, hy3:expand, expand
-    bind = $mod, C, hy3:expand, base
+    bind = Shift, C, hy3:expand, base
     bind = , E, hy3:changegroup, opposite"
     bind = , D, hy3:makegroup, h
     bind = , S, hy3:makegroup, v
