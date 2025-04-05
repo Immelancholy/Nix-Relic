@@ -84,7 +84,7 @@
       cursor-size = 20;
     };
     "org/cinnamon/desktop/applications/terminal" = {
-      exec = "kitty.desktop";
+      exec = "kitty";
       # exec-arg = ""; # argument
     };
   };
