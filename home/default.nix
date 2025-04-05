@@ -64,6 +64,9 @@
       "autostart/input-mapper-autoload.desktop" = lib.mkIf nixosConfig.services.input-remapper.enable {
         source = "${nixosConfig.services.input-remapper.package}/share/applications/input-remapper-autoload.desktop";
       };
+      "vencord/settings/quickCss.css".text = ''
+        @import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha-mauve.theme.css");
+      '';
     };
   };
 
