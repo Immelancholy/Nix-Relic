@@ -50,8 +50,9 @@
       spicetify.enable = false;
       kitty.enable = false;
       gtk.flatpakSupport.enable = true;
-      vencord.enable = false;
-      vesktop.enable = false;
+      vencord.extraCss = ''
+        @import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha-mauve.theme.css");
+      '';
     };
   };
 }
