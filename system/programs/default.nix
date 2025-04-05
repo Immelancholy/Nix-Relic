@@ -96,7 +96,7 @@
     })
     (discord.override {
       withOpenASAR = true; # can do this here too
-      # withVencord = true;
+      withVencord = true;
     })
     libsForQt5.qt5.qtwayland
     kdePackages.qtwayland
