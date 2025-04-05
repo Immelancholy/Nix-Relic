@@ -59,7 +59,7 @@
       opener = {
         edit = [
           {
-            run = ''$HOME/.local/share/bin/nv.sh "$@"'';
+            run = ''nvim "$@"'';
             block = true;
             desc = ''nvim'';
             for = ''unix'';
