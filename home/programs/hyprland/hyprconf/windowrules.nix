@@ -3,7 +3,7 @@
         # windowrule = opacity 0.90 0.90,class:^(firefox)$
         # windowrule = opacity 0.90 0.90,class:^(Google-chrome)$
         # windowrule = opacity 0.90 0.90,class:^(Brave-browser)$
-        windowrule = opacity 0.90 0.90,class:^(zen)$
+        windowrule = opacity 0.90 0.90,class:^(zen-beta)$
         windowrule = opacity 1.0 override, title:(.*YouTube.*|.*Instagram.*)$
         windowrule = opacity 0.80 0.80,class:^(gcr-prompter)$
         windowrule = opacity 0.80 0.80,class:^(org.gnome.seahorse.Application)$
