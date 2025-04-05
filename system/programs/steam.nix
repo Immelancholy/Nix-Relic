@@ -92,7 +92,7 @@ in {
       pkgs.keyutils
       steamos-session-select
       steamos-select-branch
-      steamos-update
+      # steamos-update
       jupiter-biosupdate
     ];
     protontricks.enable = true;
