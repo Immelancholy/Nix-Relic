@@ -10,7 +10,7 @@
     )
     steamArgs=(
         # -tenfoot
-        -steamdeck
+        # -steamdeck
         -steamos3
         -pipewire-dmabuf
         -gamepadui
@@ -91,9 +91,9 @@ in {
       pkgs.libkrb5
       pkgs.keyutils
       steamos-session-select
-      steamos-select-branch
+      # steamos-select-branch
       # steamos-update
-      jupiter-biosupdate
+      # jupiter-biosupdate
     ];
     protontricks.enable = true;
   };
