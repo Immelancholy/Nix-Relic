@@ -73,6 +73,7 @@ in {
       extraEnv = {
         OBS_VKCAPTURE = true;
         MANGOHUD = true;
+        DXVK_HUD = "compiler";
       };
       extraLibraries = pkgs: [pkgs.xorg.libxcb];
     };
