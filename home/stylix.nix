@@ -50,6 +50,8 @@
       spicetify.enable = false;
       kitty.enable = false;
       gtk.flatpakSupport.enable = true;
+      vencord.enable = false;
+      vesktop.enable = false;
     };
   };
 }
