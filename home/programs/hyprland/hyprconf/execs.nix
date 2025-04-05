@@ -16,8 +16,7 @@
       "[workspace 4 silent] uwsm app -- qpwgraph"
       "[workspace 2 silent] $browser"
       "[workspace 2 silent] uwsm app -- teams-for-linux --minimized"
-      # "[workspace 3] sleep 1; uwsm app -- DiscordCanary"
-      "[workspace 3] sleep 1; uwsm app -- Discord"
+      "[workspace 3] sleep 1; uwsm app -- $discord"
       "sleep 12; systemctl restart --user cliphist cliphist-images remmina solaar" #These services tried to start to early idk
     ];
   };

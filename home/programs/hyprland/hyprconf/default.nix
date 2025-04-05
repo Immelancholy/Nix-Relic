@@ -15,6 +15,7 @@
     "$edit" = "uwsm app -- nvim.desktop";
     "$player" = "mpd";
     "$playerctl" = "uwsm app -- playerctl --player=$player";
+    "$discord" = "uwsm app -- vesktop.desktop";
     monitor = "${hyprMonitor}";
     input = {
       kb_layout = "gb";
