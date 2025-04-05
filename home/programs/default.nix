@@ -43,6 +43,10 @@
     systemdService.enable = true;
   };
   home.packages = with pkgs; [
+    (discord.override {
+      withOpenASAR = true; # can do this here too
+      withVencord = true;
+    })
     grim
     slurp
     hyprpicker
@@ -142,11 +146,6 @@
     qalculate-gtk
     libreoffice
     fd
-    # (discord-canary.override {
-    #   withOpenASAR = true; # can do this here too
-    #   withVencord = true;
-    # })
-
     obsidian
     obsidian-export
     wordnet

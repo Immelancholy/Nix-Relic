@@ -94,10 +94,7 @@
       withOpengl = true;
       withRtmp = true;
     })
-    # (discord.override {
-    #   withOpenASAR = true; # can do this here too
-    #   withVencord = true;
-    # })
+
     libsForQt5.qt5.qtwayland
     kdePackages.qtwayland
     inputs.swww.packages.${pkgs.system}.swww
