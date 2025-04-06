@@ -69,6 +69,28 @@ in {
               };
             };
           };
+          bind =
+            [
+              "$mod, R, hy3:changegroup, opposite"
+              "$mod, D, hy3:makegroup, h"
+              "$mod, S, hy3:makegroup, v"
+              "$mod, Z, hy3:makegroup, tab"
+              "$mods, 0, hy3:movetoworkspace, 10"
+              "$mod+Ctrl, 0, hy3:focustab, index, 10"
+            ]
+            ++ (
+              # workspaces
+              # binds $mod + [shift +] {1..9} to [move to] workspace {1..9}
+              builtins.concatLists (builtins.genList (
+                  i: let
+                    ws = i + 1;
+                  in [
+                    "$mods, code:1${toString i}, hy3:movetoworkspace, ${toString ws}"
+                    "$mod+Ctrl, code:1${toString i}, hy3:focustab, index, 0${toString ws}"
+                  ]
+                )
+                9)
+            );
         };
       };
     })

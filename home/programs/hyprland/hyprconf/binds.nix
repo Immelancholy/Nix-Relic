@@ -1,13 +1,7 @@
 {
   wayland.windowManager.hyprland.settings = {
-    bindl = [
-    ];
     bind =
       [
-        "$mod, R, hy3:changegroup, opposite"
-        "$mod, D, hy3:makegroup, h"
-        "$mod, S, hy3:makegroup, v"
-        "$mod, Z, hy3:makegroup, tab"
         "$mod, T, exec, $term"
         ''$mods, T, exec, $term --class "tmux" tmux''
         "$mod, F, exec, $browser"
@@ -23,9 +17,7 @@
         ''$mods, U, exec, [workspace 1 silent; float; size 402 1030; move 1508 40] $term --class "neo" uwsm app -- neo.sh''
         ''$mods, U, exec, [workspace 1 silent; float; size 620 354; move 10 40] $term --class "fastfetch" kitty @ launch --type overlay --env class="fastfetch"''
         "$mod, Delete, exec, rofi -show power-menu -modi power-menu:rofi-power-menu"
-        "$mods, 0, hy3:movetoworkspace, 10"
         "$mod, 0, workspace, 10"
-        "$mod+Ctrl, 0, hy3:focustab, index, 10"
         "Ctrl+Alt, L, exec, uwsm-app -- swaylock -fF"
         ''$mod, V, exec, $term --class "NixDots" uwsm app -- tnix''
         "$mod, N, exec, uwsm-app -- cliphist.sh"
@@ -40,8 +32,6 @@
               ws = i + 1;
             in [
               "$mod, code:1${toString i}, workspace, ${toString ws}"
-              "$mods, code:1${toString i}, hy3:movetoworkspace, ${toString ws}"
-              "$mod+Ctrl, code:1${toString i}, hy3:focustab, index, 0${toString ws}"
             ]
           )
           9)
