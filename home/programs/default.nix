@@ -18,7 +18,6 @@
     ./tmux.nix
     ./kitty.nix
     ./spicetify.nix
-    ./DAW
     ./swayidle.nix
     ./eww
     ./obs.nix
@@ -37,11 +36,6 @@
     enable = true;
   };
 
-  services.remmina = {
-    enable = true;
-    addRdpMimeTypeAssoc = true;
-    systemdService.enable = true;
-  };
   home.packages = with pkgs; [
     # (discord.override {
     #   withOpenASAR = true; # can do this here too
