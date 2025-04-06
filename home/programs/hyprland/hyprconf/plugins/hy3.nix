@@ -29,8 +29,7 @@ in {
         };
       };
     })
-    (mkIf cfg.useHy3
-      == true {
+    (mkIf cfg.useHy3 {
         wayland.windowManager.hyprland = {
           plugins = [
             inputs.hy3.packages.${pkgs.system}.hy3
