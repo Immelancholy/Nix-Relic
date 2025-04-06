@@ -4,7 +4,7 @@
   ...
 }: {
   wayland.windowManager.hyprland = {
-    useHy3 = true;
+    useHy3 = false;
     settings = {
       "$scr" = "${XDGBin}";
       "$term" = "uwsm app -- kitty";
