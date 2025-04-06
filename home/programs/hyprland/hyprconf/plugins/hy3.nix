@@ -16,20 +16,19 @@ in {
     };
   };
   config = mkMerge [
-    (mkIf cfg.useHy3
-      == false {
-        wayland.windowManager.hyprland = {
-          settings = {
-            general = {
-              layout = "dwindle";
-            };
-            dwindle = {
-              pseudotile = true;
-              preserve_split = true;
-            };
+    (mkIf !cfg.useHy3 {
+      wayland.windowManager.hyprland = {
+        settings = {
+          general = {
+            layout = "dwindle";
+          };
+          dwindle = {
+            pseudotile = true;
+            preserve_split = true;
           };
         };
-      })
+      };
+    })
     (mkIf cfg.useHy3
       == true {
         wayland.windowManager.hyprland = {
