@@ -19,7 +19,6 @@
     ./kitty.nix
     ./spicetify.nix
     ./swayidle.nix
-    ./eww
     ./obs.nix
     ./rofi
     ./scripts
@@ -136,8 +135,6 @@
     qpwgraph
     kdePackages.ark
     parted
-    teams-for-linux
-    # retroarch-free
     qalculate-gtk
     libreoffice
     fd
