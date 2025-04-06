@@ -4,7 +4,10 @@
   ...
 }: {
   wayland.windowManager.hyprland = {
-    useHy3 = true;
+    layout = {
+      dwindle.enable = false;
+      hy3.enable = true;
+    };
     useHyprspace = true;
     settings = {
       "$scr" = "${XDGBin}";
@@ -47,5 +50,6 @@
     ./execs.nix
     ./windowrules.nix
     ./plugins
+    ./layouts
   ];
 }
