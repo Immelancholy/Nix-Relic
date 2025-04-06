@@ -41,9 +41,14 @@
       source = ./backgrounds;
       recursive = true;
     };
-    ".zen/${user}.default/chrome" = {
-      source = "${inputs.catppuccinZen}/themes/Mocha/Mauve";
-      recursive = true;
+    ".zen/${user}.default/chrome/userChrome.css" = {
+      source = "${inputs.catppuccinZen}/themes/Mocha/Mauve/userChrome.css";
+    };
+    ".zen/${user}.default/chrome/userContent.css" = {
+      source = "${inputs.catppuccinZen}/themes/Mocha/Mauve/userContent.css";
+    };
+    ".zen/${user}.default/chrome/zen-logo-mocha.svg" = {
+      source = "${inputs.catppuccinZen}/themes/Mocha/Mauve/zen-logo-mocha.svg";
     };
     ".zen/profiles.ini".text = ''
       [Profile0]
