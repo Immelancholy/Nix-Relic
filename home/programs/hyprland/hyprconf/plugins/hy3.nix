@@ -24,7 +24,7 @@ in {
           };
           dwindle = {
             pseudotile = true;
-            preserve_splite = true;
+            preserve_split = true;
           };
         };
       };
