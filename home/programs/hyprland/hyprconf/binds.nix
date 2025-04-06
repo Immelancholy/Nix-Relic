@@ -1,5 +1,9 @@
 {
   wayland.windowManager.hyprland.settings = {
+    bindm = [
+      "$mod, mouse:272, movewindow"
+      "$mod, mouse:273, resizewindow"
+    ];
     bind =
       [
         "$mod, T, exec, $term"
@@ -22,6 +26,23 @@
         "$mod, N, exec, uwsm-app -- cliphist.sh"
         "Alt+Shift, Tab, exec, rofi -show window -modi window"
         "$mod, M, exec, hyprgame"
+        "$mod, L, workspace, r+1"
+        "$mod, H, workspace, r-1"
+        "$mod, J, workspace, empty"
+        "$mod, Right, workspace, r+1"
+        "$mod, Left, workspace, r-1"
+        "$mod, Down, workspace, empty"
+        "$mod, mouse_up, workspace, e+1"
+        "$mod, mouse_down, workspace, e-1"
+        "$mods, mouse_up, workspace, r+1"
+        "$mods, mouse_down, workspace, r-1"
+        ''Ctrl+Shift, Escape, exec, uwsm app -- $term --title "btop" btop''
+        ", XF86Calculator, exec, uwsm-app -- qalculate-gtk"
+        "$mod, X, togglespecialworkspace"
+        ", Print, exec, uwsm-app -- ss.sh o"
+        "Ctrl, Print, exec, uwsm-app -- ss.sh af"
+        "Ctrl+Shift, Print, exec, uwsm-app -- ss.sh w"
+        "$mod, O,Color Picker , exec, uwsm-app -- hyprpicker -a"
       ]
       ++ (
         # workspaces
@@ -35,24 +56,30 @@
           )
           9)
       );
+    bindl = [
+      ", XF86AudioMute, exec, $playerctl play-pause #pause-play media"
+      ", mouse:277, exec, $playerctl play-pause" # toggle between media play and pause
+      "$mod, mouse:282, exec, $playerctl next" #next
+      "$mod, mouse:281, exec, $playerctl previous" #previous,
+      ", F10, pass, class:^(com.obsproject.Studio)$"
+      ", F12, pass, class:^(com.obsproject.Studio)$"
+      ", F9, pass, class:^(com.obsproject.Studio)$"
+      "Alt, F10, pass, class:^(com.obsproject.Studio)$"
+    ];
+    bindel = [
+      ", XF86AudioLowerVolume, exec, uwsm-app -- rmpc volume -1" # decrease volume
+      ", XF86AudioRaiseVolume, exec, uwsm-app -- rmpc volume +1" # increase volume
+      ", mouse:281, exec, uwsm-app -- rmpc volume +1" # volume up
+      ", mouse:282, exec, uwsm-app -- rmpc volume -1" # volume down
+    ];
+    bindn = [
+      ", mouse:275, exec, pushToMuteChromium"
+    ];
+    bindnr = [
+      ", mouse:275, exec, pushToMuteChromium"
+    ];
   };
   wayland.windowManager.hyprland.extraConfig = ''
-    bindl  = , XF86AudioMute, exec, $playerctl play-pause #pause-play media
-    bindel = , XF86AudioLowerVolume, exec, uwsm-app -- rmpc volume -1 # decrease volume
-    bindel = , XF86AudioRaiseVolume, exec, uwsm-app -- rmpc volume +1 # increase volume
-
-    bindl  = , mouse:277, exec, $playerctl play-pause # toggle between media play and pause
-    bindel  = , mouse:281, exec, uwsm-app -- rmpc volume +1 # volume up
-    bindel  = , mouse:282, exec, uwsm-app -- rmpc volume -1 # volume down
-    bindl  = $mod, mouse:282, exec, $playerctl next #next
-    bindl  = $mod, mouse:281, exec, $playerctl previous #previous,
-    bindl = , F10, pass, class:^(com.obsproject.Studio)$
-    bindl = , F12, pass, class:^(com.obsproject.Studio)$
-    bindl = , F9, pass, class:^(com.obsproject.Studio)$
-    bindl = Alt, F10, pass, class:^(com.obsproject.Studio)$
-    bindn = , mouse:275, exec, pushToMuteChromium
-    bindnr = , mouse:275, exec, pushToMuteChromium
-
     bind = $mods, P, submap, player
     submap = player
     bindl = , P, exec, $playerctl play-pause
@@ -64,25 +91,6 @@
     bind = $mod, P, submap, reset
     submap = reset
 
-    bind = $mod, L, workspace, r+1
-    bind = $mod, H, workspace, r-1
-    bind = $mod, J, workspace, empty
-    bind = $mod, Right, workspace, r+1
-    bind = $mod, Left, workspace, r-1
-    bind = $mod, Down, workspace, empty
-    bind = $mod, mouse_up, workspace, e+1
-    bind = $mod, mouse_down, workspace, e-1
-    bind = $mods, mouse_up, workspace, r+1
-    bind = $mods, mouse_down, workspace, r-1
-
-    bindm = $mod, mouse:272, movewindow
-    bindm = $mod, mouse:273, resizewindow
-    bind = $mod, X, togglespecialworkspace,
-
-    bind = , Print, exec, uwsm-app -- ss.sh o
-    bind = Ctrl, Print, exec, uwsm-app -- ss.sh af
-    bind = Ctrl+Shift, Print, exec, uwsm-app -- ss.sh w
-
     bind = $mod, P, submap, ss
     submap = ss
     bind = , O, exec, uwsm-app -- ss.sh o
@@ -91,11 +99,5 @@
     bind = , escape, submap, reset
     bind = , P, submap, reset
     submap = reset
-
-    bind = Ctrl+Shift, Escape, exec, uwsm app -- $term --title "btop" btop
-
-    bindd = $mod, O,Color Picker , exec, uwsm-app -- hyprpicker -a # Pick color (Hex) >> clipboard#
-
-    bind = , XF86Calculator, exec, uwsm-app -- qalculate-gtk
   '';
 }
