@@ -4,25 +4,20 @@
   ...
 }:
 with lib; let
-  cfg = config.wayland.windowManager.hyprland.layout.dwindle;
+  cfg = config.wayland.windowManager.hyprland.layout.master;
 in {
-  options.wayland.windowManager.hyprland.layout.dwindle = {
+  options.wayland.windowManager.hyprland.layout.master = {
     enable = mkOption {
       type = types.bool;
       default = false;
-      description = ''Use Hy3 tyling style'';
+      description = ''Use Hyprland Master layout'';
     };
   };
-
   config = mkIf cfg.enable {
     wayland.windowManager.hyprland = {
       settings = {
         general = {
-          layout = "dwindle";
-        };
-        dwindle = {
-          pseudotile = true;
-          preserve_split = true;
+          layout = "master";
         };
         bind =
           [
@@ -31,6 +26,9 @@ in {
             "$mod+Ctrl, 0, changegroupactive, index, 10"
             "$mods, Q, killactive"
             "$mods, X, movetoworkspacesilent, special"
+            "$mod, R, orientationcycle"
+            "$mod, S, orientationbottom"
+            "$mod, D, orientationleft"
           ]
           ++ (
             # workspaces
@@ -49,6 +47,8 @@ in {
       extraConfig = ''
         bind = $mod, A, submap, move
         submap = move
+        bind = , A, addmaster
+        bind = , D, removemaster
         bind = Alt, Return, fullscreen, 1
         bind = Alt+Shift, Return, fullscreen
         bind = , W, togglefloating

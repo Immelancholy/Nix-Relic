@@ -6,6 +6,7 @@
   wayland.windowManager.hyprland = {
     # ONLY ENABLE 1 LAYOUT!!
     layout = {
+      master.enable = false;
       dwindle.enable = false;
       hy3.enable = true;
     };
