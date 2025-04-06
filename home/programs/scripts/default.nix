@@ -19,5 +19,6 @@
     ./tmux_nix.nix
     ./tmux_notes.nix
     ./ss.nix
+    ./mutevesktop.nix
   ];
 }
