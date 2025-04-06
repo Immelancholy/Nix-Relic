@@ -64,6 +64,7 @@ in {
               "$mod, Z, hy3:makegroup, tab"
               "$mods, 0, hy3:movetoworkspace, 10"
               "$mod+Ctrl, 0, hy3:focustab, index, 10"
+              "$mods, Q, hy3:killactive"
             ]
             ++ (
               # workspaces

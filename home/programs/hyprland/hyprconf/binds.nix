@@ -8,7 +8,6 @@
         "$mod, E, exec, $files"
         "$mod, grave, exec, $menu"
         "$mod, C, exec, $edit"
-        "$mods, Q, hy3:killactive"
         "Alt, Return, fullscreen, 1"
         "Alt+Shift, Return, fullscreen"
         ''$mods, U, exec, [workspace 1 silent; float; size 858 559; move 640 40] $term --class "rmpc" uwsm app -- rmpc.sh''
