@@ -6,7 +6,7 @@
   ...
 }:
 with lib; let
-  cfg = config.wayland.windowManager.hyprland.useHy3;
+  cfg = config.wayland.windowManager.hyprland;
 in {
   options.wayland.windowManager.hyprland.useHy3 = {
     enable = mkOption {
@@ -15,7 +15,7 @@ in {
       description = ''Use Hy3 tyling style'';
     };
   };
-  config = mkIf cfg.enable {
+  config = mkIf cfg.useHy3.enable {
     plugins = [
       inputs.hy3.packages.${pkgs.system}.hy3
     ];
