@@ -50,6 +50,7 @@
       spicetify.enable = false;
       kitty.enable = false;
       gtk.flatpakSupport.enable = true;
+      hyprland.enable = false;
     };
   };
 }
