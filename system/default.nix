@@ -10,6 +10,7 @@
     ./programs
     ./extracache.nix
     ./env.nix
+    ./drivers.nix
   ];
   services.gnome.gnome-keyring = {
     enable = true;
