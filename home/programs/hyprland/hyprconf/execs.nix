@@ -12,11 +12,11 @@
       ''[workspace 1 silent; float; size 620 666; move 10 404] $term --class "btop" uwsm app -- btop.sh''
       ''[workspace 1 silent; float; size 402 1030; move 1508 40] $term --class "neo" uwsm app -- neo.sh''
       ''[workspace 1 silent; float; size 620 354; move 10 40] $term --class "fastfetch" kitty @ launch --type overlay --env class="fastfetch"''
-      "[workspace 4 silent] uwsm app -- qpwgraph"
-      "[workspace 4 silent] uwsm app -- qpwgraph"
       "[workspace 2 silent] $browser"
       "[workspace 2 silent] uwsm app -- teams-for-linux --minimized"
-      "[workspace 3] sleep 1; uwsm app -- $discord"
+      "[workspace 3 silent] uwsm app -- $discord"
+      "[workspace 4 silent] uwsm app -- qpwgraph"
+      "[workspace 4 silent] uwsm app -- qpwgraph"
       "sleep 12; systemctl restart --user cliphist cliphist-images remmina solaar" #These services tried to start to early idk
     ];
   };
