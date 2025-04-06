@@ -39,13 +39,12 @@
         # smart_split = true;
       };
     };
-
-    imports = [
-      ./binds.nix
-      ./theme
-      ./execs.nix
-      ./windowrules.nix
-      ./plugins
-    ];
   };
+  imports = [
+    ./binds.nix
+    ./theme
+    ./execs.nix
+    ./windowrules.nix
+    ./plugins
+  ];
 }
