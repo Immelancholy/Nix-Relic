@@ -96,7 +96,7 @@
         windowrule = size 900 580,title:^(rmpc)$
         windowrule = move 70 235,title:^(rmpc)$
 
-        windowrule = workspace 3, class:^(vesktop)$
+        windowrule = workspace 3 silent, class:^(vesktop)$
 
         windowrule = float,title:^(cava)$
         windowrule = size 840 672,title:^(cava)$
