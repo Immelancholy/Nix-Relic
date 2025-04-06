@@ -9,9 +9,13 @@ with lib; let
   cfg = config.wayland.windowManager.hyprland.useHy3;
 in {
   options.wayland.windowManager.hyprland.useHy3 = {
-    enable = mkEnableOption "Use Hy3 tyling style";
+    enable = mkOption {
+      type = types.bool;
+      default = true;
+      description = ''Use Hy3 tyling style'';
+    };
   };
-  config = mkIf cfg.enable {
+  useHy3 = mkIf cfg.enable {
     wayland.windowManager.hyprland = {
       plugins = [
         inputs.hy3.packages.${pkgs.system}.hy3
