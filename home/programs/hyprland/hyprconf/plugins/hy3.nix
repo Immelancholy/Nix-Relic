@@ -8,6 +8,17 @@
 with lib; let
   cfg = config.wayland.windowManager.hyprland;
 in {
+  wayland.windowManager.hyprland = {
+    settings = {
+      general = {
+        layout = "dwindle";
+      };
+      dwindle = {
+        pseudotile = true;
+        preserve_splite = true;
+      };
+    };
+  };
   options.wayland.windowManager.hyprland = {
     useHy3 = mkOption {
       type = types.bool;
@@ -33,18 +44,18 @@ in {
             text_font = "JetBrainsMono Nerd Font Mono Bold"; # default: Sans
             text_height = 9;
             border_width = 2;
-            col.active = "rgba(1e1e2eB5)";
-            col.active.border = "rgba(cba6f7ff)";
-            col.active.text = "rgba(cdd6f4ff)";
-            col.focused = "rgba(1e1e2eB5)";
-            col.focused.border = "rgba(6c7086cc)";
-            col.focused.text = "rgba(7f849cff)";
-            col.inactive = "rgba(1e1e2eB5)";
-            col.inactive.border = "rgba(b4befecc)";
-            col.inactive.text = "rgba(cdd6f4ff)";
-            col.urgent = "rgba(1e1e2eB5)";
-            col.urgent.border = "rgba(f9e2afff)";
-            col.urgent.text = "rgba(cdd6f4ff)";
+            "col.active" = "rgba(1e1e2eB5)";
+            "col.active.border" = "rgba(cba6f7ff)";
+            "col.active.text" = "rgba(cdd6f4ff)";
+            "col.focused" = "rgba(1e1e2eB5)";
+            "col.focused.border" = "rgba(6c7086cc)";
+            "col.focused.text" = "rgba(7f849cff)";
+            "col.inactive" = "rgba(1e1e2eB5)";
+            "col.inactive.border" = "rgba(b4befecc)";
+            "col.inactive.text" = "rgba(cdd6f4ff)";
+            "col.urgent" = "rgba(1e1e2eB5)";
+            "col.urgent.border" = "rgba(f9e2afff)";
+            "col.urgent.text" = "rgba(cdd6f4ff)";
           };
           # no_gaps_when_only = 1
           group_inset = 4;
