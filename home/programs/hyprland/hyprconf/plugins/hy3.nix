@@ -23,7 +23,7 @@ in {
         ];
         settings = {
           general = {
-            layout = mkForce "hy3";
+            layout = "hy3";
           };
           plugin = {
             hy3 = {
