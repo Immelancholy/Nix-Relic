@@ -71,13 +71,14 @@ git clone https://github.com/Immelancholy/Nix-Dotfiles.git
           ./system/secboot.nix # uncomment this to disable secureboot
 
 ```
-* Then go into the modules folder and edit default.nix and comment/uncomment these modules to switch the GPU drivers for your pc.
+* Then go into the system folder and edit drivers.nix and set to your gpu.
 
-```{
-  imports = [
-    ./nvidia.nix # For Nvidia Drivers
-    #./amd.nix # For AMD Drivers
-  ];
+```
+{
+  drivers = {
+    amd.enable = false;
+    nvidia.enable = true;
+  };
 }
 ```
 * If you use nvidia make sure whether to select if you want to use the open source drivers in the nvidia.nix file:
