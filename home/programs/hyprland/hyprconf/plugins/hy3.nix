@@ -81,7 +81,7 @@ in {
         };
       };
     })
-    (mkIf cfg.!useHy3 {
+    (mkIf ! (cfg.useHy3) {
       wayland.windowManager.hyprland = {
         settings = {
           general = {
