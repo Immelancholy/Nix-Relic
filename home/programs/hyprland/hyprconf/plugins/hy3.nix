@@ -8,7 +8,7 @@
 with lib; let
   cfg = config.wayland.windowManager.hyprland.useHy3;
 in {
-  options.wayland.windowManager.hyprland.useHy3 = {
+  options.wayland.windowManager.hyprland = {
     enable = mkEnableOption "Use Hy3 tyling style";
   };
   config = mkIf cfg.enable {
