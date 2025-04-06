@@ -41,7 +41,7 @@
       source = ./backgrounds;
       recursive = true;
     };
-    ".zen/${user}.default" = {
+    ".zen/${user}.default/chrome" = {
       source = "${inputs.catppuccinZen}/themes/Mocha/Mauve";
       recursive = true;
     };
