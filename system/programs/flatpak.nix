@@ -15,6 +15,7 @@
       }
     ];
     packages = [
+      "org.gimp.GIMP"
     ];
   };
 }
