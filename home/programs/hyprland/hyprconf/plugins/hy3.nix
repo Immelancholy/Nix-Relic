@@ -17,7 +17,7 @@ in {
   };
   config = mkMerge [
     {
-      config.wayland.windowManager.hyprland = {
+      wayland.windowManager.hyprland = {
         settings = {
           general = {
             layout = "dwindle";
