@@ -36,7 +36,7 @@
     ];
   };
 
-  services.solaar.enable = true;
+  services.solaar.enable = false;
 
   networking.hostName = "nixos";
 
