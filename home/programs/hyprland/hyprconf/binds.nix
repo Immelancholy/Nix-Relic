@@ -61,6 +61,8 @@
     bindl = , F12, pass, class:^(com.obsproject.Studio)$
     bindl = , F9, pass, class:^(com.obsproject.Studio)$
     bindl = Alt, F10, pass, class:^(com.obsproject.Studio)$
+    bindn = , mouse:275, exec, pushToMuteVesktop
+    bindnr = , mouse:275, exec, pushToMuteVesktop
 
 
     bind = $mods, P, submap, player
