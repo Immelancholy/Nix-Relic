@@ -16,8 +16,10 @@ in {
       plugins = [
         inputs.hy3.packages.${pkgs.system}.hy3
       ];
-      general = {
-        layout = mkForce "hy3";
+      settings = {
+        general = {
+          layout = "hy3";
+        };
       };
       extraConfig = ''
         plugin {
