@@ -114,7 +114,7 @@ sudo nixos-rebuild boot --flake .
 * Remember to set default device to Desktop Output and Desktop Input in pavucontrol (Not necessary but I would recommended)
 * Set default device to Commes Output and Commes Input in discord lol (Again not necessary but splitting desktop and commes audio is useful)
 * Then set up a qpwgraph patchbay (this launches on workspace 4 on boot) to pin the output and input virtual devices to your audio device.
-* enable secureboot (optional) (set it up using the guide [here](https://github.com/nix-community/lanzaboote/blob/master/docs/QUICK_START.md)).
+* enable secureboot in system/boot.nix (optional) (set it up using the guide [here](https://github.com/nix-community/lanzaboote/blob/master/docs/QUICK_START.md)).
 * Set up your monitor (optional)
 ```
 
