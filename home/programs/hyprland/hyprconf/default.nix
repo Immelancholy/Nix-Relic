@@ -17,6 +17,7 @@
     "$playerctl" = "uwsm app -- playerctl --player=$player";
     "$discord" = "uwsm app -- vesktop.desktop";
     monitor = "${hyprMonitor}";
+    useHy3 = true;
     input = {
       kb_layout = "gb";
       follow_mouse = "1";
