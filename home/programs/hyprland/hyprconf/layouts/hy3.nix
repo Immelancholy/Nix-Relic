@@ -133,6 +133,17 @@ in {
         bind = Alt, Up, hy3:movefocus, u, visible, nowarp
         bind = Alt, Right, hy3:movefocus, r, visible, nowarp
 
+        bind = , 1, hy3:focustab, index, 01
+        bind = , 2, hy3:focustab, index, 02
+        bind = , 3, hy3:focustab, index, 03
+        bind = , 4, hy3:focustab, index, 04
+        bind = , 5, hy3:focustab, index, 05
+        bind = , 6, hy3:focustab, index, 06
+        bind = , 7, hy3:focustab, index, 07
+        bind = , 8, hy3:focustab, index, 08
+        bind = , 9, hy3:focustab, index, 09
+        bind = , 10, hy3:focustab, index, 10
+
         bind = Shift, H, hy3:movewindow, l
         bind = Shift, H, hy3:warpcursor
         bind = Shift, J, hy3:movewindow, d
