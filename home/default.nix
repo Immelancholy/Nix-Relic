@@ -2,6 +2,7 @@
   nixosConfig,
   lib,
   user,
+  inputs,
   ...
 }: {
   home.username = "${user}";
@@ -41,7 +42,7 @@
       recursive = true;
     };
     ".zen/${user}.default" = {
-      source = ./programs/zen;
+      source = "${inputs.catppuccinZen}/themes/Mocha/Mauve";
       recursive = true;
     };
     ".zen/profiles.ini".text = ''
