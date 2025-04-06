@@ -67,6 +67,8 @@ in {
               "$mods, Q, hy3:killactive"
               "$mod, Q, hy3:warpcursor"
               "$mods, X, hy3:movetoworkspace, special"
+              "$mod, Tab, hy3:togglefocuslayer"
+              "$mod, W, togglefloating"
             ]
             ++ (
               # workspaces

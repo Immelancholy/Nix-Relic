@@ -1,32 +1,46 @@
 {
   pkgs,
   inputs,
+  lib,
   ...
-}: {
-  wayland.windowManager.hyprland = {
-    plugins = [
-      inputs.Hyprspace.packages.${pkgs.system}.Hyprspace
-    ];
-    extraConfig = ''
-      bind = $Alt, Tab, overview:toggle
-      # bind = $mod+Shift, Tab, overview:toggle, all
+}:
+with lib; let
+  cfg = config.wayland.windowManager.hyprland;
+in {
+  options.wayland.windowManager.hyprland = {
+    useHyprspace = mkOption {
+      type = types.bool;
+      default = false;
+      description = ''Use Hy3 tyling style'';
+    };
+  };
+  config = mkIf cfg.useHyprspace {
+    wayland.windowManager.hyprland = {
+      plugins = [
+        inputs.Hyprspace.packages.${pkgs.system}.Hyprspace
+      ];
+      settings = {
+        bind = [
+          "$Alt, Tab, overview:toggle"
+        ];
 
-      plugin {
-        overview {
-          onBottom = true
-          workspaceMargin = 11
-          workspaceBorderSize = 2
-          centerAligned = true
-          panelHeight = 320
-          drawActiveWorkspace = true
-          switchOnDrop = true
-          affectStrut = false
+        plugin = {
+          overview = {
+            onBottom = true;
+            workspaceMargin = 11;
+            workspaceBorderSize = 2;
+            centerAligned = true;
+            panelHeight = 320;
+            drawActiveWorkspace = true;
+            switchOnDrop = true;
+            affectStrut = false;
 
-          workspaceActiveBorder = rgba(cba6f7ff)
-          workspaceInactiveBorder = rgba(b4befecc)
-          disableBlur = false
-        }
-      }
-    '';
+            workspaceActiveBorder = "rgba(cba6f7ff)";
+            workspaceInactiveBorder = "rgba(b4befecc)";
+            disableBlur = false;
+          };
+        };
+      };
+    };
   };
 }
