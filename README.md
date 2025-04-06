@@ -55,22 +55,6 @@ git clone https://github.com/Immelancholy/Nix-Dotfiles.git
     # hyprMonitor = "HDMI-A-1, 1920x1080@144, 0x0, 1, bitdepth, 8"; #example and also my monitor lol
   in {
 ```
-* enable/disable secureboot (you'll want this disabled on first boot and then set it up using the guide [here](https://github.com/nix-community/lanzaboote/blob/master/docs/QUICK_START.md)).
-```
-} @ inputs: let
-    system = "x86_64-linux";
-    user = "mela"; # Replace with your username
-    git = "Immelancholy"; #Replace with your Git username
-    email = "lenalowes0@gmail.com"; # Replace with your Git email
-  in {
-    nixosConfigurations = {
-      nixos = nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = {inherit inputs user git email;};
-        modules = [
-          ./system/secboot.nix # uncomment this to disable secureboot
-
-```
 * Then go into the system folder and edit drivers.nix and set to your gpu.
 
 ```
@@ -130,6 +114,7 @@ sudo nixos-rebuild boot --flake .
 * Remember to set default device to Desktop Output and Desktop Input in pavucontrol (Not necessary but I would recommended)
 * Set default device to Commes Output and Commes Input in discord lol (Again not necessary but splitting desktop and commes audio is useful)
 * Then set up a qpwgraph patchbay (this launches on workspace 4 on boot) to pin the output and input virtual devices to your audio device.
+* enable secureboot (optional) (set it up using the guide [here](https://github.com/nix-community/lanzaboote/blob/master/docs/QUICK_START.md)).
 * Set up your monitor (optional)
 ```
 
