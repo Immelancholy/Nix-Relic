@@ -26,9 +26,9 @@ in {
             "$mod+Ctrl, 0, changegroupactive, index, 10"
             "$mods, Q, killactive"
             "$mods, X, movetoworkspacesilent, special"
-            "$mod, R, orientationcycle"
-            "$mod, S, orientationbottom"
-            "$mod, D, orientationleft"
+            "$mod, R, layoutmsg, orientationcycle"
+            "$mod, S, layoutmsg, orientationbottom"
+            "$mod, D, layoutmsg, orientationleft"
           ]
           ++ (
             # workspaces
@@ -47,8 +47,8 @@ in {
       extraConfig = ''
         bind = $mod, A, submap, move
         submap = move
-        bind = , A, addmaster
-        bind = , D, removemaster
+        bind = , A, layoutmsg, addmaster
+        bind = , D, layoutmsg, removemaster
         bind = Alt, Return, fullscreen, 1
         bind = Alt+Shift, Return, fullscreen
         bind = , W, togglefloating

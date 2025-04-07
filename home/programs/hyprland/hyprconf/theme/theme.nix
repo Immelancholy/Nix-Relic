@@ -13,6 +13,13 @@
       "col.border_inactive" = "rgba(b4befecc) rgba(6c7086cc) 45deg";
       "col.border_locked_active" = "rgba(cba6f7ff) rgba(89dcebff) rgba(f5e0dcff) 40deg";
       "col.border_locked_inactive" = "rgba(b4befecc) rgba(6c7086cc) 45deg";
+      groupbar = {
+        font_size = 12;
+        gradients = false;
+        text_color = "rgba(cdd6f4ff)";
+        "col.active" = "rgba(cba6f7ff)";
+        "col.inactive" = "rgba(b4befecc)";
+      };
     };
 
     decoration = {
