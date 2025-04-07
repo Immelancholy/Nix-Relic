@@ -28,7 +28,6 @@ in {
           [
             "$mod, Z, togglegroup"
             "$mods, 0, movetoworkspacesilent, 10"
-            "$mod+Ctrl, 0, changegroupactive, index, 10"
             "$mods, Q, killactive"
             "$mods, X, movetoworkspacesilent, special"
           ]
@@ -40,7 +39,6 @@ in {
                   ws = i + 1;
                 in [
                   "$mods, code:1${toString i}, movetoworkspacesilent, ${toString ws}"
-                  "$mod+Ctrl, code:1${toString i}, changegroupactive, index, 0${toString ws}"
                 ]
               )
               9)
@@ -75,6 +73,11 @@ in {
         bind = $mod, L, workspace, r+1
         bind = $mod, H, workspace, r-1
         bind = $mod, J, workspace, empty
+
+        bind = Ctrl, H, changegroupactive, b
+        bind = Ctrl, L, changegroupactive, f
+        bind = Ctrl, Right, changegroupactive, b
+        bind = Ctrl, Left, changegroupactive, f
 
         bind = Shift, H, movewindow, l
         bind = Shift, J, movewindow, d
