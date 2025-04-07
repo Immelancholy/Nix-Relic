@@ -43,8 +43,6 @@
     vesktop
     grim
     slurp
-    hyprpicker
-    hyprshot
     inputs.zen-browser.packages."${system}".beta
     pipes
     lazygit
@@ -55,8 +53,6 @@
     libsixel
 
     shotcut
-
-    hyprcursor
 
     krita
 

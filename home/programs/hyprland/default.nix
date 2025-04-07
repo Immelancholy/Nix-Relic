@@ -20,6 +20,11 @@
   };
   services.hyprpolkitagent.enable = true;
 
+  home.packages = with pkgs; [
+    hyprpicker
+    hyprshot
+  ];
+
   imports = [
     ./hyprconf
   ];
