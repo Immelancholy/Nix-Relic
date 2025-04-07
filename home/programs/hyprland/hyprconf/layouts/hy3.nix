@@ -83,8 +83,8 @@ in {
               9)
           );
         bindn = [
-          ", mouse_down, hy3:focustab, r, require_hovered"
-          ", mouse_up, hy3:focustab, l, require_hovered"
+          ", mouse_down, hy3:focustab, r, require_hovered, wrap"
+          ", mouse_up, hy3:focustab, l, require_hovered, wrap"
         ];
       };
       extraConfig = ''
@@ -164,6 +164,15 @@ in {
         bind = , mouse_down, workspace, e-1
         bind = $mod, mouse_up, workspace, r+1
         bind = $mod, mouse_down, workspace, r-1
+
+        bind = Shift+Alt, H, hy3:movewindow, l
+        bind = Shift+Alt, J, hy3:movewindow, d
+        bind = Shift+Alt, K, hy3:movewindow, u
+        bind = Shift+Alt, L, hy3:movewindow, r
+        bind = Shift+Alt, Right, hy3:movewindow, r
+        bind = Shift+Alt, Down, hy3:movewindow, d
+        bind = Shift+Alt, Up, hy3:movewindow, u
+        bind = Shift+Alt, Left, hy3:movewindow, l
 
         bind = , R, submap, resize
         submap = resize
