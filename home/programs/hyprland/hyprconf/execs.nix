@@ -2,10 +2,8 @@
   wayland.windowManager.hyprland.settings = {
     exec-once = [
       "systemctl restart --user nm-applet"
-      "systemctl stop --user cliphist cliphist-images remmina"
+      "sleep 10; systemctl restart --user remmina"
       ''uwsm app -- mpvpaper -f -p -o "--loop" '*' $HOME/Pictures/wallpapers/Neon-Beast-Girl.mp4''
-      # "uwsm app -- wl-paste --type text --watch cliphist store # Stores only image data"
-      # "uwsm app -- wl-paste --type image --watch cliphist store # Stores only image data"
       ''[workspace 1 silent; float; size 858 559; move 640 40] $term --class "rmpc" uwsm app -- rmpc.sh''
       ''[workspace 1 silent; float; size 858 462; move 640 609] $term --class "cava" uwsm app -- cava.sh''
       ''[workspace 1 silent; float; size 620 666; move 10 404] $term --class "btop" uwsm app -- btop.sh''
@@ -16,7 +14,6 @@
       "uwsm app -- $discord"
       "[workspace 4 silent] uwsm app -- qpwgraph"
       "[workspace 4 silent] uwsm app -- qpwgraph"
-      "sleep 12; systemctl restart --user cliphist cliphist-images remmina solaar" #These services tried to start to early idk
     ];
   };
 }
