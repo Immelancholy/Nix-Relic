@@ -9,10 +9,8 @@
     ./cava.nix
     ./checkshell.nix
     ./cliphist.nix
-    ./mpdchck.nix
     ./sr.nix
     ./neo.nix
-    # ./nv.nix
     ./rmpc.nix
     ./swww.nix
     ./tmux_dev.nix
