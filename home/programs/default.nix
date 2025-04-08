@@ -128,7 +128,6 @@
     fortune
     cowsay
     lz4
-    qpwgraph
     kdePackages.ark
     parted
     qalculate-gtk
