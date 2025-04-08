@@ -2,7 +2,6 @@
   wayland.windowManager.hyprland.settings = {
     exec-once = [
       "systemctl restart --user nm-applet"
-      "sleep 10; systemctl restart --user remmina"
       ''uwsm app -- mpvpaper -f -p -o "--loop" '*' $HOME/Pictures/wallpapers/Neon-Beast-Girl.mp4''
       ''[workspace 1 silent; float; size 858 559; move 640 40] $term --class "rmpc" uwsm app -- rmpc.sh''
       ''[workspace 1 silent; float; size 858 462; move 640 609] $term --class "cava" uwsm app -- cava.sh''
