@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  home.packages = [
+  environment.systemPackages = [
     (pkgs.writeShellScriptBin "hyprgame" ''
       HYPRGAMEMODE=$(hyprctl getoption animations:enabled | sed -n '1p' | awk '{print $2}')
 
@@ -29,14 +29,14 @@
               hyprctl dispatch signalwindow class:rmpc,9
               hyprctl dispatch signalwindow class:fastfetch,9
               pkill mpvpaper
-              pkill mpdchck.sh
+              systemctl stop --user mpdchck
               hyprctl dispatch exec '[workspace 1 silent; float; size 1118 710; move 401 145] uwsm app -- kitty --class "rmpc" uwsm app -- rmpc.sh'
               exit
       else
               hyprctl dispatch signalwindow class:rmpc,9
               hyprctl reload config-only -q
               uwsm app -- mpvpaper -f -p -o "--loop" '*' $HOME/Pictures/wallpapers/Neon-Beast-Girl.mp4
-              hyprctl dispatch exec uwsm app -- mpdchck.sh
+              systemctl start --user mpdchck
               hyprctl dispatch exec '[workspace 1 silent; float; size 858 559; move 640 40] uwsm app -- kitty --class "rmpc" uwsm app -- rmpc.sh'
               hyprctl dispatch exec '[workspace 1 silent; float; size 858 462; move 640 609] uwsm app -- kitty --class "cava" uwsm app -- cava.sh'
               hyprctl dispatch exec '[workspace 1 silent; float; size 620 666; move 10 404] uwsm app -- kitty --class "btop" uwsm app -- btop.sh'

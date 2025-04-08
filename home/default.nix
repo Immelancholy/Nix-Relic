@@ -73,6 +73,16 @@
       "vesktop/themes/mochaMauve.css".text = ''
         @import url("https://catppuccin.github.io/discord/dist/catppuccin-mocha-mauve.theme.css");
       '';
+      "neo/colors".text = ''
+        neo_color_version 1
+        -1
+        177
+        141
+        183
+        153
+        224
+        225
+      '';
     };
   };
 

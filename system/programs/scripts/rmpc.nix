@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  home.packages = [
+  environment.systemPackages = [
     (pkgs.writeShellScriptBin "rmpc.sh" ''
       kitty @ set-spacing padding=2
       kitty @ set-font-size 9.5

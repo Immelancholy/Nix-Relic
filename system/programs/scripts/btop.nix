@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  home.packages = [
+  environment.systemPackages = [
     (pkgs.writeShellScriptBin "btop.sh" ''
       kitty @ set-font-size 9.5
       btop "$@"

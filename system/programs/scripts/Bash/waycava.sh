@@ -131,9 +131,9 @@ HELP
     esac
 
 		# Find object.serial of virtual cable
-		id=$(wpctl status | grep "Virtual Cable" | awk '{print $2}' | grep -m1 "" | cut -f1 -d ".")
-		serial=$(wpctl inspect "${id}" | sed -n 's/.*object.serial = //p')
-		serial=$(echo "${serial}" | tr -d '\"')
+		id=$(wpctl status | grep "virtual_cable_in" | awk '{print $2}' | grep -m1 "" | cut -f1 -d ".")
+		# serial=$(wpctl inspect "${id}" | sed -n 's/.*object.serial = //p')
+		# serial=$(echo "${serial}" | tr -d '\"')
     # Calculate the length of the bar outside the loop
     bar_length=${#bar}
     bar_width=${cava_width:-${bar_length}}
@@ -160,7 +160,7 @@ bars = ${bar_width}
 sleep_timer = 1
 [input]
 method = pipewire
-source = ${serial} 
+source = ${id} 
 sample_rate = 96000
 sample_bits = 32
 [output]

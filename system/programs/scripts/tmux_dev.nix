@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  home.packages = [
+  environment.systemPackages = [
     (pkgs.writeShellScriptBin "tdev" ''
       i=0
       sesh="DevSesh"

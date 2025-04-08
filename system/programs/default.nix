@@ -12,6 +12,7 @@
     ./DM
     ./uwsm.nix
     ./steam.nix
+    ./scripts
   ];
 
   xdg.terminal-exec = {

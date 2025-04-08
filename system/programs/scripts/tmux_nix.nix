@@ -1,17 +1,17 @@
 {pkgs, ...}: {
-  home.packages = [
-    (pkgs.writeShellScriptBin "tnote" ''
+  environment.systemPackages = [
+    (pkgs.writeShellScriptBin "tnix" ''
       i=0
-      sesh="Notes"
+      sesh="NixDots"
 
       # Check if the session already exists
       while tmux has-session -t $sesh 2>/dev/null; do
         ((i++))
         sesh="$sesh$i"
       done
-      tmux new -d -s $sesh -c "$HOME/Documents/Obsidian Vault/"
+      tmux new -d -s $sesh -c /etc/nixos
 
-      tmux new-window -c "$HOME/Documents/Obsidian Vault/"
+      tmux new-window -c /etc/nixos
 
       tmux select-window -t ^
 

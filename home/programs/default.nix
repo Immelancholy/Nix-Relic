@@ -21,7 +21,6 @@
     ./swayidle.nix
     ./obs.nix
     ./rofi
-    ./scripts
     ./dunst.nix
     ./swaylock.nix
     ./udiskie.nix

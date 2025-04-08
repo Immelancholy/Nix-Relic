@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  home.packages = [
+  environment.systemPackages = [
     (pkgs.writeShellScriptBin "swww.sh" ''
       wall="$HOME/Pictures/wallpapers/Neon-Beast-Girl.png"
       swww query

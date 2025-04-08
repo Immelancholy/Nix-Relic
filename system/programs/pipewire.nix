@@ -24,14 +24,14 @@
         # properyty when no other driver is currently active. JACK clients need this.
         name = "libpipewire-module-loopback";
         args = {
-          "audio.position" = "[ FL FR ]";
+          "audio.position" = "[FL, FR]";
           "capture.props" = {
-            "node.name" = "dummy_plug";
+            "node.name" = "dummy_plug_in";
             "node.description" = "Dummy Plug In";
             "media.class" = "Audio/Sink";
           };
           "playback.props" = {
-            "node.name" = "dummy_plug";
+            "node.name" = "dummy_plug_out";
             "node.description" = "Dummy Plug Out";
             "media.class" = "Audio/Source";
           };
@@ -41,7 +41,7 @@
         # properyty when no other driver is currently active. JACK clients need this.
         name = "libpipewire-module-loopback";
         args = {
-          "audio.position" = "[ FL FR ]";
+          "audio.position" = "[FL, FR]";
           "capture.props" = {
             "node.name" = "commes_mic_in";
             "node.description" = "Commes Mic In";
@@ -59,7 +59,7 @@
         # properyty when no other driver is currently active. JACK clients need this.
         name = "libpipewire-module-loopback";
         args = {
-          "audio.position" = "[ FL FR ]";
+          "audio.position" = "[FL, FR]";
           "capture.props" = {
             "node.name" = "desktop_mic_in";
             "node.description" = "Desktop Mic In";
@@ -69,6 +69,40 @@
           "playback.props" = {
             "node.name" = "desktop_mic_out";
             "node.description" = "Desktop Mic Out";
+            "media.class" = "Audio/Source";
+          };
+        };
+      }
+      {
+        # properyty when no other driver is currently active. JACK clients need this.
+        name = "libpipewire-module-loopback";
+        args = {
+          "audio.position" = "[FL, FR]";
+          "capture.props" = {
+            "node.name" = "virtual_cable_in";
+            "node.description" = "Virtual Cable In";
+            "media.class" = "Audio/Sink";
+          };
+          "playback.props" = {
+            "node.name" = "virtual_cable_out";
+            "node.description" = "Virtual Cable Out";
+            "media.class" = "Audio/Source";
+          };
+        };
+      }
+      {
+        # properyty when no other driver is currently active. JACK clients need this.
+        name = "libpipewire-module-loopback";
+        args = {
+          "audio.position" = "[FL, FR]";
+          "capture.props" = {
+            "node.name" = "virtual_cable_b_in";
+            "node.description" = "Virtual Cable B In";
+            "media.class" = "Audio/Sink";
+          };
+          "playback.props" = {
+            "node.name" = "virtual_cable_b_out";
+            "node.description" = "Virtual Cable B Out";
             "media.class" = "Audio/Source";
           };
         };
@@ -93,7 +127,7 @@
           "node.name" = "commes_output";
           "node.description" = "Commes Output";
           "media.class" = "Audio/Sink";
-          "audio.position" = "[ FL FR ]";
+          "audio.position" = "[FL, FR]";
           "monitor.channel-volumes" = "true";
           "monitor.passthrough" = "true";
           "adapter.auto-port-config" = {
@@ -111,43 +145,7 @@
           "node.name" = "desktop_output";
           "node.description" = "Desktop Output";
           "media.class" = "Audio/Sink";
-          "audio.position" = "[ FL FR ]";
-          "monitor.channel-volumes" = "true";
-          "monitor.passthrough" = "true";
-          "adapter.auto-port-config" = {
-            "mode" = "dsp";
-            "monitor" = "true";
-            "position" = "preserve";
-          };
-        };
-      }
-      {
-        # properyty when no other driver is currently active. JACK clients need this.
-        factory = "adapter";
-        args = {
-          "factory.name" = "support.null-audio-sink";
-          "node.name" = "virtual_cable";
-          "node.description" = "Virtual Cable";
-          "media.class" = "Audio/Sink";
-          "audio.position" = "[ FL FR ]";
-          "monitor.channel-volumes" = "true";
-          "monitor.passthrough" = "true";
-          "adapter.auto-port-config" = {
-            "mode" = "dsp";
-            "monitor" = "true";
-            "position" = "preserve";
-          };
-        };
-      }
-      {
-        # properyty when no other driver is currently active. JACK clients need this.
-        factory = "adapter";
-        args = {
-          "factory.name" = "support.null-audio-sink";
-          "node.name" = "virtual_cable_b";
-          "node.description" = "Virtual Cable B";
-          "media.class" = "Audio/Sink";
-          "audio.position" = "[ FL FR ]";
+          "audio.position" = "[FL, FR]";
           "monitor.channel-volumes" = "true";
           "monitor.passthrough" = "true";
           "adapter.auto-port-config" = {
