@@ -1,13 +1,8 @@
 {
   nixosConfig,
   lib,
-  user,
-  inputs,
   ...
 }: {
-  home.username = "${user}";
-  home.homeDirectory = "/home/${user}";
-
   # link the configuration file in current directory to the specified location in home directory
   # home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
 
@@ -31,38 +26,6 @@
     ./mimeapps.nix
     ./stylix.nix
   ];
-
-  home.file = {
-    "Pictures/fastfetch_logos" = {
-      source = ./programs/fastfetch/logo;
-      recursive = true;
-    };
-    "Pictures/wallpapers" = {
-      source = ./backgrounds;
-      recursive = true;
-    };
-    ".zen/${user}.default/chrome/userChrome.css" = {
-      source = "${inputs.catppuccinZen}/themes/Mocha/Mauve/userChrome.css";
-    };
-    ".zen/${user}.default/chrome/userContent.css" = {
-      source = "${inputs.catppuccinZen}/themes/Mocha/Mauve/userContent.css";
-    };
-    ".zen/${user}.default/chrome/zen-logo-mocha.svg" = {
-      source = "${inputs.catppuccinZen}/themes/Mocha/Mauve/zen-logo-mocha.svg";
-    };
-    ".zen/profiles.ini".text = ''
-      [Profile0]
-      Name=${user}Default
-      IsRelative=1
-      Path=${user}.default
-      ZenAvatarPath=chrome://browser/content/zen-avatars/avatar-82.svg
-      Default=1
-
-      [General]
-      StartWithLastProfile=1
-      Version=2
-    '';
-  };
 
   xdg = {
     enable = true;

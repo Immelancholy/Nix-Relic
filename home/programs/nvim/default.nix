@@ -285,13 +285,13 @@
         };
       };
       obsidian = {
-        enable = false;
+        enable = true;
         settings = {
           ui.enable = false;
           workspaces = [
             {
-              name = "Obsidian Vault";
-              path = "~/Documents/Obsidian Vault/";
+              name = "Obsidian-Vault";
+              path = "~/Documents/Obsidian-Vault/";
             }
           ];
         };
@@ -523,6 +523,7 @@
           html
           rust
           yuck
+          latex
         ];
         settings = {
           highlight = {
@@ -604,7 +605,7 @@
               }
               {
                 action = {
-                  __raw = "function(path) vim.cmd('cd ~/Documents/Projects/ | Telescope find_files') end";
+                  __raw = "function(path) vim.cmd('cd ~/Projects/ | Telescope find_files') end";
                 };
                 desc = " Projects";
                 group = "Tag";
@@ -620,7 +621,7 @@
               }
               {
                 action = {
-                  __raw = "function(path) vim.cmd('cd ~/Documents/Obsidian Vault/ | Telescope find_files') end";
+                  __raw = "function(path) vim.cmd('cd ~/Documents/Obsidian-Vault/ | Telescope find_files') end";
                 };
                 desc = "󱓧 Notes";
                 group = "Statement";

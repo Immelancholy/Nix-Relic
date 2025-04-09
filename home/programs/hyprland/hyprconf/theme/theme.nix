@@ -14,6 +14,7 @@
       "col.border_locked_active" = lib.mkForce "rgba(cba6f7ff) rgba(89dcebff) rgba(f5e0dcff) 40deg";
       "col.border_locked_inactive" = lib.mkForce "rgba(b4befecc) rgba(6c7086cc) 45deg";
       groupbar = {
+        font_family = "JetBrainsMono Nerd Font Mono Bold";
         font_size = 12;
         gradients = false;
         text_color = lib.mkForce "rgba(cdd6f4ff)";

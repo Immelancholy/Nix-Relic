@@ -1,4 +1,4 @@
-{user, ...}: {
+{
   services = {
     mpd = {
       enable = true;
@@ -24,7 +24,7 @@
         audio_output {
           type  "pipewire"
           name  "Pipewire CAVA"
-          target  "virtual_cable"
+          target  "virtual_cable_in"
         }
       '';
     };
@@ -32,7 +32,6 @@
       enable = true;
       mpd.host = "/run/user/1000/mpd/socket";
       notifications = true;
-      mpd.musicDirectory = "/home/${user}/Music";
     };
     mpd-discord-rpc = {
       enable = true;

@@ -97,6 +97,7 @@
         windowrule = move 70 235,title:^(rmpc)$
 
         windowrule = workspace 3 silent, class:^(vesktop)$
+        windowrule = workspace 4 silent, class:^(org.rncbc.qpwgraph)$
 
         windowrule = float,title:^(cava)$
         windowrule = size 840 672,title:^(cava)$

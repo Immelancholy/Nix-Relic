@@ -1,16 +1,10 @@
-{
-  pkgs,
-  user,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
-    ./hardware-configuration.nix
     ./boot.nix
     ./fonts
     ./programs
     ./extracache.nix
     ./env.nix
-    ./drivers.nix
   ];
   services.gnome.gnome-keyring = {
     enable = true;
@@ -18,6 +12,14 @@
   programs.seahorse.enable = true;
 
   nixpkgs.config.allowUnfree = true;
+  environment = {
+    loginShellInit = ''
+      eval $(gnome-keyring-daemon --start --daemonize)
+    '';
+    shells = with pkgs; [
+      zsh
+    ];
+  };
 
   zramSwap = {
     enable = true;
@@ -36,8 +38,6 @@
     ];
   };
 
-  services.solaar.enable = false;
-
   networking.hostName = "nixos";
 
   networking.firewall = {
@@ -45,42 +45,8 @@
   };
   networking.networkmanager.enable = true;
 
-  time.timeZone = "Europe/London";
-
-  i18n.defaultLocale = "en_GB.UTF-8";
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "en_GB.UTF-8";
-    LC_IDENTIFICATION = "en_GB.UTF-8";
-    LC_MEASUREMENT = "en_GB.UTF-8";
-    LC_MONETARY = "en_GB.UTF-8";
-    LC_NAME = "en_GB.UTF-8";
-    LC_NUMERIC = "en_GB.UTF-8";
-    LC_PAPER = "en_GB.UTF-8";
-    LC_TELEPHONE = "en_GB.UTF-8";
-    LC_TIME = "en_GB.UTF-8";
-  };
-
-  # services.xserver.enable = true;
-
-  services.xserver.xkb = {
-    layout = "gb";
-    variant = "";
-  };
-  console = {
-    earlySetup = true;
-    keyMap = "uk";
-  };
-
   nix.settings = {
     experimental-features = ["nix-command" "flakes"];
-  };
-
-  users.users.${user} = {
-    isNormalUser = true;
-    description = "Account for ${user}";
-    extraGroups = ["networkmanager" "wheel" "video"];
-    shell = pkgs.zsh;
   };
 
   users.defaultUserShell = pkgs.zsh;

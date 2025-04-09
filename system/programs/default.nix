@@ -102,7 +102,6 @@
     xdg-user-dirs
     xdg-user-dirs-gtk
   ];
-  environment.shells = with pkgs; [zsh];
 
   programs.nm-applet = {
     enable = true;

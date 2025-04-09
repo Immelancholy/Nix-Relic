@@ -19,6 +19,9 @@ in {
         general = {
           layout = "master";
         };
+        master = {
+          new_status = "master";
+        };
         bind =
           [
             "$mod, Z, togglegroup"
@@ -26,7 +29,7 @@ in {
             "$mods, Q, killactive"
             "$mods, X, movetoworkspacesilent, special"
             "$mod, R, layoutmsg, orientationcycle"
-            "$mod, S, layoutmsg, orientationbottom"
+            "$mod, S, layoutmsg, orientationtop"
             "$mod, D, layoutmsg, orientationleft"
           ]
           ++ (

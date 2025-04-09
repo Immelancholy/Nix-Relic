@@ -1,10 +1,11 @@
 {
   pkgs,
   inputs,
-  git,
-  email,
   ...
 }: {
+  home.shell = {
+    enableZshIntegration = true;
+  };
   imports = [
     ./hyprland
     ./waybar
@@ -21,10 +22,10 @@
     ./swayidle.nix
     ./obs.nix
     ./rofi
+    ./cliphist.nix
     ./dunst.nix
     ./swaylock.nix
     ./udiskie.nix
-    ./cliphist.nix
   ];
 
   programs.btop = {
@@ -39,6 +40,11 @@
   };
 
   home.packages = with pkgs; [
+    # (discord.override {
+    #   withOpenASAR = true; # can do this here too
+    #   withVencord = true;
+    # })
+    python313Packages.pylatexenc
     vesktop
     grim
     slurp
@@ -129,6 +135,8 @@
     lz4
     kdePackages.ark
     parted
+    teams-for-linux
+    # retroarch-free
     qalculate-gtk
     libreoffice
     fd
@@ -142,9 +150,4 @@
     enable = true;
   };
   # basic configuration of git, please change to your own
-  programs.git = {
-    enable = true;
-    userName = "${git}";
-    userEmail = "${email}";
-  };
 }

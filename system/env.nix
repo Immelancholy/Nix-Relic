@@ -1,4 +1,4 @@
-{XDGBin, ...}: {
+{
   # This is using a rec (recursive) expression to set and access XDG_BIN_HOME within the expression
   # For more on rec expressions see https://nix.dev/tutorials/first-steps/nix-language#recursive-attribute-set-rec
   environment.sessionVariables = rec {
@@ -9,7 +9,7 @@
     XDG_SCREENSHOTS_DIR = "$HOME/Pictures/Screenshots";
 
     # Not officially in the specification
-    XDG_BIN_HOME = "${XDGBin}";
+    XDG_BIN_HOME = "$HOME/.local/bin";
     PATH = [
       "${XDG_BIN_HOME}"
     ];

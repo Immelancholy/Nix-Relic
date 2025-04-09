@@ -1,9 +1,9 @@
-{user, ...}: {
+{
   programs.weylus = {
     enable = true;
-    users = [
-      "${user}"
-    ];
+    # users = [
+    #   "${username}"
+    # ];
     openFirewall = true;
   };
 }

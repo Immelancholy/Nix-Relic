@@ -1,6 +1,5 @@
 # My NixOS Dots
-### My NixOS Dotfiles, basically being updated near constantly as I change them. 
-### (Less so now that I have separated mine and these into two repos).
+### My NixOS Dotfiles, basically being updated near constantly as I change them.
 
 https://github.com/user-attachments/assets/669d0a3e-0035-4646-9147-a5affd1d3237
 

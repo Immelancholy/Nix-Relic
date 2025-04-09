@@ -94,9 +94,7 @@
   };
 
   outputs = {
-    self,
     nixpkgs,
-    stylix,
     catppuccin,
     home-manager,
     solaar,
@@ -104,23 +102,17 @@
     nix-flatpak,
     lanzaboote,
     nur,
-    alejandra,
     ...
   } @ inputs: let
     system = "x86_64-linux";
-    user = "mela"; # Replace with your username
-    git = "Immelancholy"; #Replace with your Git username
-    email = "lenalowes0@gmail.com"; # Replace with your Git email
-    XDGBin = "/home/${user}/.local/bin"; #XDG_BIN_HOME
-    hyprMonitor = ", preferred, auto, 1"; # monitor for hyprland to use, leave this default and then edit it in post install by using hyprctl monitors to find your monitor
-    # hyprMonitor = "HDMI-A-1, 1920x1080@144, 0x0, 1, bitdepth, 8"; #example and also my monitor lol
   in {
     formatter.${system} = nixpkgs.legacyPackages.${system}.alejandra;
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = {inherit inputs user git email XDGBin hyprMonitor;};
+        specialArgs = {inherit inputs;};
         modules = [
+          ./hardware-configuration.nix
           ({pkgs, ...}: {
             nixpkgs.config.allowUnfree = true;
             nixpkgs.overlays = [rust-overlay.overlays.default];
@@ -139,28 +131,19 @@
           nix-flatpak.nixosModules.nix-flatpak
           solaar.nixosModules.default
           catppuccin.nixosModules.catppuccin
+          ./configuration.nix
           ./system
-          ./modules # Comment and uncomment in the default.nix file in the modules folder to change between amd and nvidia drivers
+          ./modules/system # Comment and uncomment in the default.nix file in the modules folder to change between amd and nvidia drivers
+          ./modules/users.nix
+          ./modules/sudoUsers.nix
 
           home-manager.nixosModules.home-manager
           {
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              extraSpecialArgs = {inherit inputs user git email XDGBin hyprMonitor;};
+              extraSpecialArgs = {inherit inputs;};
             };
-
-            home-manager.users.${user} = {
-              imports = [
-                stylix.homeManagerModules.stylix
-                ./home
-                catppuccin.homeModules.catppuccin
-                inputs.nixvim.homeManagerModules.nixvim
-                inputs.spicetify-nix.homeManagerModules.default
-                nix-flatpak.homeManagerModules.nix-flatpak
-              ];
-            };
-            # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
           }
         ];
       };
