@@ -108,9 +108,12 @@ sudo nixos-rebuild boot --flake .
 * Set default device to Commes Output and Commes Mic In in discord lol (Again not necessary but splitting desktop and commes audio is useful)
 * Then set up a qpwgraph patchbay (this launches on workspace 4 on boot) to pin the output and input virtual devices to your audio device.
 * enable secureboot in system/boot.nix (optional) (set it up using the guide [here](https://github.com/nix-community/lanzaboote/blob/master/docs/QUICK_START.md)).
+```
+boot.secureBoot.enable = false; #secure boot (keep disabled and set up post-install)
+```
 * Set up your monitor (optional)
 ```
-  boot.secureBoot.enable = false; #secure boot (keep disabled and set up post-install)
+monitor = ", preferred, auto, 1";
 ```
 * You'll want to configure mpd to use your actual audio device as the output in home/programs/mpd/default.nix (currently uses easyeffects sink so optional)
 ```
