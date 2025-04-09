@@ -11,7 +11,7 @@ https://github.com/user-attachments/assets/669d0a3e-0035-4646-9147-a5affd1d3237
 
 ## Installation
 > [!WARNING]
-# Meant for a minimal install of nixos, ymmv
+> Meant for a minimal install of nixos, ymmv
 * Add this line to your configuration.nix in /etc/nixos/
 ```
   nix.settings = {
