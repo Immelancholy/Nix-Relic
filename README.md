@@ -42,7 +42,7 @@ nix flake init -t github:Immelancholy/Nix-Dotfiles#default
 ```
 {
   userAccounts.users = [];
-  userAccounts.sudoUsers = []; #Define users, sudoUsers can run sudo
+  userAccounts.sudoUsers = [ "mela" ]; #Define users, sudoUsers can run sudo
   drivers = {
     amd.enable = true;
     nvidia.enable = false; #drivers
