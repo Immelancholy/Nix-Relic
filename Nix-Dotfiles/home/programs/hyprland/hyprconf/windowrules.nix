@@ -130,6 +130,8 @@
         windowrule = opacity 0.80 0.70,title:^(Hyprland Polkit Agent)$
         windowrule = opacity 0.90 0.90,class:^(.blueman-manager-wrapped)$
         windowrule = float,class:^(.blueman-manager-wrapped)$
+        windowrule = opacity 0.90 0.90,class:^(solaar)$
+        windowrule = float,class:^(solaar)$
 
         layerrule = blur,rofi
         layerrule = ignorezero,rofi
