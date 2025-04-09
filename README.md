@@ -27,13 +27,18 @@ sudo nixos-rebuild switch
 ```
 nix-shell -p git
 ```
-* Clone this repo: 
+* run:
 ```
-git clone https://github.com/Immelancholy/Nix-Dotfiles.git
+mkdir -p Nix-Dotfiles (or anything rly this is just the name of the repo); cd Nix-Dotfiles
 ```
-* enter the newly created Nix-Dotfiles folder
-* run
-```rm -r .git```
+* then:
+```
+git init && git add .
+```
+* then:
+```
+nix flake init -t github:Immelancholy/Nix-Dotfiles#default
+```
 * Enter configuration.nix and change to you liking:
 ```
 {
@@ -101,9 +106,6 @@ git clone https://github.com/Immelancholy/Nix-Dotfiles.git
 sudo nixos-generate-config --show-hardware-config > hardware-configuration.nix
 ```
 * Then still in that folder run:
-```
-git init && git add .
-```
 * Then run:
 ```
 sudo nixos-rebuild boot --flake .
