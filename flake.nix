@@ -133,7 +133,7 @@
           catppuccin.nixosModules.catppuccin
           ./configuration.nix
           ./system
-          ./modules/system # Comment and uncomment in the default.nix file in the modules folder to change between amd and nvidia drivers
+          ./modules/system
           ./modules/users.nix
           ./modules/sudoUsers.nix
 
