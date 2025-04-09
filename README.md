@@ -1,5 +1,5 @@
 # My NixOS Dots
-### My NixOS Dotfiles, basically being updated near constantly as I change them.
+### Nixos Hyprland Dotfiles template (Also Basically what I use). 
 
 https://github.com/user-attachments/assets/669d0a3e-0035-4646-9147-a5affd1d3237
 
@@ -11,8 +11,7 @@ https://github.com/user-attachments/assets/669d0a3e-0035-4646-9147-a5affd1d3237
 
 ## Installation
 > [!WARNING]
-> This config is what I use on my pc, it will have software you have no need for. I have tried my best to make it more accessible by setting up variables for user and git and having all home paths use either ```$HOME``` or ```/home/${user}/``` but I can't guarantee I fixed it all, if you notice something along those lines please make an issue and I'll try to fix it fast. These dotfiles also change constantly according to my needs so if you update with these you will lose or gain software that was/wasn't installed before.
-> Basically YMMV.
+# Meant for a minimal install of nixos, ymmv
 * Add this line to your configuration.nix in /etc/nixos/
 ```
   nix.settings = {
