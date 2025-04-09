@@ -1,8 +1,8 @@
 {
   programs.git = {
     enable = true;
-    userName = "";
-    userEmail = "";
+    userName = ""; # Git Username
+    userEmail = ""; # Git Email
   };
   wayland.windowManager.hyprland = {
     # ONLY ENABLE 1 LAYOUT!!
@@ -15,7 +15,7 @@
     settings = {
       monitor = ", preferred, auto, 1";
       input = {
-        kb_layout = "gb";
+        kb_layout = "gb"; # Keyboard layout for hyprland
         follow_mouse = "1";
 
         sensitivity = "0";

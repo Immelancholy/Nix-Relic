@@ -31,102 +31,86 @@ nix-shell -p git
 ```
 git clone https://github.com/Immelancholy/Nix-Dotfiles.git
 ```
-* To use please do as instructed in these comments in the flake.nix file
-```
-  outputs = {
-    self,
-    nixpkgs,
-    stylix,
-    catppuccin,
-    home-manager,
-    solaar,
-    rust-overlay,
-    nix-flatpak,
-    lanzaboote,
-    nur,
-    ...
-  } @ inputs: let
-    system = "x86_64-linux";
-    user = "mela"; # Replace with your username
-    git = "Immelancholy"; #Replace with your Git username
-    email = "lenalowes0@gmail.com"; # Replace with your Git email
-    scriptBin = "/home/${user}/.local/share/bin"; #path to scripts must point to a home folder dir i.e /home/${user}/path/to/scripts cos I used home.file to import them.
-    hyprMonitor = ", preferred, auto, 1"; # monitor for hyprland to use, leave this default and then edit it in post install by using hyprctl monitors to find your monitor
-    # hyprMonitor = "HDMI-A-1, 1920x1080@144, 0x0, 1, bitdepth, 8"; #example and also my monitor lol
-  in {
-```
-* Then go into the system folder and edit drivers.nix and set to your gpu.
-
+* enter the newly created Nix-Dotfiles folder
+* Enter configuration.nix and change to you liking:
 ```
 {
+  userAccounts.users = [];
+  userAccounts.sudoUsers = []; #Define users, sudoUsers can run sudo
   drivers = {
-    amd.enable = false;
-    nvidia.enable = true;
+    amd.enable = true;
+    nvidia.enable = false; #drivers
+  };
+  displayManager = {
+    #ONLY 1
+    sddm.enable = true;
+    tuiGreet.enable = false;
+  };
+  locale = "en_GB.UTF-8"; #locale
+
+  services.xserver.xkb = {
+    #keyboard for x
+    layout = "gb";
+    model = "";
+    variant = "";
+    options = "";
+  };
+  console = {
+    #keymap for console
+    earlySetup = true;
+    keyMap = "uk";
+  };
+  time.timeZone = "Europe/London";
+  boot.secureBoot.enable = false; #secure boot (keep disabled and set up post-install)
+}
+```
+* Enter home-configuration.nix and change to your liking setting git username and email and changing hyprland settings:
+```
+{
+  programs.git = {
+    enable = true;
+    userName = "";
+    userEmail = "";
+  };
+  wayland.windowManager.hyprland = {
+    # ONLY ENABLE 1 LAYOUT!!
+    layout = {
+      master.enable = false;
+      dwindle.enable = false;
+      hy3.enable = true;
+    };
+    useHyprspace = true;
+    settings = {
+      monitor = ", preferred, auto, 1";
+      input = {
+        kb_layout = "gb"; # Keyboard layout for hyprland
+        follow_mouse = "1";
+
+        sensitivity = "0";
+        force_no_accel = "1";
+        numlock_by_default = "true";
+      };
+    };
   };
 }
 ```
-* If you use nvidia make sure whether to select if you want to use the open source drivers in the nvidia.nix file:
-```
-  hardware.nvidia = {
-    # Modesetting is required.
-    modesetting.enable = true;
-
-    # Nvidia power management. Experimental, and can cause sleep/suspend to fail.
-    powerManagement.enable = false;
-
-    # Fine-grained power management. Turns off GPU when not in use.
-    # Experimental and only works on modern Nvidia GPUs (Turing or newer).
-    powerManagement.finegrained = false;
-
-    # Use the NVidia open source kernel module (not to be confused with the
-    # independent third-party "nouveau" open source driver).
-    # Support is limited to the Turing and later architectures. Full list of
-    # supported GPUs is at:
-    # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus
-    # Only available from driver 515.43.04+
-    # Currently alpha-quality/buggy, so false is currently the recommended setting.
-    open = true;
-
-    # Enable the Nvidia settings menu,
-    # accessible via `nvidia-settings`.
-
-    nvidiaSettings = true;
-
-    # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    package = config.boot.kernelPackages.nvidiaPackages.beta;
-  };
-```
-* go into the system folder in this repo and delete hardware-configuration.nix, then run:
+* run this command in the same folder that flake.nix is located. (Where you've hopefully been this whole time lol)
 ```
 sudo nixos-generate-config --show-hardware-config > hardware-configuration.nix
 ```
-* delete the contents of /etc/nixos and copy the contents of this repo there.
-* then in the /etc/nixos folder run:
-```
-git init && git add .
-```
-* then still in the /etc/nixos folder run:
+* Then still in that folder run:
 ```
 sudo nixos-rebuild boot --flake .
 ```
 * reboot your pc.
 ## POST-INSTALL
-* Remember to set default device to Desktop Output and Desktop Input in pavucontrol (Not necessary but I would recommended)
-* Set default device to Commes Output and Commes Input in discord lol (Again not necessary but splitting desktop and commes audio is useful)
+* Remember to set default device to Desktop Output and Desktop Mic Out in pavucontrol (Not necessary but I would recommended)
+* Set default device to Commes Output and Commes Mic In in discord lol (Again not necessary but splitting desktop and commes audio is useful)
 * Then set up a qpwgraph patchbay (this launches on workspace 4 on boot) to pin the output and input virtual devices to your audio device.
 * enable secureboot in system/boot.nix (optional) (set it up using the guide [here](https://github.com/nix-community/lanzaboote/blob/master/docs/QUICK_START.md)).
 * Set up your monitor (optional)
 ```
-
-  } @ inputs: let
-    system = "x86_64-linux";
-    user = "mela"; # Replace with your username
-    git = "Immelancholy"; #Replace with your Git username
-    email = "lenalowes0@gmail.com"; # Replace with your Git email
-    scriptBin = "/home/${user}/.local/share/bin"; #path to scripts must point to a home folder dir i.e /home/${user}/path/to/scripts cos I used home.file to import them.
-    hyprMonitor = ", preferred, auto, 1"; # monitor for hyprland to use, leave this default and then edit it in post install by using hyprctl monitors to find your monitor
-    # hyprMonitor = "HDMI-A-1, 1920x1080@144, 0x0, 1, bitdepth, 8"; #example and also my monitor lol
-  in {
+  boot.secureBoot.enable = false; #secure boot (keep disabled and set up post-install)
 ```
 * You'll want to configure mpd to use your actual audio device as the output in home/programs/mpd/default.nix (currently uses easyeffects sink so optional)
 ```
