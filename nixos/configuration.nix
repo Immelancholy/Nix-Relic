@@ -3,7 +3,7 @@
   userAccounts.sudoUsers = []; #Define users, sudoUsers can run sudo
 
   environment.sessionVariables = {
-    FLAKE_PATH = "/etc/nixos"; #path to flake.nix
+    FLAKE_PATH = ""; #path to flake.nix
   };
 
   drivers = {

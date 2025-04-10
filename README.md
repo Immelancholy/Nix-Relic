@@ -41,7 +41,7 @@ nix flake init -t github:Immelancholy/Nix-Dotfiles
   userAccounts.sudoUsers = ["mela"];
 
   environment.sessionVariables = {
-    FLAKE_PATH = "/etc/nixos"; #path to flake.nix
+    FLAKE_PATH = ""; #path to flake.nix
   };
 
   drivers = {
