@@ -1,5 +1,6 @@
 # flake.nix
 {
+  description = "My NixOS and Hom Manager config.";
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     # nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
@@ -94,6 +95,7 @@
   };
 
   outputs = {
+    self,
     nixpkgs,
     catppuccin,
     home-manager,
@@ -104,9 +106,17 @@
     nur,
     ...
   } @ inputs: let
-    system = "x86_64-linux";
+    systems = [
+      "aarch64-linux"
+      "i686-linux"
+      "x86_64-linux"
+      "aarch64-darwin"
+      "x86_64-darwin"
+    ];
+    forAllSystems = nixpkgs.lib.genAttrs systems;
+    system = forAllSystems (system: system);
   in {
-    formatter.${system} = nixpkgs.legacyPackages.${system}.alejandra;
+    formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         inherit system;
