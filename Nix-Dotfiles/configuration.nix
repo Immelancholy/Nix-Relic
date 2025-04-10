@@ -1,15 +1,22 @@
 {
   userAccounts.users = [];
   userAccounts.sudoUsers = []; #Define users, sudoUsers can run sudo
+
+  environment.sessionVariables = {
+    FLAKE_PATH = "/etc/nixos"; #path to flake.nix
+  };
+
   drivers = {
     amd.enable = true;
     nvidia.enable = false; #drivers
   };
+
   displayManager = {
     #ONLY 1
     sddm.enable = true;
     tuiGreet.enable = false;
   };
+
   locale = "en_GB.UTF-8"; #locale
 
   services.xserver.xkb = {
