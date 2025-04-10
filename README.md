@@ -38,32 +38,36 @@ nix flake init -t github:Immelancholy/Nix-Dotfiles
 ```
 {
   userAccounts.users = [];
-  userAccounts.sudoUsers = [ "mela" ]; #Define users, sudoUsers can run sudo
-  drivers = {
-    amd.enable = true;
-    nvidia.enable = false; #drivers
+  userAccounts.sudoUsers = ["mela"];
+
+  environment.sessionVariables = {
+    FLAKE_PATH = "/etc/nixos"; #path to flake.nix
   };
+
+  drivers = {
+    amd.enable = false;
+    nvidia.enable = true;
+  };
+
   displayManager = {
-    #ONLY 1
     sddm.enable = true;
     tuiGreet.enable = false;
   };
-  locale = "en_GB.UTF-8"; #locale
+
+  locale = "en_GB.UTF-8";
 
   services.xserver.xkb = {
-    #keyboard for x
     layout = "gb";
     model = "";
     variant = "";
     options = "";
   };
   console = {
-    #keymap for console
     earlySetup = true;
     keyMap = "uk";
   };
   time.timeZone = "Europe/London";
-  boot.secureBoot.enable = false; #secure boot (keep disabled and set up post-install)
+  boot.secureBoot.enable = false;
 }
 ```
 * Enter home-configuration.nix and change to your liking setting git username and email and changing hyprland settings:
