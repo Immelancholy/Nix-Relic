@@ -36,7 +36,7 @@ git init && git add .
 ```
 * then:
 ```
-nix flake init -t github:Immelancholy/Nix-Dotfiles#default
+nix flake init -t github:Immelancholy/Nix-Dotfiles
 ```
 * Enter configuration.nix and change to you liking:
 ```
