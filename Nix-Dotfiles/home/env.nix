@@ -20,4 +20,9 @@
     GRIMBLAST_EDITOR = "swappy";
     MPD_HOST = "/run/user/1000/mpd/socket";
   };
+
+  systemd.user.sessionVariables = {
+    SSH_AUTH_SOCK = "/run/user/1000/keyring/ssh";
+    GNOME_KEYRING_CONTROL = "/run/user/1000/keyring";
+  };
 }

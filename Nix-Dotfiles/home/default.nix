@@ -27,6 +27,15 @@
     ./stylix.nix
   ];
 
+  services.gnome-keyring = {
+    enable = true;
+    components = [
+      "pkcs11"
+      "secrets"
+      "ssh"
+    ];
+  };
+
   xdg = {
     enable = true;
     configFile = {

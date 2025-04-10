@@ -45,6 +45,10 @@
   services.dbus = {
     enable = true;
     implementation = "broker";
+    packages = with pkgs; [
+      libsecret
+      gcr_4
+    ];
   };
   environment.systemPackages = with pkgs; [
     mpc
@@ -89,6 +93,7 @@
     vivaldi-ffmpeg-codecs
     w3m-full
     libsecret
+    gcr_4
     gcc
     sqlite
     lua53Packages.sqlite
@@ -102,6 +107,12 @@
     xdg-user-dirs
     xdg-user-dirs-gtk
   ];
+  programs.ssh = {
+    startAgent = false;
+    enableAskPassword = true;
+    askPassword = "${pkgs.seahorse}/libexec/seahorse/ssh-askpass";
+  };
+  # environment.variables.SSH_ASKPASS_REQUIRE = "prefer";
 
   programs.nm-applet = {
     enable = true;

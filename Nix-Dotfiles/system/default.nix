@@ -6,16 +6,11 @@
     ./extracache.nix
     ./env.nix
   ];
-  services.gnome.gnome-keyring = {
-    enable = true;
-  };
+  security.pam.services.login.enableGnomeKeyring = true;
   programs.seahorse.enable = true;
 
   nixpkgs.config.allowUnfree = true;
   environment = {
-    loginShellInit = ''
-      eval $(gnome-keyring-daemon --start --daemonize)
-    '';
     shells = with pkgs; [
       zsh
     ];
