@@ -36,12 +36,64 @@ nix flake init -t github:Immelancholy/Nix-Dotfiles
 ```
 * Enter configuration.nix and change to you liking:
 ```
-{
-  userAccounts.users = [];
-  userAccounts.sudoUsers = ["mela"];
+{pkgs, ...}: {
+  userAccounts.users = [
+  ]; # user accounts here
+  userAccounts.sudoUsers = [
+    "your-user"
+  ]; # sudo enabled accounts here (You'll want to go here if you're installing these. )
+
+  # duplicate this for each user
+  home-manager.users.your-user = {
+    # packages for user
+    home.packages = with pkgs; [
+      # reaper
+      # bespokesynth
+      # reaper-sws-extension
+      # teams-for-linux
+      # shotcut
+      # krita
+    ];
+    programs.git = {
+      enable = true;
+      userName = ""; # username for git
+      userEmail = ""; # email for git
+    };
+    programs.cava = {
+      settings = {
+        input = {
+          method = "pipewire";
+          source = "58"; # Cava object.serial for virtual_cable_in
+        };
+      };
+    };
+    # Important hyprland user configs
+    wayland.windowManager.hyprland = {
+      # ONLY ENABLE 1 LAYOUT!!
+      layout = {
+        master.enable = false;
+        dwindle.enable = false;
+        hy3.enable = true;
+      };
+      useHyprspace = true;
+      settings = {
+        monitor = ", preferred, auto, 1";
+        input = {
+          kb_layout = "gb";
+          follow_mouse = "1";
+
+          sensitivity = "0";
+          force_no_accel = "1";
+          numlock_by_default = "true";
+        };
+      };
+    };
+  };
+
+  # services.solaar.enable = true; #logitech mouse drivers
 
   environment.sessionVariables = {
-    FLAKE_PATH = ""; #path to flake.nix
+    FLAKE_PATH = ""; #path to dots
   };
 
   drivers = {
@@ -67,37 +119,7 @@ nix flake init -t github:Immelancholy/Nix-Dotfiles
     keyMap = "uk";
   };
   time.timeZone = "Europe/London";
-  boot.secureBoot.enable = false;
-}
-```
-* Enter home-configuration.nix and change to your liking setting git username and email and changing hyprland settings:
-```
-{
-  programs.git = {
-    enable = true;
-    userName = "";
-    userEmail = "";
-  };
-  wayland.windowManager.hyprland = {
-    # ONLY ENABLE 1 LAYOUT!!
-    layout = {
-      master.enable = false;
-      dwindle.enable = false;
-      hy3.enable = true;
-    };
-    useHyprspace = true;
-    settings = {
-      monitor = ", preferred, auto, 1";
-      input = {
-        kb_layout = "gb"; # Keyboard layout for hyprland
-        follow_mouse = "1";
-
-        sensitivity = "0";
-        force_no_accel = "1";
-        numlock_by_default = "true";
-      };
-    };
-  };
+  boot.secureBoot.enable = false; # Secure boot enable/disable
 }
 ```
 * run this command in the same folder that flake.nix is located. (Where you've hopefully been this whole time lol)

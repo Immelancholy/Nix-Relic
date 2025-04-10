@@ -285,7 +285,7 @@
         };
       };
       obsidian = {
-        enable = false;
+        enable = true;
         settings = {
           ui.enable = false;
           workspaces = [

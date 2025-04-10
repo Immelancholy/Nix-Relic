@@ -9,10 +9,6 @@
         bar_width = 1;
         bar_spacing = 0;
       };
-      input = {
-        method = "pipewire";
-        source = "58";
-      };
       output = {
         method = "noncurses";
         channels = "stereo";

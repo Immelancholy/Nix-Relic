@@ -1,8 +1,4 @@
-{
-  pkgs,
-  XDGBin,
-  ...
-}: {
+{pkgs, ...}: {
   programs.zsh = {
     enable = true;
     enableCompletion = false;

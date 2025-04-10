@@ -39,7 +39,6 @@ in {
           home.homeDirectory = "/home/${user}";
           services.mpdris2.mpd.musicDirectory = "/home/${user}/Music";
           imports = [
-            ../home-configuration.nix
             ./home
             inputs.stylix.homeManagerModules.stylix
             ../home

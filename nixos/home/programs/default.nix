@@ -57,12 +57,7 @@
     eza
     libsixel
 
-    shotcut
-
-    krita
-
     manix
-
     # archives
     zip
     xz
@@ -126,7 +121,6 @@
     libsForQt5.qt5ct
     kdePackages.qt6ct
     rmpc
-    mpd
     protonup
     playerctl
     pokemonsay
@@ -135,7 +129,6 @@
     lz4
     kdePackages.ark
     parted
-    teams-for-linux
     # retroarch-free
     qalculate-gtk
     libreoffice

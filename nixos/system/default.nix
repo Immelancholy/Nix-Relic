@@ -6,14 +6,19 @@
     ./extracache.nix
     ./env.nix
   ];
-  security.pam.services.login.enableGnomeKeyring = true;
   programs.seahorse.enable = true;
+  security.pam.services.login.enableGnomeKeyring = true;
+  hardware.logitech.wireless.enable = true;
 
   nixpkgs.config.allowUnfree = true;
   environment = {
     shells = with pkgs; [
       zsh
     ];
+  };
+
+  security.sudo = {
+    execWheelOnly = true;
   };
 
   zramSwap = {
