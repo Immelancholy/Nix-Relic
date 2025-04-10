@@ -59,7 +59,7 @@
       ''float,class:^(org.kde.dolphin)$,title:^(Progress Dialog — Dolphin)$''
       ''float,class:^(org.kde.dolphin)$,title:^(Copying — Dolphin)$''
       ''float,title:^(About Mozilla Firefox)$''
-      ''float,class:^(firefox)$,title:^(Picture-in-Picture)$''
+      ''float,title:^(Picture-in-Picture)$''
       ''float,class:^(firefox)$,title:^(Library)$''
       ''float,class:^(kitty)$,title:^(top)$''
       ''float,class:^(kitty)$,title:^(btop)$''
