@@ -7,11 +7,7 @@
     enable = true;
     package = null;
     portalPackage = null;
-    xwayland.enable = true;
-    plugins = [
-      inputs.hyprland-plugins.packages.${pkgs.system}.csgo-vulkan-fix
-      inputs.hyprland-plugins.packages.${pkgs.system}.xtra-dispatchers
-    ];
+    xwayland.enable = false;
     systemd = {
       # disable the systemd integration, as it conflicts with uwsm.
       enable = false;

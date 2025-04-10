@@ -1,6 +1,4 @@
 {
-  pkgs,
-  inputs,
   lib,
   config,
   ...
@@ -17,9 +15,6 @@ in {
   };
   config = mkIf cfg.useHyprspace {
     wayland.windowManager.hyprland = {
-      plugins = [
-        inputs.Hyprspace.packages.${pkgs.system}.Hyprspace
-      ];
       settings = {
         bind = [
           "$Alt, Tab, overview:toggle"

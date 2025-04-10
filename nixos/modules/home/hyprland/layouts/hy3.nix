@@ -17,9 +17,6 @@ in {
   };
   config = mkIf cfg.enable {
     wayland.windowManager.hyprland = {
-      plugins = [
-        inputs.hy3.packages.${pkgs.system}.hy3
-      ];
       settings = {
         general = {
           layout = "hy3";
