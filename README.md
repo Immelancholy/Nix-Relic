@@ -32,10 +32,6 @@ mkdir -p Nix-Dotfiles (or anything rly this is just the name of the repo); cd Ni
 ```
 * then:
 ```
-git init && git add .
-```
-* then:
-```
 nix flake init -t github:Immelancholy/Nix-Dotfiles
 ```
 * Enter configuration.nix and change to you liking:
@@ -104,7 +100,10 @@ nix flake init -t github:Immelancholy/Nix-Dotfiles
 ```
 sudo nixos-generate-config --show-hardware-config > hardware-configuration.nix
 ```
-* Then still in that folder run:
+* then:
+```
+git init && git add .
+```
 * Then run:
 ```
 sudo nixos-rebuild boot --flake .
