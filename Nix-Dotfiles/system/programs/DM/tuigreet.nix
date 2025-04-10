@@ -15,6 +15,8 @@ in {
     };
   };
   config = mkIf cfg.enable {
+    security.pam.services.tuiGreet.enableGnomeKeyring = true;
+    security.pam.services.greetd.enableGnomeKeyring = true;
     services.greetd = {
       enable = true;
       settings = {
