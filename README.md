@@ -147,15 +147,8 @@ boot.secureBoot.enable = false; #secure boot (keep disabled and set up post-inst
 ```
 monitor = ", preferred, auto, 1";
 ```
-* You'll want to configure mpd to use your actual audio device as the output in home/programs/mpd/default.nix (currently uses easyeffects sink so optional)
-```
-        audio_output {
-          type  "pipewire"
-          name  "Pipewire Sound Server"
-          target  "easyeffects_sink"
-        }
-```
-* Same with cava except you want to set it to the object.serial of virtual cable. Can be found with 
+* Set up easyeffects sink and source.
+* Configure cava to set it to the object.serial of virtual cable. Can be found with 
 ```
 wpctl status
 ```
@@ -167,24 +160,25 @@ In my case for example
 ```
 wpctl inspect 43
 ```
-Which give me an object.serial of 44, then I'd input that in home/programs/cava/default.nix
+Which give me an object.serial of 44, then I'd input that in configuration.nix
 ```
+    programs.cava = {
+      settings = {
+        input = {
+          method = "pipewire";
+          source = "58"; # Cava object.serial for virtual_cable_in
+        };
       };
-      input = {
-        method = "pipewire";
-        source = "44";
-        sample_rate = 48000;
-        sample_bits = 32;
-      };
+    };
 ```
-* You also need to make a patchbay in qpwgraph routing Desktop Output/Input and Commes Output/Input to your audio sink and audio source.
+* You also need to make a patchbay in qpwgraph routing Desktop/Commes Output your audio sink and Desktop/Commes Mic In to the easyeffects source.
 * Remember to run either
 ```
 sudo nixos-rebuild switch --flake .
 ```
-* in the /etc/nixos folder
+* in the dots folder
 * or just use the alias ```switch``` that I added that automatically adds and commits changes to the git repo and runs the above command.
-* Do this after making any changes in the /etc/nixos/ folder.
+* Do this after making any changes in the dots folder.
 I also have aliases for switch on boot and updating with:
 ```
 boot
