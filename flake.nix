@@ -15,7 +15,7 @@
     templates = {
       default = {
         description = ''Goofy stuff'';
-        path = ./Nix-Dotfiles;
+        path = ./nixos;
       };
     };
     formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
