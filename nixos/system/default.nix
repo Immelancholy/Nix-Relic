@@ -8,6 +8,7 @@
   ];
   programs.seahorse.enable = true;
   security.pam.services.login.enableGnomeKeyring = true;
+  services.seatd.enable = true;
 
   nixpkgs.config.allowUnfree = true;
   environment = {
@@ -61,15 +62,6 @@
       fontSize = "12";
       background = ../home/backgrounds/anime-girl-wings.jpg;
       loginBackground = true;
-    };
-  };
-
-  programs.git = {
-    enable = true;
-    config = {
-      init = {
-        defaultBranch = "main";
-      };
     };
   };
 

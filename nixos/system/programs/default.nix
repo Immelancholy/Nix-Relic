@@ -69,14 +69,12 @@
     temurin-bin
     inputs.prismlauncher.packages.${pkgs.system}.prismlauncher
     sbctl
-    kitty
     inputs.yazi.packages.${pkgs.system}.default
     qpwgraph
     pavucontrol
     pulsemixer
     bibata-cursors
     heroic
-    networkmanagerapplet
     clapper
     libopus
     libvlc
@@ -85,7 +83,6 @@
     vkbasalt-cli
     dxvk_2
     nv-codec-headers-12
-    vivaldi-ffmpeg-codecs
     w3m-full
     libsecret
     gcr_4

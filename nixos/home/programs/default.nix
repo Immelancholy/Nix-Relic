@@ -1,8 +1,4 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
+{pkgs, ...}: {
   home.shell = {
     enableZshIntegration = true;
   };
@@ -40,10 +36,6 @@
   };
 
   home.packages = with pkgs; [
-    # (discord.override {
-    #   withOpenASAR = true; # can do this here too
-    #   withVencord = true;
-    # })
     ghostscript
     tectonic
     mermaid-cli
@@ -144,5 +136,4 @@
   programs.zoxide = {
     enable = true;
   };
-  # basic configuration of git, please change to your own
 }
