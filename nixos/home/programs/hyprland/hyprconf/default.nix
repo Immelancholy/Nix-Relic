@@ -5,7 +5,7 @@
       # source = ["/etc/xdg/hypr/hyprland.conf"];
       "$scr" = "$XDG_BIN_HOME";
       "$term" = "uwsm app -- kitty";
-      "$files" = "uwsm app -- nemo";
+      "$files" = "uwsm app -- nemo.desktop";
       "$filest" = "uwsm app -- yazi.desktop";
       "$mod" = "SUPER";
       "$mods" = "SUPERSHIFT";
