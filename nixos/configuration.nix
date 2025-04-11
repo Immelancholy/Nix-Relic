@@ -11,6 +11,11 @@
       enable = true;
       userName = ""; # username for git
       userEmail = ""; # email for git
+      extraConfig = {
+        init = {
+          defaultBranch = "main";
+        };
+      };
     };
     programs.cava = {
       settings = {
