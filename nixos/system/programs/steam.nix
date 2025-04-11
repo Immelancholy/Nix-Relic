@@ -1,5 +1,5 @@
 {pkgs, ...}: let
-  steamos-gamescope = pkgs.writeShellScriptBin "steamos-gamescope" ''
+  steam-gamescope = pkgs.writeShellScriptBin "steam-gamescope" ''
     set -xeuo pipefail
 
     gamescopeArgs=(
@@ -49,7 +49,7 @@
       Encoding=UTF-8
       Name=Steam (gamescope)
       Comment=Launch Steam within Gamescope
-      Exec=${steamos-gamescope}/bin/steamos-gamescope
+      Exec=${steam-gamescope}/bin/steam-gamescope
       Type=Application
       DesktopNames=gamescope
     '')
@@ -62,7 +62,7 @@
   '';
 in {
   environment.systemPackages = [
-    steamos-gamescope
+    steam-gamescope
     steamscope
     steamos-session-select
   ];
