@@ -44,6 +44,9 @@
     #   withOpenASAR = true; # can do this here too
     #   withVencord = true;
     # })
+    ghostscript
+    tectonic
+    mermaid-cli
     python313Packages.pylatexenc
     vesktop
     grim

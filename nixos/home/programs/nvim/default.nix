@@ -284,18 +284,6 @@
           };
         };
       };
-      obsidian = {
-        enable = true;
-        settings = {
-          ui.enable = false;
-          workspaces = [
-            {
-              name = "Obsidian-Vault";
-              path = "~/Documents/Obsidian-Vault/";
-            }
-          ];
-        };
-      };
       blink-cmp-spell.enable = true;
       blink-cmp-dictionary.enable = true;
       blink-ripgrep.enable = true;
@@ -328,30 +316,6 @@
       oil.enable = true;
       bufferline.enable = true;
       barbar.enable = true;
-      rustaceanvim = {
-        enable = true;
-        settings = {
-          rustanalyzerPackafe = null;
-          server = {
-            cmd = [
-              "/run/current-system/sw/bin/rust-analyzer"
-            ];
-            default_settings = {
-              rust-analyzer = {
-                check = {
-                  command = "clippy";
-                };
-                inlayHints = {
-                  lifetimeElisionHints = {
-                    enable = "always";
-                  };
-                };
-              };
-            };
-            standalone = false;
-          };
-        };
-      };
       lz-n = {
         enable = true;
         plugins = [
@@ -501,7 +465,6 @@
       };
       bufdelete.enable = true;
       treesitter = {
-        autoLoad = true;
         enable = true;
         nixGrammars = true;
         grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
@@ -524,6 +487,12 @@
           rust
           yuck
           latex
+          javascript
+          scss
+          svelte
+          tsx
+          typst
+          vue
         ];
         settings = {
           highlight = {
@@ -605,7 +574,7 @@
               }
               {
                 action = {
-                  __raw = "function(path) vim.cmd('cd ~/Projects/ | Telescope find_files') end";
+                  __raw = "function(path) vim.cmd('cd $PROJECTS_PATH | Telescope find_files') end";
                 };
                 desc = " Projects";
                 group = "Tag";
@@ -621,7 +590,7 @@
               }
               {
                 action = {
-                  __raw = "function(path) vim.cmd('cd ~/Documents/Obsidian-Vault/ | Telescope find_files') end";
+                  __raw = "function(path) vim.cmd('cd $NOTES_PATH | Telescope find_files') end";
                 };
                 desc = "󱓧 Notes";
                 group = "Statement";

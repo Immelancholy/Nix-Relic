@@ -7,15 +7,6 @@
 
   # duplicate this for each user
   home-manager.users.your-user = {
-    # packages for user
-    home.packages = with pkgs; [
-      # reaper
-      # bespokesynth
-      # reaper-sws-extension
-      # teams-for-linux
-      # shotcut
-      # krita
-    ];
     programs.git = {
       enable = true;
       userName = ""; # username for git
@@ -50,9 +41,39 @@
         };
       };
     };
+    programs.nixvim = {
+      plugins = {
+        obisdian = {
+          enable = false; # switch this to true to enable obsidian.nvim
+          settings = {
+            ui.enable = false;
+            workspaces = [
+              {
+                name = ""; # name of obsidian vault
+                path = ""; # path to obsidian vault
+              }
+            ];
+          };
+        };
+      };
+    };
+    home.sessionVariables = {
+      NOTES_PATH = ""; # path to notes folder ( for neovim )
+      PROJECTS_PATH = ""; # path to Projects folder ( for neovim )
+    };
+    # packages for user
+    home.packages = with pkgs; [
+      # reaper
+      # bespokesynth
+      # reaper-sws-extension
+      # teams-for-linux
+      # shotcut
+      # krita
+    ];
   };
 
-  # services.solaar.enable = true; #logitech mouse drivers
+  # services.solaar.enable = true;
+  # hardware.logitech.wireless.enable = true; # uncomment these if you have a logitech mouse
 
   environment.sessionVariables = {
     FLAKE_PATH = ""; #path to dots
