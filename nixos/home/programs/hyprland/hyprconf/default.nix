@@ -2,7 +2,6 @@
   wayland.windowManager.hyprland = {
     sourceFirst = true;
     settings = {
-      # source = ["/etc/xdg/hypr/hyprland.conf"];
       "$scr" = "$XDG_BIN_HOME";
       "$term" = "uwsm app -- kitty";
       "$files" = "uwsm app -- nemo.desktop";
