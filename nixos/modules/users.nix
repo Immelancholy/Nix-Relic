@@ -24,7 +24,7 @@ in {
       builtins.listToAttrs (map (user:
         lib.nameValuePair user {
           isNormalUser = true;
-          extraGroups = ["networkmanager" "video"];
+          extraGroups = ["networkmanager" "video" "seat"];
           description = "Account for ${user}";
           shell = pkgs.zsh;
           initialPassword = "password";
