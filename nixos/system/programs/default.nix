@@ -66,8 +66,8 @@
     inputs.swww.packages.${pkgs.system}.swww
     libnotify
     wl-clipboard
-    inputs.zen-browser.packages."${system}".beta
     graalvm-ce
+    inputs.zen-browser.packages.${pkgs.system}.default
     zulu8
     zulu17
     zulu

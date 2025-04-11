@@ -56,20 +56,20 @@ in {
               source = ../home/backgrounds;
               recursive = true;
             };
-            ".zen/${user}/chrome/userChrome.css" = {
+            ".zen/${user}.Default/chrome/userChrome.css" = {
               source = "${inputs.catppuccinZen}/themes/Mocha/Mauve/userChrome.css";
             };
-            ".zen/${user}/chrome/userContent.css" = {
+            ".zen/${user}.Default/chrome/userContent.css" = {
               source = "${inputs.catppuccinZen}/themes/Mocha/Mauve/userContent.css";
             };
-            ".zen/${user}/chrome/zen-logo-mocha.svg" = {
+            ".zen/${user}.Default/chrome/zen-logo-mocha.svg" = {
               source = "${inputs.catppuccinZen}/themes/Mocha/Mauve/zen-logo-mocha.svg";
             };
             ".zen/profiles.ini".text = ''
               [Profile0]
               Name=${user}Default
               IsRelative=1
-              Path=${user}
+              Path=${user}.Default
               ZenAvatarPath=chrome://browser/content/zen-avatars/avatar-82.svg
               Default=1
 
