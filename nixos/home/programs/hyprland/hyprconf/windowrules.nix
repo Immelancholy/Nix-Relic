@@ -114,6 +114,8 @@
 
       ''size 850 540,class:^(org.pulseaudio.pavucontrol)$''
 
+      ''float, title:(.*Properties*.)$''
+
       # noblur, class:^(kitty)$
 
       # common modals
