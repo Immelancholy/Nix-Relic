@@ -13,6 +13,14 @@ in {
       default = false;
       description = ''Enable Nvidia Graphics Drivers'';
     };
+    powerManagement = mkEnableOption "Enable power management";
+    finePowerManagement = mkEnableOption "Enable fine-graned poer management for Prime Offload";
+    open = mkEnableOption "Use open source drivers";
+    package = mkOption {
+      type = types.package;
+      default = config.boot.kernelPackages.nvidiaPackages.latest;
+      description = "Package for nvidia drivers to use";
+    };
   };
 
   config = mkIf cfg.enable {
@@ -52,11 +60,10 @@ in {
       modesetting.enable = true;
 
       # Nvidia power management. Experimental, and can cause sleep/suspend to fail.
-      powerManagement.enable = true;
-
-      # Fine-grained power management. Turns off GPU when not in use.
-      # Experimental and only works on modern Nvidia GPUs (Turing or newer).
-      powerManagement.finegrained = false;
+      powerManagement = mkIf cfg.powerManagement {
+        enable = true;
+        finegrained = mkIf cfg.finePowerManagement true;
+      };
 
       # Use the NVidia open source kernel module (not to be confused with the
       # independent third-party "nouveau" open source driver).
@@ -65,7 +72,7 @@ in {
       # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus
       # Only available from driver 515.43.04+
       # Currently alpha-quality/buggy, so false is currently the recommended setting.
-      open = true;
+      open = mkIf cfg.open true;
 
       # Enable the Nvidia settings menu,
       # accessible via `nvidia-settings`.
@@ -74,7 +81,7 @@ in {
 
       # Optionally, you may need to select the appropriate driver version for your specific GPU.
       # package = config.boot.kernelPackages.nvidiaPackages.latest;
-      package = config.boot.kernelPackages.nvidiaPackages.vulkan_beta;
+      package = cfg.package;
     };
   };
 }

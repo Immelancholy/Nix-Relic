@@ -4,5 +4,7 @@
     ./amd.nix # For AMD Drivers
     ./secboot.nix
     ./locale.nix
+    ./nvidia-prime.nix
+    ./intel.nix
   ];
 }

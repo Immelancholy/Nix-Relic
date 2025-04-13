@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   userAccounts.users = [
   ]; # user accounts here
   userAccounts.sudoUsers = [
@@ -90,8 +94,21 @@
   };
 
   drivers = {
-    amd.enable = false;
-    nvidia.enable = true;
+    amd.enable = true;
+    intel.enable = false;
+    nvidia = {
+      enable = false;
+      open = true;
+      powerManagement = true;
+      finePowerManagement = false;
+      package = config.boot.kernelPackages.nvidiaPackages.vulkan_beta;
+      prime = {
+        enable = false;
+        # intelBusId = ""; # For Intel
+        # amdgpuBusId = ""; # For AMD
+        nvidiaBusId = "";
+      };
+    };
   };
 
   displayManager = {
