@@ -21,6 +21,7 @@ in {
       extraPackages = with pkgs; [
         intel-media-driver
         libvdpau-va-gl
+        vpl-gpu-rt
         libva
         libva-utils
       ];
