@@ -33,5 +33,25 @@ in {
     # home.sessionVariables = {
     #   EDITOR = "nvim";
     # };
+
+    xdg.mimeApps = mkIf cfg.defaultEditor {
+      enable = true;
+      associations.added = {
+        "text/plain" = ["nvim.desktop"];
+        "text/css" = ["nvim.desktop"];
+        "text/csv" = ["nvim.desktop"];
+        "text/javascript" = ["nvim.desktop"];
+        "application/json" = ["nvim.desktop"];
+        "application/xml" = ["nvim.desktop"];
+      };
+      defaultApplications = {
+        "text/plain" = ["nvim.desktop"];
+        "text/css" = ["nvim.desktop"];
+        "text/csv" = ["nvim.desktop"];
+        "text/javascript" = ["nvim.desktop"];
+        "application/json" = ["nvim.desktop"];
+        "application/xml" = ["nvim.desktop"];
+      };
+    };
   };
 }
