@@ -67,7 +67,7 @@
     x11.enable = true;
     hyprcursor = {
       enable = true;
-      size = 20;
+      size = 22;
     };
   };
 
@@ -81,7 +81,7 @@
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       cursor-theme = "Bibata-Modern-Ice";
-      cursor-size = 20;
+      cursor-size = 22;
     };
     "org/cinnamon/desktop/applications/terminal" = {
       exec = "kitty";

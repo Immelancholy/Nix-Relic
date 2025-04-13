@@ -35,6 +35,9 @@
       };
       useHyprspace = true;
       settings = {
+        cursor = {
+          no_hardware_cursors = false;
+        };
         monitor = ", preferred, auto, 1";
         input = {
           kb_layout = "gb";
