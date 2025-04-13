@@ -16,7 +16,6 @@
     ./kitty.nix
     ./spicetify.nix
     ./swayidle.nix
-    ./obs.nix
     ./rofi
     ./cliphist.nix
     ./dunst.nix

@@ -60,10 +60,6 @@
       ", XF86AudioMute, exec, $playerctl play-pause #pause-play media"
       "$mod, mouse:282, exec, $playerctl next" #next
       "$mod, mouse:281, exec, $playerctl previous" #previous,
-      ", F10, pass, class:^(com.obsproject.Studio)$"
-      ", F12, pass, class:^(com.obsproject.Studio)$"
-      ", F9, pass, class:^(com.obsproject.Studio)$"
-      "Alt, F10, pass, class:^(com.obsproject.Studio)$"
       ", mouse:277, exec, $playerctl play-pause" # toggle between media play and pause
     ];
     bindel = [
