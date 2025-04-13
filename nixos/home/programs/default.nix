@@ -48,7 +48,6 @@
     loupe
     glycin-loaders
     swappy
-    eza
     libsixel
 
     manix

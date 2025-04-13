@@ -11,7 +11,8 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
-      ll = "ls -l";
+      ll = "eza -l";
+      ls = "eza";
       edit = "sudo -e";
       neo = "neo.sh";
       rmpcs = "rmpc.sh";
