@@ -8,14 +8,12 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
-      nv = "nvim";
       ll = "ls -l";
       edit = "sudo -e";
       neo = "neo.sh";
       rmpcs = "rmpc.sh";
       cava = "cava.sh";
       fastfetch = "clear; fastfetch";
-      nvn = "cd $FLAKE_PATH; nv";
       switch = ''cd $FLAKE_PATH; clear; fastfetch; git add .; git commit -m "switch"; sudo nixos-rebuild switch --flake .; git add . ; git commit -m "Update Flake Lock"; cd -'';
       update = "cd $FLAKE_PATH; clear; fastfetch; nix flake update --flake . --commit-lock-file; cd -";
       boot = ''cd $FLAKE_PATH; clear; fastfetch; git add .; git commit -m "switch"; sudo nixos-rebuild boot --flake . ; git add . ; git commit -m "Update Flake Lock"; cd -'';

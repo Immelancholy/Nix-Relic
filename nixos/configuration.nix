@@ -47,6 +47,8 @@
       };
     };
     programs.nixvim = {
+      enable = true;
+      defaultEditor = true;
       plugins = {
         obisdian = {
           enable = false; # switch this to true to enable obsidian.nvim

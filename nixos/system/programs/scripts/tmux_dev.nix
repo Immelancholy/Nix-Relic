@@ -9,13 +9,13 @@
         ((i++))
         sesh="DevSesh$i"
       done
-      tmux new -d -s $sesh
+      tmux new -d -s $sesh -c "$PROJECTS_PATH"
 
-      tmux new-window
+      tmux new-window -c "$PROJECTS_PATH"
 
       tmux select-window -t ^
 
-      tmux send-keys "nv" C-m
+      tmux send-keys "y" C-m
 
       tmux attach-session -t $sesh
     '')

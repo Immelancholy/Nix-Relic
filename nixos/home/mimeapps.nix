@@ -2,13 +2,7 @@
   xdg.mimeApps = {
     enable = true;
     associations.added = {
-      "text/plain" = ["nvim.desktop"];
       "text/html" = ["zen.desktop"];
-      "text/css" = ["nvim.desktop"];
-      "text/csv" = ["nvim.desktop"];
-      "text/javascript" = ["nvim.desktop"];
-      "application/json" = ["nvim.desktop"];
-      "application/xml" = ["nvim.desktop"];
       "inode/directory" = ["nemo.desktop"];
       "video/mp4" = ["com.github.rafostar.Clapper.desktop"];
       "video/quicktime" = ["com.github.rafostar.Clapper.desktop"];
@@ -31,13 +25,6 @@
       "application/x-gnome-saved-search" = ["nemo.desktop"];
     };
     defaultApplications = {
-      "text/plain" = ["nvim.desktop"];
-      "text/html" = ["zen.desktop"];
-      "text/css" = ["nvim.desktop"];
-      "text/csv" = ["nvim.desktop"];
-      "text/javascript" = ["nvim.desktop"];
-      "application/json" = ["nvim.desktop"];
-      "application/xml" = ["nvim.desktop"];
       "inode/directory" = ["nemo.desktop"];
       "video/mp4" = ["com.github.rafostar.Clapper.desktop"];
       "video/quicktime" = ["com.github.rafostar.Clapper.desktop"];
