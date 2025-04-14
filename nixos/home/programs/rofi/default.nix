@@ -23,6 +23,14 @@
       window-format = "{w} · {c}";
       icon-theme = "Papirus-Dark";
       # icon-theme = "Tela-circle-dracula";
+      kb-row-up = "Up,Control+k,Shift+Tab,Shift+ISO_Left_Tab";
+      kb-row-down = "Down,Control+j";
+      kb-accept-entry = "Control+m,Return,KP_Enter";
+      kb-remove-to-eol = "Control+Shift+e";
+      kb-mode-next = "Shift+Right,Control+Tab,Control+l";
+      kb-mode-previous = "Shift+Left,Control+Shift+Tab,Control+h";
+      kb-remove-char-back = "BackSpace";
+      kb-mode-complete = "Control+Shift+l";
     };
   };
   imports = [
