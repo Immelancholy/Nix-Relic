@@ -51,6 +51,7 @@
           force_no_accel = "1";
           numlock_by_default = "true";
         };
+        bind = [];
       };
     };
     programs.nixvim = {
