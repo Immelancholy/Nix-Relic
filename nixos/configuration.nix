@@ -84,6 +84,11 @@
       # shotcut
       # krita
     ];
+    services.flatpak = {
+      packages = [
+        "com.github.PintaProject.Pinta"
+      ];
+    };
   };
 
   # services.solaar.enable = true;

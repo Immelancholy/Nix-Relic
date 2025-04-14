@@ -93,7 +93,6 @@
     };
     "org/nemo/preferences" = {
       click-double-parent-folder = true;
-      show-hidden-files = true;
       show-image-thumbnails = "always";
       thumbnail-limit = lib.hm.gvariant.mkUint64 104857600;
     };
