@@ -20,6 +20,9 @@
         key_press_enables_dpms = true;
         vfr = true;
       };
+      cursor = {
+        hide_on_key_press = true;
+      };
     };
   };
   imports = [
