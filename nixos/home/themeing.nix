@@ -50,17 +50,6 @@
 
   gtk = {
     enable = true;
-    iconTheme.package = pkgs.catppuccin-papirus-folders.override {
-      flavor = "mocha";
-      accent = "mauve";
-    };
-    iconTheme.name = "Papirus-Dark";
-    # iconTheme.package = pkgs.tela-circle-icon-theme.override {
-    #   colorVariants = [
-    #     "dracula"
-    #   ];
-    # };
-    # iconTheme.name = "Tela-circle-dracula";
   };
 
   home.pointerCursor = {
