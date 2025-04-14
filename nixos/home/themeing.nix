@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   catppuccin = {
     flavor = "mocha";
     accent = "mauve";
@@ -86,6 +90,28 @@
     "org/cinnamon/desktop/applications/terminal" = {
       exec = "kitty";
       # exec-arg = ""; # argument
+    };
+    "org/nemo/preferences" = {
+      click-double-parent-folder = true;
+      show-hidden-files = true;
+      show-image-thumbnails = "always";
+      thumbnail-limit = lib.hm.gvariant.mkUint64 104857600;
+    };
+    "org/nemo/preferences/menu-config" = {
+      selection-menu-copy-to = true;
+      selection-menu-move-to = true;
+    };
+    "org/nemo/search" = {
+      search-reverse-sort = false;
+      search-sort-column = "name";
+    };
+    "org/nemo/window-state" = {
+      maximized = true;
+      sidebar-bookmark-breakpoint = 5;
+      sidebar-width = 141;
+      start-with-menu-bar = false;
+      start-with-sidebar = true;
+      start-with-toolbar = true;
     };
   };
 }
