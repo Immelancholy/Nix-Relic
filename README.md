@@ -1,5 +1,5 @@
-# My NixOS Dots
-### Nixos Hyprland Dotfiles template (Also Basically what I use). 
+# Nix-Relic Dotfiles
+### Nixos Hyprland template (Also Basically what I use). 
 
 https://github.com/user-attachments/assets/669d0a3e-0035-4646-9147-a5affd1d3237
 
