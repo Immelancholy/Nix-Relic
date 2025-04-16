@@ -10,7 +10,7 @@
         highlight = "#89b4fac0";
         gaps_size = 4;
         frame_width = 2;
-        corner_radius = 18;
+        corner_radius = 20;
         origin = "top-right";
         offset = "(54, 18)";
         width = "(0, 280)";
@@ -18,7 +18,7 @@
         alignment = "center";
         icon_corner_radius = 15;
         icon_position = "top";
-        padding = 13;
+        padding = 15;
         horizontal_padding = 10;
         max_icon_size = 256;
         font = "JetBrainsMono Nerd Font Mono 9";
