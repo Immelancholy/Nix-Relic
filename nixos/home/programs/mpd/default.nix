@@ -24,7 +24,7 @@
         audio_output {
           type  "fifo"
           name  "mpd_cava"
-          path  "/run/user/1000/mpd_cava.fifo"
+          path  "/tmp/mpd_cava.fifo"
           format  "44100:16:2"
         }
         audio_output {
