@@ -15,7 +15,11 @@ in {
     };
     powerManagement = mkEnableOption "Enable power management";
     finePowerManagement = mkEnableOption "Enable fine-graned poer management for Prime Offload";
-    open = mkEnableOption "Use open source drivers";
+    open = mkOption {
+      type = types.bool;
+      default = false;
+      description = "Use open source drivers";
+    };
     package = mkOption {
       type = types.package;
       default = config.boot.kernelPackages.nvidiaPackages.latest;
@@ -62,7 +66,7 @@ in {
       # Nvidia power management. Experimental, and can cause sleep/suspend to fail.
       powerManagement = mkIf cfg.powerManagement {
         enable = true;
-        finegrained = mkIf cfg.finePowerManagement true;
+        finegrained = cfg.finePowerManagement;
       };
 
       # Use the NVidia open source kernel module (not to be confused with the
@@ -72,7 +76,7 @@ in {
       # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus
       # Only available from driver 515.43.04+
       # Currently alpha-quality/buggy, so false is currently the recommended setting.
-      open = mkIf cfg.open true;
+      open = cfg.open;
 
       # Enable the Nvidia settings menu,
       # accessible via `nvidia-settings`.
