@@ -132,7 +132,7 @@ git init && git add .
 ```
 * Then run:
 ```
-sudo nixos-rebuild boot --flake .
+sudo nixos-rebuild boot --flake .#nix-relic
 ```
 * reboot your pc.
 ## POST-INSTALL

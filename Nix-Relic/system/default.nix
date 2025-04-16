@@ -38,7 +38,7 @@
     ];
   };
 
-  networking.hostName = "nixos";
+  networking.hostName = "nix-relic";
 
   networking.firewall = {
     enable = true;

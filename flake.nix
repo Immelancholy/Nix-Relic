@@ -15,7 +15,7 @@
     templates = {
       default = {
         description = ''Goofy stuff'';
-        path = ./nixos;
+        path = ./Nix-Relic;
       };
     };
     formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
