@@ -30,6 +30,7 @@ in {
             "$mods, 0, movetoworkspacesilent, 10"
             "$mods, Q, killactive"
             "$mods, X, movetoworkspacesilent, special"
+            "Alt+Shift, Return, fullscreen, 1"
           ]
           ++ (
             # workspaces

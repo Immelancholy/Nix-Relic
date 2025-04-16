@@ -31,6 +31,7 @@ in {
             "$mod, R, layoutmsg, orientationcycle"
             "$mod, S, layoutmsg, orientationtop"
             "$mod, D, layoutmsg, orientationleft"
+            "Alt+Shift, Return, fullscreen, 1"
           ]
           ++ (
             # workspaces
