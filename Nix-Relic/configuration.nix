@@ -59,7 +59,7 @@
       enable = true;
       defaultEditor = true;
       plugins = {
-        obisdian = {
+        obsidian = {
           enable = false; # switch this to true to enable obsidian.nvim
           settings = {
             ui.enable = false;
@@ -88,7 +88,6 @@
     ];
     services.flatpak = {
       packages = [
-        "com.github.PintaProject.Pinta"
       ];
     };
   };
