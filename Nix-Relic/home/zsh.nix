@@ -16,7 +16,7 @@
       edit = "sudo -e";
       neo = "neo.sh";
       rmpcs = "rmpc.sh";
-      cava = "cava.sh";
+      ca = "cava.sh";
       fastfetch = "clear; fastfetch";
       switch = ''cd $FLAKE_PATH; clear; fastfetch; git add .; git commit -m "switch"; sudo nixos-rebuild switch --flake .; git add . ; git commit -m "Update Flake Lock"; cd -'';
       update = "cd $FLAKE_PATH; clear; fastfetch; nix flake update --flake . --commit-lock-file; cd -";
