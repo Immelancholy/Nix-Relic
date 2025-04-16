@@ -159,8 +159,10 @@ framerate = 144
 bars = ${bar_width}
 sleep_timer = 1
 [input]
-method = fifo
-source = /run/user/1000/mpd_waycava.fifo 
+# method = fifo
+# source = /run/user/1000/mpd_waycava.fifo 
+method = pipewire
+source = ${id}
 [output]
 method = raw
 raw_target = /dev/stdout

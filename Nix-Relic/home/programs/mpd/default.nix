@@ -16,22 +16,21 @@
         follow_outside_symlinks	"yes"
         follow_inside_symlinks		"yes"
         audio_output {
-          type  "pipewire"
-          name  "Pipewire Sound Server"
-          # target  "alsa_output.usb-Audient_Audient_iD4-00.pro-output-0"
-          target  "easyeffects_sink"
-        }
-        audio_output {
           type  "fifo"
           name  "mpd_cava"
-          path  "/tmp/mpd_cava.fifo"
+          path  "/run/user/1000/mpd_cava.fifo"
           format  "44100:16:2"
         }
+        # audio_output {
+        #   type  "fifo"
+        #   name  "mpd_waycava"
+        #   path  "/run/user/1000/mpd_waycava.fifo"
+        #   format  "44100:16:2"
+        # }
         audio_output {
-          type  "fifo"
-          name  "mpd_waycava"
-          path  "/run/user/1000/mpd_waycava.fifo"
-          format  "44100:16:2"
+          type  "pipewire"
+          name  "Pipewire Cava"
+          target  "virtual_cable_in"
         }
       '';
     };

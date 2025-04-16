@@ -28,11 +28,11 @@ nix-shell -p git
 ```
 * run:
 ```
-mkdir -p Nix-Dotfiles (or anything rly this is just the name of the repo); cd Nix-Dotfiles
+mkdir -p Nix-Relic (or anything rly this is just the name of the repo); cd Nix-Relic
 ```
 * then:
 ```
-nix flake init -t github:Immelancholy/Nix-Dotfiles
+nix flake init -t github:Immelancholy/Nix-Relic
 ```
 * Enter configuration.nix and change to you liking:
 ```
