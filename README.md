@@ -36,7 +36,11 @@ nix flake init -t github:Immelancholy/Nix-Relic
 ```
 * Enter configuration.nix and change to you liking:
 ```
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   userAccounts.users = [
   ]; # user accounts here
   userAccounts.sudoUsers = [
@@ -45,27 +49,24 @@ nix flake init -t github:Immelancholy/Nix-Relic
 
   # duplicate this for each user
   home-manager.users.your-user = {
-    # packages for user
-    home.packages = with pkgs; [
-      # reaper
-      # bespokesynth
-      # reaper-sws-extension
-      # teams-for-linux
-      # shotcut
-      # krita
-    ];
     programs.git = {
       enable = true;
       userName = ""; # username for git
       userEmail = ""; # email for git
-    };
-    programs.cava = {
-      settings = {
-        input = {
-          method = "pipewire";
-          source = "58"; # Cava object.serial for virtual_cable_in
+      extraConfig = {
+        init = {
+          defaultBranch = "main";
         };
       };
+    };
+    services.mpd = {
+      extraConfig = ''
+        audio_output {
+          type  "pipewire"
+          name  "Pipewire Sound Server"
+          target  "easyeffects_sink"
+        }
+      '';
     };
     # Important hyprland user configs
     wayland.windowManager.hyprland = {
@@ -77,6 +78,9 @@ nix flake init -t github:Immelancholy/Nix-Relic
       };
       useHyprspace = true;
       settings = {
+        cursor = {
+          no_hardware_cursors = false;
+        };
         monitor = ", preferred, auto, 1";
         input = {
           kb_layout = "gb";
@@ -86,19 +90,70 @@ nix flake init -t github:Immelancholy/Nix-Relic
           force_no_accel = "1";
           numlock_by_default = "true";
         };
+        bind = [];
       };
+    };
+    programs.nixvim = {
+      enable = true;
+      defaultEditor = true;
+      plugins = {
+        obisdian = {
+          enable = false; # switch this to true to enable obsidian.nvim
+          settings = {
+            ui.enable = false;
+            workspaces = [
+              {
+                name = ""; # name of obsidian vault
+                path = ""; # path to obsidian vault
+              }
+            ];
+          };
+        };
+      };
+    };
+    home.sessionVariables = {
+      NOTES_PATH = ""; # path to notes folder ( for neovim )
+      PROJECTS_PATH = ""; # path to Projects folder ( for neovim )
+    };
+    # packages for user
+    home.packages = with pkgs; [
+      # reaper
+      # bespokesynth
+      # reaper-sws-extension
+      # teams-for-linux
+      # shotcut
+      # krita
+    ];
+    services.flatpak = {
+      packages = [
+        "com.github.PintaProject.Pinta"
+      ];
     };
   };
 
-  # services.solaar.enable = true; #logitech mouse drivers
+  # services.solaar.enable = true;
+  # hardware.logitech.wireless.enable = true; # uncomment these if you have a logitech mouse
 
   environment.sessionVariables = {
     FLAKE_PATH = ""; #path to dots
   };
 
   drivers = {
-    amd.enable = false;
-    nvidia.enable = true;
+    amd.enable = true;
+    intel.enable = false;
+    nvidia = {
+      enable = false;
+      open = true;
+      powerManagement = true;
+      finePowerManagement = false;
+      # package = config.boot.kernelPackages.nvidiaPackages.vulkan_beta; # example of custom package
+      prime = {
+        enable = false;
+        # intelBusId = ""; # For Intel
+        # amdgpuBusId = ""; # For AMD
+        nvidiaBusId = "";
+      };
+    };
   };
 
   displayManager = {
@@ -148,29 +203,6 @@ boot.secureBoot.enable = false; #secure boot (keep disabled and set up post-inst
 monitor = ", preferred, auto, 1";
 ```
 * Set up easyeffects sink and source.
-* Configure cava to set it to the object.serial of virtual cable. Can be found with 
-```
-wpctl status
-```
-followed by 
-```
-wpctl inspect ID of Virtual Cable from wpctl status
-```
-In my case for example
-```
-wpctl inspect 43
-```
-Which give me an object.serial of 44, then I'd input that in configuration.nix
-```
-    programs.cava = {
-      settings = {
-        input = {
-          method = "pipewire";
-          source = "58"; # Cava object.serial for virtual_cable_in
-        };
-      };
-    };
-```
 * You also need to make a patchbay in qpwgraph routing Desktop/Commes Output your audio sink and Desktop/Commes Mic In to the easyeffects source.
 * Remember to run either
 ```
