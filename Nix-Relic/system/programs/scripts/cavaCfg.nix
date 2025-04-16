@@ -42,9 +42,14 @@
     EOF
   '';
 in {
-  home.activation = {
-    cavaConfig = lib.hm.dag.entryAfter ["writeBoundary"] ''
-      run ${cavaCfg}/bin/cavaCfg
-    '';
+  systemd.user.services."cavaCfg" = {
+    enable = true;
+    name = "cavaCfg";
+    after = ["pipewire.service"];
+    wantedBy = ["default.target"];
+    path = [
+      "${cavaCfg}"
+    ];
+    script = ''cavaCfg'';
   };
 }

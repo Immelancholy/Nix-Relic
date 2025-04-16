@@ -20,6 +20,7 @@
     ./tmux_notes.nix
     ./ss.nix
     ./muteChromium.nix
+    ./cavaCfg.nix
     # ./restartQpwGraph.nix
   ];
 }
