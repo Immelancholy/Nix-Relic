@@ -21,6 +21,7 @@
     ./dunst.nix
     ./swaylock.nix
     ./udiskie.nix
+    ./homeActivation.nix
   ];
 
   programs.btop = {
