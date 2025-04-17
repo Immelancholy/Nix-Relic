@@ -91,6 +91,10 @@
       ];
     };
   };
+  programs.steam = {
+    enable = false;
+    gamescopeSession.enable = false;
+  };
 
   # services.solaar.enable = true;
   # hardware.logitech.wireless.enable = true; # uncomment these if you have a logitech mouse

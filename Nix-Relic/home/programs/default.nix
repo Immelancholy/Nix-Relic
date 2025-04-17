@@ -125,10 +125,7 @@
     qalculate-gtk
     libreoffice
     fd
-    obsidian
-    obsidian-export
     wordnet
-    rustlings
   ];
 
   programs.zoxide = {

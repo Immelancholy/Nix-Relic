@@ -1,4 +1,10 @@
-{pkgs, ...}: let
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}: let
+  cfg = config.programs.steam.gamescopeSession;
   steam-gamescope = pkgs.writeShellScriptBin "steam-gamescope" ''
     set -xeuo pipefail
 
@@ -61,41 +67,20 @@
     exit 0;
   '';
 in {
-  environment.systemPackages = [
-    steam-gamescope
-    steamscope
-    steamos-session-select
-  ];
-  services.displayManager.sessionPackages = [steamscope];
-  programs.steam = {
-    enable = true;
-    package = pkgs.steam.override {
-      extraEnv = {
-        OBS_VKCAPTURE = true;
-        MANGOHUD = true;
-        DXVK_HUD = "compiler";
-      };
-      extraLibraries = pkgs: [pkgs.xorg.libxcb];
-    };
-    gamescopeSession.enable = true;
-    remotePlay.openFirewall = true;
-    dedicatedServer.openFirewall = true;
-    extraPackages = [
-      pkgs.xorg.libXcursor
-      pkgs.xorg.libXi
-      pkgs.xorg.libXinerama
-      pkgs.xorg.libXScrnSaver
-      pkgs.libpng
-      pkgs.libpulseaudio
-      pkgs.libvorbis
-      pkgs.stdenv.cc.cc.lib
-      pkgs.libkrb5
-      pkgs.keyutils
+  config = lib.mkIf cfg.enable {
+    environment.systemPackages = lib.mkIf cfg.enable [
+      steam-gamescope
+      steamscope
       steamos-session-select
-      steamos-select-branch
-      steamos-update
-      jupiter-biosupdate
     ];
-    protontricks.enable = true;
+    programs.steam = {
+      extraPackages = lib.mkIf cfg.enable [
+        steamos-session-select
+        steamos-select-branch
+        steamos-update
+        jupiter-biosupdate
+      ];
+    };
+    services.displayManager.sessionPackages = [steamscope];
   };
 }

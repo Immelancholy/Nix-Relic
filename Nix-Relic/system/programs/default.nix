@@ -11,7 +11,6 @@
     ./bluetooth.nix
     ./DM
     ./uwsm.nix
-    ./steam.nix
     ./scripts
   ];
 
@@ -61,20 +60,13 @@
     inputs.swww.packages.${pkgs.system}.swww
     libnotify
     wl-clipboard
-    graalvm-ce
     inputs.zen-browser.packages.${pkgs.system}.default
-    zulu8
-    zulu17
-    zulu
-    temurin-bin
-    inputs.prismlauncher.packages.${pkgs.system}.prismlauncher
     sbctl
     inputs.yazi.packages.${pkgs.system}.default
     qpwgraph
     pavucontrol
     pulsemixer
     bibata-cursors
-    heroic
     clapper
     libopus
     libvlc

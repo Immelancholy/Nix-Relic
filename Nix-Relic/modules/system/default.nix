@@ -6,5 +6,7 @@
     ./locale.nix
     ./nvidia-prime.nix
     ./intel.nix
+    ./steam.nix
+    ./gamescopeSesh.nix
   ];
 }
