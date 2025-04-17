@@ -101,7 +101,7 @@
     };
   };
 
-  services.qpwgraph.enable = false;
+  services.qpwgraph.enable = true;
 
   # services.solaar.enable = true;
   # hardware.logitech.wireless.enable = true;
