@@ -10,6 +10,16 @@
     "your-user"
   ]; # sudo enabled accounts here (You'll want to go here if you're installing these. )
 
+  services.pipewire.extraConfig.pipewire."92-low-latency" = {
+    "context.properties" = {
+      "default.clock.allowed-rates" = [44100 48000 88200 96000];
+      "default.clock.min-quantum" = 64;
+      "default.clock.max-quantum" = 512;
+      "default.clock.quantum-limit" = 4096;
+      "default.clock.quantum-floor" = 32;
+    };
+  };
+
   home-manager.users.mela = {
     programs.obs-studio.enable = false;
     programs.git = {
