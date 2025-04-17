@@ -128,7 +128,7 @@
   services.mpdchck = {
     enable = false;
     address = "/run/user/1000/mpd/socket";
-    port = "6600";
+    port = 6600;
   };
 
   drivers = {
