@@ -11,7 +11,7 @@
   ]; # sudo enabled accounts here (You'll want to go here if you're installing these. )
 
   home-manager.users.mela = {
-    programs.obs.enable = false;
+    programs.obs-studio.enable = false;
     programs.git = {
       enable = true;
       userName = "";
