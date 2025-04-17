@@ -129,7 +129,7 @@
       open = true;
       powerManagement = true;
       finePowerManagement = false;
-      package = config.boot.kernelPackages.nvidiaPackages.vulkan_beta;
+      # package = config.boot.kernelPackages.nvidiaPackages.vulkan_beta;
       prime = {
         enable = false;
         # intelBusId = ""; # For Intel
