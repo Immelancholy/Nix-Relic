@@ -1,5 +1,6 @@
 {
   pkgs,
+  inputs,
   config,
   ...
 }: {
@@ -9,12 +10,12 @@
     "your-user"
   ]; # sudo enabled accounts here (You'll want to go here if you're installing these. )
 
-  # duplicate this for each user
-  home-manager.users.your-user = {
+  home-manager.users.mela = {
+    programs.obs.enable = false;
     programs.git = {
       enable = true;
-      userName = ""; # username for git
-      userEmail = ""; # email for git
+      userName = "";
+      userEmail = "";
       extraConfig = {
         init = {
           defaultBranch = "main";
@@ -30,7 +31,6 @@
         }
       '';
     };
-    # Important hyprland user configs
     wayland.windowManager.hyprland = {
       # ONLY ENABLE 1 LAYOUT!!
       layout = {
@@ -52,55 +52,73 @@
           force_no_accel = "1";
           numlock_by_default = "true";
         };
-        bind = [];
-      };
-    };
-    programs.nixvim = {
-      enable = true;
-      defaultEditor = true;
-      plugins = {
-        obsidian = {
-          enable = false; # switch this to true to enable obsidian.nvim
-          settings = {
-            ui.enable = false;
-            workspaces = [
-              {
-                name = ""; # name of obsidian vault
-                path = ""; # path to obsidian vault
-              }
-            ];
-          };
-        };
+        bind = [
+          # "$mod, F9, pass, class:^(com.obsproject.Studio)$"
+          # "$mod, F10, pass, class:^(com.obsproject.Studio)$"
+          # "$mod, F12, pass, class:^(com.obsproject.Studio)$"
+        ];
       };
     };
     home.sessionVariables = {
       NOTES_PATH = ""; # path to notes folder ( for neovim )
       PROJECTS_PATH = ""; # path to Projects folder ( for neovim )
     };
-    # packages for user
     home.packages = with pkgs; [
       # reaper
+      # inputs.prismlauncher.packages.${pkgs.system}.prismlauncher
+      # temurin-bin
       # bespokesynth
       # reaper-sws-extension
       # teams-for-linux
       # shotcut
       # krita
+      # qbittorrent
+      # rustlings
+      # obsidian
+      # obsidian-export
     ];
+    programs.nixvim = {
+      enable = true;
+      defaultEditor = true;
+      plugins = {
+        obsidian = {
+          enable = false;
+          settings = {
+            ui.enable = false;
+            workspaces = [
+              {
+                name = "";
+                path = "";
+              }
+            ];
+          };
+        };
+      };
+    };
     services.flatpak = {
       packages = [
       ];
     };
   };
-  programs.steam = {
-    enable = false;
-    gamescopeSession.enable = false;
-  };
+
+  services.qpwgraph.enable = false;
 
   # services.solaar.enable = true;
-  # hardware.logitech.wireless.enable = true; # uncomment these if you have a logitech mouse
+  # hardware.logitech.wireless.enable = true;
 
   environment.sessionVariables = {
-    FLAKE_PATH = ""; #path to dots
+    FLAKE_PATH = ""; # path to flake.nix
+  };
+
+  programs.steam = {
+    enable = false;
+    gamescopeSession.enable = true;
+  };
+
+  services.mpdchck = {
+    enable = false;
+    address = "/run/user/1000/mpd/socket";
+    port = "6600";
   };
 
   drivers = {
@@ -111,7 +129,7 @@
       open = true;
       powerManagement = true;
       finePowerManagement = false;
-      # package = config.boot.kernelPackages.nvidiaPackages.vulkan_beta; # example of custom package
+      package = config.boot.kernelPackages.nvidiaPackages.vulkan_beta;
       prime = {
         enable = false;
         # intelBusId = ""; # For Intel
@@ -120,14 +138,6 @@
       };
     };
   };
-
-  services.mpdchck = {
-    enable = false;
-    address = "/run/user/1000/mpd/socket";
-    port = "6600";
-  };
-
-  services.qpwgraph.enable = false;
 
   displayManager = {
     sddm.enable = true;
@@ -147,5 +157,5 @@
     keyMap = "uk";
   };
   time.timeZone = "Europe/London";
-  boot.secureBoot.enable = false; # Secure boot enable/disable
+  boot.secureBoot.enable = false;
 }

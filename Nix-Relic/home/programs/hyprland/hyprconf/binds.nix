@@ -67,10 +67,10 @@
       ", mouse:281, exec, uwsm-app -- rmpc volume +1" # volume up
       ", mouse:282, exec, uwsm-app -- rmpc volume -1" # volume down
     ];
-    bindn = [
+    bindnt = [
       ", mouse:275, exec, pushToMuteChromium"
     ];
-    bindnr = [
+    bindntr = [
       ", mouse:275, exec, pushToMuteChromium"
     ];
   };

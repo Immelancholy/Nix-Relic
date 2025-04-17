@@ -101,5 +101,8 @@
       start-with-sidebar = true;
       start-with-toolbar = true;
     };
+    "com/github/wwmm/easyeffects/spectrum" = {
+      rounded-corners = true;
+    };
   };
 }

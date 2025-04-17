@@ -47,6 +47,12 @@
       };
       dark = "Tela-circle-dracula";
       light = "Tela-circle-dracula";
+      # package = pkgs.catppuccin-papirus-folders.override {
+      #   flavor = "mocha";
+      #   accent = "mauve";
+      # };
+      # dark = "Papirus-Dark";
+      # light = "Papirus-Dark";
     };
     image = ./backgrounds/Neon-Beast-Girl.png;
     targets = {

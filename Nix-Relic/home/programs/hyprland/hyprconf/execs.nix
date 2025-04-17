@@ -2,6 +2,7 @@
   wayland.windowManager.hyprland.settings = {
     exec-once = [
       "hyprctl setcursor Bibata-Modern-Ice 22"
+      "systemctl stop --user hyprpaper"
       "systemctl restart --user nm-applet"
       "sleep 10; systemctl restart --user remmina"
       ''uwsm app -- mpvpaper -f -p -o "--loop hwdec=auto" '*' $HOME/Pictures/wallpapers/Neon-Beast-Girl.mp4''

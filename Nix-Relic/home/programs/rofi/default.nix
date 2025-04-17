@@ -21,7 +21,7 @@
       display-window = " Win";
       drun-display-format = "{icon} {name}";
       window-format = "{w} · {c}";
-      icon-theme = "Papirus-Dark";
+      # icon-theme = "Papirus-Dark";
       # icon-theme = "Tela-circle-dracula";
       kb-row-up = "Up,Control+k,Shift+Tab,Shift+ISO_Left_Tab";
       kb-row-down = "Down,Control+j";
