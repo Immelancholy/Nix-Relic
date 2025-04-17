@@ -39,9 +39,9 @@ in {
           home.homeDirectory = "/home/${user}";
           services.mpdris2.mpd.musicDirectory = "/home/${user}/Music";
           imports = [
-            ./home
+            ../../../home
             inputs.stylix.homeManagerModules.stylix
-            ../home
+            ../../home
             inputs.catppuccin.homeModules.catppuccin
             inputs.nixvim.homeManagerModules.nixvim
             inputs.spicetify-nix.homeManagerModules.default
@@ -49,11 +49,11 @@ in {
           ];
           home.file = {
             "Pictures/fastfetch_logos" = {
-              source = ../home/programs/fastfetch/logo;
+              source = ../../../home/programs/fastfetch/logo;
               recursive = true;
             };
             "Pictures/wallpapers" = {
-              source = ../home/backgrounds;
+              source = ../../../home/backgrounds;
               recursive = true;
             };
             ".zen/${user}.Default/chrome/userChrome.css" = {

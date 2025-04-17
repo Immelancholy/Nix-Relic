@@ -121,6 +121,14 @@
     };
   };
 
+  services.mpdchck = {
+    enable = false;
+    address = "/run/user/1000/mpd/socket";
+    port = "6600";
+  };
+
+  services.qpwgraph.enable = false;
+
   displayManager = {
     sddm.enable = true;
     tuiGreet.enable = false;

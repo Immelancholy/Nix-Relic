@@ -1,6 +1,6 @@
 {
   imports = [
-    ./hyprland
-    ./nvim
+    ./wayland
+    ./programs
   ];
 }

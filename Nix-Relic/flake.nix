@@ -131,8 +131,6 @@
           ./configuration.nix
           ./system
           ./modules/system
-          ./modules/users.nix
-          ./modules/sudoUsers.nix
 
           home-manager.nixosModules.home-manager
           {

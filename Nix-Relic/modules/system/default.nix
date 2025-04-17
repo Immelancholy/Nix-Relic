@@ -1,12 +1,10 @@
 {
   imports = [
-    ./nvidia.nix # For Nvidia Drivers
-    ./amd.nix # For AMD Drivers
-    ./secboot.nix
+    ./boot
+    ./drivers
+    ./programs
+    ./services
     ./locale.nix
-    ./nvidia-prime.nix
-    ./intel.nix
-    ./steam.nix
-    ./gamescopeSesh.nix
+    ./users
   ];
 }

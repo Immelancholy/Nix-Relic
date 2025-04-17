@@ -9,8 +9,6 @@
     ./cava.nix
     ./checkshell.nix
     ./cliphist.nix
-    # ./mpdchck.nix
-    # ./sr.nix
     ./neo.nix
     # ./nv.nix
     ./rmpc.nix
@@ -21,6 +19,5 @@
     ./ss.nix
     ./muteChromium.nix
     ./cavaCfg.nix
-    # ./restartQpwGraph.nix
   ];
 }
