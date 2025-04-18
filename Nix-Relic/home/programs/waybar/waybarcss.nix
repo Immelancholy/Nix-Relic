@@ -65,6 +65,14 @@
         min-height: 10px
     }
 
+    #battery.critical {
+      color: @red;
+    }
+
+    #battery.warning {
+      color: @yellow;
+    }
+
     #backlight,
     #battery,
     #bluetooth,

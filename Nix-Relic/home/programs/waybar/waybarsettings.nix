@@ -147,6 +147,28 @@
         # on-click = ''hyprctl dispatch exec "[float; size 960 560]" kitty tmux_pulse.sh'';
         on-click = "pavucontrol";
       };
+      "battery" = {
+        interval = 5;
+        states = {
+          warning = 25;
+          critical = 10;
+        };
+        format = "{icon} {capacity}%";
+        format-charging = "{icon} {capacity}%";
+        format-critical = "{icon} {capacity}%";
+        format-icons = [
+          "󰁺"
+          "󰁻"
+          "󰁼"
+          "󰁽"
+          "󰁾"
+          "󰁿"
+          "󰂀"
+          "󰂁"
+          "󰂂"
+          "󰁹"
+        ];
+      };
       "pulseaudio#mic" = {
         scroll-step = 1;
         format = "{format_source}";
