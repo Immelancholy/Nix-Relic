@@ -71,6 +71,7 @@
     #clock,
     #clock,
     #cpu,
+    #temperature,
     #idle_inhibitor,
     #language,
     #memory,
