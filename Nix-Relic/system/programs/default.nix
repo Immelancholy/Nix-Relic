@@ -48,7 +48,6 @@
     mpc
     ffmpegthumbnailer
     libcamera
-    mpvpaper
     (ffmpeg-full.override {
       withUnfree = true;
       withOpengl = true;
