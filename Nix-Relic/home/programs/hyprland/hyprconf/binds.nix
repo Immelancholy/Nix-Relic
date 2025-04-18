@@ -15,9 +15,9 @@
         "Alt, Return, fullscreen"
         ''$mods, U, exec, [workspace 1 silent; float; size 858 559; move 640 40] $term --class "rmpc" uwsm app -- rmpc.sh''
         ''$mods, U, exec, [workspace 1 silent; float; size 858 462; move 640 609] $term --class "cava" uwsm app -- cava.sh''
-        ''$mods, U, exec, [workspace 1 silent; float; size 620 666; move 10 404] $term --class "btop" uwsm app -- btop.sh''
+        ''$mods, U, exec, [workspace 1 silent; float; size 620 637; move 10 433] $term --class "btop" uwsm app -- btop.sh''
         ''$mods, U, exec, [workspace 1 silent; float; size 402 1030; move 1508 40] $term --class "neo" uwsm app -- neo.sh''
-        ''$mods, U, exec, [workspace 1 silent; float; size 620 354; move 10 40] $term --class "fastfetch" kitty @ launch --type overlay --env class="fastfetch"''
+        ''$mods, U, exec, [workspace 1 silent; float; size 620 383; move 10 40] $term --class "fastfetch" kitty @ launch --type overlay --env class="fastfetch"''
         "$mod, Delete, exec, rofi -show power-menu -modi power-menu:rofi-power-menu"
         "$mod, 0, workspace, 10"
         "Ctrl+Alt, L, exec, uwsm-app -- swaylock -fF"
