@@ -129,7 +129,7 @@
           solaar.nixosModules.default
           catppuccin.nixosModules.catppuccin
           ./configuration.nix
-          ./system
+          ./nixos
           ./modules/system
 
           home-manager.nixosModules.home-manager
