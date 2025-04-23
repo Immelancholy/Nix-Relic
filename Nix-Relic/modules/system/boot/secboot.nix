@@ -10,7 +10,7 @@ in {
     enable = mkOption {
       type = types.bool;
       default = false;
-      description = ''Enable Nvidia Graphics Drivers'';
+      description = ''Enable Secure Boot'';
     };
   };
   config = mkIf cfg.enable {
