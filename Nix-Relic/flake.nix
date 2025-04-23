@@ -128,10 +128,11 @@
   in {
     formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
     nixosConfigurations = {
-      nix-relic = nixpkgs.lib.nixosSystem {
+      nix-relic-desktop = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = {inherit inputs;};
         modules = [
+          inputs.disko.nixosModules.default
           stylix.nixosModules.stylix
           nur.modules.nixos.default
           lanzaboote.nixosModules.lanzaboote
@@ -140,7 +141,32 @@
           catppuccin.nixosModules.catppuccin
           ./nixos/system
           ./modules/system
-          ./configuration.nix
+          ./hosts/desktop
+
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              extraSpecialArgs = {inherit inputs;};
+            };
+          }
+        ];
+      };
+      nix-relic-laptop = nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = {inherit inputs;};
+        modules = [
+          inputs.disko.nixosModules.default
+          stylix.nixosModules.stylix
+          nur.modules.nixos.default
+          lanzaboote.nixosModules.lanzaboote
+          nix-flatpak.nixosModules.nix-flatpak
+          solaar.nixosModules.default
+          catppuccin.nixosModules.catppuccin
+          ./nixos/system
+          ./modules/system
+          ./hosts/laptop
 
           home-manager.nixosModules.home-manager
           {
