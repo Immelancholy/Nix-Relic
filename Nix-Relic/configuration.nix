@@ -7,7 +7,7 @@
   userAccounts.users = [
   ]; # user accounts here
   userAccounts.sudoUsers = [
-    "your-user"
+    "mela"
   ]; # sudo enabled accounts here (You'll want to go here if you're installing these. )
 
   services.pipewire.extraConfig.pipewire."92-low-latency" = {
