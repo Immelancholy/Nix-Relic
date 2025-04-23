@@ -40,6 +40,7 @@ nix flake init -t github:Immelancholy/Nix-Relic
 ```
 {
   pkgs,
+  inputs,
   config,
   ...
 }: {
@@ -49,8 +50,19 @@ nix flake init -t github:Immelancholy/Nix-Relic
     "your-user"
   ]; # sudo enabled accounts here (You'll want to go here if you're installing these. )
 
+  services.pipewire.extraConfig.pipewire."92-low-latency" = {
+    "context.properties" = {
+      "default.clock.allowed-rates" = [44100 48000 88200 96000];
+      "default.clock.min-quantum" = 64;
+      "default.clock.max-quantum" = 512;
+      "default.clock.quantum-limit" = 4096;
+      "default.clock.quantum-floor" = 32;
+    };
+  };
+
   # duplicate this for each user
   home-manager.users.your-user = {
+    programs.obs-studio.enable = false;
     programs.git = {
       enable = true;
       userName = ""; # username for git
@@ -78,7 +90,8 @@ nix flake init -t github:Immelancholy/Nix-Relic
         dwindle.enable = false;
         hy3.enable = true;
       };
-      useHyprspace = true;
+      useHyprspace = false; # Hyprspace doesn't build atm
+      useLiveWallpaper = true;
       settings = {
         cursor = {
           no_hardware_cursors = false;
@@ -92,52 +105,68 @@ nix flake init -t github:Immelancholy/Nix-Relic
           force_no_accel = "1";
           numlock_by_default = "true";
         };
-        bind = [];
-      };
-    };
-    programs.nixvim = {
-      enable = true;
-      defaultEditor = true;
-      plugins = {
-        obisdian = {
-          enable = false; # switch this to true to enable obsidian.nvim
-          settings = {
-            ui.enable = false;
-            workspaces = [
-              {
-                name = ""; # name of obsidian vault
-                path = ""; # path to obsidian vault
-              }
-            ];
-          };
-        };
+        bind = [
+          # "$mod, F9, pass, class:^(com.obsproject.Studio)$"
+          # "$mod, F10, pass, class:^(com.obsproject.Studio)$"
+          # "$mod, F12, pass, class:^(com.obsproject.Studio)$"
+        ];
       };
     };
     home.sessionVariables = {
       NOTES_PATH = ""; # path to notes folder ( for neovim )
       PROJECTS_PATH = ""; # path to Projects folder ( for neovim )
     };
-    # packages for user
     home.packages = with pkgs; [
       # reaper
+      # inputs.prismlauncher.packages.${pkgs.system}.prismlauncher
+      # temurin-bin
       # bespokesynth
       # reaper-sws-extension
       # teams-for-linux
       # shotcut
       # krita
+      # qbittorrent
+      # rustlings
+      # obsidian
+      # obsidian-export
     ];
-    services.flatpak = {
-      packages = [
-        "com.github.PintaProject.Pinta"
-      ];
+    programs.nixvim = {
+      enable = true;
+      defaultEditor = true;
+      plugins = {
+        obsidian = {
+          enable = false;
+          settings = {
+            ui.enable = false;
+            workspaces = [
+              {
+                name = "";
+                path = "";
+              }
+            ];
+          };
+        };
+      };
     };
   };
 
-  # services.solaar.enable = true;
-  # hardware.logitech.wireless.enable = true; # uncomment these if you have a logitech mouse
+  services.qpwgraph.enable = true;
+
+  # services.solaar.enable = true; # logitech mouse stuff
+  # hardware.logitech.wireless.enable = true; # logitech mouse stuff
 
   environment.sessionVariables = {
-    FLAKE_PATH = ""; #path to dots
+    FLAKE_PATH = "/home/user/Nix-Relic"; # path to dots folder, do like this example
+    FRAMERATE = 60; # monitor refresh rate
+  };
+
+  programs.steam = {
+    enable = false;
+    gamescopeSession.enable = true;
+  };
+
+  services.mpdchck = {
+    enable = false;
   };
 
   drivers = {
@@ -148,7 +177,7 @@ nix flake init -t github:Immelancholy/Nix-Relic
       open = true;
       powerManagement = true;
       finePowerManagement = false;
-      # package = config.boot.kernelPackages.nvidiaPackages.vulkan_beta; # example of custom package
+      # package = config.boot.kernelPackages.nvidiaPackages.vulkan_beta;
       prime = {
         enable = false;
         # intelBusId = ""; # For Intel
@@ -159,24 +188,25 @@ nix flake init -t github:Immelancholy/Nix-Relic
   };
 
   displayManager = {
+    # Display manager to use, only enable 1
     sddm.enable = true;
     tuiGreet.enable = false;
   };
 
-  locale = "en_GB.UTF-8";
+  locale = "en_GB.UTF-8"; # change to your locale
 
   services.xserver.xkb = {
-    layout = "gb";
+    layout = "gb"; # change to your keyboard layout
     model = "";
     variant = "";
     options = "";
   };
   console = {
     earlySetup = true;
-    keyMap = "uk";
+    keyMap = "uk"; # change to your keyboard layout
   };
-  time.timeZone = "Europe/London";
-  boot.secureBoot.enable = false; # Secure boot enable/disable
+  time.timeZone = "Europe/London"; # set to your timezone
+  boot.secureBoot.enable = false; # set up secure boot post-install before enabling this
 }
 ```
 * run this command in the same folder that flake.nix is located. (Where you've hopefully been this whole time lol)

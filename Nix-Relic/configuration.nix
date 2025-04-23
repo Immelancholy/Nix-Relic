@@ -20,12 +20,13 @@
     };
   };
 
+  # duplicate this for each user
   home-manager.users.your-user = {
     programs.obs-studio.enable = false;
     programs.git = {
       enable = true;
-      userName = "";
-      userEmail = "";
+      userName = ""; # username for git
+      userEmail = ""; # email for git
       extraConfig = {
         init = {
           defaultBranch = "main";
@@ -41,6 +42,7 @@
         }
       '';
     };
+    # Important hyprland user configs
     wayland.windowManager.hyprland = {
       # ONLY ENABLE 1 LAYOUT!!
       layout = {
@@ -110,11 +112,11 @@
 
   services.qpwgraph.enable = true;
 
-  # services.solaar.enable = true;
-  # hardware.logitech.wireless.enable = true;
+  # services.solaar.enable = true; # logitech mouse stuff
+  # hardware.logitech.wireless.enable = true; # logitech mouse stuff
 
   environment.sessionVariables = {
-    FLAKE_PATH = ""; # path to flake.nix
+    FLAKE_PATH = "/home/user/Nix-Relic"; # path to dots folder, do like this example
     FRAMERATE = 60; # monitor refresh rate
   };
 
@@ -146,22 +148,23 @@
   };
 
   displayManager = {
+    # Display manager to use, only enable 1
     sddm.enable = true;
     tuiGreet.enable = false;
   };
 
-  locale = "en_GB.UTF-8";
+  locale = "en_GB.UTF-8"; # change to your locale
 
   services.xserver.xkb = {
-    layout = "gb";
+    layout = "gb"; # change to your keyboard layout
     model = "";
     variant = "";
     options = "";
   };
   console = {
     earlySetup = true;
-    keyMap = "uk";
+    keyMap = "uk"; # change to your keyboard layout
   };
-  time.timeZone = "Europe/London";
-  boot.secureBoot.enable = false;
+  time.timeZone = "Europe/London"; # set to your timezone
+  boot.secureBoot.enable = false; # set up secure boot post-install before enabling this
 }
