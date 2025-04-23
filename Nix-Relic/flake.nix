@@ -128,7 +128,7 @@
   in {
     formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
     nixosConfigurations = {
-      nix-relic-desktop = nixpkgs.lib.nixosSystem {
+      nix-relic = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = {inherit inputs;};
         modules = [
