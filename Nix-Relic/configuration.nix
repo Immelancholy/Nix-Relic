@@ -7,7 +7,7 @@
   userAccounts.users = [
   ]; # user accounts here
   userAccounts.sudoUsers = [
-    "mela"
+    "your-user"
   ]; # sudo enabled accounts here (You'll want to go here if you're installing these. )
 
   services.pipewire.extraConfig.pipewire."92-low-latency" = {
@@ -20,7 +20,7 @@
     };
   };
 
-  home-manager.users.mela = {
+  home-manager.users.your-user = {
     programs.obs-studio.enable = false;
     programs.git = {
       enable = true;
