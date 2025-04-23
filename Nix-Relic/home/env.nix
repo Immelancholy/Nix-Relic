@@ -1,6 +1,7 @@
 {
   pkgs,
   lib,
+  config,
   ...
 }: {
   home.sessionVariables = {
@@ -17,7 +18,8 @@
     MOZ_ENABLE_WAYLAND = "1";
     GDK_SCALE = "1";
     GRIMBLAST_EDITOR = "swappy";
-    MPD_HOST = "/run/user/1000/mpd/socket";
+    MPD_HOST = "${config.services.mpd.network.listenAddress}";
+    MPD_PORT = "${builtins.toString config.services.mpd.network.port}";
   };
 
   systemd.user.sessionVariables = {

@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{
   home.shell = {
     enableZshIntegration = true;
   };
@@ -11,7 +11,6 @@
     ./fastfetch
     ./nvim
     ./easyeffects
-    ./rmpc
     ./tmux.nix
     ./kitty.nix
     ./spicetify.nix
@@ -43,9 +42,6 @@
   services.mpris-proxy = {
     enable = true;
   };
-
-  home.packages = with pkgs; [
-  ];
 
   programs.zoxide = {
     enable = true;

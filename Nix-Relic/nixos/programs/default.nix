@@ -6,12 +6,12 @@
   imports = [
     ./hyprland.nix
     ./pipewire.nix
-    ./flatpak.nix
     ./weylus.nix
     ./bluetooth.nix
     ./DM
     ./uwsm.nix
     ./scripts
+    ./stylix.nix
   ];
 
   xdg.terminal-exec = {
@@ -44,7 +44,26 @@
       gcr_4
     ];
   };
+  systemd.user.services.hyprsunset = {
+    enable = true;
+    unitConfig = {
+      Description = "An application to enable a blue-light filter on Hyprland.";
+      Documentation = "https://wiki.hyprland.org/Hypr-Ecosystem/hyprsunset/";
+      PartOf = "graphical-session.target";
+      Requires = "graphical-session.target";
+      After = "graphical-session.target";
+      ConditionEnvironment = "WAYLAND_DISPLAY";
+    };
+    serviceConfig = {
+      Type = "simple";
+      ExecStart = "${pkgs.hyprsunset}/bin/hyprsunset";
+      Slice = "session.slice";
+      Restart = "on-failure";
+    };
+    wantedBy = ["graphical-session.target"];
+  };
   environment.systemPackages = with pkgs; [
+    brightnessctl
     mpc
     ffmpegthumbnailer
     libcamera
@@ -53,7 +72,6 @@
       withOpengl = true;
       withRtmp = true;
     })
-
     libsForQt5.qt5.qtwayland
     kdePackages.qtwayland
     inputs.swww.packages.${pkgs.system}.swww
@@ -166,7 +184,6 @@
     kdePackages.qtstyleplugin-kvantum
     libsForQt5.qt5ct
     kdePackages.qt6ct
-    rmpc
     protonup
     playerctl
     pokemonsay

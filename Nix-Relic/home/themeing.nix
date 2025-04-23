@@ -46,6 +46,7 @@
     obs = {
       enable = true;
     };
+    zen.enable = true;
   };
 
   gtk = {

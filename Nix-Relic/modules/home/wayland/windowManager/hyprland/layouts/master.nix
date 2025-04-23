@@ -47,8 +47,8 @@ in {
           );
       };
       extraConfig = ''
-        bind = $mod, A, submap, move
-        submap = move
+        bind = $mod, A, submap, manage
+        submap = manage
         bind = , A, layoutmsg, addmaster
         bind = , D, layoutmsg, removemaster
         bind = Alt, Return, fullscreen, 1
@@ -62,6 +62,7 @@ in {
         bind = , Down, movefocus, d
         bind = , Up, movefocus, u
         bind = , Right, movefocus, r
+        bind = , P, pin, active
         bindm = $mod, mouse:272, movewindow
         bindm = $mod, mouse:273, resizewindow
 
@@ -96,8 +97,41 @@ in {
         bind = $mod, mouse_up, workspace, r+1
         bind = $mod, mouse_down, workspace, r-1
 
-        bind = , R, submap, resize
+        bind = Shift, R, submap, resize
         submap = resize
+        binde = , Right, resizeactive, 30 0
+        binde = , Left, resizeactive, 30 0
+        binde = , Left, moveactive, -30 0
+        binde = , Up, resizeactive, 0 30
+        binde = , Up, moveactive, 0 -30
+        binde = , Down, resizeactive, 0 30
+
+        binde = , L, resizeactive, 30 0
+        binde = , H, resizeactive, 30 0
+        binde = , H, moveactive, -30 0
+        binde = , K, resizeactive, 0 30
+        binde = , K, moveactive, 0 -30
+        binde = , J, resizeactive, 0 30
+
+        binde = Shift, Right, resizeactive, -30 0
+        binde = Shift, Right, moveactive, 30 0
+        binde = Shift, Left, resizeactive, -30 0
+        binde = Shift, Up, resizeactive, 0 -30
+        binde = Shift, Down, resizeactive, 0 -30
+        binde = Shift, Down, moveactive, 0 30
+
+        binde = Shift, L, resizeactive, -30 0
+        binde = Shift, L, moveactive, 30 0
+        binde = Shift, H, resizeactive, -30 0
+        binde = Shift, K, resizeactive, 0 -30
+        binde = Shift, J, resizeactive, 0 -30
+        binde = Shift, J, moveactive, 0 30
+        bind = , R, submap, manage
+        bind = , escape, submap, manage
+        submap = manage
+
+        bind = , R, submap, resizeTiled
+        submap = resizeTiled
         binde = , Left, resizeactive, 1 0
         binde = , Right, resizeactive, -1 0
         binde = , Up, resizeactive, 0 -1
@@ -106,9 +140,23 @@ in {
         binde = , L, resizeactive, -30 0
         binde = , K, resizeactive, 0 -30
         binde = , J, resizeactive, 0 30
-        bind = , R, submap, move
-        bind = , escape, submap, move
+        bind = , R, submap, manage
+        bind = , escape, submap, manage
+        submap = manage
+
+        bind = , M, submap, move
         submap = move
+        binde = , Left, moveactive, 10 0
+        binde = , Right, moveactive, -10 0
+        binde = , Up, moveactive, 0 -10
+        binde = , Down, moveactive, 0 10
+        binde = , H, moveactive, 30 0
+        binde = , L, moveactive, -30 0
+        binde = , K, moveactive, 0 -30
+        binde = , J, moveactive, 0 30
+        bind = , M, submap, manage
+        bind = , escape, submap, manage
+        submap = manage
 
         bind = , escape, submap, reset
 

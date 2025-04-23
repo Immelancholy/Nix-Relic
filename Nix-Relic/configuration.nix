@@ -48,7 +48,7 @@
         dwindle.enable = false;
         hy3.enable = true;
       };
-      useHyprspace = true;
+      useHyprspace = false; # Hyprspace doesn't build atm
       useLiveWallpaper = true;
       settings = {
         cursor = {
@@ -106,10 +106,6 @@
         };
       };
     };
-    services.flatpak = {
-      packages = [
-      ];
-    };
   };
 
   services.qpwgraph.enable = true;
@@ -119,6 +115,7 @@
 
   environment.sessionVariables = {
     FLAKE_PATH = ""; # path to flake.nix
+    FRAMERATE = 60; # monitor refresh rate
   };
 
   programs.steam = {
@@ -128,8 +125,6 @@
 
   services.mpdchck = {
     enable = false;
-    address = "/run/user/1000/mpd/socket";
-    port = 6600;
   };
 
   drivers = {

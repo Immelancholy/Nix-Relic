@@ -8,6 +8,14 @@
       url = "github:kamadorueda/alejandra/3.1.0";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    zsh-256color = {
+      url = "github:chrissicool/zsh-256color";
+      flake = false;
+    };
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     catppuccin.url = "github:catppuccin/nix";
     catppuccinZen = {
       url = "github:catppuccin/zen-browser";
@@ -107,6 +115,8 @@
     nix-flatpak,
     lanzaboote,
     nur,
+    stylix,
+    disko,
     ...
   } @ inputs: let
     systems = [
@@ -122,15 +132,15 @@
         inherit system;
         specialArgs = {inherit inputs;};
         modules = [
-          ./hardware-configuration.nix
+          stylix.nixosModules.stylix
           nur.modules.nixos.default
           lanzaboote.nixosModules.lanzaboote
           nix-flatpak.nixosModules.nix-flatpak
           solaar.nixosModules.default
           catppuccin.nixosModules.catppuccin
-          ./configuration.nix
           ./nixos
           ./modules/system
+          ./configuration.nix
 
           home-manager.nixosModules.home-manager
           {

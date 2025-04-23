@@ -89,8 +89,8 @@ in {
       };
       extraConfig = ''
 
-        bind = $mod, A, submap, move
-        submap = move
+        bind = $mod, A, submap, manage
+        submap = manage
         bind = Alt, Return, fullscreen, 1
         bind = Alt+Shift, Return, fullscreen
         bind = , Q, hy3:warpcursor
@@ -98,7 +98,8 @@ in {
         bind = Shift, I, hy3:changefocus, lower
         bind = , W, togglefloating
         bind = , C, hy3:expand, expand
-        bind = Shift, C, hy3:expand, base
+        bind = Shift, C, hy3:expand, shrink
+        bind = $mods, C, hy3:expand, base
         bind = , H, hy3:movefocus, l, once
         bind = , J, hy3:movefocus, d, once
         bind = , K, hy3:movefocus, u, once
@@ -108,8 +109,12 @@ in {
         bind = , Down, hy3:movefocus, d, once
         bind = , Up, hy3:movefocus, u, once
         bind = , Right, hy3:movefocus, r, once
+        bind = , P, pin, active
         bindm = $mod, mouse:272, movewindow
         bindm = $mod, mouse:273, resizewindow
+
+        bind = , T, hy3:locktab, lock
+        bind = Shift, T, hy3:locktab, unlock
 
         bind = $mod, Right, hy3:movetoworkspace, r+1, warp
         bind = $mod, Left, hy3:movetoworkspace, r-1, warp
@@ -174,8 +179,41 @@ in {
         bind = Shift+Alt, Up, hy3:movewindow, u
         bind = Shift+Alt, Left, hy3:movewindow, l
 
-        bind = , R, submap, resize
+        bind = Shift, R, submap, resize
         submap = resize
+        binde = , Right, resizeactive, 30 0
+        binde = , Left, resizeactive, 30 0
+        binde = , Left, moveactive, -30 0
+        binde = , Up, resizeactive, 0 30
+        binde = , Up, moveactive, 0 -30
+        binde = , Down, resizeactive, 0 30
+
+        binde = , L, resizeactive, 30 0
+        binde = , H, resizeactive, 30 0
+        binde = , H, moveactive, -30 0
+        binde = , K, resizeactive, 0 30
+        binde = , K, moveactive, 0 -30
+        binde = , J, resizeactive, 0 30
+
+        binde = Shift, Right, resizeactive, -30 0
+        binde = Shift, Right, moveactive, 30 0
+        binde = Shift, Left, resizeactive, -30 0
+        binde = Shift, Up, resizeactive, 0 -30
+        binde = Shift, Down, resizeactive, 0 -30
+        binde = Shift, Down, moveactive, 0 30
+
+        binde = Shift, L, resizeactive, -30 0
+        binde = Shift, L, moveactive, 30 0
+        binde = Shift, H, resizeactive, -30 0
+        binde = Shift, K, resizeactive, 0 -30
+        binde = Shift, J, resizeactive, 0 -30
+        binde = Shift, J, moveactive, 0 30
+        bind = , R, submap, manage
+        bind = , escape, submap, manage
+        submap = manage
+
+        bind = , R, submap, resizeTiled
+        submap = resizeTiled
         binde = , Left, resizeactive, 1 0
         binde = , Right, resizeactive, -1 0
         binde = , Up, resizeactive, 0 -1
@@ -184,9 +222,24 @@ in {
         binde = , L, resizeactive, -30 0
         binde = , K, resizeactive, 0 -30
         binde = , J, resizeactive, 0 30
-        bind = , R, submap, move
-        bind = , escape, submap, move
+        bind = , R, submap, manage
+        bind = , escape, submap, manage
+        submap = manage
+
+        bind = , M, submap, move
         submap = move
+        binde = , Left, moveactive, 10 0
+        binde = , Right, moveactive, -10 0
+        binde = , Up, moveactive, 0 -10
+        binde = , Down, moveactive, 0 10
+        binde = , L, moveactive, 30 0
+        binde = , H, moveactive, -30 0
+        binde = , K, moveactive, 0 -30
+        binde = , J, moveactive, 0 30
+        bind = , M, submap, manage
+        bind = , escape, submap, manage
+        submap = manage
+
 
         bind = , escape, submap, reset
 

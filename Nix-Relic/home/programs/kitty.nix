@@ -1,9 +1,10 @@
 {
+  config,
   pkgs,
-  lib,
-  scriptBin,
   ...
-}: {
+}: let
+  user = config.home.username;
+in {
   programs.kitty = {
     enable = true;
     shellIntegration.enableZshIntegration = true;
@@ -15,7 +16,7 @@
       font_size = 10;
       window_padding_width = 5;
       allow_remote_control = true;
-      listen_on = "unix:/run/user/1000/mykitty";
+      listen_on = "unix:/tmp/mykitty-${user}";
     };
     extraConfig = ''
       # background_opacity 0.67
@@ -31,23 +32,10 @@
       cursor_blink_interval 0.5 ease-in-out
     '';
   };
-  # xdg.desktopEntries = {
-  #   kitty = {
-  #     name = "Kitty";
-  #     genericName = "Terminal emulator";
-  #     comment = "Fast, feature-rich, GPU based terminal";
-  #     exec = "${lib.getExe pkgs.kitty} --hold ${./scripts/poke.sh}";
-  #     type = "Application";
-  #     categories = ["System" "TerminalEmulator"];
-  #     icon = "kitty";
-  #     startupNotify = true;
-  #     settings = {
-  #       X-TerminalArgExec = "--";
-  #       X-TerminalArgTitle = "--title";
-  #       X-TerminalArgAppId = "--class";
-  #       X-TerminalArgDir = "--working-directory";
-  #       X-TerminalArgHold = "--hold";
-  #     };
-  #   };
-  # };
+  xdg.configFile."kitty/mpd.session".text = ''
+    layout splits
+    launch --title "inori" inori
+    launch --location=vsplit --title "mpdart" mpdart
+    resize_window short 8
+  '';
 }

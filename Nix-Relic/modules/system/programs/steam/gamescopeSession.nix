@@ -11,7 +11,7 @@
     gamescopeArgs=(
         --rt
         -e
-        -r 144
+        -r $FRAMERATE
         -f
     )
     steamArgs=(

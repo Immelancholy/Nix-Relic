@@ -13,7 +13,7 @@
         "$mod, grave, exec, $menu"
         "$mod, C, exec, $edit"
         "Alt, Return, fullscreen"
-        ''$mods, U, exec, [workspace 1 silent; float; size 858 559; move 640 40] $term --class "rmpc" uwsm app -- rmpc.sh''
+        ''$mods, U, exec, [workspace 1 silent; float; size 858 559; move 640 40] $term --class "mpd" --session=mpd.session''
         ''$mods, U, exec, [workspace 1 silent; float; size 858 462; move 640 609] $term --class "cava" uwsm app -- cava.sh''
         ''$mods, U, exec, [workspace 1 silent; float; size 620 637; move 10 433] $term --class "btop" uwsm app -- btop.sh''
         ''$mods, U, exec, [workspace 1 silent; float; size 402 1030; move 1508 40] $term --class "neo" uwsm app -- neo.sh''
@@ -23,7 +23,6 @@
         "Ctrl+Alt, L, exec, uwsm-app -- swaylock -fF"
         ''$mod, V, exec, $term --class "NixDots" uwsm app -- tnix''
         "$mod, N, exec, uwsm-app -- cliphist.sh"
-        "Alt+Shift, Tab, exec, rofi -show window -modi window"
         "$mod, M, exec, hyprgame"
         "$mod, L, workspace, r+1"
         "$mod, H, workspace, r-1"
@@ -62,10 +61,12 @@
       ", mouse:277, exec, $playerctl play-pause" # toggle between media play and pause
     ];
     bindel = [
-      ", XF86AudioLowerVolume, exec, uwsm-app -- rmpc volume -1" # decrease volume
-      ", XF86AudioRaiseVolume, exec, uwsm-app -- rmpc volume +1" # increase volume
-      ", mouse:281, exec, uwsm-app -- rmpc volume +1" # volume up
-      ", mouse:282, exec, uwsm-app -- rmpc volume -1" # volume down
+      ", XF86AudioLowerVolume, exec, uwsm-app -- volumeControl dec" # decrease volume of mpd
+      ", XF86AudioRaiseVolume, exec, uwsm-app -- volumeControl inc" # increase volume of mpd
+      ", mouse:281, exec, uwsm-app -- volumeControl inc" # volume up of mpd
+      ", mouse:282, exec, uwsm-app -- volumeControl dec" # volume down of mpd
+      ", XF86MonBrightnessUp, exec, brightness inc"
+      ", XF86MonBrightnessDown, exec, brightness dec"
     ];
     bindnt = [
       ", mouse:275, exec, pushToMuteChromium"
@@ -78,8 +79,8 @@
     bind = $mods, P, submap, player
     submap = player
     bindl = , P, exec, $playerctl play-pause
-    bindel  = , O, exec, uwsm-app -- rmpc volume +1 # volume up
-    bindel  = , I, exec, uwsm-app -- rmpc volume -1 # volume down
+    bindel  = , O, exec, uwsm-app -- volumeControl inc # volume up
+    bindel  = , I, exec, uwsm-app -- volumeControl dec # volume down
     bindel  = Shift, O, exec, $playerctl next # next
     bindel  = Shift, I, exec, $playerctl previous # next
     bind = , escape, submap, reset

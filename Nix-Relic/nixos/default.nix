@@ -26,7 +26,7 @@
     algorithm = "zstd";
     memoryPercent = 50;
     swapDevices = 1;
-    priority = 100;
+    priority = 101;
   };
 
   security.apparmor = {
@@ -51,20 +51,6 @@
 
   users.defaultUserShell = pkgs.zsh;
 
-  catppuccin = {
-    enable = true;
-    flavor = "mocha";
-    accent = "mauve";
-    sddm = {
-      enable = false;
-      flavor = "mocha";
-      font = "Noto Sans Nerd Font";
-      fontSize = "12";
-      background = ../home/backgrounds/anime-girl-wings.jpg;
-      loginBackground = true;
-    };
-  };
-
   xdg.portal = {
     xdgOpenUsePortal = true;
     extraPortals = with pkgs; [
@@ -74,8 +60,8 @@
 
   nix.gc = {
     automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 6d";
+    dates = "daily";
+    options = "--delete-older-than 1d";
   };
   nix.settings.auto-optimise-store = true;
   # ...

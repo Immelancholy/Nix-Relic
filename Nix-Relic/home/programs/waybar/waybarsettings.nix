@@ -32,13 +32,18 @@
         "cpu"
         "temperature"
         "memory"
+        "battery"
+        "custom/r_end"
+        "custom/l_end"
         "pulseaudio"
         "pulseaudio#mic"
+        "keyboard-state"
         "network"
         "custom/r_end"
         "custom/l_end"
         "tray"
-        "keyboard-state"
+        "custom/r_end"
+        "custom/l_end"
         "custom/power"
         "custom/r_end"
         "custom/padd"
@@ -144,8 +149,9 @@
             " "
           ];
         };
+        tooltip-format = "{icon} {desc} // {volume}%";
         # on-click = ''hyprctl dispatch exec "[float; size 960 560]" kitty tmux_pulse.sh'';
-        on-click = "pavucontrol";
+        on-click = "pavucontrol -t 3";
       };
       "battery" = {
         interval = 5;
@@ -171,16 +177,16 @@
       };
       "pulseaudio#mic" = {
         scroll-step = 1;
-        format = "{format_source}";
+        format = "{source_volume}% {format_source}";
         format-source = "󰍬";
         format-source-muted = "󰍭";
         # on-click = ''hyprctl dispatch exec "[float; size 960 560]" kitty tmux_pulse.sh'';
-        on-click = "pavucontrol";
+        on-click = "pavucontrol -t 4";
 
         tooltip-format = "{format_source} {source_desc} // {source_volume}%";
       };
       "custom/power" = {
-        format = "⏻ ";
+        format = "";
         tooltip = false;
         on-click = "rofi -show power-menu -modi power-menu:rofi-power-menu ";
       };

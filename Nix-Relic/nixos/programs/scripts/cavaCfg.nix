@@ -1,12 +1,17 @@
 {
   lib,
   pkgs,
+  config,
   ...
 }: let
   cavaCfg = pkgs.writeShellScriptBin "cavaCfg" ''
     cavaConfigFile=$HOME/.config/cava/vcConfig
     id=$(${pkgs.wireplumber}/bin/wpctl status | grep "virtual_cable_in" | ${pkgs.gawk}/bin/awk '{print $2}' | grep -m1 "" | cut -f1 -d ".")
     serial=$(${pkgs.wireplumber}/bin/wpctl inspect "''${id}" | sed -n 's/.*object.serial = //p')
+    reduce=$((FRAMERATE / 2))
+    if (( $reduce > 90 )); then
+      reduce=90
+    fi
 
     cat >"$cavaConfigFile" <<EOF
     [color]
@@ -24,7 +29,7 @@
     bar_spacing=0
     bar_width=1
     bars=0
-    framerate=144
+    framerate=''${FRAMERATE}
     sensitivity=100
 
     [input]
@@ -38,7 +43,7 @@
 
     [smoothing]
     monstercat=1
-    noise_reduction=72
+    noise_reduction=''${reduce}
     waves=0
     EOF
   '';
@@ -52,5 +57,8 @@ in {
       "${cavaCfg}"
     ];
     script = ''cavaCfg'';
+    environment = {
+      FRAMERATE = config.environment.sessionVariables.FRAMERATE;
+    };
   };
 }

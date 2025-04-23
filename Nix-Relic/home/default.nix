@@ -1,8 +1,11 @@
 {
   nixosConfig,
   lib,
+  config,
   ...
-}: {
+}: let
+  user = config.home.username;
+in {
   # link the configuration file in current directory to the specified location in home directory
   # home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
 
@@ -29,6 +32,7 @@
 
   xdg = {
     enable = true;
+    userDirs.enable = true;
     configFile = {
       "autostart/input-mapper-autoload.desktop" = lib.mkIf nixosConfig.services.input-remapper.enable {
         source = "${nixosConfig.services.input-remapper.package}/share/applications/input-remapper-autoload.desktop";
@@ -70,6 +74,26 @@
         "vimSync": true
       }
     '';
+    ".zen/profiles.ini".text = ''
+      [Profile0]
+      Name=${user}Default
+      IsRelative=1
+      Path=${user}.Default
+      ZenAvatarPath=chrome://browser/content/zen-avatars/avatar-82.svg
+      Default=1
+
+      [General]
+      StartWithLastProfile=1
+      Version=2
+    '';
+    "Pictures/fastfetch_logos" = {
+      source = ./programs/fastfetch/logo;
+      recursive = true;
+    };
+    "Pictures/wallpapers" = {
+      source = ./backgrounds;
+      recursive = true;
+    };
   };
 
   home.stateVersion = "25.05";

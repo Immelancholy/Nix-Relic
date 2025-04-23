@@ -1,12 +1,13 @@
-{
+{config, ...}: {
+  imports = [
+    ./client
+  ];
   services = {
     mpd = {
       enable = true;
       network = {
-        listenAddress = "/run/user/1000/mpd/socket";
         startWhenNeeded = true;
       };
-      musicDirectory = "~/Music";
       extraConfig = ''
         restore_paused "yes"
 
@@ -18,15 +19,9 @@
         audio_output {
           type  "fifo"
           name  "mpd_cava"
-          path  "/run/user/1000/mpd_cava.fifo"
+          path  "/tmp/mpd_cava.fifo"
           format  "44100:16:2"
         }
-        # audio_output {
-        #   type  "fifo"
-        #   name  "mpd_waycava"
-        #   path  "/run/user/1000/mpd_waycava.fifo"
-        #   format  "44100:16:2"
-        # }
         audio_output {
           type  "pipewire"
           name  "Pipewire Cava"
@@ -36,14 +31,13 @@
     };
     mpdris2 = {
       enable = true;
-      mpd.host = "/run/user/1000/mpd/socket";
       notifications = true;
     };
     mpd-discord-rpc = {
       enable = true;
       settings = {
         hosts = [
-          "/run/user/1000/mpd/socket"
+          "${config.services.mpd.network.listenAddress}:${builtins.toString config.services.mpd.network.port}"
         ];
         format = {
           details = "$title";

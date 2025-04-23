@@ -11,6 +11,7 @@
     ./cliphist.nix
     ./neo.nix
     # ./nv.nix
+    ./mpdart.nix
     ./rmpc.nix
     ./swww.nix
     ./tmux_dev.nix
@@ -19,5 +20,7 @@
     ./ss.nix
     ./muteChromium.nix
     ./cavaCfg.nix
+    ./brightness.nix
+    ./volume.nix
   ];
 }

@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: {
   home.file.".p10k.zsh" = {
     source = ./p10k.zsh;
   };
@@ -18,23 +22,21 @@
       rmpcs = "rmpc.sh";
       ca = "cava.sh";
       fastfetch = "clear; fastfetch";
-      switch = ''cd $FLAKE_PATH; clear; fastfetch; git add .; git commit -m "switch"; sudo nixos-rebuild switch --flake .; git add . ; git commit -m "Update Flake Lock"; cd -'';
+      switch = ''cd $FLAKE_PATH; clear; fastfetch; git add .; git commit -m "switch"; sudo nixos-rebuild switch --flake $SYSTEM; git add . ; git commit -m "Update Flake Lock"; cd -'';
       update = "cd $FLAKE_PATH; clear; fastfetch; nix flake update --flake . --commit-lock-file; cd -";
-      boot = ''cd $FLAKE_PATH; clear; fastfetch; git add .; git commit -m "switch"; sudo nixos-rebuild boot --flake . ; git add . ; git commit -m "Update Flake Lock"; cd -'';
+      boot = ''cd $FLAKE_PATH; clear; fastfetch; git add .; git commit -m "switch"; sudo nixos-rebuild boot --flake $SYSTEM; git add . ; git commit -m "Update Flake Lock"; cd -'';
       nixp = "cd $FLAKE_PATH; git push -u origin main; cd -";
       firmware = "sudo systemctl reboot --firmware-setup";
-    };
-    antidote = {
-      enable = true;
-      plugins = [
-        "chrissicool/zsh-256color"
-      ];
     };
     history.size = 10000;
     history.ignoreAllDups = true;
     history.path = "$HOME/.zsh_history";
     history.ignorePatterns = ["rm *" "pkill *" "cp *"];
     plugins = [
+      {
+        name = "zsh-256color";
+        src = inputs.zsh-256color;
+      }
       {
         name = "powerlevel10k";
         src = pkgs.zsh-powerlevel10k;
@@ -46,12 +48,6 @@
         file = "share/zsh-nix-shell/nix-shell.plugin.zsh";
       }
     ];
-    # profileExtra = ''
-    #   eval $(gnome-keyring-daemon --start --daemonize)
-    #   if ${pkgs.uwsm}/bin/uwsm check may-start; then
-    #     exec ${pkgs.uwsm}/bin/uwsm start hyrpland-uwsm.desktop
-    #   fi
-    # '';
     initExtra = ''
       source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
       source <(fzf --zsh)

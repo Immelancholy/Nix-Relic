@@ -2,5 +2,6 @@
   imports = [
     ./wayland
     ./programs
+    ./catppuccin
   ];
 }
