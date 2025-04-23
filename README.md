@@ -3,11 +3,11 @@
 
 https://github.com/user-attachments/assets/669d0a3e-0035-4646-9147-a5affd1d3237
 
-![SS1](https://raw.githubusercontent.com/Immelancholy/Nix-Dotfiles/refs/heads/main/Screenshots/SS1.png)
+![SS1](https://raw.githubusercontent.com/Immelancholy/Nix-Relic/refs/heads/main/Screenshots/SS1.png)
 
-![SS2](https://raw.githubusercontent.com/Immelancholy/Nix-Dotfiles/refs/heads/main/Screenshots/SS2.png)
+![SS2](https://raw.githubusercontent.com/Immelancholy/Nix-Relic/refs/heads/main/Screenshots/SS2.png)
 
-![SS3](https://raw.githubusercontent.com/Immelancholy/Nix-Dotfiles/refs/heads/main/Screenshots/SS3.png)
+![SS3](https://raw.githubusercontent.com/Immelancholy/Nix-Relic/refs/heads/main/Screenshots/SS3.png)
 
 ## Installation
 > [!WARNING]
