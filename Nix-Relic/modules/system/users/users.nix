@@ -38,7 +38,7 @@ in {
           home.username = "${user}";
           home.homeDirectory = "/home/${user}";
           imports = [
-            ../../../home
+            ../../../nixos/home
             # inputs.stylix.homeManagerModules.stylix
             ../../home
             inputs.catppuccin.homeModules.catppuccin

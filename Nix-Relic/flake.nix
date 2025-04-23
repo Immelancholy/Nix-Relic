@@ -138,7 +138,7 @@
           nix-flatpak.nixosModules.nix-flatpak
           solaar.nixosModules.default
           catppuccin.nixosModules.catppuccin
-          ./nixos
+          ./nixos/system
           ./modules/system
           ./configuration.nix
 
