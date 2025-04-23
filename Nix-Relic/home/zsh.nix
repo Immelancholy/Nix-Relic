@@ -22,9 +22,9 @@
       rmpcs = "rmpc.sh";
       ca = "cava.sh";
       fastfetch = "clear; fastfetch";
-      switch = ''cd $FLAKE_PATH; clear; fastfetch; git add .; git commit -m "switch"; sudo nixos-rebuild switch --flake $SYSTEM; git add . ; git commit -m "Update Flake Lock"; cd -'';
+      switch = ''cd $FLAKE_PATH; clear; fastfetch; git add .; git commit -m "switch"; sudo nixos-rebuild switch --flake .; git add . ; git commit -m "Update Flake Lock"; cd -'';
       update = "cd $FLAKE_PATH; clear; fastfetch; nix flake update --flake . --commit-lock-file; cd -";
-      boot = ''cd $FLAKE_PATH; clear; fastfetch; git add .; git commit -m "switch"; sudo nixos-rebuild boot --flake $SYSTEM; git add . ; git commit -m "Update Flake Lock"; cd -'';
+      boot = ''cd $FLAKE_PATH; clear; fastfetch; git add .; git commit -m "switch"; sudo nixos-rebuild boot --flake .; git add . ; git commit -m "Update Flake Lock"; cd -'';
       nixp = "cd $FLAKE_PATH; git push -u origin main; cd -";
       firmware = "sudo systemctl reboot --firmware-setup";
     };
