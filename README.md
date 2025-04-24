@@ -82,6 +82,7 @@ nix flake init -t github:Immelancholy/Nix-Relic
       spicetify.enable = false;
       kitty.enable = false;
       nixvim.enable = false;
+      zen.enable = false;
     };
     programs.obs-studio.enable = false;
     programs.git = {
