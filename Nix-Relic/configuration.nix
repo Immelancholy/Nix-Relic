@@ -4,7 +4,7 @@
   config,
   ...
 }: {
-  networking.hostname = "nix-relic";
+  networking.hostName = "nix-relic";
   userAccounts.users = [
   ]; # user accounts here
   userAccounts.sudoUsers = [
