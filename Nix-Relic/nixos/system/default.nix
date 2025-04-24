@@ -38,8 +38,6 @@
     ];
   };
 
-  networking.hostName = "nix-relic";
-
   networking.firewall = {
     enable = true;
   };

@@ -1,11 +1,9 @@
 {pkgs, ...}: {
   environment.systemPackages = [
-    (pkgs.writeShellScriptBin "rmpc.sh" ''
+    (pkgs.writeShellScriptBin "pipes" ''
       kitty @ set-spacing padding=2
-      kitty @ set-font-size 9.5
-      rmpc "$@"
+      pipes.sh -p 12 -t 1 -r 0 "$@"
       kitty @ set-spacing padding=default
-      kitty @ set-font-size 10
     '')
   ];
 }

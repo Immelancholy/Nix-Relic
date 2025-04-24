@@ -1,4 +1,25 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: let
+  base = "#${config.lib.stylix.colors.base00}";
+  mantle = "#${config.lib.stylix.colors.base01}";
+  surface0 = "#${config.lib.stylix.colors.base02}";
+  surface1 = "#${config.lib.stylix.colors.base03}";
+  surface2 = "#${config.lib.stylix.colors.base04}";
+  text = "#${config.lib.stylix.colors.base05}";
+  rosewater = "#${config.lib.stylix.colors.base06}";
+  lavender = "#${config.lib.stylix.colors.base07}";
+  red = "#${config.lib.stylix.colors.base08}";
+  peach = "#${config.lib.stylix.colors.base09}";
+  yellow = "#${config.lib.stylix.colors.base0A}";
+  green = "#${config.lib.stylix.colors.base0B}";
+  teal = "#${config.lib.stylix.colors.base0C}";
+  blue = "#${config.lib.stylix.colors.base0D}";
+  mauve = "#${config.lib.stylix.colors.base0E}";
+  flamingo = "#${config.lib.stylix.colors.base0F}";
+in {
   home.packages = with pkgs; [
     inori
   ];
@@ -6,28 +27,31 @@
     qwerty_keybindings = true
 
     [theme.item_highlight_active]
-    fg = "#11111b"
-    bg = "#cba6f7"
+    fg = "${mantle}"
+    bg = "${mauve}"
 
     [theme.item_highlight_inactive]
-    fg = "#cdd6f4"
+    fg = "${text}"
 
     [theme.block_active]
-    fg = "#cba6f7"
+    fg = "${mauve}"
 
     [theme.playing]
-    fg = "#cba6f7"
+    fg = "${green}"
     add_modifier = "HIDDEN"
 
+    [theme.paused]
+    fg = "${yellow}"
+
     [theme.status_artist]
-    fg = "#89dceb"
+    fg = "${red}"
     add_modifier = "HIDDEN"
 
     [theme.status_album]
-    fg = "#cba6f7"
+    fg = "${mauve}"
     add_modifier = "HIDDEN"
 
     [theme.album]
-    fg = "#cba6f7"
+    fg = "${mauve}"
   '';
 }

@@ -3,5 +3,6 @@
     ./wayland
     ./programs
     ./catppuccin
+    ./stylix
   ];
 }

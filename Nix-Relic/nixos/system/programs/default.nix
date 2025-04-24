@@ -63,6 +63,7 @@
     wantedBy = ["graphical-session.target"];
   };
   environment.systemPackages = with pkgs; [
+    pipes
     brightnessctl
     mpc
     ffmpegthumbnailer
@@ -155,7 +156,7 @@
     gawk
     zstd
     gnupg
-    neo
+    notcurses
 
     # nix related
     #

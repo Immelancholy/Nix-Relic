@@ -44,11 +44,19 @@ nix flake init -t github:Immelancholy/Nix-Relic
   config,
   ...
 }: {
+  networking.hostname = "nix-relic";
   userAccounts.users = [
   ]; # user accounts here
   userAccounts.sudoUsers = [
     "your-user"
   ]; # sudo enabled accounts here (You'll want to go here if you're installing these. )
+
+  stylix = {
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml"; # Stylix theme, comment this to generate theme based on wallpaper
+    polarity = "dark";
+
+    image = ./nixos/home/backgrounds/Neon-Beast-Girl.png;
+  };
 
   services.pipewire.extraConfig.pipewire."92-low-latency" = {
     "context.properties" = {
@@ -62,6 +70,19 @@ nix flake init -t github:Immelancholy/Nix-Relic
 
   # duplicate this for each user
   home-manager.users.your-user = {
+    catppuccin = {
+      flavor = "mocha";
+      accent = "mauve";
+    };
+    stylix.targets = {
+      # comment this if you don't use catppuccin bas16 on stylix, I made a module to autodisable their respective catppuccin themes.
+      tmux.enable = false;
+      yazi.enable = false;
+      btop.enable = false;
+      spicetify.enable = false;
+      kitty.enable = false;
+      nixvim.enable = false;
+    };
     programs.obs-studio.enable = false;
     programs.git = {
       enable = true;

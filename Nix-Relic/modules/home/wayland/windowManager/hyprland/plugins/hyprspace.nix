@@ -38,8 +38,8 @@ in {
               switchOnDrop = true;
               affectStrut = false;
 
-              workspaceActiveBorder = "rgba(cba6f7ff)";
-              workspaceInactiveBorder = "rgba(b4befecc)";
+              workspaceActiveBorder = "rgba($mauveff)";
+              workspaceInactiveBorder = "rgba($lavendercc)";
               disableBlur = false;
             };
           };

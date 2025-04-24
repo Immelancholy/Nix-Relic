@@ -23,7 +23,7 @@
               keyword layerrule noanim,rofi
               "
               hyprctl 'keyword windowrulev2 opaque,class:(.*)' # ensure all windows are opaque
-              hyprctl dispatch signalwindow class:neo,9
+              hyprctl dispatch signalwindow class:pipes,9
               hyprctl dispatch signalwindow class:cava,9
               hyprctl dispatch signalwindow class:btop,9
               hyprctl dispatch signalwindow class:mpd,9
@@ -38,9 +38,9 @@
               uwsm app -- mpvpaper -f -p -o "--loop hwdec=auto" '*' $HOME/Pictures/wallpapers/Neon-Beast-Girl.mp4
               systemctl start --user mpdchck
               hyprctl dispatch exec '[workspace 1 silent; float; size 858 559; move 640 40] uwsm app -- kitty --class "mpd" --session=mpd.session'
-              hyprctl dispatch exec '[workspace 1 silent; float; size 858 462; move 640 609] uwsm app -- kitty --class "cava" uwsm app -- cava.sh'
-              hyprctl dispatch exec '[workspace 1 silent; float; size 620 666; move 10 404] uwsm app -- kitty --class "btop" uwsm app -- btop.sh'
-              hyprctl dispatch exec '[workspace 1 silent; float; size 402 1030; move 1508 40] uwsm app -- kitty --class "neo" uwsm app -- neo.sh'
+              hyprctl dispatch exec '[workspace 1 silent; float; size 858 462; move 640 609] uwsm app -- kitty --class "cava" cava.sh'
+              hyprctl dispatch exec '[workspace 1 silent; float; size 620 666; move 10 404] uwsm app -- kitty --class "btop" btop.sh'
+              hyprctl dispatch exec '[workspace 1 silent; float; size 402 1030; move 1508 40] uwsm app -- kitty --class "pipes" pipes'
               hyprctl dispatch exec '[workspace 1 silent; float; size 620 354; move 10 40] uwsm app -- kitty --class "fastfetch" kitty @ launch --type overlay --env class="fastfetch"'
       fi
     '')

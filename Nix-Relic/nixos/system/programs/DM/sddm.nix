@@ -6,12 +6,37 @@
 }:
 with lib; let
   cfg = config.displayManager.sddm;
+
+  base = "#${config.lib.stylix.colors.base00}";
+  mantle = "#${config.lib.stylix.colors.base01}";
+  surface0 = "#${config.lib.stylix.colors.base02}";
+  surface1 = "#${config.lib.stylix.colors.base03}";
+  surface2 = "#${config.lib.stylix.colors.base04}";
+  text = "#${config.lib.stylix.colors.base05}";
+  rosewater = "#${config.lib.stylix.colors.base06}";
+  lavender = "#${config.lib.stylix.colors.base07}";
+  red = "#${config.lib.stylix.colors.base08}";
+  peach = "#${config.lib.stylix.colors.base09}";
+  yellow = "#${config.lib.stylix.colors.base0A}";
+  green = "#${config.lib.stylix.colors.base0B}";
+  teal = "#${config.lib.stylix.colors.base0C}";
+  blue = "#${config.lib.stylix.colors.base0D}";
+  mauve = "#${config.lib.stylix.colors.base0E}";
+  flamingo = "#${config.lib.stylix.colors.base0F}";
 in {
   options.displayManager.sddm = {
     enable = mkOption {
       type = types.bool;
       default = false;
       description = ''Use sddm as display manager'';
+    };
+    animatedBackground = {
+      enable = mkEnableOption "Use animated background for sddm";
+      video = mkOption {
+        type = types.path;
+        default = ../../../home/backgrounds/Neon-Beast-Girl.mp4;
+        description = "Path to animated background";
+      };
     };
   };
   config = mkIf cfg.enable {
@@ -27,8 +52,8 @@ in {
       theme = "sddm-astronaut-theme";
       settings = {
         Theme = {
-          CursorTheme = "Bibata-Modern-Ice";
-          CursorSize = 20;
+          CursorTheme = config.stylix.cursor.name;
+          CursorSize = config.stylix.cursor.size;
         };
       };
       extraPackages = with pkgs; [
@@ -44,56 +69,56 @@ in {
           ScreenWidth = "1920";
           ScreenHeight = "1080";
 
-          Font = "Noto Sans Nerd Font";
+          Font = config.stylix.fonts.sansSerif.name;
           FontSize = "12";
 
           RoundCorners = "20";
 
-          BackgroundPlaceholder = "${../../../home/backgrounds/Neon-Beast-Girl.png}";
-          Background = "${../../../home/backgrounds/Neon-Beast-Girl.mp4}";
+          BackgroundPlaceholder = "${config.stylix.image}";
+          Background = "${cfg.animatedBackground.video}";
           BackgroundSpeed = "1.0";
           PauseBackground = "";
           CropBackground = "false";
           BackgroundHorizontalAlignment = "center";
           BackgroundVerticalAlignment = "center";
           DimBackground = "0.0";
-          HeaderTextColor = "#cdd6f4";
-          DateTextColor = "#cdd6f4";
-          TimeTextColor = "#cdd6f4";
+          HeaderTextColor = "${text}";
+          DateTextColor = "${text}";
+          TimeTextColor = "${text}";
 
-          FormBackgroundColor = "#1e1e2e";
-          BackgroundColor = "#1e1e2e";
-          DimBackgroundColor = "#1e1e2e";
+          FormBackgroundColor = "${base}";
+          BackgroundColor = "${base}";
+          DimBackgroundColor = "${base}";
 
-          LoginFieldBackgroundColor = "##1e1e2e";
-          PasswordFieldBackgroundColor = "#1e1e2e";
-          LoginFieldTextColo = "#cba6f7";
-          PasswordFieldTestColor = "#cba6f7";
-          UserIconColor = "#cba6f7";
-          PasswordIconColor = "#cba6f7";
+          LoginFieldBackgroundColor = "#${base}";
+          PasswordFieldBackgroundColor = "${base}";
+          LoginFieldTextColo = "${mauve}";
+          PasswordFieldTestColor = "${mauve}";
+          UserIconColor = "${mauve}";
+          PasswordIconColor = "${mauve}";
 
-          PlaceholderTextColor = "#a6adc8";
-          WarningColor = "#f38ba8";
+          PlaceholderTextColor = "${surface2}";
+          WarningColor = "${red}";
 
-          LoginButtonTextColor = "#cba6f7";
-          LoginButtonBackgroundColor = "#1e1e2e";
-          SystemButtonsIconsColor = "#cba6f7";
-          SessionButtonTextColor = "#cba6f7";
-          VirtualKeyboardButtonTextColor = "#cba6f7";
+          LoginButtonTextColor = "${mauve}";
+          LoginButtonBackgroundColor = "${base}";
+          SystemButtonsIconsColor = "${mauve}";
+          SessionButtonTextColor = "${mauve}";
+          VirtualKeyboardButtonTextColor = "${mauve}";
 
-          DropdownTextColor = "#cba6f7";
-          DropdownSelectedBackgroundColorrr = "#1e1e2e";
-          DropdownBackgroundColor = "#1e1e2e";
+          DropdownTextColor = "${mauve}";
+          DropdownSelectedBackgroundColorrr = "${base}";
+          DropdownBackgroundColor = "${base}";
 
-          HighlightTextColor = "#cba6f7";
-          HighlightBackgroundColor = "#cba6f7";
-          HighlightBorderColor = "#cba6f7";
+          HighlightTextColor = "${mauve}";
+          HighlightBackgroundColor = "${mauve}";
+          HighlightBorderColor = "${mauve}";
 
-          HoverUserIconColor = "#91d7e3";
-          HoverPasswordIconColor = "#91d7e3";
-          HoverSystemButtonsIconColor = "#91d7e3";
-          HoverSessionButtonTextColor = "#91d7e3";
-          HoverVirtualKeyboardButtonTextColor = "#91d7e3";
+          HoverUserIconColor = "${teal}";
+          HoverPasswordIconColor = "${teal}";
+          HoverSystemButtonsIconColor = "${teal}";
+          HoverSessionButtonTextColor = "${teal}";
+          HoverVirtualKeyboardButtonTextColor = "${teal}";
 
           PartialBlue = "true";
           BlurMax = "35";

@@ -9,11 +9,11 @@ in {
     enable = true;
     shellIntegration.enableZshIntegration = true;
     settings = {
-      font_family = "CaskaydiaCove Nerd Font Mono";
-      bold_font = "CaskaydiaCove Nerd Font Mono Bold";
-      italic_font = "CaskaydiaCove Nerd Fonr Mono Italic";
-      bold_italic_font = "CaskaydiaCove Nerd Font Mono Bold Italic";
-      font_size = 10;
+      font_family = "${config.stylix.fonts.monospace.name}";
+      bold_font = "${config.stylix.fonts.monospace.name} Bold";
+      italic_font = "${config.stylix.fonts.monospace.name} Italic";
+      bold_italic_font = "${config.stylix.fonts.monospace.name} Bold Italic";
+      font_size = config.stylix.fonts.sizes.terminal;
       window_padding_width = 5;
       allow_remote_control = true;
       listen_on = "unix:/tmp/mykitty-${user}";

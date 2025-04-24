@@ -7,34 +7,6 @@
   programs.nixvim = {
     globals.mapleader = " ";
     enableMan = true;
-    colorschemes.catppuccin = {
-      autoLoad = true;
-      enable = true;
-      settings = {
-        flavour = "mocha";
-        default_integrations = true;
-        integrations = {
-          cmp = true;
-          gitsigns = true;
-          mini = {
-            enabled = true;
-          };
-          treesitter = true;
-        };
-        styles = {
-          booleans = [
-            "bold"
-            "italic"
-          ];
-          conitionals = [
-            "bold"
-          ];
-        };
-        term_colors = true;
-        transparent_background = true;
-      };
-    };
-    colorscheme = "catppuccin";
     vimAlias = true;
     withNodeJs = true;
     withPerl = true;

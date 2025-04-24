@@ -1,13 +1,30 @@
-{
+{config, ...}: let
+  base = "#${config.lib.stylix.colors.base00}";
+  mantle = "#${config.lib.stylix.colors.base01}";
+  surface0 = "#${config.lib.stylix.colors.base02}";
+  surface1 = "#${config.lib.stylix.colors.base03}";
+  surface2 = "#${config.lib.stylix.colors.base04}";
+  text = "#${config.lib.stylix.colors.base05}";
+  rosewater = "#${config.lib.stylix.colors.base06}";
+  lavender = "#${config.lib.stylix.colors.base07}";
+  red = "#${config.lib.stylix.colors.base08}";
+  peach = "#${config.lib.stylix.colors.base09}";
+  yellow = "#${config.lib.stylix.colors.base0A}";
+  green = "#${config.lib.stylix.colors.base0B}";
+  teal = "#${config.lib.stylix.colors.base0C}";
+  blue = "#${config.lib.stylix.colors.base0D}";
+  mauve = "#${config.lib.stylix.colors.base0E}";
+  flamingo = "#${config.lib.stylix.colors.base0F}";
+in {
   services.dunst = {
     enable = true;
     settings = {
       global = {
         follow = "keyboard";
         enable_posix_regex = true;
-        frame_color = "#cba6f7c0";
+        frame_color = "${mauve}c0";
         separator_color = "frame";
-        highlight = "#89b4fac0";
+        highlight = "${mauve}c0";
         gaps_size = 4;
         frame_width = 2;
         corner_radius = 20;
@@ -27,17 +44,17 @@
         dmenu = "rofi -dmenu";
       };
       urgency_low = {
-        background = "#1e1e2e99";
-        foreground = "#cdd6f4";
+        background = "${base}99";
+        foreground = "${text}";
       };
       urgency_normal = {
-        background = "#1e1e2e99";
-        foreground = "#cdd6f4";
+        background = "${base}99";
+        foreground = "${text}";
       };
       urgency_critical = {
-        background = "#1e1e2e99";
-        foreground = "#cdd6f4";
-        frame_color = "#f38ba8c0";
+        background = "${base}99";
+        foreground = "${text}";
+        frame_color = "${red}c0";
       };
     };
   };

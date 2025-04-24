@@ -18,34 +18,24 @@
       inherit (config.lib.formats.rasi) mkLiteral;
     in {
       "*" = {
-        rosewater = mkLiteral "#f5e0dc";
-        flamingo = mkLiteral "#f2cdcd";
-        pink = mkLiteral "#f5c2e7";
-        mauve = mkLiteral "#cba6f7EE";
-        red = mkLiteral "#f38ba8EE";
-        maroon = mkLiteral "#eba0ac";
-        peach = mkLiteral "#fab387";
-        yellow = mkLiteral "#f9e2af";
-        green = mkLiteral "#a6e3a1";
-        teal = mkLiteral "#94e2d5";
-        sky = mkLiteral "#89dcebEE";
-        sapphire = mkLiteral "#74c7ec";
-        blue = mkLiteral "#89b4fa";
-        lavender = mkLiteral "#b4befe";
-        text = mkLiteral "#cdd6f4";
-        text-dark = mkLiteral "#1e1e2e";
-        subtext1 = mkLiteral "#bac2de";
-        subtext0 = mkLiteral "#a6adc8";
-        overlay2 = mkLiteral "#9399b2";
-        overlay1 = mkLiteral "#7f849c";
-        overlay0 = mkLiteral "#6c7086";
-        surface2 = mkLiteral "#585b70";
-        surface1 = mkLiteral "#45475a";
-        surface0 = mkLiteral "#313244";
-        base = mkLiteral "#1e1e2eBB";
-        mantle = mkLiteral "#181825BB";
-        crust = mkLiteral "#11111bBB";
-        wallpaper = mkLiteral ''url("${../../backgrounds/Neon-Beast-Girl.png}", width)'';
+        base = mkLiteral "#${config.lib.stylix.colors.base00}BB";
+        mantle = mkLiteral "#${config.lib.stylix.colors.base01}BB";
+        surface0 = mkLiteral "#${config.lib.stylix.colors.base02}";
+        surface1 = mkLiteral "#${config.lib.stylix.colors.base03}";
+        surface2 = mkLiteral "#${config.lib.stylix.colors.base04}";
+        text = mkLiteral "#${config.lib.stylix.colors.base05}";
+        text-dark = mkLiteral "#${config.lib.stylix.colors.base00}";
+        rosewater = mkLiteral "#${config.lib.stylix.colors.base06}dc";
+        lavender = mkLiteral "#${config.lib.stylix.colors.base07}";
+        red = mkLiteral "#${config.lib.stylix.colors.base08}EE";
+        peach = mkLiteral "#${config.lib.stylix.colors.base09}";
+        yellow = mkLiteral "#${config.lib.stylix.colors.base0A}";
+        green = mkLiteral "#${config.lib.stylix.colors.base0B}";
+        teal = mkLiteral "#${config.lib.stylix.colors.base0C}EE";
+        blue = mkLiteral "#${config.lib.stylix.colors.base0D}";
+        mauve = mkLiteral "#${config.lib.stylix.colors.base0E}EE";
+        flamingo = mkLiteral "#${config.lib.stylix.colors.base0F}cd";
+        wallpaper = mkLiteral ''url("${config.stylix.image}", width)'';
 
         lines = mkLiteral "6";
         columns = mkLiteral "1";
@@ -97,7 +87,7 @@
         str = " :";
         padding = mkLiteral "12px 15px";
         border-radius = mkLiteral "100%";
-        background-color = mkLiteral "@crust";
+        background-color = mkLiteral "@mantle";
         text-color = mkLiteral "inherit";
       };
       "entry" = {
@@ -106,11 +96,11 @@
         width = mkLiteral "250px";
         padding = mkLiteral "12px 16px";
         border-radius = mkLiteral "100%";
-        background-color = mkLiteral "@crust";
+        background-color = mkLiteral "@mantle";
         text-color = mkLiteral "inherit";
         cursor = mkLiteral "text";
         placeholder = "Search";
-        placeholder-color = mkLiteral "@subtext0";
+        placeholder-color = mkLiteral "@surface2";
       };
       "dummy" = {
         expand = mkLiteral "true";
@@ -126,7 +116,7 @@
         width = mkLiteral "90px";
         padding = mkLiteral "0px";
         border-radius = mkLiteral "100%";
-        background-color = mkLiteral "@crust";
+        background-color = mkLiteral "@mantle";
         text-color = mkLiteral "inherit";
         cursor = mkLiteral "pointer";
       };
@@ -168,7 +158,7 @@
         text-color = mkLiteral "@text-dark";
       };
       "element normal.active" = {
-        background-color = mkLiteral "@sky";
+        background-color = mkLiteral "@lavender";
         text-color = mkLiteral "@text-dark";
       };
       "element selected.normal" = {
@@ -203,7 +193,7 @@
       "textbox" = {
         padding = mkLiteral "15px";
         border-radius = mkLiteral "15px";
-        background-color = mkLiteral "@crust";
+        background-color = mkLiteral "@mantle";
         text-color = mkLiteral "@text";
         vertical-align = mkLiteral "0.5";
         horizontal-align = mkLiteral "0.0";

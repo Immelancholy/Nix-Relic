@@ -6,8 +6,6 @@
     };
     enable = true;
     autoEnable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
-    polarity = "dark";
     cursor = {
       package = pkgs.bibata-cursors;
       name = "Bibata-Modern-Ice";
@@ -37,6 +35,5 @@
         popups = 10;
       };
     };
-    image = ../../home/backgrounds/Neon-Beast-Girl.png;
   };
 }

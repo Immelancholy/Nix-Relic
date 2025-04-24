@@ -14,24 +14,18 @@
       };
       dark = "Tela-circle-dracula";
       light = "Tela-circle-dracula";
-      # package = pkgs.catppuccin-papirus-folders.override {
-      #   flavor = "mocha";
-      #   accent = "mauve";
-      # };
-      # dark = "Papirus-Dark";
-      # light = "Papirus-Dark";
     };
     targets = {
       dunst.enable = false;
       rofi.enable = false;
       waybar.enable = false;
-      tmux.enable = false;
-      yazi.enable = false;
-      nixvim.enable = false;
-      btop.enable = false;
-      spicetify.enable = false;
-      kitty.enable = false;
-      gtk.flatpakSupport.enable = true;
+      nixvim = {
+        plugin = "base16-nvim";
+        transparentBackground = {
+          main = true;
+          signColumn = true;
+        };
+      };
     };
   };
 }

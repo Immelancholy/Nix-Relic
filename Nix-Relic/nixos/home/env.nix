@@ -20,6 +20,8 @@
     GRIMBLAST_EDITOR = "swappy";
     MPD_HOST = "${config.services.mpd.network.listenAddress}";
     MPD_PORT = "${builtins.toString config.services.mpd.network.port}";
+    NOTES_PATH = "$HOME/Documents/Obsidian-Vault"; # path to notes folder ( for neovim )
+    PROJECTS_PATH = "$HOME/Documents/Projects"; # path to Projects folder ( for neovim )
   };
 
   systemd.user.sessionVariables = {

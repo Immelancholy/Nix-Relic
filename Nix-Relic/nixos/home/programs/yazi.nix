@@ -14,9 +14,6 @@
       mount = "${inputs.yazi-plugins}/mount.yazi";
       yamb = "${inputs.yamb}";
     };
-    flavors = {
-      catppuccin-mocha = "${inputs.yazi-flavors}/catppuccin-mocha.yazi";
-    };
     initLua = ''
       local bookmarks = {}
 

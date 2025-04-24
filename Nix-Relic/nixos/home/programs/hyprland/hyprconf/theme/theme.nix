@@ -4,22 +4,22 @@
       gaps_in = 3;
       gaps_out = 8;
       border_size = 2;
-      "col.active_border" = lib.mkForce "rgba(cba6f7ff) rgba(89dcebff) rgba(f5e0dcff) 40deg";
-      "col.inactive_border" = lib.mkForce "rgba(b4befecc) rgba(6c7086cc) 45deg";
+      "col.active_border" = lib.mkForce "rgba($mauveff) rgba($tealff) rgba($rosewaterff) 40deg";
+      "col.inactive_border" = lib.mkForce "rgba($lavendercc) rgba($surface2cc) 45deg";
       resize_on_border = true;
     };
     group = {
-      "col.border_active" = lib.mkForce "rgba(cba6f7ff) rgba(89dcebff) rgba(f5e0dcff) 40deg";
-      "col.border_inactive" = lib.mkForce "rgba(b4befecc) rgba(6c7086cc) 45deg";
-      "col.border_locked_active" = lib.mkForce "rgba(cba6f7ff) rgba(89dcebff) rgba(f5e0dcff) 40deg";
-      "col.border_locked_inactive" = lib.mkForce "rgba(b4befecc) rgba(6c7086cc) 45deg";
+      "col.border_active" = lib.mkForce "rgba($mauveff) rgba($tealff) rgba($rosewaterff) 40deg";
+      "col.border_inactive" = lib.mkForce "rgba($lavendercc) rgba($surface2cc) 45deg";
+      "col.border_locked_active" = lib.mkForce "rgba($mauveff) rgba($tealff) rgba($rosewaterff) 40deg";
+      "col.border_locked_inactive" = lib.mkForce "rgba($lavendercc) rgba($surface2cc) 45deg";
       groupbar = {
         font_family = "JetBrainsMono Nerd Font Mono Bold";
         font_size = 12;
         gradients = false;
-        text_color = lib.mkForce "rgba(cdd6f4ff)";
-        "col.active" = lib.mkForce "rgba(cba6f7ff)";
-        "col.inactive" = lib.mkForce "rgba(b4befecc)";
+        text_color = lib.mkForce "rgba($textff)";
+        "col.active" = lib.mkForce "rgba($mauveff)";
+        "col.inactive" = lib.mkForce "rgba($lavendercc)";
       };
     };
 
