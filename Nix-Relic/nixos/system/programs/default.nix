@@ -63,6 +63,7 @@
     wantedBy = ["graphical-session.target"];
   };
   environment.systemPackages = with pkgs; [
+    neo
     pipes
     brightnessctl
     mpc

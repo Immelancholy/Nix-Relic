@@ -18,7 +18,6 @@
       ll = "eza -l";
       ls = "eza";
       edit = "sudo -e";
-      neo = "neo.sh";
       rmpcs = "rmpc.sh";
       ca = "cava.sh";
       fastfetch = "clear; fastfetch";

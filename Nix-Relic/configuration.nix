@@ -169,8 +169,14 @@
   };
 
   displayManager = {
-    # Display manager to use, only enable 1
-    sddm.enable = true;
+    # Display Manager to user, only enable 1
+    sddm = {
+      enable = true;
+      animatedBackground = {
+        enable = true;
+        # path =  # Path to animated background (has one set by default)
+      };
+    };
     tuiGreet.enable = false;
   };
 

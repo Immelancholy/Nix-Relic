@@ -64,20 +64,14 @@
     EOF
   '';
 in {
-  environment.systemPackages = [
-    cavaCfg
-  ];
-  systemd.user.services."cavaCfg" = {
-    enable = true;
-    name = "cavaCfg";
-    after = ["pipewire.service"];
-    wantedBy = ["default.target"];
-    path = [
-      "${cavaCfg}"
-    ];
-    script = ''cavaCfg'';
-    environment = {
-      FRAMERATE = config.environment.sessionVariables.FRAMERATE;
+  home = {
+    activation = {
+      cavaCfg = lib.hm.dag.entryAfter ["writeBoundary"] ''
+        run cavaCfg
+      '';
     };
+    extraActivationPath = [
+      cavaCfg
+    ];
   };
 }

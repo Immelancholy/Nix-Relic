@@ -28,6 +28,7 @@ in {
     ./env.nix
     ./mimeapps.nix
     ./stylix.nix
+    ./activationScripts
   ];
 
   xdg = {
