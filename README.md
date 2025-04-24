@@ -50,7 +50,7 @@ nix flake init -t github:Immelancholy/Nix-Relic
   config,
   ...
 }: {
-  networking.hostname = "nix-relic";
+  networking.hostName = "nix-relic";
   userAccounts.users = [
   ]; # user accounts here
   userAccounts.sudoUsers = [
@@ -119,7 +119,10 @@ nix flake init -t github:Immelancholy/Nix-Relic
         hy3.enable = true;
       };
       useHyprspace = false; # Hyprspace doesn't build atm
-      useLiveWallpaper = true;
+      liveWallpaper = {
+        enable = true;
+        path = ./nixos/home/backgrounds/Neon-Beast-Girl.mp4;
+      };
       settings = {
         cursor = {
           no_hardware_cursors = false;
@@ -216,8 +219,14 @@ nix flake init -t github:Immelancholy/Nix-Relic
   };
 
   displayManager = {
-    # Display manager to use, only enable 1
-    sddm.enable = true;
+    # Display Manager to user, only enable 1
+    sddm = {
+      enable = true;
+      animatedBackground = {
+        enable = true;
+        path = ./nixos/home/backgrounds/Neon-Beast-Girl.mp4;
+      };
+    };
     tuiGreet.enable = false;
   };
 
