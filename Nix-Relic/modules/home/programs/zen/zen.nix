@@ -51,6 +51,7 @@ in {
         "application/x-extension-xht" = ["zen.desktop"];
       };
       defaultApplications = {
+        "text/html" = ["zen.desktop"];
         "x-scheme-handler/http" = ["zen.desktop"];
         "x-scheme-handler/https" = ["zen.desktop;"];
         "x-scheme-handler/chrome" = ["zen.desktop"];
