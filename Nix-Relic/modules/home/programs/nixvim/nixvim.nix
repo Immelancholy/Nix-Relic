@@ -34,7 +34,7 @@ in {
     #   EDITOR = "nvim";
     # };
 
-    xdg.mimeApps = mkIf cfg.defaultEditor {
+    xdg.mimeApps = mkIf (cfg.enable && cfg.defaultEditor) {
       enable = true;
       associations.added = {
         "text/plain" = ["nvim.desktop"];

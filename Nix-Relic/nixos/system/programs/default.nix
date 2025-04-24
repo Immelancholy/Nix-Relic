@@ -79,7 +79,6 @@
     inputs.swww.packages.${pkgs.system}.swww
     libnotify
     wl-clipboard
-    inputs.zen-browser.packages.${pkgs.system}.default
     sbctl
     inputs.yazi.packages.${pkgs.system}.default
     qpwgraph

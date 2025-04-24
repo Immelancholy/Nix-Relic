@@ -1,5 +1,6 @@
 {
   imports = [
     ./nixvim
+    ./zen
   ];
 }

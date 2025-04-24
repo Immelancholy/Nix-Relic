@@ -23,6 +23,11 @@
     ./udiskie.nix
   ];
 
+  programs.zen = {
+    enable = true;
+    defaultBrowser = true;
+  };
+
   services.gnome-keyring = {
     enable = true;
     components = [

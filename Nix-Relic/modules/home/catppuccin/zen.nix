@@ -16,7 +16,7 @@ in {
     };
   };
 
-  config = mkIf cfg.enable {
+  config = mkIf (cfg.enable && config.programs.zen.enable) {
     home.file = {
       ".zen/${user}.Default/chrome/userChrome.css" = {
         source = "${inputs.catppuccinZen}/themes/Mocha/Mauve/userChrome.css";

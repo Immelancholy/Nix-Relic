@@ -42,6 +42,7 @@
       spicetify.enable = false;
       kitty.enable = false;
       nixvim.enable = false;
+      zen.enable = false;
     };
     programs.obs-studio.enable = false;
     programs.git = {
