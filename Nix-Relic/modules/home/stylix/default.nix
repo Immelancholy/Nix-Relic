@@ -8,5 +8,6 @@
     ./tmux.nix
     ./zenTarget.nix
     ./zen.nix
+    ./vesktop.nix
   ];
 }
