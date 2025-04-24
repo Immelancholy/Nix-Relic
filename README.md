@@ -81,7 +81,7 @@ nix flake init -t github:Immelancholy/Nix-Relic
       accent = "mauve";
     };
     stylix.targets = {
-      # comment this if you don't use catppuccin bas16 on stylix, I made a module to autodisable their respective catppuccin themes.
+      # comment this if you don't want catppuccin theme, I made a module to autodisable their respective catppuccin themes.
       tmux.enable = false;
       yazi.enable = false;
       btop.enable = false;
