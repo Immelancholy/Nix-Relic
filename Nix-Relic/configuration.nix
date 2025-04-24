@@ -73,7 +73,10 @@
         hy3.enable = true;
       };
       useHyprspace = false; # Hyprspace doesn't build atm
-      useLiveWallpaper = true;
+      liveWallpaper = {
+        enable = true;
+        path = ./nixos/home/backgrounds/Neon-Beast-Girl.mp4;
+      };
       settings = {
         cursor = {
           no_hardware_cursors = false;
@@ -175,7 +178,7 @@
       enable = true;
       animatedBackground = {
         enable = true;
-        # path =  # Path to animated background (has one set by default)
+        path = ./nixos/home/backgrounds/Neon-Beast-Girl.mp4;
       };
     };
     tuiGreet.enable = false;
