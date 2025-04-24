@@ -8,7 +8,6 @@
     ./pipewire.nix
     ./weylus.nix
     ./bluetooth.nix
-    ./DM
     ./uwsm.nix
     ./scripts
     ./stylix.nix

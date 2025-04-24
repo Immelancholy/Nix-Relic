@@ -34,7 +34,7 @@ in {
       enable = mkEnableOption "Use animated background for sddm";
       video = mkOption {
         type = types.path;
-        default = ../../../home/backgrounds/Neon-Beast-Girl.mp4;
+        default = ../../../../nixos/home/backgrounds/Neon-Beast-Girl.mp4;
         description = "Path to animated background";
       };
     };
@@ -75,7 +75,10 @@ in {
           RoundCorners = "20";
 
           BackgroundPlaceholder = "${config.stylix.image}";
-          Background = "${cfg.animatedBackground.video}";
+          Background =
+            if cfg.animatedBackground.enable
+            then "${cfg.animatedBackground.video}"
+            else "${config.stylix.image}";
           BackgroundSpeed = "1.0";
           PauseBackground = "";
           CropBackground = "false";
