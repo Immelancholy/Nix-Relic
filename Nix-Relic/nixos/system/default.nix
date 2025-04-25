@@ -30,7 +30,7 @@
   };
 
   security.apparmor = {
-    enable = false;
+    enable = true;
     packages = with pkgs; [
       roddhjav-apparmor-rules
       apparmor-profiles
