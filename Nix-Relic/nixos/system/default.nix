@@ -30,12 +30,7 @@
   };
 
   security.apparmor = {
-    enable = false;
-    packages = with pkgs; [
-      roddhjav-apparmor-rules
-      apparmor-profiles
-      apparmor-parser
-    ];
+    enable = true;
   };
 
   networking.firewall = {
