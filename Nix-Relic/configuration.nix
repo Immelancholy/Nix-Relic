@@ -12,7 +12,7 @@
   ]; # sudo enabled accounts here (You'll want to go here if you're installing these. )
 
   stylix = {
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml"; # Stylix theme, comment this to generate theme based on wallpaper
+    # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml"; # Stylix theme, comment this to generate theme based on wallpaper
     polarity = "dark";
 
     image = ./nixos/home/backgrounds/Evil_Miku.png;
@@ -34,17 +34,17 @@
       flavor = "mocha";
       accent = "mauve";
     };
-    stylix.targets = {
-      # comment this if you don't want catppuccin theme, I made a module to autodisable their respective catppuccin themes.
-      tmux.enable = false;
-      yazi.enable = false;
-      btop.enable = false;
-      spicetify.enable = false;
-      kitty.enable = false;
-      nixvim.enable = false;
-      zen.enable = false;
-      vesktop.enable = false;
-    };
+    # stylix.targets = {
+    #   # comment this if you don't want catppuccin theme, I made a module to autodisable their respective catppuccin themes.
+    #   tmux.enable = false;
+    #   yazi.enable = false;
+    #   btop.enable = false;
+    #   spicetify.enable = false;
+    #   kitty.enable = false;
+    #   nixvim.enable = false;
+    #   zen.enable = false;
+    #   vesktop.enable = false;
+    # };
     programs.obs-studio.enable = false;
     programs.git = {
       enable = true;
