@@ -56,7 +56,7 @@
 
       if [ "$class" = "fastfetch" ];
       then
-        fastfetch --logo $HOME/Pictures/fastfetch_logos/FallenAngel.jpg
+        fastfetch --logo $HOME/Pictures/fastfetch_logos/Nakari.jpg
       else
         fortune | pokemonsay -p fennekin -N
       fi

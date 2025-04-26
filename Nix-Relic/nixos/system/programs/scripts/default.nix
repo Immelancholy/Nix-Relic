@@ -4,7 +4,6 @@
     (writeShellScriptBin "rofi-power-menu" (builtins.readFile ./Bash/rofi-power-menu))
   ];
   imports = [
-    ./hyprgame.nix
     ./btop.nix
     ./cava.nix
     ./checkshell.nix

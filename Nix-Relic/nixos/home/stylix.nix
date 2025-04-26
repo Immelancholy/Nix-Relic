@@ -26,6 +26,7 @@
           signColumn = true;
         };
       };
+      cava.rainbow.enable = true;
     };
   };
 }

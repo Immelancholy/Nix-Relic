@@ -40,16 +40,6 @@ in {
         waves = 0;
         noise_reduction = 72;
       };
-      color = {
-        gradient = 1;
-        gradient_color_1 = "'${teal}'";
-        gradient_color_2 = "'${blue}'";
-        gradient_color_3 = "'${lavender}'";
-        gradient_color_4 = "'${mauve}'";
-        gradient_color_5 = "'${flamingo}'";
-        gradient_color_6 = "'${peach}'";
-        gradient_color_7 = "'${red}'";
-      };
     };
   };
 }

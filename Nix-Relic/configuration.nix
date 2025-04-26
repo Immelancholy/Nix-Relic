@@ -15,7 +15,7 @@
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml"; # Stylix theme, comment this to generate theme based on wallpaper
     polarity = "dark";
 
-    image = ./nixos/home/backgrounds/Neon-Beast-Girl.png;
+    image = ./nixos/home/backgrounds/Evil_Miku.png;
   };
 
   services.pipewire.extraConfig.pipewire."92-low-latency" = {
@@ -76,7 +76,7 @@
       useHyprspace = false; # Hyprspace doesn't build atm
       liveWallpaper = {
         enable = true;
-        path = ./nixos/home/backgrounds/Neon-Beast-Girl.mp4;
+        path = ./nixos/home/backgrounds/Evil_Miku.mp4;
       };
       settings = {
         cursor = {
@@ -179,7 +179,7 @@
       enable = true;
       animatedBackground = {
         enable = true;
-        path = ./nixos/home/backgrounds/Neon-Beast-Girl.mp4;
+        path = ./nixos/home/backgrounds/Evil_Miku.mp4;
       };
     };
     tuiGreet.enable = false;
