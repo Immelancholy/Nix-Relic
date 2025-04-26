@@ -284,5 +284,5 @@ update
 
 # DISCLAIMER
 * All images and videos used for this theme (I.E for fastfetch or wallpapers), belong to their own respective owners. I claim no ownership of them.
-* The wallpapers I pulled from various wallpaper sites and even found the same ones on multiple different sites., so I'm not sure who their original owners are, however the images for fastfetch are all pulled from [@Alerria_V's](https://x.com/aleriia_v) twitter page. I will not redistribute their artwork in the actual repository and instead used pkgs.fetchurl to do so. Please support them! They make great art and if I had money I would probably commission them. Alas, I am broke.
+* The wallpapers I pulled from various wallpaper sites and even found the same ones on multiple different sites., so I'm not sure who their original owners are, however the images for fastfetch are all pulled from [@Alerria_V's](https://x.com/aleriia_v) twitter page. I will not redistribute their artwork in the actual repository and instead used pkgs.fetchurl to dowload them on rebuild. Please support them! They make great art and if I had money I would probably commission them. Alas, I am broke.
 
