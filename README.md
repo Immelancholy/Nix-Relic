@@ -61,7 +61,7 @@ nix flake init -t github:Immelancholy/Nix-Relic
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml"; # Stylix theme, comment this to generate theme based on wallpaper
     polarity = "dark";
 
-    image = ./nixos/home/backgrounds/Neon-Beast-Girl.png;
+    image = ./nixos/home/backgrounds/Evil_Miku.png;
   };
 
   services.pipewire.extraConfig.pipewire."92-low-latency" = {
@@ -121,7 +121,7 @@ nix flake init -t github:Immelancholy/Nix-Relic
       useHyprspace = false; # Hyprspace doesn't build atm
       liveWallpaper = {
         enable = true;
-        path = ./nixos/home/backgrounds/Neon-Beast-Girl.mp4;
+        path = ./nixos/home/backgrounds/Evil_Miku.mp4;
       };
       settings = {
         cursor = {
@@ -224,7 +224,7 @@ nix flake init -t github:Immelancholy/Nix-Relic
       enable = true;
       animatedBackground = {
         enable = true;
-        path = ./nixos/home/backgrounds/Neon-Beast-Girl.mp4;
+        path = ./nixos/home/backgrounds/Evil_Miku.mp4;
       };
     };
     tuiGreet.enable = false;
@@ -288,15 +288,4 @@ and
 ```
 update
 ```
-### Image Sources
-* [Backgound Fallen Angel](https://www.uhdpaper.com/2025/02/3565c-anime-girl-angel-devil-wings-4k.html?m=0)
-* [Background Neon Beast Girl](https://mylivewallpapers.com/fantasy/neon-beast-girl-live-wallpaper/)
-* [CatGirl.jpg](https://x.com/yoroikemomimi/status/1885903024549417009)
-* [DemonGirl.jpg](https://x.com/yoroikemomimi/status/1883052457296830535)
-* [DragonGirl.jpg](https://x.com/yoroikemomimi/status/1875533808394805415)
-* [FallenAngel.jpg](https://x.com/yoroikemomimi/status/1881620165252788451)
-* [GhostGirl.jpg](https://x.com/yoroikemomimi/status/1883359123867312141)
-* [Morrigan.jpg](https://x.com/yoroikemomimi/status/1849691722772844834)
-* [tomoe.png](https://www.pngwing.com/en/free-png-pjhwm/)
-
 
