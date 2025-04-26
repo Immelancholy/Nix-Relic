@@ -1,9 +1,6 @@
 # Nix-Relic Dotfiles
 ### Nixos Hyprland template (Also Basically what I use). 
 
-
-https://github.com/user-attachments/assets/5737ec56-ef2f-4a02-94b9-570ac8e895c7
-
 ## Colours generated automatically to match wallpaper by Stylix
 
 ![SS1](https://raw.githubusercontent.com/Immelancholy/Nix-Relic/refs/heads/main/Screenshots/SS1.png)
