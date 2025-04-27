@@ -1,4 +1,9 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  nixpkgs,
+  lib,
+  ...
+}: {
   imports = [
     ./boot.nix
     ./fonts
@@ -9,6 +14,12 @@
   programs.seahorse.enable = true;
   security.pam.services.login.enableGnomeKeyring = true;
   services.seatd.enable = true;
+
+  nix.registry.nixpkgs.flake = nixpkgs;
+  nix.channel.enable = false;
+
+  environment.etc."nix/inputs/nixpkgs".source = "${nixpkgs}";
+  nix.settings.nix-path = lib.mkForce "nixpkgs=/etc/nix/inputs/nixpkgs";
 
   nixpkgs.config.allowUnfree = true;
   environment = {

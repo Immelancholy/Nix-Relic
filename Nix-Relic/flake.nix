@@ -130,7 +130,7 @@
     nixosConfigurations = {
       nix-relic = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = {inherit inputs;};
+        specialArgs = {inherit inputs nixpkgs;};
         modules = [
           stylix.nixosModules.stylix
           nur.modules.nixos.default

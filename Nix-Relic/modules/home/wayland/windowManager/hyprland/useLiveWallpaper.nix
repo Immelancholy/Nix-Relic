@@ -7,9 +7,14 @@
 with lib; let
   cfg = config.wayland.windowManager.hyprland;
 
-  changeWallpaper = pkgs.writeShellScriptBin "paper-change" ''
-    pkill mpvpaper
-    uwsm app -- mpvpaper -f -p -o "--loop hwdec=auto --no-audio" '*' ${cfg.liveWallpaper.path}
+  paper-change = pkgs.writeShellScriptBin "paper-change" ''
+    if command -v mpvpaper
+    then
+      pkill mpvpaper
+      uwsm app -- mpvpaper -f -p -o "--loop hwdec=auto --no-audio" '*' ${cfg.liveWallpaper.path}
+    else
+      pkill mpvpaper
+    fi
   '';
 in {
   options.wayland.windowManager.hyprland = {
@@ -20,27 +25,34 @@ in {
       description = "Path to animated background";
     };
   };
-  config = mkIf cfg.liveWallpaper.enable {
-    home.packages = with pkgs; [
-      mpvpaper
-    ];
-    wayland.windowManager.hyprland.settings = {
-      exec-once = [
-        ''uwsm app -- mpvpaper -f -p -o "--loop hwdec=auto --no-audio" '*' ${cfg.liveWallpaper.path}''
+  config = mkMerge [
+    {
+      home.packages = [
+        paper-change
       ];
-    };
-    home = {
-      activation = {
-        paper-change = lib.hm.dag.entryAfter ["writeBoundary"] ''
-          run paper-change
-        '';
+      systemd.user.services.paper-change = {
+        Unit = {
+          Description = "Wallpaper Changer";
+          PartOf = ["graphical-session.target"];
+          Requires = ["graphical-session.target"];
+          After = ["graphical-session.target"];
+          ConditionEnvironment = "WAYLAND_DISPLAY";
+        };
+        Service = {
+          ExecStart = ''/run/current-system/sw/bin/hyprctl dispatch exec paper-change'';
+          Type = "simple";
+          Slice = ["session.slice"];
+          Restart = "on-failure";
+        };
+        Install = {
+          WantedBy = ["graphical-session.target"];
+        };
       };
-      extraActivationPath = [
-        pkgs.uwsm
-        changeWallpaper
-        pkgs.mpvpaper
-        pkgs.procps
+    }
+    (mkIf cfg.liveWallpaper.enable {
+      home.packages = with pkgs; [
+        mpvpaper
       ];
-    };
-  };
+    })
+  ];
 }

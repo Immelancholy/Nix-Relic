@@ -28,6 +28,8 @@
     };
   };
 
+  environment.systemPackages = with pkgs; [
+  ];
   # duplicate this for each user
   home-manager.users.your-user = {
     catppuccin = {
