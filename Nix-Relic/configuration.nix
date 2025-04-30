@@ -47,6 +47,9 @@
     #   zen.enable = false;
     #   vesktop.enable = false;
     # };
+    programs.vesktop = {
+      enable = true;
+    };
     programs.obs-studio.enable = false;
     programs.git = {
       enable = true;

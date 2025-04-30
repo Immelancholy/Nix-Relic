@@ -111,7 +111,6 @@
     tectonic
     mermaid-cli
     python313Packages.pylatexenc
-    vesktop
     grim
     slurp
     pipes

@@ -804,7 +804,7 @@
     clipboard = {
       register = "unnamedplus";
     };
-    diagnostics = {
+    diagnostic.config = {
       virtual_lines = {
         only_current_line = true;
       };
