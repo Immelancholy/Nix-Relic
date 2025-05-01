@@ -1,7 +1,7 @@
 {
   pkgs,
-  inputs,
-  config,
+  # inputs,
+  # config,
   ...
 }: {
   networking.hostName = "nix-relic";
@@ -29,7 +29,9 @@
   };
 
   environment.systemPackages = with pkgs; [
+    # global packages here
   ];
+
   # duplicate this for each user
   home-manager.users.your-user = {
     catppuccin = {
@@ -114,18 +116,7 @@
     };
 
     home.packages = with pkgs; [
-      # reaper
-      # inputs.prismlauncher.packages.${pkgs.system}.prismlauncher
-      # temurin-bin
-      # bespokesynth
-      # reaper-sws-extension
-      # teams-for-linux
-      # shotcut
-      # krita
-      # qbittorrent
-      # rustlings
-      # obsidian
-      # obsidian-export
+      # Packages for this user only here
     ];
 
     programs.nixvim = {
