@@ -36,6 +36,7 @@
       flavor = "mocha";
       accent = "mauve";
     };
+
     # stylix.targets = {
     #   # comment this if you don't want catppuccin theme, I made a module to autodisable their respective catppuccin themes.
     #   tmux.enable = false;
@@ -47,10 +48,11 @@
     #   zen.enable = false;
     #   vesktop.enable = false;
     # };
+
     programs.vesktop = {
       enable = true;
     };
-    programs.obs-studio.enable = false;
+
     programs.git = {
       enable = true;
       userName = ""; # username for git
@@ -61,6 +63,7 @@
         };
       };
     };
+
     services.mpd = {
       extraConfig = ''
         audio_output {
@@ -70,6 +73,7 @@
         }
       '';
     };
+
     # Important hyprland user configs
     wayland.windowManager.hyprland = {
       # ONLY ENABLE 1 LAYOUT!!
@@ -103,10 +107,12 @@
         ];
       };
     };
+
     home.sessionVariables = {
       NOTES_PATH = ""; # path to notes folder ( for neovim )
       PROJECTS_PATH = ""; # path to Projects folder ( for neovim )
     };
+
     home.packages = with pkgs; [
       # reaper
       # inputs.prismlauncher.packages.${pkgs.system}.prismlauncher
@@ -121,6 +127,7 @@
       # obsidian
       # obsidian-export
     ];
+
     programs.nixvim = {
       enable = true;
       defaultEditor = true;
@@ -198,10 +205,13 @@
     variant = "";
     options = "";
   };
+
   console = {
     earlySetup = true;
     keyMap = "uk"; # change to your keyboard layout
   };
+
   time.timeZone = "Europe/London"; # set to your timezone
+
   boot.secureBoot.enable = false; # set up secure boot post-install before enabling this
 }
