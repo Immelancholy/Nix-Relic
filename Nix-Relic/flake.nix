@@ -21,6 +21,10 @@
       url = "github:catppuccin/zen-browser";
       flake = false;
     };
+    bash-utility = {
+      url = "github:labbots/bash-utility";
+      flake = false;
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       # The `follows` keyword in inputs is used for inheritance.

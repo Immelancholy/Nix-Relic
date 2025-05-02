@@ -144,6 +144,22 @@
         "type": "github"
       }
     },
+    "bash-utility": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1611668417,
+        "narHash": "sha256-A37cpA7fqqQyi9hcbmvYwpl0pt78hSI67nAbZGVHJls=",
+        "owner": "labbots",
+        "repo": "bash-utility",
+        "rev": "f9d3191abee7967c0d3b43d0b21607372408fdeb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "labbots",
+        "repo": "bash-utility",
+        "type": "github"
+      }
+    },
     "catppuccin": {
       "inputs": {
         "nixpkgs": "nixpkgs"
@@ -1623,6 +1639,7 @@
       "inputs": {
         "Hyprspace": "Hyprspace",
         "alejandra": "alejandra",
+        "bash-utility": "bash-utility",
         "catppuccin": "catppuccin",
         "catppuccinZen": "catppuccinZen",
         "disko": "disko",
