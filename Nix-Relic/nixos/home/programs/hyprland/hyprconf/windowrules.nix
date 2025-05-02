@@ -1,26 +1,29 @@
 {
   wayland.windowManager.hyprland.settings = {
     windowrule = [
-      # opacity 0.90 0.90,class:^(firefox)$
-      # opacity 0.90 0.90,class:^(Google-chrome)$
-      # opacity 0.90 0.90,class:^(Brave-browser)$
-      ''opacity 0.90 0.90,class:^(zen)$''
-      ''opacity 1.0 override, title:(.*YouTube.*|.*Instagram.*|.*HiAnime.*|.*Twitch.*)$''
-      ''opacity 0.80 0.80,class:^(gcr-prompter)$''
-      ''opacity 0.80 0.80,class:^(org.gnome.seahorse.Application)$''
-      ''opacity 0.80 0.80,class:^(org.prismlauncher.PrismLauncher)$''
-      ''opacity 0.80 0.80,class:^(code-oss)$''
-      ''opacity 0.80 0.80,class:^([Cc]ode)$''
-      ''opacity 0.80 0.80,class:^(code-url-handler)$''
-      ''opacity 0.80 0.80,class:^(code-insiders-url-handler)$''
-      ''opacity 0.80 0.80,class:^(org.kde.dolphin)$''
-      ''opacity 0.80 0.80,class:^(org.kde.ark)$''
-      ''opacity 0.80 0.80,class:^(nwg-look)$''
-      ''opacity 0.80 0.80,class:^(qt5ct)$''
-      ''opacity 0.80 0.80,class:^(qt6ct)$''
-      ''opacity 0.90 0.90,class:^(obsidian)$''
-      ''opacity 0.80 0.80,class:^(kvantummanager)$''
-      ''opacity 0.90 0.80,class:^(org.pulseaudio.pavucontrol)$''
+      ''opacity 1.0 0.90,class:^(neo)$''
+      ''opacity 1.0 0.90,class:^(cava)$''
+      ''opacity 1.0 0.90,class:^(mpd)$''
+      ''opacity 1.0 0.90,class:^(btop)$''
+      ''opacity 1.0 0.90,class:^(fastfetch)$''
+      ''opacity 1.0 0.90,class:^(kitty)$''
+      ''opacity 0.90 0.80,class:^(zen)$''
+      ''opacity 1.0 override 0.90 override, title:(.*YouTube.*|.*Instagram.*|.*HiAnime.*|.*Twitch.*)$''
+      ''opacity 0.80 0.70,class:^(gcr-prompter)$''
+      ''opacity 0.80 0.70,class:^(org.gnome.seahorse.Application)$''
+      ''opacity 0.80 0.70,class:^(org.prismlauncher.PrismLauncher)$''
+      ''opacity 0.80 0.70,class:^(code-oss)$''
+      ''opacity 0.80 0.70,class:^([Cc]ode)$''
+      ''opacity 0.80 0.70,class:^(code-url-handler)$''
+      ''opacity 0.80 0.70,class:^(code-insiders-url-handler)$''
+      ''opacity 0.80 0.70,class:^(org.kde.dolphin)$''
+      ''opacity 0.80 0.70,class:^(org.kde.ark)$''
+      ''opacity 0.80 0.70,class:^(nwg-look)$''
+      ''opacity 0.80 0.70,class:^(qt5ct)$''
+      ''opacity 0.80 0.70,class:^(qt6ct)$''
+      ''opacity 0.90 0.70,class:^(obsidian)$''
+      ''opacity 0.80 0.70,class:^(kvantummanager)$''
+      ''opacity 0.90 0.70,class:^(org.pulseaudio.pavucontrol)$''
       ''opacity 0.80 0.70,class:^(blueman-manager)$''
       ''opacity 0.80 0.70,class:^(nm-applet)$''
       ''opacity 0.80 0.70,class:^(nm-connection-editor)$''
@@ -33,28 +36,28 @@
       ''opacity 0.70 0.70,class:^([Ss]potify)$''
       ''opacity 0.70 0.70,initialTitle:^(Spotify Free)$''
       ''opacity 0.70 0.70,initialTitle:^(Spotify Premium)$''
-      ''opacity 0.80 0.80,class:^(nemo)$''
-      ''opacity 0.80 0.80,class:^(org.gnome.Terminal)$''
+      ''opacity 0.80 0.70,class:^(nemo)$''
+      ''opacity 0.80 0.70,class:^(org.gnome.Terminal)$''
 
-      ''opacity 0.90 0.90,class:^(com.github.rafostar.Clapper)$'' # Clapper-Gtk
-      ''opacity 0.80 0.80,class:^(com.github.tchx84.Flatseal)$'' # Flatseal-Gtk
-      ''opacity 0.80 0.80,class:^(hu.kramo.Cartridges)$'' # Cartridges-Gtk
-      ''opacity 0.80 0.80,class:^(com.obsproject.Studio)$'' # Obs-Qt
-      ''opacity 0.80 0.80,class:^(gnome-boxes)$'' # Boxes-Gtk
-      ''opacity 0.90 0.90,class:^(vesktop)$'' # Vesktop
-      ''opacity 0.90 0.90,class:^(discord)$'' # Discord-Electron
-      ''opacity 0.80 0.80,class:^(WebCord)$'' # WebCord-Electron
-      ''opacity 0.80 0.80,class:^(ArmCord)$'' # ArmCord-Electron
-      ''opacity 0.80 0.80,class:^(app.drey.Warp)$'' # Warp-Gtk
-      ''opacity 0.80 0.80,class:^(net.davidotek.pupgui2)$'' # ProtonUp-Qt
-      ''opacity 0.80 0.80,class:^(yad)$'' # Protontricks-Gtk
-      ''opacity 0.80 0.80,class:^(Signal)$'' # Signal-Gtk
-      ''opacity 0.80 0.80,class:^(io.github.alainm23.planify)$'' # planify-Gtk
-      ''opacity 0.80 0.80,class:^(io.gitlab.theevilskeleton.Upscaler)$'' # Upscaler-Gtk
-      ''opacity 0.80 0.80,class:^(com.github.unrud.VideoDownloader)$'' # VideoDownloader-Gtk
-      ''opacity 0.80 0.80,class:^(io.gitlab.adhami3310.Impression)$'' # Impression-Gtk
-      ''opacity 0.80 0.80,class:^(io.missioncenter.MissionCenter)$'' # MissionCenter-Gtk
-      ''opacity 0.80 0.80,class:^(io.github.flattool.Warehouse)$'' # Warehouse-Gtk
+      ''opacity 0.90 0.80,class:^(com.github.rafostar.Clapper)$'' # Clapper-Gtk
+      ''opacity 0.80 0.70,class:^(com.github.tchx84.Flatseal)$'' # Flatseal-Gtk
+      ''opacity 0.80 0.70,class:^(hu.kramo.Cartridges)$'' # Cartridges-Gtk
+      ''opacity 0.80 0.70,class:^(com.obsproject.Studio)$'' # Obs-Qt
+      ''opacity 0.80 0.70,class:^(gnome-boxes)$'' # Boxes-Gtk
+      ''opacity 0.90 0.80,class:^(vesktop)$'' # Vesktop
+      ''opacity 0.90 0.80,class:^(discord)$'' # Discord-Electron
+      ''opacity 0.90 0.80,class:^(WebCord)$'' # WebCord-Electron
+      ''opacity 0.80 0.70,class:^(ArmCord)$'' # ArmCord-Electron
+      ''opacity 0.80 0.70,class:^(app.drey.Warp)$'' # Warp-Gtk
+      ''opacity 0.80 0.70,class:^(net.davidotek.pupgui2)$'' # ProtonUp-Qt
+      ''opacity 0.80 0.70,class:^(yad)$'' # Protontricks-Gtk
+      ''opacity 0.80 0.70,class:^(Signal)$'' # Signal-Gtk
+      ''opacity 0.80 0.70,class:^(io.github.alainm23.planify)$'' # planify-Gtk
+      ''opacity 0.80 0.70,class:^(io.gitlab.theevilskeleton.Upscaler)$'' # Upscaler-Gtk
+      ''opacity 0.80 0.70,class:^(com.github.unrud.VideoDownloader)$'' # VideoDownloader-Gtk
+      ''opacity 0.80 0.70,class:^(io.gitlab.adhami3310.Impression)$'' # Impression-Gtk
+      ''opacity 0.80 0.70,class:^(io.missioncenter.MissionCenter)$'' # MissionCenter-Gtk
+      ''opacity 0.80 0.70,class:^(io.github.flattool.Warehouse)$'' # Warehouse-Gtk
 
       ''float,class:^(org.kde.dolphin)$,title:^(Progress Dialog — Dolphin)$''
       ''float,class:^(org.kde.dolphin)$,title:^(Copying — Dolphin)$''
@@ -90,8 +93,8 @@
       ''float,title:^(Friends List)$''
       ''float,title:^(Steam Settings)$''
 
-      ''opacity 0.90 0.90,class:^(org.rncbc.qpwgraph)$''
-      ''opacity 0.90 0.90,class:^(com.github.wwmm.easyeffects)$''
+      ''opacity 0.90 0.80,class:^(org.rncbc.qpwgraph)$''
+      ''opacity 0.90 0.80,class:^(com.github.wwmm.easyeffects)$''
 
       ''float,title:^(rmpc)$''
       ''size 900 580,title:^(rmpc)$''
@@ -110,13 +113,11 @@
 
       ''size 437 306, title:^(Qalculate!)$''
       ''float, title:^(Qalculate!)$''
-      ''opacity 0.80 0.80, title:^(Qalculate!)$''
+      ''opacity 0.80 0.70, title:^(Qalculate!)$''
 
       ''size 850 540,class:^(org.pulseaudio.pavucontrol)$''
 
       ''float, title:(.*Properties*.)$''
-
-      # noblur, class:^(kitty)$
 
       # common modals
       ''float,title:^(Open)$''
@@ -126,13 +127,13 @@
       ''float,title:^(File Operation Progress)$''
       ''float,class:^(xdg-desktop-portal-gtk)$''
       ''float,title:^(MainPicker)$''
-      ''opacity 0.80 0.80,class:^(xdg-desktop-portal-gtk)$''
-      ''opacity 0.80 0.80,title:^(MainPicker)$''
+      ''opacity 0.80 0.70,class:^(xdg-desktop-portal-gtk)$''
+      ''opacity 0.80 0.70,title:^(MainPicker)$''
       ''opacity 0.90 0.80,title:^(File Upload)$''
       ''opacity 0.80 0.70,title:^(Hyprland Polkit Agent)$''
-      ''opacity 0.90 0.90,class:^(.blueman-manager-wrapped)$''
+      ''opacity 0.90 0.80,class:^(.blueman-manager-wrapped)$''
       ''float,class:^(.blueman-manager-wrapped)$''
-      ''opacity 0.90 0.90,class:^(solaar)$''
+      ''opacity 0.90 0.80,class:^(solaar)$''
       ''float,class:^(solaar)$''
     ];
     layerrule = [
