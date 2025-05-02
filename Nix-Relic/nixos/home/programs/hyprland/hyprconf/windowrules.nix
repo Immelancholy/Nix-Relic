@@ -5,7 +5,7 @@
       # opacity 0.90 0.90,class:^(Google-chrome)$
       # opacity 0.90 0.90,class:^(Brave-browser)$
       ''opacity 0.90 0.90,class:^(zen)$''
-      ''opacity 1.0 override, title:(.*YouTube.*|.*Instagram.*)$''
+      ''opacity 1.0 override, title:(.*YouTube.*|.*Instagram.*|.*HiAnime.*|.*Twitch.*)$''
       ''opacity 0.80 0.80,class:^(gcr-prompter)$''
       ''opacity 0.80 0.80,class:^(org.gnome.seahorse.Application)$''
       ''opacity 0.80 0.80,class:^(org.prismlauncher.PrismLauncher)$''
