@@ -26,6 +26,7 @@
       boot = ''cd $FLAKE_PATH; clear; fastfetch; git add .; git commit -m "switch"; sudo nixos-rebuild boot --flake .; git add . ; git commit -m "Update Flake Lock"; cd -'';
       nixp = "cd $FLAKE_PATH; git push -u origin main; cd -";
       firmware = "sudo systemctl reboot --firmware-setup";
+      gc = "nix-collect-garbage -d && sudo nix-collect-garbage -d";
     };
     history.size = 10000;
     history.ignoreAllDups = true;
