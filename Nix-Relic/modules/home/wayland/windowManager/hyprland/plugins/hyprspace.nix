@@ -19,7 +19,8 @@ in {
     (mkIf cfg.useHyprspace {
       wayland.windowManager.hyprland = {
         plugins = [
-          inputs.Hyprspace.packages.${pkgs.system}.Hyprspace
+          # inputs.Hyprspace.packages.${pkgs.system}.Hyprspace
+          pkgs.hyprlandPlugins.hyprspace
         ];
         settings = {
           bind = [

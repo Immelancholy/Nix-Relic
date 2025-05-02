@@ -55,10 +55,6 @@
     swww.url = "github:LGFae/swww";
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
     hyprland.url = "github:hyprwm/Hyprland";
-    hyprtasking = {
-      url = "github:raybbian/hyprtasking";
-      inputs.hyprland.follows = "hyprland";
-    };
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";

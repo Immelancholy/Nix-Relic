@@ -14,8 +14,9 @@
       variables = ["--all"];
     };
     plugins = [
-      inputs.hyprland-plugins.packages.${pkgs.system}.csgo-vulkan-fix
-      inputs.hyprland-plugins.packages.${pkgs.system}.xtra-dispatchers
+      # inputs.hyprland-plugins.packages.${pkgs.system}.csgo-vulkan-fix
+      # inputs.hyprland-plugins.packages.${pkgs.system}.xtra-dispatchers
+      pkgs.hyprlandPlugins.csgo-vulkan-fix
     ];
   };
   services.hyprpolkitagent.enable = true;

@@ -110,7 +110,7 @@ nix flake init -t github:Immelancholy/Nix-Relic
         dwindle.enable = false;
         hy3.enable = true;
       };
-      useHyprspace = false; # Hyprspace doesn't build atm
+      useHyprspace = false; 
       liveWallpaper = {
         enable = true;
         path = ./nixos/home/backgrounds/Evil_Miku.mp4;
