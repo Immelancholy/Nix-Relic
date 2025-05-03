@@ -14,6 +14,10 @@
     withPython3 = true;
     luaLoader.enable = true;
     plugins = {
+      otter = {
+        enable = true;
+        autoActivate = true;
+      };
       aerial = {
         enable = true;
         settings = {
