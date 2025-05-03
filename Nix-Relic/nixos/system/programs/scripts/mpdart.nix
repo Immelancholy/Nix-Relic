@@ -53,6 +53,11 @@
               convert "$ART" $COVER &> /dev/null
             fi
           done
+          for ART in "$DIR/../cover."{png,jpg,webp}; do
+            if [ -f "$ART" ]; then
+              convert "$ART" $COVER &> /dev/null
+            fi
+          done
           artist=$(mpc current --format %artist%)
           line1="-------- $artist --------"
           line2="-------- $title --------"
@@ -63,13 +68,24 @@
         fi
       }
 
+      FIRST_RUN=true
 
       main () {
         while :
         do
           state=$(mpc status %state%)
+          cols=$(tput cols)
+          if [ "$FIRST_RUN" == true ]; then
+            FIRST_RUN=false
+            cols_old=$cols
+          fi
           if [ "$state" = "playing" ]; then
             get_art
+            if [ "$cols" != "$cols_old" ]; then
+              song_old=""
+              get_art
+              cols_old=$cols
+            fi
           elif [ "$state" = "stopped" ]; then
             song_old=""
             clear
