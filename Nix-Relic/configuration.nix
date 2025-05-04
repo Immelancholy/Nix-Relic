@@ -180,6 +180,8 @@
     # Display Manager to user, only enable 1
     sddm = {
       enable = true;
+      screenWidth = "1920";
+      screenHeight = "1080";
       animatedBackground = {
         enable = true;
         path = ./nixos/home/backgrounds/Evil_Miku.mp4;

@@ -38,6 +38,16 @@ in {
         description = "Path to animated background";
       };
     };
+    screenWidth = mkOption {
+      type = types.str;
+      default = "1920";
+      description = "Width of monitor";
+    };
+    screenHeight = mkOption {
+      type = types.str;
+      default = "1080";
+      description = "Height of monitor";
+    };
   };
   config = mkIf cfg.enable {
     services.displayManager.sddm = {
@@ -66,8 +76,8 @@ in {
     environment.systemPackages = with pkgs; [
       (sddm-astronaut.override {
         themeConfig = {
-          ScreenWidth = "1920";
-          ScreenHeight = "1080";
+          ScreenWidth = cfg.screenWidth;
+          ScreenHeight = cfg.screenHeight;
 
           Font = config.stylix.fonts.sansSerif.name;
           FontSize = "12";
