@@ -82,13 +82,13 @@
             cols_old=$cols
             clear
           fi
+          if [ "$cols" != "$cols_old" ]; then
+            song_old=""
+            get_art
+            cols_old=$cols
+          fi
           if [ "$state" = "playing" ]; then
             get_art
-            if [ "$cols" != "$cols_old" ]; then
-              song_old=""
-              get_art
-              cols_old=$cols
-            fi
           elif [ "$state" = "stopped" ]; then
             song_old=""
             clear
