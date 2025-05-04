@@ -5,6 +5,8 @@
 }: {
   environment.systemPackages = [
     (pkgs.writeShellScriptBin "mpdart" ''
+      stty -echo
+      tput civis
       source "${inputs.bash-utility}/src/format.sh"
       TMP="/tmp"
       COVER="$TMP/albumArt.jpg"
@@ -90,10 +92,17 @@
             song_old=""
             clear
           fi
+          read -rsn1 -t 0.00001 key
+          if [ "$key" = 'q' ]; then
+            break
+          fi
         done
       }
 
       main
+      stty echo
+      tput cvvis
+      exit 0
     '')
   ];
 }
