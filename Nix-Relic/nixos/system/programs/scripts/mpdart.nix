@@ -80,6 +80,7 @@
           if [ "$FIRST_RUN" == true ]; then
             FIRST_RUN=false
             cols_old=$cols
+            clear
           fi
           if [ "$state" = "playing" ]; then
             get_art
