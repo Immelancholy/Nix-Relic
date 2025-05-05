@@ -8,6 +8,7 @@
       "image/png" = ["org.gnome.Loupe.desktop;"];
       "image/jpeg" = ["org.gnome.Loupe.desktop;"];
       "application/x-gnome-saved-search" = ["nemo.desktop"];
+      "application/zip" = ["org.kde.ark.desktop"];
     };
     defaultApplications = {
       "inode/directory" = ["nemo.desktop"];
@@ -16,6 +17,7 @@
       "image/png" = ["org.gnome.Loupe.desktop;"];
       "image/jpeg" = ["org.gnome.Loupe.desktop;"];
       "application/x-gnome-saved-search" = ["nemo.desktop"];
+      "application/zip" = ["org.kde.ark.desktop"];
     };
   };
 }

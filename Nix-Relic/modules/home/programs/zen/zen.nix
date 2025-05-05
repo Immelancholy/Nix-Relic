@@ -36,7 +36,7 @@ in {
       associations.added = {
         "text/html" = ["zen.desktop"];
         "x-scheme-handler/http" = ["zen.desktop"];
-        "x-scheme-handler/https" = ["zen.desktop;"];
+        "x-scheme-handler/https" = ["zen.desktop"];
         "x-scheme-handler/chrome" = ["zen.desktop"];
         "x-scheme-handler/about" = ["zen.desktop"];
         "x-scheme-handler/unknown" = ["zen.desktop"];
@@ -53,7 +53,7 @@ in {
       defaultApplications = {
         "text/html" = ["zen.desktop"];
         "x-scheme-handler/http" = ["zen.desktop"];
-        "x-scheme-handler/https" = ["zen.desktop;"];
+        "x-scheme-handler/https" = ["zen.desktop"];
         "x-scheme-handler/chrome" = ["zen.desktop"];
         "x-scheme-handler/about" = ["zen.desktop"];
         "x-scheme-handler/unknown" = ["zen.desktop"];
