@@ -8,7 +8,7 @@
   };
   programs.zsh = {
     enable = true;
-    enableCompletion = false;
+    enableCompletion = true;
     autosuggestion = {
       enable = true;
     };
@@ -21,10 +21,6 @@
       rmpcs = "rmpc.sh";
       ca = "cava.sh";
       fastfetch = "clear; fastfetch";
-      switch = ''cd $FLAKE_PATH; clear; fastfetch; git add .; git commit -m "switch"; sudo nixos-rebuild switch --flake .; git add . ; git commit -m "Update Flake Lock"; cd -'';
-      update = "cd $FLAKE_PATH; clear; fastfetch; nix flake update --flake . --commit-lock-file; cd -";
-      boot = ''cd $FLAKE_PATH; clear; fastfetch; git add .; git commit -m "switch"; sudo nixos-rebuild boot --flake .; git add . ; git commit -m "Update Flake Lock"; cd -'';
-      nixp = "cd $FLAKE_PATH; git push -u origin main; cd -";
       firmware = "sudo systemctl reboot --firmware-setup";
       gc = "nix-collect-garbage -d && sudo nix-collect-garbage -d";
     };
@@ -48,19 +44,101 @@
         file = "share/zsh-nix-shell/nix-shell.plugin.zsh";
       }
     ];
-    initContent = ''
-      source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-      source <(fzf --zsh)
+    initContent =
+      /*
+      bash
+      */
+      ''
+        last_repo=
+        INIT=1
+        check_for_repo () {
+          current_repo=$(git rev-parse --show-toplevel 2> /dev/null)
 
-      [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+          if [ "$current_repo" ] && \
+            [ "$current_repo" != "$last_repo" ]; then
+            clear
+            onefetch -i "$(find ~/Pictures/fastfetch_logos -name '*.jpg' | shuf -n1)"
+            last_repo=$current_repo
+            INIT=0
+            GIT=1
+          elif [ $INIT = 1 ]; then
+            fortune | pokemonsay -p fennekin -N
+            GIT=0
+            INIT=0
+          elif [ ! "$current_repo" ] && \
+            [ $GIT = 1 ]; then
+            clear
+            fortune | pokemonsay -p fennekin -N
+            GIT=0
+            last_repo=
+          fi
+        }
+
+        z () {
+          __zoxide_z "$@"
+          check_for_repo
+        }
+
+        zi () {
+          __zoxide_zi "$@"
+          check_for_repo
+        }
+
+        cd () {
+          builtin cd "$@" || return
+          check_for_repo
+        }
+
+        switch () {
+          builtin cd "$FLAKE_PATH" || return
+          clear
+          onefetch -i "$(find ~/Pictures/fastfetch_logos -name '*.jpg' | shuf -n1)"
+          git add .
+          git commit -m "switch"
+          sudo nixos-rebuild switch --flake .
+          git add .
+          git commit -m "Update Flake Lock"
+          builtin cd - || exit
+        }
+
+        boot () {
+          builtin cd "$FLAKE_PATH" || return
+          clear
+          onefetch -i "$(find ~/Pictures/fastfetch_logos -name '*.jpg' | shuf -n1)"
+          git add .
+          git commit -m "switch"
+          sudo nixos-rebuild boot --flake .
+          git add .
+          git commit -m "Update Flake Lock"
+          builtin cd - || exit
+        }
+
+        update () {
+          builtin cd "$FLAKE_PATH" || return
+          clear
+          onefetch -i "$(find ~/Pictures/fastfetch_logos -name '*.jpg' | shuf -n1)"
+          nix flake update --flake . --commit-lock-file
+          builtin cd - || exit
+        }
+
+        nixp () {
+          builtin cd "$FLAKE_PATH" || return
+          git push -u origin main
+          builtin cd - || exit
+        }
+
+        source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+        source <(fzf --zsh)
+
+        [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
-      if [ "$class" = "fastfetch" ];
-      then
-        fastfetch --logo $HOME/Pictures/fastfetch_logos/Nakari.jpg
-      else
-        fortune | pokemonsay -p fennekin -N
-      fi
-    '';
+        if [ "$class" = "fastfetch" ];
+        then
+          fastfetch --logo "$HOME"/Pictures/fastfetch_logos/Nakari.jpg
+        else
+          check_for_repo
+        fi
+      '';
   };
 }
