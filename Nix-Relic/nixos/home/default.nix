@@ -69,12 +69,12 @@ in {
         export GDK_SCALE=1
         export XCURSOR_THEME="${config.stylix.cursor.name}"
         export XCURSOR_SIZE=${builtins.toString config.stylix.cursor.size}
-      '';
-      "uwsm/env-hyprland".text = ''
         export NIXOS_OZONE_WL=1
         export QT_QPA_PLATFORM="wayland;xcb"
         export MOZ_ENABLE_WAYLAND=1
         export GDK_BACKEND="wayland,x11
+      '';
+      "uwsm/env-hyprland".text = ''
         export HYPRCURSOR_THEME="${config.stylix.cursor.name}"
         export HYPRCURSOR_SIZE=${builtins.toString config.stylix.cursor.size}
       '';

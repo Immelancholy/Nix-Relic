@@ -13,7 +13,6 @@
     GRIMBLAST_EDITOR = "swappy";
     MPD_HOST = "${config.services.mpd.network.listenAddress}";
     MPD_PORT = "${builtins.toString config.services.mpd.network.port}";
-    QT_WAYLAND_DISABLE_WINDOWDECORATION = 1;
     QT_AUTO_SCREEN_SCALE_FACTOR = 1;
     GDK_SCALE = 1;
   };
