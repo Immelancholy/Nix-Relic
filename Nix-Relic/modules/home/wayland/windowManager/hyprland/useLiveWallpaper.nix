@@ -26,7 +26,7 @@ in {
     };
   };
   config = mkMerge [
-    {
+    (mkIf cfg.enable {
       home.packages = [
         paper-change
       ];
@@ -48,8 +48,8 @@ in {
           WantedBy = ["graphical-session.target"];
         };
       };
-    }
-    (mkIf cfg.liveWallpaper.enable {
+    })
+    (mkIf (cfg.liveWallpaper.enable && cfg.enable) {
       home.packages = with pkgs; [
         mpvpaper
       ];
