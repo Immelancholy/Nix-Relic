@@ -14,7 +14,7 @@
     fonts = {
       monospace = {
         package = pkgs.nerd-fonts.caskaydia-cove;
-        name = "Caskaydia Cove Nerd Font Mono";
+        name = "CaskaydiaCove Nerd Font Mono";
       };
       serif = {
         package = pkgs.nerd-fonts.noto;
