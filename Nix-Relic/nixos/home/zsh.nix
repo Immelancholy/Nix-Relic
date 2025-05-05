@@ -51,13 +51,21 @@
       ''
         last_repo=
         INIT=1
+        onefetch_img () {
+          image="$(find ~/Pictures/fastfetch_logos/ -name "*.jpg" -o -name "*.png" 2> /dev/null | shuf -n1)"
+          if [ "$image" ]; then
+            onefetch -i "$image"
+          else
+            onefetch
+          fi
+        }
         check_for_repo () {
           current_repo=$(git rev-parse --show-toplevel 2> /dev/null)
 
           if [ "$current_repo" ] && \
             [ "$current_repo" != "$last_repo" ]; then
             clear
-            onefetch -i "$(find ~/Pictures/fastfetch_logos -name '*.jpg' | shuf -n1)"
+            onefetch_img
             last_repo=$current_repo
             INIT=0
             GIT=1
@@ -92,7 +100,7 @@
         switch () {
           builtin cd "$FLAKE_PATH" || return
           clear
-          onefetch -i "$(find ~/Pictures/fastfetch_logos -name '*.jpg' | shuf -n1)"
+          onefetch_img
           git add .
           git commit -m "switch"
           sudo nixos-rebuild switch --flake .
@@ -104,7 +112,7 @@
         boot () {
           builtin cd "$FLAKE_PATH" || return
           clear
-          onefetch -i "$(find ~/Pictures/fastfetch_logos -name '*.jpg' | shuf -n1)"
+          onefetch_img
           git add .
           git commit -m "switch"
           sudo nixos-rebuild boot --flake .
@@ -116,7 +124,7 @@
         update () {
           builtin cd "$FLAKE_PATH" || return
           clear
-          onefetch -i "$(find ~/Pictures/fastfetch_logos -name '*.jpg' | shuf -n1)"
+          onefetch_img
           nix flake update --flake . --commit-lock-file
           builtin cd - || exit
         }
