@@ -1,6 +1,7 @@
 {
   pkgs,
   lib,
+  config,
   ...
 }: {
   catppuccin = {
@@ -46,8 +47,8 @@
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {
-      cursor-theme = "Bibata-Modern-Ice";
-      cursor-size = 22;
+      cursor-theme = config.stylix.cursor.name;
+      cursor-size = config.stylix.cursor.size;
     };
     "org/cinnamon/desktop/applications/terminal" = {
       exec = "kitty";

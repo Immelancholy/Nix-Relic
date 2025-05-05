@@ -1,7 +1,7 @@
-{
+{config, ...}: {
   wayland.windowManager.hyprland.settings = {
     exec-once = [
-      "hyprctl setcursor Bibata-Modern-Ice 22"
+      # "hyprctl setcursor ${config.stylix.cursor.name} ${builtins.toString config.stylix.cursor.size}"
       "systemctl restart --user nm-applet"
       "sleep 10; systemctl restart --user remmina"
       ''[workspace 1 silent; float; size 858 559; move 640 40] $term --class "mpd" --session=mpd.session''
