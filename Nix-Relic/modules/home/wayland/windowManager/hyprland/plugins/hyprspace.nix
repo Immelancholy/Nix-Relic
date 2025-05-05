@@ -24,8 +24,7 @@ in {
         ];
         settings = {
           bind = [
-            "$Alt, Tab, overview:toggle"
-            "Alt+Shift, Tab, exec, rofi -show window -modi window"
+            "$mod, Tab, overview:toggle"
           ];
 
           plugin = {
@@ -50,7 +49,6 @@ in {
 
     (mkIf (!cfg.useHyprspace) {
       wayland.windowManager.hyprland.settings.bind = [
-        "$Alt, Tab, exec, rofi -show window -modi window"
       ];
     })
   ];

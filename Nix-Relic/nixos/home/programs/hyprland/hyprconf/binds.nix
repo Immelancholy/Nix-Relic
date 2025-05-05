@@ -6,6 +6,7 @@
     ];
     bind =
       [
+        "$Alt, Tab, exec, rofi -show window -modi window"
         "$mod, T, exec, $term"
         ''$mods, T, exec, $term --class "tmux" tmux''
         "$mod, F, exec, $browser"
