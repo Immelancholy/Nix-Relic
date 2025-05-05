@@ -179,7 +179,7 @@
   displayManager = {
     # Display Manager to user, only enable 1
     sddm = {
-      enable = true;
+      enable = false; #logout doesn't work right forcing you to do systemctl restart display-manager to get sddm to pop up again after logging out
       screenWidth = "1920";
       screenHeight = "1080";
       animatedBackground = {
@@ -187,7 +187,7 @@
         path = ./nixos/home/backgrounds/Evil_Miku.mp4;
       };
     };
-    tuiGreet.enable = false;
+    tuiGreet.enable = true;
   };
 
   locale = "en_GB.UTF-8"; # change to your locale
