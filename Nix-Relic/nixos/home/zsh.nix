@@ -20,7 +20,6 @@
       edit = "sudo -e";
       rmpcs = "rmpc.sh";
       ca = "cava.sh";
-      fastfetch = "clear; fastfetch";
       firmware = "sudo systemctl reboot --firmware-setup";
       gc = "nix-collect-garbage -d && sudo nix-collect-garbage -d";
     };
@@ -61,24 +60,34 @@
         }
         check_for_repo () {
           current_repo=$(git rev-parse --show-toplevel 2> /dev/null)
+          if [ "$TERM" = "screen-256color" ];
+          then
+            if [ $INIT = 1 ]; then
+              fortune | pokemonsay -p fennekin -N
+              INIT=0
+            else
+              return
+            fi
+          else
 
-          if [ "$current_repo" ] && \
-            [ "$current_repo" != "$last_repo" ]; then
-            clear
-            onefetch_img
-            last_repo=$current_repo
-            INIT=0
-            GIT=1
-          elif [ $INIT = 1 ]; then
-            fortune | pokemonsay -p fennekin -N
-            GIT=0
-            INIT=0
-          elif [ ! "$current_repo" ] && \
-            [ $GIT = 1 ]; then
-            clear
-            fortune | pokemonsay -p fennekin -N
-            GIT=0
-            last_repo=
+            if [ "$current_repo" ] && \
+              [ "$current_repo" != "$last_repo" ]; then
+              clear
+              onefetch_img
+              last_repo=$current_repo
+              INIT=0
+              GIT=1
+            elif [ $INIT = 1 ]; then
+              fortune | pokemonsay -p fennekin -N
+              GIT=0
+              INIT=0
+            elif [ ! "$current_repo" ] && \
+              [ $GIT = 1 ]; then
+              clear
+              fortune | pokemonsay -p fennekin -N
+              GIT=0
+              last_repo=
+            fi
           fi
         }
 
@@ -144,9 +153,6 @@
         if [ "$class" = "fastfetch" ];
         then
           fastfetch --logo "$HOME"/Pictures/fastfetch_logos/Nakari.jpg
-        elif [ "$TERM" = "screen-256color" ];
-        then
-          fortune | pokemonsay -p fennekin -N
         else
           check_for_repo
         fi
