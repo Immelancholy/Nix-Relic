@@ -37,6 +37,7 @@ in {
   };
   home.packages = with pkgs; [
     mpvc
+    open-in-mpv
   ];
   xdg.configFile."mpv/script-opts/modernz.conf".text = ''
     # Language and display
