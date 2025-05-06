@@ -25,7 +25,15 @@ in {
     scripts = [
       pkgs.mpvScripts.mpris
       pkgs.mpvScripts.modernz
+      pkgs.mpvScripts.thumbfast
     ];
+    config = {
+      profile = "gpu-hq";
+      gpu-api = "vulkan";
+      osc = "no";
+      hwdec = "auto";
+      autofit = "75%x75%";
+    };
   };
   home.packages = with pkgs; [
     mpvc
