@@ -109,7 +109,11 @@
         switch () {
           builtin cd "$FLAKE_PATH" || return
           clear
-          onefetch_img
+          if [ "$TERM" = "screen-256color" ]; then
+            fastfetch
+          else
+            onefetch_img
+          fi
           git add .
           git commit -m "switch"
           sudo nixos-rebuild switch --flake .
@@ -121,7 +125,11 @@
         boot () {
           builtin cd "$FLAKE_PATH" || return
           clear
-          onefetch_img
+          if [ "$TERM" = "screen-256color" ]; then
+            fastfetch
+          else
+            onefetch_img
+          fi
           git add .
           git commit -m "switch"
           sudo nixos-rebuild boot --flake .
@@ -133,7 +141,11 @@
         update () {
           builtin cd "$FLAKE_PATH" || return
           clear
-          onefetch_img
+          if [ "$TERM" = "screen-256color" ]; then
+            fastfetch
+          else
+            onefetch_img
+          fi
           nix flake update --flake . --commit-lock-file
           builtin cd - || return
         }

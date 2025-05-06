@@ -7,6 +7,12 @@
 #
 # See README.md for more information.
 
+if [ "$DISPLAY_MANAGER" = "sddm" ] && [ $UWSM_ENABLED = 1 ]; then
+	export logout_method="uwsm stop"
+else
+	export logout_method="loginctl terminate-user $USER"
+fi
+
 set -e
 set -u
 
@@ -38,7 +44,8 @@ icons[cancel]="\Uf0156"
 declare -A actions
 actions[lockscreen]="uwsm-app -- swaylock -fF"
 #actions[switchuser]="???"
-actions[logout]="loginctl terminate-user $USER"
+# actions[logout]="loginctl terminate-user $USER"
+actions[logout]="$logout_method"
 actions[suspend]="systemctl suspend"
 actions[hibernate]="systemctl hibernate"
 actions[reboot]="systemctl reboot"

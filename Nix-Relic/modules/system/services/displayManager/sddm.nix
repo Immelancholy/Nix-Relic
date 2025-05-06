@@ -50,6 +50,9 @@ in {
     };
   };
   config = mkIf cfg.enable {
+    environment.sessionVariables = {
+      DISPLAY_MANAGER = "sddm";
+    };
     services.displayManager.sddm = {
       enable = true;
       wayland = {
