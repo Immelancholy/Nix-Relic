@@ -10,10 +10,9 @@ with lib; let
     function notify_volume() {
       # Function to show brightness notification
       VOLUME=$(mpc volume | sed 's/.*://')
-      VOLUME_PERCENT="''${VOLUME%f}"
 
       dunstctl close-all
-      dunstify -t 3000 -a "  Volume" -h int:value:"$VOLUME_PERCENT" "$VOLUME_PERCENT"
+      dunstify -t 3000 -a "  Volume" -h int:value:"$VOLUME" "$VOLUME"
     }
 
     function mute () {
@@ -58,7 +57,8 @@ with lib; let
       # Function to show brightness notification
       VOLUME=$(playerctl --player=${player} volume)
       VOLUME_MAX=1
-      VOLUME_PERCENT=$(${pkgs.bc}/bin/bc <<< "scale=1; "$VOLUME" / "$VOLUME_MAX" * 100")
+      VOLUME_PERCENT=$(${pkgs.bc}/bin/bc <<< "scale=2; "$VOLUME" / "$VOLUME_MAX" * 100")
+      VOLUME_PERCENT=''${VOLUME_PERCENT%.*}
 
       dunstctl close-all
       dunstify -t 3000 -a "  Volume" -h int:value:"$VOLUME_PERCENT" "$VOLUME_PERCENT""%"
