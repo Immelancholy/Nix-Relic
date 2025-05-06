@@ -4,6 +4,8 @@
   ...
 }: let
   wallpaper = config.wayland.windowManager.hyprland.liveWallpaper.path;
+  player = config.wayland.windowManager.hyprland.player.cmd;
+  pclass = config.wayland.windowManager.hyprland.player.class;
 in {
   home.packages = [
     (pkgs.writeShellScriptBin "hyprgame" ''
@@ -32,22 +34,22 @@ in {
               hyprctl dispatch signalwindow class:neo,9
               hyprctl dispatch signalwindow class:cava,9
               hyprctl dispatch signalwindow class:btop,9
-              hyprctl dispatch signalwindow class:mpd,9
+              hyprctl dispatch signalwindow class:${pclass},9
               hyprctl dispatch signalwindow class:fastfetch,9
               pkill mpvpaper
               systemctl stop --user mpdchck
-              hyprctl dispatch exec '[workspace 1 silent; float; size 1118 710; move 401 145] uwsm app -- kitty --class "mpd" --session=mpd.session'
+              hyprctl dispatch exec '[workspace 1 silent; float; size 1118 710; move 401 145] ${player}'
               exit
       else
-              hyprctl dispatch signalwindow class:mpd,9
+              hyprctl dispatch signalwindow class:${pclass},9
               hyprctl reload config-only -q
               uwsm app -- mpvpaper -f -p -o "--loop hwdec=auto --no-audio" '*' ${wallpaper}
               systemctl start --user mpdchck
-              hyprctl dispatch exec '[workspace 1 silent; float; size 858 559; move 640 40] uwsm app -- kitty --class "mpd" --session=mpd.session'
+              hyprctl dispatch exec '[workspace 1 silent; float; size 858 559; move 640 40] ${player}'
               hyprctl dispatch exec '[workspace 1 silent; float; size 858 462; move 640 609] uwsm app -- kitty --class "cava" cava.sh'
-              hyprctl dispatch exec '[workspace 1 silent; float; size 620 666; move 10 404] uwsm app -- kitty --class "btop" btop.sh'
+              hyprctl dispatch exec '[workspace 1 silent; float; size 620 637; move 10 433] uwsm app -- kitty --class "btop" btop.sh'
               hyprctl dispatch exec '[workspace 1 silent; float; size 402 1030; move 1508 40] uwsm app -- kitty --class "neo" neo.sh'
-              hyprctl dispatch exec '[workspace 1 silent; float; size 620 354; move 10 40] uwsm app -- kitty --class "fastfetch" kitty @ launch --type overlay --env class="fastfetch"'
+              hyprctl dispatch exec '[workspace 1 silent; float; size 620 383; move 10 40] uwsm app -- kitty --class "fastfetch" kitty @ launch --type overlay --env class="fastfetch"'
       fi
     '')
   ];
