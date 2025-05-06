@@ -18,10 +18,10 @@ with lib; let
     function mute () {
       vol=$(mpc volume | sed 's/.*://')
       vol_int="''${vol//"%"}"
-      old_vol=$(</tmp/old_vol)
+      old_vol=$(<$XDG_RUNTIME_DIR/old_vol)
       if [ "$vol_int" -gt 0 ]; then
         mpc volume 0 > /dev/null
-        echo "$vol_int" > /tmp/old_vol
+        echo "$vol_int" > $XDG_RUNTIME_DIR/old_vol
       elif [ "$old_vol" != "" ]; then
         mpc volume "$old_vol" > /dev/null
       else
@@ -66,10 +66,10 @@ with lib; let
 
     function mute () {
       vol=$(playerctl --player=${player} volume)
-      old_vol=$(</tmp/old_vol)
+      old_vol=$(<$XDG_RUNTIME_DIR/old_vol)
       if (( $(${pkgs.bc}/bin/bc -l <<< ""$vol" > 0") )); then
         playerctl --player=${player} volume 0 > /dev/null
-        echo "$vol" > /tmp/old_vol
+        echo "$vol" > $XDG_RUNTIME_DIR/old_vol
       elif [ "$old_vol" != "" ]; then
         playerctl --player=${player} volume "$old_vol" > /dev/null
       else
