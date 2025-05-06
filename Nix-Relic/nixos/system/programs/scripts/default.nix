@@ -18,7 +18,6 @@
     ./muteChromium.nix
     ./cavaCfg.nix
     ./brightness.nix
-    ./volume.nix
     ./colortrans.nix
     ./neo-color-cfg.nix
   ];

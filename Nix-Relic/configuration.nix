@@ -76,12 +76,14 @@
       '';
     };
 
+    # player = {
+    #   name = ""; #MPRIS name of the player (defaults to mpd)
+    #   cmd = ""; # command to launch music player (defaults to mpd)
+    #   class = ""; # wmclass of music player (defaults to mpd)
+    # };
+
     # Important hyprland user configs
     wayland.windowManager.hyprland = {
-      # player = {
-      #   cmd = ""; # command to launch music player (defaults to mpd)
-      #   class = ""; # wmclass of music player (defaults to mpd)
-      # };
       # ONLY ENABLE 1 LAYOUT!!
       layout = {
         master.enable = false;

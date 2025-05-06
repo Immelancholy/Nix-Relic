@@ -4,8 +4,8 @@
   ...
 }: let
   wallpaper = config.wayland.windowManager.hyprland.liveWallpaper.path;
-  player = config.wayland.windowManager.hyprland.player.cmd;
-  pclass = config.wayland.windowManager.hyprland.player.class;
+  player = config.player.cmd;
+  pclass = config.player.class;
 in {
   home.packages = [
     (pkgs.writeShellScriptBin "hyprgame" ''

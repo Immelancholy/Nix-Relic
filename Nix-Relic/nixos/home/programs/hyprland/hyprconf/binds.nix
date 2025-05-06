@@ -58,16 +58,16 @@
       ", XF86AudioPlay, exec, $playerctl play-pause #pause-play media"
       ", XF86AudioNext, exec, $playerctl next" #next
       ", XF86AudioPrev, exec, $playerctl previous" #previous,
-      ", XF86AudioMute, exec, uwsm-app -- volumeControl mute" # decrease volume of mpd
+      ", XF86AudioMute, exec, uwsm-app -- playerVol mute" # decrease volume of mpd
       "$mod, mouse:282, exec, $playerctl next" #next
       "$mod, mouse:281, exec, $playerctl previous" #previous,
       ", mouse:277, exec, $playerctl play-pause" # toggle between media play and pause
     ];
     bindel = [
-      ", XF86AudioLowerVolume, exec, uwsm-app -- volumeControl dec" # decrease volume of mpd
-      ", XF86AudioRaiseVolume, exec, uwsm-app -- volumeControl inc" # increase volume of mpd
-      ", mouse:281, exec, uwsm-app -- volumeControl inc" # volume up of mpd
-      ", mouse:282, exec, uwsm-app -- volumeControl dec" # volume down of mpd
+      ", XF86AudioLowerVolume, exec, uwsm-app -- playerVol dec" # decrease volume of mpd
+      ", XF86AudioRaiseVolume, exec, uwsm-app -- playerVol inc" # increase volume of mpd
+      ", mouse:281, exec, uwsm-app -- playerVol inc" # volume up of mpd
+      ", mouse:282, exec, uwsm-app -- playerVol dec" # volume down of mpd
       ", XF86MonBrightnessUp, exec, brightness inc"
       ", XF86MonBrightnessDown, exec, brightness dec"
     ];
@@ -82,9 +82,9 @@
     bind = $mods, P, submap, player
     submap = player
     bindl = , P, exec, $playerctl play-pause
-    bindl = , M, exec, uwsm-app -- volumeControl mute
-    bindel  = , O, exec, uwsm-app -- volumeControl inc # volume up
-    bindel  = , I, exec, uwsm-app -- volumeControl dec # volume down
+    bindl = , M, exec, uwsm-app -- playerVol mute
+    bindel  = , O, exec, uwsm-app -- playerVol inc # volume up
+    bindel  = , I, exec, uwsm-app -- playerVol dec # volume down
     bindel  = Shift, O, exec, $playerctl next # next
     bindel  = Shift, I, exec, $playerctl previous # next
     bind = , escape, submap, reset
