@@ -8,6 +8,23 @@
 with lib; let
   cfg = config.programs.zen;
   user = config.home.username;
+  associations = {
+    "text/html" = ["zen.desktop"];
+    "x-scheme-handler/http" = ["zen.desktop"];
+    "x-scheme-handler/https" = ["zen.desktop"];
+    "x-scheme-handler/chrome" = ["zen.desktop"];
+    "x-scheme-handler/about" = ["zen.desktop"];
+    "x-scheme-handler/unknown" = ["zen.desktop"];
+    "default-web-browser" = ["zen.desktop"];
+    "application/pdf" = ["zen.desktop"];
+    "application/xhtml+xml" = ["zen.desktop"];
+    "application/xhtml_xml" = ["zen.desktop"];
+    "application/x-extension-htm" = ["zen.desktop"];
+    "application/x-extension-html" = ["zen.desktop"];
+    "application/x-extension-shtml" = ["zen.desktop"];
+    "application/x-extension-xhtml" = ["zen.desktop"];
+    "application/x-extension-xht" = ["zen.desktop"];
+  };
 in {
   options.programs.zen = {
     enable = mkEnableOption "Enable Zen Browser";
@@ -31,42 +48,13 @@ in {
         Version=2
       '';
     };
+    xdg.mime = mkIf (cfg.enable && cfg.defaultBrowser) {
+      enable = true;
+    };
     xdg.mimeApps = mkIf (cfg.enable && cfg.defaultBrowser) {
       enable = true;
-      associations.added = {
-        "text/html" = ["zen.desktop"];
-        "x-scheme-handler/http" = ["zen.desktop"];
-        "x-scheme-handler/https" = ["zen.desktop"];
-        "x-scheme-handler/chrome" = ["zen.desktop"];
-        "x-scheme-handler/about" = ["zen.desktop"];
-        "x-scheme-handler/unknown" = ["zen.desktop"];
-        "default-web-browser" = ["zen.desktop"];
-        "application/pdf" = ["zen.desktop"];
-        "application/xhtml+xml" = ["zen.desktop"];
-        "application/xhtml_xml" = ["zen.desktop"];
-        "application/x-extension-htm" = ["zen.desktop"];
-        "application/x-extension-html" = ["zen.desktop"];
-        "application/x-extension-shtml" = ["zen.desktop"];
-        "application/x-extension-xhtml" = ["zen.desktop"];
-        "application/x-extension-xht" = ["zen.desktop"];
-      };
-      defaultApplications = {
-        "text/html" = ["zen.desktop"];
-        "x-scheme-handler/http" = ["zen.desktop"];
-        "x-scheme-handler/https" = ["zen.desktop"];
-        "x-scheme-handler/chrome" = ["zen.desktop"];
-        "x-scheme-handler/about" = ["zen.desktop"];
-        "x-scheme-handler/unknown" = ["zen.desktop"];
-        "default-web-browser" = ["zen.desktop"];
-        "application/pdf" = ["zen.desktop"];
-        "application/xhtml+xml" = ["zen.desktop"];
-        "application/xhtml_xml" = ["zen.desktop"];
-        "application/x-extension-htm" = ["zen.desktop"];
-        "application/x-extension-html" = ["zen.desktop"];
-        "application/x-extension-shtml" = ["zen.desktop"];
-        "application/x-extension-xhtml" = ["zen.desktop"];
-        "application/x-extension-xht" = ["zen.desktop"];
-      };
+      associations.added = associations;
+      defaultApplications = associations;
     };
   };
 }

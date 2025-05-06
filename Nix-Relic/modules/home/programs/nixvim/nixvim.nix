@@ -5,6 +5,14 @@
 }:
 with lib; let
   cfg = config.programs.nixvim;
+  associations = {
+    "text/plain" = ["nvim.desktop"];
+    "text/css" = ["nvim.desktop"];
+    "text/csv" = ["nvim.desktop"];
+    "text/javascript" = ["nvim.desktop"];
+    "application/json" = ["nvim.desktop"];
+    "application/xml" = ["nvim.desktop"];
+  };
 in {
   config = mkIf cfg.enable {
     xdg.desktopEntries = {
@@ -34,24 +42,13 @@ in {
     #   EDITOR = "nvim";
     # };
 
+    xdg.mime = mkIf (cfg.enable && cfg.defaultEditor) {
+      enable = true;
+    };
     xdg.mimeApps = mkIf (cfg.enable && cfg.defaultEditor) {
       enable = true;
-      associations.added = {
-        "text/plain" = ["nvim.desktop"];
-        "text/css" = ["nvim.desktop"];
-        "text/csv" = ["nvim.desktop"];
-        "text/javascript" = ["nvim.desktop"];
-        "application/json" = ["nvim.desktop"];
-        "application/xml" = ["nvim.desktop"];
-      };
-      defaultApplications = {
-        "text/plain" = ["nvim.desktop"];
-        "text/css" = ["nvim.desktop"];
-        "text/csv" = ["nvim.desktop"];
-        "text/javascript" = ["nvim.desktop"];
-        "application/json" = ["nvim.desktop"];
-        "application/xml" = ["nvim.desktop"];
-      };
+      associations.added = associations;
+      defaultApplications = associations;
     };
   };
 }
