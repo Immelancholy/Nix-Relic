@@ -54,7 +54,7 @@
         onefetch_img () {
           image="$(find ~/Pictures/fastfetch_logos/ -name "*.jpg" -o -name "*.png" 2> /dev/null | shuf -n1)"
           if [ "$image" ]; then
-            onefetch -i "$image"
+            onefetch --image-protocol kitty -i "$image"
           else
             onefetch
           fi
@@ -106,7 +106,7 @@
           sudo nixos-rebuild switch --flake .
           git add .
           git commit -m "Update Flake Lock"
-          builtin cd - || exit
+          builtin cd - || return
         }
 
         boot () {
@@ -118,7 +118,7 @@
           sudo nixos-rebuild boot --flake .
           git add .
           git commit -m "Update Flake Lock"
-          builtin cd - || exit
+          builtin cd - || return
         }
 
         update () {
@@ -126,13 +126,13 @@
           clear
           onefetch_img
           nix flake update --flake . --commit-lock-file
-          builtin cd - || exit
+          builtin cd - || return
         }
 
         nixp () {
           builtin cd "$FLAKE_PATH" || return
           git push -u origin main
-          builtin cd - || exit
+          builtin cd - || return
         }
 
         source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
@@ -144,6 +144,9 @@
         if [ "$class" = "fastfetch" ];
         then
           fastfetch --logo "$HOME"/Pictures/fastfetch_logos/Nakari.jpg
+        elif [ "$TERM" = "screen-256color" ];
+        then
+          fortune | pokemonsay -p fennekin -N
         else
           check_for_repo
         fi
