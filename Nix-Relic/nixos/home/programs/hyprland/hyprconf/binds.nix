@@ -14,6 +14,7 @@
         "$mod, grave, exec, $menu"
         "$mod, C, exec, $edit"
         "Alt, Return, fullscreen"
+        "Alt, Tab, exec, rofi -show window -modi window"
         ''$mods, U, exec, [workspace 1 silent; float; size 858 462; move 640 609] $term --class "cava" cava.sh''
         ''$mods, U, exec, [workspace 1 silent; float; size 620 637; move 10 433] $term --class "btop" btop.sh''
         ''$mods, U, exec, [workspace 1 silent; float; size 402 1030; move 1508 40] $term --class "neo" neo.sh''
