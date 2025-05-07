@@ -5,22 +5,22 @@
   ...
 }: let
   user = config.home.username;
-  base = "#${config.lib.stylix.colors.base00}";
-  mantle = "#${config.lib.stylix.colors.base01}";
-  surface0 = "#${config.lib.stylix.colors.base02}";
-  surface1 = "#${config.lib.stylix.colors.base03}";
-  surface2 = "#${config.lib.stylix.colors.base04}";
-  text = "#${config.lib.stylix.colors.base05}";
-  rosewater = "#${config.lib.stylix.colors.base06}";
-  lavender = "#${config.lib.stylix.colors.base07}";
-  red = "#${config.lib.stylix.colors.base08}";
-  peach = "#${config.lib.stylix.colors.base09}";
-  yellow = "#${config.lib.stylix.colors.base0A}";
-  green = "#${config.lib.stylix.colors.base0B}";
-  teal = "#${config.lib.stylix.colors.base0C}";
-  blue = "#${config.lib.stylix.colors.base0D}";
-  mauve = "#${config.lib.stylix.colors.base0E}";
-  flamingo = "#${config.lib.stylix.colors.base0F}";
+  base = "#${config.lib.stylix.colors.base00}BB";
+  mantle = "#${config.lib.stylix.colors.base01}BB";
+  surface0 = "#${config.lib.stylix.colors.base02}BB";
+  surface1 = "#${config.lib.stylix.colors.base03}BB";
+  surface2 = "#${config.lib.stylix.colors.base04}BB";
+  text = "#${config.lib.stylix.colors.base05}BB";
+  rosewater = "#${config.lib.stylix.colors.base06}BB";
+  lavender = "#${config.lib.stylix.colors.base07}BB";
+  red = "#${config.lib.stylix.colors.base08}BB";
+  peach = "#${config.lib.stylix.colors.base09}BB";
+  yellow = "#${config.lib.stylix.colors.base0A}BB";
+  green = "#${config.lib.stylix.colors.base0B}BB";
+  teal = "#${config.lib.stylix.colors.base0C}BB";
+  blue = "#${config.lib.stylix.colors.base0D}BB";
+  mauve = "#${config.lib.stylix.colors.base0E}BB";
+  flamingo = "#${config.lib.stylix.colors.base0F}BB";
 in {
   options.stylix.targets.zen = {
     enable = config.lib.stylix.mkEnableTarget "Theme zen" true;
@@ -30,15 +30,15 @@ in {
       @media (prefers-color-scheme: dark) {
 
         :root {
-          --zen-colors-primary: ${surface0} !important;
+          --zen-colors-primary: ${mauve} !important;
           --zen-primary-color: ${mauve} !important;
           --zen-colors-secondary: ${surface0} !important;
-          --zen-colors-tertiary: ${mantle} !important;
+          --zen-colors-tertiary: ${base} !important;
           --zen-colors-border: ${mauve} !important;
           --toolbarbutton-icon-fill: ${mauve} !important;
           --lwt-text-color: ${text} !important;
           --toolbar-field-color: ${text} !important;
-          --tab-selected-textcolor: ${lavender} !important;
+          --tab-selected-textcolor: ${text} !important;
           --toolbar-field-focus-color: ${text} !important;
           --toolbar-color: ${text} !important;
           --newtab-text-primary-color: ${text} !important;
@@ -46,12 +46,12 @@ in {
           --arrowpanel-background: ${base} !important;
           --sidebar-text-color: ${text} !important;
           --lwt-sidebar-text-color: ${text} !important;
-          --lwt-sidebar-background-color: #11111b !important;
-          --toolbar-bgcolor: ${surface0} !important;
+          --lwt-sidebar-background-color: ${base} !important;
+          --toolbar-bgcolor: ${base} !important;
           --newtab-background-color: ${base} !important;
-          --zen-themed-toolbar-bg: ${mantle} !important;
-          --zen-main-browser-background: ${mantle} !important;
-          --toolbox-bgcolor-inactive: ${mantle} !important;
+          --zen-themed-toolbar-bg: ${base} !important;
+          --zen-main-browser-background: ${base} !important;
+          --toolbox-bgcolor-inactive: ${base} !important;
         }
 
         #permissions-granted-icon{
@@ -67,7 +67,7 @@ in {
         }
 
         #TabsToolbar {
-          background-color: ${mantle} !important;
+          background-color: ${base} !important;
         }
 
         #urlbar-background {
@@ -84,13 +84,13 @@ in {
         }
 
         #zenEditBookmarkPanelFaviconContainer {
-          background: #11111b !important;
+          background: ${base} !important;
         }
 
         toolbar .toolbarbutton-1 {
           &:not([disabled]) {
             &:is([open], [checked]) > :is(.toolbarbutton-icon, .toolbarbutton-text, .toolbarbutton-badge-stack){
-              fill: #11111b;
+              fill: ${base};
             }
           }
         }
@@ -146,8 +146,8 @@ in {
             --in-content-page-color: ${text} !important;
             --color-accent-primary: ${mauve} !important;
             --color-accent-primary-hover: ${mauve} !important;
-            --color-accent-primary-active: rgb(223, 167, 247) !important;
-            background-color: ${base} !important;
+            --color-accent-primary-active: ${mauve} !important;
+            --background-color: ${base} !important;
             --in-content-page-background: ${base} !important;
           }
 
@@ -221,7 +221,7 @@ in {
           }
 
           .main-content {
-            background-color: #11111b !important;
+            background-color: ${base} !important;
           }
 
           .identity-color-blue {
