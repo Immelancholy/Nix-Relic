@@ -22,6 +22,11 @@ in {
       default = ''mpd'';
       description = "Class of music player";
     };
+    scriptUseDefaultSink = mkOption {
+      type = types.bool;
+      default = false;
+      description = "Make the volume control script use the default sink";
+    };
   };
   config = {
     wayland.windowManager.hyprland.settings = {
