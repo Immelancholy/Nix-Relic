@@ -15,7 +15,7 @@
     ./tmux_nix.nix
     ./tmux_notes.nix
     ./ss.nix
-    ./muteChromium.nix
+    ./toggle-mute.nix
     ./cavaCfg.nix
     ./brightness.nix
     ./colortrans.nix
