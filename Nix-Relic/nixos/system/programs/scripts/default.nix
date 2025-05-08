@@ -10,7 +10,6 @@
     ./cliphist.nix
     ./mpdart.nix
     ./neo.nix
-    ./swww.nix
     ./tmux_dev.nix
     ./tmux_nix.nix
     ./tmux_notes.nix
