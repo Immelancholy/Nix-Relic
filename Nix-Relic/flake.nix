@@ -4,6 +4,10 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     # nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
+    artis = {
+      url = "github:Immelancholy/artis";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     alejandra = {
       url = "github:kamadorueda/alejandra/3.1.0";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -125,12 +129,19 @@
     ];
     forAllSystems = nixpkgs.lib.genAttrs systems;
     system = forAllSystems (system: system);
+    globalHomeImports = [
+      inputs.catppuccin.homeModules.catppuccin
+      inputs.nixvim.homeManagerModules.nixvim
+      inputs.spicetify-nix.homeManagerModules.default
+      inputs.nix-flatpak.homeManagerModules.nix-flatpak
+      inputs.artis.homeManagerModules.default
+    ];
   in {
     formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
     nixosConfigurations = {
       nix-relic = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = {inherit inputs nixpkgs;};
+        specialArgs = {inherit inputs nixpkgs globalHomeImports;};
         modules = [
           stylix.nixosModules.stylix
           nur.modules.nixos.default
@@ -149,6 +160,15 @@
               useGlobalPkgs = true;
               useUserPackages = true;
               extraSpecialArgs = {inherit inputs;};
+              sharedModules = [
+                inputs.catppuccin.homeModules.catppuccin
+                inputs.nixvim.homeManagerModules.nixvim
+                inputs.spicetify-nix.homeManagerModules.default
+                inputs.nix-flatpak.homeManagerModules.nix-flatpak
+                inputs.artis.homeManagerModules.default
+                ./nixos/home
+                ./modules/home
+              ];
             };
           }
         ];

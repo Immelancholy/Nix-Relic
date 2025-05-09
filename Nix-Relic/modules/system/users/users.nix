@@ -2,7 +2,6 @@
   pkgs,
   config,
   lib,
-  inputs,
   ...
 }:
 with lib; let
@@ -37,15 +36,6 @@ in {
         lib.nameValuePair user {
           home.username = "${user}";
           home.homeDirectory = "/home/${user}";
-          imports = [
-            ../../../nixos/home
-            # inputs.stylix.homeManagerModules.stylix
-            ../../home
-            inputs.catppuccin.homeModules.catppuccin
-            inputs.nixvim.homeManagerModules.nixvim
-            inputs.spicetify-nix.homeManagerModules.default
-            inputs.nix-flatpak.homeManagerModules.nix-flatpak
-          ];
         })
       users);
   };

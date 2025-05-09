@@ -35,7 +35,7 @@ in {
   xdg.configFile."kitty/mpd.session".text = ''
     layout splits
     launch --title "inori" inori
-    launch --location=vsplit --title "mpdart" mpdart
+    launch --location=vsplit --title "artis" artis
     resize_window short 8
   '';
 }

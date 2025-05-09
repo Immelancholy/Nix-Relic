@@ -1,8 +1,4 @@
-{
-  pkgs,
-  config,
-  ...
-}: let
+{config, ...}: let
   base = "#${config.lib.stylix.colors.base00}";
   mantle = "#${config.lib.stylix.colors.base01}";
   surface0 = "#${config.lib.stylix.colors.base02}";
@@ -20,11 +16,14 @@
   mauve = "#${config.lib.stylix.colors.base0E}";
   flamingo = "#${config.lib.stylix.colors.base0F}";
 in {
-  xdg.configFile."mpdart/colors".text = ''
-    ${text}
-    ${text}
-    ${text}
-    ${text}
-    ${blue}
-  '';
+  programs.artis = {
+    enable = true;
+    colors = {
+      color1 = "${text}";
+      color2 = "${text}";
+      color3 = "${text}";
+      color4 = "${text}";
+      color5 = "${blue}";
+    };
+  };
 }

@@ -1,6 +1,6 @@
 {
   imports = [
     ./inori.nix
-    ./mpdart.nix
+    ./artis.nix
   ];
 }
