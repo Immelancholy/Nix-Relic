@@ -7,8 +7,7 @@
       ''opacity 1.0 0.90,class:^(btop)$''
       ''opacity 1.0 0.90,class:^(fastfetch)$''
       ''opacity 1.0 0.90,class:^(kitty)$''
-      ''opacity 0.90 0.80,class:^(zen)$''
-      ''opacity 1.0 override 0.90 override, title:(.*YouTube.*|.*Instagram.*|.*HiAnime.*|.*Twitch.*)$''
+      ''opacity 1.0 0.90,class:^(zen)$''
       ''opacity 0.80 0.70,class:^(gcr-prompter)$''
       ''opacity 0.80 0.70,class:^(org.gnome.seahorse.Application)$''
       ''opacity 0.80 0.70,class:^(org.prismlauncher.PrismLauncher)$''
@@ -119,7 +118,7 @@
 
       ''float, title:(.*Properties*.)$''
       ''float, class:^(mpv)$''
-      ''size 1152 648, class:^(mpv)$''
+      # ''size 1152 648, class:^(mpv)$''
 
       # common modals
       ''float,title:^(Open)$''

@@ -1,4 +1,4 @@
-config, ...}: {
+{config, ...}: {
   wayland.windowManager.hyprland.settings = {
     exec-once = [
       # "hyprctl setcursor ${config.stylix.cursor.name} ${builtins.toString config.stylix.cursor.size}"

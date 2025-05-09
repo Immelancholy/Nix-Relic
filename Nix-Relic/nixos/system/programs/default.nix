@@ -62,6 +62,7 @@
     wantedBy = ["graphical-session.target"];
   };
   environment.systemPackages = with pkgs; [
+    onefetch
     neo
     pipes
     brightnessctl
@@ -80,6 +81,7 @@
     wl-clipboard
     sbctl
     inputs.yazi.packages.${pkgs.system}.default
+    # inputs.artis.packages.${pkgs.system}.default
     qpwgraph
     pavucontrol
     pulsemixer

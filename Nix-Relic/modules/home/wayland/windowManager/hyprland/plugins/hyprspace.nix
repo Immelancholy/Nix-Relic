@@ -12,7 +12,7 @@ in {
     useHyprspace = mkOption {
       type = types.bool;
       default = false;
-      description = ''Use Hy3 tyling style'';
+      description = ''Use Hyprspace'';
     };
   };
   config = mkIf cfg.useHyprspace {

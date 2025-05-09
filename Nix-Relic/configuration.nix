@@ -11,6 +11,10 @@
     "your-user"
   ]; # sudo enabled accounts here (You'll want to go here if you're installing these. )
 
+  programs.weylus.users = [
+    "users you want to have access to weylus"
+  ];
+
   stylix = {
     # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml"; # Stylix theme, comment this to generate theme based on wallpaper
     polarity = "dark";
@@ -34,6 +38,10 @@
 
   # duplicate this for each user
   home-manager.users.your-user = {
+    imports = [
+      ./nixos/home/fetch_images.nix
+    ];
+
     catppuccin = {
       flavor = "mocha";
       accent = "mauve";

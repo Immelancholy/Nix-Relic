@@ -7,6 +7,7 @@ let
     "image/jpeg" = ["org.gnome.Loupe.desktop"];
     "application/x-gnome-saved-search" = ["nemo.desktop"];
     "application/zip" = ["org.kde.ark.desktop"];
+    "x-scheme-handler/mpv" = ["open-in-mpv.desktop"];
   };
 in {
   xdg = {

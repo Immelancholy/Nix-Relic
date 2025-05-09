@@ -6,7 +6,6 @@
     ];
     bind =
       [
-        "$Alt, Tab, exec, rofi -show window -modi window"
         "$mod, T, exec, $term"
         ''$mods, T, exec, $term --class "tmux" tmux''
         "$mod, F, exec, $browser"
@@ -72,7 +71,6 @@
     bind = $mods, P, submap, player
     submap = player
     bindl = , P, exec, $playerctl play-pause
-    bindl = , M, exec, uwsm-app -- playerVol mute
     bindel  = , O, exec, uwsm-app -- playerVol inc # volume up
     bindel  = , I, exec, uwsm-app -- playerVol dec # volume down
     bindel  = Shift, O, exec, $playerctl next # next

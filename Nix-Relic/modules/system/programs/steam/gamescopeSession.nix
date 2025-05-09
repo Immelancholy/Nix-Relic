@@ -67,14 +67,14 @@
     exit 0;
   '';
 in {
-  config = lib.mkIf cfg.enable {
-    environment.systemPackages = lib.mkIf cfg.enable [
+  config = lib.mkIf (cfg.enable && config.programs.steam.enable) {
+    environment.systemPackages = [
       steam-gamescope
       steamscope
       steamos-session-select
     ];
     programs.steam = {
-      extraPackages = lib.mkIf cfg.enable [
+      extraPackages = [
         steamos-session-select
         steamos-select-branch
         steamos-update

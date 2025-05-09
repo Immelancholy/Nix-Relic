@@ -2,8 +2,6 @@
   pkgs,
   config,
   lib,
-  inputs,
-  globalHomeImports,
   ...
 }:
 with lib; let
@@ -18,7 +16,6 @@ in {
     };
   };
   config = {
-    programs.weylus.users = cfg.users;
     users.users = let
       users = cfg.sudoUsers;
     in

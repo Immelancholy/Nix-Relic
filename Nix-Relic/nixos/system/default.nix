@@ -21,6 +21,8 @@
   environment.etc."nix/inputs/nixpkgs".source = "${nixpkgs}";
   nix.settings.nix-path = lib.mkForce "nixpkgs=/etc/nix/inputs/nixpkgs";
 
+  environment.pathsToLink = ["/share/zsh"];
+
   nixpkgs.config.allowUnfree = true;
   environment = {
     shells = with pkgs; [

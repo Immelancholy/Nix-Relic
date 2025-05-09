@@ -16,15 +16,14 @@ in {
     };
   };
   config = {
-    programs.weylus.users = cfg.users;
     users.users = let
       users = cfg.users;
     in
       builtins.listToAttrs (map (user:
         lib.nameValuePair user {
           isNormalUser = true;
-          extraGroups = ["networkmanager" "video" "seat"];
           description = "Account for ${user}";
+          extraGroups = ["networkmanager" "video" "seat"];
           shell = pkgs.zsh;
           initialPassword = "password";
         })
