@@ -37,9 +37,9 @@
         ''Ctrl+Shift, Escape, exec, uwsm app -- $term --title "btop" btop''
         ", XF86Calculator, exec, uwsm-app -- qalculate-gtk"
         "$mod, X, togglespecialworkspace"
-        ", Print, exec, uwsm-app -- ss.sh o"
-        "Ctrl, Print, exec, uwsm-app -- ss.sh af"
-        "Ctrl+Shift, Print, exec, uwsm-app -- ss.sh w"
+        ", Print, exec, uwsm-app -- ss.sh -o"
+        "Ctrl, Print, exec, uwsm-app -- ss.sh -af"
+        "Ctrl+Shift, Print, exec, uwsm-app -- ss.sh -w"
         "$mod, O, exec, uwsm-app -- hyprpicker -a"
       ]
       ++ (
@@ -81,9 +81,9 @@
 
     bind = $mod, P, submap, ss
     submap = ss
-    bind = , O, exec, uwsm-app -- ss.sh o
-    bind = , A, exec, uwsm-app -- ss.sh af
-    bind = , W, exec, uwsm-app -- ss.sh w
+    bind = , O, exec, uwsm-app -- ss.sh -o
+    bind = , A, exec, uwsm-app -- ss.sh -af
+    bind = , W, exec, uwsm-app -- ss.sh -w
     bind = , escape, submap, reset
     bind = , P, submap, reset
     submap = reset
