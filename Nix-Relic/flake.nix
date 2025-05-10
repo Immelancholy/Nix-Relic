@@ -129,12 +129,10 @@
       "x86_64-linux"
     ];
     forAllSystems = nixpkgs.lib.genAttrs systems;
-    system = forAllSystems (system: system);
   in {
     formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
     nixosConfigurations = {
       nix-relic = nixpkgs.lib.nixosSystem {
-        inherit system;
         specialArgs = {inherit inputs nixpkgs;};
         modules = [
           inputs.nix-relic-modules.nixosModules.default
