@@ -6,6 +6,7 @@
   ...
 }: let
   cfg = config.wayland.windowManager.hyprland;
+  nrm = inputs.nix-relic-modules.packages.${pkgs.system};
 in {
   wayland.windowManager.hyprland = lib.mkMerge [
     {
@@ -37,6 +38,11 @@ in {
   home.packages = with pkgs; [
     hyprpicker
     hyprshot
+    (nrm.hyprgame.override {
+      wallpaper = config.wayland.windowManager.hyprland.liveWallpaper.path;
+      player = config.player.cmd;
+      pclass = config.player.class;
+    })
   ];
 
   imports = [

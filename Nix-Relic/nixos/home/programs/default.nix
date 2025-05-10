@@ -21,7 +21,6 @@
     ./dunst.nix
     ./swaylock.nix
     ./udiskie.nix
-    ./scripts
     ./mpv.nix
   ];
 
