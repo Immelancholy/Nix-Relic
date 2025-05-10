@@ -2,6 +2,7 @@
   pkgs,
   nixpkgs,
   lib,
+  config,
   ...
 }: {
   imports = [
@@ -15,8 +16,29 @@
   security.pam.services.login.enableGnomeKeyring = true;
   services.seatd.enable = true;
 
-  services.neo-color.enable = true;
-  services.cavaCfg.enable = true;
+  services.neo-color = {
+    enable = true;
+    colors = {
+      color1 = "${config.lib.stylix.colors.base0F}";
+      color2 = "${config.lib.stylix.colors.base0D}";
+      color3 = "${config.lib.stylix.colors.base0E}";
+      color4 = "${config.lib.stylix.colors.base0C}";
+      color5 = "${config.lib.stylix.colors.base05}";
+    };
+  };
+
+  services.cavaCfg = {
+    enable = true;
+    colors = {
+      color1 = "#${config.lib.stylix.colors.base0E}";
+      color2 = "#${config.lib.stylix.colors.base0D}";
+      color3 = "#${config.lib.stylix.colors.base0C}";
+      color4 = "#${config.lib.stylix.colors.base0B}";
+      color5 = "#${config.lib.stylix.colors.base0A}";
+      color6 = "#${config.lib.stylix.colors.base09}";
+      color7 = "#${config.lib.stylix.colors.base08}";
+    };
+  };
 
   nix.registry.nixpkgs.flake = nixpkgs;
   nix.channel.enable = false;

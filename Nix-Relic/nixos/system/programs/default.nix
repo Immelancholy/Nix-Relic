@@ -87,35 +87,24 @@ in {
     nrm.btop
     nrm.cava
     (nrm.cavaCfg.override {
-      red = "#${config.lib.stylix.colors.base08}";
-      peach = "#${config.lib.stylix.colors.base09}";
-      yellow = "#${config.lib.stylix.colors.base0A}";
-      green = "#${config.lib.stylix.colors.base0B}";
-      teal = "#${config.lib.stylix.colors.base0C}";
-      blue = "#${config.lib.stylix.colors.base0D}";
-      mauve = "#${config.lib.stylix.colors.base0E}";
+      color1 = "#${config.lib.stylix.colors.base0E}";
+      color2 = "#${config.lib.stylix.colors.base0D}";
+      color3 = "#${config.lib.stylix.colors.base0C}";
+      color4 = "#${config.lib.stylix.colors.base0B}";
+      color5 = "#${config.lib.stylix.colors.base0A}";
+      color6 = "#${config.lib.stylix.colors.base09}";
+      color7 = "#${config.lib.stylix.colors.base08}";
     })
     nrm.checkshell
     nrm.cliphist
     nrm.colortrans
     nrm.mpdchck
     (nrm.neo-color.override {
-      base = "${config.lib.stylix.colors.base00}";
-      mantle = "${config.lib.stylix.colors.base01}";
-      surface0 = "${config.lib.stylix.colors.base02}";
-      surface1 = "${config.lib.stylix.colors.base03}";
-      surface2 = "${config.lib.stylix.colors.base04}";
-      text = "${config.lib.stylix.colors.base05}";
-      rosewater = "${config.lib.stylix.colors.base06}";
-      lavender = "${config.lib.stylix.colors.base07}";
-      red = "${config.lib.stylix.colors.base08}";
-      peach = "${config.lib.stylix.colors.base09}";
-      yellow = "${config.lib.stylix.colors.base0A}";
-      green = "${config.lib.stylix.colors.base0B}";
-      teal = "${config.lib.stylix.colors.base0C}";
-      blue = "${config.lib.stylix.colors.base0D}";
-      mauve = "${config.lib.stylix.colors.base0E}";
-      flamingo = "${config.lib.stylix.colors.base0F}";
+      color1 = "${config.lib.stylix.colors.base0F}";
+      color2 = "${config.lib.stylix.colors.base0D}";
+      color3 = "${config.lib.stylix.colors.base0E}";
+      color4 = "${config.lib.stylix.colors.base0C}";
+      color5 = "${config.lib.stylix.colors.base05}";
     })
     nrm.neo
     nrm.rofi-power-menu
