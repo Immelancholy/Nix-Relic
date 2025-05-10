@@ -84,12 +84,13 @@
       '';
     };
 
-    # player = {
-    #   name = ""; #MPRIS name of the player (defaults to mpd)
-    #   cmd = ""; # command to launch music player (defaults to mpd)
-    #   class = ""; # wmclass of music player (defaults to mpd)
-    #   scriptUseDefaultSink = true; #Use default sink for vol control script (defaults to false)
-    # };
+    player = {
+      enable = true;
+      # name = ""; #MPRIS name of the player (defaults to mpd)
+      # cmd = ""; # command to launch music player (defaults to mpd)
+      # class = ""; # wmclass of music player (defaults to mpd)
+      # scriptUseDefaultSink = true; #Use default sink for vol control script (defaults to false)
+    };
 
     # Important hyprland user configs
     wayland.windowManager.hyprland = {

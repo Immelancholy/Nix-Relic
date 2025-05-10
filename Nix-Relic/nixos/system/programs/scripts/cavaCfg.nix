@@ -1,5 +1,4 @@
 {
-  lib,
   pkgs,
   config,
   ...
@@ -69,15 +68,11 @@ in {
   ];
   systemd.user.services."cavaCfg" = {
     enable = true;
-    name = "cavaCfg";
-    after = ["pipewire.service"];
+    name = "Cava Cfg";
     wantedBy = ["default.target"];
     path = [
-      "${cavaCfg}"
+      "/run/current-system/sw"
     ];
     script = ''cavaCfg'';
-    environment = {
-      FRAMERATE = config.environment.sessionVariables.FRAMERATE;
-    };
   };
 }

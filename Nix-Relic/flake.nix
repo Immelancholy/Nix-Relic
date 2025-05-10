@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     # nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
+    nix-relic-modules.url = "github:Immelancholy/Nix-Relic-Modules";
     artis = {
       url = "github:Immelancholy/artis";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -129,20 +130,14 @@
     ];
     forAllSystems = nixpkgs.lib.genAttrs systems;
     system = forAllSystems (system: system);
-    globalHomeImports = [
-      inputs.catppuccin.homeModules.catppuccin
-      inputs.nixvim.homeManagerModules.nixvim
-      inputs.spicetify-nix.homeManagerModules.default
-      inputs.nix-flatpak.homeManagerModules.nix-flatpak
-      inputs.artis.homeManagerModules.default
-    ];
   in {
     formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
     nixosConfigurations = {
       nix-relic = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = {inherit inputs nixpkgs globalHomeImports;};
+        specialArgs = {inherit inputs nixpkgs;};
         modules = [
+          inputs.nix-relic-modules.nixosModules.default
           stylix.nixosModules.stylix
           nur.modules.nixos.default
           lanzaboote.nixosModules.lanzaboote
@@ -150,7 +145,6 @@
           solaar.nixosModules.default
           catppuccin.nixosModules.catppuccin
           ./nixos/system
-          ./modules/system
           ./configuration.nix
           ./hardware-configuration.nix
 
@@ -161,13 +155,13 @@
               useUserPackages = true;
               extraSpecialArgs = {inherit inputs;};
               sharedModules = [
+                inputs.nix-relic-modules.homeManagerModules.default
                 inputs.catppuccin.homeModules.catppuccin
                 inputs.nixvim.homeManagerModules.nixvim
                 inputs.spicetify-nix.homeManagerModules.default
                 inputs.nix-flatpak.homeManagerModules.nix-flatpak
                 inputs.artis.homeManagerModules.default
                 ./nixos/home
-                ./modules/home
               ];
             };
           }

@@ -2,7 +2,9 @@
   pkgs,
   inputs,
   ...
-}: {
+}: let
+  nrm = inputs.nix-relic-modules.packages.${pkgs.system};
+in {
   imports = [
     ./hyprland.nix
     ./pipewire.nix
@@ -81,7 +83,21 @@
     wl-clipboard
     sbctl
     inputs.yazi.packages.${pkgs.system}.default
-    # inputs.artis.packages.${pkgs.system}.default
+    nrm.brightness
+    nrm.btop
+    nrm.cava
+    nrm.checkshell
+    nrm.cliphist
+    nrm.colortrans
+    nrm.mpdchck
+    nrm.neo
+    nrm.rofi-power-menu
+    nrm.ss
+    nrm.tmux_dev
+    nrm.tmux_nix
+    nrm.tmux_notes
+    nrm.toggle-mute
+    nrm.waycava
     qpwgraph
     pavucontrol
     pulsemixer
