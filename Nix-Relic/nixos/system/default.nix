@@ -1,6 +1,7 @@
 {
   pkgs,
-  nixpkgs,
+  outputs,
+  inputs,
   lib,
   config,
   ...
@@ -12,6 +13,38 @@
     ./extracache.nix
     ./env.nix
   ];
+
+  nixpkgs = {
+    overlays = [
+      outputs.overlays.stable-packages
+    ];
+
+    config = {
+      allowUnfree = true;
+    };
+  };
+
+  nix = let
+    flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
+  in {
+    settings = {
+      experimental-features = ["nix-command" "flakes"];
+
+      flake-registry = "";
+
+      auto-optimise-store = true;
+    };
+    gc = {
+      automatic = true;
+      dates = "daily";
+      options = "--delete-older-than 1d";
+    };
+    channel.enable = false;
+
+    registry = lib.mapAttrs (_: flake: {inherit flake;}) flakeInputs;
+    nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
+  };
+
   programs.seahorse.enable = true;
   security.pam.services.login.enableGnomeKeyring = true;
   services.seatd.enable = true;
@@ -40,15 +73,8 @@
     };
   };
 
-  nix.registry.nixpkgs.flake = nixpkgs;
-  nix.channel.enable = false;
-
-  environment.etc."nix/inputs/nixpkgs".source = "${nixpkgs}";
-  nix.settings.nix-path = lib.mkForce "nixpkgs=/etc/nix/inputs/nixpkgs";
-
   environment.pathsToLink = ["/share/zsh"];
 
-  nixpkgs.config.allowUnfree = true;
   environment = {
     shells = with pkgs; [
       zsh
@@ -77,10 +103,6 @@
   };
   networking.networkmanager.enable = true;
 
-  nix.settings = {
-    experimental-features = ["nix-command" "flakes"];
-  };
-
   users.defaultUserShell = pkgs.zsh;
 
   xdg.portal = {
@@ -89,13 +111,6 @@
       xdg-desktop-portal-gtk
     ];
   };
-
-  nix.gc = {
-    automatic = true;
-    dates = "daily";
-    options = "--delete-older-than 1d";
-  };
-  nix.settings.auto-optimise-store = true;
   # ...
   system.stateVersion = "25.05";
 }

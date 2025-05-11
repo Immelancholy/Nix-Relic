@@ -115,18 +115,12 @@
 
   outputs = {
     self,
+    nix-relic-modules,
     nixpkgs,
-    catppuccin,
     home-manager,
-    rust-overlay,
-    solaar,
-    nix-flatpak,
-    lanzaboote,
-    nur,
-    stylix,
-    disko,
     ...
   } @ inputs: let
+    inherit (self) outputs;
     systems = [
       "aarch64-linux"
       "x86_64-linux"
@@ -134,17 +128,19 @@
     forAllSystems = nixpkgs.lib.genAttrs systems;
   in {
     formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
+
+    overlays = import ./overlays {inherit inputs;};
+
     nixosConfigurations = {
       nix-relic = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs nixpkgs;};
+        specialArgs = {inherit inputs outputs;};
         modules = [
-          inputs.nix-relic-modules.nixosModules.default
-          stylix.nixosModules.stylix
-          nur.modules.nixos.default
-          lanzaboote.nixosModules.lanzaboote
-          nix-flatpak.nixosModules.nix-flatpak
-          solaar.nixosModules.default
-          catppuccin.nixosModules.catppuccin
+          nix-relic-modules.nixosModules.default
+          inputs.stylix.nixosModules.stylix
+          inputs.nur.modules.nixos.default
+          inputs.lanzaboote.nixosModules.lanzaboote
+          inputs.solaar.nixosModules.default
+          inputs.catppuccin.nixosModules.catppuccin
           ./nixos/system
           ./configuration.nix
           ./hardware-configuration.nix
@@ -156,11 +152,10 @@
               useUserPackages = true;
               extraSpecialArgs = {inherit inputs;};
               sharedModules = [
-                inputs.nix-relic-modules.homeManagerModules.default
+                nix-relic-modules.homeManagerModules.default
                 inputs.catppuccin.homeModules.catppuccin
                 inputs.nixvim.homeManagerModules.nixvim
                 inputs.spicetify-nix.homeManagerModules.default
-                inputs.nix-flatpak.homeManagerModules.nix-flatpak
                 inputs.artis.homeManagerModules.default
                 ./nixos/home
               ];
