@@ -891,11 +891,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1745993315,
-        "narHash": "sha256-VfpLQYa5QBMJoAg4BwIt5QHSRy3KdUc+uIxRy5oMn6I=",
+        "lastModified": 1747006169,
+        "narHash": "sha256-b91iVsAgT0kfiTAGTBg+C9FLRYhi8nlddI4wHyVuTBA=",
         "owner": "outfoxxed",
         "repo": "hy3",
-        "rev": "74a17a83c97cf332501c7f2be64381ddb9a1c679",
+        "rev": "f74302dd00fbbd006ecda8acced222c6c5d0f72f",
         "type": "github"
       },
       "original": {
