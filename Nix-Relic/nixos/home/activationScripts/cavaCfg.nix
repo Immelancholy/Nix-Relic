@@ -5,8 +5,7 @@
   inputs,
   ...
 }: let
-  nrm = inputs.nix-relic-modules.packages.${pkgs.system};
-  cavaCfg = nrm.cavaCfg.override {
+  cavaCfg = pkgs.nrm.cavaCfg.override {
     color1 = "#${config.lib.stylix.colors.base0E}";
     color2 = "#${config.lib.stylix.colors.base0D}";
     color3 = "#${config.lib.stylix.colors.base0C}";

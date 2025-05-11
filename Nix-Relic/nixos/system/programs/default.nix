@@ -3,9 +3,7 @@
   inputs,
   config,
   ...
-}: let
-  nrm = inputs.nix-relic-modules.packages.${pkgs.system};
-in {
+}: {
   imports = [
     ./hyprland.nix
     ./pipewire.nix
