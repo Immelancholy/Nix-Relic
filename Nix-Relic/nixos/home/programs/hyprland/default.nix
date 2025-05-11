@@ -13,7 +13,7 @@ in {
       enable = true;
       package = null;
       portalPackage = null;
-      usingFlake = false;
+      usingFlake = true;
       xwayland.enable = false;
       systemd = {
         # disable the systemd integration, as it conflicts with uwsm.
