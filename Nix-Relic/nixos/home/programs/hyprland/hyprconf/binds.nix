@@ -22,7 +22,7 @@
         "$mod, 0, workspace, 10"
         "Ctrl+Alt, L, exec, uwsm-app -- swaylock -fF"
         ''$mod, V, exec, $term --class "NixDots" uwsm app -- tnix''
-        "$mod, N, exec, rofi -show Clipboard -modi Clipboard:cliphist.sh"
+        "$mod, N, exec, rofi -show Cliphist -modi Cliphist:cliphist.sh"
         "$mod, M, exec, hyprgame"
         "$mod, L, workspace, r+1"
         "$mod, H, workspace, r-1"
