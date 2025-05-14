@@ -18,6 +18,9 @@
         enable = true;
         autoActivate = true;
       };
+      better-escape = {
+        enable = true;
+      };
       aerial = {
         enable = true;
         settings = {
