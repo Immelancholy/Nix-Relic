@@ -47,6 +47,8 @@
       bash
       */
       ''
+        bindkey -e
+
         last_repo=
         INIT=1
         onefetch_img () {
