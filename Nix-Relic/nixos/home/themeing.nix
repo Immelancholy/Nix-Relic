@@ -34,7 +34,7 @@
     x11.enable = true;
     hyprcursor = {
       enable = true;
-      size = 22;
+      size = config.stylix.cursor.size;
     };
   };
 
