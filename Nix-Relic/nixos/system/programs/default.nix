@@ -241,8 +241,6 @@
   };
   virtualisation.waydroid.enable = true;
 
-  services.mullvad-vpn.enable = true;
-  services.mullvad-vpn.package = pkgs.mullvad-vpn;
   programs.gamescope = {
     enable = true;
     capSysNice = true;
