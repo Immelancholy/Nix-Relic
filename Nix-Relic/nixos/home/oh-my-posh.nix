@@ -35,13 +35,18 @@ in {
             "white": "#FFFFFF",
             "black": "#0C212F",
             "tan": "${teal}",
-            "teal": "${surface2}",
+            "teal": "${surface1}",
             "plum": "${mantle}",
             "blush": "${mauve}",
             "salmon": "${peach}",
-            "sky": "${surface1}",
+            "sky": "${surface2}",
             "teal_blue": "${flamingo}",
             "behind": "#ef9f76"
+          },
+          "secondary_prompt": {
+            "background": "transparent",
+            "foreground": "p:blush",
+            "template": "\udb80\udd42 "
           },
           "transient_prompt": {
             "background": "transparent",
@@ -49,36 +54,6 @@ in {
             "template": "\udb80\udd42 "
           },
           "blocks": [
-            {
-              "alignment": "left",
-              "segments": [
-                {
-                  "type": "text",
-                  "style": "diamond",
-                  "leading_diamond": "\ue0b6",
-                  "foreground": "p:white",
-                  "background": "p:tan",
-                  "template": "{{ if .Env.PNPPSHOST }} \uf8c5 {{ .Env.PNPPSHOST }} {{ end }}"
-                },
-                {
-                  "type": "text",
-                  "style": "powerline",
-                  "foreground": "p:white",
-                  "background": "p:teal",
-                  "powerline_symbol": "\ue0b0",
-                  "template": "{{ if .Env.PNPPSSITE }} \uf2dd {{ .Env.PNPPSSITE }}{{ end }}"
-                },
-                {
-                  "type": "text",
-                  "style": "diamond",
-                  "trailing_diamond": "\ue0b4",
-                  "foreground": "p:white",
-                  "background": "p:teal",
-                  "template": "{{ if .Env.PNPPSSITE }}\u00A0{{ end }}"
-                }
-              ],
-              "type": "rprompt"
-            },
             {
               "alignment": "left",
               "segments": [
@@ -96,7 +71,7 @@ in {
                   "foreground": "p:white",
                   "powerline_symbol": "\ue0b0",
                   "style": "diamond",
-                  "template": " {{ .UserName }} ",
+                  "template": " {{ if .SSHSession }}\ueba9 {{ end }}{{ .UserName }}@{{ .HostName }} ",
                   "type": "session"
                 },
                 {
@@ -127,7 +102,7 @@ in {
                     "fetch_upstream_icon": true
                   },
                   "style": "powerline",
-                  "template": " <b>~></b> {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
+                  "template": " <b>~></b> {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Staging.Changed }} \uf4a7 {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
                   "type": "git"
                 },
                 {
