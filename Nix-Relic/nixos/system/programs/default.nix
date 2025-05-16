@@ -26,6 +26,7 @@
 
   services.gvfs.enable = true; # Mount, trash, and other functionalities
   services.tumbler.enable = true; # Thumbnail support for images
+  services.gnome.gnome-keyring.enable = true;
 
   programs.dconf.enable = true;
 
@@ -34,14 +35,17 @@
     enableUdevRules = true;
   };
 
+  security.wrappers.write = {
+    group = "tty";
+    owner = "root";
+    setgid = true;
+    source = "${pkgs.util-linux}/bin/write";
+  };
+
   programs.zsh.enable = true;
   services.dbus = {
     enable = true;
     implementation = "broker";
-    packages = with pkgs; [
-      libsecret
-      gcr_4
-    ];
   };
   systemd.user.services.hyprsunset = {
     enable = true;
@@ -157,7 +161,6 @@
     xz
     unzip
     p7zip
-    ventoy
     # utils
     ripgrep # recursively searches directories for a regex pattern
     jq # A lightweight and flexible command-line JSON processor
@@ -230,8 +233,8 @@
   ];
   programs.ssh = {
     startAgent = false;
-    enableAskPassword = true;
-    askPassword = "${pkgs.seahorse}/libexec/seahorse/ssh-askpass";
+    # enableAskPassword = true;
+    # askPassword = "${pkgs.seahorse}/libexec/seahorse/ssh-askpass";
   };
   environment.variables.SSH_ASKPASS_REQUIRE = "prefer";
 
