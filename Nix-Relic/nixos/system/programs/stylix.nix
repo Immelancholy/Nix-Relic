@@ -6,6 +6,7 @@
     };
     enable = true;
     autoEnable = true;
+    # targets.console.enable = false;
     cursor = {
       package = pkgs.bibata-cursors;
       name = "Bibata-Modern-Ice";

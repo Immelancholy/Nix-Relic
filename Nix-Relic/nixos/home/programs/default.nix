@@ -22,6 +22,7 @@
     ./swaylock.nix
     ./udiskie.nix
     ./mpv.nix
+    ./zathura.nix
   ];
 
   programs.zen = {
