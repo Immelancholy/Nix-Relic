@@ -232,7 +232,7 @@
     wordnet
   ];
   programs.ssh = {
-    startAgent = false;
+    startAgent = true;
     # enableAskPassword = true;
     # askPassword = "${pkgs.seahorse}/libexec/seahorse/ssh-askpass";
   };
