@@ -38,7 +38,7 @@
         ", XF86Calculator, exec, uwsm-app -- qalculate-gtk"
         "$mod, X, togglespecialworkspace"
         ", Print, exec, uwsm-app -- ss.sh -o"
-        "Ctrl, Print, exec, uwsm-app -- ss.sh -af"
+        "Ctrl, Print, exec, uwsm-app -- ss.sh -f"
         "Ctrl+Shift, Print, exec, uwsm-app -- ss.sh -w"
         "$mod, O, exec, uwsm-app -- hyprpicker -a"
       ]
