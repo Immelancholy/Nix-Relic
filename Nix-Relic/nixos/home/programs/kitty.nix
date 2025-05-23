@@ -23,10 +23,10 @@ in {
       cursor_blink_interval 0.5 ease-in-out
     '';
   };
-  xdg.configFile."kitty/mpd.session".text = ''
-    layout splits
-    launch --title "inori" inori
-    launch --location=vsplit --title "artis" artis
-    resize_window short 8
-  '';
+  # xdg.configFile."kitty/mpd.session".text = ''
+  #   layout splits
+  #   launch --title "inori" inori
+  #   launch --location=vsplit --title "artis" artis
+  #   resize_window short 8
+  # '';
 }
