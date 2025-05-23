@@ -61,14 +61,16 @@
         }
         tmux_fetch () {
           image=$(find $HOME/Pictures/fastfetch_logos/ -name "*.jpg" -o -name "*.png" | shuf -n 1)
-          chafa -f kitty -s 23x18 "$image" --align=top,left | fastfetch --raw - --logo-width 23 --logo-height 18
+          chafa -f kitty "$image" --align left -s 23x18 | fastfetch --raw -
         }
 
         check_tmux () {
           if [ -z $TMUX ]; then
             fetch_cmd=onefetch_img
+            alias fastfetch="fastfetch"
           else
             fetch_cmd=tmux_fetch
+            alias fastfetch="tmux_fetch"
           fi
         }
         check_tmux
@@ -155,7 +157,7 @@
 
         if [ "$class" = "fastfetch" ];
         then
-          fastfetch --logo "$HOME"/Pictures/fastfetch_logos/Nakari.jpg
+          fastfetch --logo "$HOME"/Pictures/fastfetch_logos/Nakari.jpg --logo-padding-top 1
         else
           check_for_repo
         fi
