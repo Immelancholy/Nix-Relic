@@ -2,7 +2,7 @@
   user = config.home.username;
 in {
   programs.kitty = {
-    enable = true;
+    enable = false;
     shellIntegration.enableZshIntegration = true;
     settings = {
       window_padding_width = 5;
