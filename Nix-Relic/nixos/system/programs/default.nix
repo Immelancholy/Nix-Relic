@@ -17,7 +17,7 @@
     enable = true;
     settings = {
       default = [
-        "kitty.desktop"
+        "com.mitchellh.ghostty.desktop"
       ];
     };
   };
@@ -114,6 +114,7 @@
     nrm.tmux_dev
     nrm.tmux_nix
     nrm.tmux_notes
+    nrm.tmux_music
     nrm.toggle-mute
     nrm.waycava
     qpwgraph

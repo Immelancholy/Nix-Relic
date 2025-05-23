@@ -24,6 +24,7 @@
         transparentBackground = {
           main = true;
           signColumn = true;
+          numberLine = true;
         };
       };
       cava.rainbow.enable = true;

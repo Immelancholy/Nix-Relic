@@ -51,7 +51,7 @@
       cursor-size = config.stylix.cursor.size;
     };
     "org/cinnamon/desktop/applications/terminal" = {
-      exec = "kitty";
+      exec = "ghostty";
       # exec-arg = ""; # argument
     };
     "org/nemo/preferences" = {

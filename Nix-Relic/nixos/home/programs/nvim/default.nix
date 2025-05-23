@@ -14,6 +14,9 @@
     withPython3 = true;
     luaLoader.enable = true;
     plugins = {
+      transparent = {
+        enable = true;
+      };
       otter = {
         enable = true;
         autoActivate = true;
@@ -426,34 +429,33 @@
       bufdelete.enable = true;
       treesitter = {
         enable = true;
-        nixGrammars = true;
-        grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
-          bash
-          json
-          lua
-          make
-          markdown
-          markdown_inline
-          nix
-          regex
-          toml
-          vim
-          vimdoc
-          xml
-          yaml
-          css
-          norg
-          html
-          rust
-          yuck
-          latex
-          javascript
-          scss
-          svelte
-          tsx
-          typst
-          vue
-        ];
+        # grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+        #   bash
+        #   json
+        #   lua
+        #   make
+        #   markdown
+        #   markdown_inline
+        #   nix
+        #   regex
+        #   toml
+        #   vim
+        #   vimdoc
+        #   xml
+        #   yaml
+        #   css
+        #   norg
+        #   html
+        #   rust
+        #   yuck
+        #   latex
+        #   javascript
+        #   scss
+        #   svelte
+        #   tsx
+        #   typst
+        #   vue
+        # ];
         settings = {
           highlight = {
             enable = true;

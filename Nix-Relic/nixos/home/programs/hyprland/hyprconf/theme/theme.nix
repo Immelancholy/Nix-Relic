@@ -41,6 +41,7 @@
 
     layerrule = [
       "blur,waybar"
+      "blur, rofi"
     ];
 
     decoration = {

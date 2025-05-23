@@ -1,4 +1,4 @@
-{
+{config, ...}: {
   wayland.windowManager.hyprland.settings = {
     bindm = [
       "$mod, mouse:272, movewindow"
@@ -7,21 +7,21 @@
     bind =
       [
         "$mod, T, exec, $term"
-        ''$mods, T, exec, $term --class "tmux" tmux''
+        ''$mods, T, exec, $term --class=tmux.ghostty -e tmux''
         "$mod, F, exec, $browser"
         "$mod, E, exec, $files"
         "$mod, grave, exec, $menu"
         "$mod, C, exec, $edit"
         "Alt, Return, fullscreen"
         "Alt, Tab, exec, rofi -show window -modi window"
-        ''$mods, U, exec, [workspace 1 silent; float; size 858 462; move 640 609] $term --class "cava" cava.sh''
-        ''$mods, U, exec, [workspace 1 silent; float; size 620 637; move 10 433] $term --class "btop" btop.sh''
-        ''$mods, U, exec, [workspace 1 silent; float; size 402 1030; move 1508 42] $term --class "neo" neo.sh''
-        ''$mods, U, exec, [workspace 1 silent; float; size 620 383; move 10 42] $term --class "fastfetch" kitty @ launch --type overlay --env class="fastfetch"''
+        ''$mods, U, exec, [workspace 1 silent; float; size 858 462; move 640 609] $term --window-padding-x=0 --window-padding-y=0 --font-size=4 --class=cava.ghostty.screen1 -e cava -p "$XDG_CONFIG_HOME"/cava/vcConfig''
+        ''$mods, U, exec, [workspace 1 silent; float; size 620 637; move 10 433] $term --font-size=9 --class=btop.ghostty.screen1 -e btop''
+        ''$mods, U, exec, [workspace 1 silent; float; size 402 1030; move 1508 42] $term --window-padding-x=0 --window-padding-y=0 --class=neo.ghostty.screen1 -e neo -a -S 20 -d 1 -f 144 -C "$XDG_CONFIG_HOME"/neo/colors -b 1 -m "Welcome, ''${USER^}." --lingerms=1,1 --rippct=0''
+        ''$mods, U, exec, [workspace 1 silent; float; size 620 383; move 10 42] env class="fastfetch" $term --class=fastfetch.ghostty.screen1''
         "$mod, Delete, exec, rofi -show power-menu -modi power-menu:rofi-power-menu"
         "$mod, 0, workspace, 10"
         "Ctrl+Alt, L, exec, uwsm-app -- swaylock -fF"
-        ''$mod, V, exec, $term --class "NixDots" uwsm app -- tnix''
+        ''$mod, V, exec, $term --class=NixOS.Conf -e tnix''
         "$mod, N, exec, rofi -show Cliphist -modi Cliphist:cliphist.sh"
         "$mod, M, exec, hyprgame"
         "$mod, L, workspace, r+1"
@@ -34,7 +34,7 @@
         "$mod, mouse_down, workspace, e-1"
         "$mods, mouse_up, workspace, r+1"
         "$mods, mouse_down, workspace, r-1"
-        ''Ctrl+Shift, Escape, exec, uwsm app -- $term --title "btop" btop''
+        ''Ctrl+Shift, Escape, exec, $term --class=btop.ghostty -e btop''
         ", XF86Calculator, exec, uwsm-app -- qalculate-gtk"
         "$mod, X, togglespecialworkspace"
         ", Print, exec, uwsm-app -- ss.sh -o"

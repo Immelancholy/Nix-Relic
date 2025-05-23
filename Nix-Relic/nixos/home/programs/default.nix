@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   home.shell = {
     enableZshIntegration = true;
   };
@@ -23,6 +23,7 @@
     ./udiskie.nix
     ./mpv.nix
     ./zathura.nix
+    ./ghostty.nix
   ];
 
   programs.zen = {
@@ -32,8 +33,12 @@
 
   programs.btop = {
     enable = true;
+    package = pkgs.btop.override {
+      cudaSupport = true;
+    };
     settings = {
       vim_keys = true;
+      theme_background = false;
     };
   };
 

@@ -7,7 +7,7 @@
   home.sessionVariables = {
     STEAM_EXTRA_COMPAT_TOOLS_PATHS = "$HOME/.steam/root/compatibilitytools.d";
     BROWSER = "zen";
-    TERMINAL = "${lib.getExe pkgs.kitty}";
+    TERMINAL = "${lib.getExe pkgs.ghostty}";
     XCURSOR_THEME = config.stylix.cursor.name;
     XCURSOR_SIZE = config.stylix.cursor.size;
     GRIMBLAST_EDITOR = "swappy";

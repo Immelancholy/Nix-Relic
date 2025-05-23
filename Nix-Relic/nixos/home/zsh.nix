@@ -59,36 +59,33 @@
             onefetch
           fi
         }
+        check_tmux () {
+          if [ -z $TMUX ]; then
+            fetch_cmd=onefetch_img
+          else
+            fetch_cmd=fastfetch
+          fi
+        }
+        check_tmux
         check_for_repo () {
           current_repo=$(git rev-parse --show-toplevel 2> /dev/null)
-          if [ "$TERM" = "screen-256color" ];
-          then
-            if [ $INIT = 1 ]; then
-              fortune | pokemonsay -p fennekin -N
-              INIT=0
-            else
-              return
-            fi
-          else
-
-            if [ "$current_repo" ] && \
-              [ "$current_repo" != "$last_repo" ]; then
-              clear
-              onefetch_img
-              last_repo=$current_repo
-              INIT=0
-              GIT=1
-            elif [ $INIT = 1 ]; then
-              fortune | pokemonsay -p fennekin -N
-              GIT=0
-              INIT=0
-            elif [ ! "$current_repo" ] && \
-              [ $GIT = 1 ]; then
-              clear
-              fortune | pokemonsay -p fennekin -N
-              GIT=0
-              last_repo=
-            fi
+          if [ "$current_repo" ] && \
+            [ "$current_repo" != "$last_repo" ]; then
+            clear
+            $fetch_cmd
+            last_repo=$current_repo
+            INIT=0
+            GIT=1
+          elif [ $INIT = 1 ]; then
+            fortune | pokemonsay -p fennekin -N
+            GIT=0
+            INIT=0
+          elif [ ! "$current_repo" ] && \
+            [ $GIT = 1 ]; then
+            clear
+            fortune | pokemonsay -p fennekin -N
+            GIT=0
+            last_repo=
           fi
         }
 
@@ -110,11 +107,7 @@
         switch () {
           builtin cd "$FLAKE_PATH" || return
           clear
-          if [ "$TERM" = "screen-256color" ]; then
-            fastfetch
-          else
-            onefetch_img
-          fi
+          $fetch_cmd
           git add .
           git commit -m "switch"
           sudo nixos-rebuild switch --flake .
@@ -126,11 +119,7 @@
         boot () {
           builtin cd "$FLAKE_PATH" || return
           clear
-          if [ "$TERM" = "screen-256color" ]; then
-            fastfetch
-          else
-            onefetch_img
-          fi
+          $fetch_cmd
           git add .
           git commit -m "switch"
           sudo nixos-rebuild boot --flake .
@@ -142,11 +131,7 @@
         update () {
           builtin cd "$FLAKE_PATH" || return
           clear
-          if [ "$TERM" = "screen-256color" ]; then
-            fastfetch
-          else
-            onefetch_img
-          fi
+          $fetch_cmd
           nix flake update --flake . --commit-lock-file
           builtin cd - || return
         }
