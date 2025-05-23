@@ -108,8 +108,8 @@
       ''move 1015 188,title:^(cava)$''
       ''nodim, title:^(cava)$''
 
-      ''float,title:^(btop)$''
-      ''size 960 675,title:^(btop)$''
+      ''float,class:^(btop.ghostty)$''
+      ''size 960 675,class:^(btop.ghostty)$''
 
       ''size 437 306, title:^(Qalculate!)$''
       ''float, title:^(Qalculate!)$''
