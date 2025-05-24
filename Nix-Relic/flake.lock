@@ -84,11 +84,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1748087010,
-        "narHash": "sha256-1i8dURSfe/5Spt19HYHRCca2kJh51FwHxxqOWZVtODM=",
+        "lastModified": 1748102868,
+        "narHash": "sha256-EQO60iyMnss6c793vQ5V9Wxq0n6sF/7u6r1IzwLC06o=",
         "owner": "Immelancholy",
         "repo": "artis",
-        "rev": "dd39571b031b8b44cc22d9df81ff2aeac556e39f",
+        "rev": "6bd246dce3d98b1fa5437ddb617d69479cb082ab",
         "type": "github"
       },
       "original": {
@@ -1361,11 +1361,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1748085352,
-        "narHash": "sha256-wg38DOOZlDsdEZy/tJtHbsPs9xgm1t95u31j6R3ckX4=",
+        "lastModified": 1748102134,
+        "narHash": "sha256-ED/9du7+Kk2QjKB+/EHPSg/JLPnP8RsaMIFCeOufZgg=",
         "owner": "Immelancholy",
         "repo": "Nix-Relic-Modules",
-        "rev": "ab92ddbe36f2e7cae7301a7d9d6e3c053dbf26b7",
+        "rev": "4ecfff4eb25f65e7893bfac66090479c78c4e2a1",
         "type": "github"
       },
       "original": {
