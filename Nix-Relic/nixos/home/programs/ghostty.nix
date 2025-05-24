@@ -18,6 +18,7 @@
       desktop-notifications = true;
       window-padding-color = "background";
       title = "ghostty";
+      alpha-blending = "linear-corrected";
     };
   };
 }

@@ -7,7 +7,7 @@
     bind =
       [
         "$mod, T, exec, $term"
-        ''$mods, T, exec, $term --class=tmux.ghostty -e tmux''
+        ''$mod+Alt, T, exec, $term --class=tmux.ghostty -e tmux''
         "$mod, F, exec, $browser"
         "$mod, E, exec, $files"
         "$mod, grave, exec, $menu"
