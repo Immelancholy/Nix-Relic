@@ -12,7 +12,6 @@
     ./nvim
     ./easyeffects
     ./tmux.nix
-    ./kitty.nix
     ./spicetify.nix
     ./swayidle.nix
     ./obs.nix

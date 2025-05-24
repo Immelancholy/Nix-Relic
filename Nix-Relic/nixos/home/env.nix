@@ -1,13 +1,13 @@
 {
   pkgs,
-  lib,
+  inputs,
   config,
   ...
 }: {
   home.sessionVariables = {
     STEAM_EXTRA_COMPAT_TOOLS_PATHS = "$HOME/.steam/root/compatibilitytools.d";
     BROWSER = "zen";
-    TERMINAL = "${lib.getExe pkgs.ghostty}";
+    TERMINAL = "${inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default}/bin/ghostty";
     XCURSOR_THEME = config.stylix.cursor.name;
     XCURSOR_SIZE = config.stylix.cursor.size;
     GRIMBLAST_EDITOR = "swappy";

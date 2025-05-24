@@ -35,8 +35,6 @@
       set -g update-environment 'KITTY_LISTEN_ON'
 
       bind-key r confirm-before -p "kill-session? (y/n)" kill-session
-      bind-key d split-window -v
-      bind-key r split-window -h
     '';
   };
 }

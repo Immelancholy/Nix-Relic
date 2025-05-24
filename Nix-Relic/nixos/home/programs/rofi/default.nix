@@ -1,9 +1,13 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   programs.rofi = {
     enable = true;
     font = "JetBrainsMono Nerd Font Mono 12";
     package = pkgs.rofi-wayland;
-    terminal = "${pkgs.kitty}/bin/kitty";
+    terminal = config.home.sessionVariables.TERMINAL;
     extraConfig = {
       # hover-select = true;
       # me-select-entry = "";
