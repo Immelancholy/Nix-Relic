@@ -87,8 +87,6 @@
     sbctl
     inputs.yazi.packages.${pkgs.system}.default
     nrm.brightness
-    nrm.btop
-    nrm.cava
     (nrm.cavaCfg.override {
       color1 = "#${config.lib.stylix.colors.base0E}";
       color2 = "#${config.lib.stylix.colors.base0D}";
