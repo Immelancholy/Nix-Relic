@@ -15,10 +15,10 @@
       window-padding-x = 5;
       window-padding-y = 5;
       background-opacity = 0.8;
-      desktop-notifications = true;
       window-padding-color = "background";
       title = "ghostty";
       alpha-blending = "linear-corrected";
+      bold-is-bright = true;
     };
   };
 }

@@ -74,6 +74,16 @@
     mpc
     ffmpegthumbnailer
     libcamera
+    (nrm.systemd-restarts.override {
+      restarts = ''
+        systemctl restart --user xdg-desktop-portal
+          systemctl restart --user dunst
+          systemctl restart --user nm-applet
+          sleep 10
+          systemctl restart --user remmina
+          exit
+      '';
+    })
     (ffmpeg-full.override {
       withUnfree = true;
       withOpengl = true;
