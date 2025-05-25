@@ -2,6 +2,7 @@
   wayland.windowManager.hyprland.settings = {
     exec-once = [
       # "hyprctl setcursor ${config.stylix.cursor.name} ${builtins.toString config.stylix.cursor.size}"
+      "systemctl restart --user xdg-desktop-portal"
       "systemctl restart --user nm-applet"
       "sleep 10; systemctl restart --user remmina"
       ''[workspace 1 silent; float; size 858 462; move 640 609] $term --window-padding-x=0 --window-padding-y=0 --font-size=4 --class=cava.ghostty.screen1 -e cava -p "$XDG_CONFIG_HOME"/cava/vcConfig''
