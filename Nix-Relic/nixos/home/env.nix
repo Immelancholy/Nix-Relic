@@ -7,7 +7,6 @@
 }: {
   home.sessionVariables = {
     STEAM_EXTRA_COMPAT_TOOLS_PATHS = "$HOME/.steam/root/compatibilitytools.d";
-    BROWSER = "zen";
     TERMINAL = "${lib.getExe inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default}";
     # TERMINAL = "${lib.getExe pkgs.ghostty}";
     XCURSOR_THEME = config.stylix.cursor.name;
