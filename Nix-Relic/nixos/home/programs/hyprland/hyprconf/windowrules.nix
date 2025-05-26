@@ -8,7 +8,7 @@
       ''opacity 1.0 0.90,class:^(fastfetch)$''
       ''opacity 1.0 0.90,class:^(kitty)$''
       ''opacity 1.0 0.90,title:^(ghostty)$''
-      ''opacity 1.0 0.90,class:^(zen)$''
+      ''opacity 1.0 0.70,class:^(zen)$''
       ''opacity 0.80 0.70,class:^(gcr-prompter)$''
       ''opacity 0.80 0.70,class:^(org.gnome.seahorse.Application)$''
       ''opacity 0.80 0.70,class:^(org.prismlauncher.PrismLauncher)$''
