@@ -10,6 +10,7 @@
     };
     ghostty = {
       url = "github:ghostty-org/ghostty";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     artis = {
       url = "github:Immelancholy/artis";
