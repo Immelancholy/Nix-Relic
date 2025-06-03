@@ -3,7 +3,7 @@
   description = "My NixOS and Hom Manager config.";
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    # nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
     nix-relic-modules = {
       url = "github:Immelancholy/Nix-Relic-Modules";
       inputs.nixpkgs.follows = "nixpkgs";
