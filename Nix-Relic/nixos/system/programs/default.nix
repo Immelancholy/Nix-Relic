@@ -81,6 +81,7 @@
           systemctl restart --user nm-applet
           sleep 10
           systemctl restart --user remmina
+          systemctl restart --user solaar
           exit
       '';
     })
