@@ -3,6 +3,7 @@
   # For more on rec expressions see https://nix.dev/tutorials/first-steps/nix-language#recursive-attribute-set-rec
   environment.sessionVariables = rec {
     # Not officially in the specification
+    XDG_SCREENSHOTS_DIR = "$HOME/Pictures/Screenshots";
     XDG_BIN_HOME = "$HOME/.local/bin";
     PATH = [
       "${XDG_BIN_HOME}"
