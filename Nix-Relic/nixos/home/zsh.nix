@@ -61,7 +61,7 @@
         }
         tmux_fetch () {
           image=$(find $HOME/Pictures/fastfetch_logos/ -name "*.jpg" -o -name "*.png" | shuf -n 1)
-          chafa -f kitty "$image" --align left -s 23x18 | fastfetch --raw -
+          chafa --passthrough tmux -f kitty "$image" --align left -s 23x18 | fastfetch --raw -
         }
 
         check_tmux () {
