@@ -92,7 +92,6 @@
     })
     libsForQt5.qt5.qtwayland
     kdePackages.qtwayland
-    inputs.swww.packages.${pkgs.system}.swww
     libnotify
     wl-clipboard
     sbctl
