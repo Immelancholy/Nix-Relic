@@ -116,7 +116,7 @@
           clear
           $fetch_cmd
           git add .
-          nixos-rebuild switch --flake . --use-remote-sudo --target-host "$@"
+          nixos-rebuild switch --flake . --sudo --target-host "$@"
           git add .
           builtin cd - || return
         }
@@ -126,7 +126,7 @@
           clear
           $fetch_cmd
           git add .
-          nixos-rebuild boot --flake . --use-remote-sudo --target-host "$@"
+          nixos-rebuild boot --flake . --sudo --target-host "$@"
           git add .
           builtin cd - || return
         }

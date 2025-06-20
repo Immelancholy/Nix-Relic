@@ -76,9 +76,7 @@
     libcamera
     (nrm.systemd-restarts.override {
       restarts = ''
-        systemctl restart --user xdg-desktop-portal
-          systemctl restart --user dunst
-          systemctl restart --user nm-applet
+        systemctl restart --user nm-applet
           sleep 10
           systemctl restart --user remmina
           systemctl restart --user solaar
@@ -138,8 +136,6 @@
     dxvk_2
     nv-codec-headers-12
     w3m-full
-    libsecret
-    gcr_4
     gcc
     sqlite
     lua53Packages.sqlite

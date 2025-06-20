@@ -15,7 +15,7 @@
   '';
   environment.extraInit = ''
     if [ -z "$SSH_AUTH_SOCK" -a -n "$XDG_RUNTIME_DIR" ]; then
-      export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/keyring/ssh"
+      export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/gcr/ssh"
     fi
   '';
 }
