@@ -5,6 +5,12 @@ in {
     enable = true;
     shellIntegration.enableZshIntegration = true;
     settings = {
+      # bold_font = "CaskaydiaCoveNFM-SemiBold";
+      # italic_font = "CaskaydiaCoveNFM-Italic";
+      # bold_italic_font = "CaskaydiaCoveNFM-SemiBoldItalic";
+      bold_font = "auto";
+      italic_font = "auto";
+      bold_italic_font = "auto";
       window_padding_width = 5;
       allow_remote_control = true;
       listen_on = "unix:/tmp/mykitty-${user}";
