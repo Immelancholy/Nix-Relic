@@ -22,7 +22,7 @@
     ./udiskie.nix
     ./mpv.nix
     ./zathura.nix
-    ./ghostty.nix
+    ./kitty.nix
   ];
 
   programs.zen = {

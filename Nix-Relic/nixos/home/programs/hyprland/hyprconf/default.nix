@@ -19,7 +19,7 @@ in {
     sourceFirst = true;
     settings = {
       "$scr" = "$XDG_BIN_HOME";
-      "$term" = "uwsm app -- ghostty";
+      "$term" = "uwsm app -- kitty";
       "$files" = "uwsm app -- nemo.desktop";
       "$filest" = "uwsm app -- yazi.desktop";
       "$mod" = "SUPER";

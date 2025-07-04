@@ -18,7 +18,7 @@
       ll = "eza -l";
       ls = "eza";
       edit = "sudo -e";
-      ca = "cava.sh";
+      cava = "cava.sh";
       firmware = "sudo systemctl reboot --firmware-setup";
       gc = "nix-collect-garbage -d && sudo nix-collect-garbage -d";
     };
@@ -59,18 +59,11 @@
             onefetch
           fi
         }
-        tmux_fetch () {
-          image=$(find $HOME/Pictures/fastfetch_logos/ -name "*.jpg" -o -name "*.png" | shuf -n 1)
-          chafa --passthrough tmux -f kitty "$image" --align left -s 23x18 | fastfetch --raw -
-        }
-
         check_tmux () {
           if [ -z $TMUX ]; then
             fetch_cmd=onefetch_img
-            alias fastfetch="fastfetch"
           else
-            fetch_cmd=tmux_fetch
-            alias fastfetch="tmux_fetch"
+            fetch_cmd=fastfetch
           fi
         }
         check_tmux
@@ -173,7 +166,7 @@
 
         if [ "$class" = "fastfetch" ];
         then
-          fastfetch --logo "$HOME"/Pictures/fastfetch_logos/Nakari.jpg --logo-padding-top 1
+          fastfetch --logo "$HOME"/Pictures/fastfetch_logos/Nakari.jpg
         else
           check_for_repo
         fi

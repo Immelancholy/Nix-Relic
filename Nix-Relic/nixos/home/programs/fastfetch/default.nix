@@ -3,15 +3,10 @@
     enable = true;
     settings = {
       logo = {
-        type = "kitty";
+        type = "kitty-icat";
         source = ''$(find $HOME/Pictures/fastfetch_logos/ -name "*.jpg" -o -name "*.png" | shuf -n 1)'';
         width = 23;
-        height = 18;
-        padding = {
-          top = 0;
-          left = 0;
-          right = 1;
-        };
+        # height = 18;
       };
       display = {
         separator = " : ";

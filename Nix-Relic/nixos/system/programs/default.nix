@@ -17,7 +17,7 @@
     enable = true;
     settings = {
       default = [
-        "com.mitchellh.ghostty.desktop"
+        "kitty.desktop"
       ];
     };
   };
@@ -116,6 +116,8 @@
       color4 = "${config.lib.stylix.colors.base0C}";
       color5 = "${config.lib.stylix.colors.base05}";
     })
+    nrm.btop
+    nrm.cava
     nrm.neo
     nrm.rofi-power-menu
     nrm.ss
