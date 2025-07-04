@@ -66,6 +66,7 @@
     wantedBy = ["graphical-session.target"];
   };
   environment.systemPackages = with pkgs; [
+    nix-output-monitor
     chafa
     onefetch
     neo

@@ -116,7 +116,7 @@
           clear
           $fetch_cmd
           git add .
-          nixos-rebuild switch --flake . --sudo --ask-sudo-password --target-host "$@"
+          nixos-rebuild switch --flake . --sudo --ask-sudo-password --target-host "$@" |& nom
           git add .
           builtin cd - || return
         }
@@ -126,7 +126,7 @@
           clear
           $fetch_cmd
           git add .
-          nixos-rebuild boot --flake . --sudo --ask-sudo-password --target-host "$@"
+          nixos-rebuild boot --flake . --sudo --ask-sudo-password --target-host "$@" |& nom
           git add .
           builtin cd - || return
         }
@@ -136,7 +136,7 @@
           clear
           $fetch_cmd
           git add .
-          sudo nixos-rebuild switch --flake .
+          sudo nixos-rebuild switch --flake . |& nom
           git add .
           builtin cd - || return
         }
@@ -146,7 +146,7 @@
           clear
           $fetch_cmd
           git add .
-          sudo nixos-rebuild boot --flake .
+          sudo nixos-rebuild boot --flake . |& nom
           git add .
           builtin cd - || return
         }

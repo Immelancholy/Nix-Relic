@@ -137,6 +137,7 @@
       ''float,class:^(.blueman-manager-wrapped)$''
       ''opacity 0.90 0.80,class:^(solaar)$''
       ''float,class:^(solaar)$''
+      ''float,title:^(Select what to share)$''
     ];
     layerrule = [
       "blur,rofi"
