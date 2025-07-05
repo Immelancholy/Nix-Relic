@@ -77,13 +77,13 @@
             INIT=0
             GIT=1
           elif [ $INIT = 1 ]; then
-            fortune | pokemonsay -p fennekin -N
+            pokeget fennekin --hide-name
             GIT=0
             INIT=0
           elif [ ! "$current_repo" ] && \
             [ $GIT = 1 ]; then
             clear
-            fortune | pokemonsay -p fennekin -N
+            pokeget fennekin --hide-name
             GIT=0
             last_repo=
           fi

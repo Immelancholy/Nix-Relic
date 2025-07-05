@@ -228,7 +228,7 @@
     kdePackages.qt6ct
     protonup
     playerctl
-    pokemonsay
+    pokeget-rs
     fortune
     cowsay
     lz4
