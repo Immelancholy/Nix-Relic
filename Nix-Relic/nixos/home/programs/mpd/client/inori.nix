@@ -1,4 +1,9 @@
-{config, ...}: let
+{
+  config,
+  inputs,
+  pkgs,
+  ...
+}: let
   base = "#${config.lib.stylix.colors.base00}";
   mantle = "#${config.lib.stylix.colors.base01}";
   surface0 = "#${config.lib.stylix.colors.base02}";
@@ -18,6 +23,7 @@
 in {
   programs.inori = {
     enable = true;
+    package = inputs.inori.packages.${pkgs.system}.default;
     settings = {
       qwerty_keybindings = true;
       theme = {
@@ -31,10 +37,10 @@ in {
         block_active = {
           fg = "${mauve}";
         };
-        playing = {
+        status_playing = {
           fg = "${teal}";
         };
-        paused = {
+        status_paused = {
           fg = "${yellow}";
         };
         status_artist = {
@@ -43,7 +49,7 @@ in {
         status_album = {
           fg = "${mauve}";
         };
-        album = {
+        field_album = {
           fg = "${mauve}";
         };
       };

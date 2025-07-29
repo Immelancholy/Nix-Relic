@@ -13,6 +13,8 @@
     ./stylix.nix
   ];
 
+  services.flatpak.enable = true;
+
   xdg.terminal-exec = {
     enable = true;
     settings = {
