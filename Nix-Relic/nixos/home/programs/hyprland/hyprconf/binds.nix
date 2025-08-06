@@ -20,7 +20,7 @@
         ''$mods, U, exec, [workspace 1 silent; float; size 620 383; move 10 42] $term --class "fastfetch" kitty @ launch --type overlay --env class="fastfetch"''
         "$mod, Delete, exec, rofi -show power-menu -modi power-menu:rofi-power-menu"
         "$mod, 0, workspace, 10"
-        "Ctrl+Alt, L, exec, uwsm-app -- swaylock -fF"
+        "Ctrl+Shift, L, exec, uwsm-app -- swaylock -fF"
         ''$mod, V, exec, $term --class "NixOSConf" tnix''
         "$mod, N, exec, rofi -show Cliphist -modi Cliphist:cliphist.sh"
         "$mod, M, exec, hyprgame"

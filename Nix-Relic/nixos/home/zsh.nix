@@ -124,7 +124,7 @@
           builtin cd - || return
         }
 
-        switch () {
+        switch-build () {
           builtin cd "$FLAKE_PATH" || return
           clear
           $fetch_cmd

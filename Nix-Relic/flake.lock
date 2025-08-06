@@ -164,22 +164,6 @@
         "type": "github"
       }
     },
-    "bash-utility": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1611668417,
-        "narHash": "sha256-A37cpA7fqqQyi9hcbmvYwpl0pt78hSI67nAbZGVHJls=",
-        "owner": "labbots",
-        "repo": "bash-utility",
-        "rev": "f9d3191abee7967c0d3b43d0b21607372408fdeb",
-        "type": "github"
-      },
-      "original": {
-        "owner": "labbots",
-        "repo": "bash-utility",
-        "type": "github"
-      }
-    },
     "catppuccin": {
       "inputs": {
         "nixpkgs": "nixpkgs"
@@ -1246,11 +1230,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1751725362,
-        "narHash": "sha256-AfwredLEFLnxxwE6O6PiiJJdvqmAi+Drgf/fgCqE2U4=",
+        "lastModified": 1754459968,
+        "narHash": "sha256-TbnCB3DOEqBDcLZ4m9tP02pmtBX6ST7PWUA0SzLX0iQ=",
         "owner": "Immelancholy",
         "repo": "Nix-Relic-Modules",
-        "rev": "43bdd43b83811775622e1a1f0315759d2879f6dc",
+        "rev": "29cdffb0d00d5946c066d7439cfda5891f74b426",
         "type": "github"
       },
       "original": {
@@ -1550,7 +1534,6 @@
         "Hyprspace": "Hyprspace",
         "alejandra": "alejandra",
         "artis": "artis",
-        "bash-utility": "bash-utility",
         "catppuccin": "catppuccin",
         "catppuccinZen": "catppuccinZen",
         "disko": "disko",

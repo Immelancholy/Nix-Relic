@@ -45,6 +45,8 @@
   };
 
   programs.zsh.enable = true;
+  programs.fish.enable = true;
+
   services.dbus = {
     enable = true;
     implementation = "broker";

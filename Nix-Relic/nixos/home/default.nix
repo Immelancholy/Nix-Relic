@@ -14,6 +14,7 @@
     ./stylix.nix
     ./oh-my-posh.nix
     ./activationScripts
+    ./fish.nix
   ];
 
   xdg = {

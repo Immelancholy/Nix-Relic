@@ -29,7 +29,7 @@
       }
     ];
     extraConfig = ''
-      set -g default-command "/run/current-system/sw/bin/zsh"
+      set -g default-command "/run/current-system/sw/bin/fish"
       set -sa terminal-features ',xterm*:RGB'
       set -gq allow-passthrough on
       set -g update-environment 'KITTY_LISTEN_ON'
