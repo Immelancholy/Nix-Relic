@@ -632,6 +632,7 @@
       };
       lspkind = {
         enable = true;
+        cmp.enable = false;
       };
       mini = {
         enable = true;

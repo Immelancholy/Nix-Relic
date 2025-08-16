@@ -9,7 +9,7 @@
       ''[workspace 1 silent; float; size 402 1030; move 1508 42] $term --class "neo" neo.sh''
       ''[workspace 1 silent; float; size 620 383; move 10 42] $term --class "fastfetch" kitty @ launch --type overlay --env class="fastfetch"''
       "[workspace 2 silent] $browser"
-      "[workspace 2 silent] uwsm app -- teams-for-linux --minimized"
+      # "[workspace 2 silent] uwsm app -- teams-for-linux --minimized"
       "uwsm app -- $discord"
     ];
   };
