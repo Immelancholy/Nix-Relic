@@ -17,7 +17,7 @@ in {
     };
     extraConfig = ''
       # background_opacity 0.67
-      background_opacity 0.80
+      background_opacity 0.85
       confirm_os_window_close 0
       placement_strategy center
       resize_in_steps yes
