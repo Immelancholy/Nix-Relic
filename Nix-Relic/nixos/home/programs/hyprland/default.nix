@@ -51,11 +51,11 @@ in {
       '';
       extraLaunch = ''
         hyprctl dispatch signalwindow 'class:(mpd),9'
-          hyprctl dispatch exec '[workspace 1 silent; float; size 858 462; move 640 609] uwsm app -- kitty --class "cava" cava.sh'
-          hyprctl dispatch exec '[workspace 1 silent; float; size 620 637; move 10 433] uwsm app -- kitty --class "btop" btop.sh'
+          hyprctl dispatch exec '[workspace 1 silent; float; size 888 462; move 610 609] uwsm app -- kitty --class "cava" cava.sh'
+          hyprctl dispatch exec '[workspace 1 silent; float; size 590 637; move 10 433] uwsm app -- kitty --class "btop" btop.sh'
           hyprctl dispatch exec '[workspace 1 silent; float; size 402 1030; move 1508 42]  uwsm app -- kitty --class "neo" neo.sh'
-          hyprctl dispatch exec '[workspace 1 silent; float; size 620 383; move 10 42] uwsm app -- kitty --class "fastfetch" kitty @ launch --type overlay --env class="fastfetch"'
-          hyprctl dispatch exec '[workspace 1 silent; float; size 858 559; move 640 42] ${playerCmd}'
+          hyprctl dispatch exec '[workspace 1 silent; float; size 590 383; move 10 42] uwsm app -- kitty --class "fastfetch" kitty @ launch --type overlay --env class="fastfetch"'
+          hyprctl dispatch exec '[workspace 1 silent; float; size 888 559; move 610 42] ${playerCmd}'
       '';
     })
   ];
