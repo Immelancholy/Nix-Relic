@@ -124,7 +124,6 @@
     nrm.cava
     nrm.neo
     nrm.rofi-power-menu
-    nrm.ss
     nrm.tmux_dev
     nrm.tmux_nix
     nrm.tmux_notes
