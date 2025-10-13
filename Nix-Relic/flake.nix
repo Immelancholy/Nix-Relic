@@ -12,6 +12,10 @@
       url = "github:ghostty-org/ghostty";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    hyprquickshot = {
+      url = "github:Immelancholy/hyprquickshot/open-screenshot-in-swappy";
+      flake = false;
+    };
     artis = {
       url = "github:Immelancholy/artis";
       inputs.nixpkgs.follows = "nixpkgs";

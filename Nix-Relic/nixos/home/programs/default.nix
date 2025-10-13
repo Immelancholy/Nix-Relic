@@ -23,11 +23,21 @@
     ./mpv.nix
     ./zathura.nix
     ./kitty.nix
+    ./quickshell
   ];
 
   programs.zen = {
     enable = true;
     defaultBrowser = true;
+  };
+
+  programs.satty = {
+    enable = true;
+    settings = {
+      general = {
+        fullscreen = false;
+      };
+    };
   };
 
   services.kdeconnect = {

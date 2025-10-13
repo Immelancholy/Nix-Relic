@@ -329,53 +329,60 @@
         end
 
         function switch-remote -w='switch-remote'
+          set -l dir "$(pwd)"
           cd "$FLAKE_PATH"
           git add .
           nixos-rebuild switch --flake . --sudo --ask-sudo-password --target-host $argv &| nom
           git add .
-          builtin cd $dirprev || return
+          cd "$dir"
         end
 
         function boot-remote -w='boot-remote'
+          set -l dir "$(pwd)"
           cd "$FLAKE_PATH"
           git add .
           nixos-rebuild boot --flake . --sudo --ask-sudo-password --target-host $argv &| nom
           git add .
-          builtin cd $dirprev || return
+          cd "$dir"
         end
 
         function switch-build -w='switch-build'
+          set -l dir "$(pwd)"
           cd "$FLAKE_PATH"
           git add .
           sudo nixos-rebuild switch --flake . &| nom
           git add .
-          builtin cd $dirprev || return
+          cd "$dir"
         end
 
         function boot -w='boot'
+          set -l dir "$(pwd)"
           cd "$FLAKE_PATH"
           git add .
           sudo nixos-rebuild boot --flake . &| nom
           git add .
-          builtin cd $dirprev || return
+          cd "$dir"
         end
 
         function update -w='update'
+          set -l dir "$(pwd)"
           cd "$FLAKE_PATH"
           nix flake update --flake . --commit-lock-file
-          builtin cd $dirprev || return
+          cd "$dir"
         end
 
         function nixgit -w='nixgit'
+          set -l dir "$(pwd)"
           cd "$FLAKE_PATH"
           lazygit
-          prevd
+          cd "$dir"
         end
 
         function nix-llm-git -w='nix-llm-git'
+          set -l dir "$(pwd)"
           cd "$FLAKE_PATH"
           llm git-commit
-          prevd
+          cd "$dir"
         end
 
         if [ "$class" = "fastfetch" ]

@@ -71,6 +71,7 @@
   };
   environment.systemPackages = with pkgs; [
     nix-output-monitor
+    imagemagick
     chafa
     onefetch
     neo
