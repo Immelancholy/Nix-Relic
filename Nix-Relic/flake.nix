@@ -13,7 +13,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprquickshot = {
-      url = "github:Immelancholy/hyprquickshot/open-screenshot-in-swappy";
+      url = "github:Immelancholy/hyprquickshot/open-screenshot-in-satty";
       flake = false;
     };
     artis = {
