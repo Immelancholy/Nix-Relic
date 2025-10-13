@@ -110,6 +110,7 @@
 
       ''float,class:^(btop.ghostty)$''
       ''size 960 675,class:^(btop.ghostty)$''
+      ''size 960 675,class:^(kitty)$,title:^(btop)$''
 
       ''size 437 306, title:^(Qalculate!)$''
       ''float, title:^(Qalculate!)$''
