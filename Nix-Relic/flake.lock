@@ -1048,11 +1048,11 @@
     "hyprquickshot": {
       "flake": false,
       "locked": {
-        "lastModified": 1760466628,
-        "narHash": "sha256-46WfdJryI9D4AaR5s9sZWkNpn+XgYuhuxc8vRwwAeUM=",
+        "lastModified": 1760987618,
+        "narHash": "sha256-5Cew9t6PWi6Ij1gaUpql2DNkePb02R+fTjNZsd1RSCs=",
         "owner": "Immelancholy",
         "repo": "hyprquickshot",
-        "rev": "c54d64e355c697585ae50a4c1b8872979463bb77",
+        "rev": "b50afa9735f0dec2d3d970803ab2d5bc9344f648",
         "type": "github"
       },
       "original": {
