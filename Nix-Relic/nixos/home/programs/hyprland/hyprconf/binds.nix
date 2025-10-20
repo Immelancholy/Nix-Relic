@@ -37,7 +37,7 @@
         ''Ctrl+Shift, Escape, exec, uwsm app -- $term --title "btop" btop''
         ", XF86Calculator, exec, uwsm-app -- qalculate-gtk"
         "$mod, X, togglespecialworkspace"
-        ", Print, exec, quickshell -c hyprquickshot -n"
+        ", Print, exec, hyprquickshot"
         "$mod, O, exec, uwsm-app -- hyprpicker -a"
       ]
       ++ (
