@@ -1,20 +1,6 @@
-{
-  pkgs,
-  lib,
-  ...
-}: {
+{lib, ...}: {
   nixpkgs.overlays = lib.mkForce null;
   stylix = {
-    iconTheme = {
-      enable = true;
-      package = pkgs.tela-circle-icon-theme.override {
-        colorVariants = [
-          "dracula"
-        ];
-      };
-      dark = "Tela-circle-dracula";
-      light = "Tela-circle-dracula";
-    };
     targets = {
       dunst.enable = false;
       rofi.enable = false;

@@ -26,6 +26,17 @@
             accent = "mauve";
           };
 
+          stylix.iconTheme = {
+            enable = true;
+            package = pkgs.tela-circle-icon-theme.override {
+              colorVariants = [
+                "dracula"
+              ];
+            };
+            dark = "Tela-circle-dracula";
+            light = "Tela-circle-dracula";
+          };
+
           # stylix.targets = {
           #   # Uncomment this if you want to use catppuccin theme, I made a module to autodisable their respective catppuccin themes.
           #   tmux.enable = false;
