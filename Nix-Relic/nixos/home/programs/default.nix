@@ -1,4 +1,9 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  config,
+  ...
+}: {
   home.shell = {
     enableZshIntegration = true;
   };
@@ -26,9 +31,12 @@
     ./quickshell
   ];
 
-  programs.zen = {
+  programs.zen-browser = {
     enable = true;
-    defaultBrowser = true;
+    defaultBrowser = {
+      enable = true;
+      desktopFile = "zen-beta.desktop";
+    };
   };
 
   programs.satty = {
@@ -75,6 +83,12 @@
       };
     };
   };
+
+  home.packages = [
+    (inputs.hyprquickshot.packages.${pkgs.system}.default.override {
+      SattyPackage = config.programs.satty.package;
+    })
+  ];
 
   services.kdeconnect = {
     enable = true;

@@ -27,7 +27,7 @@ in {
       color2 = "${text}";
       color3 = "${text}";
       color4 = "${text}";
-      color5 = "${blue}";
+      color5 = "${flamingo}";
     };
   };
 }

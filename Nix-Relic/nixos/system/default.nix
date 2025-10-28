@@ -63,6 +63,7 @@
 
   services.cavaCfg = {
     enable = true;
+    framerate = 144;
     colors = {
       color1 = "#${config.lib.stylix.colors.base0E}";
       color2 = "#${config.lib.stylix.colors.base0D}";

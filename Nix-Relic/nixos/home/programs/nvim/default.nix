@@ -57,15 +57,17 @@
           nested_checkboxes = 0;
         };
       };
-      presence-nvim = {
+      presence = {
         enable = true;
-        enableLineNumber = true;
-        fileAssets = {
-          js = ["Javascript" "javascript"];
-          ts = ["Typescript" "typescript"];
-          rs = ["Rust" "https://www.rust-lang.org/logos/rust-logo-512x512.png"];
-          go = ["Go" "https://go.dev/blog/go-brand/Go-Logo/PNG/Go-Logo_Aqua.png"];
-          nix = ["Nix" "https://cdn.brandfetch.io/idXHqgWNOX/w/820/h/722/theme/dark/logo.png?c=1dxbfHSJFAPEGdCLU4o5B"];
+        settings = {
+          enable_line_number = true;
+          file_assets = {
+            js = ["Javascript" "javascript"];
+            ts = ["Typescript" "typescript"];
+            rs = ["Rust" "https://www.rust-lang.org/logos/rust-logo-512x512.png"];
+            go = ["Go" "https://go.dev/blog/go-brand/Go-Logo/PNG/Go-Logo_Aqua.png"];
+            nix = ["Nix" "https://cdn.brandfetch.io/idXHqgWNOX/w/820/h/722/theme/dark/logo.png?c=1dxbfHSJFAPEGdCLU4o5B"];
+          };
         };
       };
       illuminate.enable = true;
@@ -622,6 +624,7 @@
           pylyzer.enable = true;
           marksman.enable = true;
           bashls.enable = true;
+          # qmlls.enable = true;
         };
       };
       lsp-format.enable = true;
@@ -659,19 +662,21 @@
       };
       neo-tree = {
         enable = true;
-        popupBorderStyle = "rounded";
-        window = {
-          mappings = {
-            l = "open";
-            h = "close_node";
+        settings = {
+          popup_border_style = "rounded";
+          window = {
+            mappings = {
+              l = "open";
+              h = "close_node";
+            };
+            position = "right";
           };
-          position = "right";
-        };
-        filesystem = {
-          bindToCwd = true;
-          cwdTarget = {
-            sidebar = "tab";
-            current = "window";
+          filesystem = {
+            bind_to_cwd = true;
+            cwd_target = {
+              sidebar = "tab";
+              current = "window";
+            };
           };
         };
       };

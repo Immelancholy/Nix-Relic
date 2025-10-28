@@ -47,10 +47,10 @@ in {
           fg = "${red}";
         };
         status_album = {
-          fg = "${mauve}";
+          fg = "${flamingo}";
         };
         field_album = {
-          fg = "${mauve}";
+          fg = "${flamingo}";
         };
       };
     };

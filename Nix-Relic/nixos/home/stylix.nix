@@ -1,4 +1,8 @@
-{lib, ...}: {
+{
+  lib,
+  config,
+  ...
+}: {
   nixpkgs.overlays = lib.mkForce null;
   stylix = {
     targets = {
@@ -14,6 +18,9 @@
         };
       };
       cava.rainbow.enable = true;
+      zen-browser.profileNames = [
+        "${config.home.username}.Default"
+      ];
     };
   };
 }

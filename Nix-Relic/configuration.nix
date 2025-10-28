@@ -55,9 +55,11 @@
 
           programs.git = {
             enable = true;
-            userName = ""; # username for git
-            userEmail = ""; # email for git
-            extraConfig = {
+            settings = {
+              user = {
+                name = "";
+                email = "";
+              };
               init = {
                 defaultBranch = "main";
               };

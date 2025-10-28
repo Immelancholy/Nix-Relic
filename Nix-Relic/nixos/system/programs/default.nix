@@ -100,6 +100,7 @@
     sbctl
     inputs.yazi.packages.${pkgs.system}.default
     nrm.brightness
+    nrm.force-hdr
     (nrm.cavaCfg.override {
       color1 = "#${config.lib.stylix.colors.base0E}";
       color2 = "#${config.lib.stylix.colors.base0D}";
@@ -108,6 +109,7 @@
       color5 = "#${config.lib.stylix.colors.base0A}";
       color6 = "#${config.lib.stylix.colors.base09}";
       color7 = "#${config.lib.stylix.colors.base08}";
+      framerate = "144";
     })
     nrm.checkshell
     nrm.cliphist

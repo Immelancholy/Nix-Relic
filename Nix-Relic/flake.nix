@@ -68,7 +68,7 @@
       flake = false;
     };
     zen-browser = {
-      url = "github:youwen5/zen-browser-flake";
+      url = "github:0xc000022070/zen-browser-flake/beta";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
@@ -100,7 +100,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
-    stylix.url = "github:danth/stylix";
+    stylix.url = "github:Immelancholy/stylix";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     lanzaboote = {
       url = "github:nix-community/lanzaboote/v0.4.2";

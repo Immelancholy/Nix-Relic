@@ -13,6 +13,7 @@
     color5 = "#${config.lib.stylix.colors.base0A}";
     color6 = "#${config.lib.stylix.colors.base09}";
     color7 = "#${config.lib.stylix.colors.base08}";
+    framerate = "144";
   };
 in {
   home = {

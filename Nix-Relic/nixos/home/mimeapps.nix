@@ -8,6 +8,7 @@ let
     "application/x-gnome-saved-search" = ["nemo.desktop"];
     "application/zip" = ["org.kde.ark.desktop"];
     "x-scheme-handler/mpv" = ["open-in-mpv.desktop"];
+    "application/pdf" = ["org.pwmt.zathura.desktop"];
   };
 in {
   xdg = {
