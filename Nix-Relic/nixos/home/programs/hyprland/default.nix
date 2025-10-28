@@ -26,7 +26,25 @@ in {
       plugins = [
         inputs.hyprland-plugins.packages.${pkgs.system}.csgo-vulkan-fix
         inputs.hyprland-plugins.packages.${pkgs.system}.xtra-dispatchers
+        inputs.hyprland-easymotion.packages.${pkgs.system}.hyprland-easymotion
       ];
+      settings = {
+        bind = [
+          "$mod, G, easymotion, action:hyprctl dispatch focuswindow address:{}"
+        ];
+        plugin = {
+          easymotion = {
+            textcolor = "rgba(${config.lib.stylix.colors.base05}ff)";
+            bgcolor = "rgba(${config.lib.stylix.colors.base00}bb)";
+            bordercolor = "rgba($mauveff) rgba($tealff) rgba($rosewaterff) 40deg";
+            blur = 1;
+            textpadding = 8;
+            textsize = 35;
+            bordersize = 2;
+            fullscreen_action = "maximize";
+          };
+        };
+      };
     })
     (lib.mkIf (! cfg.usingFlake) {
       plugins = [
