@@ -89,9 +89,8 @@
     };
 
     hy3 = {
-      url = "github:outfoxxed/hy3"; # where {version} is the hyprland release version
-      # or "github:outfoxxed/hy3" to follow the development branch.
-      # (you may encounter issues if you dont do the same for hyprland)
+      # url = "github:outfoxxed/hy3";
+      url = "github:nnra6864/hy3/replace-generateVersion"; # Currently has a patch to build hy3 properly on latest hyprland commit.
       inputs.hyprland.follows = "hyprland";
     };
     nixvim = {
