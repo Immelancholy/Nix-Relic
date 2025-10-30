@@ -126,6 +126,12 @@
 
     overlays = import ./overlays {inherit inputs;};
 
+    packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
+
+    nixosModules = import ./modules/nixos;
+
+    homeManagerModules = import ./modules/home-manager;
+
     nixosConfigurations = {
       nix-relic = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
