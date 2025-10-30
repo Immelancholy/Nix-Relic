@@ -6,10 +6,10 @@
 }: {
   nix-relic = {
     wallpaper = {
-      path = "./nixos/home/backgrounds/Evil_Miku.png";
+      path = "${inputs.nix-relic-modules}/backgrounds/Evil_Miku.png";
       animatedWallpaper = {
         enable = true;
-        path = "./nixos/home/backgrounds/Evil_Miku.mp4";
+        path = "${inputs.nix-relic-modules}/backgrounds/Evil_Miku.mp4";
       };
     };
     users.users = {
@@ -17,10 +17,6 @@
         isNormalUser = true;
         isAdmin = true; #enable or disable this to give or take sudo access.
         home-config = {
-          imports = [
-            ./nixos/home/fetch_images.nix
-          ];
-
           catppuccin = {
             flavor = "mocha";
             accent = "mauve";

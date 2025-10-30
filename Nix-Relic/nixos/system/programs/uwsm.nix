@@ -1,7 +1,0 @@
-{
-  programs = {
-    uwsm = {
-      enable = true;
-    };
-  };
-}

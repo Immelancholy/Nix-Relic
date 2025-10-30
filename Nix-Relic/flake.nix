@@ -145,7 +145,6 @@
           inputs.lanzaboote.nixosModules.lanzaboote
           inputs.solaar.nixosModules.default
           inputs.catppuccin.nixosModules.catppuccin
-          ./nixos/system
           ./configuration.nix
           ./hardware-configuration.nix
 
@@ -161,7 +160,6 @@
                 inputs.nixvim.homeManagerModules.nixvim
                 inputs.spicetify-nix.homeManagerModules.default
                 inputs.artis.homeManagerModules.default
-                ./nixos/home
               ];
             };
           }
