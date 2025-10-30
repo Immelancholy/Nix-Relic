@@ -17,11 +17,6 @@
         isNormalUser = true;
         isAdmin = true; #enable or disable this to give or take sudo access.
         home-config = {
-          catppuccin = {
-            flavor = "mocha";
-            accent = "mauve";
-          };
-
           stylix.iconTheme = {
             enable = true;
             package = pkgs.tela-circle-icon-theme.override {
@@ -32,18 +27,6 @@
             dark = "Tela-circle-dracula";
             light = "Tela-circle-dracula";
           };
-
-          # stylix.targets = {
-          #   # Uncomment this if you want to use catppuccin theme, I made a module to autodisable their respective catppuccin themes.
-          #   tmux.enable = false;
-          #   yazi.enable = false;
-          #   btop.enable = false;
-          #   spicetify.enable = false;
-          #   kitty.enable = false;
-          #   nixvim.enable = false;
-          #   zen.enable = false;
-          #   vesktop.enable = false;
-          # };
 
           programs.vesktop = {
             enable = true;
@@ -141,9 +124,6 @@
       };
     };
   };
-  stylix = {
-    # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml"; # Stylix theme, Uncomment this to use a base-16 scehme, in this case Catppuccin.
-  };
 
   networking.hostName = "nix-relic";
   programs.weylus.users = [
@@ -163,10 +143,6 @@
   environment.systemPackages = with pkgs; [
     # global packages here
   ];
-
-  # duplicate this for each user
-  home-manager.users.your-user = {
-  };
 
   services.qpwgraph.enable = true;
 

@@ -8,10 +8,6 @@
       url = "github:Immelancholy/Nix-Relic-Modules";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    ghostty = {
-      url = "github:ghostty-org/ghostty";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     hyprquickshot = {
       url = "github:Immelancholy/hyprquickshot/open-screenshot-in-satty";
       flake = false;
@@ -35,11 +31,6 @@
     disko = {
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-    catppuccin.url = "github:catppuccin/nix";
-    catppuccinZen = {
-      url = "github:catppuccin/zen-browser";
-      flake = false;
     };
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -144,7 +135,6 @@
           inputs.nur.modules.nixos.default
           inputs.lanzaboote.nixosModules.lanzaboote
           inputs.solaar.nixosModules.default
-          inputs.catppuccin.nixosModules.catppuccin
           ./configuration.nix
           ./hardware-configuration.nix
 
@@ -156,7 +146,6 @@
               extraSpecialArgs = {inherit inputs;};
               sharedModules = [
                 nix-relic-modules.homeManagerModules.default
-                inputs.catppuccin.homeModules.catppuccin
                 inputs.nixvim.homeManagerModules.nixvim
                 inputs.spicetify-nix.homeManagerModules.default
                 inputs.artis.homeManagerModules.default
