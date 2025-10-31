@@ -2,7 +2,6 @@
   pkgs,
   inputs,
   config,
-  nix-relic,
   ...
 }: {
   home.shell = {
@@ -87,7 +86,7 @@
   };
 
   home.packages = [
-    (nix-relic.inputs.hyprquickshot.packages.${pkgs.system}.default.override {
+    (inputs.nix-relic.inputs.hyprquickshot.packages.${pkgs.system}.default.override {
       SattyPackage = config.programs.satty.package;
     })
   ];
