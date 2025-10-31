@@ -40,14 +40,15 @@ nix flake init -t github:Immelancholy/Nix-Relic
   pkgs,
   inputs,
   config,
+  nix-relic,
   ...
 }: {
   nix-relic = {
     wallpaper = {
-      path = "${inputs.nix-relic-modules}/backgrounds/Evil_Miku.png";
+      path = "${nix-relic}/backgrounds/Evil_Miku.png";
       animatedWallpaper = {
         enable = true;
-        path = "${inputs.nix-relic-modules}/backgrounds/Evil_Miku.mp4";
+        path = "${nix-relic}/backgrounds/Evil_Miku.mp4";
       };
     };
     users.users = {
@@ -185,7 +186,6 @@ nix flake init -t github:Immelancholy/Nix-Relic
   services.qpwgraph.enable = true;
 
   # services.solaar.enable = true; # logitech mouse stuff
-  # hardware.logitech.wireless.enable = true; # logitech mouse stuff
 
   environment.sessionVariables = {
     FLAKE_PATH = "/home/user/Nix-Relic"; # path to dots folder, do like this example
