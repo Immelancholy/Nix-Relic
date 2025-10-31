@@ -75,6 +75,7 @@
   outputs = {
     self,
     nixpkgs,
+    stylix,
     ...
   } @ inputs: let
     inherit (self) outputs;
