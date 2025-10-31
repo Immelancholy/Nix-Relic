@@ -72,7 +72,7 @@
               dwindle.enable = false;
               hy3.enable = true;
             };
-            useHyprspace = true;
+            useHyprspace = false; # Broken atm
             settings = {
               cursor = {
                 no_hardware_cursors = false;
