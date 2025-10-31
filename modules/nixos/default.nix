@@ -1,4 +1,4 @@
-{
+{inputs, ...}: {
   imports = [
     ./boot
     ./drivers
@@ -9,5 +9,6 @@
     ./home-manager.nix
     ./wallpaper.nix
     ./system
+    inputs.stylix.nixosModules.stylix
   ];
 }
