@@ -752,7 +752,7 @@ in {
       harpoon2
       yuck-vim
     ];
-    package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
+    package = nrm.neovim-nightly-overlay.packages.${pkgs.system}.default;
     keymaps = [
       {
         action = "<Cmd>Neotree toggle<CR>";
