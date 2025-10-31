@@ -371,6 +371,14 @@
           cd "$dir"
         end
 
+        function update-flake -w='update-flake'
+          nix flake update $argv --commit-lock-file
+        end
+
+        function update-flake-token -w='update-flake-token'
+          nix flake update $argv --commit-lock-file --option access-tokens "github.com=$(gh auth token)"
+        end
+
         function update-token -w='update-token'
           set -l dir "$(pwd)"
           cd "$FLAKE_PATH"

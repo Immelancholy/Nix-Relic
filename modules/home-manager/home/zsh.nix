@@ -154,12 +154,20 @@ in {
           builtin cd - || return
         }
 
+        update-flake () {
+          nix flake update "$@" --commit-lock-file
+        }
+
         update-token () {
           builtin cd "$FLAKE_PATH" || return
           clear
           $fetch_cmd
           nix flake update "$@" --commit-lock-file --option access-tokens "github.com=$(gh auth token)"
           builtin cd - || return
+        }
+
+        update-flake-token () {
+          nix flake update "$@" --commit-lock-file --option access-tokens "github.com=$(gh auth token)"
         }
 
         nixgit () {
