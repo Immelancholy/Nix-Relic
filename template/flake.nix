@@ -3,7 +3,6 @@
   description = "My NixOS and Hom Manager config.";
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
     nix-relic = {
       url = "github:Immelancholy/Nix-Relic";
     };
