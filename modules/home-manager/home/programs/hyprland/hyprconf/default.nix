@@ -7,8 +7,8 @@
   ...
 }: let
   flake = [
-    "${inputs.hyprland-plugins.packages.${pkgs.system}.csgo-vulkan-fix}/lib/libcsgo-vulkan-fix.so, plugin, allow"
-    "${inputs.hyprland-plugins.packages.${pkgs.system}.xtra-dispatchers}/lib/libxtra-dispatchers.so, plugin, allow"
+    "${inputs.nix-relic.inputs.hyprland-plugins.packages.${pkgs.system}.csgo-vulkan-fix}/lib/libcsgo-vulkan-fix.so, plugin, allow"
+    "${inputs.nix-relic.inputs.hyprland-plugins.packages.${pkgs.system}.xtra-dispatchers}/lib/libxtra-dispatchers.so, plugin, allow"
   ];
   noFlake = [
     "${pkgs.hyprlandPlugins.csgo-vulkan-fix}/lib/libcsgo-vulkan-fix.so, plugin, allow"
