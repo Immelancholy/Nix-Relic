@@ -8,10 +8,6 @@
       url = "github:Immelancholy/Nix-Relic";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprquickshot = {
-      url = "github:Immelancholy/hyprquickshot/open-screenshot-in-satty";
-      flake = false;
-    };
     artis = {
       url = "github:Immelancholy/artis";
       inputs.nixpkgs.follows = "nixpkgs";

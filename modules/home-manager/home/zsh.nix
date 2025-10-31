@@ -2,7 +2,9 @@
   pkgs,
   inputs,
   ...
-}: {
+}: let
+  nrm = inputs.nix-relic.inputs;
+in {
   # home.file.".p10k.zsh" = {
   #   source = ./p10k.zsh;
   # };
@@ -29,7 +31,7 @@
     plugins = [
       {
         name = "zsh-256color";
-        src = inputs.zsh-256color;
+        src = nrm.zsh-256color;
       }
       # {
       #   name = "powerlevel10k";

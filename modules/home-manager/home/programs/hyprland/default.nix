@@ -7,7 +7,8 @@
 }: let
   cfg = config.wayland.windowManager.hyprland;
   playerCmd = config.player.cmd;
-  nrm = inputs.nix-relic-modules.packages.${pkgs.system};
+  nr = inputs.nix-relic.packages.${pkgs.system};
+  nrm = inputs.nix-relic.inputs;
 in {
   wayland.windowManager.hyprland = lib.mkMerge [
     {
@@ -24,9 +25,9 @@ in {
     }
     (lib.mkIf cfg.usingFlake {
       plugins = [
-        inputs.hyprland-plugins.packages.${pkgs.system}.csgo-vulkan-fix
-        inputs.hyprland-plugins.packages.${pkgs.system}.xtra-dispatchers
-        inputs.hyprland-easymotion.packages.${pkgs.system}.hyprland-easymotion
+        nrm.hyprland-plugins.packages.${pkgs.system}.csgo-vulkan-fix
+        nrm.hyprland-plugins.packages.${pkgs.system}.xtra-dispatchers
+        nrm.hyprland-easymotion.packages.${pkgs.system}.hyprland-easymotion
       ];
       settings = {
         bind = [
@@ -57,7 +58,7 @@ in {
   home.packages = with pkgs; [
     hyprpicker
     hyprshot
-    (nrm.hyprgame.override {
+    (nr.hyprgame.override {
       wallpaper = cfg.liveWallpaper.path;
       extraKills = ''
         hyprctl dispatch signalwindow 'class:(mpd),9'

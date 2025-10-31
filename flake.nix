@@ -84,7 +84,7 @@
     ];
     forAllSystems = nixpkgs.lib.genAttrs systems;
     overlay = final: prev: {
-      nrm = import ./packages final.pkgs;
+      nr = import ./packages final.pkgs;
       stable = import inputs.nixpkgs-stable {
         system = final.system;
         config.allowUnfree = true;
@@ -99,7 +99,7 @@
     overlays.default = overlay;
 
     nixosModules = {
-      default = import ./modules/nixos {inherit inputs;};
+      default = import ./modules/nixos;
     };
 
     homeManagerModules = {

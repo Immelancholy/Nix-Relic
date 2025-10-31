@@ -3,8 +3,13 @@
   inputs,
   ...
 }: let
+  spicetify-nix = inputs.nix-relic.inputs.spicetify-nix.homeManagerModules.default;
+
   spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.system};
 in {
+  imports = [
+    spicetify-nix
+  ];
   programs.spicetify = {
     enable = true;
     enabledExtensions = with spicePkgs.extensions; [

@@ -3,7 +3,12 @@
   inputs,
   lib,
   ...
-}: {
+}: let
+  nrm = inputs.nix-relic.inputs;
+in {
+  imports = [
+    nrm.nixvim.homeModules.nixvim
+  ];
   programs.nixvim = {
     globals.mapleader = " ";
     enableMan = true;

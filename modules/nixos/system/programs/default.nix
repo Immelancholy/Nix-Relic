@@ -80,7 +80,7 @@
     mpc
     ffmpegthumbnailer
     libcamera
-    # (nrm.systemd-restarts.override {
+    # (nr.systemd-restarts.override {
     #   restarts = ''
     #     systemctl restart --user nm-applet
     #       sleep 10
@@ -99,9 +99,9 @@
     wl-clipboard
     sbctl
     inputs.yazi.packages.${pkgs.system}.default
-    nrm.brightness
-    nrm.force-hdr
-    (nrm.cavaCfg.override {
+    nr.brightness
+    nr.force-hdr
+    (nr.cavaCfg.override {
       color1 = "#${config.lib.stylix.colors.base0E}";
       color2 = "#${config.lib.stylix.colors.base0D}";
       color3 = "#${config.lib.stylix.colors.base0C}";
@@ -111,27 +111,27 @@
       color7 = "#${config.lib.stylix.colors.base08}";
       framerate = "144";
     })
-    nrm.checkshell
-    nrm.cliphist
-    nrm.colortrans
-    nrm.mpdchck
-    (nrm.neo-color.override {
+    nr.checkshell
+    nr.cliphist
+    nr.colortrans
+    nr.mpdchck
+    (nr.neo-color.override {
       color1 = "${config.lib.stylix.colors.base0F}";
       color2 = "${config.lib.stylix.colors.base0D}";
       color3 = "${config.lib.stylix.colors.base0E}";
       color4 = "${config.lib.stylix.colors.base0C}";
       color5 = "${config.lib.stylix.colors.base05}";
     })
-    nrm.btop
-    nrm.cava
-    nrm.neo
-    nrm.rofi-power-menu
-    nrm.tmux_dev
-    nrm.tmux_nix
-    nrm.tmux_notes
-    nrm.tmux_music
-    nrm.toggle-mute
-    nrm.waycava
+    nr.btop
+    nr.cava
+    nr.neo
+    nr.rofi-power-menu
+    nr.tmux_dev
+    nr.tmux_nix
+    nr.tmux_notes
+    nr.tmux_music
+    nr.toggle-mute
+    nr.waycava
     qpwgraph
     pavucontrol
     pulsemixer

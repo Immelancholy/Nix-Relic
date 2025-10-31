@@ -23,7 +23,7 @@
 in {
   programs.inori = {
     enable = true;
-    package = inputs.inori.packages.${pkgs.system}.default;
+    package = inputs.nix-relic.inputs.inori.packages.${pkgs.system}.default;
     settings = {
       qwerty_keybindings = true;
       theme = {
