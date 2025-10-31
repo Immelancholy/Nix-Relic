@@ -76,8 +76,10 @@
       url = "github:nix-community/lanzaboote/v0.4.2";
 
       # Optional but recommended to limit the size of your system closure.
-      inputs.nixpkgs.follows = "nixpkgs";
-      rust-overlay.follows = "rust-overlay";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        rust-overlay.follows = "rust-overlay";
+      };
     };
     rust-overlay = {
       url = "github:oxalica/rust-overlay";
