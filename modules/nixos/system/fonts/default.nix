@@ -5,7 +5,6 @@
       noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-color-emoji
-      noto-fonts-extra
       powerline
       powerline-symbols
       nerd-fonts.jetbrains-mono
