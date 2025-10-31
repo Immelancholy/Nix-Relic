@@ -46,10 +46,6 @@
         specialArgs = {inherit inputs outputs;};
         modules = [
           nix-relic.nixosModules.default
-          inputs.stylix.nixosModules.stylix
-          inputs.nur.modules.nixos.default
-          inputs.lanzaboote.nixosModules.lanzaboote
-          inputs.solaar.nixosModules.default
           ./configuration.nix
           ./hardware-configuration.nix
 
@@ -61,9 +57,6 @@
               extraSpecialArgs = {inherit inputs;};
               sharedModules = [
                 nix-relic.homeManagerModules.default
-                inputs.nixvim.homeManagerModules.nixvim
-                inputs.spicetify-nix.homeManagerModules.default
-                inputs.artis.homeManagerModules.default
               ];
             };
           }
