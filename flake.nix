@@ -10,6 +10,7 @@
     };
     hyprquickshot = {
       url = "github:Immelancholy/hyprquickshot/open-screenshot-in-satty";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     artis = {
       url = "github:Immelancholy/artis";
