@@ -1,8 +1,11 @@
 {
   pkgs,
-  inputs,
+  self,
   ...
 }: {
+  imports = [
+    self.inputs.stylix.nixosModules.stylix
+  ];
   stylix = {
     homeManagerIntegration = {
       autoImport = true;

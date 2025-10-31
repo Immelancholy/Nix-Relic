@@ -77,7 +77,7 @@
     nixpkgs,
     ...
   } @ inputs: let
-    inherit (self) outputs;
+    inherit self;
     systems = [
       "x86_64-linux"
       "aarch64-linux"
@@ -98,12 +98,12 @@
 
     overlays.default = overlay;
 
-    nixosModules = {inputs, ...}: {
-      default = import ./modules/nixos/default.nix;
+    nixosModules = {
+      default = import ./modules/nixos;
     };
 
-    homeManagerModules = {inputs, ...}: {
-      default = import ./modules/home-manager/default.nix;
+    homeManagerModules = {
+      default = import ./modules/home-manager;
     };
 
     templates = {
