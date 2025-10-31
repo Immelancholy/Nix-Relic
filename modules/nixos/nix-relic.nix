@@ -7,11 +7,10 @@ with lib; let
   cfg = config.nix-relic;
 in {
   options.nix-relic = {
-    hostHomeFolderStructure = mkEnableOption "Use a folder structure of /hosts/''${hostname}/''${name}/home.nix to configure home-manager. Also sets networking.hostName.";
     flakePath = mkOption {
-      type = types.str;
+      type = types.path;
       default = "";
-      description = "Path to Nix-Relic config flake";
+      description = "Path to Nix-Relic config flake folder";
     };
     framerates = {
       cava = mkOption {
@@ -26,25 +25,9 @@ in {
       };
     };
   };
-  config = let
-    makeHM = name: _user: let
-      user = config.users.users.${name};
-    in
-      mkIf cfg.hostHomeFolderStructure {
-        _module.args = {
-          inherit host user;
-        };
-
-        imports = [
-          ./hosts/${host}/users/${name}/home.nix
-        ];
-      };
-  in {
-    home-manager.users = mapAttrs makeHM config.nix-relic.users.users;
-    networking.hostName = "${host}";
-
+  config = {
     environment.sessionVariables = {
-      FLAKE_PATH = "/home/mela/NixDots"; # path to flake.nix
+      FLAKE_PATH = "${cfg.flakePath}"; # path to flake.nix
     };
   };
 }
