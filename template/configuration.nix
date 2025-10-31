@@ -148,7 +148,6 @@
   services.qpwgraph.enable = true;
 
   # services.solaar.enable = true; # logitech mouse stuff
-  # hardware.logitech.wireless.enable = true; # logitech mouse stuff
 
   environment.sessionVariables = {
     FLAKE_PATH = "/home/user/Nix-Relic"; # path to dots folder, do like this example
