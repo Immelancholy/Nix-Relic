@@ -1,0 +1,7 @@
+{
+  imports = [
+    ./wayland
+    ./programs
+    ./home
+  ];
+}
