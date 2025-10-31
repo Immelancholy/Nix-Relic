@@ -3,11 +3,11 @@
 
 ## Colours generated automatically to match wallpaper by Stylix
 
-![SS1](https://raw.githubusercontent.com/Immelancholy/Nix-Relic/refs/heads/main/Screenshots/SS1.png)
+![SS1](https://raw.githubusercontent.com/Immelancholy/Nix-Relic/refs/heads/main/screenshots/SS1.png)
 
-![SS2](https://raw.githubusercontent.com/Immelancholy/Nix-Relic/refs/heads/main/Screenshots/SS2.png)
+![SS2](https://raw.githubusercontent.com/Immelancholy/Nix-Relic/refs/heads/main/screenshots/SS2.png)
 
-![SS3](https://raw.githubusercontent.com/Immelancholy/Nix-Relic/refs/heads/main/Screenshots/SS3.png)
+![SS3](https://raw.githubusercontent.com/Immelancholy/Nix-Relic/refs/heads/main/screenshots/SS3.png)
 
 ## Installation
 > [!WARNING]
