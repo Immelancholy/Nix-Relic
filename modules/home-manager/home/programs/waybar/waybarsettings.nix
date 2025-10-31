@@ -1,4 +1,6 @@
-{
+{config, ...}: let
+  playerCmd = config.player.cmd;
+in {
   programs.waybar.settings = {
     mainBar = {
       layer = "top";
@@ -230,6 +232,9 @@
         format = "{}";
         exec = "waycava.sh stdout --stb 3";
         on-click = "playerctl --player=mpd play-pause";
+        on-click-right = ''
+          hyprctl dispatch exec '[float; size 888 559] ${playerCmd}'
+        '';
         on-scroll-down = "playerctl --player=mpd next";
         on-scroll-up = "playerctl --player=mpd previous";
         restart-interval = 1;
