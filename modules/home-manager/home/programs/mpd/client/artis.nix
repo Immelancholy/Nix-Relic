@@ -20,9 +20,6 @@
   mauve = "#${config.lib.stylix.colors.base0E}";
   flamingo = "#${config.lib.stylix.colors.base0F}";
 in {
-  imports = [
-    inputs.artis.homeManagerModules.default
-  ];
   programs.artis = {
     enable = true;
     colors = {

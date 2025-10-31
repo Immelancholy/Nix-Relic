@@ -3,8 +3,6 @@
   inputs,
   ...
 }: {
-  imports = [
-  ];
   stylix = {
     homeManagerIntegration = {
       autoImport = true;
