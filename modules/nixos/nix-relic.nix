@@ -23,7 +23,7 @@ in {
         type = types.int;
         default = 60;
         description = "Steam gamescope session's framerate";
-      }
+      };
     };
   };
   config = let
