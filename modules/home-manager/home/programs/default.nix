@@ -2,6 +2,7 @@
   pkgs,
   inputs,
   config,
+  nix-relic,
   ...
 }: {
   home.shell = {
@@ -42,7 +43,7 @@
 
   programs.satty = {
     enable = true;
-    package = pkgs.nrm.satty;
+    package = pkgs.nr.satty;
     settings = {
       general = {
         fullscreen = false;
@@ -86,7 +87,7 @@
   };
 
   home.packages = [
-    (inputs.hyprquickshot.packages.${pkgs.system}.default.override {
+    (nix-relic.inputs.hyprquickshot.packages.${pkgs.system}.default.override {
       SattyPackage = config.programs.satty.package;
     })
   ];
