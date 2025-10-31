@@ -367,14 +367,14 @@
         function update -w='update'
           set -l dir "$(pwd)"
           cd "$FLAKE_PATH"
-          nix flake update --flake . --commit-lock-file
+          nix flake update $argv --commit-lock-file
           cd "$dir"
         end
 
         function update-token -w='update-token'
           set -l dir "$(pwd)"
           cd "$FLAKE_PATH"
-          nix flake update --flake . --commit-lock-file --option access-tokens "github.com=$(gh auth token)"
+          nix flake update $argv --commit-lock-file --option access-tokens "github.com=$(gh auth token)"
           cd "$dir"
         end
 
