@@ -99,7 +99,7 @@
     overlays.default = overlay;
 
     nixosModules = {
-      default = import ./modules/nixos;
+      default = import ./modules/nixos {inherit self;};
     };
 
     homeManagerModules = {
