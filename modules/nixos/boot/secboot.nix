@@ -1,11 +1,15 @@
 {
   lib,
   config,
+  inputs,
   ...
 }:
 with lib; let
   cfg = config.boot.secureBoot;
 in {
+  imports = [
+    inputs.lanzaboote.nixosModules.lanzaboote
+  ];
   options.boot.secureBoot = {
     enable = mkOption {
       type = types.bool;
