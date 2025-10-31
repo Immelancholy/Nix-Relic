@@ -371,6 +371,13 @@
           cd "$dir"
         end
 
+        function update-token -w='update-token'
+          set -l dir "$(pwd)"
+          cd "$FLAKE_PATH"
+          nix flake update --flake . --commit-lock-file --option access-tokens "github.com=$(gh auth token)"
+          cd "$dir"
+        end
+
         function nixgit -w='nixgit'
           set -l dir "$(pwd)"
           cd "$FLAKE_PATH"

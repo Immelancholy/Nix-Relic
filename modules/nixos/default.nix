@@ -8,6 +8,6 @@
     ./users.nix
     ./home-manager.nix
     ./wallpaper.nix
-    ./nix-relic.nix
+    ./system
   ];
 }
