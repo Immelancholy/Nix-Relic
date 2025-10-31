@@ -2,6 +2,6 @@
   imports = [
     ./wayland
     ./programs
-    ./home
+    ./nix-relic.nix
   ];
 }

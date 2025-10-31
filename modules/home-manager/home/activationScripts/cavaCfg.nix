@@ -5,7 +5,7 @@
   inputs,
   ...
 }: let
-  cavaCfg = pkgs.nrm.cavaCfg.override {
+  cavaCfg = pkgs.nr.cavaCfg.override {
     color1 = "#${config.lib.stylix.colors.base0E}";
     color2 = "#${config.lib.stylix.colors.base0D}";
     color3 = "#${config.lib.stylix.colors.base0C}";

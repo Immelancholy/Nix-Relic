@@ -7,7 +7,6 @@
 }: let
   cfg = config.wayland.windowManager.hyprland;
   playerCmd = config.player.cmd;
-  nr = inputs.nix-relic.packages.${pkgs.system};
   nrm = inputs.nix-relic.inputs;
 in {
   wayland.windowManager.hyprland = lib.mkMerge [

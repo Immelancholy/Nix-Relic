@@ -4,7 +4,7 @@
   lib,
   ...
 }: let
-  neo-color = pkgs.nrm.neo-color.override {
+  neo-color = pkgs.nr.neo-color.override {
     color1 = "${config.lib.stylix.colors.base0F}";
     color2 = "${config.lib.stylix.colors.base0D}";
     color3 = "${config.lib.stylix.colors.base0E}";
