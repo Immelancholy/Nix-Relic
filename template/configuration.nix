@@ -7,10 +7,10 @@
 }: {
   nix-relic = {
     wallpaper = {
-      path = "${inputs.nix-relic}/backgrounds/Evil_Miku.png";
+      path = "${nix-relic}/backgrounds/Evil_Miku.png";
       animatedWallpaper = {
         enable = true;
-        path = "${inputs.nix-relic}/backgrounds/Evil_Miku.mp4";
+        path = "${nix-relic}/backgrounds/Evil_Miku.mp4";
       };
     };
     users.users = {
