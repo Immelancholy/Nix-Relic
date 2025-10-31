@@ -6,8 +6,7 @@
   ...
 }: {
   nix-relic = {
-    hostHomeFolderStructure = false;
-    flakePath = "/home/mela/NixDots";
+    flakePath = "/path/to/flake/folder";
     framerates = {
       cava = 144;
       steamGamescopeSession = 280;
