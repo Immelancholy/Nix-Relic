@@ -7,6 +7,7 @@
 }:
 with lib; let
   cfg = config.wayland.windowManager.hyprland.layout.hy3;
+  nr = inputs.nix-relic.inputs;
 in {
   options.wayland.windowManager.hyprland.layout.hy3 = {
     enable = mkOption {
@@ -251,10 +252,10 @@ in {
       }
       (mkIf config.wayland.windowManager.hyprland.usingFlake {
         plugins = [
-          inputs.hy3.packages.${pkgs.system}.hy3
+          nr.hy3.packages.${pkgs.system}.hy3
         ];
         settings.permission = [
-          "${inputs.hy3.packages.${pkgs.system}.hy3}/lib/libhy3.so, plugin, allow"
+          "${nr.hy3.packages.${pkgs.system}.hy3}/lib/libhy3.so, plugin, allow"
         ];
       })
       (mkIf (! config.wayland.windowManager.hyprland.usingFlake) {

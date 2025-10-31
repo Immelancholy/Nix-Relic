@@ -7,6 +7,7 @@
 }:
 with lib; let
   cfg = config.wayland.windowManager.hyprland;
+  nr = inputs.nix-relic.inputs;
 in {
   options.wayland.windowManager.hyprland = {
     useHyprspace = mkOption {
@@ -43,10 +44,10 @@ in {
       }
       (mkIf cfg.usingFlake {
         plugins = [
-          inputs.Hyprspace.packages.${pkgs.system}.Hyprspace
+          nr.Hyprspace.packages.${pkgs.system}.Hyprspace
         ];
         settings.permission = [
-          "${inputs.Hyprspace.packages.${pkgs.system}.Hyprspace}/lib/libHyprspace.so, plugin, allow"
+          "${nr.Hyprspace.packages.${pkgs.system}.Hyprspace}/lib/libHyprspace.so, plugin, allow"
         ];
       })
       (mkIf (! cfg.usingFlake) {
