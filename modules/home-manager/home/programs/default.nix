@@ -29,7 +29,7 @@
     ./zathura.nix
     ./kitty.nix
     ./quickshell
-    inputs.zen-browser.homeModules.beta
+    inputs.nix-relic.inputs.zen-browser.homeModules.beta
   ];
 
   programs.zen-browser = {
