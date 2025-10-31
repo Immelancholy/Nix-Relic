@@ -9,6 +9,6 @@ inputs: {
     ./home-manager.nix
     ./wallpaper.nix
     ./system
-    inputs.stylix.nixosModules.stylix
+    inputs.nix-relic.outputs.inputs.stylix.nixosModules.stylix
   ];
 }

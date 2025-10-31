@@ -98,9 +98,9 @@
 
     overlays.default = overlay;
 
-    nixosModules.default = import ./modules/nixos/default.nix {inherit inputs;};
+    nixosModules.default = import ./modules/nixos/default.nix {inherit inputs outputs;};
 
-    homeManagerModules.default = import ./modules/home-manager/default.nix;
+    homeManagerModules.default = import ./modules/home-manager/default.nix {inherit inputs outputs;};
 
     templates = {
       default = {
