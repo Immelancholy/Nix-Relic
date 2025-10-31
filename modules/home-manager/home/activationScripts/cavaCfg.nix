@@ -2,7 +2,7 @@
   lib,
   pkgs,
   config,
-  inputs,
+  nixosConfig,
   ...
 }: let
   cavaCfg = pkgs.nr.cavaCfg.override {
@@ -13,7 +13,7 @@
     color5 = "#${config.lib.stylix.colors.base0A}";
     color6 = "#${config.lib.stylix.colors.base09}";
     color7 = "#${config.lib.stylix.colors.base08}";
-    framerate = "${builtins.toString config.nix-relic.framerates.cava}";
+    framerate = "${builtins.toString nixosConfig.nix-relic.framerates.cava}";
   };
 in {
   home = {
