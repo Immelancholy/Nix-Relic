@@ -64,7 +64,8 @@
 
   services.cavaCfg = {
     enable = true;
-    framerate = config.nix-relic.framerates.cava;
+    framerate = config.nix-relic.cava.framerate;
+    noiseReduction = config.nix-relic.cava.noiseReduction;
     colors = {
       color1 = "#${config.lib.stylix.colors.base0E}";
       color2 = "#${config.lib.stylix.colors.base0D}";

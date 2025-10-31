@@ -109,7 +109,8 @@
       color5 = "#${config.lib.stylix.colors.base0A}";
       color6 = "#${config.lib.stylix.colors.base09}";
       color7 = "#${config.lib.stylix.colors.base08}";
-      framerate = "${builtins.toString config.nix-relic.framerates.cava}";
+      framerate = "${builtins.toString config.nix-relic.cava.framerate}";
+      noiseReduction = "${builtins.toString config.nix-relic.cava.noiseReduction}";
     })
     nr.checkshell
     nr.cliphist

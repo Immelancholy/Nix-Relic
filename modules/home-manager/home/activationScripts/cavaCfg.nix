@@ -13,7 +13,8 @@
     color5 = "#${config.lib.stylix.colors.base0A}";
     color6 = "#${config.lib.stylix.colors.base09}";
     color7 = "#${config.lib.stylix.colors.base08}";
-    framerate = "${builtins.toString nixosConfig.nix-relic.framerates.cava}";
+    framerate = "${builtins.toString nixosConfig.nix-relic.cava.framerate}";
+    noiseReduction = "${builtins.toString nixosConfig.nix-relic.cava.noiseReduction}";
   };
 in {
   home = {

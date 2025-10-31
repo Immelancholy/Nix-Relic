@@ -8,7 +8,8 @@
   color5 ? "",
   color6 ? "",
   color7 ? "",
-  framerate ? "",
+  framerate ? "60",
+  noiseReduction ? "30",
   cavaDir ? "$HOME/.config/cava",
   ...
 }:
@@ -17,12 +18,6 @@ writeShellScriptBin "cavaCfg" ''
   cavaConfigFile="$cavaDir/config"
   id=$(${pkgs.wireplumber}/bin/wpctl status | grep "virtual_cable_in" | ${pkgs.gawk}/bin/awk '{print $2}' | grep -m1 "" | cut -f1 -d ".")
   serial=$(${pkgs.wireplumber}/bin/wpctl inspect "''${id}" | sed -n 's/.*object.serial = //p')
-  if $(( ${framerate} > 144 )); then
-    framerate=144
-  else
-    framerate=${framerate}
-  fi
-  reduce=$((framerate / 2))
 
   if [ ! -d "$cavaDir" ]; then
     echo "Making cava Directory"
@@ -44,7 +39,7 @@ writeShellScriptBin "cavaCfg" ''
   bar_spacing=0
   bar_width=1
   bars=0
-  framerate=''${framerate}
+  framerate=${framerate}
   sensitivity=100
 
   [input]
@@ -58,7 +53,7 @@ writeShellScriptBin "cavaCfg" ''
 
   [smoothing]
   monstercat=1
-  noise_reduction=''${reduce}
+  noise_reduction=${noiseReduction}
   waves=0
   EOF
 ''

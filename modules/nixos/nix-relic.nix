@@ -12,12 +12,19 @@ in {
       default = "";
       description = "Path to Nix-Relic config flake folder";
     };
-    framerates = {
-      cava = mkOption {
+    cava = {
+      framerate = mkOption {
         type = types.int;
         default = 60;
         description = "Cava's framerate";
       };
+      noiseReduction = mkOption {
+        type = types.int;
+        default = 30;
+        description = "Cava's noise reduction";
+      };
+    };
+    framerates = {
       steamGamescopeSession = mkOption {
         type = types.int;
         default = 60;

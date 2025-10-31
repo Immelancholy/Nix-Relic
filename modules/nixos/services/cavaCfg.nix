@@ -15,6 +15,7 @@
     color6 = "${cfg.colors.color6}";
     color7 = "${cfg.colors.color7}";
     framerate = "${builtins.toString cfg.framerate}";
+    noiseReduction = "${builtins.toString cfg.noiseReduction}";
   };
 in {
   options.services.cavaCfg = {
@@ -22,6 +23,10 @@ in {
     framerate = lib.mkOption {
       type = lib.types.int;
       default = 60;
+    };
+    noiseReduction = lib.mkOption {
+      type = lib.types.int;
+      default = 30;
     };
     colors = {
       color1 = lib.mkOption {
