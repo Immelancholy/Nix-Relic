@@ -1,9 +1,9 @@
-inputs: {
+self: {
   imports = [
     ./wayland
     ./programs
     ./home
-    inputs.nixvim.homeModules.nixvim
-    inputs.artis.homeManagerModules.default
+    self.inputs.nixvim.homeModules.nixvim
+    self.inputs.artis.homeManagerModules.default
   ];
 }
