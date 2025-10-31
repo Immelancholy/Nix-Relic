@@ -1,10 +1,10 @@
 {
   pkgs,
-  self,
+  inputs,
   ...
 }: {
   imports = [
-    self.inputs.stylix.nixosModules.stylix
+    inputs.nix-relic.inputs.stylix.nixosModules.stylix
   ];
   stylix = {
     homeManagerIntegration = {
