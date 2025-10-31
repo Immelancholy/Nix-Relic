@@ -75,7 +75,6 @@
   outputs = {
     self,
     nixpkgs,
-    stylix,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -99,7 +98,7 @@
 
     overlays.default = overlay;
 
-    nixosModules.default = import ./modules/nixos/default.nix;
+    nixosModules.default = import ./modules/nixos/default.nix {inherit inputs;};
 
     homeManagerModules.default = import ./modules/home-manager/default.nix;
 

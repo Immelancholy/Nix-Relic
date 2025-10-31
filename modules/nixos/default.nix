@@ -1,4 +1,4 @@
-self: {
+inputs: {
   imports = [
     ./boot
     ./drivers
@@ -9,6 +9,6 @@ self: {
     ./home-manager.nix
     ./wallpaper.nix
     ./system
-    self.inputs.stylix.nixosModules.stylix
+    inputs.stylix.nixosModules.stylix
   ];
 }
