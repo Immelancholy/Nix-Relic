@@ -125,7 +125,9 @@
     })
     nr.btop
     nr.cava
-    nr.neo
+    (nr.neo.override {
+      framerate = "${builtins.toString config.nix-relic.framerates.neo}";
+    })
     nr.rofi-power-menu
     nr.tmux_dev
     nr.tmux_nix

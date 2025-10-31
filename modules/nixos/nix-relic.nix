@@ -30,6 +30,11 @@ in {
         default = 60;
         description = "Steam gamescope session's framerate";
       };
+      neo = mkOption {
+        type = types.int;
+        default = 60;
+        description = "Neo framerate";
+      }
     };
   };
   config = {
