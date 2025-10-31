@@ -6,6 +6,12 @@
   ...
 }: {
   nix-relic = {
+    hostHomeFolderStructure = false;
+    flakePath = "/home/mela/NixDots";
+    framerates = {
+      cava = 144;
+      steamGamescopeSession = 280;
+    };
     wallpaper = {
       path = "${nix-relic}/backgrounds/Evil_Miku.png";
       animatedWallpaper = {

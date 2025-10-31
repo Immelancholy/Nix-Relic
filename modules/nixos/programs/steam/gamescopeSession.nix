@@ -11,7 +11,7 @@
     gamescopeArgs=(
         --rt
         -e
-        -r $FRAMERATE
+        -r ${builtins.toString config.nix-relic.framerates.steamGamescopeSession}
         -f
     ${cfg.extraGamescopeArgs}
     )
