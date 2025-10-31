@@ -34,7 +34,7 @@ in {
         type = types.int;
         default = 60;
         description = "Neo framerate";
-      }
+      };
     };
   };
   config = {
