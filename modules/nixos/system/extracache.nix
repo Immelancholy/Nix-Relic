@@ -1,7 +1,13 @@
 {
   nix.settings = {
-    extra-substituters = ["https://yazi.cachix.org"];
-    extra-trusted-public-keys = ["yazi.cachix.org-1:Dcdz63NZKfvUCbDGngQDAZq6kOroIrFoyO064uvLh8k="];
+    extra-trusted-public-keys = [
+      "flox-cache-public-1:7F4OyH7ZCnFhcze3fJdfyXYLQw/aV7GEed86nQ7IsOs="
+      "yazi.cachix.org-1:Dcdz63NZKfvUCbDGngQDAZq6kOroIrFoyO064uvLh8k="
+    ];
+    extra-trusted-substituters = [
+      "https://yazi.cachix.org"
+      "https://cache.flox.dev"
+    ];
     substituters = [
       "https://hyprland.cachix.org"
       "https://nix-community.cachix.org"
