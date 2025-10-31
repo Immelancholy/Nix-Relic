@@ -6,7 +6,6 @@
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
     nix-relic = {
       url = "github:Immelancholy/Nix-Relic";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -20,9 +19,9 @@
 
   outputs = {
     self,
-    nix-relic,
     nixpkgs,
     home-manager,
+    nix-relic,
     ...
   } @ inputs: let
     inherit (self) outputs;
