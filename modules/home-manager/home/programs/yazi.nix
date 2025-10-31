@@ -1,18 +1,19 @@
 {
   inputs,
   pkgs,
+  nix-relic,
   ...
 }: {
   programs.yazi = {
     enable = true;
-    package = inputs.yazi.packages.${pkgs.system}.default;
+    package = nix-relic.inputs.yazi.packages.${pkgs.system}.default;
     enableZshIntegration = true;
     shellWrapperName = "y";
     plugins = {
-      full-border = "${inputs.yazi-plugins}/full-border.yazi";
-      git = "${inputs.yazi-plugins}/git.yazi";
-      mount = "${inputs.yazi-plugins}/mount.yazi";
-      yamb = "${inputs.yamb}";
+      full-border = "${nix-relic.inputs.yazi-plugins}/full-border.yazi";
+      git = "${nix-relic.inputs.yazi-plugins}/git.yazi";
+      mount = "${nix-relic.inputs.yazi-plugins}/mount.yazi";
+      yamb = "${nix-relic.inputs.yamb}";
     };
     initLua = ''
       local bookmarks = {}
