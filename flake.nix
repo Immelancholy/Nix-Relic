@@ -65,8 +65,7 @@
       inputs.hyprland.follows = "hyprland";
     };
     hy3 = {
-      # url = "github:outfoxxed/hy3";
-      url = "github:nnra6864/hy3/replace-generateVersion";
+      url = "github:outfoxxed/hy3";
       inputs.hyprland.follows = "hyprland";
     };
     stylix.url = "github:Immelancholy/stylix";
