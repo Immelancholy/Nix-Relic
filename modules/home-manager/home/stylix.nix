@@ -7,8 +7,8 @@
   playerClass = config.player.class;
   playerCmd = config.player.cmd;
   launches = pkgs.writeShellScriptBin "launches" ''
-    dunstctl close-all
     dunstctl set-paused true
+    dunstctl close-all
     /run/current-system/sw/bin/hyprctl dispatch signalwindow 'class:(${playerClass}),9'
     /run/current-system/sw/bin/hyprctl dispatch signalwindow 'class:(neo),9'
     /run/current-system/sw/bin/hyprctl dispatch signalwindow 'class:(fastfetch),9'
@@ -24,6 +24,7 @@
     sleep 1
     systemctl restart --user waybar
     dunstctl set-paused false
+    dunstctl close-all
     notify-send "~<|Theme loaded!|>~"
   '';
 in {
