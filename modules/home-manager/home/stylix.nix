@@ -20,8 +20,6 @@
     /run/current-system/sw/bin/hyprctl dispatch exec '[workspace 1 silent; float; size 888 559; move 610 42] ${playerCmd}'
     systemctl restart --user easyeffects
     systemctl restart --user qpwgraph
-    sleep 1
-    systemctl restart --user waybar
   '';
 in {
   nixpkgs.overlays = lib.mkForce null;
