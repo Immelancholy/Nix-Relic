@@ -1,4 +1,23 @@
-{config, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: let
+  playerCmd = config.player.cmd;
+  playerClass = config.player.class;
+  launches = pkgs.writeShellScriptBin "launches" ''
+    /run/current-system/sw/bin/hyprctl dispatch signalwindow 'class:(${playerClass}),9'
+    /run/current-system/sw/bin/hyprctl dispatch signalwindow 'class:(neo),9'
+    /run/current-system/sw/bin/hyprctl dispatch signalwindow 'class:(fastfetch),9'
+    /run/current-system/sw/bin/hyprctl dispatch signalwindow 'class:(btop),9'
+    /run/current-system/sw/bin/hyprctl dispatch signalwindow 'class:(cava),9'
+    /run/current-system/sw/bin/hyprctl dispatch exec '[workspace 1 silent; float; size 888 462; move 610 609] uwsm app -- kitty --class "cava" cava.sh'
+    /run/current-system/sw/bin/hyprctl dispatch exec '[workspace 1 silent; float; size 590 637; move 10 433] uwsm app -- kitty --class "btop" btop.sh'
+    /run/current-system/sw/bin/hyprctl dispatch exec '[workspace 1 silent; float; size 402 1030; move 1508 42]  uwsm app -- kitty --class "neo" neo.sh'
+    /run/current-system/sw/bin/hyprctl dispatch exec '[workspace 1 silent; float; size 590 383; move 10 42] uwsm app -- kitty --class "fastfetch" kitty @ launch --type overlay --env class="fastfetch"'
+    /run/current-system/sw/bin/hyprctl dispatch exec '[workspace 1 silent; float; size 888 559; move 610 42] ${playerCmd}'
+  '';
+in {
   wayland.windowManager.hyprland.settings = {
     bindm = [
       "$mod, mouse:272, movewindow"
@@ -14,7 +33,7 @@
         "$mod, C, exec, $edit"
         "Alt, Return, fullscreen"
         "Alt, Tab, exec, rofi -show window -modi window"
-        "$mods, U, exec, launches.sh"
+        "$mods, U, exec, ${lib.getExe launches}"
         "$mod, Delete, exec, rofi -show power-menu -modi power-menu:rofi-power-menu"
         "$mod, 0, workspace, 10"
         "Ctrl+Shift, L, exec, uwsm-app -- swaylock -fF"
