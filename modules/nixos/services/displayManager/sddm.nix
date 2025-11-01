@@ -21,6 +21,11 @@ in {
       default = false;
       description = ''Use sddm as display manager'';
     };
+    compositor = mkOption {
+      type = types.bool;
+      default = "weston";
+      description = ''What compositor to use for sddm'';
+    };
     screenWidth = mkOption {
       type = types.str;
       default = "1920";
@@ -40,7 +45,7 @@ in {
       enable = true;
       wayland = {
         enable = true;
-        compositor = "weston";
+        compositor = "${cfg.compositor}";
       };
       autoNumlock = true;
       package = pkgs.kdePackages.sddm;
