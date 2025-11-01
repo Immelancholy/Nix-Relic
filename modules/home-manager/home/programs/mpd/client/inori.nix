@@ -26,6 +26,24 @@ in {
     package = inputs.nix-relic.inputs.inori.packages.${pkgs.system}.default;
     settings = {
       qwerty_keybindings = true;
+      keybindings = {
+        seek = [
+          "S-l"
+          "S-<right>"
+        ];
+        seek_backwards = [
+          "S-h"
+          "S-<left>"
+        ];
+        "next song" = [
+          "S-j"
+          "S-<down>"
+        ];
+        "previous song" = [
+          "S-k"
+          "S-<up>"
+        ];
+      };
       theme = {
         item_highlight_active = {
           fg = "${base}";
