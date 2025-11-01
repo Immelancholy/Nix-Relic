@@ -38,12 +38,6 @@ in {
     (mkIf (config.wayland.windowManager.hyprland.enable && cfg.enable) {
       wayland.windowManager.hyprland.settings = {
         "$player" = "${cfg.name}";
-        exec-once = [
-          ''[workspace 1 silent; float; size 888 559; move 610 42] ${cfg.cmd}''
-        ];
-        bind = [
-          ''$mods, U, exec, [workspace 1 silent; float; size 888 559; move 610 42] ${cfg.cmd}''
-        ];
       };
     })
     (mkIf (cfg.enable && config.player.name == "mpd" && ! config.player.scriptUseDefaultSink) {
