@@ -35,11 +35,11 @@ in {
           "S-h"
           "S-<left>"
         ];
-        "next song" = [
+        next_song = [
           "S-j"
           "S-<down>"
         ];
-        "previous song" = [
+        previous_song = [
           "S-k"
           "S-<up>"
         ];
