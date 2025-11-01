@@ -7,10 +7,9 @@
   playerClass = config.player.class;
   playerCmd = config.player.cmd;
   launches = pkgs.writeShellScriptBin "launches" ''
-    systemctl restart --user easyeffects
-    systemctl restart --user qpwgraph
     sleep 1
-    systemctl restart --user mpd
+    systemctl restart --user qpwgraph
+    systemctl restart --user easyeffects
     systemctl restart --user waybar
     /run/current-system/sw/bin/hyprctl dispatch signalwindow 'class:(${playerClass}),9'
     /run/current-system/sw/bin/hyprctl dispatch signalwindow 'class:(neo),9'
