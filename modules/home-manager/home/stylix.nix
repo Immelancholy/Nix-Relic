@@ -21,6 +21,8 @@
     systemctl restart --user qpwgraph
     sleep 1
     systemctl restart --user waybar
+    dunstctl close-all
+    notify-send "~<|Theme loaded!|>~"
   '';
 in {
   nixpkgs.overlays = lib.mkForce null;
