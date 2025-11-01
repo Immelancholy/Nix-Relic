@@ -4,6 +4,7 @@
   playerClass ? "mpd",
 }:
 writeShellScriptBin "launches.sh" ''
+  sleep 1
   hyprctl dispatch signalwindow 'class:(${playerClass}),9'
   hyprctl dispatch signalwindow 'class:(neo),9'
   hyprctl dispatch signalwindow 'class:(fastfetch),9'
