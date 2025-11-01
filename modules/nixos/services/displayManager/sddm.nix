@@ -22,7 +22,7 @@ in {
       description = ''Use sddm as display manager'';
     };
     compositor = mkOption {
-      type = types.bool;
+      type = types.str;
       default = "weston";
       description = ''What compositor to use for sddm'';
     };
