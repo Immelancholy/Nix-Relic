@@ -90,11 +90,6 @@
     })
   ];
 
-  services.kdeconnect = {
-    enable = true;
-    indicator = true;
-  };
-
   programs.btop = {
     enable = true;
     package = pkgs.btop.override {

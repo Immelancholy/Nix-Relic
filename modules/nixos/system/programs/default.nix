@@ -26,6 +26,8 @@
 
   programs.xfconf.enable = true;
 
+  programs.localsend.enable = true;
+
   services.gvfs.enable = true; # Mount, trash, and other functionalities
   services.tumbler.enable = true; # Thumbnail support for images
   services.gnome.gnome-keyring.enable = true;
