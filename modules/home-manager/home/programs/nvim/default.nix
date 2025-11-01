@@ -755,6 +755,11 @@ in {
     package = nrm.neovim-nightly-overlay.packages.${pkgs.system}.default;
     keymaps = [
       {
+        action = "<Cmd>Terminal<CR>";
+        key = "<leader>tt";
+        mode = ["n" "v"];
+      }
+      {
         action = "<Cmd>Neotree toggle<CR>";
         key = "<leader>e";
         mode = ["n" "v"];
