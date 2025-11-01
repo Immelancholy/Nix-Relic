@@ -28,20 +28,20 @@ in {
       qwerty_keybindings = true;
       keybindings = {
         seek = [
-          "S-l"
-          "S-<right>"
+          "C-l"
+          "C-<right>"
         ];
         seek_backwards = [
-          "S-h"
-          "S-<left>"
+          "C-h"
+          "C-<left>"
         ];
         next_song = [
-          "S-j"
-          "S-<down>"
+          "C-j"
+          "C-<down>"
         ];
         previous_song = [
-          "S-k"
-          "S-<up>"
+          "C-k"
+          "C-<up>"
         ];
       };
       theme = {
