@@ -104,7 +104,7 @@ HELP
 
     if [ "$(pgrep -c -f "cava -p ${config_file}")" -ge "${max_instances}" ]; then
         echo "Cava reached max instances, restarting cava"
-        notify-send "Cava reached max instances, restarting cava... update the config file to increase the max instances"
+        # notify-send "Cava reached max instances, restarting cava... update the config file to increase the max instances"
         pkill -o -f "cava -p ${config_file}" # kill the oldest instance
 
     fi

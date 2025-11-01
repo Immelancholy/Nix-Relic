@@ -7,7 +7,6 @@
   playerClass = config.player.class;
   playerCmd = config.player.cmd;
   launches = pkgs.writeShellScriptBin "launches" ''
-    sleep 1
     /run/current-system/sw/bin/hyprctl dispatch signalwindow 'class:(${playerClass}),9'
     /run/current-system/sw/bin/hyprctl dispatch signalwindow 'class:(neo),9'
     /run/current-system/sw/bin/hyprctl dispatch signalwindow 'class:(fastfetch),9'
@@ -20,6 +19,8 @@
     /run/current-system/sw/bin/hyprctl dispatch exec '[workspace 1 silent; float; size 888 559; move 610 42] ${playerCmd}'
     systemctl restart --user easyeffects
     systemctl restart --user qpwgraph
+    sleep 1
+    systemctl restart --user waybar
   '';
 in {
   nixpkgs.overlays = lib.mkForce null;
