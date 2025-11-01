@@ -39,7 +39,7 @@ in {
         horizontal_padding = 10;
         max_icon_size = 256;
         # font = "JetBrainsMono Nerd Font Mono 10";
-        font = "${config.stylix.fonts.monospace.name} 11";
+        font = "${config.stylix.fonts.monospace.name} 10";
         mouse_left_click = "do_action, close_current";
         mouse_middle_click = "close_current";
         dmenu = "rofi -dmenu";
