@@ -1,7 +1,5 @@
 {
   pkgs,
-  inputs,
-  config,
   nix-relic,
   ...
 }: {
@@ -13,6 +11,7 @@
     };
     framerates = {
       steamGamescopeSession = 60;
+      neo = 60;
     };
     wallpaper = {
       path = "${nix-relic}/backgrounds/Evil_Miku.png";

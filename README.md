@@ -38,12 +38,19 @@ nix flake init -t github:Immelancholy/Nix-Relic
 ```
 {
   pkgs,
-  inputs,
-  config,
   nix-relic,
   ...
 }: {
   nix-relic = {
+    flakePath = "/path/to/flake/folder";
+    cava = {
+      framerate = 60;
+      noiseReduction = 30;
+    };
+    framerates = {
+      steamGamescopeSession = 60;
+      neo = 60;
+    };
     wallpaper = {
       path = "${nix-relic}/backgrounds/Evil_Miku.png";
       animatedWallpaper = {
@@ -110,7 +117,7 @@ nix flake init -t github:Immelancholy/Nix-Relic
               dwindle.enable = false;
               hy3.enable = true;
             };
-            useHyprspace = true;
+            useHyprspace = false; # Broken atm
             settings = {
               cursor = {
                 no_hardware_cursors = false;
