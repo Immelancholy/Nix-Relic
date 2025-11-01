@@ -94,6 +94,8 @@
       ''float,title:^(Friends List)$''
       ''float,title:^(Steam Settings)$''
 
+      ''float,class:^(localsend_app)$''
+
       ''opacity 0.90 0.80,class:^(org.rncbc.qpwgraph)$''
       ''opacity 0.90 0.80,class:^(com.github.wwmm.easyeffects)$''
 
