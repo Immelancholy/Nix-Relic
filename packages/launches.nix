@@ -4,6 +4,9 @@
   playerClass ? "mpd",
 }:
 writeShellScriptBin "launches.sh" ''
+  systemctl restart --user easyeffects
+  systemctl restart --user qpwgraph
+  systemctl restart --user waybar
   sleep 1
   hyprctl dispatch signalwindow 'class:(${playerClass}),9'
   hyprctl dispatch signalwindow 'class:(neo),9'
@@ -15,7 +18,4 @@ writeShellScriptBin "launches.sh" ''
   hyprctl dispatch exec '[workspace 1 silent; float; size 402 1030; move 1508 42]  uwsm app -- kitty --class "neo" neo.sh'
   hyprctl dispatch exec '[workspace 1 silent; float; size 590 383; move 10 42] uwsm app -- kitty --class "fastfetch" kitty @ launch --type overlay --env class="fastfetch"'
   hyprctl dispatch exec '[workspace 1 silent; float; size 888 559; move 610 42] ${playerCmd}'
-  systemctl restart --user qpwgraph
-  systemctl restart --user easyeffects
-  systemctl restart --user waybar
 ''
