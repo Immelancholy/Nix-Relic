@@ -192,6 +192,7 @@
     # Display Manager to user, only enable 1
     sddm = {
       enable = false; #logout doesn't work right forcing you to do systemctl restart display-manager to get sddm to pop up again after logging out
+      compositor = "kwin";
       screenWidth = "1920";
       screenHeight = "1080";
     };
