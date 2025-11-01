@@ -7,6 +7,7 @@
   playerClass = config.player.class;
   playerCmd = config.player.cmd;
   launches = pkgs.writeShellScriptBin "launches" ''
+    dunstctl close-all
     /run/current-system/sw/bin/hyprctl dispatch signalwindow 'class:(${playerClass}),9'
     /run/current-system/sw/bin/hyprctl dispatch signalwindow 'class:(neo),9'
     /run/current-system/sw/bin/hyprctl dispatch signalwindow 'class:(fastfetch),9'
