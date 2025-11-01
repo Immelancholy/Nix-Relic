@@ -16,5 +16,5 @@ jobs:
         run:
           gh pr merge --auto "${{ steps.update.outputs.pull-request-number }}" --rebase
         env:
-            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+            GITHUB_TOKEN: ${{secrets.GH_TOKEN_FOR_UPDATES}}
         if: ${{ steps.update.outputs.pull-request-number != '' }}
