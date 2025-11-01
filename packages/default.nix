@@ -24,5 +24,4 @@ pkgs: {
   waycava = pkgs.callPackage ./waycava.nix {};
   satty = pkgs.callPackage ./satty.nix {};
   force-hdr = pkgs.callPackage ./hdr.nix {};
-  launches = pkgs.callPackage ./launches.nix {};
 }
