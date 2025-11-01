@@ -755,7 +755,7 @@ in {
     package = nrm.neovim-nightly-overlay.packages.${pkgs.system}.default;
     keymaps = [
       {
-        action = "<Cmd>Terminal<CR>";
+        action = "<Cmd>terminal<CR>";
         key = "<leader>tt";
         mode = ["n" "v"];
       }
