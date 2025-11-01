@@ -58,7 +58,7 @@ in {
   home.packages = with pkgs; [
     hyprpicker
     hyprshot
-    (nr.launcher.override {
+    (nr.launches.override {
       playerClass = "${playerClass}";
       playerCmd = "${playerCmd}";
     })
