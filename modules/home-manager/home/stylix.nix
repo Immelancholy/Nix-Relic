@@ -25,7 +25,7 @@
     systemctl restart --user waybar
     dunstctl set-paused false
     dunstctl close-all
-    notify-send "~<||Theme Loaded||>~"
+    notify-send "||-<(Theme Loaded)>-||"
   '';
 in {
   nixpkgs.overlays = lib.mkForce null;
