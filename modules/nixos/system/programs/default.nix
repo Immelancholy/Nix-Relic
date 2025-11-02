@@ -138,7 +138,7 @@
     nr.toggle-mute
     nr.waycava
     qpwgraph
-    pavucontrol
+    pwvucontrol
     pulsemixer
     bibata-cursors
     libopus
