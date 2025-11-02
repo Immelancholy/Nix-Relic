@@ -752,7 +752,7 @@ in {
       harpoon2
       yuck-vim
     ];
-    package = nrm.neovim-nightly-overlay.packages.${pkgs.system}.default;
+    package = nrm.neovim-nightly-overlay.packages.${pkgs.stdenv.hostPlatform.system}.default;
     keymaps = [
       {
         action = "<Cmd>terminal<CR>";

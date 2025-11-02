@@ -44,10 +44,10 @@ in {
       }
       (mkIf cfg.usingFlake {
         plugins = [
-          nr.Hyprspace.packages.${pkgs.system}.Hyprspace
+          nr.Hyprspace.packages.${pkgs.stdenv.hostPlatform.system}.Hyprspace
         ];
         settings.permission = [
-          "${nr.Hyprspace.packages.${pkgs.system}.Hyprspace}/lib/libHyprspace.so, plugin, allow"
+          "${nr.Hyprspace.packages.${pkgs.stdenv.hostPlatform.system}.Hyprspace}/lib/libHyprspace.so, plugin, allow"
         ];
       })
       (mkIf (! cfg.usingFlake) {

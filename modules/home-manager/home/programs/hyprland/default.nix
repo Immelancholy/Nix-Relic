@@ -25,9 +25,9 @@ in {
     }
     (lib.mkIf cfg.usingFlake {
       plugins = [
-        nrm.hyprland-plugins.packages.${pkgs.system}.csgo-vulkan-fix
-        nrm.hyprland-plugins.packages.${pkgs.system}.xtra-dispatchers
-        nrm.hyprland-easymotion.packages.${pkgs.system}.hyprland-easymotion
+        nrm.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.csgo-vulkan-fix
+        nrm.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.xtra-dispatchers
+        nrm.hyprland-easymotion.packages.${pkgs.stdenv.hostPlatform.system}.hyprland-easymotion
       ];
       settings = {
         bind = [
