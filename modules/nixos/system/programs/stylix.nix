@@ -6,10 +6,29 @@
   ...
 }: let
   colour = config.nix-relic.icons.colour;
+  cfg = config.nix-relic;
 in {
   imports = [
     inputs.nix-relic.inputs.stylix.nixosModules.stylix
   ];
+  nix-relic.icons =
+    if
+      cfg.path
+      == "${nix-relic}/backgrounds/Sailor_Moon.png"
+      || cfg.path == "${nix-relic}/backgrounds/Surtur.png"
+    then {
+      colour = "red";
+    }
+    else if
+      cfg.path
+      == "${nix-relic}/backgrounds/Momo_Smoke.png"
+      || cfg.path
+      == "${nix-relic}/backgrounds/Evil_Miku.png"
+    then {
+      colour = "dracula";
+    }
+    else {
+    };
   stylix = {
     homeManagerIntegration = {
       autoImport = true;
