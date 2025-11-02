@@ -26,7 +26,7 @@ in {
     ];
     bind =
       [
-        "Pause, exec, $playerctl play-pause"
+        ", Pause, exec, $playerctl play-pause"
         "$mod, T, exec, $term"
         ''$mods, T, exec, $term --class "tmux" tmux''
         "$mod, F, exec, $browser"
