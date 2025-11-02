@@ -100,7 +100,7 @@
     libnotify
     wl-clipboard
     sbctl
-    inputs.nix-relic.inputs.yazi.packages.${pkgs.system}.default
+    inputs.nix-relic.inputs.yazi.packages.${pkgs.stdenv.hostPlatform.system}.default
     nr.brightness
     nr.force-hdr
     (nr.cavaCfg.override {
