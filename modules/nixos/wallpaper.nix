@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  nix-relic,
   ...
 }:
 with lib; let
