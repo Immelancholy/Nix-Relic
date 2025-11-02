@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  osConfig,
   pkgs,
   ...
 }: let
@@ -27,9 +28,20 @@
     dunstctl close-all
     notify-send "|-<(Theme Loaded)>-|"
   '';
+  iconColour = osConfig.nix-relic.icons.colour;
 in {
   nixpkgs.overlays = lib.mkForce null;
   stylix = {
+    icons = {
+      enable = true;
+      package = pkgs.tela-circle-icon-theme.override {
+        colorVariants = [
+          "${iconColour}"
+        ];
+      };
+      dark = "Tela-circle-${iconColour}";
+      light = "Tela-circle-${iconColour}";
+    };
     targets = {
       dunst.enable = false;
       rofi.enable = false;
