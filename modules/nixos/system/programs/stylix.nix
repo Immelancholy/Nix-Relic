@@ -1,8 +1,12 @@
 {
   pkgs,
   inputs,
+  config,
+  nix-relic,
   ...
-}: {
+}: let
+  colour = config.nix-relic.icons.colour;
+in {
   imports = [
     inputs.nix-relic.inputs.stylix.nixosModules.stylix
   ];
@@ -18,6 +22,16 @@
       package = pkgs.bibata-cursors;
       name = "Bibata-Modern-Ice";
       size = 24;
+    };
+    stylix.icons = {
+      enable = true;
+      package = pkgs.tela-circle-icon-theme.override {
+        colorVariants = [
+          "${colour}"
+        ];
+      };
+      dark = "Tela-circle-${colour}";
+      light = "Tela-circle-${colour}";
     };
     fonts = {
       monospace = {

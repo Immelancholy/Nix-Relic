@@ -26,10 +26,31 @@ in {
       };
     };
   };
-  config = {
-    stylix = {
-      polarity = cfg.polarity;
-      image = cfg.path;
-    };
-  };
+  config = mkMerge [
+    {
+      stylix = {
+        polarity = cfg.polarity;
+        image = cfg.path;
+      };
+    }
+    (
+      if
+        cfg.path
+        == "${nix-relic}/backgrounds/Sailor_Moon.png"
+        || cfg.path == "${nix-relic}/backgrounds/Surtur.png"
+      then {
+        nix-relic.icons.colour = "red";
+      }
+      else if
+        cfg.path
+        == "${nix-relic}/backgrounds/Momo_Smoke.png"
+        || cfg.path
+        == "${nix-relic}/backgrounds/Evil_Miku.png"
+      then {
+        nix-relic.icons.colour = "dracula";
+      }
+      else {
+      }
+    )
+  ];
 }

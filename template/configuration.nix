@@ -25,17 +25,6 @@
         isNormalUser = true;
         isAdmin = true; #enable or disable this to give or take sudo access.
         home-config = {
-          stylix.iconTheme = {
-            enable = true;
-            package = pkgs.tela-circle-icon-theme.override {
-              colorVariants = [
-                "dracula"
-              ];
-            };
-            dark = "Tela-circle-dracula";
-            light = "Tela-circle-dracula";
-          };
-
           programs.vesktop = {
             enable = true;
           };

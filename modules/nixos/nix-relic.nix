@@ -36,6 +36,13 @@ in {
         description = "Neo framerate";
       };
     };
+    icons = {
+      colour = mkOption {
+        type = types.str;
+        default = "";
+        description = "Colour to use for tela circle icon theme";
+      };
+    };
   };
   config = {
     environment.sessionVariables = {
