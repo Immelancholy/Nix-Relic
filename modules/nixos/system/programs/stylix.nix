@@ -24,8 +24,16 @@ in {
     then {
       colour = "orange";
     }
+    else if "${image}" == "${nix-relic}/backgrounds/Momo_Smoke.png"
+    then {
+      colour = "blue";
+    }
+    else if "${image}" == "${nix-relic}/backgrounds/Smoke_In_Rain.png"
+    then {
+      colour = "purple";
+    }
     else {
-      colour = "dracula";
+      colour = "standard";
     };
   stylix = {
     homeManagerIntegration = {
