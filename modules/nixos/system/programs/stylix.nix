@@ -6,7 +6,7 @@
   ...
 }: let
   colour = config.nix-relic.icons.colour;
-  cfg = config.nix-relic;
+  cfg = config.nix-relic.wallpaper;
 in {
   imports = [
     inputs.nix-relic.inputs.stylix.nixosModules.stylix
