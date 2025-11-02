@@ -153,7 +153,7 @@ in {
         };
         tooltip-format = "{icon} {desc} // {volume}%";
         # on-click = ''hyprctl dispatch exec "[float; size 960 560]" kitty tmux_pulse.sh'';
-        on-click = "pwvucontrol -t 3";
+        on-click = "pwvucontrol -t 4";
       };
       "battery" = {
         interval = 5;
@@ -183,7 +183,7 @@ in {
         format-source = "󰍬";
         format-source-muted = "󰍭";
         # on-click = ''hyprctl dispatch exec "[float; size 960 560]" kitty tmux_pulse.sh'';
-        on-click = "pwvucontrol -t 4";
+        on-click = "pwvucontrol -t 3";
 
         tooltip-format = "{format_source} {source_desc} // {source_volume}%";
       };
