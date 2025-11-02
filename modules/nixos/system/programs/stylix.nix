@@ -5,24 +5,18 @@
   nix-relic,
   ...
 }: let
-  colour = config.nix-relic.icons.colour;
+  iconColour = config.nix-relic.icons.colour;
   cfg = config.nix-relic.wallpaper;
 in {
   imports = [
     inputs.nix-relic.inputs.stylix.nixosModules.stylix
   ];
   nix-relic.icons =
-    if
-      cfg.path
-      == "${nix-relic}/backgrounds/Sailor_Moon.png"
+    if cfg.path == "${nix-relic}/backgrounds/Sailor_Moon.png"
     then {
       colour = "red";
     }
-    else if
-      cfg.path
-      == "${nix-relic}/backgrounds/Momo_Smoke.png"
-      || cfg.path
-      == "${nix-relic}/backgrounds/Evil_Miku.png"
+    else if cfg.path == "${nix-relic}/backgrounds/Evil_Miku.png"
     then {
       colour = "dracula";
     }
@@ -31,6 +25,7 @@ in {
       colour = "orange";
     }
     else {
+      colour = "dracula";
     };
   stylix = {
     homeManagerIntegration = {
@@ -49,11 +44,11 @@ in {
       enable = true;
       package = pkgs.tela-circle-icon-theme.override {
         colorVariants = [
-          "${colour}"
+          "${iconColour}"
         ];
       };
-      dark = "Tela-circle-${colour}";
-      light = "Tela-circle-${colour}";
+      dark = "Tela-circle-${iconColour}";
+      light = "Tela-circle-${iconColour}";
     };
     fonts = {
       monospace = {
