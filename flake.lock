@@ -61,11 +61,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1762058367,
+        "lastModified": 1762062902,
         "narHash": "sha256-9FTCs7cqLFQfzSdADT3vqQKdmT2EgTuliYz2kwbiIjA=",
         "owner": "Immelancholy",
         "repo": "artis",
-        "rev": "853314bdfcadef624cca11ba992f198579ed9367",
+        "rev": "21934ed1fd204d1df11980573f321f279c636fd8",
         "type": "github"
       },
       "original": {
@@ -1200,11 +1200,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1762057638,
-        "narHash": "sha256-19E1CjkfI+v0zaoarh+Z+UY+mNbAt/mzFz9a1bBaFhc=",
+        "lastModified": 1762062671,
+        "narHash": "sha256-xhQUmtQOrIBiVdp+KtSS7ppiz4Vp82VRqCG7eVMcpNI=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "31b25d9160e64c254a4675470edbad5a48a495f3",
+        "rev": "98673b7304b6214699ef13ffe8c10614709c3633",
         "type": "github"
       },
       "original": {
