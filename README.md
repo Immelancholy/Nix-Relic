@@ -63,17 +63,6 @@ nix flake init -t github:Immelancholy/Nix-Relic
         isNormalUser = true;
         isAdmin = true; #enable or disable this to give or take sudo access.
         home-config = {
-          stylix.iconTheme = {
-            enable = true;
-            package = pkgs.tela-circle-icon-theme.override {
-              colorVariants = [
-                "dracula"
-              ];
-            };
-            dark = "Tela-circle-dracula";
-            light = "Tela-circle-dracula";
-          };
-
           programs.vesktop = {
             enable = true;
           };
@@ -230,6 +219,7 @@ nix flake init -t github:Immelancholy/Nix-Relic
     # Display Manager to user, only enable 1
     sddm = {
       enable = false; #logout doesn't work right forcing you to do systemctl restart display-manager to get sddm to pop up again after logging out
+      compositor = "kwin";
       screenWidth = "1920";
       screenHeight = "1080";
     };
