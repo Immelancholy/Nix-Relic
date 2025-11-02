@@ -6,6 +6,7 @@
   ...
 }: let
   image = config.nix-relic.wallpaper.path;
+  iconColour = config.nix-relic.icons.colour;
 in {
   imports = [
     inputs.nix-relic.inputs.stylix.nixosModules.stylix
@@ -32,6 +33,16 @@ in {
       followSystem = true;
     };
     enable = true;
+    icons = {
+      enable = true;
+      package = pkgs.tela-circle-icon-theme.override {
+        colorVariants = [
+          "${iconColour}"
+        ];
+      };
+      dark = "Tela-circle-${iconColour}";
+      light = "Tela-circle-${iconColour}";
+    };
     autoEnable = true;
     # targets.console.enable = false;
     cursor = {
