@@ -3,6 +3,7 @@
   description = "My NixOS and Hom Manager config.";
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixos-hardware.url = "github:nixos/nixos-hardware/master";
     nix-relic = {
       url = "github:Immelancholy/Nix-Relic";
     };
