@@ -39,7 +39,7 @@ in {
       name = "Bibata-Modern-Ice";
       size = 24;
     };
-    nixos.icons.enable = true;
+    targets.nixos.icons.enable = true;
     fonts = {
       monospace = {
         package = pkgs.nerd-fonts.caskaydia-cove;
