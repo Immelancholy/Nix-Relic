@@ -42,7 +42,7 @@ in {
       name = "Bibata-Modern-Ice";
       size = 24;
     };
-    stylix.icons = {
+    icons = {
       enable = true;
       package = pkgs.tela-circle-icon-theme.override {
         colorVariants = [
