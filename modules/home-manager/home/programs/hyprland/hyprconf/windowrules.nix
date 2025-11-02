@@ -25,7 +25,7 @@
       ''opacity 0.80 0.70,class:^(qt6ct)$''
       ''opacity 0.90 0.70,class:^(obsidian)$''
       ''opacity 0.80 0.70,class:^(kvantummanager)$''
-      ''opacity 0.90 0.70,class:^(org.pulseaudio.pavucontrol)$''
+      ''opacity 0.90 0.70,class:^(com.saivert.pwvucontrol)$''
       ''opacity 0.80 0.70,class:^(blueman-manager)$''
       ''opacity 0.80 0.70,class:^(nm-applet)$''
       ''opacity 0.80 0.70,class:^(nm-connection-editor)$''
@@ -75,7 +75,7 @@
       ''float,class:^(qt6ct)$''
       ''float,class:^(nwg-look)$''
       ''float,class:^(org.kde.ark)$''
-      ''float,class:^(org.pulseaudio.pavucontrol)$''
+      ''float,class:^(com.saivert.pwvucontrol)$''
       ''float,class:^(blueman-manager)$''
       ''float,class:^(nm-applet)$''
       ''float,class:^(nm-connection-editor)$''
@@ -119,7 +119,7 @@
       ''float, title:^(LocalSend)$''
       ''opacity 0.80 0.70, title:^(Qalculate!)$''
 
-      ''size 850 540,class:^(org.pulseaudio.pavucontrol)$''
+      ''size 850 540,class:^(com.saivert.pwvucontrol)$''
 
       ''float, title:(.*Properties*.)$''
       ''float, class:^(mpv)$''
