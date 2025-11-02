@@ -15,7 +15,6 @@ in {
     if
       cfg.path
       == "${nix-relic}/backgrounds/Sailor_Moon.png"
-      || cfg.path == "${nix-relic}/backgrounds/Surtur.png"
     then {
       colour = "red";
     }
@@ -26,6 +25,10 @@ in {
       == "${nix-relic}/backgrounds/Evil_Miku.png"
     then {
       colour = "dracula";
+    }
+    else if cfg.path == "${nix-relic}/backgrounds/Surtur.png"
+    then {
+      colour = "orange";
     }
     else {
     };
