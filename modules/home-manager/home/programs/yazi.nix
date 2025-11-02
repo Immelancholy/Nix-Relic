@@ -6,7 +6,7 @@
 }: {
   programs.yazi = {
     enable = true;
-    package = nix-relic.inputs.yazi.packages.${pkgs.system}.default;
+    package = nix-relic.inputs.yazi.packages.${pkgs.stdenv.hostPlatform.system}.default;
     enableZshIntegration = true;
     shellWrapperName = "y";
     plugins = {
