@@ -5,22 +5,21 @@
   nix-relic,
   ...
 }: let
-  iconColour = config.nix-relic.icons.colour;
-  cfg = config.nix-relic.wallpaper;
+  image = config.nix-relic.wallpaper.path;
 in {
   imports = [
     inputs.nix-relic.inputs.stylix.nixosModules.stylix
   ];
   nix-relic.icons =
-    if cfg.path == "${nix-relic}/backgrounds/Sailor_Moon.png"
+    if "${image}" == "${nix-relic}/backgrounds/Sailor_Moon.png"
     then {
       colour = "red";
     }
-    else if cfg.path == "${nix-relic}/backgrounds/Evil_Miku.png"
+    else if "${image}" == "${nix-relic}/backgrounds/Evil_Miku.png"
     then {
       colour = "dracula";
     }
-    else if cfg.path == "${nix-relic}/backgrounds/Surtur.png"
+    else if "${image}" == "${nix-relic}/backgrounds/Surtur.png"
     then {
       colour = "orange";
     }
@@ -40,16 +39,7 @@ in {
       name = "Bibata-Modern-Ice";
       size = 24;
     };
-    icons = {
-      enable = true;
-      package = pkgs.tela-circle-icon-theme.override {
-        colorVariants = [
-          "${iconColour}"
-        ];
-      };
-      dark = "Tela-circle-${iconColour}";
-      light = "Tela-circle-${iconColour}";
-    };
+    nixos.icons.enable = true;
     fonts = {
       monospace = {
         package = pkgs.nerd-fonts.caskaydia-cove;
