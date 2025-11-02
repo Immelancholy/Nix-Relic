@@ -32,6 +32,14 @@ in {
     then {
       colour = "purple";
     }
+    else if "${image}" == "${nix-relic}/backgrounds/Cyberpunk.png"
+    then {
+      colour = "yellow";
+    }
+    else if "${image}" == "${nix-relic}/backgrounds/Cyberpunk_Rain.png"
+    then {
+      colour = "purple";
+    }
     else {
       colour = "standard";
     };
