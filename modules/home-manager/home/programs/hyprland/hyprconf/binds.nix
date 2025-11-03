@@ -35,7 +35,7 @@ in {
         "$mod, grave, exec, $menu"
         "$mod, C, exec, $edit"
         "Alt, Return, fullscreen"
-        "Alt+Shift, Return, fullscreen"
+        "Alt+Shift, Return, fullscreen, 1"
         "Alt, Tab, exec, rofi -show window -modi window"
         "$mods, U, exec, ${lib.getExe launches}"
         "$mod, Delete, exec, rofi -show power-menu -modi power-menu:rofi-power-menu"
