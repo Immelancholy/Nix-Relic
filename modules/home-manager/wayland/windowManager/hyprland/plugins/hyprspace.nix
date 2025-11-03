@@ -10,13 +10,13 @@ with lib; let
   nr = inputs.nix-relic.inputs;
 in {
   options.wayland.windowManager.hyprland = {
-    useHyprspace = mkOption {
+    hyprspace.enable = mkOption {
       type = types.bool;
       default = false;
       description = ''Use Hyprspace'';
     };
   };
-  config = mkIf cfg.useHyprspace {
+  config = mkIf cfg.hyprspace.enable {
     wayland.windowManager.hyprland = mkMerge [
       {
         settings = {
