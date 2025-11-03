@@ -21,7 +21,7 @@ in {
       {
         settings = {
           bind = [
-            "$mod, Tab, overview:toggle"
+            "$mod, Space, overview:toggle"
           ];
 
           plugin = {
