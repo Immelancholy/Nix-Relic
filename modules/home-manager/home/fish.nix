@@ -11,6 +11,7 @@
       firmware = "sudo systemctl reboot --firmware-setup";
       gc = "nix-collect-garbage -d && sudo nix-collect-garbage -d";
       nv = "nvim";
+      lg = "lazygit";
     };
     plugins = [
       {
