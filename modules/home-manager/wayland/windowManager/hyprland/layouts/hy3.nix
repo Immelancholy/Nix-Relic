@@ -66,7 +66,6 @@ in {
               "$mod, Q, hy3:warpcursor"
               "$mods, X, hy3:movetoworkspace, special"
               "$mod, Tab, hy3:togglefocuslayer"
-              "$mod, W, togglefloating"
             ]
             ++ (
               # workspaces
@@ -90,8 +89,8 @@ in {
 
           bind = $mod, A, submap, manage
           submap = manage
-          bind = Alt, Return, fullscreen, 1
-          bind = Alt+Shift, Return, fullscreen
+          bind = Alt+Shift, Return, fullscreen, 1
+          bind = Alt, Return, fullscreen
           bind = , Q, hy3:warpcursor
           bind = , I, hy3:changefocus, raise
           bind = Shift, I, hy3:changefocus, lower
@@ -184,6 +183,9 @@ in {
 
           bind = $mods, R, submap, resize
           submap = resize
+          bind = Alt+Shift, Return, fullscreen, 1
+          bind = Alt, Return, fullscreen
+          bind = , W, togglefloating
           binde = , Right, resizeactive, 30 0
           binde = , Left, resizeactive, 30 0
           binde = , Left, moveactive, -30 0
@@ -217,6 +219,9 @@ in {
 
           bind = $mod, R, submap, resizeTiled
           submap = resizeTiled
+          bind = Alt+Shift, Return, fullscreen, 1
+          bind = Alt, Return, fullscreen
+          bind = , W, togglefloating
           binde = , Left, resizeactive, 1 0
           binde = , Right, resizeactive, -1 0
           binde = , Up, resizeactive, 0 -1
@@ -231,6 +236,9 @@ in {
 
           bind = , M, submap, move
           submap = move
+          bind = Alt+Shift, Return, fullscreen, 1
+          bind = Alt, Return, fullscreen
+          bind = , W, togglefloating
           binde = , Left, moveactive, 10 0
           binde = , Right, moveactive, -10 0
           binde = , Up, moveactive, 0 -10

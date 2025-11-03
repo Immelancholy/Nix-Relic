@@ -30,7 +30,6 @@ in {
             "$mods, 0, movetoworkspacesilent, 10"
             "$mods, Q, killactive"
             "$mods, X, movetoworkspacesilent, special"
-            "Alt+Shift, Return, fullscreen, 1"
           ]
           ++ (
             # workspaces
@@ -96,6 +95,9 @@ in {
 
         bind = Shift, R, submap, resize
         submap = resize
+        bind = Alt, Return, fullscreen, 1
+        bind = Alt+Shift, Return, fullscreen
+        bind = , W, togglefloating
         binde = , Right, resizeactive, 30 0
         binde = , Left, resizeactive, 30 0
         binde = , Left, moveactive, -30 0
@@ -129,6 +131,9 @@ in {
 
         bind = , R, submap, resizeTiled
         submap = resizeTiled
+        bind = Alt, Return, fullscreen, 1
+        bind = Alt+Shift, Return, fullscreen
+        bind = , W, togglefloating
         binde = , Left, resizeactive, 1 0
         binde = , Right, resizeactive, -1 0
         binde = , Up, resizeactive, 0 -1
@@ -143,6 +148,9 @@ in {
 
         bind = , M, submap, move
         submap = move
+        bind = Alt, Return, fullscreen, 1
+        bind = Alt+Shift, Return, fullscreen
+        bind = , W, togglefloating
         binde = , Left, moveactive, 10 0
         binde = , Right, moveactive, -10 0
         binde = , Up, moveactive, 0 -10
