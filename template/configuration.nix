@@ -68,7 +68,8 @@
               dwindle.enable = false;
               hy3.enable = true;
             };
-            useHyprspace = false; # Broken atm
+            hyprspace.enable = false; # Broken atm
+            hyprexpo.enable = true;
             settings = {
               cursor = {
                 no_hardware_cursors = false;
