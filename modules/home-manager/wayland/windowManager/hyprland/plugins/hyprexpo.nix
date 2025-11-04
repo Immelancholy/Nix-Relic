@@ -34,36 +34,6 @@ in {
             };
           };
         };
-        extraConfig = mkIf cfg.layout.hy3.enable ''
-          bind = $mod, Space, submap, hyprexpo
-          submap = hyprexpo
-          bind = $mod, Space, hyprexpo:expo, toggle
-          bind = , Escape, hyprexpo:expo, toggle
-          bind = $mod, L, hyprexpo:expo, off
-          bind = $mod, H, hyprexpo:expo, off
-          bind = $mod, J, hyprexpo:expo, off
-          bind = $mod, Right, hyprexpo:expo, off
-          bind = $mod, Left, hyprexpo:expo, off
-          bind = $mod, Down, hyprexpo:expo, off
-          bind = $mod, L, workspace, r+1
-          bind = $mod, H, workspace, r-1
-          bind = $mod, J, workspace, empty
-          bind = $mod, Right, workspace, r+1
-          bind = $mod, Left, workspace, r-1
-          bind = $mod, Down, workspace, empty
-          bind = $mod, Space, submap, reset
-          bind = $mod, L, submap, reset
-          bind = $mod, H, submap, reset
-          bind = $mod, J, submap, reset
-          bind = $mod, Right, submap, reset
-          bind = $mod, Left, submap, reset
-          bind = $mod, Down, submap, reset
-          bind = , Escape, submap, reset
-          bindnr = , mouse:272, submap, reset
-          bindnr = , mouse:273, submap, reset
-          bindnr = , mouse:274, submap, reset
-          submap = reset
-        '';
       }
       (mkIf cfg.usingFlake {
         plugins = [
