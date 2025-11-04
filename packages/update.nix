@@ -24,9 +24,11 @@ in
 
         if [ "''${booted}" = "''${built}" ]; then
           sudo nixos-rebuild switch --flake .#${host} |& nom
+          echo "Updates Complete!"
+        else
+          echo "Updates Complete! Please reboot system after exit."
         fi
 
-        echo "Updates Complete!"
         sleep 1
 
         while true; do
@@ -46,6 +48,9 @@ in
           esac
 
         done
+
+        sleep 1
+
         read -n 1 -p 'Press any key to continue...'
         exit 0
       fi
