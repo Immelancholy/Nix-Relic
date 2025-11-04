@@ -49,12 +49,5 @@ in {
     environment.sessionVariables = {
       FLAKE_PATH = "${cfg.flakePath}"; # path to flake.nix
     };
-    environment.systemPackages = [
-      (nr.update-system.override {
-        flakePath = "${cfg.flakePath}";
-        host = "${config.networking.hostName}";
-        withToken = cfg.updateScript.enableToken;
-      })
-    ];
   };
 }
