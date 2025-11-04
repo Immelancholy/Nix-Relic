@@ -12,10 +12,6 @@
 in
   writeShellScriptBin "update-system" ''
     update () {
-      sleep 1
-      echo "Updating System..."
-
-
       ${flakeUpdateCmd} --commit-lock-file
 
       echo "Password for sudo:"
