@@ -23,6 +23,7 @@ in {
       cava = "cava.sh";
       firmware = "sudo systemctl reboot --firmware-setup";
       gc = "nix-collect-garbage -d && sudo nix-collect-garbage -d";
+      lg = "lazygit";
     };
     history.size = 10000;
     history.ignoreAllDups = true;
