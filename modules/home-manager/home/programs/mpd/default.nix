@@ -42,6 +42,8 @@
         format = {
           details = "$title";
           state = "$album by $artist";
+          large_image = "";
+          small_image = "";
         };
       };
     };
