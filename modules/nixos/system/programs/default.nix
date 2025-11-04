@@ -72,10 +72,6 @@
     wantedBy = ["graphical-session.target"];
   };
   environment.systemPackages = with pkgs; [
-    (nr.update-system.override {
-      flakePath = "${config.nix-relic.flakePath}";
-      host = "${config.networking.hostName}";
-    })
     nix-output-monitor
     imagemagick
     chafa

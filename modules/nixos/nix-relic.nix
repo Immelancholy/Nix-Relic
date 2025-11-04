@@ -9,9 +9,10 @@ in {
   options.nix-relic = {
     flakePath = mkOption {
       type = types.path;
-      default = "";
+      default = "/etc/nixos";
       description = "Path to Nix-Relic config flake folder";
     };
+    updateScript.enableToken = mkEnableOption "Use gh token to update flake";
     cava = {
       framerate = mkOption {
         type = types.int;
@@ -48,5 +49,12 @@ in {
     environment.sessionVariables = {
       FLAKE_PATH = "${cfg.flakePath}"; # path to flake.nix
     };
+    environment.systemPackages = [
+      (nr.update-system.override {
+        flakePath = "${cfg.flakePath}";
+        host = "${config.networking.hostName}";
+        withToken = cfg.updateScript.enableToken;
+      })
+    ];
   };
 }
