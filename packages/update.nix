@@ -73,6 +73,8 @@ in
 
     }
     check_for_update () {
+      echo "Checking for updates..."
+
       ${flakeUpdateCmd} > /dev/null 2>&1
 
       git diff --exit-code -- flake.lock > /dev/null 2>&1
@@ -98,9 +100,9 @@ in
         fi
 
         case $yn in
-            [yY] ) echo "Checking for updates...";
+            [yY] ) echo "Updating System...";
                 break;;
-            [nN] ) echo "Exiting...";
+            [nN] ) read -n 1 -p 'Press any key to exit...'
                 exit;;
             * ) echo "Invalid Response";;
         esac
