@@ -41,7 +41,7 @@
         ];
         format = {
           details = "$title";
-          state = "$On $album by $artist";
+          state = "$album by $artist";
         };
       };
     };
