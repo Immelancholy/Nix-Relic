@@ -70,10 +70,10 @@ in {
           };
         };
         plugins = [
-          nr.hyprtasking.packages.${pkgs.stdenv.hostPlatform.system}.hyprtasking
+          nr.hyprtasking.packages.${pkgs.stdenv.hostPlatform.system}.default
         ];
         settings.permission = [
-          "${nr.hyprtasking.packages.${pkgs.stdenv.hostPlatform.system}.hyprtasking}/lib/libhyprexpo.so, plugin, allow"
+          "${nr.hyprtasking.packages.${pkgs.stdenv.hostPlatform.system}.default}/lib/libhyprexpo.so, plugin, allow"
         ];
       })
     ];
