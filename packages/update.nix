@@ -45,16 +45,16 @@ writeShellScriptBin "update-system" ''
 
     read -p "Would you like to update your system? [Y/n]" yn
 
-    if [ $yn = ""]; then
+    if [ $yn = "" ]; then
       $yn="y"
     fi
 
     case $yn in
-      [yY] ) echo "Updating System...";
-          break;
-      [nN] ) echo "Exiting...";
-          exit;
-      * ) echo "Invalid response";
+        [yY] ) echo "Updating System...";
+            break;;
+        [nN] ) echo "Exiting...";
+            exit;;
+        * ) echo "Invalid Response";;
     esac
 
   done
