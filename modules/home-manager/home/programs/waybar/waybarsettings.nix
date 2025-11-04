@@ -44,6 +44,7 @@ in {
         "custom/r_end"
         "custom/l_end"
         "tray"
+        "update"
         "custom/r_end"
         "custom/l_end"
         "custom/power"
@@ -238,6 +239,12 @@ in {
         on-scroll-down = "playerctl --player=mpd next";
         on-scroll-up = "playerctl --player=mpd previous";
         restart-interval = 1;
+      };
+      "custom/update" = {
+        format = "{icon}";
+        on-click = "uwsm app -- kitty update-system";
+        tooltip = true;
+        tooltip-formate = "Update system";
       };
     };
   };

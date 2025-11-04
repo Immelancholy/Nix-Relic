@@ -89,6 +89,7 @@
     #privacy,
     #pulseaudio,
     #tray,
+    #custom-update,
     #window,
     #workspaces,
     #workspaces,
