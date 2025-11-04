@@ -12,7 +12,7 @@
 in
   writeShellScriptBin "update-system" ''
     update () {
-      ${flakeUpdateCmd}
+      ${flakeUpdateCmd} > /dev/null 2>&1
 
       git diff --exit-code -- flake.lock > /dev/null 2>&1
 
@@ -22,6 +22,8 @@ in
         read -n 1 -p 'Press any key to exit...'
         exit 0
       fi
+
+      echo "Updates found! Updating System"
 
       git restore flake.lock
 
@@ -94,7 +96,7 @@ in
       fi
 
       case $yn in
-          [yY] ) echo "Updating System...";
+          [yY] ) echo "Checking for updates...";
               break;;
           [nN] ) echo "Exiting...";
               exit;;
