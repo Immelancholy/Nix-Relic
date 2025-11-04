@@ -94,6 +94,10 @@
       ''float,class:^(io.missioncenter.MissionCenter)$'' # MissionCenter-Gtk
       ''float,title:^(Friends List)$''
       ''float,title:^(Steam Settings)$''
+      ''float,class:^(update-system)$''
+      ''opacity 1.0 0.90,class:^(update-system)$''
+      ''size 590 775,class:^(update-system)$''
+      ''move 1305 42,class:^(update-system)$''
 
       ''opacity 0.90 0.80,class:^(org.rncbc.qpwgraph)$''
       ''opacity 0.90 0.80,class:^(com.github.wwmm.easyeffects)$''
