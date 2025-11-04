@@ -11,18 +11,7 @@
     else "nix flake update --commit-lock-file";
 in
   writeShellScriptBin "update-system" ''
-    onefetch_img () {
-      image="$(find ~/Pictures/fastfetch_logos/ -name "*.jpg" -o -name "*.png" 2> /dev/null | shuf -n1)"
-      if [ "$image" ]; then
-        onefetch --image-protocol kitty -i "$image"
-      else
-        onefetch
-      fi
-    }
     update () {
-      builtin cd "${flakePath}" || return
-      clear
-      onefetch_img
       ${flakeUpdateCmd}
       sudo nixos-rebuild boot --flake .#${host} |& nom
 
@@ -46,6 +35,9 @@ in
       exit 1
 
     }
+    builtin cd "${flakePath}" || return
+    clear
+    fastfetch
 
     while true; do
 
