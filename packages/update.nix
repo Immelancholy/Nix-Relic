@@ -45,7 +45,7 @@ writeShellScriptBin "update-system" ''
 
     read -p "Would you like to update your system? [Y/n]" yn
 
-    if [ $yn = "" ]; then
+    if [ $yn == "" ]; then
       $yn="y"
     fi
 
