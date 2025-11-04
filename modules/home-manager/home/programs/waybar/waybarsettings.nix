@@ -44,7 +44,7 @@ in {
         "custom/r_end"
         "custom/l_end"
         "tray"
-        "update"
+        "custom/update"
         "custom/r_end"
         "custom/l_end"
         "custom/power"
