@@ -72,7 +72,7 @@
     wantedBy = ["graphical-session.target"];
   };
   environment.systemPackages = with pkgs; [
-    update-system
+    nr.update-system
     nix-output-monitor
     imagemagick
     chafa
