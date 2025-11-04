@@ -45,6 +45,12 @@ in {
           bind = $mod, Right, workspace, r+1
           bind = $mod, Left, workspace, r-1
           bind = $mod, Down, workspace, empty
+          bind = $mod, L, hyprexpo:expo, off
+          bind = $mod, H, hyprexpo:expo, off
+          bind = $mod, J, hyprexpo:expo, off
+          bind = $mod, Right, hyprexpo:expo, off
+          bind = $mod, Left, hyprexpo:expo, off
+          bind = $mod, Down, hyprexpo:expo, off
           bindn = , mouse:272, submap, reset
           bindn = , mouse:273, submap, reset
           bindn = , mouse:274, submap, reset
