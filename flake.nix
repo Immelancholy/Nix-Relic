@@ -68,6 +68,10 @@
       url = "github:outfoxxed/hy3";
       inputs.hyprland.follows = "hyprland";
     };
+    hyprtasking = {
+      url = "github:r00t3g/hyprtasking";
+      inputs.hyprland.follows = "hyprland";
+    };
     stylix.url = "github:Immelancholy/stylix";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
