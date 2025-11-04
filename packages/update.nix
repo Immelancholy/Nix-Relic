@@ -7,7 +7,7 @@
 }: let
   flakeUpdateCmd =
     if withToken == true
-    then ''nix flake update --option access-tokens "github.com=$(gh auth token) --commit-lock-file"''
+    then ''nix flake update --commit-lock-file --option access-tokens "github.com=$(gh auth token)"''
     else "nix flake update --commit-lock-file";
 in
   writeShellScriptBin "update-system" ''
