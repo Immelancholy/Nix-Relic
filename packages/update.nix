@@ -22,11 +22,18 @@ in
         booted="$(readlink /run/booted-system/{initrd,kernel,kernel-modules})"
         built="$(readlink /nix/var/nix/profiles/system/{initrd,kernel,kernel-modules})"
 
+        echo "Updates Complete!"
+
         if [ "''${booted}" = "''${built}" ]; then
+          echo "Applying Updates..."
           sudo nixos-rebuild switch --flake .#${host} |& nom
-          echo "Updates Complete!"
+          if [ $? -eq 0 ]; then
+            echo "Updates applied succesfully."
+          else
+            echo "Error applying updates."
+          fi
         else
-          echo "Updates Complete! Please reboot system after exit."
+          echo "Booted system is different to built system! Please reboot to apply update"
         fi
 
         sleep 1
