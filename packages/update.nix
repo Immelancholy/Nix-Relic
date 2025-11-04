@@ -25,6 +25,24 @@ in
 
         echo "Updates Complete!"
         sleep 1
+
+        while true; do
+
+          read -p "Would you like to push updates to github? [y/N]" yn
+
+          if [[ "$yn" == "" ]]; then
+            $yn="n"
+          fi
+
+          case $yn in
+              [yY] ) git push;
+                  break;;
+              [nN] )
+                  break;;
+              * ) echo "Invalid Response";;
+          esac
+
+        done
         read -n 1 -p 'Press any key to continue...'
         exit 0
       fi
