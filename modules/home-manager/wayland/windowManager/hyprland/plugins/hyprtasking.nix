@@ -23,20 +23,6 @@ in {
           bind = [
             "$mod, Space, hyprtasking:toggle, cursor"
           ];
-          extraconfig = ''
-            bind = $mod, Space, submap:hyprtasking
-            submap = hyprtasking
-            bind = , H, hyprtasking:move, left
-            bind = , J, hyprtasking:move, down
-            bind = , K, hyprtasking:move, up
-            bind = , L, hyprtasking:move, right
-            bind = , X, hyprtasking:killhovered
-            bind = , Space, hyprtasking:toggle, cursor
-            bind = , Escape, hyprtasking:toggle, cursor
-            bind = , Space, submap, reset
-            bind = , Escape, submap, reset
-            submaps = reset
-          '';
 
           plugin = {
             hyprtasking = {
@@ -69,6 +55,20 @@ in {
             };
           };
         };
+        extraconfig = ''
+          bind = $mod, Space, submap:hyprtasking
+          submap = hyprtasking
+          bind = , H, hyprtasking:move, left
+          bind = , J, hyprtasking:move, down
+          bind = , K, hyprtasking:move, up
+          bind = , L, hyprtasking:move, right
+          bind = , X, hyprtasking:killhovered
+          bind = , Space, hyprtasking:toggle, cursor
+          bind = , Escape, hyprtasking:toggle, cursor
+          bind = , Space, submap, reset
+          bind = , Escape, submap, reset
+          submaps = reset
+        '';
         plugins = [
           nr.hyprtasking.packages.${pkgs.stdenv.hostPlatform.system}.default
         ];

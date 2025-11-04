@@ -24,22 +24,6 @@ in {
             "$mod, Space, hyprexpo:expo, toggle"
           ];
 
-          extraConfig = mkIf cfg.layout.hy3.enable ''
-            bind = $mod, Space, submap, hyprexpo
-            submap = hyprexpo
-            bind = $mod, Space, hyprexpo:expo, toggle
-            bind = , Escape, hyprexpo:expo, toggle
-            bind = $mod, L, workspace, r+1
-            bind = $mod, H, workspace, r-1
-            bind = $mod, J, workspace, empty
-            bind = $mod, Right, workspace, r+1
-            bind = $mod, Left, workspace, r-1
-            bind = $mod, Down, workspace, empty
-            bind = $mod, Space, submap, reset
-            bind = , Escape, submap, reset
-            submap = reset
-          '';
-
           plugin = {
             hyprexpo = {
               columns = 3;
@@ -50,6 +34,21 @@ in {
             };
           };
         };
+        extraConfig = mkIf cfg.layout.hy3.enable ''
+          bind = $mod, Space, submap, hyprexpo
+          submap = hyprexpo
+          bind = $mod, Space, hyprexpo:expo, toggle
+          bind = , Escape, hyprexpo:expo, toggle
+          bind = $mod, L, workspace, r+1
+          bind = $mod, H, workspace, r-1
+          bind = $mod, J, workspace, empty
+          bind = $mod, Right, workspace, r+1
+          bind = $mod, Left, workspace, r-1
+          bind = $mod, Down, workspace, empty
+          bind = $mod, Space, submap, reset
+          bind = , Escape, submap, reset
+          submap = reset
+        '';
       }
       (mkIf cfg.usingFlake {
         plugins = [
