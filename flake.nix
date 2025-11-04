@@ -69,7 +69,7 @@
       inputs.hyprland.follows = "hyprland";
     };
     hyprtasking = {
-      url = "github:r00t3g/hyprtasking/fix-build-on-hypr-0.51";
+      url = "github:nnra6864/hyprtasking/replace-generateVersion";
       inputs.hyprland.follows = "hyprland";
     };
     stylix.url = "github:Immelancholy/stylix";

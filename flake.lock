@@ -846,16 +846,16 @@
         "systems": "systems_4"
       },
       "locked": {
-        "lastModified": 1758176212,
-        "narHash": "sha256-ORusmpZumDNsp+sfApE7Q5d8Qb4QF2VAFR+gcjKFcsc=",
-        "owner": "r00t3g",
+        "lastModified": 1761255602,
+        "narHash": "sha256-HK7bGOmuJqT9yhemEKdLXkkK2Bzke83N7puBXpcoJR0=",
+        "owner": "nnra6864",
         "repo": "hyprtasking",
-        "rev": "a3625a2d4b100135199b5a449729df5b2cb949e8",
+        "rev": "3dc1fc6b2dfb8a47b953c2ede81125aaa014f1ec",
         "type": "github"
       },
       "original": {
-        "owner": "r00t3g",
-        "ref": "fix-build-on-hypr-0.51",
+        "owner": "nnra6864",
+        "ref": "replace-generateVersion",
         "repo": "hyprtasking",
         "type": "github"
       }
