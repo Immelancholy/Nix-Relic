@@ -14,7 +14,7 @@ in
     update () {
       ${flakeUpdateCmd}
 
-      if [ "$(git diff --exit-code -- flake.lock)" ]; then
+      if [ "$(git diff --exit-code -- flake.lock)" -eq 0 ]; then
         echo "No updates found!"
         sleep 1
         read -n 1 -p 'Press any key to exit...'
