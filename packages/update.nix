@@ -15,7 +15,6 @@ in
       sleep 1
       echo "Updating System..."
 
-      git restore flake.lock
 
       ${flakeUpdateCmd} --commit-lock-file
 
@@ -84,6 +83,7 @@ in
         read -n 1 -p 'Press any key to exit...'
         exit 0
       fi
+      git restore flake.lock
 
       echo "Updates found!"
 
