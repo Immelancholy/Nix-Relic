@@ -67,9 +67,9 @@ in {
           bind = , Escape, hyprtasking:toggle, cursor
           bind = , Space, submap, reset
           bind = , Escape, submap, reset
-          bindmn = , mouse:272, submap, reset
-          bindmn = , mouse:273, submap, reset
-          bindmn = , mouse:274, submap, reset
+          bindn = , mouse:272, submap, reset
+          bindn = , mouse:273, submap, reset
+          bindn = , mouse:274, submap, reset
           submaps = reset
         '';
         plugins = [
