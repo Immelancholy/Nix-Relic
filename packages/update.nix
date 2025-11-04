@@ -1,8 +1,7 @@
 {
   writeShellScriptBin,
-  config,
-  flakePath ? config.nix-relic.flakePath,
-  host ? config.networking.hostName,
+  flakePath ? "",
+  host ? "",
   ...
 }:
 writeShellScriptBin "update-system" ''
