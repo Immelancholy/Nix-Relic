@@ -13,6 +13,9 @@ in
   writeShellScriptBin "update-system" ''
     update () {
       ${flakeUpdateCmd}
+
+      echo "Password for sudo:"
+
       sudo nixos-rebuild boot --flake .#${host} |& nom
 
       if [ $? -eq 0 ]; then
