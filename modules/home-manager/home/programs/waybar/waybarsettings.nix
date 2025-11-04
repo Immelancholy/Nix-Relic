@@ -241,8 +241,8 @@ in {
         restart-interval = 1;
       };
       "custom/update" = {
-        format = " 󰚰 ";
-        on-click = "uwsm app -- kitty update-system";
+        format = "󰚰";
+        on-click = "uwsm app -- kitty --class update-system update-system";
         tooltip = true;
         tooltip-formate = "Update system";
       };
