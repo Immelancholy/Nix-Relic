@@ -45,9 +45,9 @@ in {
           bind = $mod, Right, workspace, r+1
           bind = $mod, Left, workspace, r-1
           bind = $mod, Down, workspace, empty
-          bindmn = mouse:272, submap, reset
-          bindmn = mouse:273, submap, reset
-          bindmn = mouse:274, submap, reset
+          bindmn = , mouse:272, submap, reset
+          bindmn = , mouse:273, submap, reset
+          bindmn = , mouse:274, submap, reset
           bind = $mod, Space, submap, reset
           bind = , Escape, submap, reset
           submap = reset
