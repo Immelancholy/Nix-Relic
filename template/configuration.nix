@@ -70,7 +70,6 @@
             };
             hyprspace.enable = false; # Broken atm
             hyprexpo.enable = true;
-            hyprtasking.enable = false;
             settings = {
               cursor = {
                 no_hardware_cursors = false;
