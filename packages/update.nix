@@ -7,12 +7,23 @@
 }: let
   flakeUpdateCmd =
     if withToken == true
-    then ''nix flake update --commit-lock-file --option access-tokens "github.com=$(gh auth token)"''
-    else "nix flake update --commit-lock-file";
+    then ''nix flake update --option access-tokens "github.com=$(gh auth token)"''
+    else "nix flake update";
 in
   writeShellScriptBin "update-system" ''
     update () {
       ${flakeUpdateCmd}
+
+      if [ "$(git diff --exit-code -- flake.lock)" ]; then
+        echo "No updates found!"
+        sleep 1
+        read -n 1 -p 'Press any key to exit...'
+        exit 0
+      fi
+
+      git restore flake.lock
+
+      ${flakeUpdateCmd} --commit-lock-file
 
       echo "Password for sudo:"
 
@@ -58,13 +69,13 @@ in
 
         sleep 1
 
-        read -n 1 -p 'Press any key to continue...'
+        read -n 1 -p 'Press any key to exit...'
         exit 0
       fi
 
       echo "Updates failed!"
       sleep 1
-      read -n 1 -p 'Press any key to continue...'
+      read -n 1 -p 'Press any key to exit...'
       exit 1
 
     }
