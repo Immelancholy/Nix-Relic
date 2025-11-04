@@ -12,18 +12,6 @@
 in
   writeShellScriptBin "update-system" ''
     update () {
-      ${flakeUpdateCmd} > /dev/null 2>&1
-
-      git diff --exit-code -- flake.lock > /dev/null 2>&1
-
-      if [ $? -eq 0 ]; then
-        echo "No updates found!"
-        sleep 1
-        read -n 1 -p 'Press any key to exit...'
-        exit 0
-      fi
-
-      echo "Updates found!"
       sleep 1
       echo "Updating System..."
 
@@ -85,27 +73,45 @@ in
       exit 1
 
     }
+    check_for_update () {
+      ${flakeUpdateCmd} > /dev/null 2>&1
+
+      git diff --exit-code -- flake.lock > /dev/null 2>&1
+
+      if [ $? -eq 0 ]; then
+        echo "No updates found!"
+        sleep 1
+        read -n 1 -p 'Press any key to exit...'
+        exit 0
+      fi
+
+      echo "Updates found!"
+
+      sleep 1
+
+      while true; do
+
+        read -p "Would you like to update your system? [Y/n]" yn
+
+        if [[ "$yn" == "" ]]; then
+          yn=y
+        fi
+
+        case $yn in
+            [yY] ) echo "Checking for updates...";
+                break;;
+            [nN] ) echo "Exiting...";
+                exit;;
+            * ) echo "Invalid Response";;
+        esac
+
+      done
+      update
+    }
     builtin cd "${flakePath}" || return
     clear
     fastfetch
 
-    while true; do
-
-      read -p "Would you like to update your system? [Y/n]" yn
-
-      if [[ "$yn" == "" ]]; then
-        yn=y
-      fi
-
-      case $yn in
-          [yY] ) echo "Checking for updates...";
-              break;;
-          [nN] ) echo "Exiting...";
-              exit;;
-          * ) echo "Invalid Response";;
-      esac
-
-    done
-    update
+    check_for_update
 
   ''
