@@ -49,6 +49,12 @@ in {
           bindn = , mouse:273, submap, reset
           bindn = , mouse:274, submap, reset
           bind = $mod, Space, submap, reset
+          bind = $mod, L, submap, reset
+          bind = $mod, H, submap, reset
+          bind = $mod, J, submap, reset
+          bind = $mod, Right, submap, reset
+          bind = $mod, Left, submap, reset
+          bind = $mod, Down, submap, reset
           bind = , Escape, submap, reset
           submap = reset
         '';
