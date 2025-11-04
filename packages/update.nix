@@ -23,7 +23,9 @@ in
         exit 0
       fi
 
-      echo "Updates found! Updating System"
+      echo "Updates found!"
+      sleep 1
+      echo "Updating System..."
 
       git restore flake.lock
 
