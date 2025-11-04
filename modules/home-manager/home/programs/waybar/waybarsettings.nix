@@ -244,7 +244,7 @@ in {
         format = "󰚰";
         on-click = "uwsm app -- kitty --class update-system update-system";
         tooltip = true;
-        tooltip-formate = "Update system";
+        tooltip-format = "Update System";
       };
     };
   };
