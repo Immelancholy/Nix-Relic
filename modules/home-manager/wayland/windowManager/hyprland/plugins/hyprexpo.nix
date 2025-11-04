@@ -24,7 +24,7 @@ in {
             "$mod, Space, hyprexpo:expo, toggle"
           ];
 
-          extraConfig = mkIf cfg.layouts.hy3.enablle ''
+          extraConfig = mkIf cfg.layout.hy3.enablle ''
             bind = $mod, Space, submap, hyprexpo
             submap = hyprexpo
             bind = $mod, Space, hyprexpo:expo, toggle
