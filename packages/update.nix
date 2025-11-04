@@ -31,7 +31,7 @@ in
           read -p "Would you like to push updates to github? [y/N]" yn
 
           if [[ "$yn" == "" ]]; then
-            $yn="n"
+            yn=n
           fi
 
           case $yn in
@@ -62,7 +62,7 @@ in
       read -p "Would you like to update your system? [Y/n]" yn
 
       if [[ "$yn" == "" ]]; then
-        $yn="y"
+        yn=y
       fi
 
       case $yn in
