@@ -56,6 +56,7 @@ in {
         libva-utils
         libva
         egl-wayland
+        vulkan-hdr-layer-kwin6
       ];
     };
 

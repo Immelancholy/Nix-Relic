@@ -30,6 +30,7 @@ in {
       extraPackages = with pkgs; [
         libva
         libva-utils
+        vulkan-hdr-layer-kwin6
       ];
     };
   };
