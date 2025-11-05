@@ -27,6 +27,9 @@ in {
       pkgs.mpvScripts.modernz
       pkgs.mpvScripts.thumbfast
     ];
+    config = {
+      autofit = "75%x75%";
+    };
   };
   home.packages = with pkgs; [
     mpvc
