@@ -26,6 +26,7 @@ in {
     ];
     bind =
       [
+        "$mod, B, exec, binds.sh"
         "$mod, W, togglefloating"
         ", Pause, exec, $playerctl play-pause"
         "$mod, T, exec, $term"
