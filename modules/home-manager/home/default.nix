@@ -18,6 +18,10 @@
     ./fetch_images.nix
   ];
 
+  programs.onlyoffice = {
+    enable = true;
+  };
+
   xdg = {
     enable = true;
     userDirs = {
