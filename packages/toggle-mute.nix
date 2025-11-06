@@ -36,7 +36,7 @@ writeShellApplication {
       fi
     }
 
-    options=$(getopt -o h --long 'unmute-all,help' -- "$@")
+    options=$(getopt -o h --long 'mute-all,unmute-all,help' -- "$@")
     eval set -- "$options"
 
     case "$1" in
