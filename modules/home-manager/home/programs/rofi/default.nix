@@ -26,6 +26,8 @@
       display-run = "󰲌 Run";
       display-filebrowser = " Files";
       display-window = " Win";
+      display-emoji = "󰱨 Emoji";
+      display-nerdy = " Nerd";
       drun-display-format = "{icon} {name}";
       window-format = "{w} · {c}";
       # icon-theme = "Papirus-Dark";
