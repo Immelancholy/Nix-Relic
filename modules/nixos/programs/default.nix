@@ -1,6 +1,5 @@
 {
   imports = [
     ./steam
-    ./libreoffice.nix
   ];
 }

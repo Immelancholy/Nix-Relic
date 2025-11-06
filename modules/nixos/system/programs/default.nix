@@ -260,8 +260,6 @@
     askPassword = "${pkgs.seahorse}/libexec/seahorse/ssh-askpass";
   };
 
-  programs.libreoffice.enable = true;
-
   environment.variables.SSH_ASKPASS_REQUIRE = "prefer";
 
   programs.nm-applet = {
