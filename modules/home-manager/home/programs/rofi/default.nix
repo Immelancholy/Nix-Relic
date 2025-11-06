@@ -1,8 +1,16 @@
-{config, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   programs.rofi = {
     enable = true;
     font = "JetBrainsMono Nerd Font Mono 12";
     terminal = config.home.sessionVariables.TERMINAL;
+    plugins = with pkgs; [
+      rofi-nerdy
+      rofi-emoji
+    ];
     extraConfig = {
       # hover-select = true;
       # me-select-entry = "";

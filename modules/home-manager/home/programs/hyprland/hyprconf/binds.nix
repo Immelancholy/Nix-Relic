@@ -43,6 +43,7 @@ in {
         "Ctrl+Shift, L, exec, uwsm-app -- swaylock -fF"
         ''$mod, V, exec, $term --class "NixOSConf" tnix''
         "$mod, N, exec, rofi -show Cliphist -modi Cliphist:cliphist.sh"
+        "Ctrl, Period, exec, rofi -show emoji nerdy -modi emoji,nerdy"
         "$mod, G, exec, hyprgame"
         "$mod, L, workspace, r+1"
         "$mod, H, workspace, r-1"
