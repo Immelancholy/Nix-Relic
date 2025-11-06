@@ -253,6 +253,7 @@
     qalculate-gtk
     fd
     wordnet
+    nr.binds-sh
   ];
   programs.ssh = {
     startAgent = false;
