@@ -27,7 +27,7 @@
       display-filebrowser = " Files";
       display-window = " Win";
       display-emoji = "󰱨 Emoji";
-      display-nerdy = " Nerd";
+      display-nerdy = " Nerd";
       display-Cliphist = " Clip";
       drun-display-format = "{icon} {name}";
       window-format = "{w} · {c}";
