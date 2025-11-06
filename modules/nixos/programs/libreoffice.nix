@@ -12,7 +12,7 @@ in {
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackage = with pkgs; [
+    environment.systemPackages = with pkgs; [
       libreoffice
     ];
   };
