@@ -66,6 +66,7 @@
             [ "$current_repo" != "$last_repo" ]
             clear
             $fetch_cmd
+            git pull --rebase
             set -gx last_repo $current_repo
             set -gx INIT 0
             set -gx GIT 1

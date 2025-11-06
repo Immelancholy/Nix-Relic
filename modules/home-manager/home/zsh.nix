@@ -76,6 +76,7 @@ in {
             [ "$current_repo" != "$last_repo" ]; then
             clear
             $fetch_cmd
+            git pull --rebase
             last_repo=$current_repo
             INIT=0
             GIT=1
