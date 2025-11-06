@@ -19,6 +19,9 @@
     /run/current-system/sw/bin/hyprctl dispatch exec '[workspace 1 silent; float; size 888 559; move 610 42] ${playerCmd}'
   '';
 in {
+  home.packages = [
+    launches
+  ];
   wayland.windowManager.hyprland.settings = {
     bindm = [
       "$mod, mouse:272, movewindow"
@@ -38,7 +41,7 @@ in {
         "Alt, Return, fullscreen"
         "Alt+Shift, Return, fullscreen, 1"
         "Alt, Tab, exec, rofi -show window -modi window"
-        "$mods, U, exec, ${lib.getExe launches}"
+        "$mods, U, exec, launches"
         "$mod, Delete, exec, rofi -show power-menu -modi power-menu:rofi-power-menu"
         "$mod, 0, workspace, 10"
         "Ctrl+Shift, L, exec, uwsm-app -- swaylock -fF"
