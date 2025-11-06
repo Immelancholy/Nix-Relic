@@ -17,11 +17,12 @@ writeShellApplication {
 
     show_help () {
       printf "%s" "\
-        useage: toggle-mute [-h|--help] [--unmute-all]
+        useage: toggle-mute [-h|--help] [--unmute-all] [--mute-all]
 
         optional arguments:
         -h, --help                Show this help message and exit
         --unmute-all              Unmute audio sources
+        --mute-all
       "
     }
 
@@ -47,6 +48,12 @@ writeShellApplication {
         shift;
         wpctl set-mute @DEFAULT_SOURCE@ 0
         wpctl set-mute "$COMMES" 0
+        exit
+        ;;
+      --mute-all)
+        shift;
+        wpctl set-mute @DEFAULT_SOURCE@ 1
+        wpctl set-mute "$COMMES" 1
         exit
         ;;
       --)

@@ -31,7 +31,7 @@ in {
       ];
       settings = {
         bind = [
-          "$mod, G, easymotion, action:hyprctl dispatch focuswindow address:{}"
+          "$mod, I, easymotion, action:hyprctl dispatch focuswindow address:{}"
         ];
         plugin = {
           easymotion = {
