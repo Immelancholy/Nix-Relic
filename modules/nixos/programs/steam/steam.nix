@@ -32,5 +32,9 @@ in {
       ];
       protontricks.enable = true;
     };
+    environment.systemPackages = with pkgs; [
+      protonup-ng
+      protonplus
+    ];
   };
 }
