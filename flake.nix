@@ -24,7 +24,12 @@
       url = "github:chrissicool/zsh-256color";
       flake = false;
     };
-    yazi.url = "github:sxyazi/yazi";
+    yazi = {
+      url = "github:sxyazi/yazi";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+      };
+    };
     yazi-plugins = {
       url = "github:yazi-rs/plugins";
       flake = false;
@@ -77,6 +82,7 @@
       # Optional but recommended to limit the size of your system closure.
       inputs = {
         nixpkgs.follows = "nixpkgs";
+        rust-overlay.follows = "rust-overlay";
       };
     };
     rust-overlay = {
