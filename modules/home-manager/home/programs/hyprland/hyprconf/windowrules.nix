@@ -147,7 +147,7 @@
       "match:namespace notifications, blur on"
       "match:namespace notifications, ignore_alpha 0"
       "match:namespace waybar, blur on"
-      "match:namespace hyprpicker, no_nanim on"
+      "match:namespace hyprpicker, no_anim on"
       "match:namespace selection, no_anim on"
     ];
   };
