@@ -147,7 +147,7 @@
       "match:namespace notifications, blur on"
       "match:namespace waybar, blur on"
       "match:namespace hyprpicker, no_anim on"
-      "match:namepsace selection, no_anim on"
+      "match:namespace selection, no_anim on"
     ];
   };
 }
