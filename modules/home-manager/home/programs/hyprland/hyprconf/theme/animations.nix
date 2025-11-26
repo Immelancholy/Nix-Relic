@@ -1,10 +1,5 @@
 {
   wayland.windowManager.hyprland.settings = {
-    layerrule = [
-      "no_anim on, hyprpicker"
-      "no_anim on, selection"
-    ];
-
     animations = {
       enabled = true;
       bezier = [

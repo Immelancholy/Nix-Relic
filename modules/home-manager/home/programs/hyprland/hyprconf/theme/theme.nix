@@ -39,11 +39,6 @@
       };
     };
 
-    layerrule = [
-      "blur on,waybar"
-      "blur on, rofi"
-    ];
-
     decoration = {
       dim_special = 0.3;
     };

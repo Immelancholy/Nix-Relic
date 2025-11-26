@@ -143,11 +143,11 @@
       ''match:title ^(Select what to share)$, float on''
     ];
     layerrule = [
-      "blur on,rofi"
-      "blur on,notifications"
-      "blur on,swaync-notification-window"
-      "blur on,swaync-control-center"
-      "blur on,logout_dialog"
+      "match:namespace rofi, blur on"
+      "match:namespace notifications, blur on"
+      "match:namespace waybar, blur on"
+      "match:namespace hyprpicker, no_anim on"
+      "match:namepsace selection, no_anim on"
     ];
   };
 }
