@@ -40,8 +40,8 @@
     };
 
     layerrule = [
-      "blur,waybar"
-      "blur, rofi"
+      "blur on,waybar"
+      "blur on, rofi"
     ];
 
     decoration = {
