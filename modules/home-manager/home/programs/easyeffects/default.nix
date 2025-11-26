@@ -1,7 +1,6 @@
 {
   services.easyeffects = {
     enable = true;
-    preset = "Rode-NT1";
     extraPresets = {
       Rode-NT1 = {
         input = {
