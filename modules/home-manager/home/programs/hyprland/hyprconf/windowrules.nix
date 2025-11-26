@@ -120,6 +120,7 @@
       ''match:title ^(rmpc)$, size 900 580''
       ''match:title ^(rmpc)$, move 70 23''
       ''match:title ^(.*Properties*.)$, float on''
+      ''match:title ^(Settings — Easy Effects)$, float on''
 
       ''match:initial_title ^(Spotify Free)$, opacity 0.70 0.70''
       ''match:initial_title ^(Spotify Premium)$, opacity 0.70 0.70''
