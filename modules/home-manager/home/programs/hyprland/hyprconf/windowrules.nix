@@ -8,7 +8,7 @@
       ''match:class ^(btop)$, opacity 1.0 0.90''
       ''match:class ^(fastfetch)$, opacity 1.0 0.90''
       ''match:class ^(kitty)$, opacity 1.0 0.90''
-      ''match:class ^(zen)$ opacity, 1.0 0.90''
+      ''match:class ^(zen)$, opacity 1.0 0.90''
       ''match:class ^(zen-beta)$, opacity 1.0 0.90''
       ''match:class ^(gcr-prompter)$, opacity 0.80 0.70''
       ''match:class ^(org.gnome.seahorse.Application)$, opacity 0.80 0.70''
@@ -84,9 +84,9 @@
       ''match:class ^(org.rncbc.qpwgraph)$, opacity 0.90 0.80''
       ''match:class ^(com.github.wwmm.easyeffects)$, opacity 0.90 0.80''
       ''match:class ^(vesktop)$, workspace 3 silent''
-      ''match:class ^(org.rncbc.qpwgraph)$ workspace 4 silent''
-      ''match:class ^(mpv)$, float''
-      ''match:class ^(btop.ghostty)$, float''
+      ''match:class ^(org.rncbc.qpwgraph)$, workspace 4 silent''
+      ''match:class ^(mpv)$, float on''
+      ''match:class ^(btop.ghostty)$, float on''
       ''match:class ^(btop.ghostty)$, size 960 675''
       ''match:class ^(com.saivert.pwvucontrol)$, size 850 540''
 
@@ -116,14 +116,13 @@
       ''match:title ^(cava)$, float on''
       ''match:title ^(cava)$, size 840 672''
       ''match:title ^(cava)$, move 1015 188''
-      ''match:title ^(cava)$, nodim''
       ''match:title ^(rmpc)$, float on''
       ''match:title ^(rmpc)$, size 900 580''
       ''match:title ^(rmpc)$, move 70 23''
       ''match:title ^(.*Properties*.)$, float on''
 
       ''match:initial_title ^(Spotify Free)$, opacity 0.70 0.70''
-      ''match:inital_title ^(Spotify Premium)$, opacity 0.70 0.70''
+      ''match:initial_title ^(Spotify Premium)$, opacity 0.70 0.70''
 
       # common modals
       ''match:class ^(.blueman-manager-wrapped)$, opacity 0.90 0.80''
