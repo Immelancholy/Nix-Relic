@@ -23,7 +23,21 @@
       ];
     };
   };
-
+  systemd.user.services."easyeffects" = {
+    enable = true;
+    name = "easyeffects";
+    after = ["graphical-session.target"];
+    wantedBy = ["graphical-session.target"];
+    path = [
+      "${pkgs.nr.easyeffects}"
+    ];
+    script = ''
+      easyeffects --service-mode -w
+    '';
+    serviceConfig = {
+      Restart = "always";
+    };
+  };
   programs.xfconf.enable = true;
 
   programs.localsend.enable = true;
