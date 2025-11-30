@@ -74,6 +74,10 @@
       url = "github:Immelancholy/hy3/switch-to-dispatcherv2";
       inputs.hyprland.follows = "hyprland";
     };
+    hyprtasking = {
+      url = "github:raybbian/hyprtasking";
+      inputs.hyprland.follows = "hyprland";
+    };
     stylix = {
       url = "github:Immelancholy/stylix";
     };
