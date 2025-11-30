@@ -73,7 +73,10 @@
       url = "github:outfoxxed/hy3";
       inputs.hyprland.follows = "hyprland";
     };
-    stylix.url = "github:Immelancholy/stylix";
+    stylix = {
+      url = "github:Immelancholy/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
     lanzaboote = {
