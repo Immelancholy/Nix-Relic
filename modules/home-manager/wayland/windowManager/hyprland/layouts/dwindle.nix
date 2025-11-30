@@ -68,12 +68,6 @@ in {
         bind = $mod, L, movetoworkspace, r+1
         bind = $mod, H, movetoworkspace, r-1
         bind = $mod, J, movetoworkspace, empty
-        bind = $mod, Right, workspace, r+1
-        bind = $mod, Left, workspace, r-1
-        bind = $mod, Down, workspace, empty
-        bind = $mod, L, workspace, r+1
-        bind = $mod, H, workspace, r-1
-        bind = $mod, J, workspace, empty
 
         bind = Ctrl, H, changegroupactive, b
         bind = Ctrl, L, changegroupactive, f
