@@ -70,7 +70,8 @@
       inputs.hyprland.follows = "hyprland";
     };
     hy3 = {
-      url = "github:outfoxxed/hy3";
+      # url = "github:outfoxxed/hy3";
+      url = "github:Immelancholy/hy3/switch-to-dispatcherv2";
       inputs.hyprland.follows = "hyprland";
     };
     stylix = {
