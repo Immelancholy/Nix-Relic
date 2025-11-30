@@ -27,25 +27,25 @@ in {
       plugins = [
         nrm.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.csgo-vulkan-fix
         nrm.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.xtra-dispatchers
-        nrm.hyprland-easymotion.packages.${pkgs.stdenv.hostPlatform.system}.hyprland-easymotion
+        # nrm.hyprland-easymotion.packages.${pkgs.stdenv.hostPlatform.system}.hyprland-easymotion
       ];
-      settings = {
-        bind = [
-          "$mod, I, easymotion, action:hyprctl dispatch focuswindow address:{}"
-        ];
-        plugin = {
-          easymotion = {
-            textcolor = "rgba(${config.lib.stylix.colors.base05}ff)";
-            bgcolor = "rgba(${config.lib.stylix.colors.base00}bb)";
-            bordercolor = "rgba($mauveff) rgba($tealff) rgba($rosewaterff) 40deg";
-            blur = 1;
-            textpadding = 8;
-            textsize = 35;
-            bordersize = 2;
-            fullscreen_action = "maximize";
-          };
-        };
-      };
+      # settings = {
+      #   bind = [
+      #     "$mod, I, easymotion, action:hyprctl dispatch focuswindow address:{}"
+      #   ];
+      #   plugin = {
+      #     easymotion = {
+      #       textcolor = "rgba(${config.lib.stylix.colors.base05}ff)";
+      #       bgcolor = "rgba(${config.lib.stylix.colors.base00}bb)";
+      #       bordercolor = "rgba($mauveff) rgba($tealff) rgba($rosewaterff) 40deg";
+      #       blur = 1;
+      #       textpadding = 8;
+      #       textsize = 35;
+      #       bordersize = 2;
+      #       fullscreen_action = "maximize";
+      #     };
+      #   };
+      # };
     })
     (lib.mkIf (! cfg.usingFlake) {
       plugins = [
