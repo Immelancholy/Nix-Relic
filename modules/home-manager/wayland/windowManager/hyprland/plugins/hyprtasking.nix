@@ -55,7 +55,7 @@ in {
             };
           };
         };
-        extraconfig = ''
+        extraConfig = ''
           bind = $mod, Space, submap:hyprtasking
           submap = hyprtasking
           bind = , H, hyprtasking:move, left
