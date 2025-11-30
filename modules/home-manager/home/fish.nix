@@ -334,7 +334,7 @@
           set -l dir "$(pwd)"
           cd "$FLAKE_PATH"
           git add .
-          nixos-rebuild switch --flake . --sudo --ask-sudo-password --target-host $argv &| nom
+          nixos-rebuild switch --flake . --sudo --ask-sudo-password --target-host $argv
           git add .
           cd "$dir"
         end
@@ -343,7 +343,7 @@
           set -l dir "$(pwd)"
           cd "$FLAKE_PATH"
           git add .
-          nixos-rebuild boot --flake . --sudo --ask-sudo-password --target-host $argv &| nom
+          nixos-rebuild boot --flake . --sudo --ask-sudo-password --target-host $argv
           git add .
           cd "$dir"
         end
@@ -352,7 +352,7 @@
           set -l dir "$(pwd)"
           cd "$FLAKE_PATH"
           git add .
-          sudo nixos-rebuild switch --flake . &| nom
+          sudo nixos-rebuild switch --flake .
           git add .
           cd "$dir"
         end
@@ -361,7 +361,7 @@
           set -l dir "$(pwd)"
           cd "$FLAKE_PATH"
           git add .
-          sudo nixos-rebuild boot --flake . &| nom
+          sudo nixos-rebuild boot --flake .
           git add .
           cd "$dir"
         end

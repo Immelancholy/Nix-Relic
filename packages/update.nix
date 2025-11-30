@@ -14,9 +14,7 @@ in
     update () {
       ${flakeUpdateCmd} --commit-lock-file
 
-      echo "Password for sudo:"
-
-      sudo nixos-rebuild boot --flake .#${host} |& nom
+      sudo nixos-rebuild boot --flake .#${host}
 
       if [ $? -eq 0 ]; then
         booted="$(readlink /run/booted-system/{initrd,kernel,kernel-modules})"
@@ -26,7 +24,7 @@ in
 
         if [ "''${booted}" = "''${built}" ]; then
           echo "Applying Updates..."
-          sudo nixos-rebuild switch --flake .#${host} |& nom
+          sudo nixos-rebuild switch --flake .#${host}
           if [ $? -eq 0 ]; then
             echo "Updates applied succesfully."
           else
