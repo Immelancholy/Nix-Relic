@@ -27,7 +27,7 @@ in {
       plugins = [
         nrm.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.csgo-vulkan-fix
         nrm.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.xtra-dispatchers
-        # nrm.hyprland-easymotion.packages.${pkgs.stdenv.hostPlatform.system}.hyprland-easymotion
+        nrm.hyprland-easymotion.packages.${pkgs.stdenv.hostPlatform.system}.hyprland-easymotion
       ];
       settings = {
         bind = [
