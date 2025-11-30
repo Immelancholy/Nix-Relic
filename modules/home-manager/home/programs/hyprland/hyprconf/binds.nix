@@ -23,6 +23,23 @@ in {
     launches
   ];
   wayland.windowManager.hyprland.settings = {
+    submaps = {
+      player = {
+        bind = [
+          ", escape, submap, reset"
+          "$mod, P, submap, reset"
+        ];
+        bindl = [
+          ", P, exec, $playerctl play-pause"
+        ];
+        bindel = [
+          ", O, exec, uwsm-app -- playerVol inc"
+          ", I, exec, uwsm-app -- playerVol dec"
+          "Shift, O, exec, $playerctl next"
+          "Shift, I, exec, $playerctl previous"
+        ];
+      };
+    };
     bindm = [
       "$mod, mouse:272, movewindow"
       "$mod, mouse:273, resizewindow"
@@ -90,22 +107,5 @@ in {
       ", XF86MonBrightnessUp, exec, brightness inc"
       ", XF86MonBrightnessDown, exec, brightness dec"
     ];
-  };
-  submaps = {
-    player = {
-      bind = [
-        ", escape, submap, reset"
-        "$mod, P, submap, reset"
-      ];
-      bindl = [
-        ", P, exec, $playerctl play-pause"
-      ];
-      bindel = [
-        ", O, exec, uwsm-app -- playerVol inc"
-        ", I, exec, uwsm-app -- playerVol dec"
-        "Shift, O, exec, $playerctl next"
-        "Shift, I, exec, $playerctl previous"
-      ];
-    };
   };
 }
