@@ -75,7 +75,7 @@
       inputs.hyprland.follows = "hyprland";
     };
     hyprtasking = {
-      url = "github:raybbian/hyprtasking";
+      url = "github:nnra6864/hyprtasking/40d8fa8-fixes";
       inputs.hyprland.follows = "hyprland";
     };
     stylix = {
