@@ -135,7 +135,7 @@
       ''match:title ^(MainPicker)$, opacity 0.80 0.70''
       ''match:title ^(File Upload)$, opacity 0.90 0.80''
       ''match:title ^(Hyprland Polkit Agent)$, opacity 0.80 0.70''
-      ''match:title ^(Select what to share)$ 0.90 0.80''
+      ''match:title ^(Select what to share)$ opacity 0.90 0.80''
       ''match:title ^(Open)$, float on''
       ''match:title ^(Choose Files)$, float on''
       ''match:title ^(Save As)$, float on''
