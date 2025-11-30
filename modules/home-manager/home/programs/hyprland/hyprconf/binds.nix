@@ -82,7 +82,7 @@ in {
           "$mod, X, togglespecialworkspace"
           ", Print, exec, hyprquickshot"
           "$mod, O, exec, uwsm-app -- hyprpicker -a"
-          ''$mods, P, submap, player''
+          "$mods, P, submap, player"
         ]
         ++ (
           # workspaces
