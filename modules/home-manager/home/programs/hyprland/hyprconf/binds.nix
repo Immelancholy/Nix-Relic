@@ -64,6 +64,7 @@ in {
         "$mod, X, togglespecialworkspace"
         ", Print, exec, hyprquickshot"
         "$mod, O, exec, uwsm-app -- hyprpicker -a"
+        ''$mods, P, submap, player''
       ]
       ++ (
         # workspaces
@@ -90,16 +91,21 @@ in {
       ", XF86MonBrightnessDown, exec, brightness dec"
     ];
   };
-  wayland.windowManager.hyprland.extraConfig = ''
-    bind = $mods, P, submap, player
-    submap = player
-    bindl = , P, exec, $playerctl play-pause
-    bindel  = , O, exec, uwsm-app -- playerVol inc # volume up
-    bindel  = , I, exec, uwsm-app -- playerVol dec # volume down
-    bindel  = Shift, O, exec, $playerctl next # next
-    bindel  = Shift, I, exec, $playerctl previous # next
-    bind = , escape, submap, reset
-    bind = $mod, P, submap, reset
-    submap = reset
-  '';
+  submaps = {
+    player = {
+      bind = [
+        ", escape, submap, reset"
+        "$mod, P, submap, reset"
+      ];
+      bindl = [
+        ", P, exec, $playerctl play-pause"
+      ];
+      bindel = [
+        ", O, exec, uwsm-app -- playerVol inc"
+        ", I, exec, uwsm-app -- playerVol dec"
+        "Shift, O, exec, $playerctl next"
+        "Shift, I, exec, $playerctl previous"
+      ];
+    };
+  };
 }
