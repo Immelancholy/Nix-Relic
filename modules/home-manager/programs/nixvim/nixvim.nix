@@ -12,6 +12,7 @@ with lib; let
     "text/javascript" = ["nvim.desktop"];
     "application/json" = ["nvim.desktop"];
     "application/xml" = ["nvim.desktop"];
+    "application/x-shellscript" = ["nvim.desktop"];
   };
 in {
   config = mkIf cfg.enable {
