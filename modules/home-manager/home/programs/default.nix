@@ -39,6 +39,13 @@
     };
   };
 
+  programs.zed-editor = {
+    enable = true;
+    mutableUserTasks = true;
+    mutableUserKeymaps = true;
+    mutableUserSettings = true;
+  };
+
   programs.satty = {
     enable = true;
     package = pkgs.nr.satty;

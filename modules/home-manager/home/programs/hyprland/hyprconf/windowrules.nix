@@ -1,6 +1,7 @@
 {
   wayland.windowManager.hyprland.settings = {
     windowrule = [
+      ''match:class ^(dev.zed.Zed)$, opacity 0.90 0.80''
       ''match:class ^(solaar)$, opacity 0.90 0.80''
       ''match:class ^(neo)$, opacity 1.0 0.90''
       ''match:class ^(cava)$, opacity 1.0 0.90''
