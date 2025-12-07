@@ -71,7 +71,7 @@
     };
     hy3 = {
       # url = "github:outfoxxed/hy3";
-      url = "github:Immelancholy/hy3/switch-to-dispatcherv2";
+      url = "github:Immelancholy/hy3/update-to-m_reserved_area";
       inputs.hyprland.follows = "hyprland";
     };
     hyprtasking = {
