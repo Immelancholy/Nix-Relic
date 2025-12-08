@@ -522,11 +522,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1765151888,
-        "narHash": "sha256-1UY0G150YuY4/yz1Z43KSBlAXmI+l2lbBOg9MuGlxXk=",
+        "lastModified": 1765162637,
+        "narHash": "sha256-fEe4G5bNezHp4CbR4/kTdAsSrMxJ/03Hzwr/LWSNBRA=",
         "owner": "Immelancholy",
         "repo": "hy3",
-        "rev": "a2ce2410a5c9d44db9b4044a56280f6ff022c863",
+        "rev": "76d8098778f879309d05a10c9293e28e65d8b94d",
         "type": "github"
       },
       "original": {
