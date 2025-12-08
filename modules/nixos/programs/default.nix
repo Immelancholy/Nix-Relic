@@ -1,5 +1,6 @@
 {
   imports = [
     ./steam
+    ./hyprland.nix
   ];
 }
