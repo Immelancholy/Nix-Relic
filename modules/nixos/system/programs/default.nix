@@ -9,7 +9,6 @@
     ./pipewire.nix
     ./weylus.nix
     ./bluetooth.nix
-    ./uwsm.nix
     ./stylix.nix
   ];
 
