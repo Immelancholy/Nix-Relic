@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  ...
 }: let
   cfg = config.programs.hyprland;
 in {
