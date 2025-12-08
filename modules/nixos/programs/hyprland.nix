@@ -15,7 +15,8 @@ in {
         binPath = "/run/current-system/sw/bin/start-hyprland";
         extraUWSMArgs = [
           "-e"
-          "-D Hyprland"
+          "-D"
+          "Hyprland"
         ];
       };
     };
