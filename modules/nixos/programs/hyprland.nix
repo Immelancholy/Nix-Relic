@@ -12,6 +12,7 @@ in {
         comment = "Hyprland compositor managed by UWSM";
         binPath = "/run/current-system/sw/bin/start-hyprland";
         extraUWSMArgs = [
+          "-e"
           "-D Hyprland"
         ];
       };
