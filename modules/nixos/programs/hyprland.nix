@@ -6,7 +6,7 @@
   cfg = config.programs.hyprland;
 in {
   config = lib.mkIf cfg.withUWSM {
-    programs.uwsm.waylandCompositors = {
+    programs.nix-relic.uwsm.waylandCompositors = {
       hyprland = {
         prettyName = "Hyprland";
         comment = "Hyprland compositor managed by UWSM";

@@ -4,7 +4,7 @@
   pkgs,
   ...
 }: let
-  cfg = config.programs.uwsm;
+  cfg = config.programs.nix-relic.uwsm;
 
   # Helper function to create desktop entry files for UWSM-managed compositors
   mk_uwsm_desktop_entry = opts: (pkgs.writeTextFile {
@@ -22,7 +22,7 @@
     };
   });
 in {
-  options.programs.uwsm = {
+  options.programs.nix-relic.uwsm = {
     enable = lib.mkEnableOption ''
       uwsm, which wraps standalone Wayland compositors with a set
       of Systemd units on the fly. This essentially
@@ -140,9 +140,4 @@ in {
         cfg.waylandCompositors;
     };
   };
-
-  meta.maintainers = with lib.maintainers; [
-    johnrtitor
-    kai-tub
-  ];
 }
