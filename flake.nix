@@ -60,7 +60,7 @@
       inputs.hyprland.follows = "hyprland";
     };
     hyprland-easymotion = {
-      url = "github:zakk4223/hyprland-easymotion";
+      url = "github:immelancholy/hyprland-easymotion/update-to-latest-commit";
       inputs.hyprland.follows = "hyprland";
     };
     Hyprspace = {
