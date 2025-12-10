@@ -632,11 +632,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1765322138,
-        "narHash": "sha256-mJUTUx3SaaeAEv09ueZYx0r2tT5VV8M97Pj75K8fXcE=",
+        "lastModified": 1765330562,
+        "narHash": "sha256-5W1z7d0bnkOPNik8yyQMqtzcBlFQoSjFyEvhv2dN7/E=",
         "owner": "immelancholy",
         "repo": "hyprland-easymotion",
-        "rev": "b8a672eb127af3bff8fd0f34f47276faa02b630a",
+        "rev": "85cb76b0bcf6b2e3555e54416872a951d1bb3e76",
         "type": "github"
       },
       "original": {
