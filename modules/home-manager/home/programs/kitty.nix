@@ -33,6 +33,6 @@ in {
     layout splits
     launch --title "inori" inori
     launch --location=vsplit --title "zarumet" zarumet
-    resize_window short 3
+    resize_window short 5
   '';
 }
