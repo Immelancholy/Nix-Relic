@@ -1820,11 +1820,11 @@
         "rust-overlay": "rust-overlay_3"
       },
       "locked": {
-        "lastModified": 1765505775,
-        "narHash": "sha256-wF+KBLwB2SlepuoDF1xRqkqIgjOUfeeJS8+eXTbE6wc=",
+        "lastModified": 1765506965,
+        "narHash": "sha256-23ICs7ExGSE6FTK9uMpPODrvAAAY3jCBiiyy/3/+4fk=",
         "owner": "Immelancholy",
         "repo": "zarumet",
-        "rev": "8bdc1cbd884515adc79a1f807dda08cafb518706",
+        "rev": "6a29101259bb83a6850452b80e1a32d9fee28677",
         "type": "github"
       },
       "original": {
