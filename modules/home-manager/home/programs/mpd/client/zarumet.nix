@@ -14,6 +14,10 @@ in {
   programs.zarumet = {
     enable = true;
     settings = {
+      mpd = {
+        address = "${config.services.mpd.network.listenAddress}:${builtins.toString config.services.mpd.network.port}";
+        music_dir = config.serives.mpd.musicDirectory;
+      };
       colors = {
         border = text;
         title = text;
