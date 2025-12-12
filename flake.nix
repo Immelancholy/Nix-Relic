@@ -16,6 +16,10 @@
       url = "github:Immelancholy/artis";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    zarumet = {
+      url = "github:Immelancholy/zarumet";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     inori = {
       url = "github:eshrh/inori";
       inputs.nixpkgs.follows = "nixpkgs";

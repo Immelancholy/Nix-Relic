@@ -1324,6 +1324,7 @@
         "yazi": "yazi",
         "yazi-flavors": "yazi-flavors",
         "yazi-plugins": "yazi-plugins",
+        "zarumet": "zarumet",
         "zen-browser": "zen-browser",
         "zsh-256color": "zsh-256color"
       }
@@ -1361,6 +1362,27 @@
         "owner": "oxalica",
         "repo": "rust-overlay",
         "rev": "ab726555a9a72e6dc80649809147823a813fa95b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "rust-overlay_3": {
+      "inputs": {
+        "nixpkgs": [
+          "zarumet",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1765334520,
+        "narHash": "sha256-jTof2+ir9UPmv4lWksYO6WbaXCC0nsDExrB9KZj7Dz4=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "db61f666aea93b28f644861fbddd37f235cc5983",
         "type": "github"
       },
       "original": {
@@ -1787,6 +1809,27 @@
       "original": {
         "owner": "yazi-rs",
         "repo": "plugins",
+        "type": "github"
+      }
+    },
+    "zarumet": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "rust-overlay": "rust-overlay_3"
+      },
+      "locked": {
+        "lastModified": 1765500327,
+        "narHash": "sha256-ssgOu0n+HG08f8gDiNcJ/41oG39B1OtblP9dcyfBhmA=",
+        "owner": "Immelancholy",
+        "repo": "zarumet",
+        "rev": "f986de0ec5bcf25bbc10f7e5992d7a6aa6074a2d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Immelancholy",
+        "repo": "zarumet",
         "type": "github"
       }
     },
