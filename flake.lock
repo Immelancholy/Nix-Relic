@@ -531,7 +531,7 @@
       },
       "original": {
         "owner": "Immelancholy",
-        "ref": "update-to-m_reserved_area-test",
+        "ref": "update-to-m_reserved_area",
         "repo": "hy3",
         "type": "github"
       }
@@ -1820,15 +1820,16 @@
         "rust-overlay": "rust-overlay_3"
       },
       "locked": {
-        "lastModified": 1765583032,
-        "narHash": "sha256-anuLWOCAkTlj3zF7U9LJ89cMqts5J7w+x1qkxwuIbc0=",
+        "lastModified": 1765668342,
+        "narHash": "sha256-zhs8VfwH8fyhUfKjagH/sMwHzaJ/KHWXz2097l/BbTY=",
         "owner": "Immelancholy",
         "repo": "zarumet",
-        "rev": "d214ff370cf1e72925bb38a418baa26b39295ae4",
+        "rev": "cc21c8ce37776150e7e30330d62fb972902e35c6",
         "type": "github"
       },
       "original": {
         "owner": "Immelancholy",
+        "ref": "use-mpd-querey-art",
         "repo": "zarumet",
         "type": "github"
       }
