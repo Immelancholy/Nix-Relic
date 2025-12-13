@@ -17,7 +17,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     zarumet = {
-      url = "github:Immelancholy/zarumet";
+      url = "github:Immelancholy/zarumet/use-mpd-querey-art";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     inori = {
@@ -75,7 +75,7 @@
     };
     hy3 = {
       # url = "github:outfoxxed/hy3";
-      url = "github:Immelancholy/hy3/update-to-m_reserved_area-test";
+      url = "github:Immelancholy/hy3/update-to-m_reserved_area";
       inputs.hyprland.follows = "hyprland";
     };
     hyprtasking = {

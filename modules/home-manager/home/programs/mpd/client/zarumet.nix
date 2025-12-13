@@ -16,7 +16,6 @@ in {
     settings = {
       mpd = {
         address = "${config.services.mpd.network.listenAddress}:${builtins.toString config.services.mpd.network.port}";
-        music_dir = config.services.mpd.musicDirectory;
       };
       colors = {
         border = text;
