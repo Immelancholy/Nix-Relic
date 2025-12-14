@@ -2,7 +2,7 @@
   programs.tmux = {
     enable = true;
     secureSocket = true;
-    terminal = "tmux-kitty";
+    terminal = "xterm-kitty";
     mouse = true;
     disableConfirmationPrompt = true;
     prefix = "C-s";
