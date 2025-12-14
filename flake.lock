@@ -1396,11 +1396,11 @@
         "tinted-zed": "tinted-zed"
       },
       "locked": {
-        "lastModified": 1765322934,
-        "narHash": "sha256-KuR21YC3OgyKPQtgRltmh9mJTfuWqkanS3mswcyWCWA=",
+        "lastModified": 1765671336,
+        "narHash": "sha256-z0tFRHDEmX9N3ipIAcmEDveekmTiCLQXeOUIfVAIbnQ=",
         "owner": "Immelancholy",
         "repo": "stylix",
-        "rev": "ab6857e50e77d838d950f98594749717f1f0919f",
+        "rev": "371ec4a0b8db9e02ee6c0b67b0348c8ea3a4d996",
         "type": "github"
       },
       "original": {
