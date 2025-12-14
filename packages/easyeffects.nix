@@ -15,6 +15,7 @@
   libbs2b,
   libebur128,
   libportal-qt6,
+  libmysofa,
   libsamplerate,
   libsigcxx30,
   libsndfile,
@@ -60,13 +61,13 @@
 in
   stdenv.mkDerivation rec {
     pname = "easyeffects";
-    version = "8.0.6";
+    version = "8.0.8";
 
     src = fetchFromGitHub {
       owner = "wwmm";
       repo = "easyeffects";
       tag = "v${version}";
-      hash = "sha256-5UPwCdpFU1SiD9nlQd99lAK7QdC9jcizj5X3BhBYJ4U=";
+      hash = "sha256-Pw9rMYHrRBSttdtElWDH1YOF0tNWgb2zBzJBI9jJe4Q=";
     };
 
     patches = [./qmlmodule-fix.patch];
@@ -99,6 +100,7 @@ in
       libbs2b
       libebur128
       libportal-qt6
+      libmysofa
       libsamplerate
       libsigcxx30
       libsndfile
