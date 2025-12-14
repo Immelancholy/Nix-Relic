@@ -17,7 +17,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     zarumet = {
-      url = "github:Immelancholy/zarumet/use-mpd-querey-art";
+      url = "github:Immelancholy/zarumet";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     inori = {
