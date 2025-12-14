@@ -2,7 +2,7 @@
   programs.tmux = {
     enable = true;
     secureSocket = true;
-    terminal = "tmux-256color";
+    terminal = "tmux-kitty";
     mouse = true;
     disableConfirmationPrompt = true;
     prefix = "C-s";
@@ -31,8 +31,8 @@
     extraConfig = ''
       set -g default-command "/run/current-system/sw/bin/fish"
       set -sa terminal-features ',xterm*:RGB'
-      set -gq allow-passthrough on
-      set -g terminal-overrides ',*:Ss=\E[%p1%d q:Se=\E[ q'
+      set -g allow-passthrough on
+      set -ga terminal-overrides ",xterm*:Tc"
       set -g update-environment 'KITTY_LISTEN_ON'
 
       bind-key r confirm-before -p "kill-session? (y/n)" kill-session
