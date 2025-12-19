@@ -20,7 +20,7 @@ in {
     };
     cmd = mkOption {
       type = types.str;
-      default = ''uwsm app -- kitty --class "mpd" --session=mpd.session'';
+      default = ''uwsm app -- kitty --class "mpd" zarumet'';
       description = "Launch command for music player";
     };
     class = mkOption {

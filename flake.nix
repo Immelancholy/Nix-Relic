@@ -17,7 +17,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     zarumet = {
-      url = "github:Immelancholy/zarumet";
+      url = "github:Immelancholy/zarumet/full-client";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     inori = {
