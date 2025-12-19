@@ -1763,15 +1763,16 @@
         "rust-overlay": "rust-overlay_3"
       },
       "locked": {
-        "lastModified": 1765670688,
-        "narHash": "sha256-egEAZbCV1hfurDLXJvUSElRprq5/VhorTTWbgS647Uk=",
+        "lastModified": 1766174081,
+        "narHash": "sha256-4oHB8+tEyN+pWnuVd8TAts2l8yYEQjDJ/K3ak8AITnw=",
         "owner": "Immelancholy",
         "repo": "zarumet",
-        "rev": "77a573428ae636b96997156ba866261074c929f6",
+        "rev": "7383079819b6dcb261c199af4f6a4da801747392",
         "type": "github"
       },
       "original": {
         "owner": "Immelancholy",
+        "ref": "full-client",
         "repo": "zarumet",
         "type": "github"
       }
