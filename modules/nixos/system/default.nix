@@ -19,6 +19,7 @@
       outputs.overlays.modifications
       outputs.overlays.additions
       inputs.nix-relic.overlays.default
+      inputs.nix-relic.inputs.zarumet.overlays.default
     ];
 
     config = {
