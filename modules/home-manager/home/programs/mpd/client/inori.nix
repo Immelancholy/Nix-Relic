@@ -4,22 +4,22 @@
   pkgs,
   ...
 }: let
-  base = "#${config.lib.stylix.colors.base00}";
-  mantle = "#${config.lib.stylix.colors.base01}";
-  surface0 = "#${config.lib.stylix.colors.base02}";
-  surface1 = "#${config.lib.stylix.colors.base03}";
-  surface2 = "#${config.lib.stylix.colors.base04}";
-  text = "#${config.lib.stylix.colors.base05}";
-  rosewater = "#${config.lib.stylix.colors.base06}";
-  lavender = "#${config.lib.stylix.colors.base07}";
-  red = "#${config.lib.stylix.colors.base08}";
-  peach = "#${config.lib.stylix.colors.base09}";
-  yellow = "#${config.lib.stylix.colors.base0A}";
-  green = "#${config.lib.stylix.colors.base0B}";
-  teal = "#${config.lib.stylix.colors.base0C}";
-  blue = "#${config.lib.stylix.colors.base0D}";
-  mauve = "#${config.lib.stylix.colors.base0E}";
-  flamingo = "#${config.lib.stylix.colors.base0F}";
+  base00 = "#${config.lib.stylix.colors.base00}";
+  base01 = "#${config.lib.stylix.colors.base01}";
+  base02 = "#${config.lib.stylix.colors.base02}";
+  base03 = "#${config.lib.stylix.colors.base03}";
+  base04 = "#${config.lib.stylix.colors.base04}";
+  base05 = "#${config.lib.stylix.colors.base05}";
+  base06 = "#${config.lib.stylix.colors.base06}";
+  base07 = "#${config.lib.stylix.colors.base07}";
+  base08 = "#${config.lib.stylix.colors.base08}";
+  base09 = "#${config.lib.stylix.colors.base09}";
+  base0A = "#${config.lib.stylix.colors.base0A}";
+  base0B = "#${config.lib.stylix.colors.base0B}";
+  base0C = "#${config.lib.stylix.colors.base0C}";
+  base0D = "#${config.lib.stylix.colors.base0D}";
+  base0E = "#${config.lib.stylix.colors.base0E}";
+  base0F = "#${config.lib.stylix.colors.base0F}";
 in {
   programs.inori = {
     enable = true;
@@ -46,29 +46,29 @@ in {
       };
       theme = {
         item_highlight_active = {
-          fg = "${base}";
-          bg = "${mauve}";
+          fg = base00;
+          bg = base0E;
         };
         item_highlight_inactive = {
-          fg = "${text}";
+          fg = base05;
         };
         block_active = {
-          fg = "${mauve}";
+          fg = base0E;
         };
         status_playing = {
-          fg = "${teal}";
+          fg = base0C;
         };
         status_paused = {
-          fg = "${yellow}";
+          fg = base0A;
         };
         status_artist = {
-          fg = "${red}";
+          fg = base08;
         };
         status_album = {
-          fg = "${flamingo}";
+          fg = base0F;
         };
         field_album = {
-          fg = "${flamingo}";
+          fg = base0F;
         };
       };
     };
