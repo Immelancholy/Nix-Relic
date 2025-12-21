@@ -7,6 +7,7 @@
 }: let
   cfg = config.wayland.windowManager.hyprland;
   playerCmd = config.player.cmd;
+  playerCmdGame = config.player.cmdGame;
   playerClass = config.player.class;
   nrm = inputs.nix-relic.inputs;
 in {
@@ -66,7 +67,7 @@ in {
           hyprctl dispatch signalwindow 'class:(fastfetch),9'
           hyprctl dispatch signalwindow 'class:(btop),9'
           hyprctl dispatch signalwindow 'class:(cava),9'
-          hyprctl dispatch exec '[workspace 1 silent; float; size 1118 710; move 401 145] ${playerCmd}'
+          hyprctl dispatch exec '[workspace 1 silent; float; size 1118 710; move 401 145] ${playerCmdGame}'
       '';
       extraLaunch = ''
         hyprctl dispatch signalwindow 'class:(${playerClass}),9'

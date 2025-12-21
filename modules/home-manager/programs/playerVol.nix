@@ -20,8 +20,13 @@ in {
     };
     cmd = mkOption {
       type = types.str;
-      default = ''uwsm app -- kitty --class "mpd" zarumet'';
+      default = ''uwsm app -- kitty --class "mpd" zarumet -b on'';
       description = "Launch command for music player";
+    };
+    cmdGame = mkOption {
+      type = types.str;
+      default = ''uwsm app -- kitty --class "mpd" zarumet -b off'';
+      description = "Launch command for gamemode music player";
     };
     class = mkOption {
       type = types.str;
