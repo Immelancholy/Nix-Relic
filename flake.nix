@@ -13,7 +13,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     zarumet = {
-      url = "github:Immelancholy/zarumet/rmpc-like-lazyload+optimisations";
+      url = "github:Immelancholy/zarumet";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     zsh-256color = {
