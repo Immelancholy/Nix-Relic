@@ -451,16 +451,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1766371754,
-        "narHash": "sha256-EVzvbgntNz9RGYGLFWu4/NkPjwBw5g++oi4rZomibxk=",
-        "owner": "Immelancholy",
+        "lastModified": 1766381032,
+        "narHash": "sha256-Wuk2MULnGfgAbP1N/Rp6H6k7zG/ynDiy54mPvkt/4bM=",
+        "owner": "outfoxxed",
         "repo": "hy3",
-        "rev": "30f1b5ed83af12e82d1a018eadbaa42bee8703a6",
+        "rev": "50643d625829f303239f9ec019021f17d7e9f3fc",
         "type": "github"
       },
       "original": {
-        "owner": "Immelancholy",
-        "ref": "update-to-m_reserved_area",
+        "owner": "outfoxxed",
         "repo": "hy3",
         "type": "github"
       }
