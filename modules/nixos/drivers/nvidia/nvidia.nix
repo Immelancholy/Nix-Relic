@@ -35,7 +35,7 @@ in {
       pkgs.vdpauinfo
       pkgs.vulkan-validation-layers
     ];
-    boot.blacklistedKernelModules = ["nouveau"];
+    boot.blacklistedKernelModules = ["nouveau" "nova_core"];
 
     environment.variables = {
       GBM_BACKEND = "nvidia-drm";
