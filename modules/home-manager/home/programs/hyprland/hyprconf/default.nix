@@ -1,20 +1,4 @@
 {
-  osConfig,
-  pkgs,
-  lib,
-  inputs,
-  config,
-  ...
-}: let
-  flake = [
-    "${inputs.nix-relic.inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.csgo-vulkan-fix}/lib/libcsgo-vulkan-fix.so, plugin, allow"
-    "${inputs.nix-relic.inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.xtra-dispatchers}/lib/libxtra-dispatchers.so, plugin, allow"
-  ];
-  noFlake = [
-    "${pkgs.hyprlandPlugins.csgo-vulkan-fix}/lib/libcsgo-vulkan-fix.so, plugin, allow"
-  ];
-  cfg = config.wayland.windowManager.hyprland;
-in {
   wayland.windowManager.hyprland = {
     sourceFirst = true;
     settings = {
@@ -40,20 +24,15 @@ in {
       ecosystem = {
         # enforce_permissions = true;
       };
-      permission =
-        if cfg.usingFlake
-        then
-          [
-            "${osConfig.programs.hyprland.portalPackage}/libexec/.xdg-desktop-portal-hyprland-wrapped, screencopy, allow"
-            "${lib.getExe pkgs.grim}, screencopy, allow"
-          ]
-          ++ flake
-        else
-          [
-            "${osConfig.programs.hyprland.portalPackage}/libexec/.xdg-desktop-portal-hyprland-wrapped, screencopy, allow"
-            "${lib.getExe pkgs.grim}, screencopy, allow"
-          ]
-          ++ noFlake;
+      permission = [
+        "/nix/store/[a-z0-9]{32}-grim-[0-9.]*/bin/grim, screencopy, allow"
+        "/nix/store/[a-z0-9]{32}-xdg-desktop-portal-hyprland-[0-9.]*/libexec/.xdg-desktop-portal-hyprland-wrapped, screencopy, allow"
+        "/nix/store/[a-z0-9]{32}-hy3-hl0.52.0/lib/libhy3.so, plugin, allow"
+        "/nix/store/[a-z0-9]{32}-csgo-vulkan-fix-[0-9.]*/lib/libhy3.so, plugin, allow"
+        "/nix/store/[a-z0-9]{32}-xtra-dispatchers-[0-9.]*/lib/libhy3.so, plugin, allow"
+        "/nix/store/[a-z0-9]{32}-hyprexpo-[0-9.]*/lib/libhy3.so, plugin, allow"
+        "/nix/store/[a-z0-9]{32}-hyprland-easymotion/lib/libhy3.so, plugin, allow"
+      ];
     };
   };
   imports = [
