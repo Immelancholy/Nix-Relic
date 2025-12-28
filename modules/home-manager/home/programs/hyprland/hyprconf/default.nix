@@ -27,7 +27,7 @@
       permission = [
         "/nix/store/[a-z0-9]{32}-grim-[0-9.]*/bin/grim, screencopy, allow"
         "/nix/store/[a-z0-9]{32}-xdg-desktop-portal-hyprland-[0-9.]*/libexec/.xdg-desktop-portal-hyprland-wrapped, screencopy, allow"
-        "/nix/store/[a-z0-9]{32}-hy3-hl0.52.0/lib/libhy3.so, plugin, allow"
+        "/nix/store/[a-z0-9]{32}-hy3-hl[0-9.]*/lib/libhy3.so, plugin, allow"
         "/nix/store/[a-z0-9]{32}-csgo-vulkan-fix-[0-9.]*/lib/libcsgo-vulkan-fix.so, plugin, allow"
         "/nix/store/[a-z0-9]{32}-xtra-dispatchers-[0-9.]*/lib/libxtra-dispatchers.so, plugin, allow"
         "/nix/store/[a-z0-9]{32}-hyprexpo-[0-9.]*/lib/libhyprexpo.so, plugin, allow"
