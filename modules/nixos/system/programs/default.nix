@@ -52,6 +52,8 @@
     enableUdevRules = true;
   };
 
+  programs.gamemode.enable = true;
+
   security.wrappers.write = {
     group = "tty";
     owner = "root";
@@ -172,7 +174,6 @@
     sqlite-utils
     vscode-extensions.vadimcn.vscode-lldb
     lldb
-    gamemode
     mangohud
     nemo-with-extensions
     wine-wayland
