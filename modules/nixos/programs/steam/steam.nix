@@ -29,6 +29,7 @@ in {
         pkgs.stdenv.cc.cc.lib
         pkgs.libkrb5
         pkgs.keyutils
+        pkgs.gamemode
       ];
       protontricks.enable = true;
     };
