@@ -13,6 +13,7 @@ in {
           OBS_VKCAPTURE = true;
           MANGOHUD = true;
           DXVK_HUD = "compiler";
+          LD_PRELOAD = "${pkgs.gamemode.lib}/lib/libgamemode.so"
         };
       };
       remotePlay.openFirewall = true;
@@ -29,7 +30,6 @@ in {
         pkgs.stdenv.cc.cc.lib
         pkgs.libkrb5
         pkgs.keyutils
-        pkgs.gamemode.lib
       ];
       protontricks.enable = true;
     };
