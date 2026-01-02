@@ -13,7 +13,7 @@ in {
           OBS_VKCAPTURE = true;
           MANGOHUD = true;
           DXVK_HUD = "compiler";
-          LD_PRELOAD = "${pkgs.gamemode.lib}/lib/libgamemode.so"
+          LD_PRELOAD = "${pkgs.gamemode.lib}/lib/libgamemode.so";
         };
       };
       remotePlay.openFirewall = true;
