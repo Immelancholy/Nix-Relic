@@ -28,7 +28,7 @@
     after = ["graphical-session.target"];
     wantedBy = ["graphical-session.target"];
     path = [
-      "${pkgs.nr.easyeffects}"
+      "${pkgs.easyeffects}"
     ];
     script = ''
       easyeffects --service-mode -w
