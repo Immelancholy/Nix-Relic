@@ -26,5 +26,4 @@ pkgs: {
   force-hdr = pkgs.callPackage ./hdr.nix {};
   update-system = pkgs.callPackage ./update.nix {};
   binds-sh = pkgs.callPackage ./binds.nix {};
-  easyeffects = pkgs.callPackage ./easyeffects.nix {};
 }
