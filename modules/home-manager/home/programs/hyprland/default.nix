@@ -80,6 +80,11 @@ in {
       '';
     })
   ];
+  services.hyprpaper = {
+    settings = {
+      splash = false;
+    };
+  };
 
   imports = [
     ./hyprconf
