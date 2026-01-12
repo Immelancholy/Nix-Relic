@@ -35,6 +35,7 @@
         "/nix/store/[a-z0-9]{32}-hyprland-easymotion/lib/libhyprland-easymotion.so, plugin, allow"
         "/nix/store/[a-z0-9]{32}-hyprquickshot-[0-9.]*/bin/.hyprquickshot-wrapped, screencopy, allow"
         "/nix/store/[a-z0-9]{32}-quickshell-[0-9.]*/bin/.quickshell-wrapped, screencopy, allow"
+        "/nix/store/[a-z0-9]{32}-hyprpicker-[0-9.]*/bin/hyprpicker, screencopy, allow"
       ];
     };
   };
