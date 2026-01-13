@@ -30,12 +30,6 @@
       ''
         set -U fish_greeting
         function fish_mode_prompt; end
-      '';
-    shellInitLast =
-      /*
-      fish
-      */
-      ''
         fish_vi_key_bindings
 
         set -gx last_repo
