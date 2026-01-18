@@ -451,11 +451,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1768770090,
-        "narHash": "sha256-RQ40ctWLg+AzLW94HBVrtW+yQly63rxu0Y4hOX7BAqk=",
+        "lastModified": 1768766949,
+        "narHash": "sha256-zgoxgjtJl1VYslRiiJ9LLzeLTRJxV3AMhdbapHdWTIM=",
         "owner": "Immelancholy",
         "repo": "hy3",
-        "rev": "d5d800a4fa0687af6fe6b05294bb30919a8bd538",
+        "rev": "855a85c097f570b193432eb13db82bd268d29d19",
         "type": "github"
       },
       "original": {
