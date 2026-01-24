@@ -67,7 +67,7 @@
     };
     hy3 = {
       # url = "github:outfoxxed/hy3";
-      url = "github:Immelancholy/hy3/update-to-latest-commit";
+      url = "github:outfoxxed/hy3";
       inputs.hyprland.follows = "hyprland";
     };
     hyprtasking = {
