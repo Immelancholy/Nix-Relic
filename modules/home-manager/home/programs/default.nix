@@ -14,7 +14,6 @@
     ./mpd
     ./cava
     ./fastfetch
-    ./nvim
     ./easyeffects
     ./tmux.nix
     ./spicetify.nix
