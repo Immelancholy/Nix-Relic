@@ -47,7 +47,7 @@ in {
       ];
       bind =
         [
-          "$mod, Y, exec, uwsm app -- dev.zed.Zed.desktop"
+          "$mod, Y, exec, $editor"
           "$mod, B, exec, binds.sh"
           "$mod, W, togglefloating"
           ", Pause, exec, $playerctl play-pause"
