@@ -52,7 +52,6 @@
         fish
         */
         ''
-          end
         '';
       check_for_repo =
         /*
