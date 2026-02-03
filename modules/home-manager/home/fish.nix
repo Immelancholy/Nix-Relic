@@ -502,6 +502,8 @@
         set -gx last_repo
         set -gx INIT 1
 
+        check_tmux
+
         if [ "$class" = "fastfetch" ]
           fastfetch --logo "$HOME"/Pictures/fastfetch_logos/Nakari.jpg
         else
