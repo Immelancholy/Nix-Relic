@@ -23,38 +23,42 @@
         src = pkgs.fishPlugins.fzf-fish.src;
       }
     ];
-    interactiveShellInit =
-      /*
-      fish
-      */
-      ''
-        set -U fish_greeting
-        function fish_mode_prompt; end
-        fish_vi_key_bindings
-
-        set -gx last_repo
-        set -gx INIT 1
-
-        function onefetch_img
+    functions = {
+      onefetch_img =
+        /*
+        fish
+        */
+        ''
           set image "$(find ~/Pictures/fastfetch_logos/ -name "*.jpg" -o -name "*.png" 2> /dev/null | shuf -n1)"
           if [ "$image" ]
             onefetch --image-protocol kitty -i "$image"
           else
             onefetch
           end
-        end
-
-        function check_tmux
+        '';
+      check_tmux =
+        /*
+        fish
+        */
+        ''
           if [ -z $TMUX ]
             set -gx fetch_cmd onefetch_img
           else
             set -gx fetch_cmd fastfetch
           end
-        end
-
-        check_tmux
-
-        function check_for_repo
+        '';
+      fish_mode_prompt =
+        /*
+        fish
+        */
+        ''
+          end
+        '';
+      check_for_repo =
+        /*
+        fish
+        */
+        ''
           set -gx current_repo $(git rev-parse --show-toplevel 2> /dev/null)
           if [ "$current_repo" ] && \
             [ "$current_repo" != "$last_repo" ]
@@ -76,9 +80,14 @@
             set -gx GIT 0
             set -gx last_repo
           end
-        end
-
-        function nextd --description "Move forward in the directory history"
+        '';
+      nextd = {
+        description = "Move forward in the directory history";
+        body =
+          /*
+          fish
+          */
+          ''
             set -l options h/help l/list
             argparse -n nextd --max-args=1 $options -- $argv
             or return
@@ -122,9 +131,14 @@
 
             check_for_repo
             return $code
-        end
-
-        function prevd --description "Move back in the directory history"
+          '';
+      };
+      prevd = {
+        body =
+          /*
+          fish
+          */
+          ''
             set -l options h/help l/list
             argparse -n prevd --max-args=1 $options -- $argv
             or return
@@ -168,9 +182,16 @@
 
             check_for_repo
             return $code
-        end
+          '';
+        description = "Move back in the directory history";
+      };
+      cd = {
+        body =
+          /*
+          fish
+          */
+          ''
 
-        function cd --description "Change directory"
             set -l MAX_DIR_HIST 25
 
             if set -q argv[2]; and begin
@@ -226,9 +247,15 @@
 
             check_for_repo
             return $cd_status
-        end
-
-        function cdh --description "Menu based cd command"
+          '';
+        description = "Change directory";
+      };
+      cdh = {
+        body =
+          /*
+          fish
+          */
+          ''
             # See if we've been invoked with an argument. Presumably from the `cdh` completion script.
             # If we have just treat it as `cd` to the specified directory.
             if set -q argv[1]
@@ -312,89 +339,198 @@
                 return 1
             end
             check_for_repo
-        end
+          '';
+        description = "Menu based cd command";
+      };
+      z = {
+        body =
+          /*
+          fish
+          */
+          ''
+            __zoxide_z $argv
+            check_for_repo
+          '';
+        argumentNames = [
+          "-w='z'"
+        ];
+      };
+      zi = {
+        body =
+          /*
+          fish
+          */
+          ''
+            __zoxide_zi $argv
+            check_for_repo
+          '';
+        argumentNames = [
+          "-w='zi'"
+        ];
+      };
+      switch-remote = {
+        body =
+          /*
+          fish
+          */
+          ''
+            set -l dir "$(pwd)"
+            cd "$FLAKE_PATH"
+            git add .
+            nixos-rebuild switch --sudo --ask-sudo-password --target-host $argv
+            git add .
+            cd "$dir"
+          '';
+        argumentNames = [
+          "-w='switch-remote'"
+        ];
+      };
+      boot-remote = {
+        body =
+          /*
+          fish
+          */
+          ''
+            set -l dir "$(pwd)"
+            cd "$FLAKE_PATH"
+            git add .
+            nixos-rebuild boot --sudo --ask-sudo-password --target-host $argv
+            git add .
+            cd "$dir"
+          '';
+        argumentNames = [
+          "-w='boot-remote'"
+        ];
+      };
+      switch-build = {
+        body =
+          /*
+          fish
+          */
+          ''
+            set -l dir "$(pwd)"
+            cd "$FLAKE_PATH"
+            git add .
+            sudo nixos-rebuild switch --flake .
+            git add .
+            cd "$dir"
+          '';
+        argumentNames = [
+          "-w='switch-build'"
+        ];
+      };
+      boot = {
+        body =
+          /*
+          fish
+          */
+          ''
+            set -l dir "$(pwd)"
+            cd "$FLAKE_PATH"
+            git add .
+            sudo nixos-rebuild boot --flake .
+            git add .
+            cd "$dir"
+          '';
+        argumentNames = [
+          "-w='boot'"
+        ];
+      };
+      update = {
+        body =
+          /*
+          fish
+          */
+          ''
+            set -l dir "$(pwd)"
+            cd "$FLAKE_PATH"
+            nix flake update $argv --commit-lock-file
+            cd "$dir"
+          '';
+        argumentNames = [
+          "-w='update'"
+        ];
+      };
+      update-flake = {
+        body =
+          /*
+          fish
+          */
+          ''
+            nix flake update $argv --commit-lock-file
+          '';
+        argumentNames = [
+          "-w='update-flake'"
+        ];
+      };
+      update-flake-token = {
+        body =
+          /*
+          fish
+          */
+          ''
+            nix flake update $argv --commit-lock-file --option access-tokens "github.com=$(gh auth token)"
+          '';
+        argumentNames = [
+          "-w='update-flake-token'"
+        ];
+      };
+      update-token = {
+        body =
+          /*
+          fish
+          */
+          ''
+            set -l dir "$(pwd)"
+            cd "$FLAKE_PATH"
+            nix flake update $argv --commit-lock-file --option access-tokens "github.com=$(gh auth token)"
+            cd "$dir"
+          '';
+        argumentNames = [
+          "-w='update-token'"
+        ];
+      };
+      nixgit = {
+        body =
+          /*
+          fish
+          */
+          ''
+            set -l dir "$(pwd)"
+            cd "$FLAKE_PATH"
+            lazygit
+            cd "$dir"
+          '';
+        argumentNames = [
+          "-w='nixgit'"
+        ];
+      };
+      nix-llm-git = {
+        body =
+          /*
+          fish
+          */
+          ''
+            set -l dir "$(pwd)"
+            cd "$FLAKE_PATH"
+            llm git-commit
+            cd "$dir"
+          '';
+        argumentNames = [
+          "-w='nix-llm-git'"
+        ];
+      };
+    };
+    interactiveShellInit =
+      /*
+      fish
+      */
+      ''
+        set -U fish_greeting
+        fish_vi_key_bindings
 
-        function z -w='z'
-          __zoxide_z $argv
-          check_for_repo
-        end
-
-        function zi -w='zi'
-          __zoxide_zi $argv
-          check_for_repo
-        end
-
-        function switch-remote -w='switch-remote'
-          set -l dir "$(pwd)"
-          cd "$FLAKE_PATH"
-          git add .
-          nixos-rebuild switch --sudo --ask-sudo-password --target-host $argv
-          git add .
-          cd "$dir"
-        end
-
-        function boot-remote -w='boot-remote'
-          set -l dir "$(pwd)"
-          cd "$FLAKE_PATH"
-          git add .
-          nixos-rebuild boot --sudo --ask-sudo-password --target-host $argv
-          git add .
-          cd "$dir"
-        end
-
-        function switch-build -w='switch-build'
-          set -l dir "$(pwd)"
-          cd "$FLAKE_PATH"
-          git add .
-          sudo nixos-rebuild switch --flake .
-          git add .
-          cd "$dir"
-        end
-
-        function boot -w='boot'
-          set -l dir "$(pwd)"
-          cd "$FLAKE_PATH"
-          git add .
-          sudo nixos-rebuild boot --flake .
-          git add .
-          cd "$dir"
-        end
-
-        function update -w='update'
-          set -l dir "$(pwd)"
-          cd "$FLAKE_PATH"
-          nix flake update $argv --commit-lock-file
-          cd "$dir"
-        end
-
-        function update-flake -w='update-flake'
-          nix flake update $argv --commit-lock-file
-        end
-
-        function update-flake-token -w='update-flake-token'
-          nix flake update $argv --commit-lock-file --option access-tokens "github.com=$(gh auth token)"
-        end
-
-        function update-token -w='update-token'
-          set -l dir "$(pwd)"
-          cd "$FLAKE_PATH"
-          nix flake update $argv --commit-lock-file --option access-tokens "github.com=$(gh auth token)"
-          cd "$dir"
-        end
-
-        function nixgit -w='nixgit'
-          set -l dir "$(pwd)"
-          cd "$FLAKE_PATH"
-          lazygit
-          cd "$dir"
-        end
-
-        function nix-llm-git -w='nix-llm-git'
-          set -l dir "$(pwd)"
-          cd "$FLAKE_PATH"
-          llm git-commit
-          cd "$dir"
-        end
+        set -gx last_repo
+        set -gx INIT 1
 
         if [ "$class" = "fastfetch" ]
           fastfetch --logo "$HOME"/Pictures/fastfetch_logos/Nakari.jpg
