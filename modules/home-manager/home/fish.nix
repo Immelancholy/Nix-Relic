@@ -483,7 +483,7 @@
             cd "$dir"
           '';
       };
-      fish_mode_key_bindings =
+      fish_user_key_bindings =
         /*
         fish
         */
