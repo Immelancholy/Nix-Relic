@@ -483,13 +483,12 @@
             cd "$dir"
           '';
       };
-      fish_user_key_bindings =
-        /*
-        fish
-        */
-        ''
-          bind -M insert jk "if commandline -P; commandline -f cancel; else; set fish_bind_mode default; commandline -f backward-char force-repaint; end"
-        '';
+    };
+    binds = {
+      jk = {
+        mode = "insert";
+        command = "if commandline -P; commandline -f cancel; else; set fish_bind_mode default; commandline -f backward-char force-repaint; end";
+      };
     };
     interactiveShellInit =
       /*
