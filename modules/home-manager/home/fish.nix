@@ -486,6 +486,7 @@
     };
     binds = {
       jk = {
+        command = "";
         mode = "insert";
         setsMode = "default";
         repaint = true;
