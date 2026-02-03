@@ -487,7 +487,8 @@
     binds = {
       jk = {
         mode = "insert";
-        command = "if commandline -P; commandline -f cancel; else; set fish_bind_mode default; commandline -f backward-char force-repaint; end";
+        setsMode = "default";
+        repaint = true;
       };
     };
     interactiveShellInit =
