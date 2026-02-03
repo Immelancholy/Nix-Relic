@@ -350,9 +350,6 @@
             __zoxide_z $argv
             check_for_repo
           '';
-        argumentNames = [
-          "-w='z'"
-        ];
       };
       zi = {
         body =
@@ -363,9 +360,6 @@
             __zoxide_zi $argv
             check_for_repo
           '';
-        argumentNames = [
-          "-w='zi'"
-        ];
       };
       switch-remote = {
         body =
@@ -380,9 +374,6 @@
             git add .
             cd "$dir"
           '';
-        argumentNames = [
-          "-w='switch-remote'"
-        ];
       };
       boot-remote = {
         body =
@@ -397,9 +388,6 @@
             git add .
             cd "$dir"
           '';
-        argumentNames = [
-          "-w='boot-remote'"
-        ];
       };
       switch-build = {
         body =
@@ -414,9 +402,6 @@
             git add .
             cd "$dir"
           '';
-        argumentNames = [
-          "-w='switch-build'"
-        ];
       };
       boot = {
         body =
@@ -431,9 +416,6 @@
             git add .
             cd "$dir"
           '';
-        argumentNames = [
-          "-w='boot'"
-        ];
       };
       update = {
         body =
@@ -446,9 +428,6 @@
             nix flake update $argv --commit-lock-file
             cd "$dir"
           '';
-        argumentNames = [
-          "-w='update'"
-        ];
       };
       update-flake = {
         body =
@@ -458,9 +437,6 @@
           ''
             nix flake update $argv --commit-lock-file
           '';
-        argumentNames = [
-          "-w='update-flake'"
-        ];
       };
       update-flake-token = {
         body =
@@ -470,9 +446,6 @@
           ''
             nix flake update $argv --commit-lock-file --option access-tokens "github.com=$(gh auth token)"
           '';
-        argumentNames = [
-          "-w='update-flake-token'"
-        ];
       };
       update-token = {
         body =
@@ -485,9 +458,6 @@
             nix flake update $argv --commit-lock-file --option access-tokens "github.com=$(gh auth token)"
             cd "$dir"
           '';
-        argumentNames = [
-          "-w='update-token'"
-        ];
       };
       nixgit = {
         body =
@@ -500,9 +470,6 @@
             lazygit
             cd "$dir"
           '';
-        argumentNames = [
-          "-w='nixgit'"
-        ];
       };
       nix-llm-git = {
         body =
@@ -515,9 +482,6 @@
             llm git-commit
             cd "$dir"
           '';
-        argumentNames = [
-          "-w='nix-llm-git'"
-        ];
       };
       fish_mode_key_bindings =
         /*
