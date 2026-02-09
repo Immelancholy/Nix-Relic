@@ -1,7 +1,6 @@
 {
   config,
   pkgs,
-  lib,
   ...
 }: let
   playerCmd = config.player.cmd;
@@ -59,7 +58,7 @@ in {
           "$mod, C, exec, $edit"
           "Alt, Return, fullscreen"
           "Alt+Shift, Return, fullscreen, 1"
-          "Alt, Tab, exec, rofi -show window -modi window"
+          "$mod, Tab, exec, rofi -show window -modi window"
           "$mods, U, exec, launches"
           "$mod, Delete, exec, rofi -show power-menu -modi power-menu:rofi-power-menu"
           "$mod, 0, workspace, 10"
