@@ -19,11 +19,11 @@ in {
       remotePlay.openFirewall = true;
       dedicatedServer.openFirewall = true;
       extraPackages = [
-        pkgs.xorg.libxcb
-        pkgs.xorg.libXcursor
-        pkgs.xorg.libXi
-        pkgs.xorg.libXinerama
-        pkgs.xorg.libXScrnSaver
+        pkgs.libxcb
+        pkgs.libXcursor
+        pkgs.libXi
+        pkgs.libXinerama
+        pkgs.libXScrnSaver
         pkgs.libpng
         pkgs.libpulseaudio
         pkgs.libvorbis
