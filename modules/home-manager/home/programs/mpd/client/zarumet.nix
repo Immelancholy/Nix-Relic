@@ -31,10 +31,11 @@ in {
       };
       colors = {
         border = base05;
+        border_selected = base0E;
+        border_title = base0C;
         song_title = base05;
         album = base0F;
         artist = base08;
-        border_title = base0C;
         progress_filled = base0F;
         progress_empty = base00;
         paused = base0D;
