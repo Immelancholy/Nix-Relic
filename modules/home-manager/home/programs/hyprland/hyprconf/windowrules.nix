@@ -96,6 +96,7 @@
       ''match:class ^(org.kde.dolphin)$, match:title ^(Copying - Dolphin)$, float on''
       ''match:class ^(firefox)$, match:title ^(Library)$, float on''
       ''match:class ^(com.github.wwmm.easyeffects)$, float on''
+      ''match:class ^(com.gabm.satty)$, float on''
 
       ''match:class ^(update-system)$, float on''
       ''match:class ^(update-system)$, opacity 1.0 0.90''
