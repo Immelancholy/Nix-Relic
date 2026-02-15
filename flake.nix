@@ -103,7 +103,7 @@
     overlay = final: prev: {
       nr = import ./packages final.pkgs;
       stable = import inputs.nixpkgs-stable {
-        system = final.system;
+        system = final.stdenv.hostPlatform.system;
         config.allowUnfree = true;
       };
       nur = inputs.nur.overlays.default;
