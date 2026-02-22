@@ -36,8 +36,8 @@ in {
     };
   };
   config = mkIf cfg.enable {
-    home.file = {
-      ".zen/profiles.ini".text = ''
+    xdg.configFile = {
+      "zen/profiles.ini".text = ''
         [Profile0]
         Name=${user}Default
         IsRelative=1
