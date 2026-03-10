@@ -104,6 +104,8 @@ in {
       bindel = [
         ", XF86AudioLowerVolume, exec, uwsm-app -- playerVol dec" # decrease volume of mpd
         ", XF86AudioRaiseVolume, exec, uwsm-app -- playerVol inc" # increase volume of mpd
+        "Shift, XF86AudioLowerVolume, exec, uwsm-app -- playerVol dec" # decrease volume of mpd
+        "Shift, XF86AudioRaiseVolume, exec, uwsm-app -- playerVol inc" # increase volume of mpd
         ", XF86MonBrightnessUp, exec, brightness inc"
         ", XF86MonBrightnessDown, exec, brightness dec"
       ];

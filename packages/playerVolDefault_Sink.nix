@@ -25,8 +25,8 @@ writeShellApplication {
       dunstify -t 3000 -a "  Volume" -h int:value:"$VOLUME_PERCENT" "$VOLUME_PERCENT""%"
     }
 
-    if [[ "$#" != 1 || ! ("$1" == "inc" || "$1" == "dec" || "$1" == "mute") ]]; then
-        printf "Usage: %s [inc|dec|mute]\n" "$0" >&2
+    if [[ "$#" != 1 || ! ("$1" == "inc" || "$1" == "inc-mini" || "$1" == "dec" || "$1" == "dec-mini" || "$1" == "mute") ]]; then
+        printf "Usage: %s [inc|inc-mini|dec|dec-mini|mute]\n" "$0" >&2
         exit 1
     fi
 
@@ -39,8 +39,14 @@ writeShellApplication {
     if [[ "$1" == "inc" ]]; then
       wpctl set-volume @DEFAULT_SINK@ 5%+
       notify_volume
+    elif [[ "$1" == "inc-mini" ]]; then
+      wpctl set-volume @DEFAULT_SINK@ 1%+
+      notify_volume
     elif [[ "$1" == "dec" ]]; then
       wpctl set-volume @DEFAULT_SINK@ 5%-
+      notify_volume
+    elif [[ "$1" == "dec-mini" ]]; then
+      wpctl set-volume @DEFAULT_SINK@ 1%-
       notify_volume
     elif [[ "$1" == "mute" ]]; then
       wpctl set-mute @DEFAULT_SINK@ toggle

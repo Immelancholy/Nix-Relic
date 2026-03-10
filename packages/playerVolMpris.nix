@@ -42,8 +42,8 @@ writeShellApplication {
     }
 
 
-    if [[ "$#" != 1 || ! ("$1" == "inc" || "$1" == "dec" || "$1" == "mute") ]]; then
-        printf "Usage: %s [inc|dec|mute]\n" "$0" >&2
+    if [[ "$#" != 1 || ! ("$1" == "inc" || "$1" == "inc-mini" || "$1" == "dec" || "$1" == "dec-mini" || "$1" == "mute") ]]; then
+        printf "Usage: %s [inc|inc-mini|dec|dec-mini|mute]\n" "$0" >&2
         exit 1
     fi
 
@@ -54,9 +54,15 @@ writeShellApplication {
     fi
 
     if [[ "$1" == "inc" ]]; then
+      playerctl --player=${player} volume 0.5+ > /dev/null
+      notify_volume
+    elif [[ "$1" == "inc-mini" ]]; then
       playerctl --player=${player} volume 0.1+ > /dev/null
       notify_volume
     elif [[ "$1" == "dec" ]]; then
+      playerctl --player=${player} volume 0.5- > /dev/null
+      notify_volume
+    elif [[ "$1" == "dec-mini" ]]; then
       playerctl --player=${player} volume 0.1- > /dev/null
       notify_volume
     elif [[ "$1" == "mute" ]]; then
