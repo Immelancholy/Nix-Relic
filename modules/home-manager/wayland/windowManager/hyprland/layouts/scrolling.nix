@@ -132,9 +132,9 @@ in {
         bind = Alt, Return, fullscreen, 1
         bind = Alt+Shift, Return, fullscreen
         bind = , W, togglefloating
-        binde = , Left, layoutmsg, colresize 0.1
+        binde = , Left, layoutmsg, colresize +0.1
         binde = , Right, layoutmsg, colresize -0.1
-        binde = , H, layoutmsg, colresize 0.1
+        binde = , H, layoutmsg, colresize +0.1
         binde = , L, layoutmsg, colresize -0.1
         bind = , R, submap, manage
         bind = , escape, submap, manage
