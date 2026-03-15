@@ -32,8 +32,10 @@ in {
             "$mod, R, layoutmsg, colresize 0.5"
             "$mods, L, workspace, r+1"
             "$mods, H, workspace, r-1"
-            "$mod, Right, workspace, r+1"
-            "$mod, Left, workspace, r-1"
+            "$mod, Right, layoutmsg, focus right"
+            "$mod, Left, layoutmsg, focus left"
+            "$mods, Right, workspace, r+1"
+            "$mods, Left, workspace, r-1"
             "$mod, mouse_up, layoutmsg, move +col"
             "$mod, mouse_down, layoutmsg, move -col"
             "$mods, mouse_up, workspace, r+1"
@@ -74,6 +76,10 @@ in {
         bind = , V, layoutmsg, fit visible
         bind = , U, layoutmsg, fit active
         bind = , R, layoutmsg, colresize 0.5
+        bind = , Right, layoutmsg, focus right
+        bind = , Left, layoutmsg, focus left
+        bind = $mods, Right, workspace, r+1
+        bind = $mods, Left, workspace, r-1
         bindm = $mod, mouse:272, movewindow
         bindm = $mod, mouse:273, resizewindow
 
