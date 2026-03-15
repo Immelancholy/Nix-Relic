@@ -30,7 +30,7 @@ in {
             "$mod, K, layoutmsg, fit toend"
             "$mod, H, layoutmsg, focus right"
             "$mod, V, layoutmsg, fit visible"
-            "$mod, U, layoutmsg, fit all"
+            "$mod, U, layoutmsg, fit active"
             "$mod, R, layoutmsg, colresize 0.5"
             "$mods, L, workspace, r+1"
             "$mods, H, workspace, r-1"
@@ -74,7 +74,7 @@ in {
         bind = , H, layoutmsg, focus right
         bind = , C, layoutmsg, colresize +conf
         bind = , V, layoutmsg, fit visible
-        bind = , U, layoutmsg, fit all
+        bind = , U, layoutmsg, fit active
         bind = , R, layoutmsg, colresize 0.5
         bindm = $mod, mouse:272, movewindow
         bindm = $mod, mouse:273, resizewindow
@@ -115,7 +115,7 @@ in {
         bind = , W, togglefloating
         bind = , C, layoutmsg, colresize +conf
         bind = , V, layoutmsg, fit visible
-        bind = , U, layoutmsg, fit all
+        bind = , U, layoutmsg, fit active
         bind = , R, layoutmsg, colresize 0.5
         binde = , Right, resizeactive, 30 0
         binde = , Left, resizeactive, 30 0
@@ -155,7 +155,7 @@ in {
         bind = , Y, fullscreen, 1
         bind = , C, layoutmsg, colresize +conf
         bind = , V, layoutmsg, fit visible
-        bind = , U, layoutmsg, fit all
+        bind = , U, layoutmsg, fit active
         bind = , R, layoutmsg, colresize 0.5
         bind = , W, togglefloating
         binde = , Left, layoutmsg, colresize +0.1
@@ -173,7 +173,7 @@ in {
         bind = , Y, fullscreen, 1
         bind = , C, layoutmsg, colresize +conf
         bind = , V, layoutmsg, fit visible
-        bind = , U, layoutmsg, fit all
+        bind = , U, layoutmsg, fit active
         bind = , R, layoutmsg, colresize 0.5
         bind = , W, togglefloating
         binde = , Left, moveactive, 10 0
