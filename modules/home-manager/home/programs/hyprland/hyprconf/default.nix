@@ -42,7 +42,6 @@
   imports = [
     ./binds.nix
     ./theme
-    ./execs.nix
     ./windowrules.nix
   ];
 }
