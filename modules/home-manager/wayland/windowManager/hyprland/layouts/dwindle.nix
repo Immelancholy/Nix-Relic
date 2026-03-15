@@ -41,6 +41,9 @@ in {
             "$modc, L, changegroupactive, f"
             "$modc, Right, changegroupactive, b"
             "$modc, Left, changegroupactive, f"
+            "$mod, Right, workspace, r+1"
+            "$mod, Left, workspace, r-1"
+            "$mod, Down, workspace, empty"
           ]
           ++ (
             # workspaces

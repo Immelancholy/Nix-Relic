@@ -64,9 +64,6 @@ in {
           "$mod, N, exec, rofi -show Cliphist -modi Cliphist:cliphist.sh"
           "Ctrl, Period, exec, rofi -show emoji nerdy -modi emoji,nerdy"
           "$mod, G, exec, hyprgame"
-          "$mod, Right, workspace, r+1"
-          "$mod, Left, workspace, r-1"
-          "$mod, Down, workspace, empty"
           ''Ctrl+Shift, Escape, exec, uwsm app -- $term --title "btop" btop''
           ", XF86Calculator, exec, uwsm-app -- qalculate-gtk"
           "$mod, X, togglespecialworkspace"

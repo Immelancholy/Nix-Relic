@@ -73,6 +73,9 @@ in {
               "$mod, mouse_down, workspace, e-1"
               "$mods, mouse_up, workspace, r+1"
               "$mods, mouse_down, workspace, r-1"
+              "$mod, Right, workspace, r+1"
+              "$mod, Left, workspace, r-1"
+              "$mod, Down, workspace, empty"
             ]
             ++ (
               # workspaces

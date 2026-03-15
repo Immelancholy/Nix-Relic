@@ -34,6 +34,8 @@ in {
             "$mod, R, layoutmsg, colresize 0.5"
             "$mods, L, workspace, r+1"
             "$mods, H, workspace, r-1"
+            "$mod, Right, workspace, r+1"
+            "$mod, Left, workspace, r-1"
             "$mod, mouse_up, layoutmsg, move +col"
             "$mod, mouse_down, layoutmsg, move -col"
             "$mods, mouse_up, workspace, r+1"
