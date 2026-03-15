@@ -27,9 +27,11 @@ in {
             "$mods, X, movetoworkspacesilent, special"
             "$mod, L, layoutmsg, move +col"
             "$mod, H, layoutmsg, move -col"
+            "$mods, L, workspace, r+1"
+            "$mods, H, workspace, r-1"
             "$mod, D, layoutmsg, promote"
-            "$mod, mouse_up, layoutmsg, move +50"
-            "$mod, mouse_down, layoutmsg, move -50"
+            "$mod, mouse_up, layoutmsg, move -col"
+            "$mod, mouse_down, layoutmsg, move +col"
             "$mods, mouse_up, workspace, r+1"
             "$mods, mouse_down, workspace, r-1"
           ]
@@ -49,19 +51,9 @@ in {
       extraConfig = ''
         bind = $mod, A, submap, manage
         submap = manage
-        bind = , A, layoutmsg, addscrolling
-        bind = , D, layoutmsg, removescrolling
         bind = Alt, Return, fullscreen, 1
         bind = Alt+Shift, Return, fullscreen
         bind = , W, togglefloating
-        bind = , H, layoutmsg, focus, l
-        bind = , J, layoutmsg, focus, d
-        bind = , K, layoutmsg, focus, u
-        bind = , L, layoutmsg, focus, r
-        bind = , Left, layoutmsg, focus, l
-        bind = , Down, layoutmsg, focus, d
-        bind = , Up, layoutmsg, focus, u
-        bind = , Right, layoutmsg, focus, r
         bind = , P, pin, active
         bindm = $mod, mouse:272, movewindow
         bindm = $mod, mouse:273, resizewindow
@@ -78,12 +70,20 @@ in {
         bind = Ctrl, Right, changegroupactive, b
         bind = Ctrl, Left, changegroupactive, f
 
+        bind = $mods, H, movewindow, l
+        bind = $mods, J, movewindow, d
+        bind = $mods, K, movewindow, u
+        bind = $mods, L, movewindow, r
+        bind = $mods, Right, movewindow, r
+        bind = $mods, Down, movewindow, d
+        bind = $mods, Up, movewindow, u
+        bind = $mods, Left, movewindow, l
         bind = Shift, H, layoutmsg, swapcol l
         bind = Shift, L, layoutmsg, swapcol r
         bind = Shift, Right, layoutmsg, swapcol r
         bind = Shift, Left, layoutmsg, swapcol l
-        bind = , mouse_up, layoutmsg, move +50
-        bind = , mouse_down, layoutmsg, move -50
+        bind = , mouse_up, layoutmsg, move -col
+        bind = , mouse_down, layoutmsg, move +col
 
         bind = Shift, R, submap, resize
         submap = resize
@@ -126,14 +126,10 @@ in {
         bind = Alt, Return, fullscreen, 1
         bind = Alt+Shift, Return, fullscreen
         bind = , W, togglefloating
-        binde = , Left, resizeactive, 1 0
-        binde = , Right, resizeactive, -1 0
-        binde = , Up, resizeactive, 0 -1
-        binde = , Down, resizeactive, 0 1
-        binde = , H, resizeactive, 30 0
-        binde = , L, resizeactive, -30 0
-        binde = , K, resizeactive, 0 -30
-        binde = , J, resizeactive, 0 30
+        binde = , Left, resizeactive, 0.2 0
+        binde = , Right, resizeactive, -0.2 0
+        binde = , H, resizeactive, 0.2
+        binde = , L, resizeactive, -0.2
         bind = , R, submap, manage
         bind = , escape, submap, manage
         submap = manage
