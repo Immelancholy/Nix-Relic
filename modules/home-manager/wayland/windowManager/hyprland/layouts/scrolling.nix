@@ -29,7 +29,6 @@ in {
             "$mod, H, layoutmsg, move -col"
             "$mods, L, workspace, r+1"
             "$mods, H, workspace, r-1"
-            "$mod, D, layoutmsg, promote"
             "$mod, mouse_up, layoutmsg, move +col"
             "$mod, mouse_down, layoutmsg, move -col"
             "$mods, mouse_up, workspace, r+1"
