@@ -25,10 +25,8 @@ in {
             "$mods, 0, movetoworkspacesilent, 10"
             "$mods, Q, killactive"
             "$mods, X, movetoworkspacesilent, special"
-            "$mod, L, layoutmsg, focus left"
-            "$mod, J, layoutmsg, fit tobeg"
-            "$mod, K, layoutmsg, fit toend"
-            "$mod, H, layoutmsg, focus right"
+            "$mod, H, layoutmsg, focus left"
+            "$mod, L, layoutmsg, focus right"
             "$mod, V, layoutmsg, fit visible"
             "$mod, U, layoutmsg, fit active"
             "$mod, R, layoutmsg, colresize 0.5"
@@ -68,10 +66,10 @@ in {
         bind = , W, togglefloating
         bind = , P, pin, active
         bind = , Y, fullscreen, 1
-        bind = , L, layoutmsg, focus left
+        bind = , H, layoutmsg, focus left
+        bind = , L, layoutmsg, focus right
         bind = , J, layoutmsg, fit tobeg 
         bind = , K, layoutmsg, fit toend 
-        bind = , H, layoutmsg, focus right
         bind = , C, layoutmsg, colresize +conf
         bind = , V, layoutmsg, fit visible
         bind = , U, layoutmsg, fit active
