@@ -8,6 +8,7 @@
       "$filest" = "uwsm app -- yazi.desktop";
       "$mod" = "SUPER";
       "$mods" = "SUPERSHIFT";
+      "$modc" = "SUPERCTRL";
       "$menu" = ''rofi -show drun -run-command "uwsm-app -- {cmd}" run filebrowser power-menu -modi drun,run,filebrowser,power-menu:rofi-power-menu'';
       "$browser" = "uwsm app -- zen-beta.desktop";
       "$playerctl" = "uwsm app -- playerctl --player=$player";

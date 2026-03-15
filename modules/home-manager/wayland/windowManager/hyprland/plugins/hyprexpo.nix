@@ -39,17 +39,13 @@ in {
         plugins = [
           nr.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprexpo
         ];
-        settings.permission = [
-          "${nr.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprexpo}/lib/libhyprexpo.so, plugin, allow"
-        ];
+
       })
       (mkIf (! cfg.usingFlake) {
         plugins = [
           pkgs.hyprlandPlugins.hyprexpo
         ];
-        settings.permission = [
-          "${pkgs.hyprlandPlugins.hyprexpo}/lib/libhyprexpo.so, plugin, allow"
-        ];
+
       })
     ];
   };

@@ -269,17 +269,13 @@ in {
         plugins = [
           nr.hy3.packages.${pkgs.stdenv.hostPlatform.system}.hy3
         ];
-        settings.permission = [
-          "${nr.hy3.packages.${pkgs.stdenv.hostPlatform.system}.hy3}/lib/libhy3.so, plugin, allow"
-        ];
+
       })
       (mkIf (! config.wayland.windowManager.hyprland.usingFlake) {
         plugins = [
           pkgs.hyprlandPlugins.hy3
         ];
-        settings.permission = [
-          "${pkg.hyprlandPlugins.hy3}/lib/libhy3.so, plugin, allow"
-        ];
+
       })
     ];
   };

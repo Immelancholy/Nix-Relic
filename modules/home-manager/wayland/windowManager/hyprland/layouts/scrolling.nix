@@ -30,10 +30,14 @@ in {
             "$mods, L, workspace, r+1"
             "$mods, H, workspace, r-1"
             "$mod, D, layoutmsg, promote"
-            "$mod, mouse_up, layoutmsg, move -col"
-            "$mod, mouse_down, layoutmsg, move +col"
+            "$mod, mouse_up, layoutmsg, move +col"
+            "$mod, mouse_down, layoutmsg, move -col"
             "$mods, mouse_up, workspace, r+1"
             "$mods, mouse_down, workspace, r-1"
+            "$modc, H, changegroupactive, b"
+            "$modc, L, changegroupactive, f"
+            "$modc, Right, changegroupactive, b"
+            "$modc, Left, changegroupactive, f"
           ]
           ++ (
             # workspaces
@@ -55,6 +59,7 @@ in {
         bind = Alt+Shift, Return, fullscreen
         bind = , W, togglefloating
         bind = , P, pin, active
+        bind = , I, fullscreen, 1
         bindm = $mod, mouse:272, movewindow
         bindm = $mod, mouse:273, resizewindow
 
@@ -82,8 +87,8 @@ in {
         bind = Shift, L, layoutmsg, swapcol r
         bind = Shift, Right, layoutmsg, swapcol r
         bind = Shift, Left, layoutmsg, swapcol l
-        bind = , mouse_up, layoutmsg, move -col
-        bind = , mouse_down, layoutmsg, move +col
+        bind = , mouse_up, layoutmsg, move +col
+        bind = , mouse_down, layoutmsg, move _col
 
         bind = Shift, R, submap, resize
         submap = resize

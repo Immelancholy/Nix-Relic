@@ -38,6 +38,10 @@ in {
             "$mod, mouse_down, workspace, e-1"
             "$mods, mouse_up, workspace, r+1"
             "$mods, mouse_down, workspace, r-1"
+            "$modc, H, changegroupactive, b"
+            "$modc, L, changegroupactive, f"
+            "$modc, Right, changegroupactive, b"
+            "$modc, Left, changegroupactive, f"
           ]
           ++ (
             # workspaces
