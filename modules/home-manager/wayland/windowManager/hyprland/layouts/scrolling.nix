@@ -38,6 +38,7 @@ in {
             "$modc, Right, changegroupactive, b"
             "$modc, Left, changegroupactive, f"
             "$mod, Y, fullscreen, 1"
+            "$mod, C, layoutmsg, colresize +conf"
           ]
           ++ (
             # workspaces
@@ -60,6 +61,7 @@ in {
         bind = , W, togglefloating
         bind = , P, pin, active
         bind = , Y, fullscreen, 1
+        bind = , C, layoutmsg, colresize +conf
         bindm = $mod, mouse:272, movewindow
         bindm = $mod, mouse:273, resizewindow
 
@@ -88,12 +90,14 @@ in {
         bind = Shift, Right, layoutmsg, swapcol r
         bind = Shift, Left, layoutmsg, swapcol l
         bind = , mouse_up, layoutmsg, move +col
-        bind = , mouse_down, layoutmsg, move _col
+        bind = , mouse_down, layoutmsg, move -col
 
         bind = Shift, R, submap, resize
         submap = resize
         bind = Alt, Return, fullscreen, 1
         bind = Alt+Shift, Return, fullscreen
+        bind = , Y , fullscreen, 1
+        bind = , C , layoutmsg, colresize +conf
         bind = , W, togglefloating
         binde = , Right, resizeactive, 30 0
         binde = , Left, resizeactive, 30 0
@@ -130,6 +134,8 @@ in {
         submap = resizeTiled
         bind = Alt, Return, fullscreen, 1
         bind = Alt+Shift, Return, fullscreen
+        bind = , Y , fullscreen, 1
+        bind = , C , layoutmsg, colresize +conf
         bind = , W, togglefloating
         binde = , Left, layoutmsg, colresize +0.1
         binde = , Right, layoutmsg, colresize -0.1
@@ -143,6 +149,8 @@ in {
         submap = move
         bind = Alt, Return, fullscreen, 1
         bind = Alt+Shift, Return, fullscreen
+        bind = , Y , fullscreen, 1
+        bind = , C , layoutmsg, colresize +conf
         bind = , W, togglefloating
         binde = , Left, moveactive, 10 0
         binde = , Right, moveactive, -10 0
