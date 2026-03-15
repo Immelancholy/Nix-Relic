@@ -82,6 +82,8 @@ in {
           ", Print, exec, hyprquickshot"
           "$mod, O, exec, uwsm-app -- hyprpicker -a"
           "$mods, P, submap, player"
+          "$mod, comma, movecurrentworkspacetomonitor l"
+          "$mod, period, movecurrentworkspacetomonitor r"
         ]
         ++ (
           # workspaces
