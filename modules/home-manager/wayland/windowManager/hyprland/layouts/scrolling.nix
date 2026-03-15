@@ -4,40 +4,32 @@
   ...
 }:
 with lib; let
-  cfg = config.wayland.windowManager.hyprland.layout.dwindle;
+  cfg = config.wayland.windowManager.hyprland.layout.scrolling;
 in {
-  options.wayland.windowManager.hyprland.layout.dwindle = {
+  options.wayland.windowManager.hyprland.layout.scrolling = {
     enable = mkOption {
       type = types.bool;
       default = false;
-      description = ''Use Hy3 tyling style'';
+      description = ''Use Hyprland scrolling layout'';
     };
   };
-
   config = mkIf cfg.enable {
     wayland.windowManager.hyprland = {
       settings = {
         general = {
-          layout = "dwindle";
+          layout = "scrolling";
         };
-        dwindle = {
-          pseudotile = true;
-          preserve_split = true;
-        };
-        windowrule = [
-          ''match:class ^(vesktop)$, workspace 3 silent''
-        ];
         bind =
           [
             "$mod, Z, togglegroup"
             "$mods, 0, movetoworkspacesilent, 10"
             "$mods, Q, killactive"
             "$mods, X, movetoworkspacesilent, special"
-            "$mod, L, workspace, r+1"
-            "$mod, H, workspace, r-1"
-            "$mod, J, workspace, empty"
-            "$mod, mouse_up, workspace, e+1"
-            "$mod, mouse_down, workspace, e-1"
+            "$mod, L, layoutmsg, move +col"
+            "$mod, H, layoutmsg, move -col"
+            "$mod, D, layoutmsg, promote"
+            "$mod, mouse_up, layoutmsg, move +50"
+            "$mod, mouse_down, layoutmsg, move -50"
             "$mods, mouse_up, workspace, r+1"
             "$mods, mouse_down, workspace, r-1"
           ]
@@ -57,17 +49,19 @@ in {
       extraConfig = ''
         bind = $mod, A, submap, manage
         submap = manage
+        bind = , A, layoutmsg, addscrolling
+        bind = , D, layoutmsg, removescrolling
         bind = Alt, Return, fullscreen, 1
         bind = Alt+Shift, Return, fullscreen
         bind = , W, togglefloating
-        bind = , H, movefocus, l
-        bind = , J, movefocus, d
-        bind = , K, movefocus, u
-        bind = , L, movefocus, r
-        bind = , Left, movefocus, l
-        bind = , Down, movefocus, d
-        bind = , Up, movefocus, u
-        bind = , Right, movefocus, r
+        bind = , H, layoutmsg, focus, l
+        bind = , J, layoutmsg, focus, d
+        bind = , K, layoutmsg, focus, u
+        bind = , L, layoutmsg, focus, r
+        bind = , Left, layoutmsg, focus, l
+        bind = , Down, layoutmsg, focus, d
+        bind = , Up, layoutmsg, focus, u
+        bind = , Right, layoutmsg, focus, r
         bind = , P, pin, active
         bindm = $mod, mouse:272, movewindow
         bindm = $mod, mouse:273, resizewindow
@@ -84,18 +78,12 @@ in {
         bind = Ctrl, Right, changegroupactive, b
         bind = Ctrl, Left, changegroupactive, f
 
-        bind = Shift, H, movewindow, l
-        bind = Shift, J, movewindow, d
-        bind = Shift, K, movewindow, u
-        bind = Shift, L, movewindow, r
-        bind = Shift, Right, movewindow, r
-        bind = Shift, Down, movewindow, d
-        bind = Shift, Up, movewindow, u
-        bind = Shift, Left, movewindow, l
-        bind = , mouse_up, workspace, e+1
-        bind = , mouse_down, workspace, e-1
-        bind = $mod, mouse_up, workspace, r+1
-        bind = $mod, mouse_down, workspace, r-1
+        bind = Shift, H, layoutmsg, swapcol l
+        bind = Shift, L, layoutmsg, swapcol r
+        bind = Shift, Right, layoutmsg, swapcol r
+        bind = Shift, Left, layoutmsg, swapcol l
+        bind = , mouse_up, layoutmsg, move +50
+        bind = , mouse_down, layoutmsg, move -50
 
         bind = Shift, R, submap, resize
         submap = resize
@@ -166,6 +154,7 @@ in {
         bind = , M, submap, manage
         bind = , escape, submap, manage
         submap = manage
+
         bind = , escape, submap, reset
 
         bind = $mod, A, submap, reset

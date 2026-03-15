@@ -22,6 +22,9 @@ in {
         master = {
           new_status = "master";
         };
+        windowrule = [
+          ''match:class ^(vesktop)$, workspace 3 silent''
+        ];
         bind =
           [
             "$mod, Z, togglegroup"
@@ -31,6 +34,13 @@ in {
             "$mod, R, layoutmsg, orientationcycle"
             "$mod, S, layoutmsg, orientationtop"
             "$mod, D, layoutmsg, orientationleft"
+            "$mod, L, workspace, r+1"
+            "$mod, H, workspace, r-1"
+            "$mod, J, workspace, empty"
+            "$mod, mouse_up, workspace, e+1"
+            "$mod, mouse_down, workspace, e-1"
+            "$mods, mouse_up, workspace, r+1"
+            "$mods, mouse_down, workspace, r-1"
           ]
           ++ (
             # workspaces

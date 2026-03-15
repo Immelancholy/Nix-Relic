@@ -54,6 +54,9 @@ in {
               };
             };
           };
+          windowrule = [
+            ''match:class ^(vesktop)$, workspace 3 silent''
+          ];
           bind =
             [
               "$mod, R, hy3:changegroup, opposite"
@@ -66,6 +69,13 @@ in {
               "$mod, Q, hy3:warpcursor"
               "$mods, X, hy3:movetoworkspace, special"
               "$mod, Tab, hy3:togglefocuslayer"
+              "$mod, L, workspace, r+1"
+              "$mod, H, workspace, r-1"
+              "$mod, J, workspace, empty"
+              "$mod, mouse_up, workspace, e+1"
+              "$mod, mouse_down, workspace, e-1"
+              "$mods, mouse_up, workspace, r+1"
+              "$mods, mouse_down, workspace, r-1"
             ]
             ++ (
               # workspaces

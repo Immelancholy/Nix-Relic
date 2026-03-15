@@ -85,7 +85,6 @@
       ''match:class ^(io.missioncenter.MissionCenter)$, float on'' # MissionCenter-Gtk
       ''match:class ^(org.rncbc.qpwgraph)$, opacity 0.90 0.80''
       ''match:class ^(com.github.wwmm.easyeffects)$, opacity 0.90 0.80''
-      ''match:class ^(vesktop)$, workspace 3 silent''
       ''match:class ^(org.rncbc.qpwgraph)$, workspace 4 silent''
       ''match:class ^(mpv)$, float on''
       ''match:class ^(btop.ghostty)$, float on''
