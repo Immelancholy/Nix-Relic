@@ -25,8 +25,13 @@ in {
             "$mods, 0, movetoworkspacesilent, 10"
             "$mods, Q, killactive"
             "$mods, X, movetoworkspacesilent, special"
-            "$mod, L, layoutmsg, move +col"
-            "$mod, H, layoutmsg, move -col"
+            "$mod, L, layoutmsg, focus left"
+            "$mod, J, layoutmsg, fit tobeg"
+            "$mod, K, layoutmsg, fit toend"
+            "$mod, H, layoutmsg, focus right"
+            "$mod, V, layoutmsg, fit visible"
+            "$mod, U, layoutmsg, fit all"
+            "$mod, R, layoutmsg, colresize 0.5"
             "$mods, L, workspace, r+1"
             "$mods, H, workspace, r-1"
             "$mod, mouse_up, layoutmsg, move +col"
@@ -61,7 +66,14 @@ in {
         bind = , W, togglefloating
         bind = , P, pin, active
         bind = , Y, fullscreen, 1
+        bind = , L, layoutmsg, focus left
+        bind = , J, layoutmsg, fit tobeg 
+        bind = , K, layoutmsg, fit toend 
+        bind = , H, layoutmsg, focus right
         bind = , C, layoutmsg, colresize +conf
+        bind = , V, layoutmsg, fit visible
+        bind = , U, layoutmsg, fit all
+        bind = , R, layoutmsg, colresize 0.5
         bindm = $mod, mouse:272, movewindow
         bindm = $mod, mouse:273, resizewindow
 
@@ -99,6 +111,10 @@ in {
         bind = , Y , fullscreen, 1
         bind = , C , layoutmsg, colresize +conf
         bind = , W, togglefloating
+        bind = , C, layoutmsg, colresize +conf
+        bind = , V, layoutmsg, fit visible
+        bind = , U, layoutmsg, fit all
+        bind = , R, layoutmsg, colresize 0.5
         binde = , Right, resizeactive, 30 0
         binde = , Left, resizeactive, 30 0
         binde = , Left, moveactive, -30 0
@@ -134,8 +150,11 @@ in {
         submap = resizeTiled
         bind = Alt, Return, fullscreen, 1
         bind = Alt+Shift, Return, fullscreen
-        bind = , Y , fullscreen, 1
-        bind = , C , layoutmsg, colresize +conf
+        bind = , Y, fullscreen, 1
+        bind = , C, layoutmsg, colresize +conf
+        bind = , V, layoutmsg, fit visible
+        bind = , U, layoutmsg, fit all
+        bind = , R, layoutmsg, colresize 0.5
         bind = , W, togglefloating
         binde = , Left, layoutmsg, colresize +0.1
         binde = , Right, layoutmsg, colresize -0.1
@@ -149,8 +168,11 @@ in {
         submap = move
         bind = Alt, Return, fullscreen, 1
         bind = Alt+Shift, Return, fullscreen
-        bind = , Y , fullscreen, 1
-        bind = , C , layoutmsg, colresize +conf
+        bind = , Y, fullscreen, 1
+        bind = , C, layoutmsg, colresize +conf
+        bind = , V, layoutmsg, fit visible
+        bind = , U, layoutmsg, fit all
+        bind = , R, layoutmsg, colresize 0.5
         bind = , W, togglefloating
         binde = , Left, moveactive, 10 0
         binde = , Right, moveactive, -10 0
