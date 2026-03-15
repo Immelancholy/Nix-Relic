@@ -46,7 +46,6 @@ in {
       ];
       bind =
         [
-          "$mod, Y, exec, $editor"
           "$mod, B, exec, binds.sh"
           "$mod, W, togglefloating"
           ", Pause, exec, $playerctl play-pause"
@@ -55,7 +54,6 @@ in {
           "$mod, F, exec, $browser"
           "$mod, E, exec, $files"
           "$mod, grave, exec, $menu"
-          "$mod, C, exec, $edit"
           "Alt, Return, fullscreen"
           "Alt+Shift, Return, fullscreen, 1"
           "$mod, Tab, exec, rofi -show window -modi window"
