@@ -148,7 +148,7 @@ in {
         binde = Shift, K, resizeactive, 0 -30
         binde = Shift, J, resizeactive, 0 -30
         binde = Shift, J, moveactive, 0 30
-        bind = , R, submap, manage
+        bind = $mod, R, submap, manage
         bind = , escape, submap, manage
         submap = manage
 
@@ -166,7 +166,7 @@ in {
         binde = , Right, layoutmsg, colresize -0.1
         binde = , H, layoutmsg, colresize +0.1
         binde = , L, layoutmsg, colresize -0.1
-        bind = , R, submap, manage
+        bind = $mod, R, submap, manage
         bind = , escape, submap, manage
         submap = manage
 
@@ -188,7 +188,7 @@ in {
         binde = , L, moveactive, -30 0
         binde = , K, moveactive, 0 -30
         binde = , J, moveactive, 0 30
-        bind = , M, submap, manage
+        bind = $mod, M, submap, manage
         bind = , escape, submap, manage
         submap = manage
 
