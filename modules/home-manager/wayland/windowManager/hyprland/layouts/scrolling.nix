@@ -38,6 +38,7 @@ in {
             "$modc, L, changegroupactive, f"
             "$modc, Right, changegroupactive, b"
             "$modc, Left, changegroupactive, f"
+            "$mod, Y, fullscreen, 1"
           ]
           ++ (
             # workspaces
@@ -59,7 +60,7 @@ in {
         bind = Alt+Shift, Return, fullscreen
         bind = , W, togglefloating
         bind = , P, pin, active
-        bind = , I, fullscreen, 1
+        bind = , Y, fullscreen, 1
         bindm = $mod, mouse:272, movewindow
         bindm = $mod, mouse:273, resizewindow
 
