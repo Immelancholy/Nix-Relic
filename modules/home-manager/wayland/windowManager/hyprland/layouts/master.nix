@@ -22,10 +22,6 @@ in {
         master = {
           new_status = "master";
         };
-        windowrule = [
-          ''match:class ^(vesktop)$, workspace 3 silent''
-          ''match:class ^(org.rncbc.qpwgraph)$, workspace 4 silent''
-        ];
         bind =
           [
             "$mod, Z, togglegroup"

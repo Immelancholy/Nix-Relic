@@ -54,10 +54,6 @@ in {
               };
             };
           };
-          windowrule = [
-            ''match:class ^(vesktop)$, workspace 3 silent''
-            ''match:class ^(org.rncbc.qpwgraph)$, workspace 4 silent''
-          ];
           bind =
             [
               "$mod, R, hy3:changegroup, opposite"

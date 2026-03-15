@@ -1,6 +1,8 @@
 {
   wayland.windowManager.hyprland.settings = {
     windowrule = [
+      ''match:class ^(vesktop)$, workspace 3 silent''
+      ''match:class ^(org.rncbc.qpwgraph)$, workspace 4 silent''
       ''match:class ^(dev.zed.Zed-Nightly)$, opacity 0.90 0.80''
       ''match:class ^(dev.zed.Zed)$, opacity 0.90 0.80''
       ''match:class ^(solaar)$, opacity 0.90 0.80''
