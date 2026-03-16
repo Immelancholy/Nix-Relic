@@ -25,19 +25,19 @@ in {
             "$mods, 0, movetoworkspacesilent, 10"
             "$mods, Q, killactive"
             "$mods, X, movetoworkspacesilent, special"
-            "$mod, H, layoutmsg, focus left"
-            "$mod, L, layoutmsg, focus right"
+            "$mod, L, layoutmsg, move +col"
+            "$mod, H, layoutmsg, move -col"
             "$mod, V, layoutmsg, fit visible"
             "$mod, U, layoutmsg, fit active"
             "$mod, R, layoutmsg, colresize 0.5"
             "$mods, L, workspace, r+1"
             "$mods, H, workspace, r-1"
+            "$mod, Right, layoutmsg, move +col"
+            "$mod, Left, layoutmsg, move -col"
             "$mod, Right, layoutmsg, focus right"
-            "$mod, Left, layoutmsg, focus left"
-            "$mods, Right, workspace, r+1"
             "$mods, Left, workspace, r-1"
-            "$mod, mouse_up, layoutmsg, move +col"
-            "$mod, mouse_down, layoutmsg, move -col"
+            "$mod, mouse_up, layoutmsg, focus left"
+            "$mod, mouse_down, layoutmsg, focus right"
             "$mods, mouse_up, workspace, r+1"
             "$mods, mouse_down, workspace, r-1"
             "$modc, H, changegroupactive, b"
@@ -68,16 +68,16 @@ in {
         bind = , W, togglefloating
         bind = , P, pin, active
         bind = , Y, fullscreen, 1
-        bind = , H, layoutmsg, focus left
-        bind = , L, layoutmsg, focus right
+        bind = , H, layoutmsg, move -col
+        bind = , L, layoutmsg, move +col
+        bind = , Right, layoutmsg, move -col
+        bind = , Left, layoutmsg, move +col
         bind = , J, layoutmsg, fit tobeg 
         bind = , K, layoutmsg, fit toend 
         bind = , C, layoutmsg, colresize +conf
         bind = , V, layoutmsg, fit visible
         bind = , U, layoutmsg, fit active
         bind = , R, layoutmsg, colresize 0.5
-        bind = , Right, layoutmsg, focus right
-        bind = , Left, layoutmsg, focus left
         bind = $mods, Right, workspace, r+1
         bind = $mods, Left, workspace, r-1
         bindm = $mod, mouse:272, movewindow
@@ -107,8 +107,8 @@ in {
         bind = Shift, L, layoutmsg, swapcol r
         bind = Shift, Right, layoutmsg, swapcol r
         bind = Shift, Left, layoutmsg, swapcol l
-        bind = , mouse_up, layoutmsg, move +col
-        bind = , mouse_down, layoutmsg, move -col
+        bind = , mouse_up, layoutmsg, focus left 
+        bind = , mouse_down, layoutmsg, focus right 
 
         bind = Shift, R, submap, resize
         submap = resize
