@@ -87,8 +87,6 @@ in {
         bind = , V, layoutmsg, fit visible
         bind = , U, layoutmsg, fit active
         bind = , R, layoutmsg, colresize 0.5
-        bind = $mods, Right, workspace, r+1
-        bind = $mods, Left, workspace, r-1
         bindm = $mod, mouse:272, movewindow
         bindm = $mod, mouse:273, resizewindow
 
@@ -104,13 +102,14 @@ in {
         bind = Ctrl, Right, changegroupactive, b
         bind = Ctrl, Left, changegroupactive, f
 
-        bind = $mods, H, movewindow, l bind = $mods, J, movewindow, d
+        bind = $mods, H, movewindow, l
+        bind = $mods, J, movewindow, d
         bind = $mods, K, movewindow, u
         bind = $mods, L, movewindow, r
-        bind = $mods, Right, movewindow, r
+        bind = $mods, Left, movewindow, l
         bind = $mods, Down, movewindow, d
         bind = $mods, Up, movewindow, u
-        bind = $mods, Left, movewindow, l
+        bind = $mods, Right, movewindow, r
         bind = Shift, H, layoutmsg, swapcol l
         bind = Shift, L, layoutmsg, swapcol r
         bind = Shift, Right, layoutmsg, swapcol r
@@ -120,7 +119,7 @@ in {
         bind = $mod, mouse_up, workspace, e+1
         bind = $mod, mouse_down, workspace, e-1
 
-        bind = Shift, R, submap, resize
+        bind = $mods, R, submap, resize
         submap = resize
         bind = Alt, Return, fullscreen, 1
         bind = Alt+Shift, Return, fullscreen
@@ -162,7 +161,7 @@ in {
         bind = , escape, submap, manage
         submap = manage
 
-        bind = , R, submap, resizeTiled
+        bind = $mod, R, submap, resizeTiled
         submap = resizeTiled
         bind = Alt, Return, fullscreen, 1
         bind = Alt+Shift, Return, fullscreen
