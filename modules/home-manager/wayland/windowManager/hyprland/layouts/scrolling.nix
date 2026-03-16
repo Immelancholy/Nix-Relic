@@ -34,7 +34,7 @@ in {
             "$mods, H, workspace, r-1"
             "$mod, Right, layoutmsg, move +col"
             "$mod, Left, layoutmsg, move -col"
-            "$mod, Right, layoutmsg, focus right"
+            "$mods, Right, workspace, r+1"
             "$mods, Left, workspace, r-1"
             "$mod, mouse_up, layoutmsg, focus left"
             "$mod, mouse_down, layoutmsg, focus right"
