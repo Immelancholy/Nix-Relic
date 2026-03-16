@@ -72,7 +72,7 @@ in {
         bind = , Down, movefocus, d
         bind = , Up, movefocus, u
         bind = , Right, movefocus, r
-        bind = , P, pin, active
+        bind = , O, pin, active
         bindm = $mod, mouse:272, movewindow
         bindm = $mod, mouse:273, resizewindow
 

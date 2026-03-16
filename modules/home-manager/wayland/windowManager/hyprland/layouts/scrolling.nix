@@ -25,17 +25,23 @@ in {
             "$mods, 0, movetoworkspacesilent, 10"
             "$mods, Q, killactive"
             "$mods, X, movetoworkspacesilent, special"
-            "$mod, L, layoutmsg, move +col"
             "$mod, H, layoutmsg, move -col"
+            "$mod, J, movefocus, d"
+            "$mod, K, movefocus, u"
+            "$mod, L, layoutmsg, move +col"
             "$mod, V, layoutmsg, fit visible"
             "$mod, U, layoutmsg, fit active"
             "$mod, R, layoutmsg, colresize 0.5"
             "$mods, L, workspace, r+1"
             "$mods, H, workspace, r-1"
+            "$mods, J, workspace, empty"
             "$mod, Right, layoutmsg, move +col"
+            "$mod, Down, movefocus, d"
+            "$mod, Up, movefocus, u"
             "$mod, Left, layoutmsg, move -col"
             "$mods, Right, workspace, r+1"
             "$mods, Left, workspace, r-1"
+            "$mods, Down, workspace, empty"
             "$mod, mouse_up, layoutmsg, focus right"
             "$mod, mouse_down, layoutmsg, focus left"
             "$mods, mouse_up, workspace, e+1"
@@ -66,14 +72,17 @@ in {
         bind = Alt, Return, fullscreen, 1
         bind = Alt+Shift, Return, fullscreen
         bind = , W, togglefloating
-        bind = , P, pin, active
+        bind = , P, layoutmsg, promote
+        bind = , O, pin, active
         bind = , Y, fullscreen, 1
         bind = , H, layoutmsg, move -col
+        bind = , J, movefocus, d
+        bind = , K, movefocus, u
         bind = , L, layoutmsg, move +col
-        bind = , Right, layoutmsg, move -col
         bind = , Left, layoutmsg, move +col
-        bind = , J, layoutmsg, fit tobeg 
-        bind = , K, layoutmsg, fit toend 
+        bind = , Down, movefocus, d
+        bind = , Up, movefocus, u
+        bind = , Right, layoutmsg, move -col
         bind = , C, layoutmsg, colresize +conf
         bind = , V, layoutmsg, fit visible
         bind = , U, layoutmsg, fit active
@@ -95,8 +104,7 @@ in {
         bind = Ctrl, Right, changegroupactive, b
         bind = Ctrl, Left, changegroupactive, f
 
-        bind = $mods, H, movewindow, l
-        bind = $mods, J, movewindow, d
+        bind = $mods, H, movewindow, l bind = $mods, J, movewindow, d
         bind = $mods, K, movewindow, u
         bind = $mods, L, movewindow, r
         bind = $mods, Right, movewindow, r
