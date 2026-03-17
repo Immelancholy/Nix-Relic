@@ -90,6 +90,7 @@
     #pulseaudio,
     #tray,
     #custom-update,
+    #submap,
     #window,
     #workspaces,
     #workspaces,

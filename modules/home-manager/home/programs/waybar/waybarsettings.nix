@@ -14,6 +14,9 @@ in {
       modules-left = [
         "custom/padd"
         "custom/l_end"
+        "hyprland/submap"
+        "custom/l_end"
+        "custom/r_end"
         "hyprland/workspaces"
         "hyprland/window"
         "custom/r_end"
@@ -51,6 +54,12 @@ in {
         "custom/r_end"
         "custom/padd"
       ];
+
+      "hyprland/submap" = {
+        format = " {}";
+        max-length = 8;
+        tooltip = false;
+      };
 
       "hyprland/workspaces" = {
         all-outputs = true;
