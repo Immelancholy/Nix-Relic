@@ -51,10 +51,6 @@
       url = "github:Immelancholy/hyprland-easymotion/update_CGLTexture";
       inputs.hyprland.follows = "hyprland";
     };
-    hycov = {
-      url = "github:bighu630/hycov";
-      inputs.hyprland.follows = "hyprland";
-    };
     stylix = {
       url = "github:Immelancholy/stylix";
     };
