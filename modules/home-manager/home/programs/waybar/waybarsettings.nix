@@ -15,8 +15,8 @@ in {
         "custom/padd"
         "custom/l_end"
         "hyprland/submap"
-        "custom/l_end"
         "custom/r_end"
+        "custom/l_end"
         "hyprland/workspaces"
         "hyprland/window"
         "custom/r_end"
@@ -56,9 +56,11 @@ in {
       ];
 
       "hyprland/submap" = {
-        format = "󰘳 {}";
+        format = "{icon} {}";
+        icon = "󰘳";
         max-length = 8;
         tooltip = false;
+        always-on = true;
       };
 
       "hyprland/workspaces" = {
