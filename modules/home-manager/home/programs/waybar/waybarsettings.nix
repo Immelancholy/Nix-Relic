@@ -61,6 +61,8 @@ in {
         tooltip = false;
         default-submap = "default";
         always-on = true;
+        on-scroll-up = "hyprctl dispatch workspace -1";
+        on-scroll-down = "hyprctl dispatch workspace +1";
       };
 
       "hyprland/workspaces" = {
