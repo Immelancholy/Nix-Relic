@@ -59,7 +59,7 @@ in {
         format = "󰘳 {}";
         max-length = 8;
         tooltip = false;
-        default-submap = "󰘳 default";
+        default-submap = "default";
         always-on = true;
       };
 
