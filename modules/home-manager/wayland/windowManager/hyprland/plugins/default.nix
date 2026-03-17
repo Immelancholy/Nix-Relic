@@ -1,6 +1,6 @@
 {
   imports = [
-    ./hyprexpo.nix
+    ./hycov.nix
     ./easymotion.nix
   ];
 }

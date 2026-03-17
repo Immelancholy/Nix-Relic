@@ -104,9 +104,10 @@ nix flake init -t github:Immelancholy/Nix-Relic
             layout = {
               master.enable = false;
               dwindle.enable = false;
-              hy3.enable = true;
+              scrolling.enable = true;
             };
-            useHyprspace = false; # Broken atm
+            easymotion.enable = true; #Enables easymotion plugin for Hyprland, allows you to jump to any visible window by typing a few keys
+            hycov.enable = true; #Enables hycov plugin for Hyprland, allows you to see all open windows in an overview mode and quickly switch between them
             settings = {
               cursor = {
                 no_hardware_cursors = false;
