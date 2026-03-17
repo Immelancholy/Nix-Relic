@@ -59,7 +59,8 @@ in {
         format = "󰘳 {}";
         max-length = 8;
         tooltip = false;
-        default-submap = "󰘳 Default";
+        default-submap = "󰘳 default";
+        always-on = true;
       };
 
       "hyprland/workspaces" = {
