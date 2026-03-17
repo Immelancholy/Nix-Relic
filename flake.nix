@@ -42,13 +42,13 @@
       url = "github:0xc000022070/zen-browser-flake/beta";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprland.url = "github:hyprwm/Hyprland/59f9f2688ac508a0584d1462151195a6c4992f99";
+    hyprland.url = "github:hyprwm/Hyprland";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
     hyprland-easymotion = {
-      url = "github:zakk4223/hyprland-easymotion";
+      url = "github:Immelancholy/hyprland-easymotion/update_CGLTexture";
       inputs.hyprland.follows = "hyprland";
     };
     hy3 = {
