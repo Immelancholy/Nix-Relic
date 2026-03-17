@@ -52,6 +52,7 @@ in {
             "$modc, Left, changegroupactive, f"
             "$mod, Y, fullscreen, 1"
             "$mod, C, layoutmsg, colresize +conf"
+            "$mods, C, layoutmsg, colresize -conf"
           ]
           ++ (
             # workspaces
@@ -84,6 +85,7 @@ in {
         bind = , Up, movefocus, u
         bind = , Right, layoutmsg, move -col
         bind = , C, layoutmsg, colresize +conf
+        bind = Shift, C, layoutmsg, colresize -conf
         bind = , V, layoutmsg, fit visible
         bind = , U, layoutmsg, fit active
         bind = , R, layoutmsg, colresize 0.5
@@ -127,6 +129,7 @@ in {
         bind = , C , layoutmsg, colresize +conf
         bind = , W, togglefloating
         bind = , C, layoutmsg, colresize +conf
+        bind = Shift, C, layoutmsg, colresize -conf
         bind = , V, layoutmsg, fit visible
         bind = , U, layoutmsg, fit active
         bind = , R, layoutmsg, colresize 0.5
@@ -167,6 +170,7 @@ in {
         bind = Alt+Shift, Return, fullscreen
         bind = , Y, fullscreen, 1
         bind = , C, layoutmsg, colresize +conf
+        bind = Shift, C, layoutmsg, colresize -conf
         bind = , V, layoutmsg, fit visible
         bind = , U, layoutmsg, fit active
         bind = , R, layoutmsg, colresize 0.5
@@ -185,6 +189,7 @@ in {
         bind = Alt+Shift, Return, fullscreen
         bind = , Y, fullscreen, 1
         bind = , C, layoutmsg, colresize +conf
+        bind = Shift, C, layoutmsg, colresize -conf
         bind = , V, layoutmsg, fit visible
         bind = , U, layoutmsg, fit active
         bind = , R, layoutmsg, colresize 0.5
