@@ -56,11 +56,10 @@ in {
       ];
 
       "hyprland/submap" = {
-        format = "{icon} {}";
-        icon = "󰘳";
+        format = "󰘳 {}";
         max-length = 8;
         tooltip = false;
-        always-on = true;
+        default-submap = "󰘳 Default";
       };
 
       "hyprland/workspaces" = {
