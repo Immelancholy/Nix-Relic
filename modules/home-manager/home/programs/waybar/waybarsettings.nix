@@ -57,7 +57,7 @@ in {
 
       "hyprland/submap" = {
         format = "󰘳 {}";
-        max-length = 20;
+        max-length = 30;
         tooltip = false;
         default-submap = "default";
         always-on = true;
