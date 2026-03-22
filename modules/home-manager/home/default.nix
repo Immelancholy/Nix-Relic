@@ -51,6 +51,7 @@
           "unmap t",
           "map J nextTab",
           "map K previousTab",
+          "unmap W",
           ""
         ],
         "vimSync": true
