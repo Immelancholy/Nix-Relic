@@ -1147,11 +1147,11 @@
         "tinted-zed": "tinted-zed"
       },
       "locked": {
-        "lastModified": 1774039786,
-        "narHash": "sha256-0IYoNYqHwJ4VYdFlSxJ8WOTO4OG3LBbwsljM46sNL80=",
+        "lastModified": 1774208438,
+        "narHash": "sha256-N6cOBqC2FF5FEPQ8G6meJt5xGK1Yh+Wo64Zn1Qu3AYY=",
         "owner": "Immelancholy",
         "repo": "stylix",
-        "rev": "79e7c74163213b394ba53f875708987e2b15e009",
+        "rev": "fb2b42e2861412a178e517e457df1f964c7807df",
         "type": "github"
       },
       "original": {
