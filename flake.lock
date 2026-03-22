@@ -477,16 +477,15 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1773780614,
-        "narHash": "sha256-IE6GkyK+NKQAuIkdF8ecfEkUIVQxvDXcstngptHcGY4=",
-        "owner": "Immelancholy",
+        "lastModified": 1774154114,
+        "narHash": "sha256-zRDEr/DOpgCQvC/Vdx5i31iI/6CiiybyY58MMP1VAV4=",
+        "owner": "zakk4223",
         "repo": "hyprland-easymotion",
-        "rev": "cb3d86385dc756580aacc41c99fbc00619030812",
+        "rev": "825aaa5e87246993361f4d6478d6f13a2f1229c4",
         "type": "github"
       },
       "original": {
-        "owner": "Immelancholy",
-        "ref": "update_CGLTexture",
+        "owner": "zakk4223",
         "repo": "hyprland-easymotion",
         "type": "github"
       }
