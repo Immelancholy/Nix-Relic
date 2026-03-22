@@ -477,15 +477,16 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1774154114,
-        "narHash": "sha256-zRDEr/DOpgCQvC/Vdx5i31iI/6CiiybyY58MMP1VAV4=",
-        "owner": "zakk4223",
+        "lastModified": 1774195186,
+        "narHash": "sha256-4p4uPHoYHL8UmTBsqvmqRe/EhlU7utEvZR99+9Bi+1o=",
+        "owner": "Immelancholy",
         "repo": "hyprland-easymotion",
-        "rev": "825aaa5e87246993361f4d6478d6f13a2f1229c4",
+        "rev": "b9766b0b53ec393a6d1f8870a1083991a28a5f75",
         "type": "github"
       },
       "original": {
-        "owner": "zakk4223",
+        "owner": "Immelancholy",
+        "ref": "chase_upstream_again",
         "repo": "hyprland-easymotion",
         "type": "github"
       }
@@ -835,11 +836,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1773646010,
-        "narHash": "sha256-iYrs97hS7p5u4lQzuNWzuALGIOdkPXvjz7bviiBjUu8=",
+        "lastModified": 1773821835,
+        "narHash": "sha256-TJ3lSQtW0E2JrznGVm8hOQGVpXjJyXY2guAxku2O9A4=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "5b2c2d84341b2afb5647081c1386a80d7a8d8605",
+        "rev": "b40629efe5d6ec48dd1efba650c797ddbd39ace0",
         "type": "github"
       },
       "original": {
