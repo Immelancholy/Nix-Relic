@@ -48,7 +48,7 @@
       inputs.hyprland.follows = "hyprland";
     };
     hyprland-easymotion = {
-      url = "github:Immelancholy/hyprland-easymotion/update_CGLTexture";
+      url = "github:zakk4223/hyprland-easymotion";
       inputs.hyprland.follows = "hyprland";
     };
     stylix = {
