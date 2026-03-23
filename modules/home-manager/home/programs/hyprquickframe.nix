@@ -32,7 +32,7 @@ in {
     # Dim overlay opacity when selecting (0.0 - 1.0)
     dimOpacity = 0.6
     # Corner radius on selection outline
-    borderRadius = 15
+    borderRadius = 20
     # Selection outline thickness
     outlineThickness = 2
     # Distance from bottom edge to the bar
