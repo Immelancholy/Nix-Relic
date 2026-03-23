@@ -28,7 +28,7 @@ in {
     # Main highlight color on the active tab
     accent = "${base04}"
     # Text color on the active tab (should contrast with accent)
-    accentText = "${base0F}"
+    accentText = "${base00}"
     # Dim overlay opacity when selecting (0.0 - 1.0)
     dimOpacity = 0.6
     # Corner radius on selection outline
