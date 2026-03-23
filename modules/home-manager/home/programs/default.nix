@@ -27,6 +27,7 @@
     ./zathura.nix
     ./kitty.nix
     ./quickshell
+    ./hyprquickframe.nix
     inputs.nix-relic.inputs.zen-browser.homeModules.beta
   ];
 
@@ -88,10 +89,6 @@
       };
     };
   };
-
-  home.packages = [
-    inputs.nix-relic.inputs.hyprquickframe.packages.${pkgs.stdenv.hostPlatform.system}.default
-  ];
 
   programs.btop = {
     enable = true;
