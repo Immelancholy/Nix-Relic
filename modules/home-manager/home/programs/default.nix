@@ -47,7 +47,6 @@
 
   programs.satty = {
     enable = true;
-    package = pkgs.nr.satty;
     settings = {
       general = {
         fullscreen = false;
