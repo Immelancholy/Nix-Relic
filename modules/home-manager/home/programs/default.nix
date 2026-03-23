@@ -90,7 +90,7 @@
   };
 
   home.packages = [
-    inputs.nix-relic.inputs.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.nix-relic.inputs.hyprquickframe.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   programs.btop = {
