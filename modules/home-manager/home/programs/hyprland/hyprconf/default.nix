@@ -34,11 +34,8 @@
         "/nix/store/[a-z0-9]{32}-xtra-dispatchers-[0-9.]*/lib/libxtra-dispatchers.so, plugin, allow"
         "/nix/store/[a-z0-9]{32}-hyprexpo-[0-9.]*/lib/libhyprexpo.so, plugin, allow"
         "/nix/store/[a-z0-9]{32}-hyprland-easymotion/lib/libhyprland-easymotion.so, plugin, allow"
-        "/nix/store/[a-z0-9]{32}-hyprquickshot-[0-9.]*/bin/.hyprquickshot-wrapped, screencopy, allow"
-        "/nix/store/[a-z0-9]{32}-hyprquickshot-[0-9.]*/bin/.hyprquickshot-wrapped_, screencopy, allow"
-        "/nix/store/[a-z0-9]{32}-quickshell-[0-9.]*/bin/.quickshell-wrapped, screencopy, allow"
-        "/nix/store/[a-z0-9]{32}-quickshell-[0-9.]*/bin/quickshell, screencopy, allow"
-        "/nix/store/[a-z0-9]{32}-quickshell-[0-9.]*/bin/qs, screencopy, allow"
+        "/nix/store/[a-z0-9]{32}-hyprquickframe-[0-9.]*/bin/.hyprquickframe-wrapped, screencopy, allow"
+        "/nix/store/[a-z0-9]{32}-hyprquickframe-[0-9.]*/bin/hyprquickframe, screencopy, allow"
         "/nix/store/[a-z0-9]{32}-hyprpicker-[0-9.]*/bin/hyprpicker, screencopy, allow"
       ];
     };

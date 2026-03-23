@@ -67,7 +67,7 @@ in {
           ''Ctrl+Shift, Escape, exec, uwsm app -- $term --title "btop" btop''
           ", XF86Calculator, exec, uwsm-app -- qalculate-gtk"
           "$mod, X, togglespecialworkspace"
-          ", Print, exec, hyprquickshot"
+          ", Print, exec, hyprquickframe"
           "$mod, O, exec, uwsm-app -- hyprpicker -a"
           "$mods, P, submap, player"
           "$mod, comma, movecurrentworkspacetomonitor, l"

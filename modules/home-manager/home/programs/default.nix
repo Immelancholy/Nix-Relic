@@ -91,9 +91,7 @@
   };
 
   home.packages = [
-    (inputs.nix-relic.inputs.hyprquickshot.packages.${pkgs.stdenv.hostPlatform.system}.default.override {
-      SattyPackage = config.programs.satty.package;
-    })
+    inputs.nix-relic.inputs.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
   programs.btop = {

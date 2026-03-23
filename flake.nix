@@ -8,10 +8,6 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprquickshot = {
-      url = "github:Immelancholy/hyprquickshot/open-screenshot-in-satty";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     zarumet = {
       url = "github:Immelancholy/zarumet";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -40,6 +36,10 @@
     };
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake/beta";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    hyprquickframe = {
+      url = "github:Ronin-CK/HyprQuickFrame";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland.url = "github:hyprwm/Hyprland";
