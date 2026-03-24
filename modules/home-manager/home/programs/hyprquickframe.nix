@@ -44,7 +44,7 @@ in {
 
     [bar]
     # Segmented control background
-    background = "${base01}66"
+    background = "${base0F}66"
     # Segmented control border
     border = "${base05}26"
     # Inactive tab text color
