@@ -48,8 +48,8 @@
       inputs.hyprland.follows = "hyprland";
     };
     hyprland-easymotion = {
-      url = "github:zakk4223/hyprland-easymotion";
-      # url = "github:Immelancholy/hyprland-easymotion/chase_upstream_again";
+      # url = "github:zakk4223/hyprland-easymotion";
+      url = "github:Immelancholy/hyprland-easymotion/chase_upstream_again";
       inputs.hyprland.follows = "hyprland";
     };
     stylix = {
