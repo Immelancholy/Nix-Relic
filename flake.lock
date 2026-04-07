@@ -608,11 +608,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1774967164,
-        "narHash": "sha256-1uLl+WQcaWLJ3qsdZo8XkDdXZFWLnHRc4TvomIqHi1Q=",
+        "lastModified": 1775565850,
+        "narHash": "sha256-9cv5y3s9sw/Oh97ygUr8ghDpnm9hJWzRyRJC/VQH0FE=",
         "owner": "Ronin-CK",
         "repo": "HyprQuickFrame",
-        "rev": "763616e7c6976ce24be4a92d365c4391018ff876",
+        "rev": "4fc0943dd8e36bd149c3332173c76ce67aa7eb55",
         "type": "github"
       },
       "original": {
