@@ -29,7 +29,7 @@ in {
             "$mod, Z, togglegroup"
             "$mods, 0, movetoworkspacesilent, 10"
             "$mods, Q, killactive"
-            "$mods, X, movetoworkspacesilent, special"
+            "$mods, S, movetoworkspacesilent, special"
             "$mod, L, workspace, r+1"
             "$mod, H, workspace, r-1"
             "$mod, J, workspace, empty"

@@ -27,7 +27,7 @@ in {
             "$mod, Z, togglegroup"
             "$mods, 0, movetoworkspacesilent, 10"
             "$mods, Q, killactive"
-            "$mods, X, movetoworkspacesilent, special"
+            "$mods, S, movetoworkspacesilent, special"
             "$mod, R, layoutmsg, orientationcycle"
             "$mod, S, layoutmsg, orientationtop"
             "$mod, D, layoutmsg, orientationleft"

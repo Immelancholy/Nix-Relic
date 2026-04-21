@@ -66,7 +66,7 @@ in {
           "$mod, G, exec, hyprgame"
           ''Ctrl+Shift, Escape, exec, uwsm app -- $term --title "btop" btop''
           ", XF86Calculator, exec, uwsm-app -- qalculate-gtk"
-          "$mod, X, togglespecialworkspace"
+          "$mod, S, togglespecialworkspace"
           ", Print, exec, hyprquickframe"
           "$mod, O, exec, uwsm-app -- hyprpicker -a"
           "$mods, P, submap, player"
