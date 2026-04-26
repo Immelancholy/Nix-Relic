@@ -11,16 +11,16 @@
       rofi-nerdy
       rofi-emoji
     ];
+    modes = [
+      "drun"
+      "run"
+      "filebrowser"
+      "window"
+    ];
     extraConfig = {
       # hover-select = true;
       # me-select-entry = "";
       # me-accept-entry = "MousePrimary";
-      modi = [
-        "drun"
-        "run"
-        "filebrowser"
-        "window"
-      ];
       show-icons = true;
       display-drun = " Apps";
       display-run = "󰲌 Run";
