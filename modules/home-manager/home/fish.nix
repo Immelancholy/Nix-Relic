@@ -513,7 +513,7 @@
         check_tmux
 
         if [ "$class" = "fastfetch" ]
-          fastfetch --logo "$HOME"/Pictures/fastfetch_logos/Nakari.jpg
+          fastfetch --logo $FASTFETCH_STARTUP_LOGO
         else
           check_for_repo
         end

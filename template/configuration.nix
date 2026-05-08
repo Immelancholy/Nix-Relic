@@ -93,6 +93,7 @@
           home.sessionVariables = {
             NOTES_PATH = ""; # path to notes folder ( for neovim )
             PROJECTS_PATH = ""; # path to Projects folder ( for neovim )
+            FASTFETCH_STARTUP_LOGO = "$HOME/Pictures/fastfetch_logos/Nakari.jpg";
           };
 
           home.packages = with pkgs; [
