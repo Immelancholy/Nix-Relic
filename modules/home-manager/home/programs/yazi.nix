@@ -56,12 +56,12 @@
       };
       plugin.prepend_fetchers = [
         {
-          name = "*";
+          url = "*";
           run = "git";
           group = "git";
         }
         {
-          name = "*/";
+          url = "*/";
           run = "git";
           group = "git";
         }
