@@ -54,6 +54,40 @@
       manager = {
         show_hidden = true;
       };
+      opener = {
+        play = [
+          {
+            run = "mpv %s";
+            orphan = true;
+            for = "unix";
+          }
+        ];
+        edit = [
+          {
+            run = ''$EDITOR %s'';
+            block = true;
+            for = ''unix'';
+          }
+        ];
+        open = [
+          {
+            run = "xdg-open %s1";
+            desc = "Open";
+          }
+        ];
+      };
+      open = {
+        rules = [
+          {
+            mime = "text/*";
+            use = "edit";
+          }
+          {
+            mime = "video/*";
+            use = "play";
+          }
+        ];
+      };
       plugin.prepend_fetchers = [
         {
           url = "*";
