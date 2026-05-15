@@ -5,10 +5,10 @@ set +o pipefail
 token=0
 remote=0
 config=""
-inputs=""
+updateCmd=""
 
 show_help() {
-  printf "%s" "\
+  printf "%s\n" "\
     usage: relic-cli [-t] [-r [host]] [option]
 
     options:
@@ -23,7 +23,7 @@ show_help() {
 }
 
 check_tmux() {
-  if [ -z $TMUX ]; then
+  if [ -z "$TMUX" ]; then
     fetch_cmd=onefetch_img
   else
     fetch_cmd=fastfetch
@@ -51,7 +51,7 @@ update-system() {
 
     sudo nixos-rebuild boot --flake .
 
-    if [ $? -eq 0 ]; then
+    if sudo nixos-rebuild boot --flake .; then
       booted="$(readlink /run/booted-system/{initrd,kernel,kernel-modules})"
       built="$(readlink /nix/var/nix/profiles/system/{initrd,kernel,kernel-modules})"
 
@@ -59,8 +59,7 @@ update-system() {
 
       if [ "${booted}" = "${built}" ]; then
         echo "Applying Updates..."
-        sudo nixos-rebuild switch --flake .
-        if [ $? -eq 0 ]; then
+        if sudo nixos-rebuild switch --flake .; then
           echo "Updates applied succesfully."
         else
           echo "Error applying updates."
@@ -73,7 +72,7 @@ update-system() {
 
       while true; do
 
-        read -p "Would you like to push updates to github? [y/N]" yn
+        read -r -p "Would you like to push updates to github? [y/N]" yn
 
         if [[ "$yn" == "" ]]; then
           yn=n
@@ -94,13 +93,13 @@ update-system() {
 
       sleep 1
 
-      read -n 1 -p 'Press any key to exit...'
+      read -r -n 1 -p 'Press any key to exit...'
       exit 0
     fi
 
     echo "Updates failed!"
     sleep 1
-    read -n 1 -p 'Press any key to exit...'
+    read -r -n 1 -p 'Press any key to exit...'
     exit 1
   }
   check_for_update() {
@@ -108,12 +107,10 @@ update-system() {
 
     ${flakeUpdateCmd} >/dev/null 2>&1
 
-    git diff --exit-code -- flake.lock >/dev/null 2>&1
-
-    if [ $? -eq 0 ]; then
+    if git diff --exit-code -- flake.lock >/dev/null 2>&1; then
       echo "No updates found!"
       sleep 1
-      read -n 1 -p 'Press any key to exit...'
+      read -r -n 1 -p 'Press any key to exit...'
       exit 0
     fi
     git restore flake.lock
@@ -124,7 +121,7 @@ update-system() {
 
     while true; do
 
-      read -p "Would you like to update your system? [Y/n]" yn
+      read -r -p "Would you like to update your system? [Y/n]" yn
 
       if [[ "$yn" == "" ]]; then
         yn=y
@@ -136,7 +133,7 @@ update-system() {
         break
         ;;
       [nN])
-        read -n 1 -p 'Press any key to exit...'
+        read -r -n 1 -p 'Press any key to exit...'
         exit
         ;;
       *) echo "Invalid Response" ;;
@@ -149,7 +146,7 @@ update-system() {
   clear
   fastfetch
   check_for_update
-  builtin cd - >/dev/null || exit 1 l
+  builtin cd - >/dev/null || exit 1
 }
 
 args=$(getopt -o 'tr:hus:b:f::' -l 'token,remote:,help,update,switch:,boot:,update-flake::' -- "${@}")
@@ -172,7 +169,6 @@ while true; do
     ;;
   -u | --update)
     update-system
-    exit 0
     ;;
   -s | --switch)
     config="$2"
@@ -212,10 +208,10 @@ while true; do
   -f | --update-flake)
     # consume next token only if it exists and does NOT start with '-'
     if [ -n "${2-}" ] && [ "${2:0:1}" != "-" ] && [ "$2" != "--" ]; then
-      inputs="$2"
+      updateCmd="nix flake update ${2}"
       shift 2
     else
-      inputs=""
+      updateCmd="nix flake update"
       shift
     fi
 
@@ -225,9 +221,9 @@ while true; do
     $fetch_cmd
 
     if [ "$token" -eq 1 ]; then
-      nix flake update $inputs --option access-tokens "github.com=$(gh auth token)" --commit-lock-file
+      $updateCmd --option access-tokens "github.com=$(gh auth token)" --commit-lock-file
     else
-      nix flake update $inputs --commit-lock-file
+      $updateCmd --commit-lock-file
     fi
 
     builtin cd - >/dev/null || exit 1
