@@ -1388,11 +1388,11 @@
         "rust-overlay": "rust-overlay_3"
       },
       "locked": {
-        "lastModified": 1773533700,
-        "narHash": "sha256-qzHCMpDgNbxPeQJ5MGkIGN706CFq2IVSPFRQJk4Aos8=",
+        "lastModified": 1778853685,
+        "narHash": "sha256-wjloRdp+schZ6+Fj3WHphqqy1KMgY8JHHakgKXc339M=",
         "owner": "Immelancholy",
         "repo": "zarumet",
-        "rev": "012832e5e4acb48325eb081ac2b40b44d7cecf50",
+        "rev": "d8e043b1f51d00c497f2d485ddff4a58da954482",
         "type": "github"
       },
       "original": {
