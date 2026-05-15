@@ -149,7 +149,7 @@ update-system() {
   clear
   fastfetch
   check_for_update
-  builtin cd - || exit 1 >/dev/nulll
+  builtin cd - >/dev/null || exit 1 l
 }
 
 args=$(getopt -o 'tr:hus:b:f::' -l 'token,remote:,help,update,switch:,boot:,update-flake::' -- "${@}")
@@ -189,7 +189,7 @@ while true; do
       sudo nixos-rebuild switch --flake "$config"
     fi
     git add .
-    builtin cd - || exit 1 >/dev/null
+    builtin cd - >/dev/null || exit 1
     exit 0
     ;;
   -b | --boot)
@@ -206,7 +206,7 @@ while true; do
       sudo nixos-rebuild boot --flake "$config"
     fi
     git add .
-    builtin cd - || exit 1 >/dev/null
+    builtin cd - >/dev/null || exit 1
     exit 0
     ;;
   -f | --update-flake)
@@ -230,7 +230,7 @@ while true; do
       nix flake update $inputs --commit-lock-file
     fi
 
-    builtin cd - >/dev/null || exit 1 
+    builtin cd - >/dev/null || exit 1
     exit 0
     ;;
   --)
