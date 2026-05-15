@@ -1,0 +1,249 @@
+#!/usr/bin/env bash
+set +o errexit
+set +o nounset
+set +o pipefail
+token=""
+remote=""
+config=""
+inputs=""
+
+show_help() {
+  printf "%s" "\
+    useage: relic-cli [-t] [-r [host]] [option]
+
+    options:
+    -h, --help                                    Show this help message and exit
+    -u, --update                                  Update the system
+    -s, --switch [configuration]                  Switch the configuration (e.g. . or .#configuration-name)
+    -b, --boot   [configuration]                  Switch the configuration on next boot (e.g. . or .#configuration-name)
+    -r, --remote [host]                           Perform switch or boot on remote host
+    -t, --token                                   Use gh token for updates
+    -f [flakes], --update-flake [flakes]          Update all or selected flake inputs
+  "
+}
+
+check_tmux() {
+  if [ -z $TMUX ]; then
+    fetch_cmd=onefetch_img
+  else
+    fetch_cmd=fastfetch
+  fi
+}
+
+onefetch_img() {
+  image="$(find ~/Pictures/fastfetch_logos/ -name "*.jpg" -o -name "*.png" 2>/dev/null | shuf -n1)"
+  if [ "$image" ]; then
+    onefetch --image-protocol kitty -i "$image"
+  else
+    onefetch
+  fi
+}
+
+update-system() {
+
+  if [ "$token" = 1 ]; then
+    flakeUpdateCmd="nix flake update --option access-tokens 'github.com=$(gh auth token)'"
+  else
+    flakeUpdateCmd="nix flake update"
+  fi
+  update() {
+    $flakeUpdateCmd --commit-lock-file
+
+    sudo nixos-rebuild boot --flake .
+
+    if [ $? -eq 0 ]; then
+      booted="$(readlink /run/booted-system/{initrd,kernel,kernel-modules})"
+      built="$(readlink /nix/var/nix/profiles/system/{initrd,kernel,kernel-modules})"
+
+      echo "Updates Complete!"
+
+      if [ "${booted}" = "${built}" ]; then
+        echo "Applying Updates..."
+        sudo nixos-rebuild switch --flake .
+        if [ $? -eq 0 ]; then
+          echo "Updates applied succesfully."
+        else
+          echo "Error applying updates."
+        fi
+      else
+        echo "Booted system is different to built system! Please reboot to apply update"
+      fi
+
+      sleep 1
+
+      while true; do
+
+        read -p "Would you like to push updates to github? [y/N]" yn
+
+        if [[ "$yn" == "" ]]; then
+          yn=n
+        fi
+
+        case $yn in
+        [yY])
+          git push
+          break
+          ;;
+        [nN])
+          break
+          ;;
+        *) echo "Invalid Response" ;;
+        esac
+
+      done
+
+      sleep 1
+
+      read -n 1 -p 'Press any key to exit...'
+      exit 0
+    fi
+
+    echo "Updates failed!"
+    sleep 1
+    read -n 1 -p 'Press any key to exit...'
+    exit 1
+  }
+  check_for_update() {
+    echo "Checking for updates..."
+
+    ${flakeUpdateCmd} >/dev/null 2>&1
+
+    git diff --exit-code -- flake.lock >/dev/null 2>&1
+
+    if [ $? -eq 0 ]; then
+      echo "No updates found!"
+      sleep 1
+      read -n 1 -p 'Press any key to exit...'
+      exit 0
+    fi
+    git restore flake.lock
+
+    echo "Updates found!"
+
+    sleep 1
+
+    while true; do
+
+      read -p "Would you like to update your system? [Y/n]" yn
+
+      if [[ "$yn" == "" ]]; then
+        yn=y
+      fi
+
+      case $yn in
+      [yY])
+        echo "Updating System..."
+        break
+        ;;
+      [nN])
+        read -n 1 -p 'Press any key to exit...'
+        exit
+        ;;
+      *) echo "Invalid Response" ;;
+      esac
+
+    done
+    update
+  }
+  builtin cd "$FLAKE_PATH" || exit 1
+  clear
+  fastfetch
+  check_for_update
+  builtin cd - || exit 1 >/dev/nulll
+}
+
+args=$(getopt -o 'tr:hus:b:f::' -l 'token,remote:,help,update,switch:,boot:,update-flake::' -- "${@}")
+eval set -- "${args}"
+
+while true; do
+  case "$1" in
+  -h | --help)
+    show_help
+    exit 0
+    ;;
+  -t | --token)
+    token=1
+    shift
+    ;;
+  -r | --remote)
+    remote=1
+    host="$2"
+    shift 2
+    ;;
+  -u | --update)
+    update-system
+    exit 0
+    ;;
+  -s | --switch)
+    config="$2"
+    shift 2
+    check_tmux
+    builtin cd "$FLAKE_PATH" || exit 1
+    clear
+    $fetch_cmd
+    git add .
+    if [ "$remote" -eq 1 ]; then
+
+      nixos-rebuild switch --sudo --ask-sudo-password --target-host "$host" --flake "$config"
+    else
+      sudo nixos-rebuild switch --flake "$config"
+    fi
+    git add .
+    builtin cd - || exit 1 >/dev/null
+    exit 0
+    ;;
+  -b | --boot)
+    config="$2"
+    shift 2
+    check_tmux
+    builtin cd "$FLAKE_PATH" || exit 1
+    clear
+    $fetch_cmd
+    git add .
+    if [ "$remote" -eq 1 ]; then
+      nixos-rebuild boot --sudo --ask-sudo-password --target-host "$host" --flake "$config"
+    else
+      sudo nixos-rebuild boot --flake "$config"
+    fi
+    git add .
+    builtin cd - || exit 1 >/dev/null
+    exit 0
+    ;;
+  -f | --update-flake)
+    # consume next token only if it exists and does NOT start with '-'
+    if [ -n "${2-}" ] && [ "${2:0:1}" != "-" ] && [ "$2" != "--" ]; then
+      inputs="$2"
+      shift 2
+    else
+      inputs=""
+      shift
+    fi
+
+    check_tmux
+    builtin cd "$FLAKE_PATH" || exit 1
+    clear
+    $fetch_cmd
+
+    if [ "$token" = 1 ]; then
+      nix flake update $inputs --option access-tokens "github.com=$(gh auth token)" --commit-lock-file
+    else
+      nix flake update $inputs --commit-lock-file
+    fi
+
+    builtin cd - || exit 1 >/dev/null
+    exit 0
+    ;;
+  --)
+    shift
+    break
+    ;;
+  -*)
+    echo "Unknown option: $1" >&2
+    show_help
+    exit 1
+    ;;
+  *)
+    break
+    ;;
+  esac
+done
