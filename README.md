@@ -277,17 +277,23 @@ monitor = ", preferred, auto, 1";
 sudo nixos-rebuild switch --flake .
 ```
 * in the dots folder
-* or just use the alias ```switch``` that I added that automatically adds and commits changes to the git repo and runs the above command.
 * Do this after making any changes in the dots folder.
-I also have aliases for switch on boot and updating with:
-```
-boot
-```
-and
-```
-update
 ```
 
+relic-cli
+* Recently I made a bash script called relic-cli, this should work as a all around tool for managing your install!
+```
+    usage: relic-cli [-t] [-r [host]] [option]
+
+    options:
+    -h, --help                               Show this help message and exit
+    -u, --update                             Update the system
+    -s, --switch [configuration]             Switch the configuration (e.g. . or .#config)
+    -b, --boot   [configuration]             Switch the configuration on next boot (e.g. . or #config)
+    -r, --remote [host]                      Perform switch or boot on remote host
+    -t, --token                              Use gh token for updates
+    -f['flakes'], --update-flake=['flakes']  Update all or selected flake inputs
+```
 
 # DISCLAIMER
 * A lot of the waybar CSS, settings and the animations used in hyprland were copied over from the [HYDE Project](https://github.com/HyDE-Project/HyDE), although with some changes. These guys' hyprland template rocks and as I was using it before on arch I kinda just wanted my waybar to look like that. The cava module for waybar was also copied from this project.
