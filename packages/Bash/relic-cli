@@ -9,16 +9,16 @@ inputs=""
 
 show_help() {
   printf "%s" "\
-    useage: relic-cli [-t] [-r [host]] [option]
+    usage: relic-cli [-t] [-r [host]] [option]
 
     options:
-    -h, --help                                    Show this help message and exit
-    -u, --update                                  Update the system
-    -s, --switch [configuration]                  Switch the configuration (e.g. . or .#configuration-name)
-    -b, --boot   [configuration]                  Switch the configuration on next boot (e.g. . or .#configuration-name)
-    -r, --remote [host]                           Perform switch or boot on remote host
-    -t, --token                                   Use gh token for updates
-    -f [flakes], --update-flake [flakes]          Update all or selected flake inputs
+    -h, --help                            Show this help message and exit
+    -u, --update                          Update the system
+    -s, --switch [configuration]          Switch the configuration (e.g. . or .#config)
+    -b, --boot   [configuration]          Switch the configuration on next boot (e.g. . or #config)
+    -r, --remote [host]                   Perform switch or boot on remote host
+    -t, --token                           Use gh token for updates
+    -f [flakes], --update-flake [flakes]  Update all or selected flake inputs
   "
 }
 
