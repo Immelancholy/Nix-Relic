@@ -14,6 +14,7 @@ show_help() {
     options:
     -h, --help                               Show this help message and exit
     -u, --update                             Update the system
+    -l, --lock                               Lock the flake
     -s, --switch [configuration]             Switch the configuration (e.g. . or .#config)
     -b, --boot   [configuration]             Switch the configuration on next boot (e.g. . or #config)
     -r, --remote [host]                      Perform switch or boot on remote host
@@ -149,7 +150,7 @@ update-system() {
   builtin cd - >/dev/null || exit 1
 }
 
-args=$(getopt -o 'tr:hus:b:f::' -l 'token,remote:,help,update,switch:,boot:,update-flake::' -- "${@}")
+args=$(getopt -o 'tr:huls:b:f::' -l 'token,remote:,help,update,lock,switch:,boot:,update-flake::' -- "${@}")
 eval set -- "${args}"
 
 while true; do
@@ -224,6 +225,21 @@ while true; do
       $updateCmd --option access-tokens "github.com=$(gh auth token)" --commit-lock-file
     else
       $updateCmd --commit-lock-file
+    fi
+
+    builtin cd - >/dev/null || exit 1
+    exit 0
+    ;;
+  -l | --lock)
+    check_tmux
+    builtin cd "$FLAKE_PATH" || exit 1
+    clear
+    $fetch_cmd
+
+    if [ "$token" -eq 1 ]; then
+      nix flake lock --option access-tokens "github.com=$(gh auth token)" --commit-lock-file
+    else
+      nix flake lock --commit-lock-file
     fi
 
     builtin cd - >/dev/null || exit 1

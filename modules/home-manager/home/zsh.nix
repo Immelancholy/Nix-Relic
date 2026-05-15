@@ -108,12 +108,6 @@ in {
           check_for_repo
         }
 
-        nixgit () {
-          builtin cd "$FLAKE_PATH" || return
-          lazygit
-          builtin cd - || return
-        }
-
         source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
         source <(fzf --zsh)
 

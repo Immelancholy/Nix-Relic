@@ -1,0 +1,73 @@
+#!/usr/bin/env bash
+set +o errexit
+set +o nounset
+set +o pipefail
+token=0
+updateCmd=""
+
+show_help() {
+  printf "%s\n" "\
+    usage: flake-cli [-t] [option]
+
+    options:
+    -h, --help                               Show this help message and exit
+    -l, --lock
+    -t, --token                              Use gh token for updates
+    -u['flakes'], --update=['flakes']  Update all or selected flake inputs
+  "
+}
+
+args=$(getopt -o 'thlu::' -l 'token,help,lock,update::' -- "${@}")
+eval set -- "${args}"
+
+while true; do
+  case "$1" in
+  -h | --help)
+    show_help
+    exit 0
+    ;;
+  -t | --token)
+    token=1
+    shift
+    ;;
+  -u | --update)
+    # consume next token only if it exists and does NOT start with '-'
+    if [ -n "${2-}" ] && [ "${2:0:1}" != "-" ] && [ "$2" != "--" ]; then
+      updateCmd="nix flake update ${2}"
+      shift 2
+    else
+      updateCmd="nix flake update"
+      shift
+    fi
+
+    if [ "$token" -eq 1 ]; then
+      $updateCmd --option access-tokens "github.com=$(gh auth token)" --commit-lock-file
+    else
+      $updateCmd --commit-lock-file
+    fi
+
+    exit 0
+    ;;
+  -l | --lock)
+    if [ "$token" -eq 1 ]; then
+      nix flake lock --option access-tokens "github.com=$(gh auth token)" --commit-lock-file
+    else
+      nix flake lock --commit-lock-file
+    fi
+
+    exit 0
+    ;;
+  --)
+    shift
+    break
+    ;;
+  -*)
+    echo "Unknown option: $1" >&2
+    show_help
+    exit 1
+    ;;
+  *)
+    break
+    ;;
+  esac
+done

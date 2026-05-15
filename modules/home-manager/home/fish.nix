@@ -360,30 +360,6 @@
             check_for_repo
           '';
       };
-      nixgit = {
-        body =
-          /*
-          fish
-          */
-          ''
-            set -l dir "$(pwd)"
-            cd "$FLAKE_PATH"
-            lazygit
-            cd "$dir"
-          '';
-      };
-      nix-llm-git = {
-        body =
-          /*
-          fish
-          */
-          ''
-            set -l dir "$(pwd)"
-            cd "$FLAKE_PATH"
-            llm git-commit
-            cd "$dir"
-          '';
-      };
     };
     binds = {
       jk = {
