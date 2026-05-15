@@ -257,7 +257,7 @@ in {
         format = "󰚰";
         on-click = "uwsm app -- kitty --class update-system update-system";
         tooltip = true;
-        tooltip-format = "Update System";
+        tooltip-format = "relic-cli -u";
       };
     };
   };

@@ -95,11 +95,7 @@
     wantedBy = ["graphical-session.target"];
   };
   environment.systemPackages = with pkgs; [
-    (nr.update-system.override {
-      flakePath = "${config.nix-relic.flakePath}";
-      host = "${config.networking.hostName}";
-      withToken = config.nix-relic.updateScript.enableToken;
-    })
+    nr.relic-cli
     nix-output-monitor
     imagemagick
     chafa

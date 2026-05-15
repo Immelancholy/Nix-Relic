@@ -23,6 +23,6 @@ pkgs: {
   toggle-mute = pkgs.callPackage ./toggle-mute.nix {};
   waycava = pkgs.callPackage ./waycava.nix {};
   force-hdr = pkgs.callPackage ./hdr.nix {};
-  update-system = pkgs.callPackage ./update.nix {};
+  relic-cli = pkgs.callPackage ./relic-cli.nix {};
   binds-sh = pkgs.callPackage ./binds.nix {};
 }
