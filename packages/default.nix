@@ -24,5 +24,6 @@ pkgs: {
   waycava = pkgs.callPackage ./waycava.nix {};
   force-hdr = pkgs.callPackage ./hdr.nix {};
   relic-cli = pkgs.callPackage ./relic-cli.nix {};
+  flake-cli = pkgs.callPackage ./flake-cli.nix {};
   binds-sh = pkgs.callPackage ./binds.nix {};
 }

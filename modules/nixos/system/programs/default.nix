@@ -96,6 +96,7 @@
   };
   environment.systemPackages = with pkgs; [
     nr.relic-cli
+    nr.flake-cli
     nix-output-monitor
     imagemagick
     chafa
