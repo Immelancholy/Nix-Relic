@@ -1,2 +1,5 @@
-{writeShellScriptBin, ...}:
-writeShellScriptBin "relic-cli" (builtins.readFile ./Bash/relic-cli)
+{writeShellApplication, ...}:
+writeShellApplication { 
+  name = "relic-cli"; 
+  text = builtins.readFile ./Bash/relic-cli;
+}
