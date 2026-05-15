@@ -2,8 +2,8 @@
 set +o errexit
 set +o nounset
 set +o pipefail
-token=""
-remote=""
+token=0
+remote=0
 config=""
 inputs=""
 
@@ -41,7 +41,7 @@ onefetch_img() {
 
 update-system() {
 
-  if [ "$token" = 1 ]; then
+  if [ "$token" -eq 1 ]; then
     flakeUpdateCmd="nix flake update --option access-tokens 'github.com=$(gh auth token)'"
   else
     flakeUpdateCmd="nix flake update"
@@ -224,7 +224,7 @@ while true; do
     clear
     $fetch_cmd
 
-    if [ "$token" = 1 ]; then
+    if [ "$token" -eq 1 ]; then
       nix flake update $inputs --option access-tokens "github.com=$(gh auth token)" --commit-lock-file
     else
       nix flake update $inputs --commit-lock-file
