@@ -4,20 +4,18 @@ in {
   wayland.windowManager.hyprland = {
     sourceFirst = true;
     settings = {
-      local = {
-        scr = "$XDG_BIN_HOME";
-        terminal = "uwsm app -- kitty";
-        files = "uwsm app -- nemo.desktop";
-        filest = "uwsm app -- yazi.desktop";
-        mod = "SUPER";
-        mods = "SUPERSHIFT";
-        modc = "SUPERCTRL";
-        menu = ''rofi -show drun -run-command "uwsm-app -- {cmd}" run filebrowser power-menu -modi drun,run,filebrowser,power-menu:rofi-power-menu'';
-        browser = "uwsm app -- zen-beta.desktop";
-        playerctl = "uwsm app -- playerctl --player=$player";
-        discord = "uwsm app -- vesktop.desktop";
-        editor = "uwsm app -- dev.zed.Zed.desktop";
-      };
+      "$scr" = "$XDG_BIN_HOME";
+      "$term" = "uwsm app -- kitty";
+      "$files" = "uwsm app -- nemo.desktop";
+      "$filest" = "uwsm app -- yazi.desktop";
+      "$mod" = "SUPER";
+      "$mods" = "SUPERSHIFT";
+      "$modc" = "SUPERCTRL";
+      "$menu" = ''rofi -show drun -run-command "uwsm-app -- {cmd}" run filebrowser power-menu -modi drun,run,filebrowser,power-menu:rofi-power-menu'';
+      "$browser" = "uwsm app -- zen-beta.desktop";
+      "$playerctl" = "uwsm app -- playerctl --player=$player";
+      "$discord" = "uwsm app -- vesktop.desktop";
+      "$editor" = "uwsm app -- dev.zed.Zed.desktop";
       misc = {
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
