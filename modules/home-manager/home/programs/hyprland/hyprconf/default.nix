@@ -1,21 +1,19 @@
-{lib, ...}: let
-  lua = lib.generators.mkLuaInline;
-in {
+{
   wayland.windowManager.hyprland = {
     sourceFirst = true;
     settings = {
-      "local scr" = "$XDG_BIN_HOME";
-      "local term" = "uwsm app -- kitty";
-      "local files" = "uwsm app -- nemo.desktop";
-      "local filest" = "uwsm app -- yazi.desktop";
-      "local mod" = "SUPER";
-      "local mods" = "SUPERSHIFT";
-      "local modc" = "SUPERCTRL";
-      "local menu" = ''rofi -show drun -run-command "uwsm-app -- {cmd}" run filebrowser power-menu -modi drun,run,filebrowser,power-menu:rofi-power-menu'';
-      "local browser" = "uwsm app -- zen-beta.desktop";
-      "local playerctl" = "uwsm app -- playerctl --player=player";
-      "local discord" = "uwsm app -- vesktop.desktop";
-      "local editor" = "uwsm app -- dev.zed.Zed.desktop";
+      "$scr" = "$XDG_BIN_HOME";
+      "$term" = "uwsm app -- kitty";
+      "$files" = "uwsm app -- nemo.desktop";
+      "$filest" = "uwsm app -- yazi.desktop";
+      "$mod" = "SUPER";
+      "$mods" = "SUPERSHIFT";
+      "$modc" = "SUPERCTRL";
+      "$menu" = ''rofi -show drun -run-command "uwsm-app -- {cmd}" run filebrowser power-menu -modi drun,run,filebrowser,power-menu:rofi-power-menu'';
+      "$browser" = "uwsm app -- zen-beta.desktop";
+      "$playerctl" = "uwsm app -- playerctl --player=$player";
+      "$discord" = "uwsm app -- vesktop.desktop";
+      "$editor" = "uwsm app -- dev.zed.Zed.desktop";
       misc = {
         disable_hyprland_logo = true;
         disable_splash_rendering = true;

@@ -23,6 +23,7 @@ in {
         enable = false;
         variables = ["--all"];
       };
+      configType = "hyprlang";
     }
     (lib.mkIf cfg.usingFlake {
       plugins = [
