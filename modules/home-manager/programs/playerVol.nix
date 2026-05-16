@@ -42,7 +42,7 @@ in {
   config = mkMerge [
     (mkIf (config.wayland.windowManager.hyprland.enable && cfg.enable) {
       wayland.windowManager.hyprland.settings = {
-        "$player" = "${cfg.name}";
+        "local player" = "${cfg.name}";
       };
     })
     (mkIf (cfg.enable && config.player.name == "mpd" && ! config.player.scriptUseDefaultSink) {
