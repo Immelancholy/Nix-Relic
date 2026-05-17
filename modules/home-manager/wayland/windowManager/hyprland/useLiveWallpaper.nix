@@ -12,7 +12,7 @@ with lib; let
     if command -v mpvpaper
     then
       pkill mpvpaper
-      uwsm app -- mpvpaper -f -p -o "--loop hwdec=auto --no-audio" '*' ${cfg.liveWallpaper.path}
+      uwsm app -- mpvpaper -f -p -o "--loop no-audio" '*' ${cfg.liveWallpaper.path}
     else
       pkill mpvpaper
     fi
