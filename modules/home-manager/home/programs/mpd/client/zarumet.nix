@@ -27,7 +27,7 @@ in {
     enable = true;
     settings = {
       mpd = {
-        address = "${config.services.mpd.network.listenAddress}:${builtins.toString config.services.mpd.network.port}";
+        address = "${config.services.mpd.network.listenAddress}:${toString config.services.mpd.network.port}";
       };
       colors = {
         border = base05;
@@ -48,6 +48,7 @@ in {
         queue_selected_text = base00;
         queue_album = base0F;
         queue_song_title = base05;
+        queue_song_playing = base0C;
         queue_artist = base08;
         queue_position = base0D;
         queue_duration = base0D;
