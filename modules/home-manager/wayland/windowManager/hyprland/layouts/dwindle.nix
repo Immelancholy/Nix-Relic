@@ -33,10 +33,10 @@ in {
             "$mod, L, workspace, r+1"
             "$mod, H, workspace, r-1"
             "$mod, J, workspace, empty"
-            "$mod, mouse_up, workspace, e+1"
-            "$mod, mouse_down, workspace, e-1"
-            "$mods, mouse_up, workspace, r+1"
-            "$mods, mouse_down, workspace, r-1"
+            "$mod, mouse_up, workspace, e-1"
+            "$mod, mouse_down, workspace, e+1"
+            "$mods, mouse_up, workspace, r-1"
+            "$mods, mouse_down, workspace, r+1"
             "$modc, H, changegroupactive, b"
             "$modc, L, changegroupactive, f"
             "$modc, Right, changegroupactive, b"
@@ -96,10 +96,10 @@ in {
         bind = Shift, Down, movewindow, d
         bind = Shift, Up, movewindow, u
         bind = Shift, Left, movewindow, l
-        bind = , mouse_up, workspace, e+1
-        bind = , mouse_down, workspace, e-1
-        bind = $mod, mouse_up, workspace, r+1
-        bind = $mod, mouse_down, workspace, r-1
+        bind = , mouse_up, workspace, e-1
+        bind = , mouse_down, workspace, e+1
+        bind = $mod, mouse_up, workspace, r-1
+        bind = $mod, mouse_down, workspace, r+1
 
         bind = Shift, R, submap, resize
         submap = resize
