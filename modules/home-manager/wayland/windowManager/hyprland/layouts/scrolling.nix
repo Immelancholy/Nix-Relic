@@ -42,8 +42,8 @@ in {
             "$mods, Right, workspace, r+1"
             "$mods, Left, workspace, r-1"
             "$mods, Down, workspace, empty"
-            "$mod, mouse_up, layoutmsg, focus right"
-            "$mod, mouse_down, layoutmsg, focus left"
+            "$mod, mouse_up, layoutmsg, focus left"
+            "$mod, mouse_down, layoutmsg, focus right"
             "$mods, mouse_up, workspace, e-1"
             "$mods, mouse_down, workspace, e+1"
             "$modc, H, changegroupactive, b"
@@ -116,8 +116,8 @@ in {
         bind = Shift, L, layoutmsg, swapcol r
         bind = Shift, Right, layoutmsg, swapcol r
         bind = Shift, Left, layoutmsg, swapcol l
-        bind = , mouse_up, layoutmsg, focus right
-        bind = , mouse_down, layoutmsg, focus left
+        bind = , mouse_up, layoutmsg, focus left
+        bind = , mouse_down, layoutmsg, focus right
         bind = $mod, mouse_up, workspace, e-1
         bind = $mod, mouse_down, workspace, e+1
 
