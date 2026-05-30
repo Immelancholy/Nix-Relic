@@ -35,9 +35,7 @@ in {
 
   programs.zen-browser = {
     enable = true;
-    setAsDefaultBrowser = {
-      enable = true;
-    };
+    setAsDefaultBrowser = true;
     enablePrivateDesktopEntry = true;
     profiles."${user}.Default".mods = [
       "642854b5-88b4-4c40-b256-e035532109df" #transparent
