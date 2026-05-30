@@ -53,7 +53,7 @@
       inputs.hyprland.follows = "hyprland";
     };
     stylix = {
-      url = "github:nix-community/stylix";
+      url = "github:Immelancholy/stylix";
     };
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
