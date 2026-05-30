@@ -61,7 +61,10 @@ in {
         profileNames = [
           "${config.home.username}.Default"
         ];
-        opacity = 0.75;
+        opacity = {
+          enable = true;
+          override = 0.75;
+        };
       };
     };
   };
