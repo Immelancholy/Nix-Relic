@@ -33,10 +33,10 @@
 
   programs.zen-browser = {
     enable = true;
-    defaultBrowser = {
+    setAsDefaultBrowser = {
       enable = true;
-      desktopFile = "zen-beta.desktop";
     };
+    enablePrivateDesktopEntry = true;
   };
 
   programs.zed-editor = {
