@@ -21,6 +21,9 @@
 
   user = config.home.username;
 in {
+  imports = [
+    inputs.nix-relic.inputs.zen-browser.homeModules.beta
+  ];
   programs.zen-browser = {
     enable = true;
     setAsDefaultBrowser = true;

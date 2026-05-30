@@ -27,7 +27,7 @@
     ./kitty.nix
     ./quickshell
     ./hyprquickframe.nix
-    inputs.nix-relic.inputs.zen-browser.homeModules.beta
+    ./zen-browser.nix
   ];
 
   programs.zed-editor = {
