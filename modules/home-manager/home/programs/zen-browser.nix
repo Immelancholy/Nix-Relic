@@ -1,4 +1,4 @@
-{config, ...}: let
+{config, nix-relic ...}: let
   mkPluginUrl = id: "https://addons.mozilla.org/firefox/downloads/latest/${id}/latest.xpi";
 
   mkExtensionEntry = {
@@ -22,7 +22,7 @@
   user = config.home.username;
 in {
   imports = [
-    inputs.nix-relic.inputs.zen-browser.homeModules.beta
+    nix-relic.inputs.zen-browser.homeModules.beta
   ];
   programs.zen-browser = {
     enable = true;
