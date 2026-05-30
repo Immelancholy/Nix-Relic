@@ -63,7 +63,7 @@ in {
         ];
         opacity = {
           enable = true;
-          override = 0.75;
+          override.applications = 0.75;
         };
       };
     };
