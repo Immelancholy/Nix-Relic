@@ -1,4 +1,4 @@
-{config, nix-relic ...}: let
+{config, nix-relic, ...}: let
   mkPluginUrl = id: "https://addons.mozilla.org/firefox/downloads/latest/${id}/latest.xpi";
 
   mkExtensionEntry = {
