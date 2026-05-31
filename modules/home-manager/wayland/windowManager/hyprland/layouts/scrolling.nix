@@ -17,8 +17,10 @@ in {
   config = mkIf cfg.enable {
     wayland.windowManager.hyprland = {
       settings = {
-        general = {
-          layout = "scrolling";
+        config = {
+          general = {
+            layout = "scrolling";
+          };
         };
         bind = [
           {

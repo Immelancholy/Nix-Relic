@@ -3,6 +3,21 @@
 in {
   wayland.windowManager.hyprland = {
     sourceFirst = true;
+    extraConfig =
+      /*
+      Lua
+      */
+      ''
+        hl.permission({ binary = "/nix/store/[a-z0-9]{32}-grim-[0-9.]*/bin/grim", type = "screencopy", mode = "allow" })
+        hl.permission({ binary = "/nix/store/[a-z0-9]{32}-xdg-desktop-portal-hyprland-[0-9.]*/libexec/.xdg-desktop-portal-hyprland-wrapped", type = "screencopy", mode = "allow" })
+        hl.permission({ binary = "/nix/store/[a-z0-9]{32}-xdg-desktop-portal-hyprland-[0-9.]*[+]date[=][0-9]*-[0-9]*-[0-9]*_[a-z0-9]*/libexec/.xdg-desktop-portal-hyprland-wrapped", type = "screencopy", mode = "allow" })
+        hl.permission({ binary = "/nix/store/[a-z0-9]{32}-csgo-vulkan-fix-[0-9.]*/lib/libcsgo-vulkan-fix.so", type = "plugin", mode = "allow" })
+        hl.permission({ binary = "/nix/store/[a-z0-9]{32}-hyprland-easymotion/lib/libhyprland-easymotion.so", type = "plugin", mode = "allow" })
+        hl.permission({ binary = "/nix/store/[a-z0-9]{32}-quickshell-[0-9.]*/bin/.quickshell-wrapped", type = "screencopy", mode = "allow" })
+        hl.permission({ binary = "/nix/store/[a-z0-9]{32}-hyprquickframe-[0-9.]*/bin/.hyprquickframe-wrapped", type = "screencopy", mode = "allow" })
+        hl.permission({ binary = "/nix/store/[a-z0-9]{32}-hyprquickframe-[0-9.]*/bin/hyprquickframe", type = "screencopy", mode = "allow" })
+        hl.permission({ binary = "/nix/store/[a-z0-9]{32}-hyprpicker-[0-9.]*/bin/hyprpicker", type = "screencopy", mode = "allow" })
+      '';
     settings = {
       mod = {
         _var = "SUPER";
@@ -55,20 +70,6 @@ in {
         ecosystem = {
           # enforce_permissions = true;
         };
-        permission = [
-          "/nix/store/[a-z0-9]{32}-grim-[0-9.]*/bin/grim, screencopy, allow"
-          "/nix/store/[a-z0-9]{32}-xdg-desktop-portal-hyprland-[0-9.]*/libexec/.xdg-desktop-portal-hyprland-wrapped, screencopy, allow"
-          "/nix/store/[a-z0-9]{32}-xdg-desktop-portal-hyprland-[0-9.]*[+]date[=][0-9]*-[0-9]*-[0-9]*_[a-z0-9]*/libexec/.xdg-desktop-portal-hyprland-wrapped, screencopy, allow"
-          "/nix/store/[a-z0-9]{32}-hy3-hl[0-9.]*/lib/libhy3.so, plugin, allow"
-          "/nix/store/[a-z0-9]{32}-csgo-vulkan-fix-[0-9.]*/lib/libcsgo-vulkan-fix.so, plugin, allow"
-          "/nix/store/[a-z0-9]{32}-xtra-dispatchers-[0-9.]*/lib/libxtra-dispatchers.so, plugin, allow"
-          "/nix/store/[a-z0-9]{32}-hyprexpo-[0-9.]*/lib/libhyprexpo.so, plugin, allow"
-          "/nix/store/[a-z0-9]{32}-hyprland-easymotion/lib/libhyprland-easymotion.so, plugin, allow"
-          "/nix/store/[a-z0-9]{32}-quickshell-[0-9.]*/bin/.quickshell-wrapped, screencopy, allow"
-          "/nix/store/[a-z0-9]{32}-hyprquickframe-[0-9.]*/bin/.hyprquickframe-wrapped, screencopy, allow"
-          "/nix/store/[a-z0-9]{32}-hyprquickframe-[0-9.]*/bin/hyprquickframe, screencopy, allow"
-          "/nix/store/[a-z0-9]{32}-hyprpicker-[0-9.]*/bin/hyprpicker, screencopy, allow"
-        ];
       };
     };
   };
