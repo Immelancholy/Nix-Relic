@@ -17,7 +17,7 @@ in
             border_size = 2,
             col.active_border = { colors = { "${rgb base0E}", "${rgb base0C}", "${rgb base06}" }, angle = 40 },
             col.inactive_border = { colors = { "${rgba base07 "cc"}", "${rgba base04 "cc"}" }, angle = 45 },
-            resize_on_border = true,
+            resize_on_border = true
           },
           group = {
             col.border_active = {colors = { "${rgb base0E}", "${rgb base0C}", "${rgb base06}" }, angle = 40 },
@@ -30,14 +30,13 @@ in
               gradients = false,
               text_color = "${rgb base05}",
               col.active = "${rgb base0E}",
-              col.inactive = "${rgba base07 "cc"}",
+              col.inactive = "${rgba base07 "cc"}"
             },
           },
           decoration = {
             rounding = 20,
             shadow = {enabled = false},
             dim_special = 0.3,
-
             blur = {
               enabled = true,
               size = 5,
@@ -46,8 +45,8 @@ in
               new_optimizations = true,
               ignore_opacity = true,
               xray = false,
-              special = true,
-            },
+              special = true
+            }
           }
         })
       '';
