@@ -31,15 +31,15 @@ in {
     (nr.hyprgame.override {
       wallpaper = cfg.liveWallpaper.path;
       extraKills = ''
-        hyprctl dispatch 'hl.dsp.window.signal({ signal = "9", class = "^(${playerClass})$" })'
-          hyprctl dispatch 'hl.dsp.window.signal({ signal = "9", class = "^(neo)$" })'
-          hyprctl dispatch 'hl.dsp.window.signal({ signal = "9", class = "^(fastfetch)$" })'
-          hyprctl dispatch 'hl.dsp.window.signal({ signal = "9", class = "^(btop)$" })'
-          hyprctl dispatch 'hl.dsp.window.signal({ signal = "9", class = "^(cava)$" })'
+        hyprctl dispatch 'hl.dsp.window.kill({ window = "class:^(${playerClass})$" })'
+          hyprctl dispatch 'hl.dsp.window.kill({ window = "class:^(neo)$" })'
+          hyprctl dispatch 'hl.dsp.window.kill({ window = "class:^(fastfetch)$" })'
+          hyprctl dispatch 'hl.dsp.window.kill({ window = "class:^(btop)$" })'
+          hyprctl dispatch 'hl.dsp.window.kill({ window = "class:^(cava)$" })'
           hyprctl dispatch 'hl.dsp.exec_cmd("${playerCmdGame}", { workspace = "1 silent", float = true, size = {1118, 710}, move = {401, 145} })'
       '';
       extraLaunch = ''
-        hyprctl dispatch 'hl.dsp.window.signal({ signal = "9", class = "^(${playerClass})$" })'
+        hyprctl dispatch 'hl.dsp.window.kill({ window = "class:^(${playerClass})$" })'
           hyprctl dispatch 'hl.dsp.exec_cmd("uwsm app -- kitty --class cava cava.sh", { workspace = "1 silent", float = true, size = {888, 462}, move = {610, 609} })'
           hyprctl dispatch 'hl.dsp.exec_cmd("uwsm app -- kitty --class btop btop.sh", { workspace = "1 silent", float = true, size = {590, 637}, move = {10, 433} })'
           hyprctl dispatch 'hl.dsp.exec_cmd("uwsm app -- kitty --class neo neo.sh", { workspace = "1 silent", float = true, size = {402, 1030}, move = {1508, 42} })'
