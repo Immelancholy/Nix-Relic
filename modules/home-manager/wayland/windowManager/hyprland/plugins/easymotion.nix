@@ -29,6 +29,7 @@ in {
         Lua
         */
           ''
+            hl.bind(mod .. " + I", hl.dsp.easymotion({ action = "hyprctl dispatch focuswindow", address = {} }))
             hl.config({
               plugin = {
                 easymotion = {
@@ -47,16 +48,6 @@ in {
       plugins = [
         nr.hyprland-easymotion.packages.${pkgs.stdenv.hostPlatform.system}.hyprland-easymotion
       ];
-      settings = {
-        bind = [
-          {
-            _args = [
-              (mkLuaInline "mod .. \" + I\"")
-              (mkLuaInline "hl.dsp.easymotion({ action = \"hyprctl dispatch focuswindow\", address = {} })")
-            ];
-          }
-        ];
-      };
     };
   };
 }

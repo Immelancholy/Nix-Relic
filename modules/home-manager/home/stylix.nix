@@ -10,18 +10,20 @@
   launches = pkgs.writeShellScriptBin "launches" ''
     dunstctl set-paused true
     dunstctl close-all
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.window.signal({ signal = "9", class = "^(${playerClass})$" })'
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.window.signal({ signal = "9", class = "^(neo)$" })'
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.window.signal({ signal = "9", class = "^(fastfetch)$" })'
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.window.signal({ signal = "9", class = "^(btop)$" })'
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.window.signal({ signal = "9", class = "^(cava)$" })'
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.exec_cmd("uwsm app -- kitty --class cava cava.sh", { workspace = "1 silent", float = true, size = {888, 462}, move = {610, 609} })'
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.exec_cmd("uwsm app -- kitty --class btop btop.sh", { workspace = "1 silent", float = true, size = {590, 637}, move = {10, 433} })'
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.exec_cmd("uwsm app -- kitty --class neo neo.sh", { workspace = "1 silent", float = true, size = {402, 1030}, move = {1508, 42} })'
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.exec_cmd("uwsm app -- kitty --class fastfetch kitty @ launch --type overlay --env class=fastfetch", { workspace = "1 silent", float = true, size = {590, 383}, move = {10, 42} })'
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.exec_cmd("${playerCmd}", { workspace = "1 silent", float = true, size = {888, 559}, move = {610, 42} })'
     pkill localsend
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.exec_cmd("uwsm app -- localsend_app --hidden")'
+    /run/current-system/sw/bin/hyprctl eval 'hl.dispatch(function()\
+      hl.dsp.window.signal({ signal = "9", class = "^(${playerClass})$" })\
+      hl.dsp.window.signal({ signal = "9", class = "^(neo)$" })\
+      hl.dsp.window.signal({ signal = "9", class = "^(fastfetch)$" })\
+      hl.dsp.window.signal({ signal = "9", class = "^(btop)$" })\
+      hl.dsp.window.signal({ signal = "9", class = "^(cava)$" })\
+      hl.dsp.exec_cmd("uwsm app -- kitty --class cava cava.sh", { workspace = "1 silent", float = true, size = {888, 462}, move = {610, 609} })\
+      hl.dsp.exec_cmd("uwsm app -- kitty --class btop btop.sh", { workspace = "1 silent", float = true, size = {590, 637}, move = {10, 433} })\
+      hl.dsp.exec_cmd("uwsm app -- kitty --class neo neo.sh", { workspace = "1 silent", float = true, size = {402, 1030}, move = {1508, 42} })\
+      hl.dsp.exec_cmd("uwsm app -- kitty --class fastfetch kitty @ launch --type overlay --env class=fastfetch", { workspace = "1 silent", float = true, size = {590, 383}, move = {10, 42} })\
+      hl.dsp.exec_cmd("${playerCmd}", { workspace = "1 silent", float = true, size = {888, 559}, move = {610, 42} })\
+      hl.dsp.exec_cmd("uwsm app -- localsend_app --hidden")\
+    end))'
     systemctl restart --user easyeffects
     systemctl restart --user qpwgraph
     sleep 1

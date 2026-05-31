@@ -1,27 +1,11 @@
 {
   config,
   pkgs,
-  lib,
   ...
 }: let
   playerCmd = config.player.cmd;
   playerClass = config.player.class;
-  launches = pkgs.writeShellScriptBin "launches" ''
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.window.signal({ signal = "9", class = "^(${playerClass})$" })'
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.window.signal({ signal = "9", class = "^(neo)$" })'
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.window.signal({ signal = "9", class = "^(fastfetch)$" })'
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.window.signal({ signal = "9", class = "^(btop)$" })'
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.window.signal({ signal = "9", class = "^(cava)$" })'
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.exec_cmd("uwsm app -- kitty --class cava cava.sh", { workspace = "1 silent", float = true, size = {888, 462}, move = {610, 609} })'
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.exec_cmd("uwsm app -- kitty --class btop btop.sh", { workspace = "1 silent", float = true, size = {590, 637}, move = {10, 433} })'
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.exec_cmd("uwsm app -- kitty --class neo neo.sh", { workspace = "1 silent", float = true, size = {402, 1030}, move = {1508, 42} })'
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.exec_cmd("uwsm app -- kitty --class fastfetch kitty @ launch --type overlay --env class=fastfetch", { workspace = "1 silent", float = true, size = {590, 383}, move = {10, 42} })'
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.exec_cmd("${playerCmd}", { workspace = "1 silent", float = true, size = {888, 559}, move = {610, 42} })'
-  '';
 in {
-  home.packages = [
-    launches
-  ];
   wayland.windowManager.hyprland =
     /*
     Lua
@@ -45,7 +29,18 @@ in {
         hl.bind("Alt + Return", hl.dsp.fullscreen({ mode = "fullscreen", action = "toggle" }))
         hl.bind("Alt + Shift + Return", hl.dsp.fullscreen({ mode = "maximized", action = "toggle" }))
         hl.bind(mod .. " + Tab", hl.dsp.exec_cmd("rofi -show window -modi window"))
-        hl.bind(mods .. " + U", hl.dsp.exec_cmd("launches"))
+        hl.bind(mods .. " + U", function()
+          hl.dsp.window.signal({ signal = "9", class = "^(${playerClass})$" })
+          hl.dsp.window.signal({ signal = "9", class = "^(neo)$" })
+          hl.dsp.window.signal({ signal = "9", class = "^(fastfetch)$" })
+          hl.dsp.window.signal({ signal = "9", class = "^(btop)$" })
+          hl.dsp.window.signal({ signal = "9", class = "^(cava)$" })
+          hl.dsp.exec_cmd("uwsm app -- kitty --class cava cava.sh", { workspace = "1 silent", float = true, size = {888, 462}, move = {610, 609} })
+          hl.dsp.exec_cmd("uwsm app -- kitty --class btop btop.sh", { workspace = "1 silent", float = true, size = {590, 637}, move = {10, 433} })
+          hl.dsp.exec_cmd("uwsm app -- kitty --class neo neo.sh", { workspace = "1 silent", float = true, size = {402, 1030}, move = {1508, 42} })
+          hl.dsp.exec_cmd("uwsm app -- kitty --class fastfetch kitty @ launch --type overlay --env class=fastfetch", { workspace = "1 silent", float = true, size = {590, 383}, move = {10, 42} })
+          hl.dsp.exec_cmd("${playerCmd}", { workspace = "1 silent", float = true, size = {888, 559}, move = {610, 42} })
+        end)
         hl.bind(mod .. " + Delete", hl.dsp.exec_cmd("rofi -show power-menu -modi power-menu:rofi-power-menu"))
         hl.bind("Ctrl + Shift + L", hl.dsp.exec_cmd("uwsm-app -- swaylock -fF"))
         hl.bind(mod .. " + N", hl.dsp.exec_cmd("rofi -show Cliphist -modi Cliphist:cliphist.sh"))

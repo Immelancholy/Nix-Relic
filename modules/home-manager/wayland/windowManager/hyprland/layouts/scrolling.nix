@@ -26,323 +26,181 @@ in {
               layout = "scrolling"
             }
           })
+          hl.bind(mod .. " + Z", hl.dsp.groups.toggle())
+          hl.bind(mod .. " + Q", hl.dsp.window.close())
+          hl.bind(mod .. " + R", hl.dsp.layout("colresize 0.5"))
+          hl.bind(mod .. " + H", hl.dsp.layout("move -col"))
+          hl.bind(mod .. " + J", hl.dsp.focus({direction = "down"}))
+          hl.bind(mod .. " + K", hl.dsp.focus({direction = "up"}))
+          hl.bind(mod .. " + L", hl.dsp.layout("move +col"))
+          hl.bind(mod .. " + Left", hl.dsp.layout("move -col"))
+          hl.bind(mod .. " + Down", hl.dsp.focus({direction = "down"}))
+          hl.bind(mod .. " + Up", hl.dsp.focus({direction = "up"}))
+          hl.bind(mod .. " + Right", hl.dsp.layout("move +col"))
+          hl.bind(mods .. " + H", hl.dsp.focus({workspace = "r-1"}))
+          hl.bind(mods .. " + L", hl.dsp.focus({workspace = "r+1"}))
+          hl.bind(mods .. " + J", hl.dsp.focus({workspace = "empty"}))
+          hl.bind(mods .. " + Left", hl.dsp.focus({workspace = "r-1"}))
+          hl.bind(mods .. " + Right", hl.dsp.focus({workspace = "r+1"}))
+          hl.bind(mods .. " + Down", hl.dsp.focus({workspace = "empty"}))
+          hl.bind(mod .. " + mouse_up", hl.dsp.layout("focus left"))
+          hl.bind(mod .. " + mouse_down", hl.dsp.layout("focus right"))
+          hl.bind(mods .. " + mouse_up", hl.dsp.focus({workspace = "e-1"}))
+          hl.bind(mods .. " + mouse_down", hl.dsp.focus({workspace = "e+1"}))
+          hl.bind(modc .. " + H", hl.dsp.group.prev())
+          hl.bind(modc .. " + L", hl.dsp.group.next())
+          hl.bind(modc .. " + Left", hl.dsp.group.prev())
+          hl.bind(modc .. " + Right", hl.dsp.group.next())
+          hl.bind(mod .. " + Y", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
+          hl.bind(mod .. " + C", hl.dsp.layout("colresize +conf"))
+          hl.bind(mods .. " + C", hl.dsp.layout("colresize -conf"))
+              
+          hl.bind(mod .." + A", hl.dsp.submap("manage"))
+          hl.define_submap("manage", function()
+            hl.bind("Alt + Return", hl.dps.window.fullscreen({ mode = "fullscreen", action = "toggle" }),
+            hl.bind("Alt + Shift + Return", hl.dps.window.fullscreen({ mode = "maximized", action = "toggle" }),
+            hl.bind("W", hl.dsp.window.float({ action = "toggle" })),
+            hl.bind("P", hl.dsp.layout(promote)),
+            hl.bind("O", hl.dsp.window(pin)),
+            hl.bind("Y", hl.dps.window.fullscreen({ mode = "maximized", action = "toggle" }),
+            hl.bind("H", hl.dsp.layout("move -col")),
+            hl.bind("J", hl.dsp.focus({direction = "down"})),
+            hl.bind("K", hl.dsp.focus({direction = "up"})),
+            hl.bind("L", hl.dsp.layout("move +col")),
+            hl.bind("Left", hl.dsp.layout("move -col")),
+            hl.bind("Down", hl.dsp.focus({direction = "down"})),
+            hl.bind("Up", hl.dsp.focus({direction = "up"})),
+            hl.bind("Right", hl.dsp.layout("move +col")),
+            hl.bind("C", hl.dsp.layout("colresize +conf")),
+            hl.bind("Shift + C", hl.dsp.layout("colresize -conf")),
+            hl.bind("R", hl.dsp.layout("colresize 0.5")),
+            hl.bindm(mod .. " + mouse:272", hl.dsp.window.drag()),
+            hl.bindm(mod .. " + mouse:273", hl.dsp.window.resize()),
+
+            hl.bind(mod .. " + H", hl.dsp.focus({workspace = "r-1"})),
+            hl.bind(mod .. " + L", hl.dsp.focus({workspace = "r+1"})),
+            hl.bind(mod .. " + J", hl.dsp.focus({workspace = "empty"})),
+            hl.bind(mod .. " + Left", hl.dsp.focus({workspace = "r-1"})),
+            hl.bind(mod .. " + Right", hl.dsp.focus({workspace = "r+1"})),
+            hl.bind(mod .. " + Down", hl.dsp.focus({workspace = "empty"})),
+
+            hl.bind("Ctrl + H", hl.dsp.group.prev()),
+            hl.bind("Ctrl + L", hl.dsp.group.next()),
+            hl.bind("Ctrl + Left", hl.dsp.group.prev()),
+            hl.bind("Ctrl + Right", hl.dsp.group.next()),
+
+            hl.bind(mods .. " + H", hl.dsp.window.move({direction = "left"})),
+            hl.bind(mods .. " + J", hl.dsp.window.move({direction = "down"})),
+            hl.bind(mods .. " + K", hl.dsp.window.move({direction = "up"})),
+            hl.bind(mods .. " + L", hl.dsp.window.move({direction = "right"})),
+            hl.bind(mods .. " + Left", hl.dsp.window.move({direction = "left"})),
+            hl.bind(mods .. " + Down", hl.dsp.window.move({direction = "down"})),
+            hl.bind(mods .. " + Up", hl.dsp.window.move({direction = "up"})),
+            hl.bind(mods .. " + Right", hl.dsp.window.move({direction = "right"})),
+
+            hl.bind(modc .. " + Shift + H", hl.dsp.window.move({direction = "left", group_aware = true })),
+            hl.bind(modc .. " + Shift + J", hl.dsp.window.move({direction = "down", group_aware = true })),
+            hl.bind(modc .. " + Shift + K", hl.dsp.window.move({direction = "up", group_aware = true })),
+            hl.bind(modc .. " + Shift + L", hl.dsp.window.move({direction = "right", group_aware = true })),
+            hl.bind(modc .. " + Shift + Left", hl.dsp.window.move({direction = "left", group_aware = true })),
+            hl.bind(modc .. " + Shift + Down", hl.dsp.window.move({direction = "down", group_aware = true })),
+            hl.bind(modc .. " + Shift + Up", hl.dsp.window.move({direction = "up", group_aware = true })),
+            hl.bind(modc .. " + Shift + Right", hl.dsp.window.move({direction = "right", group_aware = true })),
+
+            hl.bind("Shift + H", hl.dsp.layout("swapcol l")),
+            hl.bind("Shift + L", hl.dsp.layout("swapcol r")),
+            hl.bind("Shift + Left", hl.dsp.layout("swapcol l")),
+            hl.bind("Shift + Right", hl.dsp.layout("swapcol r")),
+            hl.bind("mouse_up", hl.dsp.layout("focus left")),
+            hl.bind("mouse_down", hl.dsp.layout("focus right")),
+            hl.bind(mod .. " + mouse_up", hl.dsp.focus({workspace = "e-1"})),
+            hl.bind(mod .. " + mouse_down", hl.dsp.focus({workspace = "e+1"})),
+
+            -- hl.bind(mods .." + R", hl.dsp.submap("resize"))
+            -- hl.define_submap("resize", function()
+            --   hl.bind("Alt + Return", hl.dps.window.fullscreen({ mode = "fullscreen", action = "toggle" }),
+            --   hl.bind("Alt + Shift + Return", hl.dps.window.fullscreen({ mode = "maximized", action = "toggle" }),
+            --   hl.bind("Y", hl.dps.window.fullscreen({ mode = "maximized", action = "toggle" }),
+            --   hl.bind("C", hl.dsp.layout("colresize +conf")),
+            --   hl.bind("Shift + C", hl.dsp.layout("colresize -conf")),
+            --   hl.bind("W", hl.dsp.window.float({ action = "toggle" })),
+            --   hl.bind("R", hl.dsp.layout("colresize 0.5")),
+            --   binde = , Right, resizeactive, 30 0
+            --   binde = , Left, resizeactive, 30 0
+            --   binde = , Left, moveactive, -30 0
+            --   binde = , Up, resizeactive, 0 30
+            --   binde = , Up, moveactive, 0 -30
+            --   binde = , Down, resizeactive, 0 30
+            --
+            --   binde = , L, resizeactive, 30 0
+            --   binde = , H, resizeactive, 30 0
+            --   binde = , H, moveactive, -30 0
+            --   binde = , K, resizeactive, 0 30
+            --   binde = , K, moveactive, 0 -30
+            --   binde = , J, resizeactive, 0 30
+            --
+            --   binde = Shift, Right, resizeactive, -30 0
+            --   binde = Shift, Right, moveactive, 30 0
+            --   binde = Shift, Left, resizeactive, -30 0
+            --   binde = Shift, Up, resizeactive, 0 -30
+            --   binde = Shift, Down, resizeactive, 0 -30
+            --   binde = Shift, Down, moveactive, 0 30
+            --
+            --   binde = Shift, L, resizeactive, -30 0
+            --   binde = Shift, L, moveactive, 30 0
+            --   binde = Shift, H, resizeactive, -30 0
+            --   binde = Shift, K, resizeactive, 0 -30
+            --   binde = Shift, J, resizeactive, 0 -30
+            --   binde = Shift, J, moveactive, 0 30
+            --   bind = $mods, R, submap, manage
+            --   bind = $mod, R, submap, resizeTiled
+            --   bind = , escape, submap, manage
+            -- end)
+            --
+            -- bind = $mod, R, submap, resizeTiled
+            -- submap = resizeTiled
+            --   hl.bind("Alt + Return", hl.dps.window.fullscreen({ mode = "fullscreen", action = "toggle" }),
+            --   hl.bind("Alt + Shift + Return", hl.dps.window.fullscreen({ mode = "maximized", action = "toggle" }),
+            --   hl.bind("Y", hl.dps.window.fullscreen({ mode = "maximized", action = "toggle" }),
+            --   hl.bind("C", hl.dsp.layout("colresize +conf")),
+            --   hl.bind("Shift + C", hl.dsp.layout("colresize -conf")),
+            --   hl.bind("W", hl.dsp.window.float({ action = "toggle" })),
+            --   hl.bind("R", hl.dsp.layout("colresize 0.5")),
+            --   binde = , Left, layoutmsg, colresize +0.1
+            --   binde = , Right, layoutmsg, colresize -0.1
+            --   binde = , H, layoutmsg, colresize +0.1
+            --   binde = , L, layoutmsg, colresize -0.1
+            --   bind = $mod, R, submap, manage
+            --   bind = $mods, R, submap, resize
+            --   bind = , escape, submap, manage
+            -- submap = manage
+            --
+            -- bind = , M, submap, move
+            --   submap = move
+            --   hl.bind("Alt + Return", hl.dps.window.fullscreen({ mode = "fullscreen", action = "toggle" }),
+            --   hl.bind("Alt + Shift + Return", hl.dps.window.fullscreen({ mode = "maximized", action = "toggle" }),
+            --   hl.bind("Y", hl.dps.window.fullscreen({ mode = "maximized", action = "toggle" }),
+            --   hl.bind("C", hl.dsp.layout("colresize +conf")),
+            --   hl.bind("Shift + C", hl.dsp.layout("colresize -conf")),
+            --   hl.bind("W", hl.dsp.window.float({ action = "toggle" })),
+            --   hl.bind("R", hl.dsp.layout("colresize 0.5")),
+            --   binde = , Left, moveactive, 10 0
+            --   binde = , Right, moveactive, -10 0
+            --   binde = , Up, moveactive, 0 -10
+            --   binde = , Down, moveactive, 0 10
+            --   binde = , H, moveactive, 30 0
+            --   binde = , L, moveactive, -30 0
+            --   binde = , K, moveactive, 0 -30
+            --   binde = , J, moveactive, 0 30
+            --   bind = , M, submap, manage
+            --   bind = , escape, submap, manage
+              
+            hl.bind("Escape", hl.dsp.submap("reset"))
+
+            hl.bind(mod .." + A", hl.dsp.submap("reset"))
+          end)
+
         '';
-      settings = {
-          bind = [
-            {
-              _args = [
-                (mkLuaInline "mod .. \" + Z\"")
-                (mkLuaInline "hl.dsp.groups.toggle()")
-              ];
-            }
-            {
-              _args = [
-                (mkLuaInline "mod .. \" + Q\"")
-                (mkLuaInline "hl.dsp.window.close()")
-              ];
-            }
-            {
-              _args = [
-                (mkLuaInline "mod .. \" + R\"")
-                (mkLuaInline "hl.dsp.layout(\"colresize 0.5\")")
-              ];
-            }
-            {
-              _args = [
-                (mkLuaInline "mod .. \" + H\"")
-                (mkLuaInline "hl.dsp.layout(\"move -col\")")
-              ];
-            }
-            {
-              _args = [
-                (mkLuaInline "mod .. \" + J\"")
-                (mkLuaInline "hl.dsp.focus({direction = \"down\"})")
-              ];
-            }
-            {
-              _args = [
-                (mkLuaInline "mod .. \" + K\"")
-                (mkLuaInline "hl.dsp.focus({direction = \"up\"})")
-              ];
-            }
-            {
-              _args = [
-                (mkLuaInline "mod .. \" + L\"")
-                (mkLuaInline "hl.dsp.layout(\"move +col\")")
-              ];
-            }
-            {
-              _args = [
-                (mkLuaInline "mods .. \" + H\"")
-                (mkLuaInline "hl.dsp.focus({workspace = \"r-1\"})")
-              ];
-            }
-            {
-              _args = [
-                (mkLuaInline "mods .. \" + L\"")
-                (mkLuaInline "hl.dsp.focus({workspace = \"r+1\"})")
-              ];
-            }
-            {
-              _args = [
-                (mkLuaInline "mods .. \" + J\"")
-                (mkLuaInline "hl.dsp.focus({workspace = \"empty\"})")
-              ];
-            }
-            {
-              _args = [
-                (mkLuaInline "mod .. \" + Left\"")
-                (mkLuaInline "hl.dsp.layout(\"move -col\")")
-              ];
-            }
-            {
-              _args = [
-                (mkLuaInline "mod .. \" + Down\"")
-                (mkLuaInline "hl.dsp.focus({direction = \"down\"})")
-              ];
-            }
-            {
-              _args = [
-                (mkLuaInline "mod .. \" + Up\"")
-                (mkLuaInline "hl.dsp.focus({direction = \"up\"})")
-              ];
-            }
-            {
-              _args = [
-                (mkLuaInline "mod .. \" + Right\"")
-                (mkLuaInline "hl.dsp.layout(\"move +col\")")
-              ];
-            }
-            {
-              _args = [
-                (mkLuaInline "mods .. \" + Left\"")
-                (mkLuaInline "hl.dsp.focus({workspace = \"r-1\"})")
-              ];
-            }
-            {
-              _args = [
-                (mkLuaInline "mods .. \" + Right\"")
-                (mkLuaInline "hl.dsp.focus({workspace = \"r+1\"})")
-              ];
-            }
-            {
-              _args = [
-                (mkLuaInline "mods .. \" + Down\"")
-                (mkLuaInline "hl.dsp.focus({workspace = \"empty\"})")
-              ];
-            }
-            {
-              _args = [
-                (mkLuaInline "mod .. \" + mouse_up\"")
-                (mkLuaInline "hl.dsp.layout(\"focus left\")")
-              ];
-            }
-            {
-              _args = [
-                (mkLuaInline "mod .. \" + mouse_down\"")
-                (mkLuaInline "hl.dsp.layout(\"focus right\")")
-              ];
-            }
-            {
-              _args = [
-                (mkLuaInline "mods .. \" + mouse_up\"")
-                (mkLuaInline "hl.dsp.focus({workspace = \"e-1\"})")
-              ];
-            }
-            {
-              _args = [
-                (mkLuaInline "mods .. \" + mouse_down\"")
-                (mkLuaInline "hl.dsp.focus({workspace = \"e+1\"})")
-              ];
-            }
-            {
-              _args = [
-                (mkLuaInline "modc .. \" + H\"")
-                (mkLuaInline "hl.dsp.group.prev())")
-              ];
-            }
-            {
-              _args = [
-                (mkLuaInline "modc .. \" + L\"")
-                (mkLuaInline "hl.dsp.group.next())")
-              ];
-            }
-            {
-              _args = [
-                (mkLuaInline "modc .. \" + Left\"")
-                (mkLuaInline "hl.dsp.group.prev())")
-              ];
-            }
-            {
-              _args = [
-                (mkLuaInline "modc .. \" + Right\"")
-                (mkLuaInline "hl.dsp.group.next())")
-              ];
-            }
-            {
-              _args = [
-                (mkLuaInline "mod .. \" + Y\"")
-                (mkLuaInline "hl.dsp.window.fullscreen({ mode = \"maximized\", action = \"toggle\" }))")
-              ];
-            }
-            {
-              _args = [
-                (mkLuaInline "mod .. \" + C\"")
-                (mkLuaInline "hl.dsp.layout(\"colresize +conf\")")
-              ];
-            }
-            {
-              _args = [
-                (mkLuaInline "mods .. \" + C\"")
-                (mkLuaInline "hl.dsp.layout(\"colresize -conf\")")
-              ];
-            }
-          ];
-        };
-        # extraConfig = /* Lua */ ''
-        #   hl.bind(mod .." + A", hl.dsp.submap("manage"))
-        #   hl.define_submap("manage", function()
-        #     hl.bind("Alt + Return", hl.dps.window.fullscreen({ mode = "fullscreen", action = "toggle" }),
-        #     hl.bind("Alt + Shift + Return", hl.dps.window.fullscreen({ mode = "maximized", action = "toggle" }),
-        #     hl.bind("W", hl.dsp.window.float({ action = "toggle" })),
-        #     hl.bind("P", hl.dsp.layout(promote)),
-        #     hl.bind("O", hl.dsp.window(pin)),
-        #     hl.bind("Y", hl.dps.window.fullscreen({ mode = "maximized", action = "toggle" }),
-        #     hl.bind("H", hl.dsp.layout("move -col")),
-        #     hl.bind = , J, movefocus, d
-        #     hl.bind = , K, movefocus, u
-        #     hl.bind = , L, layoutmsg, move +col
-        #     hl.bind = , Left, layoutmsg, move +col
-        #     hl.bind = , Down, movefocus, d
-        #     hl.bind = , Up, movefocus, u
-        #     hl.bind = , Right, layoutmsg, move -col
-        #     hl.bind = , C, layoutmsg, colresize +conf
-        #     hl.bind = Shift, C, layoutmsg, colresize -conf
-        #     hl.bind = , V, layoutmsg, fit visible
-        #     hl.bind = , U, layoutmsg, fit active
-        #     hl.bind = , R, layoutmsg, colresize 0.5
-        #     hl.bindm = $mod, mouse:272, movewindow
-        #     hl.bindm = $mod, mouse:273, resizewindow
-        #   end)
-        #
-        #   bind = $mod, Left, movetoworkspace, r-1
-        #   bind = $mod, Down, movetoworkspace, empty
-        #   bind = $mod, L, movetoworkspace, r+1
-        #   bind = $mod, H, movetoworkspace, r-1
-        #   bind = $mod, J, movetoworkspace, empty
-        #
-        #   bind = Ctrl, H, changegroupactive, b
-        #   bind = Ctrl, L, changegroupactive, f
-        #   bind = Ctrl, Right, changegroupactive, b
-        #   bind = Ctrl, Left, changegroupactive, f
-        #
-        #   bind = $mods, H, movewindow, l
-        #   bind = $mods, J, movewindow, d
-        #   bind = $mods, K, movewindow, u
-        #   bind = $mods, L, movewindow, r
-        #   bind = $mods, Left, movewindow, l
-        #   bind = $mods, Down, movewindow, d
-        #   bind = $mods, Up, movewindow, u
-        #   bind = $mods, Right, movewindow, r
-        #   bind = Shift, H, layoutmsg, swapcol l
-        #   bind = Shift, L, layoutmsg, swapcol r
-        #   bind = Shift, Right, layoutmsg, swapcol r
-        #   bind = Shift, Left, layoutmsg, swapcol l
-        #   bind = , mouse_up, layoutmsg, focus left
-        #   bind = , mouse_down, layoutmsg, focus right
-        #   bind = $mod, mouse_up, workspace, e-1
-        #   bind = $mod, mouse_down, workspace, e+1
-        #
-        #   bind = $mods, R, submap, resize
-        #   submap = resize
-        #   bind = Alt, Return, fullscreen, 1
-        #   bind = Alt+Shift, Return, fullscreen
-        #   bind = , Y , fullscreen, 1
-        #   bind = , C , layoutmsg, colresize +conf
-        #   bind = , W, togglefloating
-        #   bind = , C, layoutmsg, colresize +conf
-        #   bind = Shift, C, layoutmsg, colresize -conf
-        #   bind = , V, layoutmsg, fit visible
-        #   bind = , U, layoutmsg, fit active
-        #   bind = , R, layoutmsg, colresize 0.5
-        #   binde = , Right, resizeactive, 30 0
-        #   binde = , Left, resizeactive, 30 0
-        #   binde = , Left, moveactive, -30 0
-        #   binde = , Up, resizeactive, 0 30
-        #   binde = , Up, moveactive, 0 -30
-        #   binde = , Down, resizeactive, 0 30
-        #
-        #   binde = , L, resizeactive, 30 0
-        #   binde = , H, resizeactive, 30 0
-        #   binde = , H, moveactive, -30 0
-        #   binde = , K, resizeactive, 0 30
-        #   binde = , K, moveactive, 0 -30
-        #   binde = , J, resizeactive, 0 30
-        #
-        #   binde = Shift, Right, resizeactive, -30 0
-        #   binde = Shift, Right, moveactive, 30 0
-        #   binde = Shift, Left, resizeactive, -30 0
-        #   binde = Shift, Up, resizeactive, 0 -30
-        #   binde = Shift, Down, resizeactive, 0 -30
-        #   binde = Shift, Down, moveactive, 0 30
-        #
-        #   binde = Shift, L, resizeactive, -30 0
-        #   binde = Shift, L, moveactive, 30 0
-        #   binde = Shift, H, resizeactive, -30 0
-        #   binde = Shift, K, resizeactive, 0 -30
-        #   binde = Shift, J, resizeactive, 0 -30
-        #   binde = Shift, J, moveactive, 0 30
-        #   bind = $mod, R, submap, manage
-        #   bind = , escape, submap, manage
-        #   submap = manage
-        #
-        #   bind = $mod, R, submap, resizeTiled
-        #   submap = resizeTiled
-        #   bind = Alt, Return, fullscreen, 1
-        #   bind = Alt+Shift, Return, fullscreen
-        #   bind = , Y, fullscreen, 1
-        #   bind = , C, layoutmsg, colresize +conf
-        #   bind = Shift, C, layoutmsg, colresize -conf
-        #   bind = , V, layoutmsg, fit visible
-        #   bind = , U, layoutmsg, fit active
-        #   bind = , R, layoutmsg, colresize 0.5
-        #   bind = , W, togglefloating
-        #   binde = , Left, layoutmsg, colresize +0.1
-        #   binde = , Right, layoutmsg, colresize -0.1
-        #   binde = , H, layoutmsg, colresize +0.1
-        #   binde = , L, layoutmsg, colresize -0.1
-        #   bind = $mod, R, submap, manage
-        #   bind = , escape, submap, manage
-        #   submap = manage
-        #
-        #   bind = , M, submap, move
-        #   submap = move
-        #   bind = Alt, Return, fullscreen, 1
-        #   bind = Alt+Shift, Return, fullscreen
-        #   bind = , Y, fullscreen, 1
-        #   bind = , C, layoutmsg, colresize +conf
-        #   bind = Shift, C, layoutmsg, colresize -conf
-        #   bind = , V, layoutmsg, fit visible
-        #   bind = , U, layoutmsg, fit active
-        #   bind = , R, layoutmsg, colresize 0.5
-        #   bind = , W, togglefloating
-        #   binde = , Left, moveactive, 10 0
-        #   binde = , Right, moveactive, -10 0
-        #   binde = , Up, moveactive, 0 -10
-        #   binde = , Down, moveactive, 0 10
-        #   binde = , H, moveactive, 30 0
-        #   binde = , L, moveactive, -30 0
-        #   binde = , K, moveactive, 0 -30
-        #   binde = , J, moveactive, 0 30
-        #   bind = $mod, M, submap, manage
-        #   bind = , escape, submap, manage
-        #   submap = manage
-        #
-        #   bind = , escape, submap, reset
-        #
-        #   bind = $mod, A, submap, reset
-        #   submap = reset
-        # '';
-      };
     };
+  };
 }
