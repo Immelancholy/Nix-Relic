@@ -19,6 +19,31 @@ in {
   config = mkIf (cfg.easymotion.enable
     && cfg.usingFlake) {
     wayland.windowManager.hyprland = {
+      extraConfig = let
+        rgb = color: "rgb(${color})";
+        rgba = color: alpha: "rgba(${color}${alpha})";
+        colors = config.lib.stylix.colors;
+      in
+        with colors;
+        /*
+        Lua
+        */
+          ''
+            hl.config({
+              plugin = {
+                easymotion = {
+                  textcolor = "${rgba base05 "ff"}",
+                  bgcolor = "${rgba base00 "bb"}",
+                  bordercolor = {colors = { "${rgb base0E}", "${rgb base0C}", "${rgb base06}" }, angle = 40 },
+                  blur = 1,
+                  textpadding = 8,
+                  textsize = 35,
+                  bordersize = 2,
+                  fullscreen_action = "maximize"
+                }
+              }
+            })
+          '';
       plugins = [
         nr.hyprland-easymotion.packages.${pkgs.stdenv.hostPlatform.system}.hyprland-easymotion
       ];
@@ -31,19 +56,6 @@ in {
             ];
           }
         ];
-
-        config.plugin = {
-          easymotion = {
-            textcolor = "rgba(${config.lib.stylix.colors.base05}ff)";
-            bgcolor = "rgba(${config.lib.stylix.colors.base00}bb)";
-            bordercolor = "rgba($mauveff) rgba($tealff) rgba($rosewaterff) 40deg";
-            blur = 1;
-            textpadding = 8;
-            textsize = 35;
-            bordersize = 2;
-            fullscreen_action = "maximize";
-          };
-        };
       };
     };
   };

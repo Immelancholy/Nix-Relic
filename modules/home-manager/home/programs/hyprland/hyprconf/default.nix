@@ -17,6 +17,16 @@ in {
         hl.permission({ binary = "/nix/store/[a-z0-9]{32}-hyprquickframe-[0-9.]*/bin/.hyprquickframe-wrapped", type = "screencopy", mode = "allow" })
         hl.permission({ binary = "/nix/store/[a-z0-9]{32}-hyprquickframe-[0-9.]*/bin/hyprquickframe", type = "screencopy", mode = "allow" })
         hl.permission({ binary = "/nix/store/[a-z0-9]{32}-hyprpicker-[0-9.]*/bin/hyprpicker", type = "screencopy", mode = "allow" })
+        hl.config = ({
+          misc = {
+            disable_hyprland_logo = true,
+            disable_splash_rendering = true,
+            key_press_enables_dpms = true
+          },
+          cursor = {
+            hide_on_key_press = true
+          }
+        })
       '';
     settings = {
       mod = {
@@ -57,19 +67,6 @@ in {
       };
       editor = {
         _var = "uwsm app -- dev.zed.Zed.desktop";
-      };
-      config = {
-        misc = {
-          disable_hyprland_logo = true;
-          disable_splash_rendering = true;
-          key_press_enables_dpms = true;
-        };
-        cursor = {
-          hide_on_key_press = true;
-        };
-        ecosystem = {
-          # enforce_permissions = true;
-        };
       };
     };
   };
