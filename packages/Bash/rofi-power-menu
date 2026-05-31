@@ -9,11 +9,7 @@
 #
 # See README.md for more information.
 
-if [ "$DISPLAY_MANAGER" = "sddm" ] && [ "$UWSM_ENABLED" = 1 ]; then
-	export logout_method="uwsm stop"
-else
-	export logout_method="loginctl terminate-user $USER"
-fi
+export logout_method='uwsm stop'
 
 set -e
 set -u
