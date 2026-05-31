@@ -1,5 +1,5 @@
 {config, ...}: let
-  playerCmd = config.player.cmd;
+  inherit (config) player;
 in {
   programs.waybar.settings = {
     mainBar = {
@@ -68,7 +68,7 @@ in {
       "hyprland/workspaces" = {
         all-outputs = true;
         active-only = false;
-        on-click = "hyprctl dispatch 'hl.dsp.focus({workspace = {name}})'";
+        on-click = "activate";
         disable-scroll = false;
         on-scroll-up = "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e-1\" })'";
         on-scroll-down = "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e+1\" })'";
@@ -243,12 +243,12 @@ in {
       "custom/cava" = {
         format = "{}";
         exec = "waycava.sh stdout --stb 3";
-        on-click = "playerctl --player=mpd play-pause";
+        on-click = "playerctl --player=${player.class} play-pause";
         on-click-right = ''
-          hyprctl dispatch 'hl.exec_cmd("${playerCmd}", {float = true, size = { 888, 559 })'
+          hyprctl dispatch 'hl.exec_cmd("${player.cmd}", {float = true, size = { 888, 559 } })'
         '';
-        on-scroll-down = "playerctl --player=mpd next";
-        on-scroll-up = "playerctl --player=mpd previous";
+        on-scroll-down = "playerctl --player=${player.class} next";
+        on-scroll-up = "playerctl --player=${player.class} previous";
         restart-interval = 1;
       };
       "custom/update" = {
