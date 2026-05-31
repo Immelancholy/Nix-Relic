@@ -35,7 +35,10 @@ in
           },
           decoration = {
             rounding = 20,
-            shadow = {enabled = false},
+            shadow = {
+              enabled = false,
+              color = "${rgba colors.base00 "99"}"
+            },
             dim_special = 0.3,
             blur = {
               enabled = true,
