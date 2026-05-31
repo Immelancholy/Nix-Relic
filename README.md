@@ -98,36 +98,6 @@ nix flake init -t github:Immelancholy/Nix-Relic
             # scriptUseDefaultSink = true; #Use default sink for vol control script (defaults to false)
           };
 
-          # Important hyprland user configs
-          wayland.windowManager.hyprland = {
-            # ONLY ENABLE 1 LAYOUT!!
-            layout = {
-              master.enable = false;
-              dwindle.enable = false;
-              scrolling.enable = true;
-            };
-            easymotion.enable = true; #Enables easymotion plugin for Hyprland, allows you to jump to any visible window by typing a few keys
-            settings = {
-              cursor = {
-                no_hardware_cursors = false;
-              };
-              monitor = ", preferred, auto, 1";
-              input = {
-                kb_layout = "gb";
-                follow_mouse = "1";
-
-                sensitivity = "0";
-                force_no_accel = "1";
-                numlock_by_default = "true";
-              };
-              bind = [
-                # "$mod, F9, pass, class:^(com.obsproject.Studio)$"
-                # "$mod, F10, pass, class:^(com.obsproject.Studio)$"
-                # "$mod, F12, pass, class:^(com.obsproject.Studio)$"
-              ];
-            };
-          };
-
           home.sessionVariables = {
             NOTES_PATH = ""; # path to notes folder ( for neovim )
             PROJECTS_PATH = ""; # path to Projects folder ( for neovim )
@@ -245,6 +215,7 @@ nix flake init -t github:Immelancholy/Nix-Relic
   boot.secureBoot.enable = false; # set up secure boot post-install before enabling this
 }
 ```
+* edit hyprland config to your liking.
 * run this command in the same folder that flake.nix is located. (Where you've hopefully been this whole time lol)
 ```
 sudo nixos-generate-config --show-hardware-config > hardware-configuration.nix
