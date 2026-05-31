@@ -24,7 +24,12 @@ in {
       ];
       settings = {
         bind = [
-          "$mod, I, easymotion, action:hyprctl dispatch focuswindow address:{}"
+          {
+            _args = [
+              (mkLuaInLine "mod .. \" + I\"")
+              (mkLuaInLine "hl.dsp.easymotion({ action = \"hyprctl dispatch focuswindow\", address = {} })")
+            ];
+          }
         ];
 
         plugin = {

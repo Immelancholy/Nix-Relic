@@ -5,6 +5,7 @@
 }:
 with lib; let
   cfg = config.wayland.windowManager.hyprland.layout.scrolling;
+  inherit (lib.generators) mkLuaInLine;
 in {
   options.wayland.windowManager.hyprland.layout.scrolling = {
     enable = mkOption {
@@ -19,53 +20,176 @@ in {
         general = {
           layout = "scrolling";
         };
-        bind =
-          [
-            "$mod, Z, togglegroup"
-            "$mods, 0, movetoworkspacesilent, 10"
-            "$mods, Q, killactive"
-            "$mods, S, movetoworkspacesilent, special"
-            "$mod, H, layoutmsg, move -col"
-            "$mod, J, movefocus, d"
-            "$mod, K, movefocus, u"
-            "$mod, L, layoutmsg, move +col"
-            "$mod, V, layoutmsg, fit visible"
-            "$mod, U, layoutmsg, fit active"
-            "$mod, R, layoutmsg, colresize 0.5"
-            "$mods, L, workspace, r+1"
-            "$mods, H, workspace, r-1"
-            "$mods, J, workspace, empty"
-            "$mod, Right, layoutmsg, move +col"
-            "$mod, Down, movefocus, d"
-            "$mod, Up, movefocus, u"
-            "$mod, Left, layoutmsg, move -col"
-            "$mods, Right, workspace, r+1"
-            "$mods, Left, workspace, r-1"
-            "$mods, Down, workspace, empty"
-            "$mod, mouse_up, layoutmsg, focus left"
-            "$mod, mouse_down, layoutmsg, focus right"
-            "$mods, mouse_up, workspace, e-1"
-            "$mods, mouse_down, workspace, e+1"
-            "$modc, H, changegroupactive, b"
-            "$modc, L, changegroupactive, f"
-            "$modc, Right, changegroupactive, b"
-            "$modc, Left, changegroupactive, f"
-            "$mod, Y, fullscreen, 1"
-            "$mod, C, layoutmsg, colresize +conf"
-            "$mods, C, layoutmsg, colresize -conf"
-          ]
-          ++ (
-            # workspaces
-            # binds $mod + [shift +] {1..9} to [move to] workspace {1..9}
-            builtins.concatLists (builtins.genList (
-                i: let
-                  ws = i + 1;
-                in [
-                  "$mods, code:1${toString i}, movetoworkspacesilent, ${toString ws}"
-                ]
-              )
-              9)
-          );
+        bind = [
+          {
+            _args = [
+              (mkLuaInLine "mod .. \" + Z\"")
+              (mkLuaInLine "hl.dsp.groups.toggle()")
+            ];
+          }
+          {
+            _args = [
+              (mkLuaInLine "mod .. \" + Q\"")
+              (mkLuaInLine "hl.dsp.window.close()")
+            ];
+          }
+          {
+            _args = [
+              (mkLuaInLine "mod .. \" + R\"")
+              (mkLuaInLine "hl.dsp.layout(\"colresize 0.5\")")
+            ];
+          }
+          {
+            _args = [
+              (mkLuaInLine "mod .. \" + H\"")
+              (mkLuaInLine "hl.dsp.layout(\"move -col\")")
+            ];
+          }
+          {
+            _args = [
+              (mkLuaInLine "mod .. \" + J\"")
+              (mkLuaInLine "hl.dsp.focus({direction = \"down\"})")
+            ];
+          }
+          {
+            _args = [
+              (mkLuaInLine "mod .. \" + K\"")
+              (mkLuaInLine "hl.dsp.focus({direction = \"up\"})")
+            ];
+          }
+          {
+            _args = [
+              (mkLuaInLine "mod .. \" + L\"")
+              (mkLuaInLine "hl.dsp.layout(\"move +col\")")
+            ];
+          }
+          {
+            _args = [
+              (mkLuaInLine "mods .. \" + H\"")
+              (mkLuaInLine "hl.dsp.focus({workspace = \"r-1\"})")
+            ];
+          }
+          {
+            _args = [
+              (mkLuaInLine "mods .. \" + L\"")
+              (mkLuaInLine "hl.dsp.focus({workspace = \"r+1\"})")
+            ];
+          }
+          {
+            _args = [
+              (mkLuaInLine "mods .. \" + J\"")
+              (mkLuaInLine "hl.dsp.focus({workspace = \"empty\"})")
+            ];
+          }
+          {
+            _args = [
+              (mkLuaInLine "mod .. \" + Left\"")
+              (mkLuaInLine "hl.dsp.layout(\"move -col\")")
+            ];
+          }
+          {
+            _args = [
+              (mkLuaInLine "mod .. \" + Down\"")
+              (mkLuaInLine "hl.dsp.focus({direction = \"down\"})")
+            ];
+          }
+          {
+            _args = [
+              (mkLuaInLine "mod .. \" + Up\"")
+              (mkLuaInLine "hl.dsp.focus({direction = \"up\"})")
+            ];
+          }
+          {
+            _args = [
+              (mkLuaInLine "mod .. \" + Right\"")
+              (mkLuaInLine "hl.dsp.layout(\"move +col\")")
+            ];
+          }
+          {
+            _args = [
+              (mkLuaInLine "mods .. \" + Left\"")
+              (mkLuaInLine "hl.dsp.focus({workspace = \"r-1\"})")
+            ];
+          }
+          {
+            _args = [
+              (mkLuaInLine "mods .. \" + Right\"")
+              (mkLuaInLine "hl.dsp.focus({workspace = \"r+1\"})")
+            ];
+          }
+          {
+            _args = [
+              (mkLuaInLine "mods .. \" + Down\"")
+              (mkLuaInLine "hl.dsp.focus({workspace = \"empty\"})")
+            ];
+          }
+          {
+            _args = [
+              (mkLuaInLine "mod .. \" + mouse_up\"")
+              (mkLuaInLine "hl.dsp.layout(\"focus left\")")
+            ];
+          }
+          {
+            _args = [
+              (mkLuaInLine "mod .. \" + mouse_down\"")
+              (mkLuaInLine "hl.dsp.layout(\"focus right\")")
+            ];
+          }
+          {
+            _args = [
+              (mkLuaInLine "mods .. \" + mouse_up\"")
+              (mkLuaInLine "hl.dsp.focus({workspace = \"e-1\"})")
+            ];
+          }
+          {
+            _args = [
+              (mkLuaInLine "mods .. \" + mouse_down\"")
+              (mkLuaInLine "hl.dsp.focus({workspace = \"e+1\"})")
+            ];
+          }
+          {
+            _args = [
+              (mkLuaInLine "modc .. \" + H\"")
+              (mkLuaInLine "hl.dsp.group.prev())")
+            ];
+          }
+          {
+            _args = [
+              (mkLuaInLine "modc .. \" + L\"")
+              (mkLuaInLine "hl.dsp.group.next())")
+            ];
+          }
+          {
+            _args = [
+              (mkLuaInLine "modc .. \" + Left\"")
+              (mkLuaInLine "hl.dsp.group.prev())")
+            ];
+          }
+          {
+            _args = [
+              (mkLuaInLine "modc .. \" + Right\"")
+              (mkLuaInLine "hl.dsp.group.next())")
+            ];
+          }
+          {
+            _args = [
+              (mkLuaInLine "mod .. \" + Y\"")
+              (mkLuaInLine "hl.dsp.window.fullscreen({ mode = \"maximized\", action = \"toggle\" }))")
+            ];
+          }
+          {
+            _args = [
+              (mkLuaInLine "mod .. \" + C\"")
+              (mkLuaInLine "hl.dsp.layout(\"colresize +conf\")")
+            ];
+          }
+          {
+            _args = [
+              (mkLuaInLine "mods .. \" + C\"")
+              (mkLuaInLine "hl.dsp.layout(\"colresize -conf\")")
+            ];
+          }
+        ];
       };
       extraConfig = ''
         bind = $mod, A, submap, manage
