@@ -61,8 +61,8 @@ in {
         tooltip = false;
         default-submap = "default";
         always-on = true;
-        on-scroll-up = "hyprctl dispatch 'hl.dsp.focus({ workspace = \"r-1\" })'";
-        on-scroll-down = "hyprctl dispatch 'hl.dsp.focus({ workspace = \"r+1\" })'";
+        on-scroll-up = "hyprctl dispatch 'hl.dsp.focus({ workspace = \"-1\" })'";
+        on-scroll-down = "hyprctl dispatch 'hl.dsp.focus({ workspace = \"+1\" })'";
       };
 
       "hyprland/workspaces" = {
@@ -70,8 +70,8 @@ in {
         active-only = false;
         on-click = "activate";
         disable-scroll = false;
-        on-scroll-up = "hyprctl dispatch 'hl.dsp.focus({ workspace = \"r-1\" })'";
-        on-scroll-down = "hyprctl dispatch 'hl.dsp.focus({ workspace = \"r+1\" })'";
+        on-scroll-up = "hyprctl dispatch 'hl.dsp.focus({ workspace = \"-1\" })'";
+        on-scroll-down = "hyprctl dispatch 'hl.dsp.focus({ workspace = \"+1\" })'";
         persistent-workspaces = {
         };
       };
