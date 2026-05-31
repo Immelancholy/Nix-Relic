@@ -108,7 +108,7 @@ in {
         {
           _args = [
             (mkLuaInline "mod .. \" + W\"")
-            (mkLuaInline "hl.dsp.widnwo.float({action = \"toggle\" })")
+            (mkLuaInline "hl.dsp.window.float({ action = \"toggle\" })")
           ];
         }
         {
