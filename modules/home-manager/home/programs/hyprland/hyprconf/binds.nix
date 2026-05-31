@@ -150,13 +150,13 @@ in {
         {
           _args = [
             "Alt + Return"
-            (mkLuaInline "hl.dsp.fullscreen({ mode = \"fullscreen\" action = \"toggle\" })")
+            (mkLuaInline "hl.dsp.fullscreen({ mode = \"fullscreen\", action = \"toggle\" })")
           ];
         }
         {
           _args = [
             "Alt + Shift + Return"
-            (mkLuaInline "hl.dsp.fullscreen({ mode = \"maximized\" action = \"toggle\" })")
+            (mkLuaInline "hl.dsp.fullscreen({ mode = \"maximized\", action = \"toggle\" })")
           ];
         }
         {
