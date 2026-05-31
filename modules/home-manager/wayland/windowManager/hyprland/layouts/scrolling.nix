@@ -25,200 +25,201 @@ in {
         bind = [
           {
             _args = [
-              (mkLuaInline "mod .. \" + Z\"")
-              (mkLuaInline "hl.dsp.groups.toggle()")
+              mkLuaInline "mod .. \" + Z\""
+              mkLuaInline "hl.dsp.groups.toggle()"
             ];
           }
           {
             _args = [
-              (mkLuaInline "mod .. \" + Q\"")
-              (mkLuaInline "hl.dsp.window.close()")
+              mkLuaInline "mod .. \" + Q\""
+              mkLuaInline "hl.dsp.window.close()"
             ];
           }
           {
             _args = [
-              (mkLuaInline "mod .. \" + R\"")
-              (mkLuaInline "hl.dsp.layout(\"colresize 0.5\")")
+              mkLuaInline "mod .. \" + R\""
+              mkLuaInline "hl.dsp.layout(\"colresize 0.5\")"
             ];
           }
           {
             _args = [
-              (mkLuaInline "mod .. \" + H\"")
-              (mkLuaInline "hl.dsp.layout(\"move -col\")")
+              mkLuaInline "mod .. \" + H\""
+              mkLuaInline "hl.dsp.layout(\"move -col\")"
             ];
           }
           {
             _args = [
-              (mkLuaInline "mod .. \" + J\"")
-              (mkLuaInline "hl.dsp.focus({direction = \"down\"})")
+              mkLuaInline "mod .. \" + J\""
+              mkLuaInline "hl.dsp.focus({direction = \"down\"})"
             ];
           }
           {
             _args = [
-              (mkLuaInline "mod .. \" + K\"")
-              (mkLuaInline "hl.dsp.focus({direction = \"up\"})")
+              mkLuaInline "mod .. \" + K\""
+              mkLuaInline "hl.dsp.focus({direction = \"up\"})"
             ];
           }
           {
             _args = [
-              (mkLuaInline "mod .. \" + L\"")
-              (mkLuaInline "hl.dsp.layout(\"move +col\")")
+              mkLuaInline "mod .. \" + L\""
+              mkLuaInline "hl.dsp.layout(\"move +col\")"
             ];
           }
           {
             _args = [
-              (mkLuaInline "mods .. \" + H\"")
-              (mkLuaInline "hl.dsp.focus({workspace = \"r-1\"})")
+              mkLuaInline "mods .. \" + H\""
+              mkLuaInline "hl.dsp.focus({workspace = \"r-1\"})"
             ];
           }
           {
             _args = [
-              (mkLuaInline "mods .. \" + L\"")
-              (mkLuaInline "hl.dsp.focus({workspace = \"r+1\"})")
+              mkLuaInline "mods .. \" + L\""
+              mkLuaInline "hl.dsp.focus({workspace = \"r+1\"})"
             ];
           }
           {
             _args = [
-              (mkLuaInline "mods .. \" + J\"")
-              (mkLuaInline "hl.dsp.focus({workspace = \"empty\"})")
+              mkLuaInline "mods .. \" + J\""
+              mkLuaInline "hl.dsp.focus({workspace = \"empty\"})"
             ];
           }
           {
             _args = [
-              (mkLuaInline "mod .. \" + Left\"")
-              (mkLuaInline "hl.dsp.layout(\"move -col\")")
+              mkLuaInline "mod .. \" + Left\""
+              mkLuaInline "hl.dsp.layout(\"move -col\")"
             ];
           }
           {
             _args = [
-              (mkLuaInline "mod .. \" + Down\"")
-              (mkLuaInline "hl.dsp.focus({direction = \"down\"})")
+              mkLuaInline "mod .. \" + Down\""
+              mkLuaInline "hl.dsp.focus({direction = \"down\"})"
             ];
           }
           {
             _args = [
-              (mkLuaInline "mod .. \" + Up\"")
-              (mkLuaInline "hl.dsp.focus({direction = \"up\"})")
+              mkLuaInline "mod .. \" + Up\""
+              mkLuaInline "hl.dsp.focus({direction = \"up\"})"
             ];
           }
           {
             _args = [
-              (mkLuaInline "mod .. \" + Right\"")
-              (mkLuaInline "hl.dsp.layout(\"move +col\")")
+              mkLuaInline "mod .. \" + Right\""
+              mkLuaInline "hl.dsp.layout(\"move +col\")"
             ];
           }
           {
             _args = [
-              (mkLuaInline "mods .. \" + Left\"")
-              (mkLuaInline "hl.dsp.focus({workspace = \"r-1\"})")
+              mkLuaInline "mods .. \" + Left\""
+              mkLuaInline "hl.dsp.focus({workspace = \"r-1\"})"
             ];
           }
           {
             _args = [
-              (mkLuaInline "mods .. \" + Right\"")
-              (mkLuaInline "hl.dsp.focus({workspace = \"r+1\"})")
+              mkLuaInline "mods .. \" + Right\""
+              mkLuaInline "hl.dsp.focus({workspace = \"r+1\"})"
             ];
           }
           {
             _args = [
-              (mkLuaInline "mods .. \" + Down\"")
-              (mkLuaInline "hl.dsp.focus({workspace = \"empty\"})")
+              mkLuaInline "mods .. \" + Down\""
+              mkLuaInline "hl.dsp.focus({workspace = \"empty\"})"
             ];
           }
           {
             _args = [
-              (mkLuaInline "mod .. \" + mouse_up\"")
-              (mkLuaInline "hl.dsp.layout(\"focus left\")")
+              mkLuaInline "mod .. \" + mouse_up\""
+              mkLuaInline "hl.dsp.layout(\"focus left\")"
             ];
           }
           {
             _args = [
-              (mkLuaInline "mod .. \" + mouse_down\"")
-              (mkLuaInline "hl.dsp.layout(\"focus right\")")
+              mkLuaInline "mod .. \" + mouse_down\""
+              mkLuaInline "hl.dsp.layout(\"focus right\")"
             ];
           }
           {
             _args = [
-              (mkLuaInline "mods .. \" + mouse_up\"")
-              (mkLuaInline "hl.dsp.focus({workspace = \"e-1\"})")
+              mkLuaInline "mods .. \" + mouse_up\""
+              mkLuaInline "hl.dsp.focus({workspace = \"e-1\"})"
             ];
           }
           {
             _args = [
-              (mkLuaInline "mods .. \" + mouse_down\"")
-              (mkLuaInline "hl.dsp.focus({workspace = \"e+1\"})")
+              mkLuaInline "mods .. \" + mouse_down\""
+              mkLuaInline "hl.dsp.focus({workspace = \"e+1\"})"
             ];
           }
           {
             _args = [
-              (mkLuaInline "modc .. \" + H\"")
+              mkLuaInline "modc .. \" + H\""
               (mkLuaInline "hl.dsp.group.prev())")
             ];
           }
           {
             _args = [
-              (mkLuaInline "modc .. \" + L\"")
-              (mkLuaInline "hl.dsp.group.next())")
+              mkLuaInline "modc .. \" + L\""
+              mkLuaInline "hl.dsp.group.next())"
             ];
           }
           {
             _args = [
-              (mkLuaInline "modc .. \" + Left\"")
-              (mkLuaInline "hl.dsp.group.prev())")
+              mkLuaInline "modc .. \" + Left\""
+              mkLuaInline "hl.dsp.group.prev())"
             ];
           }
           {
             _args = [
-              (mkLuaInline "modc .. \" + Right\"")
-              (mkLuaInline "hl.dsp.group.next())")
+              mkLuaInline "modc .. \" + Right\""
+              mkLuaInline "hl.dsp.group.next())"
             ];
           }
           {
             _args = [
-              (mkLuaInline "mod .. \" + Y\"")
-              (mkLuaInline "hl.dsp.window.fullscreen({ mode = \"maximized\", action = \"toggle\" }))")
+              mkLuaInline "mod .. \" + Y\""
+              mkLuaInline "hl.dsp.window.fullscreen({ mode = \"maximized\", action = \"toggle\" }))"
             ];
           }
           {
             _args = [
-              (mkLuaInline "mod .. \" + C\"")
-              (mkLuaInline "hl.dsp.layout(\"colresize +conf\")")
+              mkLuaInline "mod .. \" + C\""
+              mkLuaInline "hl.dsp.layout(\"colresize +conf\")"
             ];
           }
           {
             _args = [
-              (mkLuaInline "mods .. \" + C\"")
-              (mkLuaInline "hl.dsp.layout(\"colresize -conf\")")
+              mkLuaInline "mods .. \" + C\""
+              mkLuaInline "hl.dsp.layout(\"colresize -conf\")"
             ];
           }
         ];
       };
-      extraConfig = ''
-        bind = $mod, A, submap, manage
-        submap = manage
-        bind = Alt, Return, fullscreen, 1
-        bind = Alt+Shift, Return, fullscreen
-        bind = , W, togglefloating
-        bind = , P, layoutmsg, promote
-        bind = , O, pin, active
-        bind = , Y, fullscreen, 1
-        bind = , H, layoutmsg, move -col
-        bind = , J, movefocus, d
-        bind = , K, movefocus, u
-        bind = , L, layoutmsg, move +col
-        bind = , Left, layoutmsg, move +col
-        bind = , Down, movefocus, d
-        bind = , Up, movefocus, u
-        bind = , Right, layoutmsg, move -col
-        bind = , C, layoutmsg, colresize +conf
-        bind = Shift, C, layoutmsg, colresize -conf
-        bind = , V, layoutmsg, fit visible
-        bind = , U, layoutmsg, fit active
-        bind = , R, layoutmsg, colresize 0.5
-        bindm = $mod, mouse:272, movewindow
-        bindm = $mod, mouse:273, resizewindow
+      extraConfig = /* Lua */ ''
+        hl.bind(mod .." + A", hl.dsp.submap("manage"))
+        hl.define_submap("manage", function()
+          hl.bind("Alt + Return", hl.dps.window.fullscreen({ mode = "fullscreen", action = "toggle" })
+          hl.bind("Alt + Shift + Return", hl.dps.window.fullscreen({ mode = "maximized", action = "toggle" })
+          hl.bind("W", hl.dsp.window.float({ action = "toggle" }))
+          hl.bind("P", hl.dsp.layout(promote))
+          hl.bind("O", hl.dsp.window(pin))
+          hl.bind("Y", hl.dps.window.fullscreen({ mode = "maximized", action = "toggle" })
+          hl.bind = , H, layoutmsg, move -col
+          hl.bind(("H"), (hl.dsp.layout("move -col")))
+          hl.bind = , J, movefocus, d
+          hl.bind = , K, movefocus, u
+          hl.bind = , L, layoutmsg, move +col
+          hl.bind = , Left, layoutmsg, move +col
+          hl.bind = , Down, movefocus, d
+          hl.bind = , Up, movefocus, u
+          hl.bind = , Right, layoutmsg, move -col
+          hl.bind = , C, layoutmsg, colresize +conf
+          hl.bind = Shift, C, layoutmsg, colresize -conf
+          hl.bind = , V, layoutmsg, fit visible
+          hl.bind = , U, layoutmsg, fit active
+          hl.bind = , R, layoutmsg, colresize 0.5
+          hl.bindm = $mod, mouse:272, movewindow
+          hl.bindm = $mod, mouse:273, resizewindow
+        end)
 
-        bind = $mod, Right, movetoworkspace, r+1
         bind = $mod, Left, movetoworkspace, r-1
         bind = $mod, Down, movetoworkspace, empty
         bind = $mod, L, movetoworkspace, r+1
