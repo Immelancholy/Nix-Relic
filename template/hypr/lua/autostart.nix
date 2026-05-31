@@ -20,7 +20,6 @@
       local term = Term
 
       hl.on("hyprland.start", function()
-      	hl.exec_cmd("systemctl start --user qpwgraph")
       	hl.exec_cmd("uwsm app -- " .. discord)
       	hl.exec_cmd(browser, { workspace = "2 silent" })
       end)

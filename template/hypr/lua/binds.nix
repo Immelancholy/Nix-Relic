@@ -1,5 +1,6 @@
 {config, ...}: let
-  inherit (config.player) cmd class;
+  inherit (config.player) cmd class cmdGame;
+  inherit (config.wayland.windowManager.hyprland) liveWallpaper;
 in {
   xdg.configFile."hypr/lua/binds.lua".text =
     /*
@@ -36,6 +37,7 @@ in {
         end
       end
       end
+
 
       for i = 1, 10 do
       local key = i % 10 -- 10 maps to key 0
@@ -86,7 +88,6 @@ in {
       )
 
       hl.bind(mod .. " + Q", hl.dsp.window.close())
-      hl.bind(mod .. " + B", hl.dsp.exec_cmd("binds.sh"))
       hl.bind(mod .. " + W", hl.dsp.window.float({ action = "toggle" }))
       hl.bind("Pause", hl.dsp.exec_cmd(playerctl .. " play-pause"))
       hl.bind(mod .. " + T", hl.dsp.exec_cmd(term))
@@ -128,7 +129,89 @@ in {
       hl.bind("CTRL + SHIFT + L", hl.dsp.exec_cmd("uwsm-app -- swaylock -fF"))
       hl.bind(mod .. " + N", hl.dsp.exec_cmd("rofi -show Cliphist -modi Cliphist:cliphist.sh"))
       hl.bind(mod .. " + Apostrophe", hl.dsp.exec_cmd("rofi -show emoji nerdy -modi emoji,nerdy"))
-      hl.bind(mod .. " + G", hl.dsp.exec_cmd("hyprgame"))
+      hl.bind(mod .. " + G", function()
+        local gamemode = hl.get_config("animations.enabled")
+        if gamemode == true then
+          hl.config({
+            general = {
+              gaps_in = 0,
+              gaps_out = 0,
+              border_size = 1,
+            },
+            animations = {
+              enabled = false,
+            },
+            decoration = {
+              shadow = {
+                enabled = false,
+              },
+              blur = {
+                enabled = false,
+              },
+              rounding = 0,
+              active_opacity = 1,
+              inactive_opacity = 1,
+              fullscreen_opacity = 1,
+            },
+          })
+          hl.layer_rule({
+            match = { namespace = "waybar" },
+            blur = false,
+            no_anim = true,
+          })
+          hl.layer_rule({
+            match = { namespace = "rofi" },
+            blur = false,
+            ignore_alpha = 0,
+            no_anim = true,
+          })
+          hl.layer_rule({
+            match = { namespace = "notifications" },
+            blur = false,
+            ignore_alpha = 0,
+            no_anim = true,
+          })
+          hl.window_rule({
+            match = { class = "^(.*)$" }, opacity = "1.0 override 1.0 override 1.0 override"
+          })
+          hl.dispatch(hl.dsp.exec_cmd("pkill mpvpaper"))
+          hl.dispatch(hl.dsp.window.kill({ window = "class:^(${class})$" }))
+          hl.dispatch(hl.dsp.window.kill({ window = "class:^(neo)$" }))
+          hl.dispatch(hl.dsp.window.kill({ window = "class:^(fastfetch)$" }))
+          hl.dispatch(hl.dsp.window.kill({ window = "class:^(btop)$" }))
+          hl.dispatch(hl.dsp.window.kill({ window = "class:^(cava)$" }))
+          hl.dispatch(hl.dsp.exec_cmd("${cmdGame}", { workspace = "1 silent", float = true, size = {1118, 710}, move = {401, 145} }))
+        end
+        if gamemode == false then
+          hl.dispatch(hl.dsp.exec_cmd("uwsm app -- mpvpaper -f -p -o \"--loop hwdec=auto --no-audio\" '*' ${liveWallpaper.path}"))
+          hl.dispatch(hl.dsp.exec_cmd("hyprctl reload config-only -q"))
+          hl.dispatch(hl.dsp.window.kill({ window = "class:^(${class})$" }))
+          hl.dispatch(hl.dsp.window.kill({ window = "class:^(neo)$" }))
+          hl.dispatch(hl.dsp.window.kill({ window = "class:^(fastfetch)$" }))
+          hl.dispatch(hl.dsp.window.kill({ window = "class:^(btop)$" }))
+          hl.dispatch(hl.dsp.window.kill({ window = "class:^(cava)$" }))
+          hl.dispatch(hl.dsp.exec_cmd(
+          "uwsm app -- kitty --class cava cava.sh",
+          { workspace = "1 silent", float = true, size = { 888, 462 }, move = { 610, 609 } }
+          ))
+          hl.dispatch(hl.dsp.exec_cmd(
+          "uwsm app -- kitty --class btop btop.sh",
+          { workspace = "1 silent", float = true, size = { 590, 637 }, move = { 10, 433 } }
+          ))
+          hl.dispatch(hl.dsp.exec_cmd(
+          "uwsm app -- kitty --class neo neo.sh",
+          { workspace = "1 silent", float = true, size = { 402, 1030 }, move = { 1508, 42 } }
+          ))
+          hl.dispatch(hl.dsp.exec_cmd(
+          "uwsm app -- kitty --class fastfetch kitty @ launch --type overlay --env class=fastfetch",
+          { workspace = "1 silent", float = true, size = { 590, 383 }, move = { 10, 42 } }
+          ))
+          hl.dispatch(hl.dsp.exec_cmd(
+          "${cmd}",
+          { workspace = "1 silent", float = true, size = { 888, 559 }, move = { 610, 42 } }
+          ))
+        end
+      end)
       hl.bind("CTRL + SHIFT + Escape", hl.dsp.exec_cmd(term .. " --title btop btop"))
       hl.bind("XF86Calculator", hl.dsp.exec_cmd("uwsm-app -- qalculate-gtk"))
       hl.bind(mod .. " + Colon", hl.dsp.exec_cmd("uwsm-app -- qalculate-gtk"))
