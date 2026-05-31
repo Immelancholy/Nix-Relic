@@ -44,7 +44,7 @@ in {
           ConditionEnvironment = "WAYLAND_DISPLAY";
         };
         Service = {
-          ExecStart = ''/run/current-system/sw/bin/hyprctl dispatch exec paper-change'';
+          ExecStart = "/run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.exec_cmd(\"paper-change\")'";
           Type = "simple";
           Slice = ["session.slice"];
           Restart = "on-failure";

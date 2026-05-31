@@ -10,11 +10,11 @@
   launches = pkgs.writeShellScriptBin "launches" ''
     dunstctl set-paused true
     dunstctl close-all
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dps.window.signal({ signal = "9", class = "^(${playerClass})$" })'
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dps.window.signal({ signal = "9", class = "^(neo)$" })'
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dps.window.signal({ signal = "9", class = "^(fastfetch)$" })'
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dps.window.signal({ signal = "9", class = "^(btop)$" })'
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dps.window.signal({ signal = "9", class = "^(cava)$" })'
+    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.window.signal({ signal = "9", class = "^(${playerClass})$" })'
+    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.window.signal({ signal = "9", class = "^(neo)$" })'
+    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.window.signal({ signal = "9", class = "^(fastfetch)$" })'
+    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.window.signal({ signal = "9", class = "^(btop)$" })'
+    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.window.signal({ signal = "9", class = "^(cava)$" })'
     /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.exec_cmd("uwsm app -- kitty --class cava cava.sh", { workspace = "1 silent", float = true, size = {888, 462}, move = {610, 609} })'
     /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.exec_cmd("uwsm app -- kitty --class btop btop.sh", { workspace = "1 silent", float = true, size = {590, 637}, move = {10, 433} })'
     /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.exec_cmd("uwsm app -- kitty --class neo neo.sh", { workspace = "1 silent", float = true, size = {402, 1030}, move = {1508, 42} })'
