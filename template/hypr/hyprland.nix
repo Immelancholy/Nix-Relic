@@ -31,7 +31,7 @@
       Files = "uwsm app -- nemo.desktop"
       Filest = "uwsm app -- yazi.desktop"
       Menu =
-      	'rofi -show drun -run-command "uwsm-app -- {cmd}" run filebrowser power-menu -modi drun,run,fibrowser,power-menu:rofi-power-menu'
+      	'rofi -show drun -run-command "uwsm-app -- {cmd}" run filebrowser power-menu -modi drun,run,filebrowser,power-menu:rofi-power-menu'
       Mod = "SUPER"
       Moda = "SUPER + ALT"
       Modc = "SUPER + CTRL"
