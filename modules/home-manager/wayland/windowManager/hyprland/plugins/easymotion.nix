@@ -32,7 +32,7 @@ in {
           }
         ];
 
-        plugin = {
+        config.plugin = {
           easymotion = {
             textcolor = "rgba(${config.lib.stylix.colors.base05}ff)";
             bgcolor = "rgba(${config.lib.stylix.colors.base00}bb)";

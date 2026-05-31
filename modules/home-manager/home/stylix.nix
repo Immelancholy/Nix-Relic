@@ -48,6 +48,7 @@ in {
       dunst.enable = false;
       rofi.enable = false;
       waybar.enable = false;
+      hyprland.enable = false;
       nixvim = {
         plugin = "base16-nvim";
         transparentBackground = {
