@@ -9,14 +9,12 @@
   playerCmd = config.player.cmd;
   playerCmdGame = config.player.cmdGame;
   playerClass = config.player.class;
-  nrm = inputs.nix-relic.inputs;
 in {
   wayland.windowManager.hyprland = lib.mkMerge [
     {
       enable = true;
       package = null;
       portalPackage = null;
-      usingFlake = true;
       xwayland.enable = false;
       systemd = {
         # disable the systemd integration, as it conflicts with uwsm.
@@ -24,16 +22,6 @@ in {
         variables = ["--all"];
       };
     }
-    (lib.mkIf cfg.usingFlake {
-      plugins = [
-        nrm.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.csgo-vulkan-fix
-      ];
-    })
-    (lib.mkIf (! cfg.usingFlake) {
-      plugins = [
-        pkgs.hyprlandPlugins.csgo-vulkan-fix
-      ];
-    })
   ];
   services.hyprpolkitagent.enable = true;
 
@@ -67,8 +55,4 @@ in {
       splash = false;
     };
   };
-
-  imports = [
-    ./hyprconf
-  ];
 }

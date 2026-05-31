@@ -1,5 +1,0 @@
-{
-  imports = [
-    ./easymotion.nix
-  ];
-}
