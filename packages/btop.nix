@@ -12,7 +12,7 @@ writeShellApplication {
   ];
 
   text = ''
-    kitty @ set-font-size 9
+    kitty @ set-font-size 9.5
     btop "$@"
     kitty @ set-font-size 10
   '';
