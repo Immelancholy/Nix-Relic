@@ -1,4 +1,6 @@
-{
+{lib, ...}: let
+  inherit (lib.generators) mkLuaInLine;
+in {
   wayland.windowManager.hyprland = {
     sourceFirst = true;
     settings = {
@@ -33,14 +35,14 @@
         _var = "uwsm app -- zen-beta.desktop";
       };
       playerctl = {
-        _var = "uwsm app -- playerctl --player=$player";
+        _var = mkLuaInLine "\"uwsm app -- playerctl --player=\" .. player";
       };
       discord = {
         _var = "uwsm app -- vesktop.desktop";
       };
       editor = {
         _var = "uwsm app -- dev.zed.Zed.desktop";
-      }
+      };
       config = {
         misc = {
           disable_hyprland_logo = true;

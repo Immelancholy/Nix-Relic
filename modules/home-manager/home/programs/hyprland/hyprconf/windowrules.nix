@@ -29,7 +29,7 @@ in {
         match.class = "^(com.saivert.pwvucontrol)$";
         opacity = "0.9 override 0.7 override";
         float = true;
-        size = "850 540";
+        size = "{850 540}";
       }
       {
         match.class = "^(obsidian)$";
@@ -140,8 +140,8 @@ in {
         match.class = "^(update-system)$";
         float = true;
         opacit = "1.0 override 0.9 override";
-        size = "590 775";
-        move = "1305 42";
+        size = "{590 775}";
+        move = "{1305 42}";
       }
       {
         match = {
@@ -149,7 +149,7 @@ in {
           title = "^(btop)";
         };
         float = true;
-        size = "960 675";
+        size = "{960 675}";
       }
       {
         match.title = "^(LocalSend)$";
@@ -174,12 +174,12 @@ in {
       {
         match.title = "^(Qalculate!)$";
         float = true;
-        size = "437 306";
+        size = "{437 306}";
       }
       {
         match.title = "^(.*Properties*.)$";
         float = true;
-        size = "437 306";
+        size = "{437 306}";
       }
       {
         match.title = "^(Open)$";

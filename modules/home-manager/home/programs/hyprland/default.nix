@@ -43,20 +43,20 @@ in {
     (nr.hyprgame.override {
       wallpaper = cfg.liveWallpaper.path;
       extraKills = ''
-        hyprctl dispatch signalwindow 'class:(${playerClass}),15'
-          hyprctl dispatch signalwindow 'class:(neo),15'
-          hyprctl dispatch signalwindow 'class:(fastfetch),15'
-          hyprctl dispatch signalwindow 'class:(btop),15'
-          hyprctl dispatch signalwindow 'class:(cava),15'
-          hyprctl dispatch exec '[workspace 1 silent; float; size 1118 710; move 401 145] ${playerCmdGame}'
+        hyprctl dispatch 'hl.dps.window.signal({ signal = "9", class = "^(${playerClass})$" })'
+          hyprctl dispatch 'hl.dps.window.signal({ signal = "9", class = "^(neo)$" })'
+          hyprctl dispatch 'hl.dps.window.signal({ signal = "9", class = "^(fastfetch)$" })'
+          hyprctl dispatch 'hl.dps.window.signal({ signal = "9", class = "^(btop)$" })'
+          hyprctl dispatch 'hl.dps.window.signal({ signal = "9", class = "^(cava)$" })'
+          hyprctl dispatch 'hl.dsp.exec_cmd("${playerCmd}", { workspace = "1 silent", float = true, size = {1118, 710}, move = {401, 145} })'
       '';
       extraLaunch = ''
-        hyprctl dispatch signalwindow 'class:(${playerClass}),15'
-          hyprctl dispatch exec '[workspace 1 silent; float; size 888 462; move 610 609] uwsm app -- kitty --class "cava" cava.sh'
-          hyprctl dispatch exec '[workspace 1 silent; float; size 590 637; move 10 433] uwsm app -- kitty --class "btop" btop.sh'
-          hyprctl dispatch exec '[workspace 1 silent; float; size 402 1030; move 1508 42]  uwsm app -- kitty --class "neo" neo.sh'
-          hyprctl dispatch exec '[workspace 1 silent; float; size 590 383; move 10 42] uwsm app -- kitty --class "fastfetch" kitty @ launch --type overlay --env class="fastfetch"'
-          hyprctl dispatch exec '[workspace 1 silent; float; size 888 559; move 610 42] ${playerCmd}'
+        hyprctl dispatch 'hl.dps.window.signal({ signal = "9", class = "^(${playerClass})$" })'
+          hyprctl dispatch 'hl.dsp.exec_cmd("uwsm app -- kitty --class cava cava.sh", { workspace = "1 silent", float = true, size = {888, 462}, move = {610, 609} })'
+          hyprctl dispatch 'hl.dsp.exec_cmd("uwsm app -- kitty --class btop btop.sh", { workspace = "1 silent", float = true, size = {590, 637}, move = {10, 433} })'
+          hyprctl dispatch 'hl.dsp.exec_cmd("uwsm app -- kitty --class neo neo.sh", { workspace = "1 silent", float = true, size = {402, 1030}, move = {1508, 42} })'
+          hyprctl dispatch 'hl.dsp.exec_cmd("uwsm app -- kitty --class fastfetch kitty @ launch --type overlay --env class=fastfetch", { workspace = "1 silent", float = true, size = {590, 383}, move = {10, 42} })'
+          hyprctl dispatch 'hl.dsp.exec_cmd("${playerCmd}", { workspace = "1 silent", float = true, size = {888, 559}, move = {610, 42} })'
 
       '';
     })
