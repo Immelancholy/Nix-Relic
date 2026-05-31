@@ -18,88 +18,321 @@
     /run/current-system/sw/bin/hyprctl dispatch exec '[workspace 1 silent; float; size 590 383; move 10 42] uwsm app -- kitty --class "fastfetch" kitty @ launch --type overlay --env class="fastfetch"'
     /run/current-system/sw/bin/hyprctl dispatch exec '[workspace 1 silent; float; size 888 559; move 610 42] ${playerCmd}'
   '';
-  lua = lib.generators.mkLuaInline;
+  inherit (lib.generators) mkLuaInLine;
 in {
   home.packages = [
     launches
   ];
   wayland.windowManager.hyprland = {
+    extraConfig = ''
+      for i = 1, 10 do
+        local key = i % 10 -- 10 maps to key 0
+        hl.bind(mod .. " + " .. key, hl.dsp.focus({ workspace = i}))
+        hl.bind(mod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
+      end          
+    '';
     submaps = {
       player.settings = {
         bind = [
-          ", escape, submap, reset"
-          "$mod, P, submap, reset"
+          {
+            _args = [
+              "escape"
+              (mkLuaInLine "hl.dsp.submap(\"reset\")")
+            ];
+          }
+          {
+            _args = [
+              (mkLuaInLine "mod .. \" + P\"")
+              (mkLuaInLine "hl.dsp.submap(\"reset\")")
+            ];
+          }
         ];
         bindl = [
-          ", P, exec, $playerctl play-pause"
+          {
+            _args = [
+              "P"
+              (mkLuaInLine "hl.dsp.exec_cmd(playerctl .. \" play-pause\")")
+            ];
+          }
         ];
         bindel = [
-          ", O, exec, uwsm-app -- playerVol inc"
-          ", I, exec, uwsm-app -- playerVol dec"
-          "Shift, O, exec, $playerctl next"
-          "Shift, I, exec, $playerctl previous"
+          {
+            _args = [
+              "O"
+              (mkLuaInLine "hl.dsp.exec_cmd(\"uwsm-app -- playerVol inc\")")
+            ];
+          }
+          {
+            _args = [
+              "I"
+              (mkLuaInLine "hl.dsp.exec_cmd(\"uwsm-app -- playerVol dec\")")
+            ];
+          }
+          {
+            _args = [
+              "SHIFT + O"
+              (mkLuaInLine "hl.dsp.exec_cmd(playerctl .. \" next\")")
+            ];
+          }
+          {
+            _args = [
+              "SHIFT + I"
+              (mkLuaInLine "hl.dsp.exec_cmd(playerctl .. \" previous\")")
+            ];
+          }
         ];
       };
     };
     settings = {
       bindm = [
-        "$mod, mouse:272, movewindow"
-        "$mod, mouse:273, resizewindow"
+        {
+          _args = [
+            (mkLuaInLine "mod .. \" + mouse:272\"")
+            (mkLuaInLine "hl.dsp.window.drag()")
+          ];
+        }
+        {
+          _args = [
+            (mkLuaInLine "mod .. \" + mouse:273\"")
+            (mkLuaInLine "hl.dsp.window.resize()")
+          ];
+        }
       ];
-      bind =
-        [
-          "$mod, B, exec, binds.sh"
-          "$mod, W, togglefloating"
-          ", Pause, exec, $playerctl play-pause"
-          "$mod, T, exec, $term"
-          ''$mods, T, exec, $term --class "tmux" tmux''
-          "$mod, F, exec, $browser"
-          "$mod, E, exec, $files"
-          "$mod, grave, exec, $menu"
-          "Alt, Return, fullscreen"
-          "Alt+Shift, Return, fullscreen, 1"
-          "$mod, Tab, exec, rofi -show window -modi window"
-          "$mods, U, exec, launches"
-          "$mod, Delete, exec, rofi -show power-menu -modi power-menu:rofi-power-menu"
-          "$mod, 0, workspace, 10"
-          "Ctrl+Shift, L, exec, uwsm-app -- swaylock -fF"
-          "$mod, N, exec, rofi -show Cliphist -modi Cliphist:cliphist.sh"
-          "Ctrl, Period, exec, rofi -show emoji nerdy -modi emoji,nerdy"
-          "$mod, G, exec, hyprgame"
-          ''Ctrl+Shift, Escape, exec, uwsm app -- $term --title "btop" btop''
-          ", XF86Calculator, exec, uwsm-app -- qalculate-gtk"
-          "$mod+Alt, S, togglespecialworkspace"
-          ", Print, exec, hyprquickframe"
-          "$mod, O, exec, uwsm-app -- hyprpicker -a"
-          "$mods, P, submap, player"
-          "$mod, comma, movecurrentworkspacetomonitor, l"
-          "$mod, period, movecurrentworkspacetomonitor, r"
-        ]
-        ++ (
-          # workspaces
-          # binds $mod + [shift +] {1..9} to [move to] workspace {1..9}
-          builtins.concatLists (builtins.genList (
-              i: let
-                ws = i + 1;
-              in [
-                "$mod, code:1${toString i}, workspace, ${toString ws}"
-              ]
-            )
-            9)
-        );
+      bind = [
+        {
+          _args = [
+            (mkLuaInLine "mod .. \" + B\"")
+            (mkLuaInLine "hl.dsp.exec_cmd(\"binds.sh\")")
+          ];
+        }
+        {
+          _args = [
+            (mkLuaInLine "mod .. \" + W\"")
+            (mkLuaInLine "hl.dsp.widnwo.float({action = \"toggle\" }))")
+          ];
+        }
+        {
+          _args = [
+            "Pause"
+            (mkLuaInLine "hl.dsp.exec_cmd(playerctl .. \" play-pause\")")
+          ];
+        }
+        {
+          _args = [
+            (mkLuaInLine "mod .. \" + T\"")
+            (mkLuaInLine "hl.dsp.exec_cmd(term)")
+          ];
+        }
+        {
+          _args = [
+            (mkLuaInLine "mods .. \" + T\"")
+            (mkLuaInLine "hl.dsp.exec_cmd(term .. \" --class tmux tmux\")")
+          ];
+        }
+        {
+          _args = [
+            (mkLuaInLine "mods .. \" + F\"")
+            (mkLuaInLine "hl.dsp.exec_cmd(browser)")
+          ];
+        }
+        {
+          _args = [
+            (mkLuaInLine "mods .. \" + E\"")
+            (mkLuaInLine "hl.dsp.exec_cmd(files)")
+          ];
+        }
+        {
+          _args = [
+            (mkLuaInLine "mods .. \" + grave\"")
+            (mkLuaInLine "hl.dsp.exec_cmd(menu)")
+          ];
+        }
+        {
+          _args = [
+            "Alt + Return"
+            (mkLuaInLine "hl.dsp.fullscreen({ mode = \"fullscreen\" action = \"toggle\" })")
+          ];
+        }
+        {
+          _args = [
+            "Alt + Shift + Return"
+            (mkLuaInLine "hl.dsp.fullscreen({ mode = \"maximized\" action = \"toggle\" })")
+          ];
+        }
+        {
+          _args = [
+            (mkLuaInLine "mod .. \" + Tab\"")
+            (mkLuaInLine "hl.dsp.exec_cmd(\"rofi -show window -modi window\")")
+          ];
+        }
+        {
+          _args = [
+            (mkLuaInLine "mods .. \" + U\"")
+            (mkLuaInLine "hl.dsp.exec_cmd(\"launches\")")
+          ];
+        }
+        {
+          _args = [
+            (mkLuaInLine "mod .. \" + Delete\"")
+            (mkLuaInLine "hl.dsp.exec_cmd(\"rofi -show power-menu -modi power-menu:rofi-power-menu\")")
+          ];
+        }
+        {
+          _args = [
+            "Ctrl + Shift + L"
+            (mkLuaInLine "hl.dsp.exec_cmd(\"uwsm-app -- swaylock -fF\")")
+          ];
+        }
+        {
+          _args = [
+            (mkLuaInLine "mod .. \" + N\"")
+            (mkLuaInLine "hl.dsp.exec_cmd(\"rofi -show Cliphist -modi Cliphist:cliphist.sh\")")
+          ];
+        }
+        {
+          _args = [
+            (mkLuaInLine "mod .. \" + Apostrophe\"")
+            (mkLuaInLine "hl.dsp.exec_cmd(\"rofi -show emoji nerdy -modi emoji,nerdy\")")
+          ];
+        }
+        {
+          _args = [
+            (mkLuaInLine "mod .. \" + G\"")
+            (mkLuaInLine "hl.dsp.exec_cmd(\"hyprgame\")")
+          ];
+        }
+        {
+          _args = [
+            "Ctrl + Shift + Escape"
+            (mkLuaInLine "hl.dsp.exec_cmd(term .. \" --title btop btop\")")
+          ];
+        }
+        {
+          _args = [
+            "XF86Calculator"
+            (mkLuaInLine "hl.dsp.exec_cmd(\"uwsm-app -- qalculate-gtk\")")
+          ];
+        }
+        {
+          _args = [
+            (mkLuaInLine "mod .. \" + Colon\"")
+            (mkLuaInLine "hl.dsp.exec_cmd(\"uwsm-app -- qalculate-gtk\")")
+          ];
+        }
+        {
+          _args = [
+            (mkLuaInLine "moda .. \" + S\"")
+            (mkLuaInLine "hl.dsp.workspace.toggle_special(\"magic\")")
+          ];
+        }
+        {
+          _args = [
+            "Print"
+            (mkLuaInLine "hl.dsp.exec_cmd(\"hyprquickframe\")")
+          ];
+        }
+        {
+          _args = [
+            (mkLuaInLine "mod .. \" + O\"")
+            (mkLuaInLine "hl.dsp.exec_cmd(\"uwsm-app -- hyprpicker -a\")")
+          ];
+        }
+        {
+          _args = [
+            (mkLuaInLine "mods .. \" + P\"")
+            (mkLuaInLine "hl.dsp.submap(\"player\")")
+          ];
+        }
+        {
+          _args = [
+            (mkLuaInLine "mods .. \" + Comma\"")
+            (mkLuaInLine "hl.dsp.window.move({ monitor = \"+1\", follow = true })")
+          ];
+        }
+        {
+          _args = [
+            (mkLuaInLine "mods .. \" + Period\"")
+            (mkLuaInLine "hl.dsp.window.move({ monitor = \"-1\", follow = true })")
+          ];
+        }
+        {
+          _args = [
+            (mkLuaInLine "mod .. \" + Comma\"")
+            (mkLuaInLine "hl.dsp.focus({ monitor = \"+1\" })")
+          ];
+        }
+        {
+          _args = [
+            (mkLuaInLine "mod .. \" + Period\"")
+            (mkLuaInLine "hl.dsp.focus({ monitor = \"-1\" })")
+          ];
+        }
+      ];
       bindl = [
-        ", XF86AudioPlay, exec, $playerctl play-pause #pause-play media"
-        ", XF86AudioNext, exec, $playerctl next" #next
-        ", XF86AudioPrev, exec, $playerctl previous" #previous,
-        ", XF86AudioMute, exec, uwsm-app -- playerVol mute" # decrease volume of mpd
+        {
+          _args = [
+            "XF86AudioPlay"
+            (mkLuaInLine "hl.dsp.exec_cmd(playerctl .. \" play-pause\")")
+          ];
+        }
+        {
+          _args = [
+            "XF86AudioNext"
+            (mkLuaInLine "hl.dsp.exec_cmd(playerctl .. \" next\")")
+          ];
+        }
+        {
+          _args = [
+            "XF86AudioPrev"
+            (mkLuaInLine "hl.dsp.exec_cmd(playerctl .. \" next\")")
+          ];
+        }
+        {
+          _args = [
+            "XF86AudioMute"
+            (mkLuaInLine "hl.dsp.exec_cmd(\" uwsm-app -- playerVol mute\")")
+          ];
+        }
       ];
       bindel = [
-        ", XF86AudioLowerVolume, exec, uwsm-app -- playerVol dec" # decrease volume of mpd
-        ", XF86AudioRaiseVolume, exec, uwsm-app -- playerVol inc" # increase volume of mpd
+        {
+          _args = [
+            "XF86AudioLowerVolume"
+            (mkLuaInLine "hl.dsp.exec_cmd(\" uwsm-app -- playerVol dec\")")
+          ];
+        }
+        {
+          _args = [
+            "XF86AudioRaiseVolume"
+            (mkLuaInLine "hl.dsp.exec_cmd(\" uwsm-app -- playerVol inc\")")
+          ];
+        }
         "Shift, XF86AudioLowerVolume, exec, uwsm-app -- playerVol dec-mini" # decrease volume of mpd
         "Shift, XF86AudioRaiseVolume, exec, uwsm-app -- playerVol inc-mini" # increase volume of mpd
-        ", XF86MonBrightnessUp, exec, brightness inc"
-        ", XF86MonBrightnessDown, exec, brightness dec"
+        {
+          _args = [
+            "Shift + XF86AudioLowerVolume"
+            (mkLuaInLine "hl.dsp.exec_cmd(\" uwsm-app -- playerVol dec-mini\")")
+          ];
+        }
+        {
+          _args = [
+            "Shift + XF86AudioRaiseVolume"
+            (mkLuaInLine "hl.dsp.exec_cmd(\" uwsm-app -- playerVol inc-mini\")")
+          ];
+        }
+        {
+          _args = [
+            "XF86MonBrightnessUp"
+            (mkLuaInLine "hl.dsp.exec_cmd(\" uwsm-app -- brightness inc\")")
+          ];
+        }
+        {
+          _args = [
+            "XF86MonBrightnessDown"
+            (mkLuaInLine "hl.dsp.exec_cmd(\" uwsm-app -- brightness dec\")")
+          ];
+        }
       ];
     };
   };
