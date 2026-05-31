@@ -3,7 +3,7 @@
   config,
   ...
 }: let
-  colors = config.stylix.lib.colors;
+  colors = config.lib.stylix.colors;
   inherit (lib.generators) mkLuaInline;
 in
   with colors; {
