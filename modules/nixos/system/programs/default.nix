@@ -126,7 +126,6 @@
     wl-clipboard
     sbctl
     nr.brightness
-    nr.force-hdr
     (nr.cavaCfg.override {
       color1 = "#${config.lib.stylix.colors.base0E}";
       color2 = "#${config.lib.stylix.colors.base0D}";
@@ -141,7 +140,6 @@
     nr.checkshell
     nr.cliphist
     nr.colortrans
-    nr.mpdchck
     (nr.neo-color.override {
       color1 = "${config.lib.stylix.colors.base0F}";
       color2 = "${config.lib.stylix.colors.base0D}";
