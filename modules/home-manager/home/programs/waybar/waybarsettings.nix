@@ -120,10 +120,10 @@ in {
           m = 30;
         };
         interval = 30;
-        format = "󰾆 {used}GB";
-        format-m = "󰾅 {used}GB";
-        format-h = "󰓅 {used}GB";
-        format-c = " {used}GB";
+        format = "󰾆 {used:0.1f}GB";
+        format-m = "󰾅 {used:0.1f}GB";
+        format-h = "󰓅 {used:0.1f}GB";
+        format-c = " {used:0.1f}GB";
         format-alt = "󰾆 {percentage}%";
         max-length = 10;
         tooltip = true;
