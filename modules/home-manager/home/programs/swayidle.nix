@@ -14,9 +14,9 @@
         command = "${pkgs.swaylock}/bin/swaylock -fF";
       }
       {
-        timeout = 605;
-        command = "${inputs.nix-relic.inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland}/bin/hyprctl dispatch dpms off";
-        resumeCommand = "${inputs.nix-relic.inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland}/bin/hyprctl dispatch dpms on";
+        timeout = 10;
+        command = "${inputs.nix-relic.inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland}/bin/hyprctl dispatch 'hl.dispatch(hl.dsp.dpms({ action = \"disable\" }))'";
+        resumeCommand = "${inputs.nix-relic.inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland}/bin/hyprctl dispatch 'hl.dispatch(hl.dsp.dpms({ action = \"enable\" }))'";
       }
     ];
   };
