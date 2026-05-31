@@ -61,17 +61,17 @@ in {
         tooltip = false;
         default-submap = "default";
         always-on = true;
-        on-scroll-up = "hyprctl dispatch workspace -1";
-        on-scroll-down = "hyprctl dispatch workspace +1";
+        on-scroll-up = "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e-1\" })'";
+        on-scroll-down = "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e+1\" })'";
       };
 
       "hyprland/workspaces" = {
         all-outputs = true;
         active-only = false;
-        on-click = "activate";
+        on-click = "hyprctl dispatch 'hl.dsp.focus({workspace = {name}})'";
         disable-scroll = false;
-        on-scroll-up = "hyprctl dispatch workspace -1";
-        on-scroll-down = "hyprctl dispatch workspace +1";
+        on-scroll-up = "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e-1\" })'";
+        on-scroll-down = "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e+1\" })'";
         persistent-workspaces = {
         };
       };
@@ -166,7 +166,6 @@ in {
           ];
         };
         tooltip-format = "{icon} {desc} // {volume}%";
-        # on-click = ''hyprctl dispatch exec "[float; size 960 560]" kitty tmux_pulse.sh'';
         on-click = "pwvucontrol -t 4";
       };
       "battery" = {
@@ -196,7 +195,6 @@ in {
         format = "{source_volume}% {format_source}";
         format-source = "󰍬";
         format-source-muted = "󰍭";
-        # on-click = ''hyprctl dispatch exec "[float; size 960 560]" kitty tmux_pulse.sh'';
         on-click = "pwvucontrol -t 3";
 
         tooltip-format = "{format_source} {source_desc} // {source_volume}%";
@@ -247,7 +245,7 @@ in {
         exec = "waycava.sh stdout --stb 3";
         on-click = "playerctl --player=mpd play-pause";
         on-click-right = ''
-          hyprctl dispatch exec '[float; size 888 559] ${playerCmd}'
+          hyprctl dispatch 'hl.exec_cmd("${playerCmd}", {float = true, size = { 888, 559 })'
         '';
         on-scroll-down = "playerctl --player=mpd next";
         on-scroll-up = "playerctl --player=mpd previous";
