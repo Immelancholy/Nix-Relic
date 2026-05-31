@@ -18,7 +18,7 @@
     /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.exec_cmd("uwsm app -- kitty --class fastfetch kitty @ launch --type overlay --env class=fastfetch", { workspace = "1 silent", float = true, size = {590, 383}, move = {10, 42} })'
     /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.exec_cmd("${playerCmd}", { workspace = "1 silent", float = true, size = {888, 559}, move = {610, 42} })'
   '';
-  inherit (lib.generators) mkLuaInLine;
+  inherit (lib.generators) mkLuaInline;
 in {
   home.packages = [
     launches
@@ -37,13 +37,13 @@ in {
           {
             _args = [
               "escape"
-              (mkLuaInLine "hl.dsp.submap(\"reset\")")
+              (mkLuaInline "hl.dsp.submap(\"reset\")")
             ];
           }
           {
             _args = [
-              (mkLuaInLine "mod .. \" + P\"")
-              (mkLuaInLine "hl.dsp.submap(\"reset\")")
+              (mkLuaInline "mod .. \" + P\"")
+              (mkLuaInline "hl.dsp.submap(\"reset\")")
             ];
           }
         ];
@@ -51,7 +51,7 @@ in {
           {
             _args = [
               "P"
-              (mkLuaInLine "hl.dsp.exec_cmd(playerctl .. \" play-pause\")")
+              (mkLuaInline "hl.dsp.exec_cmd(playerctl .. \" play-pause\")")
             ];
           }
         ];
@@ -59,25 +59,25 @@ in {
           {
             _args = [
               "O"
-              (mkLuaInLine "hl.dsp.exec_cmd(\"uwsm-app -- playerVol inc\")")
+              (mkLuaInline "hl.dsp.exec_cmd(\"uwsm-app -- playerVol inc\")")
             ];
           }
           {
             _args = [
               "I"
-              (mkLuaInLine "hl.dsp.exec_cmd(\"uwsm-app -- playerVol dec\")")
+              (mkLuaInline "hl.dsp.exec_cmd(\"uwsm-app -- playerVol dec\")")
             ];
           }
           {
             _args = [
               "SHIFT + O"
-              (mkLuaInLine "hl.dsp.exec_cmd(playerctl .. \" next\")")
+              (mkLuaInline "hl.dsp.exec_cmd(playerctl .. \" next\")")
             ];
           }
           {
             _args = [
               "SHIFT + I"
-              (mkLuaInLine "hl.dsp.exec_cmd(playerctl .. \" previous\")")
+              (mkLuaInline "hl.dsp.exec_cmd(playerctl .. \" previous\")")
             ];
           }
         ];
@@ -87,190 +87,190 @@ in {
       bindm = [
         {
           _args = [
-            (mkLuaInLine "mod .. \" + mouse:272\"")
-            (mkLuaInLine "hl.dsp.window.drag()")
+            (mkLuaInline "mod .. \" + mouse:272\"")
+            (mkLuaInline "hl.dsp.window.drag()")
           ];
         }
         {
           _args = [
-            (mkLuaInLine "mod .. \" + mouse:273\"")
-            (mkLuaInLine "hl.dsp.window.resize()")
+            (mkLuaInline "mod .. \" + mouse:273\"")
+            (mkLuaInline "hl.dsp.window.resize()")
           ];
         }
       ];
       bind = [
         {
           _args = [
-            (mkLuaInLine "mod .. \" + B\"")
-            (mkLuaInLine "hl.dsp.exec_cmd(\"binds.sh\")")
+            (mkLuaInline "mod .. \" + B\"")
+            (mkLuaInline "hl.dsp.exec_cmd(\"binds.sh\")")
           ];
         }
         {
           _args = [
-            (mkLuaInLine "mod .. \" + W\"")
-            (mkLuaInLine "hl.dsp.widnwo.float({action = \"toggle\" }))")
+            (mkLuaInline "mod .. \" + W\"")
+            (mkLuaInline "hl.dsp.widnwo.float({action = \"toggle\" }))")
           ];
         }
         {
           _args = [
             "Pause"
-            (mkLuaInLine "hl.dsp.exec_cmd(playerctl .. \" play-pause\")")
+            (mkLuaInline "hl.dsp.exec_cmd(playerctl .. \" play-pause\")")
           ];
         }
         {
           _args = [
-            (mkLuaInLine "mod .. \" + T\"")
-            (mkLuaInLine "hl.dsp.exec_cmd(term)")
+            (mkLuaInline "mod .. \" + T\"")
+            (mkLuaInline "hl.dsp.exec_cmd(term)")
           ];
         }
         {
           _args = [
-            (mkLuaInLine "mods .. \" + T\"")
-            (mkLuaInLine "hl.dsp.exec_cmd(term .. \" --class tmux tmux\")")
+            (mkLuaInline "mods .. \" + T\"")
+            (mkLuaInline "hl.dsp.exec_cmd(term .. \" --class tmux tmux\")")
           ];
         }
         {
           _args = [
-            (mkLuaInLine "mods .. \" + F\"")
-            (mkLuaInLine "hl.dsp.exec_cmd(browser)")
+            (mkLuaInline "mods .. \" + F\"")
+            (mkLuaInline "hl.dsp.exec_cmd(browser)")
           ];
         }
         {
           _args = [
-            (mkLuaInLine "mods .. \" + E\"")
-            (mkLuaInLine "hl.dsp.exec_cmd(files)")
+            (mkLuaInline "mods .. \" + E\"")
+            (mkLuaInline "hl.dsp.exec_cmd(files)")
           ];
         }
         {
           _args = [
-            (mkLuaInLine "mods .. \" + grave\"")
-            (mkLuaInLine "hl.dsp.exec_cmd(menu)")
+            (mkLuaInline "mods .. \" + grave\"")
+            (mkLuaInline "hl.dsp.exec_cmd(menu)")
           ];
         }
         {
           _args = [
             "Alt + Return"
-            (mkLuaInLine "hl.dsp.fullscreen({ mode = \"fullscreen\" action = \"toggle\" })")
+            (mkLuaInline "hl.dsp.fullscreen({ mode = \"fullscreen\" action = \"toggle\" })")
           ];
         }
         {
           _args = [
             "Alt + Shift + Return"
-            (mkLuaInLine "hl.dsp.fullscreen({ mode = \"maximized\" action = \"toggle\" })")
+            (mkLuaInline "hl.dsp.fullscreen({ mode = \"maximized\" action = \"toggle\" })")
           ];
         }
         {
           _args = [
-            (mkLuaInLine "mod .. \" + Tab\"")
-            (mkLuaInLine "hl.dsp.exec_cmd(\"rofi -show window -modi window\")")
+            (mkLuaInline "mod .. \" + Tab\"")
+            (mkLuaInline "hl.dsp.exec_cmd(\"rofi -show window -modi window\")")
           ];
         }
         {
           _args = [
-            (mkLuaInLine "mods .. \" + U\"")
-            (mkLuaInLine "hl.dsp.exec_cmd(\"launches\")")
+            (mkLuaInline "mods .. \" + U\"")
+            (mkLuaInline "hl.dsp.exec_cmd(\"launches\")")
           ];
         }
         {
           _args = [
-            (mkLuaInLine "mod .. \" + Delete\"")
-            (mkLuaInLine "hl.dsp.exec_cmd(\"rofi -show power-menu -modi power-menu:rofi-power-menu\")")
+            (mkLuaInline "mod .. \" + Delete\"")
+            (mkLuaInline "hl.dsp.exec_cmd(\"rofi -show power-menu -modi power-menu:rofi-power-menu\")")
           ];
         }
         {
           _args = [
             "Ctrl + Shift + L"
-            (mkLuaInLine "hl.dsp.exec_cmd(\"uwsm-app -- swaylock -fF\")")
+            (mkLuaInline "hl.dsp.exec_cmd(\"uwsm-app -- swaylock -fF\")")
           ];
         }
         {
           _args = [
-            (mkLuaInLine "mod .. \" + N\"")
-            (mkLuaInLine "hl.dsp.exec_cmd(\"rofi -show Cliphist -modi Cliphist:cliphist.sh\")")
+            (mkLuaInline "mod .. \" + N\"")
+            (mkLuaInline "hl.dsp.exec_cmd(\"rofi -show Cliphist -modi Cliphist:cliphist.sh\")")
           ];
         }
         {
           _args = [
-            (mkLuaInLine "mod .. \" + Apostrophe\"")
-            (mkLuaInLine "hl.dsp.exec_cmd(\"rofi -show emoji nerdy -modi emoji,nerdy\")")
+            (mkLuaInline "mod .. \" + Apostrophe\"")
+            (mkLuaInline "hl.dsp.exec_cmd(\"rofi -show emoji nerdy -modi emoji,nerdy\")")
           ];
         }
         {
           _args = [
-            (mkLuaInLine "mod .. \" + G\"")
-            (mkLuaInLine "hl.dsp.exec_cmd(\"hyprgame\")")
+            (mkLuaInline "mod .. \" + G\"")
+            (mkLuaInline "hl.dsp.exec_cmd(\"hyprgame\")")
           ];
         }
         {
           _args = [
             "Ctrl + Shift + Escape"
-            (mkLuaInLine "hl.dsp.exec_cmd(term .. \" --title btop btop\")")
+            (mkLuaInline "hl.dsp.exec_cmd(term .. \" --title btop btop\")")
           ];
         }
         {
           _args = [
             "XF86Calculator"
-            (mkLuaInLine "hl.dsp.exec_cmd(\"uwsm-app -- qalculate-gtk\")")
+            (mkLuaInline "hl.dsp.exec_cmd(\"uwsm-app -- qalculate-gtk\")")
           ];
         }
         {
           _args = [
-            (mkLuaInLine "mod .. \" + Colon\"")
-            (mkLuaInLine "hl.dsp.exec_cmd(\"uwsm-app -- qalculate-gtk\")")
+            (mkLuaInline "mod .. \" + Colon\"")
+            (mkLuaInline "hl.dsp.exec_cmd(\"uwsm-app -- qalculate-gtk\")")
           ];
         }
         {
           _args = [
-            (mkLuaInLine "moda .. \" + S\"")
-            (mkLuaInLine "hl.dsp.workspace.toggle_special(\"magic\")")
+            (mkLuaInline "moda .. \" + S\"")
+            (mkLuaInline "hl.dsp.workspace.toggle_special(\"magic\")")
           ];
         }
         {
           _args = [
-            (mkLuaInLine "mods .. \" + S\"")
-            (mkLuaInLine "hl.dsp.window.move({ workspace = \"special:magic\" })")
+            (mkLuaInline "mods .. \" + S\"")
+            (mkLuaInline "hl.dsp.window.move({ workspace = \"special:magic\" })")
           ];
         }
         {
           _args = [
             "Print"
-            (mkLuaInLine "hl.dsp.exec_cmd(\"hyprquickframe\")")
+            (mkLuaInline "hl.dsp.exec_cmd(\"hyprquickframe\")")
           ];
         }
         {
           _args = [
-            (mkLuaInLine "mod .. \" + O\"")
-            (mkLuaInLine "hl.dsp.exec_cmd(\"uwsm-app -- hyprpicker -a\")")
+            (mkLuaInline "mod .. \" + O\"")
+            (mkLuaInline "hl.dsp.exec_cmd(\"uwsm-app -- hyprpicker -a\")")
           ];
         }
         {
           _args = [
-            (mkLuaInLine "mods .. \" + P\"")
-            (mkLuaInLine "hl.dsp.submap(\"player\")")
+            (mkLuaInline "mods .. \" + P\"")
+            (mkLuaInline "hl.dsp.submap(\"player\")")
           ];
         }
         {
           _args = [
-            (mkLuaInLine "mods .. \" + Comma\"")
-            (mkLuaInLine "hl.dsp.window.move({ monitor = \"+1\", follow = true })")
+            (mkLuaInline "mods .. \" + Comma\"")
+            (mkLuaInline "hl.dsp.window.move({ monitor = \"+1\", follow = true })")
           ];
         }
         {
           _args = [
-            (mkLuaInLine "mods .. \" + Period\"")
-            (mkLuaInLine "hl.dsp.window.move({ monitor = \"-1\", follow = true })")
+            (mkLuaInline "mods .. \" + Period\"")
+            (mkLuaInline "hl.dsp.window.move({ monitor = \"-1\", follow = true })")
           ];
         }
         {
           _args = [
-            (mkLuaInLine "mod .. \" + Comma\"")
-            (mkLuaInLine "hl.dsp.focus({ monitor = \"+1\" })")
+            (mkLuaInline "mod .. \" + Comma\"")
+            (mkLuaInline "hl.dsp.focus({ monitor = \"+1\" })")
           ];
         }
         {
           _args = [
-            (mkLuaInLine "mod .. \" + Period\"")
-            (mkLuaInLine "hl.dsp.focus({ monitor = \"-1\" })")
+            (mkLuaInline "mod .. \" + Period\"")
+            (mkLuaInline "hl.dsp.focus({ monitor = \"-1\" })")
           ];
         }
       ];
@@ -278,25 +278,25 @@ in {
         {
           _args = [
             "XF86AudioPlay"
-            (mkLuaInLine "hl.dsp.exec_cmd(playerctl .. \" play-pause\")")
+            (mkLuaInline "hl.dsp.exec_cmd(playerctl .. \" play-pause\")")
           ];
         }
         {
           _args = [
             "XF86AudioNext"
-            (mkLuaInLine "hl.dsp.exec_cmd(playerctl .. \" next\")")
+            (mkLuaInline "hl.dsp.exec_cmd(playerctl .. \" next\")")
           ];
         }
         {
           _args = [
             "XF86AudioPrev"
-            (mkLuaInLine "hl.dsp.exec_cmd(playerctl .. \" next\")")
+            (mkLuaInline "hl.dsp.exec_cmd(playerctl .. \" next\")")
           ];
         }
         {
           _args = [
             "XF86AudioMute"
-            (mkLuaInLine "hl.dsp.exec_cmd(\" uwsm-app -- playerVol mute\")")
+            (mkLuaInline "hl.dsp.exec_cmd(\" uwsm-app -- playerVol mute\")")
           ];
         }
       ];
@@ -304,13 +304,13 @@ in {
         {
           _args = [
             "XF86AudioLowerVolume"
-            (mkLuaInLine "hl.dsp.exec_cmd(\" uwsm-app -- playerVol dec\")")
+            (mkLuaInline "hl.dsp.exec_cmd(\" uwsm-app -- playerVol dec\")")
           ];
         }
         {
           _args = [
             "XF86AudioRaiseVolume"
-            (mkLuaInLine "hl.dsp.exec_cmd(\" uwsm-app -- playerVol inc\")")
+            (mkLuaInline "hl.dsp.exec_cmd(\" uwsm-app -- playerVol inc\")")
           ];
         }
         "Shift, XF86AudioLowerVolume, exec, uwsm-app -- playerVol dec-mini" # decrease volume of mpd
@@ -318,25 +318,25 @@ in {
         {
           _args = [
             "Shift + XF86AudioLowerVolume"
-            (mkLuaInLine "hl.dsp.exec_cmd(\" uwsm-app -- playerVol dec-mini\")")
+            (mkLuaInline "hl.dsp.exec_cmd(\" uwsm-app -- playerVol dec-mini\")")
           ];
         }
         {
           _args = [
             "Shift + XF86AudioRaiseVolume"
-            (mkLuaInLine "hl.dsp.exec_cmd(\" uwsm-app -- playerVol inc-mini\")")
+            (mkLuaInline "hl.dsp.exec_cmd(\" uwsm-app -- playerVol inc-mini\")")
           ];
         }
         {
           _args = [
             "XF86MonBrightnessUp"
-            (mkLuaInLine "hl.dsp.exec_cmd(\" uwsm-app -- brightness inc\")")
+            (mkLuaInline "hl.dsp.exec_cmd(\" uwsm-app -- brightness inc\")")
           ];
         }
         {
           _args = [
             "XF86MonBrightnessDown"
-            (mkLuaInLine "hl.dsp.exec_cmd(\" uwsm-app -- brightness dec\")")
+            (mkLuaInline "hl.dsp.exec_cmd(\" uwsm-app -- brightness dec\")")
           ];
         }
       ];

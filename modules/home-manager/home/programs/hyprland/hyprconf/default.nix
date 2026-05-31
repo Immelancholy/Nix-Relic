@@ -1,5 +1,5 @@
 {lib, ...}: let
-  inherit (lib.generators) mkLuaInLine;
+  inherit (lib.generators) mkLuaInline;
 in {
   wayland.windowManager.hyprland = {
     sourceFirst = true;
@@ -35,7 +35,7 @@ in {
         _var = "uwsm app -- zen-beta.desktop";
       };
       playerctl = {
-        _var = mkLuaInLine "\"uwsm app -- playerctl --player=\" .. player";
+        _var = mkLuaInline "\"uwsm app -- playerctl --player=\" .. player";
       };
       discord = {
         _var = "uwsm app -- vesktop.desktop";

@@ -1,5 +1,5 @@
 {lib, ...}: let
-  inherit (lib.generators) mkLuaInLine;
+  inherit (lib.generators) mkLuaInline;
 in {
   wayland.windowManager.hyprland.settings = {
     window_rule = [

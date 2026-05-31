@@ -26,8 +26,8 @@ in {
         bind = [
           {
             _args = [
-              (mkLuaInLine "mod .. \" + I\"")
-              (mkLuaInLine "hl.dsp.easymotion({ action = \"hyprctl dispatch focuswindow\", address = {} })")
+              (mkLuaInline "mod .. \" + I\"")
+              (mkLuaInline "hl.dsp.easymotion({ action = \"hyprctl dispatch focuswindow\", address = {} })")
             ];
           }
         ];

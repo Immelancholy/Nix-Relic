@@ -5,7 +5,7 @@
 }:
 with lib; let
   cfg = config.wayland.windowManager.hyprland.layout.scrolling;
-  inherit (lib.generators) mkLuaInLine;
+  inherit (lib.generators) mkLuaInline;
 in {
   options.wayland.windowManager.hyprland.layout.scrolling = {
     enable = mkOption {
@@ -23,170 +23,170 @@ in {
         bind = [
           {
             _args = [
-              (mkLuaInLine "mod .. \" + Z\"")
-              (mkLuaInLine "hl.dsp.groups.toggle()")
+              (mkLuaInline "mod .. \" + Z\"")
+              (mkLuaInline "hl.dsp.groups.toggle()")
             ];
           }
           {
             _args = [
-              (mkLuaInLine "mod .. \" + Q\"")
-              (mkLuaInLine "hl.dsp.window.close()")
+              (mkLuaInline "mod .. \" + Q\"")
+              (mkLuaInline "hl.dsp.window.close()")
             ];
           }
           {
             _args = [
-              (mkLuaInLine "mod .. \" + R\"")
-              (mkLuaInLine "hl.dsp.layout(\"colresize 0.5\")")
+              (mkLuaInline "mod .. \" + R\"")
+              (mkLuaInline "hl.dsp.layout(\"colresize 0.5\")")
             ];
           }
           {
             _args = [
-              (mkLuaInLine "mod .. \" + H\"")
-              (mkLuaInLine "hl.dsp.layout(\"move -col\")")
+              (mkLuaInline "mod .. \" + H\"")
+              (mkLuaInline "hl.dsp.layout(\"move -col\")")
             ];
           }
           {
             _args = [
-              (mkLuaInLine "mod .. \" + J\"")
-              (mkLuaInLine "hl.dsp.focus({direction = \"down\"})")
+              (mkLuaInline "mod .. \" + J\"")
+              (mkLuaInline "hl.dsp.focus({direction = \"down\"})")
             ];
           }
           {
             _args = [
-              (mkLuaInLine "mod .. \" + K\"")
-              (mkLuaInLine "hl.dsp.focus({direction = \"up\"})")
+              (mkLuaInline "mod .. \" + K\"")
+              (mkLuaInline "hl.dsp.focus({direction = \"up\"})")
             ];
           }
           {
             _args = [
-              (mkLuaInLine "mod .. \" + L\"")
-              (mkLuaInLine "hl.dsp.layout(\"move +col\")")
+              (mkLuaInline "mod .. \" + L\"")
+              (mkLuaInline "hl.dsp.layout(\"move +col\")")
             ];
           }
           {
             _args = [
-              (mkLuaInLine "mods .. \" + H\"")
-              (mkLuaInLine "hl.dsp.focus({workspace = \"r-1\"})")
+              (mkLuaInline "mods .. \" + H\"")
+              (mkLuaInline "hl.dsp.focus({workspace = \"r-1\"})")
             ];
           }
           {
             _args = [
-              (mkLuaInLine "mods .. \" + L\"")
-              (mkLuaInLine "hl.dsp.focus({workspace = \"r+1\"})")
+              (mkLuaInline "mods .. \" + L\"")
+              (mkLuaInline "hl.dsp.focus({workspace = \"r+1\"})")
             ];
           }
           {
             _args = [
-              (mkLuaInLine "mods .. \" + J\"")
-              (mkLuaInLine "hl.dsp.focus({workspace = \"empty\"})")
+              (mkLuaInline "mods .. \" + J\"")
+              (mkLuaInline "hl.dsp.focus({workspace = \"empty\"})")
             ];
           }
           {
             _args = [
-              (mkLuaInLine "mod .. \" + Left\"")
-              (mkLuaInLine "hl.dsp.layout(\"move -col\")")
+              (mkLuaInline "mod .. \" + Left\"")
+              (mkLuaInline "hl.dsp.layout(\"move -col\")")
             ];
           }
           {
             _args = [
-              (mkLuaInLine "mod .. \" + Down\"")
-              (mkLuaInLine "hl.dsp.focus({direction = \"down\"})")
+              (mkLuaInline "mod .. \" + Down\"")
+              (mkLuaInline "hl.dsp.focus({direction = \"down\"})")
             ];
           }
           {
             _args = [
-              (mkLuaInLine "mod .. \" + Up\"")
-              (mkLuaInLine "hl.dsp.focus({direction = \"up\"})")
+              (mkLuaInline "mod .. \" + Up\"")
+              (mkLuaInline "hl.dsp.focus({direction = \"up\"})")
             ];
           }
           {
             _args = [
-              (mkLuaInLine "mod .. \" + Right\"")
-              (mkLuaInLine "hl.dsp.layout(\"move +col\")")
+              (mkLuaInline "mod .. \" + Right\"")
+              (mkLuaInline "hl.dsp.layout(\"move +col\")")
             ];
           }
           {
             _args = [
-              (mkLuaInLine "mods .. \" + Left\"")
-              (mkLuaInLine "hl.dsp.focus({workspace = \"r-1\"})")
+              (mkLuaInline "mods .. \" + Left\"")
+              (mkLuaInline "hl.dsp.focus({workspace = \"r-1\"})")
             ];
           }
           {
             _args = [
-              (mkLuaInLine "mods .. \" + Right\"")
-              (mkLuaInLine "hl.dsp.focus({workspace = \"r+1\"})")
+              (mkLuaInline "mods .. \" + Right\"")
+              (mkLuaInline "hl.dsp.focus({workspace = \"r+1\"})")
             ];
           }
           {
             _args = [
-              (mkLuaInLine "mods .. \" + Down\"")
-              (mkLuaInLine "hl.dsp.focus({workspace = \"empty\"})")
+              (mkLuaInline "mods .. \" + Down\"")
+              (mkLuaInline "hl.dsp.focus({workspace = \"empty\"})")
             ];
           }
           {
             _args = [
-              (mkLuaInLine "mod .. \" + mouse_up\"")
-              (mkLuaInLine "hl.dsp.layout(\"focus left\")")
+              (mkLuaInline "mod .. \" + mouse_up\"")
+              (mkLuaInline "hl.dsp.layout(\"focus left\")")
             ];
           }
           {
             _args = [
-              (mkLuaInLine "mod .. \" + mouse_down\"")
-              (mkLuaInLine "hl.dsp.layout(\"focus right\")")
+              (mkLuaInline "mod .. \" + mouse_down\"")
+              (mkLuaInline "hl.dsp.layout(\"focus right\")")
             ];
           }
           {
             _args = [
-              (mkLuaInLine "mods .. \" + mouse_up\"")
-              (mkLuaInLine "hl.dsp.focus({workspace = \"e-1\"})")
+              (mkLuaInline "mods .. \" + mouse_up\"")
+              (mkLuaInline "hl.dsp.focus({workspace = \"e-1\"})")
             ];
           }
           {
             _args = [
-              (mkLuaInLine "mods .. \" + mouse_down\"")
-              (mkLuaInLine "hl.dsp.focus({workspace = \"e+1\"})")
+              (mkLuaInline "mods .. \" + mouse_down\"")
+              (mkLuaInline "hl.dsp.focus({workspace = \"e+1\"})")
             ];
           }
           {
             _args = [
-              (mkLuaInLine "modc .. \" + H\"")
-              (mkLuaInLine "hl.dsp.group.prev())")
+              (mkLuaInline "modc .. \" + H\"")
+              (mkLuaInline "hl.dsp.group.prev())")
             ];
           }
           {
             _args = [
-              (mkLuaInLine "modc .. \" + L\"")
-              (mkLuaInLine "hl.dsp.group.next())")
+              (mkLuaInline "modc .. \" + L\"")
+              (mkLuaInline "hl.dsp.group.next())")
             ];
           }
           {
             _args = [
-              (mkLuaInLine "modc .. \" + Left\"")
-              (mkLuaInLine "hl.dsp.group.prev())")
+              (mkLuaInline "modc .. \" + Left\"")
+              (mkLuaInline "hl.dsp.group.prev())")
             ];
           }
           {
             _args = [
-              (mkLuaInLine "modc .. \" + Right\"")
-              (mkLuaInLine "hl.dsp.group.next())")
+              (mkLuaInline "modc .. \" + Right\"")
+              (mkLuaInline "hl.dsp.group.next())")
             ];
           }
           {
             _args = [
-              (mkLuaInLine "mod .. \" + Y\"")
-              (mkLuaInLine "hl.dsp.window.fullscreen({ mode = \"maximized\", action = \"toggle\" }))")
+              (mkLuaInline "mod .. \" + Y\"")
+              (mkLuaInline "hl.dsp.window.fullscreen({ mode = \"maximized\", action = \"toggle\" }))")
             ];
           }
           {
             _args = [
-              (mkLuaInLine "mod .. \" + C\"")
-              (mkLuaInLine "hl.dsp.layout(\"colresize +conf\")")
+              (mkLuaInline "mod .. \" + C\"")
+              (mkLuaInline "hl.dsp.layout(\"colresize +conf\")")
             ];
           }
           {
             _args = [
-              (mkLuaInLine "mods .. \" + C\"")
-              (mkLuaInLine "hl.dsp.layout(\"colresize -conf\")")
+              (mkLuaInline "mods .. \" + C\"")
+              (mkLuaInline "hl.dsp.layout(\"colresize -conf\")")
             ];
           }
         ];
