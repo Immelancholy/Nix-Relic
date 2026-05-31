@@ -12,11 +12,11 @@
     dunstctl close-all
     pkill localsend
     /run/current-system/sw/bin/hyprctl eval 'hl.dispatch(function()\
-      hl.dsp.window.signal({ signal = 9, class = "^(${playerClass})$" })\
-      hl.dsp.window.signal({ signal = 9, class = "^(neo)$" })\
-      hl.dsp.window.signal({ signal = 9, class = "^(fastfetch)$" })\
-      hl.dsp.window.signal({ signal = 9, class = "^(btop)$" })\
-      hl.dsp.window.signal({ signal = 9, class = "^(cava)$" })\
+      hl.dsp.window.kill({ window = "^(${playerClass})$" })\
+      hl.dsp.window.kill({ window = "^(neo)$" })\
+      hl.dsp.window.kill({ window = "^(fastfetch)$" })\
+      hl.dsp.window.kill({ window = "^(btop)$" })\
+      hl.dsp.window.kill({ window = "^(cava)$" })\
       hl.dsp.exec_cmd("uwsm app -- kitty --class cava cava.sh", { workspace = "1 silent", float = true, size = {888, 462}, move = {610, 609} })\
       hl.dsp.exec_cmd("uwsm app -- kitty --class btop btop.sh", { workspace = "1 silent", float = true, size = {590, 637}, move = {10, 433} })\
       hl.dsp.exec_cmd("uwsm app -- kitty --class neo neo.sh", { workspace = "1 silent", float = true, size = {402, 1030}, move = {1508, 42} })\
