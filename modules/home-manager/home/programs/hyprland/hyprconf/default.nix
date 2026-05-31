@@ -75,6 +75,6 @@ in {
   imports = [
     ./binds.nix
     ./theme
-    ./windowrules.nix
+    ./rules.nix
   ];
 }

@@ -48,7 +48,7 @@ in {
           hyprctl dispatch 'hl.dsp.window.signal({ signal = "9", class = "^(fastfetch)$" })'
           hyprctl dispatch 'hl.dsp.window.signal({ signal = "9", class = "^(btop)$" })'
           hyprctl dispatch 'hl.dsp.window.signal({ signal = "9", class = "^(cava)$" })'
-          hyprctl dispatch 'hl.dsp.exec_cmd("${playerCmd}", { workspace = "1 silent", float = true, size = {1118, 710}, move = {401, 145} })'
+          hyprctl dispatch 'hl.dsp.exec_cmd("${playerCmdGame}", { workspace = "1 silent", float = true, size = {1118, 710}, move = {401, 145} })'
       '';
       extraLaunch = ''
         hyprctl dispatch 'hl.dsp.window.signal({ signal = "9", class = "^(${playerClass})$" })'
