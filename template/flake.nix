@@ -7,9 +7,6 @@
     nix-relic = {
       url = "github:Immelancholy/Nix-Relic/stable";
     };
-    nixfmt = {
-      url = "github:NixOS/nixfmt";
-    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -30,7 +27,7 @@
     ];
     forAllSystems = nixpkgs.lib.genAttrs systems;
   in {
-    formatter = forAllSystems (system: inputs.nixfmt.packages.${system}.default);
+    formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.nixfmt-tree);
 
     overlays = import ./overlays {inherit inputs;};
 

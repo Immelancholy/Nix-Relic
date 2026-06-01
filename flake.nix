@@ -4,9 +4,6 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-26.05";
-    nixfmt = {
-      url = "github:NixOS/nixfmt";
-    };
     nur = {
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -104,7 +101,7 @@
   in {
     packages = forAllSystems (system: import ./packages nixpkgs.legacyPackages.${system});
 
-    formatter = forAllSystems (system: inputs.nixfmt.packages.${system}.default);
+    formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.nixfmt-tree);
 
     overlays.default = overlay;
 
