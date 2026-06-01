@@ -32,7 +32,6 @@ in
     profiles."${user}.Default".mods = [
       "642854b5-88b4-4c40-b256-e035532109df" # transparent
       "599a1599-e6ab-4749-ab22-de533860de2c" # pimp pip
-      "a6335949-4465-4b71-926c-4a52d34bc9c0" # better find bar
       "906c6915-5677-48ff-9bfc-096a02a72379" # floating status
     ];
     policies.ExtensionSettings = mkExtensionSettings {
