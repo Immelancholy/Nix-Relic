@@ -51,9 +51,9 @@ in {
       hl.bind(moda .. " + G", hl.dsp.workspace.toggle_special("game"))
       hl.bind(moda .. " + V", hl.dsp.workspace.toggle_special("video"))
       hl.bind(moda .. " + W", hl.dsp.workspace.toggle_special("win"))
-      hl.bind(moda .. " + G", hl.dsp.window.move({ workspace = "special:game" }))
-      hl.bind(moda .. " + V", hl.dsp.window.move({ workspace = "special:video" }))
-      hl.bind(moda .. " + W", hl.dsp.window.move({ workspace = "special:win" }))
+      hl.bind(mods .. " + G", hl.dsp.window.move({ workspace = "special:game" }))
+      hl.bind(mods .. " + V", hl.dsp.window.move({ workspace = "special:video" }))
+      hl.bind(mods .. " + W", hl.dsp.window.move({ workspace = "special:win" }))
 
       hl.bind(
       mod .. " + U",
