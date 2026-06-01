@@ -360,233 +360,236 @@ in
 
     hl.bind(mod .. " + A", hl.dsp.submap("manage"))
     hl.define_submap("manage", function()
-    hl.bind("ALT + Return", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
-    hl.bind("ALT + SHIFT + Return", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
-    hl.bind("W", hl.dsp.window.float({ action = "toggle" }))
-    hl.bind(
-      "P",
-      layout_bind({
-              scrolling = hl.dsp.layout("promote"),
-      })
-    )
-    hl.bind("O", hl.dsp.window.pin())
-    hl.bind("Y", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
-    hl.bind(
-      "H",
-      layout_bind({
-              scrolling = hl.dsp.layout("move -col"),
-              dwindle = hl.dsp.focus({ direction = "left" }),
-              monocle = hl.dsp.focus({ direction = "left" }),
-              master = hl.dsp.focus({ direction = "left" }),
-      })
-    )
-    hl.bind("J", hl.dsp.focus({ direction = "down" }))
-    hl.bind("K", hl.dsp.focus({ direction = "up" }))
-    hl.bind(
-      "L",
-      layout_bind({
-              scrolling = hl.dsp.layout("move +col"),
-              dwindle = hl.dsp.focus({ direction = "right" }),
-              monocle = hl.dsp.focus({ direction = "right" }),
-              master = hl.dsp.focus({ direction = "right" }),
-      })
-    )
-    hl.bind(
-      "Left",
-      layout_bind({
-              scrolling = hl.dsp.layout("move -col"),
-              dwindle = hl.dsp.focus({ direction = "left" }),
-              monocle = hl.dsp.focus({ direction = "left" }),
-              master = hl.dsp.focus({ direction = "left" }),
-      })
-    )
-    hl.bind("Down", hl.dsp.focus({ direction = "down" }))
-    hl.bind("Up", hl.dsp.focus({ direction = "up" }))
-    hl.bind(
-      "Right",
-      layout_bind({
-              scrolling = hl.dsp.layout("move +col"),
-              dwindle = hl.dsp.focus({ direction = "right" }),
-              monocle = hl.dsp.focus({ direction = "right" }),
-              master = hl.dsp.focus({ direction = "right" }),
-      })
-    )
-    hl.bind(
-      mod .. " + C",
-      layout_bind({
-              scrolling = hl.dsp.layout("colresize +conf"),
-      })
-    )
-    hl.bind(
-      mods .. " + C",
-      layout_bind({
-              scrolling = hl.dsp.layout("colresize -conf"),
-      })
-    )
-    hl.bind("R", hl.dsp.layout("colresize 0.5"))
-    hl.bind(mod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
-    hl.bind(mod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
-
-    hl.bind(mods .. " + H", hl.dsp.window.move({ workspace = "r-1" }))
-    hl.bind(mods .. " + L", hl.dsp.window.move({ workspace = "r+1" }))
-    hl.bind(mods .. " + J", hl.dsp.window.move({ workspace = "empty" }))
-    hl.bind(mods .. " + Left", hl.dsp.window.move({ workspace = "r-1" }))
-    hl.bind(mods .. " + Right", hl.dsp.window.move({ workspace = "r+1" }))
-    hl.bind(mods .. " + Down", hl.dsp.window.move({ workspace = "empty" }))
-
-    hl.bind("CTRL + H", hl.dsp.group.prev())
-    hl.bind("CTRL + L", hl.dsp.group.next())
-    hl.bind("CTRL + Left", hl.dsp.group.prev())
-    hl.bind("CTRL + Right", hl.dsp.group.next())
-
-    hl.bind(mod .. " + H", hl.dsp.window.move({ direction = "left" }))
-    hl.bind(mod .. " + J", hl.dsp.window.move({ direction = "down" }))
-    hl.bind(mod .. " + K", hl.dsp.window.move({ direction = "up" }))
-    hl.bind(mod .. " + L", hl.dsp.window.move({ direction = "right" }))
-    hl.bind(mod .. " + Left", hl.dsp.window.move({ direction = "left" }))
-    hl.bind(mod .. " + Down", hl.dsp.window.move({ direction = "down" }))
-    hl.bind(mod .. " + Up", hl.dsp.window.move({ direction = "up" }))
-    hl.bind(mod .. " + Right", hl.dsp.window.move({ direction = "right" }))
-
-    hl.bind(modc .. " + H", hl.dsp.window.move({ direction = "left", group_aware = true }))
-    hl.bind(modc .. " + J", hl.dsp.window.move({ direction = "down", group_aware = true }))
-    hl.bind(modc .. " + K", hl.dsp.window.move({ direction = "up", group_aware = true }))
-    hl.bind(modc .. " + L", hl.dsp.window.move({ direction = "right", group_aware = true }))
-    hl.bind(modc .. " + Left", hl.dsp.window.move({ direction = "left", group_aware = true }))
-    hl.bind(modc .. " + Down", hl.dsp.window.move({ direction = "down", group_aware = true }))
-    hl.bind(modc .. " + Up", hl.dsp.window.move({ direction = "up", group_aware = true }))
-    hl.bind(modc .. " + Right", hl.dsp.window.move({ direction = "right", group_aware = true }))
-
-    hl.bind(
-      mod .. " + U",
-      layout_bind({
-              scrolling = hl.dsp.layout("swapcol l"), -- Scrolling: swap column with left one
-              dwindle = hl.dsp.layout("swapsplit"), -- Dwindle: swap window split
-              monocle = hl.dsp.layout("cycleprev"), -- Monocle and master: cycle prev window
-              master = hl.dsp.layout("cycleprev"),
-      })
-    )
-    hl.bind(
-      mod .. " + I",
-      layout_bind({
-              scrolling = hl.dsp.layout("swapcol r"), -- Scrolling: swap column with left one
-              dwindle = hl.dsp.layout("togglesplit"), -- Dwindle: swap window split
-              monocle = hl.dsp.layout("cyclenext"), -- Monocle and master: cycle prev window
-              master = hl.dsp.layout("cyclenext"),
-      })
-    )
-    hl.bind(
-      mod .. " + mouse_up",
-      layout_bind({
-              scrolling = hl.dsp.layout("focus left"),
-              dwindle = hl.dsp.focus({ workspace = "e-1" }),
-              monocle = hl.dsp.focus({ workspace = "e-1" }),
-              master = hl.dsp.focus({ workspace = "e-1" }),
-      })
-    )
-    hl.bind(
-      mod .. " + mouse_down",
-      layout_bind({
-              scrolling = hl.dsp.layout("focus right"),
-              dwindle = hl.dsp.focus({ workspace = "e+1" }),
-              monocle = hl.dsp.focus({ workspace = "e+1" }),
-              master = hl.dsp.focus({ workspace = "e+1" }),
-      })
-    )
-    hl.bind(
-      mods .. " + mouse_up",
-      layout_bind({
-              scrolling = hl.dsp.focus({ workspace = "e-1" }),
-      })
-    )
-    hl.bind(
-      mods .. " + mouse_down",
-      layout_bind({
-              scrolling = hl.dsp.focus({ workspace = "e+1" }),
-      })
-    )
-
-    hl.bind(mod .. " + R", hl.dsp.submap("resize"))
-    hl.define_submap("resize", function()
       hl.bind("ALT + Return", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
       hl.bind("ALT + SHIFT + Return", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
-      hl.bind("Y", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
+      hl.bind(mod .. " + Y", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
+      hl.bind(mod .. " + W", hl.dsp.window.float({ action = "toggle" }))
+      hl.bind(mod .." + D", hl.dsp.focus({ window = "floating" }))
+      hl.bind(mod .." + S", hl.dsp.focus({ window = "tiled" }))
+      hl.bind("O", hl.dsp.window.pin())
       hl.bind(
-              mod .. " + C",
-              layout_bind({
-                      scrolling = hl.dsp.layout("colresize +conf"),
-              })
+        "P",
+        layout_bind({
+                scrolling = hl.dsp.layout("promote"),
+        })
       )
       hl.bind(
-              mods .. " + C",
-              layout_bind({
-                      scrolling = hl.dsp.layout("colresize -conf"),
-              })
+        "H",
+        layout_bind({
+                scrolling = hl.dsp.layout("move -col"),
+                dwindle = hl.dsp.focus({ direction = "left" }),
+                monocle = hl.dsp.focus({ direction = "left" }),
+                master = hl.dsp.focus({ direction = "left" }),
+        })
+      )
+      hl.bind("J", hl.dsp.focus({ direction = "down" }))
+      hl.bind("K", hl.dsp.focus({ direction = "up" }))
+      hl.bind(
+        "L",
+        layout_bind({
+                scrolling = hl.dsp.layout("move +col"),
+                dwindle = hl.dsp.focus({ direction = "right" }),
+                monocle = hl.dsp.focus({ direction = "right" }),
+                master = hl.dsp.focus({ direction = "right" }),
+        })
       )
       hl.bind(
-          "U", layout_bind({
-                      scrolling = hl.dsp.layout("colresize -0.1"),
-          })
+        "Left",
+        layout_bind({
+                scrolling = hl.dsp.layout("move -col"),
+                dwindle = hl.dsp.focus({ direction = "left" }),
+                monocle = hl.dsp.focus({ direction = "left" }),
+                master = hl.dsp.focus({ direction = "left" }),
+        })
+      )
+      hl.bind("Down", hl.dsp.focus({ direction = "down" }))
+      hl.bind("Up", hl.dsp.focus({ direction = "up" }))
+      hl.bind(
+        "Right",
+        layout_bind({
+                scrolling = hl.dsp.layout("move +col"),
+                dwindle = hl.dsp.focus({ direction = "right" }),
+                monocle = hl.dsp.focus({ direction = "right" }),
+                master = hl.dsp.focus({ direction = "right" }),
+        })
       )
       hl.bind(
-          "I", layout_bind({
-                      scrolling = hl.dsp.layout("colresize +0.1"),
-          })
+        mod .. " + C",
+        layout_bind({
+                scrolling = hl.dsp.layout("colresize +conf"),
+        })
       )
       hl.bind(
-              "R",
-              layout_bind({
-                      scrolling = hl.dsp.layout("colresize 0.5"),
-              })
+        mods .. " + C",
+        layout_bind({
+                scrolling = hl.dsp.layout("colresize -conf"),
+        })
       )
-      hl.bind("W", hl.dsp.window.float({ action = "toggle" }))
-      hl.bind("D", hl.dsp.focus({ window = "floating" }))
-      hl.bind("S", hl.dsp.focus({ window = "tiled" }))
+      hl.bind("R", hl.dsp.layout("colresize 0.5"))
+      hl.bind(mod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
+      hl.bind(mod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
 
-      hl.bind("Left", hl.dsp.window.resize({ x = -10, y = 0, relative = true }), {repeating = true})
-      hl.bind("Down", hl.dsp.window.resize({ x = 0, y = 10, relative = true }), {repeating = true})
-      hl.bind("Up", hl.dsp.window.resize({ x = 0, y = -10, relative = true }), {repeating = true})
-      hl.bind("Right", hl.dsp.window.resize({ x = 10, y = 0, relative = true }), {repeating = true})
+      hl.bind(mods .. " + H", hl.dsp.window.move({ workspace = "r-1" }))
+      hl.bind(mods .. " + L", hl.dsp.window.move({ workspace = "r+1" }))
+      hl.bind(mods .. " + J", hl.dsp.window.move({ workspace = "empty" }))
+      hl.bind(mods .. " + Left", hl.dsp.window.move({ workspace = "r-1" }))
+      hl.bind(mods .. " + Right", hl.dsp.window.move({ workspace = "r+1" }))
+      hl.bind(mods .. " + Down", hl.dsp.window.move({ workspace = "empty" }))
 
-      hl.bind("H", hl.dsp.window.resize({ x = -10, y = 0, relative = true }), {repeating = true})
-      hl.bind("J", hl.dsp.window.resize({ x = 0, y = 10, relative = true }), {repeating = true})
-      hl.bind("K", hl.dsp.window.resize({ x = 0, y = -10, relative = true }), {repeating = true})
-      hl.bind("L", hl.dsp.window.resize({ x = 10, y = 0, relative = true }), {repeating = true})
+      hl.bind("CTRL + H", hl.dsp.group.prev())
+      hl.bind("CTRL + L", hl.dsp.group.next())
+      hl.bind("CTRL + Left", hl.dsp.group.prev())
+      hl.bind("CTRL + Right", hl.dsp.group.next())
 
-      hl.bind(mod .. " + M", hl.dsp.submap("move"))
-      hl.bind(mod .. " + R", hl.dsp.submap("manage"))
-      hl.bind(mod .. " + A", hl.dsp.submap("manage"))
-      hl.bind("escape", hl.dsp.submap("manage"))
-    end)
+      hl.bind(mod .. " + H", hl.dsp.window.move({ direction = "left" }))
+      hl.bind(mod .. " + J", hl.dsp.window.move({ direction = "down" }))
+      hl.bind(mod .. " + K", hl.dsp.window.move({ direction = "up" }))
+      hl.bind(mod .. " + L", hl.dsp.window.move({ direction = "right" }))
+      hl.bind(mod .. " + Left", hl.dsp.window.move({ direction = "left" }))
+      hl.bind(mod .. " + Down", hl.dsp.window.move({ direction = "down" }))
+      hl.bind(mod .. " + Up", hl.dsp.window.move({ direction = "up" }))
+      hl.bind(mod .. " + Right", hl.dsp.window.move({ direction = "right" }))
 
-    hl.bind(mod .. " + M", hl.dsp.submap("move"))
-    hl.define_submap("move", function()
-      hl.bind("ALT + Return", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
-      hl.bind("ALT + SHIFT + Return", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
-      hl.bind("Y", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
-      hl.bind("W", hl.dsp.window.float({ action = "toggle" }))
-      hl.bind("D", hl.dsp.focus({ window = "floating" }))
-      hl.bind("S", hl.dsp.focus({ window = "tiled" }))
+      hl.bind(modc .. " + H", hl.dsp.window.move({ direction = "left", group_aware = true }))
+      hl.bind(modc .. " + J", hl.dsp.window.move({ direction = "down", group_aware = true }))
+      hl.bind(modc .. " + K", hl.dsp.window.move({ direction = "up", group_aware = true }))
+      hl.bind(modc .. " + L", hl.dsp.window.move({ direction = "right", group_aware = true }))
+      hl.bind(modc .. " + Left", hl.dsp.window.move({ direction = "left", group_aware = true }))
+      hl.bind(modc .. " + Down", hl.dsp.window.move({ direction = "down", group_aware = true }))
+      hl.bind(modc .. " + Up", hl.dsp.window.move({ direction = "up", group_aware = true }))
+      hl.bind(modc .. " + Right", hl.dsp.window.move({ direction = "right", group_aware = true }))
 
-      hl.bind("Left", hl.dsp.window.move({ x = -10, y = 0, relative = true }), {repeating = true})
-      hl.bind("Down", hl.dsp.window.move({ x = 0, y = 10, relative = true }), {repeating = true})
-      hl.bind("Up", hl.dsp.window.move({ x = 0, y = -10, relative = true }), {repeating = true})
-      hl.bind("Right", hl.dsp.window.move({ x = 10, y = 0, relative = true }), {repeating = true})
-
-      hl.bind("H", hl.dsp.window.move({ x = -10, y = 0, relative = true }), {repeating = true})
-      hl.bind("J", hl.dsp.window.move({ x = 0, y = 10, relative = true }), {repeating = true})
-      hl.bind("K", hl.dsp.window.move({ x = 0, y = -10, relative = true }), {repeating = true})
-      hl.bind("L", hl.dsp.window.move({ x = 10, y = 0, relative = true }), {repeating = true})
+      hl.bind(
+        mod .. " + U",
+        layout_bind({
+                scrolling = hl.dsp.layout("swapcol l"), -- Scrolling: swap column with left one
+                dwindle = hl.dsp.layout("swapsplit"), -- Dwindle: swap window split
+                monocle = hl.dsp.layout("cycleprev"), -- Monocle and master: cycle prev window
+                master = hl.dsp.layout("cycleprev"),
+        })
+      )
+      hl.bind(
+        mod .. " + I",
+        layout_bind({
+                scrolling = hl.dsp.layout("swapcol r"), -- Scrolling: swap column with left one
+                dwindle = hl.dsp.layout("togglesplit"), -- Dwindle: swap window split
+                monocle = hl.dsp.layout("cyclenext"), -- Monocle and master: cycle prev window
+                master = hl.dsp.layout("cyclenext"),
+        })
+      )
+      hl.bind(
+        mod .. " + mouse_up",
+        layout_bind({
+                scrolling = hl.dsp.layout("focus left"),
+                dwindle = hl.dsp.focus({ workspace = "e-1" }),
+                monocle = hl.dsp.focus({ workspace = "e-1" }),
+                master = hl.dsp.focus({ workspace = "e-1" }),
+        })
+      )
+      hl.bind(
+        mod .. " + mouse_down",
+        layout_bind({
+                scrolling = hl.dsp.layout("focus right"),
+                dwindle = hl.dsp.focus({ workspace = "e+1" }),
+                monocle = hl.dsp.focus({ workspace = "e+1" }),
+                master = hl.dsp.focus({ workspace = "e+1" }),
+        })
+      )
+      hl.bind(
+        mods .. " + mouse_up",
+        layout_bind({
+                scrolling = hl.dsp.focus({ workspace = "e-1" }),
+        })
+      )
+      hl.bind(
+        mods .. " + mouse_down",
+        layout_bind({
+                scrolling = hl.dsp.focus({ workspace = "e+1" }),
+        })
+      )
 
       hl.bind(mod .. " + R", hl.dsp.submap("resize"))
-      hl.bind(mod .. " + M", hl.dsp.submap("manage"))
-      hl.bind(mod .. " + A", hl.dsp.submap("manage"))
-      hl.bind("escape", hl.dsp.submap("manage"))
-    end)
+      hl.define_submap("resize", function()
+        hl.bind("ALT + Return", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
+        hl.bind("ALT + SHIFT + Return", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
+        hl.bind(mod .. " + Y", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
+        hl.bind(mod .. " + W", hl.dsp.window.float({ action = "toggle" }))
+        hl.bind(mod .." + D", hl.dsp.focus({ window = "floating" }))
+        hl.bind(mod .." + S", hl.dsp.focus({ window = "tiled" }))
 
-    hl.bind("Escape", hl.dsp.submap("reset"))
+        hl.bind(
+                mod .. " + C",
+                layout_bind({
+                        scrolling = hl.dsp.layout("colresize +conf"),
+                })
+        )
+        hl.bind(
+                mods .. " + C",
+                layout_bind({
+                        scrolling = hl.dsp.layout("colresize -conf"),
+                })
+        )
+        hl.bind(
+            "U", layout_bind({
+                        scrolling = hl.dsp.layout("colresize -0.1"),
+            })
+        )
+        hl.bind(
+            "I", layout_bind({
+                        scrolling = hl.dsp.layout("colresize +0.1"),
+            })
+        )
+        hl.bind(
+                "R",
+                layout_bind({
+                        scrolling = hl.dsp.layout("colresize 0.5"),
+                })
+        )
 
-    hl.bind(mod .. " + A", hl.dsp.submap("reset"))
+        hl.bind(mod .. " + Left", hl.dsp.window.resize({ x = -10, y = 0, relative = true }), {repeating = true})
+        hl.bind(mod .. " + Down", hl.dsp.window.resize({ x = 0, y = 10, relative = true }), {repeating = true})
+        hl.bind(mod .. " + Up", hl.dsp.window.resize({ x = 0, y = -10, relative = true }), {repeating = true})
+        hl.bind(mod .. " + Right", hl.dsp.window.resize({ x = 10, y = 0, relative = true }), {repeating = true})
+
+        hl.bind(mod .. " + H", hl.dsp.window.resize({ x = -10, y = 0, relative = true }), {repeating = true})
+        hl.bind(mod .. " + J", hl.dsp.window.resize({ x = 0, y = 10, relative = true }), {repeating = true})
+        hl.bind(mod .. " + K", hl.dsp.window.resize({ x = 0, y = -10, relative = true }), {repeating = true})
+        hl.bind(mod .. " + L", hl.dsp.window.resize({ x = 10, y = 0, relative = true }), {repeating = true})
+
+        hl.bind(mod .. " + M", hl.dsp.submap("move"))
+        hl.bind(mod .. " + R", hl.dsp.submap("manage"))
+        hl.bind(mod .. " + A", hl.dsp.submap("manage"))
+        hl.bind("escape", hl.dsp.submap("manage"))
+      end)
+
+      hl.bind(mod .. " + M", hl.dsp.submap("move"))
+      hl.define_submap("move", function()
+        hl.bind("ALT + Return", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
+        hl.bind("ALT + SHIFT + Return", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
+        hl.bind(mod .. " + Y", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
+        hl.bind(mod .. " + W", hl.dsp.window.float({ action = "toggle" }))
+        hl.bind(mod .. " + D", hl.dsp.focus({ window = "floating" }))
+        hl.bind(mod .. " + S", hl.dsp.focus({ window = "tiled" }))
+
+        hl.bind(mod .. " + Left", hl.dsp.window.move({ x = -10, y = 0, relative = true }), {repeating = true})
+        hl.bind(mod .. " + Down", hl.dsp.window.move({ x = 0, y = 10, relative = true }), {repeating = true})
+        hl.bind(mod .. " + Up", hl.dsp.window.move({ x = 0, y = -10, relative = true }), {repeating = true})
+        hl.bind(mod .. " + Right", hl.dsp.window.move({ x = 10, y = 0, relative = true }), {repeating = true})
+
+        hl.bind(mod .. " + H", hl.dsp.window.move({ x = -10, y = 0, relative = true }), {repeating = true})
+        hl.bind(mod .. " + J", hl.dsp.window.move({ x = 0, y = 10, relative = true }), {repeating = true})
+        hl.bind(mod .. " + K", hl.dsp.window.move({ x = 0, y = -10, relative = true }), {repeating = true})
+        hl.bind(mod .. " + L", hl.dsp.window.move({ x = 10, y = 0, relative = true }), {repeating = true})
+
+        hl.bind(mod .. " + R", hl.dsp.submap("resize"))
+        hl.bind(mod .. " + M", hl.dsp.submap("manage"))
+        hl.bind(mod .. " + A", hl.dsp.submap("manage"))
+        hl.bind("escape", hl.dsp.submap("manage"))
+      end)
+
+      hl.bind("Escape", hl.dsp.submap("reset"))
+
+      hl.bind(mod .. " + A", hl.dsp.submap("reset"))
     end)
   '';
 }
