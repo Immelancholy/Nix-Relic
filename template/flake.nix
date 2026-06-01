@@ -9,7 +9,6 @@
     };
     nixfmt = {
       url = "github:NixOS/nixfmt";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
       url = "github:nix-community/home-manager";
