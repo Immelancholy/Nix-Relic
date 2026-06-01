@@ -43,6 +43,7 @@
       		class = "^(.*[Ee]pisode \\d+ - mpv*.)$",
       	},
       	workspace = "special:video",
+        opacity = "1.0 override 0.8 override",
       	fullscreen = true,
       })
       hl.window_rule({
@@ -251,6 +252,7 @@
       		class = "^(mpv)$",
       	},
       	float = true,
+        opacity = "1.0 override 0.8 override",
       })
       hl.window_rule({
       	match = {

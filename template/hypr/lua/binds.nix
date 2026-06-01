@@ -89,6 +89,8 @@ in {
 
       hl.bind(mod .. " + Q", hl.dsp.window.close())
       hl.bind(mod .. " + W", hl.dsp.window.float({ action = "toggle" }))
+      hl.bind(mod .. " + D", hl.dsp.focus({ window = "floating" }))
+      hl.bind(mod .. " + S", hl.dsp.focus({ window = "tiled" }))
       hl.bind("Pause", hl.dsp.exec_cmd(playerctl .. " play-pause"))
       hl.bind(mod .. " + T", hl.dsp.exec_cmd(term))
       hl.bind(mods .. " + T", hl.dsp.exec_cmd(term .. " --class tmux tmux"))
@@ -257,22 +259,6 @@ in {
       hl.bind("SHIFT + I", hl.dsp.exec_cmd(playerctl .. " previous"), { repeating = true, locked = true })
       hl.bind("P", hl.dsp.exec_cmd(playerctl .. " play-pause"), { locked = true })
       end)
-
-      -- hl.bind(mod .. " + I", hl.dsp.easymotion({ action = "hyprctl dispatch focuswindow", address = {} }))
-      -- hl.config({
-      --   plugin = {
-      --     easymotion = {
-      --       textcolor = "rgba(59f8fdff)",
-      --       bgcolor = "rgba(0a1e23bb)",
-      --       bordercolor = {colors = { "rgb(27a195)", "rgb(de51f6)", "rgb(dbf5ff)" }, angle = 40 },
-      --       blur = 1,
-      --       textpadding = 8,
-      --       textsize = 35,
-      --       bordersize = 2,
-      --       fullscreen_action = "maximize"
-      --     }
-      --   }
-      -- })
 
       hl.bind(
       mod .. " + R",
@@ -522,8 +508,8 @@ in {
         })
       )
 
-      hl.bind(mod .. " + R", hl.dsp.submap("resizeTiled"))
-      hl.define_submap("resizeTiled", function()
+      hl.bind(mod .. " + R", hl.dsp.submap("resize"))
+      hl.define_submap("resize", function()
         hl.bind("ALT + Return", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
         hl.bind("ALT + SHIFT + Return", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
         hl.bind("Y", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
@@ -539,166 +525,66 @@ in {
                         scrolling = hl.dsp.layout("colresize -conf"),
                 })
         )
-        hl.bind("W", hl.dsp.window.float({ action = "toggle" }))
+        hl.bind(
+            "U", layout_bind({
+                        scrolling = hl.dsp.layout("colresize -0.1"),
+            })
+        )
+        hl.bind(
+            "I", layout_bind({
+                        scrolling = hl.dsp.layout("colresize +0.1"),
+            })
+        )
         hl.bind(
                 "R",
                 layout_bind({
                         scrolling = hl.dsp.layout("colresize 0.5"),
                 })
         )
-        hl.bind(
-                "Left",
-                layout_bind({
-                        scrolling = hl.dsp.layout("colresize -0.1"),
-                        { repeating = true },
-                        dwindle = hl.dsp.window.resize({ x = -10, y = 0, relative = true }),
-                        { repeating = true },
-                        monocle = hl.dsp.window.resize({ x = -10, y = 0, relative = true }),
-                        { repeating = true },
-                        master = hl.dsp.window.resize({ x = -10, y = 0, relative = true }),
-                        { repeating = true },
-                })
-        )
-        hl.bind("Down", hl.dsp.window.resize({ x = 0, y = 10, relative = true }))
-        hl.bind("Up", hl.dsp.window.resize({ x = 0, y = -10, relative = true }))
-        hl.bind(
-                "Right",
-                layout_bind({
-                        scrolling = hl.dsp.layout("colresize +0.1"),
-                        { repeating = true },
-                        dwindle = hl.dsp.window.resize({ x = 10, y = 0, relative = true }),
-                        { repeating = true },
-                        monocle = hl.dsp.window.resize({ x = 10, y = 0, relative = true }),
-                        { repeating = true },
-                        master = hl.dsp.window.resize({ x = 10, y = 0, relative = true }),
-                        { repeating = true },
-                })
-        )
-        hl.bind(
-                "H",
-                layout_bind({
-                        scrolling = hl.dsp.layout("colresize -0.1"),
-                        { repeating = true },
-                        dwindle = hl.dsp.window.resize({ x = -10, y = 0, relative = true }),
-                        { repeating = true },
-                        monocle = hl.dsp.window.resize({ x = -10, y = 0, relative = true }),
-                        { repeating = true },
-                        master = hl.dsp.window.resize({ x = -10, y = 0, relative = true }),
-                        { repeating = true },
-                })
-        )
-        hl.bind("J", hl.dsp.window.resize({ x = 0, y = 10, relative = true }))
-        hl.bind("K", hl.dsp.window.resize({ x = 0, y = -10, relative = true }))
-        hl.bind(
-                "L",
-                layout_bind({
-                        scrolling = hl.dsp.layout("colresize +0.1"),
-                        { repeating = true },
-                        dwindle = hl.dsp.window.resize({ x = "+10", y = 0, relative = true }),
-                        { repeating = true },
-                        monocle = hl.dsp.window.resize({ x = "+10", y = 0, relative = true }),
-                        { repeating = true },
-                        master = hl.dsp.window.resize({ x = "+10", y = 0, relative = true }),
-                        { repeating = true },
-                })
-        )
+        hl.bind("W", hl.dsp.window.float({ action = "toggle" }))
+        hl.bind("D", hl.dsp.focus({ window = "floating" }))
+        hl.bind("S", hl.dsp.focus({ window = "tiled" }))
+
+        hl.bind("Left", hl.dsp.window.resize({ x = -10, y = 0, relative = true }), {repeating = true})
+        hl.bind("Down", hl.dsp.window.resize({ x = 0, y = 10, relative = true }), {repeating = true})
+        hl.bind("Up", hl.dsp.window.resize({ x = 0, y = -10, relative = true }), {repeating = true})
+        hl.bind("Right", hl.dsp.window.resize({ x = 10, y = 0, relative = true }), {repeating = true})
+
+        hl.bind("H", hl.dsp.window.resize({ x = -10, y = 0, relative = true }), {repeating = true})
+        hl.bind("J", hl.dsp.window.resize({ x = 0, y = 10, relative = true }), {repeating = true})
+        hl.bind("K", hl.dsp.window.resize({ x = 0, y = -10, relative = true }), {repeating = true})
+        hl.bind("L", hl.dsp.window.resize({ x = 10, y = 0, relative = true }), {repeating = true})
+
+        hl.bind(mod .. " + M", hl.dsp.submap("move"))
         hl.bind(mod .. " + R", hl.dsp.submap("manage"))
-        hl.bind(mods .. " + R", hl.dsp.submap("resize"))
+        hl.bind(mod .. " + A", hl.dsp.submap("manage"))
         hl.bind("escape", hl.dsp.submap("manage"))
       end)
 
-      -- hl.bind(mods .." + R", hl.dsp.submap("resize"))
-      -- hl.define_submap("resize", function()
-      --   hl.bind("ALT + Return", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }),
-      --   hl.bind("ALT + SHIFT + Return", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }),
-      --   hl.bind("Y", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }),
-      -- hl.bind(
-      -- 	mod .. " + C",
-      -- 	layout_bind({
-      -- 		scrolling = hl.dsp.layout("colresize +conf"),
-      -- 		dwindle = "",
-      -- 		monocle = "",
-      -- 		master = "",
-      -- 	})
-      -- )
-      -- hl.bind(
-      -- 	mods .. " + C",
-      -- 	layout_bind({
-      -- 		scrolling = hl.dsp.layout("colresize -conf"),
-      -- 		dwindle = "",
-      -- 		monocle = "",
-      -- 		master = "",
-      -- 	})
-      -- )
-      --   hl.bind("W", hl.dsp.window.float({ action = "toggle" })),
-      --   hl.bind("R", hl.dsp.layout("colresize 0.5")),
-      --   binde = , Right, resizeactive, 30 0
-      --   binde = , Left, resizeactive, 30 0
-      --   binde = , Left, moveactive, -30 0
-      --   binde = , Up, resizeactive, 0 30
-      --   binde = , Up, moveactive, 0 -30
-      --   binde = , Down, resizeactive, 0 30
-      --
-      --   binde = , L, resizeactive, 30 0
-      --   binde = , H, resizeactive, 30 0
-      --   binde = , H, moveactive, -30 0
-      --   binde = , K, resizeactive, 0 30
-      --   binde = , K, moveactive, 0 -30
-      --   binde = , J, resizeactive, 0 30
-      --
-      --   binde = SHIFT, Right, resizeactive, -30 0
-      --   binde = SHIFT, Right, moveactive, 30 0
-      --   binde = SHIFT, Left, resizeactive, -30 0
-      --   binde = SHIFT, Up, resizeactive, 0 -30
-      --   binde = SHIFT, Down, resizeactive, 0 -30
-      --   binde = SHIFT, Down, moveactive, 0 30
-      --
-      --   binde = SHIFT, L, resizeactive, -30 0
-      --   binde = SHIFT, L, moveactive, 30 0
-      --   binde = SHIFT, H, resizeactive, -30 0
-      --   binde = SHIFT, K, resizeactive, 0 -30
-      --   binde = SHIFT, J, resizeactive, 0 -30
-      --   binde = SHIFT, J, moveactive, 0 30
-      --   bind = $mods, R, submap, manage
-      --   bind = $mod, R, submap, resizeTiled
-      --   bind = , escape, submap, manage
-      -- end)
+      hl.bind(mod .. " + M", hl.dsp.submap("move"))
+      hl.define_submap("move", function()
+        hl.bind("ALT + Return", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
+        hl.bind("ALT + SHIFT + Return", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
+        hl.bind("Y", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
+        hl.bind("W", hl.dsp.window.float({ action = "toggle" }))
+        hl.bind("D", hl.dsp.focus({ window = "floating" }))
+        hl.bind("S", hl.dsp.focus({ window = "tiled" }))
 
-      -- bind = , M, submap, move
-      --   submap = move
-      --   hl.bind("ALT + Return", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }),
-      --   hl.bind("ALT + SHIFT + Return", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }),
-      --   hl.bind("Y", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }),
-      -- hl.bind(
-      -- 	mod .. " + C",
-      -- 	layout_bind({
-      -- 		scrolling = hl.dsp.layout("colresize +conf"),
-      -- 		dwindle = "",
-      -- 		monocle = "",
-      -- 		master = "",
-      -- 	})
-      -- )
-      -- hl.bind(
-      -- 	mods .. " + C",
-      -- 	layout_bind({
-      -- 		scrolling = hl.dsp.layout("colresize -conf"),
-      -- 		dwindle = "",
-      -- 		monocle = "",
-      -- 		master = "",
-      -- 	})
-      -- )
-      --   hl.bind("W", hl.dsp.window.float({ action = "toggle" })),
-      --   hl.bind("R", hl.dsp.layout("colresize 0.5")),
-      --   binde = , Left, moveactive, 10 0
-      --   binde = , Right, moveactive, -10 0
-      --   binde = , Up, moveactive, 0 -10
-      --   binde = , Down, moveactive, 0 10
-      --   binde = , H, moveactive, 30 0
-      --   binde = , L, moveactive, -30 0
-      --   binde = , K, moveactive, 0 -30
-      --   binde = , J, moveactive, 0 30
-      --   bind = , M, submap, manage
-      --   bind = , escape, submap, manage
+        hl.bind("Left", hl.dsp.window.move({ x = -10, y = 0, relative = true }), {repeating = true})
+        hl.bind("Down", hl.dsp.window.move({ x = 0, y = 10, relative = true }), {repeating = true})
+        hl.bind("Up", hl.dsp.window.move({ x = 0, y = -10, relative = true }), {repeating = true})
+        hl.bind("Right", hl.dsp.window.move({ x = 10, y = 0, relative = true }), {repeating = true})
+
+        hl.bind("H", hl.dsp.window.move({ x = -10, y = 0, relative = true }), {repeating = true})
+        hl.bind("J", hl.dsp.window.move({ x = 0, y = 10, relative = true }), {repeating = true})
+        hl.bind("K", hl.dsp.window.move({ x = 0, y = -10, relative = true }), {repeating = true})
+        hl.bind("L", hl.dsp.window.move({ x = 10, y = 0, relative = true }), {repeating = true})
+
+        hl.bind(mod .. " + R", hl.dsp.submap("resize"))
+        hl.bind(mod .. " + M", hl.dsp.submap("manage"))
+        hl.bind(mod .. " + A", hl.dsp.submap("manage"))
+        hl.bind("escape", hl.dsp.submap("manage"))
+      end)
 
       hl.bind("Escape", hl.dsp.submap("reset"))
 
