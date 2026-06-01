@@ -4,9 +4,11 @@
   config,
   ...
 }:
-with lib; let
+with lib;
+let
   cfg = config.services.qpwgraph;
-in {
+in
+{
   options.services.qpwgraph = {
     enable = mkEnableOption "Enable qpwgraph service";
   };
@@ -14,8 +16,8 @@ in {
     systemd.user.services."qpwgraph" = {
       enable = true;
       name = "qpwgraph";
-      after = ["graphical-session.target"];
-      wantedBy = ["graphical-session.target"];
+      after = [ "graphical-session.target" ];
+      wantedBy = [ "graphical-session.target" ];
       path = [
         "${pkgs.qpwgraph}"
       ];

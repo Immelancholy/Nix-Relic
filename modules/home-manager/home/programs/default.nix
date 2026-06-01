@@ -2,7 +2,8 @@
   pkgs,
   inputs,
   ...
-}: {
+}:
+{
   home.shell = {
     enableZshIntegration = true;
   };

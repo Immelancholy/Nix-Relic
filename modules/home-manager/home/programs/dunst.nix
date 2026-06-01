@@ -1,4 +1,5 @@
-{config, ...}: let
+{ config, ... }:
+let
   base = "#${config.lib.stylix.colors.base00}";
   mantle = "#${config.lib.stylix.colors.base01}";
   surface0 = "#${config.lib.stylix.colors.base02}";
@@ -15,7 +16,8 @@
   blue = "#${config.lib.stylix.colors.base0D}";
   mauve = "#${config.lib.stylix.colors.base0E}";
   flamingo = "#${config.lib.stylix.colors.base0F}";
-in {
+in
+{
   services.dunst = {
     enable = true;
     settings = {

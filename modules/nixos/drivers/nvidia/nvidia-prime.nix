@@ -3,10 +3,12 @@
   config,
   ...
 }:
-with lib; let
+with lib;
+let
   cfg = config.drivers.nvidia.prime;
   busIDType = lib.types.strMatching "([[:print:]]+[:@][0-9]{1,3}:[0-9]{1,2}:[0-9])?";
-in {
+in
+{
   options.drivers.nvidia.prime = {
     enable = mkEnableOption "Enable Nvidia Prime Offload";
     nvidiaBusId = mkOption {

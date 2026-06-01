@@ -4,7 +4,8 @@
   config,
   nixosConfig,
   ...
-}: let
+}:
+let
   cavaCfg = pkgs.nr.cavaCfg.override {
     color1 = "#${config.lib.stylix.colors.base0E}";
     color2 = "#${config.lib.stylix.colors.base0D}";
@@ -16,10 +17,11 @@
     framerate = "${builtins.toString nixosConfig.nix-relic.cava.framerate}";
     noiseReduction = "${builtins.toString nixosConfig.nix-relic.cava.noiseReduction}";
   };
-in {
+in
+{
   home = {
     activation = {
-      cavaCfg = lib.hm.dag.entryAfter ["writeBoundary"] ''
+      cavaCfg = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
         run cavaCfg
       '';
     };

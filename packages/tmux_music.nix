@@ -1,4 +1,4 @@
-{writeShellScriptBin, ...}:
+{ writeShellScriptBin, ... }:
 writeShellScriptBin "tmusic" ''
   sesh="Music"
 

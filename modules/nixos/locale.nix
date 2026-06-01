@@ -3,9 +3,11 @@
   config,
   ...
 }:
-with lib; let
+with lib;
+let
   cfg = config;
-in {
+in
+{
   options = {
     locale = mkOption {
       type = types.str;

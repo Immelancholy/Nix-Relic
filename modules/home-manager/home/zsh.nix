@@ -2,9 +2,11 @@
   pkgs,
   inputs,
   ...
-}: let
+}:
+let
   nrm = inputs.nix-relic.inputs;
-in {
+in
+{
   # home.file.".p10k.zsh" = {
   #   source = ./p10k.zsh;
   # };
@@ -28,7 +30,11 @@ in {
     history.size = 10000;
     history.ignoreAllDups = true;
     history.path = "$HOME/.zsh_history";
-    history.ignorePatterns = ["rm *" "pkill *" "cp *"];
+    history.ignorePatterns = [
+      "rm *"
+      "pkill *"
+      "cp *"
+    ];
     plugins = [
       {
         name = "zsh-256color";
@@ -45,81 +51,77 @@ in {
         file = "share/zsh-nix-shell/nix-shell.plugin.zsh";
       }
     ];
-    initContent =
-      /*
-      bash
-      */
-      ''
-        bindkey -e
+    initContent = /* bash */ ''
+      bindkey -e
 
-        last_repo=
-        INIT=1
-        onefetch_img () {
-          image="$(find ~/Pictures/fastfetch_logos/ -name "*.jpg" -o -name "*.png" 2> /dev/null | shuf -n1)"
-          if [ "$image" ]; then
-            onefetch --image-protocol kitty -i "$image"
-          else
-            onefetch
-          fi
-        }
-        check_tmux () {
-          if [ -z $TMUX ]; then
-            fetch_cmd=onefetch_img
-          else
-            fetch_cmd=fastfetch
-          fi
-        }
-        check_tmux
-        check_for_repo () {
-          current_repo=$(git rev-parse --show-toplevel 2> /dev/null)
-          if [ "$current_repo" ] && \
-            [ "$current_repo" != "$last_repo" ]; then
-            clear
-            $fetch_cmd
-            git pull --rebase
-            last_repo=$current_repo
-            INIT=0
-            GIT=1
-          elif [ $INIT = 1 ]; then
-            pokeget fennekin --hide-name
-            GIT=0
-            INIT=0
-          elif [ ! "$current_repo" ] && \
-            [ $GIT = 1 ]; then
-            clear
-            pokeget fennekin --hide-name
-            GIT=0
-            last_repo=
-          fi
-        }
-
-        z () {
-          __zoxide_z "$@"
-          check_for_repo
-        }
-
-        zi () {
-          __zoxide_zi "$@"
-          check_for_repo
-        }
-
-        cd () {
-          builtin cd "$@" || return
-          check_for_repo
-        }
-
-        source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-        source <(fzf --zsh)
-
-        # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-
-        if [ "$class" = "fastfetch" ];
-        then
-          fastfetch --logo "$HOME"/Pictures/fastfetch_logos/Nakari.jpg
+      last_repo=
+      INIT=1
+      onefetch_img () {
+        image="$(find ~/Pictures/fastfetch_logos/ -name "*.jpg" -o -name "*.png" 2> /dev/null | shuf -n1)"
+        if [ "$image" ]; then
+          onefetch --image-protocol kitty -i "$image"
         else
-          check_for_repo
+          onefetch
         fi
-      '';
+      }
+      check_tmux () {
+        if [ -z $TMUX ]; then
+          fetch_cmd=onefetch_img
+        else
+          fetch_cmd=fastfetch
+        fi
+      }
+      check_tmux
+      check_for_repo () {
+        current_repo=$(git rev-parse --show-toplevel 2> /dev/null)
+        if [ "$current_repo" ] && \
+          [ "$current_repo" != "$last_repo" ]; then
+          clear
+          $fetch_cmd
+          git pull --rebase
+          last_repo=$current_repo
+          INIT=0
+          GIT=1
+        elif [ $INIT = 1 ]; then
+          pokeget fennekin --hide-name
+          GIT=0
+          INIT=0
+        elif [ ! "$current_repo" ] && \
+          [ $GIT = 1 ]; then
+          clear
+          pokeget fennekin --hide-name
+          GIT=0
+          last_repo=
+        fi
+      }
+
+      z () {
+        __zoxide_z "$@"
+        check_for_repo
+      }
+
+      zi () {
+        __zoxide_zi "$@"
+        check_for_repo
+      }
+
+      cd () {
+        builtin cd "$@" || return
+        check_for_repo
+      }
+
+      source ${pkgs.zsh-vi-mode}/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+      source <(fzf --zsh)
+
+      # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+      if [ "$class" = "fastfetch" ];
+      then
+        fastfetch --logo "$HOME"/Pictures/fastfetch_logos/Nakari.jpg
+      else
+        check_for_repo
+      fi
+    '';
   };
 }

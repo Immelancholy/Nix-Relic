@@ -175,7 +175,7 @@
     "context.properties" = [
       {
         name = "libpipewire-module-protocol-pulse";
-        args = {};
+        args = { };
       }
     ];
     "pulse.properties" = {

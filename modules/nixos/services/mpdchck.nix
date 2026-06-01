@@ -4,11 +4,13 @@
   config,
   ...
 }:
-with lib; let
+with lib;
+let
   inherit (pkgs.stdenv.hostPlatform) system;
   cfg = config.services.mpdchck;
-  mpdchck = pkgs.callPackage ../../../packages/mpdchck.nix {};
-in {
+  mpdchck = pkgs.callPackage ../../../packages/mpdchck.nix { };
+in
+{
   options.services.mpdchck = {
     enable = mkEnableOption "Enable mpdchck service";
     address = mkOption {
@@ -26,9 +28,9 @@ in {
     systemd.user.services."mpdchck" = {
       enable = true;
       name = "mpdchck";
-      after = ["mpd.service"];
-      wantedBy = ["default.target"];
-      script = ''${mpdchck}/bin/mpdchck.sh'';
+      after = [ "mpd.service" ];
+      wantedBy = [ "default.target" ];
+      script = "${mpdchck}/bin/mpdchck.sh";
       serviceConfig = {
         Restart = "always";
       };

@@ -1,6 +1,8 @@
-{config, ...}: let
+{ config, ... }:
+let
   user = config.home.username;
-in {
+in
+{
   programs.kitty = {
     enable = true;
     shellIntegration.enableZshIntegration = true;

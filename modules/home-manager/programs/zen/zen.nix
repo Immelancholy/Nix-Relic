@@ -3,10 +3,12 @@
   lib,
   ...
 }:
-with lib; let
+with lib;
+let
   cfg = config.programs.zen-browser;
   user = config.home.username;
-in {
+in
+{
   config = mkIf cfg.enable {
     xdg.configFile = {
       "zen/profiles.ini".text = ''

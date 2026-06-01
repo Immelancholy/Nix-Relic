@@ -1,16 +1,17 @@
 let
   associations = {
-    "inode/directory" = ["nemo.desktop"];
-    "video/mp4" = ["mpv.desktop"];
-    "video/quicktime" = ["mpv.desktop"];
-    "image/png" = ["org.gnome.Loupe.desktop"];
-    "image/jpeg" = ["org.gnome.Loupe.desktop"];
-    "application/x-gnome-saved-search" = ["nemo.desktop"];
-    "application/zip" = ["org.kde.ark.desktop"];
-    "x-scheme-handler/mpv" = ["open-in-mpv.desktop"];
-    "application/pdf" = ["org.pwmt.zathura.desktop"];
+    "inode/directory" = [ "nemo.desktop" ];
+    "video/mp4" = [ "mpv.desktop" ];
+    "video/quicktime" = [ "mpv.desktop" ];
+    "image/png" = [ "org.gnome.Loupe.desktop" ];
+    "image/jpeg" = [ "org.gnome.Loupe.desktop" ];
+    "application/x-gnome-saved-search" = [ "nemo.desktop" ];
+    "application/zip" = [ "org.kde.ark.desktop" ];
+    "x-scheme-handler/mpv" = [ "open-in-mpv.desktop" ];
+    "application/pdf" = [ "org.pwmt.zathura.desktop" ];
   };
-in {
+in
+{
   xdg = {
     mime.enable = true;
     mimeApps = {

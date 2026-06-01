@@ -4,14 +4,16 @@
   lib,
   ...
 }:
-with lib; let
+with lib;
+let
   cfg = config.drivers.nvidia;
-in {
+in
+{
   options.drivers.nvidia = {
     enable = mkOption {
       type = types.bool;
       default = false;
-      description = ''Enable Nvidia Graphics Drivers'';
+      description = "Enable Nvidia Graphics Drivers";
     };
     powerManagement = mkEnableOption "Enable power management";
     finePowerManagement = mkEnableOption "Enable fine-graned poer management for Prime Offload";
@@ -35,7 +37,10 @@ in {
       pkgs.vdpauinfo
       pkgs.vulkan-validation-layers
     ];
-    boot.blacklistedKernelModules = ["nouveau" "nova_core"];
+    boot.blacklistedKernelModules = [
+      "nouveau"
+      "nova_core"
+    ];
 
     environment.variables = {
       GBM_BACKEND = "nvidia-drm";
@@ -45,7 +50,7 @@ in {
       __GL_VRR_ALLOWED = "0";
     };
 
-    services.xserver.videoDrivers = ["nvidia"];
+    services.xserver.videoDrivers = [ "nvidia" ];
 
     hardware.graphics = {
       enable = true;

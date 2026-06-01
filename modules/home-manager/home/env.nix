@@ -3,7 +3,8 @@
   config,
   lib,
   ...
-}: {
+}:
+{
   home.sessionVariables = {
     STEAM_EXTRA_COMPAT_TOOLS_PATHS = "$HOME/.steam/root/compatibilitytools.d";
     TERMINAL = "${lib.getExe pkgs.kitty}";
@@ -17,9 +18,7 @@
   };
 
   xdg.configFile =
-    /*
-    bash
-    */
+    # bash
     {
       "uwsm/env".text = ''
         export QT_WAYLAND_DISABLE_WINDOWDECORATION=1

@@ -4,7 +4,8 @@
   osConfig,
   pkgs,
   ...
-}: let
+}:
+let
   playerClass = config.player.class;
   playerCmd = config.player.cmd;
   launches = pkgs.writeShellScriptBin "launches" ''
@@ -31,7 +32,8 @@
     notify-send "|-<(Theme Loaded)>-|"
   '';
   iconColour = osConfig.nix-relic.icons.colour;
-in {
+in
+{
   nixpkgs.overlays = lib.mkForce null;
   stylix = {
     icons = {
@@ -72,19 +74,19 @@ in {
   systemd.user.services.Theme-Reload = {
     Unit = {
       Description = "Reloads Theme";
-      PartOf = ["graphical-session.target"];
-      Requires = ["graphical-session.target"];
-      After = ["graphical-session.target"];
+      PartOf = [ "graphical-session.target" ];
+      Requires = [ "graphical-session.target" ];
+      After = [ "graphical-session.target" ];
       ConditionEnvironment = "WAYLAND_DISPLAY";
     };
     Service = {
-      ExecStart = ''${lib.getExe launches}'';
+      ExecStart = "${lib.getExe launches}";
       Type = "simple";
-      Slice = ["session.slice"];
+      Slice = [ "session.slice" ];
       Restart = "on-failure";
     };
     Install = {
-      WantedBy = ["graphical-session.target"];
+      WantedBy = [ "graphical-session.target" ];
     };
   };
 }

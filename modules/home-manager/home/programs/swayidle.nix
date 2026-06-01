@@ -2,7 +2,8 @@
   pkgs,
   inputs,
   ...
-}: {
+}:
+{
   services.swayidle = {
     enable = true;
     events = {
@@ -15,8 +16,12 @@
       }
       {
         timeout = 610;
-        command = ''${inputs.nix-relic.inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland}/bin/hyprctl eval 'hl.dispatch(hl.dsp.dpms({ action = "disable" }))'  '';
-        resumeCommand = ''${inputs.nix-relic.inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland}/bin/hyprctl eval 'hl.dispatch(hl.dsp.dpms({ action = "enable" }))'  '';
+        command = ''${
+          inputs.nix-relic.inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland
+        }/bin/hyprctl eval 'hl.dispatch(hl.dsp.dpms({ action = "disable" }))'  '';
+        resumeCommand = ''${
+          inputs.nix-relic.inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland
+        }/bin/hyprctl eval 'hl.dispatch(hl.dsp.dpms({ action = "enable" }))'  '';
       }
     ];
   };

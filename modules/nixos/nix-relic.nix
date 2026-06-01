@@ -3,9 +3,11 @@
   lib,
   ...
 }:
-with lib; let
+with lib;
+let
   cfg = config.nix-relic;
-in {
+in
+{
   options.nix-relic = {
     flakePath = mkOption {
       type = types.path;

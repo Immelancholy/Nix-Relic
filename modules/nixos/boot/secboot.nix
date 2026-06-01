@@ -4,9 +4,11 @@
   inputs,
   ...
 }:
-with lib; let
+with lib;
+let
   cfg = config.boot.secureBoot;
-in {
+in
+{
   imports = [
     inputs.nix-relic.inputs.lanzaboote.nixosModules.lanzaboote
   ];
@@ -14,7 +16,7 @@ in {
     enable = mkOption {
       type = types.bool;
       default = false;
-      description = ''Enable Secure Boot'';
+      description = "Enable Secure Boot";
     };
   };
   config = mkIf cfg.enable {

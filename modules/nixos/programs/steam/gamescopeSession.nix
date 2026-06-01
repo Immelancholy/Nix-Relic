@@ -3,7 +3,8 @@
   config,
   lib,
   ...
-}: let
+}:
+let
   cfg = config.programs.steam.gamescopeSession;
   steam-gamescope = pkgs.writeShellScriptBin "steam-gamescope" ''
     set -xeuo pipefail
@@ -50,15 +51,18 @@
       Exec=${steam-gamescope}/bin/steam-gamescope
       Type=Application
       DesktopNames=gamescope
-    '')
-    .overrideAttrs (_: {passthru.providedSessions = ["steam"];});
+    '').overrideAttrs
+      (_: {
+        passthru.providedSessions = [ "steam" ];
+      });
   steamos-update = pkgs.writeShellScriptBin "steamos-update" ''
     exit 7;
   '';
   jupiter-biosupdate = pkgs.writeShellScriptBin "jupiter-biosupdate" ''
     exit 0;
   '';
-in {
+in
+{
   options.programs.steam.gamescopeSession = with lib; {
     extraGamescopeArgs = mkOption {
       type = types.str;
@@ -79,6 +83,6 @@ in {
         jupiter-biosupdate
       ];
     };
-    services.displayManager.sessionPackages = [steamscope];
+    services.displayManager.sessionPackages = [ steamscope ];
   };
 }

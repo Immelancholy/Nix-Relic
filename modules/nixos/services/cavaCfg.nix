@@ -3,7 +3,8 @@
   config,
   lib,
   ...
-}: let
+}:
+let
   cfg = config.services.cavaCfg;
 
   cavaCfg = pkgs.callPackage ../../../packages/cavaCfg.nix {
@@ -17,7 +18,8 @@
     framerate = "${builtins.toString cfg.framerate}";
     noiseReduction = "${builtins.toString cfg.noiseReduction}";
   };
-in {
+in
+{
   options.services.cavaCfg = {
     enable = lib.mkEnableOption "Enable neo color file generation service";
     framerate = lib.mkOption {
@@ -64,11 +66,11 @@ in {
     systemd.user.services."cavaCfg" = {
       enable = true;
       name = "Cava Cfg";
-      wantedBy = ["default.target"];
+      wantedBy = [ "default.target" ];
       path = [
         cavaCfg
       ];
-      script = ''cavaCfg'';
+      script = "cavaCfg";
     };
   };
 }

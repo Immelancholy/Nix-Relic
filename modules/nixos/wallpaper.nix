@@ -4,9 +4,11 @@
   nix-relic,
   ...
 }:
-with lib; let
+with lib;
+let
   cfg = config.nix-relic.wallpaper;
-in {
+in
+{
   options.nix-relic.wallpaper = {
     path = mkOption {
       type = types.path;

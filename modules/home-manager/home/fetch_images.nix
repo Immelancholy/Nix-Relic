@@ -1,4 +1,5 @@
-{pkgs, ...}: let
+{ pkgs, ... }:
+let
   Nakari = pkgs.fetchurl {
     url = "https://pbs.twimg.com/media/GcHyQ8DWUAAOAho?format=jpg&name=medium";
     hash = "sha256-YB13taH2jBB6POHniL/muHxCT1Mpir40YgjCkU5Vetc=";
@@ -23,7 +24,8 @@
     url = "https://pbs.twimg.com/media/GG0t0K6bcAA8-xW?format=jpg&name=medium";
     hash = "sha256-NJNpjZUxK+6vvOUJMt/NxkaSA1fUqee7czH+z2f/SU4=";
   };
-in {
+in
+{
   home.file = {
     "Pictures/fastfetch_logos/Nakari.jpg" = {
       source = Nakari;

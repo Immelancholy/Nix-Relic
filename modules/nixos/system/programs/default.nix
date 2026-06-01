@@ -3,7 +3,8 @@
   inputs,
   config,
   ...
-}: {
+}:
+{
   imports = [
     ./hyprland.nix
     ./pipewire.nix
@@ -25,8 +26,8 @@
   systemd.user.services."easyeffects" = {
     enable = true;
     name = "easyeffects";
-    after = ["graphical-session.target"];
-    wantedBy = ["graphical-session.target"];
+    after = [ "graphical-session.target" ];
+    wantedBy = [ "graphical-session.target" ];
     path = [
       "${pkgs.easyeffects}"
     ];
@@ -92,7 +93,7 @@
       Slice = "session.slice";
       Restart = "on-failure";
     };
-    wantedBy = ["graphical-session.target"];
+    wantedBy = [ "graphical-session.target" ];
   };
   environment.systemPackages = with pkgs; [
     nr.relic-cli

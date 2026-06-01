@@ -2,14 +2,15 @@
   pkgs,
   config,
   ...
-}: {
+}:
+{
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.initrd.systemd = {
     enable = true;
     tpm2.enable = true;
   };
-  boot.kernelModules = ["v4l2loopback"];
+  boot.kernelModules = [ "v4l2loopback" ];
   boot.extraModulePackages = with config.boot.kernelPackages; [
     bbswitch
     v4l2loopback

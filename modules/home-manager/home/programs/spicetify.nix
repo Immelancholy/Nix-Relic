@@ -2,11 +2,13 @@
   pkgs,
   inputs,
   ...
-}: let
+}:
+let
   spicetify-nix = inputs.nix-relic.inputs.spicetify-nix.homeManagerModules.default;
 
   spicePkgs = inputs.nix-relic.inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
-in {
+in
+{
   imports = [
     spicetify-nix
   ];

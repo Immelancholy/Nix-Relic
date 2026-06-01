@@ -3,7 +3,8 @@
   lib,
   config,
   ...
-}: {
+}:
+{
   gtk = {
     enable = true;
   };

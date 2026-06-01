@@ -3,7 +3,8 @@
   config,
   lib,
   ...
-}: let
+}:
+let
   cfg = config.services.neo-color;
   neo-color = pkgs.callPackage ../../../packages/neo-color.nix {
     color1 = "${cfg.colors.color1}";
@@ -12,7 +13,8 @@
     color4 = "${cfg.colors.color4}";
     color5 = "${cfg.colors.color5}";
   };
-in {
+in
+{
   options.services.neo-color = {
     enable = lib.mkEnableOption "Enable neo color file generation service";
     colors = {
@@ -43,11 +45,11 @@ in {
     systemd.user.services."neo-color" = {
       enable = true;
       name = "Neo Color";
-      wantedBy = ["default.target"];
+      wantedBy = [ "default.target" ];
       path = [
         neo-color
       ];
-      script = ''neo-color'';
+      script = "neo-color";
     };
   };
 }

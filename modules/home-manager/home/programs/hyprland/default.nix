@@ -4,12 +4,14 @@
   lib,
   config,
   ...
-}: let
+}:
+let
   cfg = config.wayland.windowManager.hyprland;
   playerCmd = config.player.cmd;
   playerCmdGame = config.player.cmdGame;
   playerClass = config.player.class;
-in {
+in
+{
   wayland.windowManager.hyprland = lib.mkMerge [
     {
       enable = true;
@@ -19,7 +21,7 @@ in {
       systemd = {
         # disable the systemd integration, as it conflicts with uwsm.
         enable = false;
-        variables = ["--all"];
+        variables = [ "--all" ];
       };
     }
   ];

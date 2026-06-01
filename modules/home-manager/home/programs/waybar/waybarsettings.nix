@@ -1,6 +1,8 @@
-{config, ...}: let
+{ config, ... }:
+let
   inherit (config) player;
-in {
+in
+{
   programs.waybar.settings = {
     mainBar = {
       layer = "top";
@@ -110,7 +112,16 @@ in {
         interval = 10;
         format = "󰍛 {usage}%";
         format-alt = "{icon0}{icon1}{icon2}{icon3}";
-        format-icons = ["▁" "▂" "▃" "▄" "▅" "▆" "▇" "█"];
+        format-icons = [
+          "▁"
+          "▂"
+          "▃"
+          "▄"
+          "▅"
+          "▆"
+          "▇"
+          "█"
+        ];
       };
 
       "memory" = {

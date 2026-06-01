@@ -3,9 +3,11 @@
   lib,
   config,
   ...
-}: let
+}:
+let
   cfg = config.programs.steam;
-in {
+in
+{
   config = lib.mkIf cfg.enable {
     programs.steam = {
       package = pkgs.steam.override {

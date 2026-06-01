@@ -4,45 +4,48 @@
   config,
   nix-relic,
   ...
-}: let
+}:
+let
   image = config.nix-relic.wallpaper.path;
   iconColour = config.nix-relic.icons.colour;
-in {
+in
+{
   imports = [
     inputs.nix-relic.inputs.stylix.nixosModules.stylix
   ];
   nix-relic.icons =
-    if "${image}" == "${nix-relic}/backgrounds/Sailor_Moon.png"
-    then {
-      colour = "red";
-    }
-    else if "${image}" == "${nix-relic}/backgrounds/Evil_Miku.png"
-    then {
-      colour = "dracula";
-    }
-    else if "${image}" == "${nix-relic}/backgrounds/Surtur.png"
-    then {
-      colour = "orange";
-    }
-    else if "${image}" == "${nix-relic}/backgrounds/Momo_Smoke.png"
-    then {
-      colour = "blue";
-    }
-    else if "${image}" == "${nix-relic}/backgrounds/Smoke_In_Rain.png"
-    then {
-      colour = "purple";
-    }
-    else if "${image}" == "${nix-relic}/backgrounds/Cyberpunk.png"
-    then {
-      colour = "yellow";
-    }
-    else if "${image}" == "${nix-relic}/backgrounds/Cyberpunk_Rain.png"
-    then {
-      colour = "purple";
-    }
-    else {
-      colour = "standard";
-    };
+    if "${image}" == "${nix-relic}/backgrounds/Sailor_Moon.png" then
+      {
+        colour = "red";
+      }
+    else if "${image}" == "${nix-relic}/backgrounds/Evil_Miku.png" then
+      {
+        colour = "dracula";
+      }
+    else if "${image}" == "${nix-relic}/backgrounds/Surtur.png" then
+      {
+        colour = "orange";
+      }
+    else if "${image}" == "${nix-relic}/backgrounds/Momo_Smoke.png" then
+      {
+        colour = "blue";
+      }
+    else if "${image}" == "${nix-relic}/backgrounds/Smoke_In_Rain.png" then
+      {
+        colour = "purple";
+      }
+    else if "${image}" == "${nix-relic}/backgrounds/Cyberpunk.png" then
+      {
+        colour = "yellow";
+      }
+    else if "${image}" == "${nix-relic}/backgrounds/Cyberpunk_Rain.png" then
+      {
+        colour = "purple";
+      }
+    else
+      {
+        colour = "standard";
+      };
   stylix = {
     homeManagerIntegration = {
       autoImport = true;

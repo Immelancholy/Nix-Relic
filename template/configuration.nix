@@ -2,7 +2,8 @@
   pkgs,
   nix-relic,
   ...
-}: {
+}:
+{
   nix-relic = {
     flakePath = "/path/to/flake/folder";
     cava = {
@@ -23,7 +24,7 @@
     users.users = {
       your-user = {
         isNormalUser = true;
-        isAdmin = true; #enable or disable this to give or take sudo access.
+        isAdmin = true; # enable or disable this to give or take sudo access.
         home-config = {
           imports = [
             ./hypr/hyprland.nix
@@ -103,7 +104,12 @@
 
   services.pipewire.extraConfig.pipewire."92-low-latency" = {
     "context.properties" = {
-      "default.clock.allowed-rates" = [44100 48000 88200 96000];
+      "default.clock.allowed-rates" = [
+        44100
+        48000
+        88200
+        96000
+      ];
       "default.clock.min-quantum" = 64;
       "default.clock.max-quantum" = 512;
       "default.clock.quantum-limit" = 4096;
@@ -154,7 +160,7 @@
   displayManager = {
     # Display Manager to user, only enable 1
     sddm = {
-      enable = false; #logout doesn't work right forcing you to do systemctl restart display-manager to get sddm to pop up again after logging out
+      enable = false; # logout doesn't work right forcing you to do systemctl restart display-manager to get sddm to pop up again after logging out
       compositor = "kwin";
       screenWidth = "1920";
       screenHeight = "1080";

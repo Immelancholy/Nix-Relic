@@ -4,14 +4,16 @@
   config,
   ...
 }:
-with lib; let
+with lib;
+let
   cfg = config.displayManager.tuiGreet;
-in {
+in
+{
   options.displayManager.tuiGreet = {
     enable = mkOption {
       type = types.bool;
       default = false;
-      description = ''Use TuiGreet as display manager'';
+      description = "Use TuiGreet as display manager";
     };
   };
   config = mkIf cfg.enable {

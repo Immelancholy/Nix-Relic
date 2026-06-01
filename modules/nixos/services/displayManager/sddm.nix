@@ -4,7 +4,8 @@
   config,
   ...
 }:
-with lib; let
+with lib;
+let
   cfg = config.displayManager.sddm;
   abg = config.nix-relic.wallpaper;
 
@@ -14,17 +15,18 @@ with lib; let
   red = "#${config.lib.stylix.colors.base08}";
   teal = "#${config.lib.stylix.colors.base0C}";
   mauve = "#${config.lib.stylix.colors.base0E}";
-in {
+in
+{
   options.displayManager.sddm = {
     enable = mkOption {
       type = types.bool;
       default = false;
-      description = ''Use sddm as display manager'';
+      description = "Use sddm as display manager";
     };
     compositor = mkOption {
       type = types.str;
       default = "weston";
-      description = ''What compositor to use for sddm'';
+      description = "What compositor to use for sddm";
     };
     screenWidth = mkOption {
       type = types.str;
@@ -77,9 +79,7 @@ in {
 
           BackgroundPlaceholder = "${config.stylix.image}";
           Background =
-            if abg.animatedWallpaper.enable
-            then "${abg.animatedWallpaper.path}"
-            else "${config.stylix.image}";
+            if abg.animatedWallpaper.enable then "${abg.animatedWallpaper.path}" else "${config.stylix.image}";
           BackgroundSpeed = "1.0";
           PauseBackground = "";
           CropBackground = "false";

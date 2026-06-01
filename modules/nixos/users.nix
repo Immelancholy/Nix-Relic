@@ -3,40 +3,43 @@
   lib,
   ...
 }:
-with lib; let
+with lib;
+let
   cfg = config.nix-relic.users;
-  user = name: attrs @ {isNormalUser ? true, ...}:
+  user =
+    name:
+    attrs@{
+      isNormalUser ? true,
+      ...
+    }:
     attrs
     // {
       inherit isNormalUser;
     };
-  userOpts = {
-    name,
-    config,
-    ...
-  }: {
-    options = {
-      extraGroups = mkOption {
-        apply = groups:
-          if config.isNormalUser
-          then cfg.defaultGroups ++ groups
-          else groups;
+  userOpts =
+    {
+      name,
+      config,
+      ...
+    }:
+    {
+      options = {
+        extraGroups = mkOption {
+          apply = groups: if config.isNormalUser then cfg.defaultGroups ++ groups else groups;
+        };
+        isAdmin = mkEnableOption "Sudo access";
+        home-config = mkOption {
+          description = "Extra home manager configuration to be defined here";
+          type = types.attrs;
+          default = { };
+        };
       };
-      isAdmin = mkEnableOption "Sudo access";
-      home-config = mkOption {
-        description = "Extra home manager configuration to be defined here";
-        type = types.attrs;
-        default = {};
+      config = {
+        extraGroups = if config.isAdmin then [ "wheel" ] else [ ];
       };
     };
-    config = {
-      extraGroups =
-        if config.isAdmin
-        then ["wheel"]
-        else [];
-    };
-  };
-in {
+in
+{
   options = {
     nix-relic.users = {
       defaultGroups = mkOption {
@@ -52,7 +55,7 @@ in {
         description = "Users with sane defaults";
         type = with types; attrsOf attrs;
         apply = mapAttrs user;
-        default = [];
+        default = [ ];
       };
     };
     users.users = mkOption {

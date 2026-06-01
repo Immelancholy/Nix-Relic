@@ -1,4 +1,4 @@
-{writeShellScriptBin, ...}:
+{ writeShellScriptBin, ... }:
 writeShellScriptBin "tnix" ''
   sesh="NixDots"
 

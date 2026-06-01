@@ -1,4 +1,4 @@
-{writeShellScriptBin, ...}:
+{ writeShellScriptBin, ... }:
 writeShellScriptBin "tnote" ''
   sesh="Notes"
 

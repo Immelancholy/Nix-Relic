@@ -2,7 +2,8 @@
   config,
   inputs,
   ...
-}: let
+}:
+let
   base00 = "#${config.lib.stylix.colors.base00}";
   base01 = "#${config.lib.stylix.colors.base01}";
   base02 = "#${config.lib.stylix.colors.base02}";
@@ -19,7 +20,8 @@
   base0D = "#${config.lib.stylix.colors.base0D}";
   base0E = "#${config.lib.stylix.colors.base0E}";
   base0F = "#${config.lib.stylix.colors.base0F}";
-in {
+in
+{
   imports = [
     inputs.nix-relic.inputs.zarumet.homeModules.default
   ];

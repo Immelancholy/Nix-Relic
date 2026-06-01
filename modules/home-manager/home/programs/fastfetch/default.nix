@@ -54,7 +54,7 @@
           type = "command";
           key = "   Shell";
           KeyColor = "yellow";
-          text = ''checkshell.sh'';
+          text = "checkshell.sh";
         }
         {
           type = "WM";

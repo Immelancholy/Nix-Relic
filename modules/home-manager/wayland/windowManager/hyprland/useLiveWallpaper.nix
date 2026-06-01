@@ -5,7 +5,8 @@
   osConfig,
   ...
 }:
-with lib; let
+with lib;
+let
   cfg = config.wayland.windowManager.hyprland;
 
   paper-change = pkgs.writeShellScriptBin "paper-change" ''
@@ -17,7 +18,8 @@ with lib; let
       pkill mpvpaper
     fi
   '';
-in {
+in
+{
   options.wayland.windowManager.hyprland = {
     liveWallpaper.enable = mkOption {
       type = types.bool;
@@ -38,19 +40,19 @@ in {
       systemd.user.services.paper-change = {
         Unit = {
           Description = "Wallpaper Changer";
-          PartOf = ["graphical-session.target"];
-          Requires = ["graphical-session.target"];
-          After = ["graphical-session.target"];
+          PartOf = [ "graphical-session.target" ];
+          Requires = [ "graphical-session.target" ];
+          After = [ "graphical-session.target" ];
           ConditionEnvironment = "WAYLAND_DISPLAY";
         };
         Service = {
           ExecStart = "/run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.exec_cmd(\"paper-change\")'";
           Type = "simple";
-          Slice = ["session.slice"];
+          Slice = [ "session.slice" ];
           Restart = "on-failure";
         };
         Install = {
-          WantedBy = ["graphical-session.target"];
+          WantedBy = [ "graphical-session.target" ];
         };
       };
     })

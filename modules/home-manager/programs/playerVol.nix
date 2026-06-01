@@ -4,13 +4,17 @@
   pkgs,
   ...
 }:
-with lib; let
+with lib;
+let
   inherit (pkgs.stdenv.hostPlatform) system;
   cfg = config.player;
-  playerVolMPD = pkgs.callPackage ../../../packages/playerVolMPD.nix {inherit system;};
-  playerVolMpris = pkgs.callPackage ../../../packages/playerVolMpris.nix {inherit system;};
-  playerVolDefault_Sink = pkgs.callPackage ../../../packages/playerVolDefault_Sink.nix {inherit system;};
-in {
+  playerVolMPD = pkgs.callPackage ../../../packages/playerVolMPD.nix { inherit system; };
+  playerVolMpris = pkgs.callPackage ../../../packages/playerVolMpris.nix { inherit system; };
+  playerVolDefault_Sink = pkgs.callPackage ../../../packages/playerVolDefault_Sink.nix {
+    inherit system;
+  };
+in
+{
   options.player = {
     enable = mkEnableOption "Enable playerVol script";
     name = mkOption {
@@ -20,17 +24,17 @@ in {
     };
     cmd = mkOption {
       type = types.str;
-      default = ''uwsm app -- kitty --class mpd zarumet -b on'';
+      default = "uwsm app -- kitty --class mpd zarumet -b on";
       description = "Launch command for music player";
     };
     cmdGame = mkOption {
       type = types.str;
-      default = ''uwsm app -- kitty --class mpd zarumet -b off'';
+      default = "uwsm app -- kitty --class mpd zarumet -b off";
       description = "Launch command for gamemode music player";
     };
     class = mkOption {
       type = types.str;
-      default = ''mpd'';
+      default = "mpd";
       description = "Class of music player";
     };
     scriptUseDefaultSink = mkOption {
@@ -47,12 +51,12 @@ in {
         };
       };
     })
-    (mkIf (cfg.enable && config.player.name == "mpd" && ! config.player.scriptUseDefaultSink) {
+    (mkIf (cfg.enable && config.player.name == "mpd" && !config.player.scriptUseDefaultSink) {
       home.packages = [
         playerVolMPD
       ];
     })
-    (mkIf (cfg.enable && config.player.name != "mpd" && ! config.player.scriptUseDefaultSink) {
+    (mkIf (cfg.enable && config.player.name != "mpd" && !config.player.scriptUseDefaultSink) {
       home.packages = [
         (playerVolMpris.override {
           player = cfg.name;

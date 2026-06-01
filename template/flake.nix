@@ -13,51 +13,54 @@
     };
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    nix-relic,
-    ...
-  } @ inputs: let
-    inherit (self) outputs;
-    systems = [
-      "aarch64-linux"
-      "x86_64-linux"
-    ];
-    forAllSystems = nixpkgs.lib.genAttrs systems;
-  in {
-    formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.nixfmt-tree);
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      nix-relic,
+      ...
+    }@inputs:
+    let
+      inherit (self) outputs;
+      systems = [
+        "aarch64-linux"
+        "x86_64-linux"
+      ];
+      forAllSystems = nixpkgs.lib.genAttrs systems;
+    in
+    {
+      formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.nixfmt-tree);
 
-    overlays = import ./overlays {inherit inputs;};
+      overlays = import ./overlays { inherit inputs; };
 
-    packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
+      packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
 
-    nixosModules = import ./modules/nixos;
+      nixosModules = import ./modules/nixos;
 
-    homeManagerModules = import ./modules/home-manager;
+      homeManagerModules = import ./modules/home-manager;
 
-    nixosConfigurations = {
-      nix-relic = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
-        modules = [
-          nix-relic.nixosModules.default
-          ./configuration.nix
-          ./hardware-configuration.nix
+      nixosConfigurations = {
+        nix-relic = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs outputs; };
+          modules = [
+            nix-relic.nixosModules.default
+            ./configuration.nix
+            ./hardware-configuration.nix
 
-          home-manager.nixosModules.home-manager
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              extraSpecialArgs = {inherit inputs;};
-              sharedModules = [
-                nix-relic.homeManagerModules.default
-              ];
-            };
-          }
-        ];
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                extraSpecialArgs = { inherit inputs; };
+                sharedModules = [
+                  nix-relic.homeManagerModules.default
+                ];
+              };
+            }
+          ];
+        };
       };
     };
-  };
 }

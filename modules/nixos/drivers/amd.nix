@@ -4,18 +4,20 @@
   config,
   ...
 }:
-with lib; let
+with lib;
+let
   cfg = config.drivers.amd;
-in {
+in
+{
   options.drivers.amd = {
     enable = mkOption {
       type = types.bool;
       default = false;
-      description = ''Enable AMD Graphics Drivers'';
+      description = "Enable AMD Graphics Drivers";
     };
   };
   config = mkIf cfg.enable {
-    services.xserver.videoDrivers = ["amdgpu"];
+    services.xserver.videoDrivers = [ "amdgpu" ];
 
     environment.systemPackages = [
       pkgs.nvtopPackages.full # nvtop

@@ -3,7 +3,8 @@
   pkgs,
   nix-relic,
   ...
-}: {
+}:
+{
   programs.yazi = {
     enable = true;
     package = nix-relic.inputs.yazi.packages.${pkgs.stdenv.hostPlatform.system}.default;
@@ -64,9 +65,9 @@
         ];
         edit = [
           {
-            run = ''$EDITOR %s'';
+            run = "$EDITOR %s";
             block = true;
-            for = ''unix'';
+            for = "unix";
           }
         ];
         open = [
@@ -108,42 +109,66 @@
           run = "plugin mount";
         }
         {
-          on = ["u" "a"];
+          on = [
+            "u"
+            "a"
+          ];
           run = "plugin yamb save";
           desc = "Add bookmark";
         }
         {
-          on = ["u" "g"];
+          on = [
+            "u"
+            "g"
+          ];
           run = "plugin yamb jump_by_key";
           desc = "Jump bookmark by key";
         }
         {
-          on = ["u" "G"];
+          on = [
+            "u"
+            "G"
+          ];
           run = "plugin yamb jump_by_fzf";
           desc = "Jump bookmark by fzf";
         }
         {
-          on = ["u" "d"];
+          on = [
+            "u"
+            "d"
+          ];
           run = "plugin yamb delete_by_key";
           desc = "Delete bookmarks by key";
         }
         {
-          on = ["u" "D"];
+          on = [
+            "u"
+            "D"
+          ];
           run = "plugin yamb delete_by_fzf";
           desc = "Delete bookmark by fzf";
         }
         {
-          on = ["u" "A"];
+          on = [
+            "u"
+            "A"
+          ];
           run = "plugin yamb delete_all";
           desc = "Delete all bookmarks";
         }
         {
-          on = ["u" "r"];
+          on = [
+            "u"
+            "r"
+          ];
           run = "plugin yamb rename_by_key";
           desc = "Rename bookmark by key";
         }
         {
-          on = ["u" "R"];
+          on = [
+            "u"
+            "R"
+          ];
           run = "plugin yamb rename_by_fzf";
           desc = "Rename bookmark by fzf";
         }

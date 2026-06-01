@@ -1,4 +1,4 @@
-{writeShellScriptBin, ...}:
+{ writeShellScriptBin, ... }:
 writeShellScriptBin "tdev" ''
   i=0
   sesh="DevSesh"

@@ -2,7 +2,8 @@
   config,
   lib,
   ...
-}: {
+}:
+{
   ## Original Author : Aditya Shakya (adi1090x)
   ## Original Github : @adi1090x
   ## Adapted by : @GeodeArc
@@ -16,7 +17,8 @@
       #   bar = mkLiteral "abc"; =&gt; bar: abc;
       # };
       inherit (config.lib.formats.rasi) mkLiteral;
-    in {
+    in
+    {
       "*" = {
         base = mkLiteral "#${config.lib.stylix.colors.base00}BB";
         mantle = mkLiteral "#${config.lib.stylix.colors.base01}BB";

@@ -1,4 +1,5 @@
-{config, ...}: {
+{ config, ... }:
+{
   programs.waybar.style = ''
     @define-color base #${config.lib.stylix.colors.base00};
     @define-color mantle #${config.lib.stylix.colors.base01};

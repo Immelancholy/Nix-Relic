@@ -1,4 +1,4 @@
-{writeShellApplication, ...}:
+{ writeShellApplication, ... }:
 writeShellApplication {
   name = "checkshell.sh";
   text = ''
