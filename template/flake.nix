@@ -7,12 +7,12 @@
     nix-relic = {
       url = "github:Immelancholy/Nix-Relic/stable";
     };
-    home-manager = {
-      url = "github:nix-community/home-manager";
+    nixfmt = {
+      url = "github:NixOS/nixfmt";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    alejandra = {
-      url = "github:kamadorueda/alejandra/3.1.0";
+    home-manager = {
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -31,7 +31,7 @@
     ];
     forAllSystems = nixpkgs.lib.genAttrs systems;
   in {
-    formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
+    formatter = forAllSystems (system: inputs.nixfmt.packages.${system}.default);
 
     overlays = import ./overlays {inherit inputs;};
 
