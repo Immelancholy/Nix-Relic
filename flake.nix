@@ -57,7 +57,7 @@
       inputs.hyprland.follows = "hyprland";
     };
     stylix = {
-      url = "github:Immelancholy/stylix/zen-browser-opacity";
+      url = "github:Immelancholy/stylix/zen+kms";
     };
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
