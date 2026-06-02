@@ -71,6 +71,7 @@ in
         all-outputs = true;
         active-only = false;
         on-click = "activate";
+        enable-bar-scroll = true;
         disable-scroll = false;
         persistent-workspaces = {
         };
