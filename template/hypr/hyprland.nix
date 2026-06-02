@@ -22,7 +22,7 @@
     end
 
     Browser = "uwsm app -- zen-beta.desktop"
-    Discord = "uwsm app -- vesktop.desktop"
+    Discord = "uwsm app -- discord.desktop"
     Editor = "uwsm app -- nvim.desktop"
     Files = "uwsm app -- nemo.desktop"
     Filest = "uwsm app -- yazi.desktop"

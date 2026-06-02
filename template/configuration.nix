@@ -29,7 +29,7 @@
           imports = [
             ./hypr/hyprland.nix
           ];
-          programs.vesktop = {
+          programs.discord = {
             enable = true;
           };
 
