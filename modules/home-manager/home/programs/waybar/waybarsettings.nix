@@ -72,8 +72,6 @@ in
         active-only = false;
         on-click = "activate";
         disable-scroll = false;
-        on-scroll-up = "hyprctl dispatch 'hl.dsp.focus({ workspace = \"r-1\" })'";
-        on-scroll-down = "hyprctl dispatch 'hl.dsp.focus({ workspace = \"r+1\" })'";
         persistent-workspaces = {
         };
       };

@@ -39,7 +39,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     waybar = {
-      url = "github:buzz/waybar/fix/hyprland-workspaces-scroll";
+      url = "github:buzz/waybar";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprquickframe = {
