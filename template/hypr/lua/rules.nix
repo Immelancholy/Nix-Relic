@@ -38,8 +38,8 @@
     	match = {
     		class = "^(.*[Ee]pisode \\d+ - mpv*.)$",
     	},
-    	workspace = "special:video",
-      opacity = "1.0 override 0.8 override",
+        workspace = "special:video",
+        opacity = "1.0 override 0.8 override",
     	fullscreen = true,
     })
     hl.window_rule({
@@ -149,6 +149,13 @@
     })
     hl.window_rule({
     	match = {
+    		class = "^(org.kde.easyeffects)$",
+    	},
+    	float = true,
+    	opacity = "0.9 override 0.8 override",
+    })
+    hl.window_rule({
+    	match = {
     		class = "^(dev.zed.Zed.*)$",
     	},
     	opacity = "0.9 override 0.8 override",
@@ -248,7 +255,7 @@
     		class = "^(mpv)$",
     	},
     	float = true,
-      opacity = "1.0 override 0.8 override",
+        opacity = "1.0 override 0.8 override",
     })
     hl.window_rule({
     	match = {
