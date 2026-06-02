@@ -43,7 +43,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprquickframe = {
-      url = "github:Ronin-CK/HyprQuickFrame/v1.1.0";
+      url = "github:Ronin-CK/HyprQuickFrame/v1.0.2";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland.url = "github:hyprwm/Hyprland";
