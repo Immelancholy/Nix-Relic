@@ -1275,11 +1275,11 @@
         "wrappers": "wrappers"
       },
       "locked": {
-        "lastModified": 1780459549,
-        "narHash": "sha256-M7B3/7wbypn5oRRFmboP5CtA1rzXoFm34jZ0eJfk+xc=",
+        "lastModified": 1780461690,
+        "narHash": "sha256-Ft7Mtn/vbRqcoCnQRPrmJhA2cq6yyJdWGQFGRWIuJrE=",
         "owner": "Immelancholy",
         "repo": "RheaynaVim",
-        "rev": "e33548b341ce1d89d893f57d86ed068252682efe",
+        "rev": "99946768e8615b3de0d0e39ebfa8fbfdbca853a6",
         "type": "github"
       },
       "original": {
