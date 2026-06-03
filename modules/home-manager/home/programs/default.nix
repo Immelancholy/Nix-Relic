@@ -1,6 +1,5 @@
 {
   pkgs,
-  inputs,
   ...
 }:
 {
@@ -10,6 +9,7 @@
   imports = [
     ./hyprland
     ./waybar
+    ./nvim.nix
     ./yazi.nix
     ./mpd
     ./cava
@@ -30,13 +30,6 @@
     ./hyprquickframe.nix
     ./zen-browser.nix
   ];
-
-  programs.zed-editor = {
-    enable = true;
-    mutableUserTasks = true;
-    mutableUserKeymaps = true;
-    mutableUserSettings = true;
-  };
 
   programs.satty = {
     enable = true;
