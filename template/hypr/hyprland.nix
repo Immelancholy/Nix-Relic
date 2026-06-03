@@ -21,11 +21,11 @@
       end
     end
 
-    Browser = "uwsm app -- zen-beta.desktop"
-    Discord = "uwsm app -- discord.desktop"
-    Editor = "uwsm app -- nvim.desktop"
-    Files = "uwsm app -- nemo.desktop"
-    Filest = "uwsm app -- yazi.desktop"
+    Browser = "uwsm-app -- zen-beta.desktop"
+    Discord = "uwsm-app -- discord.desktop"
+    Editor = "uwsm-app -- nvim.desktop"
+    Files = "uwsm-app -- nemo.desktop"
+    Filest = "uwsm-app -- yazi.desktop"
     Menu =
       'rofi -show drun -run-command "uwsm-app -- {cmd}" run filebrowser power-menu -modi drun,run,filebrowser,power-menu:rofi-power-menu'
     Mod = "SUPER"
@@ -33,9 +33,9 @@
     Modc = "SUPER + CTRL"
     Mods = "SUPER + SHIFT"
     Player = "mpd"
-    Playerctl = ("uwsm app -- playerctl --player=" .. Player)
+    Playerctl = ("uwsm-app -- playerctl --player=" .. Player)
     Scr = "$XDG_BIN_HOME"
-    Term = "uwsm app -- kitty"
+    Term = "uwsm-app -- kitty"
 
     load_module("autostart")
     load_module("binds")
