@@ -22,7 +22,7 @@
       inputs.nix-relic.overlays.default
       inputs.nix-relic.inputs.zarumet.overlays.default
       inputs.nix-relic.inputs.waybar.overlays.default
-      inputs.nix-relic.inputs.RheaynaVim.overlays.default
+      inputs.nix-relic.inputs.rheayna-vim.overlays.default
     ];
 
     config = {
