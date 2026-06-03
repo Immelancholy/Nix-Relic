@@ -1,24 +1,24 @@
 {
   xdg.configFile."hypr/hyprland.lua".text = /* Lua */ ''
     if not hl then
-    	return
+      return
     end
 
     local user_home = os.getenv("HOME") or os.getenv("XDG_CONFIG_HOME") or ("/home/" .. (os.getenv("USER") or "unknown"))
     local lua_dir = user_home .. "/.config/hypr/lua/"
 
     local function load_module(name)
-    	local path = lua_dir .. name .. ".lua"
-    	local f = io.open(path, "r")
-    	if f then
-    		f:close()
-    		local ok, err = pcall(dofile, path)
-    		if not ok then
-    			io.stderr:write("[hyprland.lua] ERROR loading '" .. name .. "': " .. err .. "\n")
-    		end
-    	else
-    		io.stderr:write("[hyprland.lua] Module not found: " .. path .. "\n")
-    	end
+      local path = lua_dir .. name .. ".lua"
+      local f = io.open(path, "r")
+      if f then
+        f:close()
+        local ok, err = pcall(dofile, path)
+        if not ok then
+          io.stderr:write("[hyprland.lua] ERROR loading '" .. name .. "': " .. err .. "\n")
+        end
+      else
+        io.stderr:write("[hyprland.lua] Module not found: " .. path .. "\n")
+      end
     end
 
     Browser = "uwsm app -- zen-beta.desktop"
@@ -27,7 +27,7 @@
     Files = "uwsm app -- nemo.desktop"
     Filest = "uwsm app -- yazi.desktop"
     Menu =
-    	'rofi -show drun -run-command "uwsm-app -- {cmd}" run filebrowser power-menu -modi drun,run,filebrowser,power-menu:rofi-power-menu'
+      'rofi -show drun -run-command "uwsm-app -- {cmd}" run filebrowser power-menu -modi drun,run,filebrowser,power-menu:rofi-power-menu'
     Mod = "SUPER"
     Moda = "SUPER + ALT"
     Modc = "SUPER + CTRL"

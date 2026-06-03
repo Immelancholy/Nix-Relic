@@ -16,10 +16,10 @@
     local term = Term
 
     hl.on("hyprland.start", function()
-    	hl.exec_cmd("uwsm app -- " .. discord)
-    	hl.exec_cmd(browser, { workspace = "2 silent" })
-    	hl.exec_cmd("systemctl restart --user easyeffects")
-    	hl.exec_cmd("systemctl restart --user qpwgraph")
+      hl.exec_cmd("uwsm app -- " .. discord)
+      hl.exec_cmd(browser, { workspace = "2 silent" })
+      hl.exec_cmd("systemctl restart --user easyeffects")
+      hl.exec_cmd("systemctl restart --user qpwgraph")
     end)
   '';
 }

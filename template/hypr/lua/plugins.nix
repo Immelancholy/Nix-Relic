@@ -15,22 +15,18 @@ in
 {
   xdg.configFile."hypr/lua/plugins.lua".text = /* Lua */ ''
     -- hl.on("hyprland.start", function()
-    -- 	hl.exec_cmd(
-    -- 		"hyprctl plugin load ${easymotion}"
-    -- 	)
-    -- 	hl.exec_cmd(
-    -- 		"hyprctl plugin load ${csgo-vulkan}"
-    -- 	)
+    --   hl.exec_cmd("hyprctl plugin load ${easymotion}")
+    --   hl.exec_cmd("hyprctl plugin load ${csgo-vulkan}")
     -- end)
     -- hl.permission({
-    -- 	binary = "/nix/store/[a-z0-9]{32}-csgo-vulkan-fix-[0-9.]*/lib/libcsgo-vulkan-fix.so",
-    -- 	type = "plugin",
-    -- 	mode = "allow",
+    --   binary = "/nix/store/[a-z0-9]{32}-csgo-vulkan-fix-[0-9.]*/lib/libcsgo-vulkan-fix.so",
+    --   type = "plugin",
+    --   mode = "allow",
     -- })
     -- hl.permission({
-    -- 	binary = "/nix/store/[a-z0-9]{32}-hyprland-easymotion/lib/libhyprland-easymotion.so",
-    -- 	type = "plugin",
-    -- 	mode = "allow",
+    --   binary = "/nix/store/[a-z0-9]{32}-hyprland-easymotion/lib/libhyprland-easymotion.so",
+    --   type = "plugin",
+    --   mode = "allow",
     -- })
   '';
 }
