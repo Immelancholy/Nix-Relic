@@ -37,15 +37,10 @@
     Scr = "$XDG_BIN_HOME"
     Term = "uwsm app -- kitty"
 
-    hl.config({
-    	general = {
-    		layout = "scrolling",
-    	},
-    })
-
     load_module("autostart")
     load_module("binds")
     load_module("hardware")
+    load_module("layouts")
     load_module("permissions")
     load_module("plugins")
     load_module("rules")
@@ -55,6 +50,7 @@
     ./lua/autostart.nix
     ./lua/binds.nix
     ./lua/hardware.nix
+    ./lua/layouts.nix.nix
     ./lua/permissions.nix
     ./lua/plugins.nix
     ./lua/rules.nix

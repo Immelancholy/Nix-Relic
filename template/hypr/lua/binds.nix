@@ -122,7 +122,7 @@ in
           if wrap == false then
             hl.config({
               scrolling = {
-                wrap_focus = true,
+                wrap_swapcol = true,
               },
             })
           end
