@@ -1,26 +1,16 @@
 {
   xdg.configFile."hypr/lua/autostart.lua".text = /* Lua */ ''
-    local browser = Browser
-    local discord = Discord
-    local editor = Editor
-    local files = Files
-    local filest = Filest
-    local menu = Editor
-    local mod = Mod
-    local moda = Moda
-    local modc = Modc
-    local mods = Mods
-    local player = Player
-    local playerctl = Playerctl
-    local scr = Scr
-    local term = Term
-
     hl.on("hyprland.start", function()
       hl.timer(function()
-        hl.exec_cmd(discord)
-        hl.exec_cmd(browser, { workspace = "2 silent" })
+        hl.exec_cmd(Discord)
+        hl.exec_cmd(Browser, { workspace = "2 silent" })
+      end, { timeout = 1, type = "oneshot" })
+    end)
+    hl.on("config.reloaded", function()
+      hl.timer(function()
         hl.exec_cmd("systemctl restart --user easyeffects")
         hl.exec_cmd("systemctl restart --user qpwgraph")
+        hl.exec_cmd("systemctl restart --user waybar")
       end, { timeout = 1, type = "oneshot" })
     end)
   '';

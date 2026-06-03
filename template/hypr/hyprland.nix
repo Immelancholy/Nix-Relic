@@ -22,7 +22,7 @@
     end
 
     Browser = "uwsm-app -- zen-beta.desktop"
-    Discord = "uwsm-app -- discord.desktop"
+    Discord = "uwsm-app -- vesktop.desktop"
     Editor = "uwsm-app -- nvim.desktop"
     Files = "uwsm-app -- nemo.desktop"
     Filest = "uwsm-app -- yazi.desktop"
@@ -37,6 +37,15 @@
     Scr = "$XDG_BIN_HOME"
     Term = "uwsm-app -- kitty"
 
+    function User_Conf() end
+    function Universal_User_Binds() end
+    function Default_User_Binds() end
+    function Manage_User_Binds() end
+    function Resize_User_Binds() end
+    function Move_User_Binds() end
+    function Player_User_Binds() end
+    function User_Rules() end
+
     load_module("autostart")
     load_module("binds")
     load_module("hardware")
@@ -45,15 +54,6 @@
     load_module("plugins")
     load_module("rules")
     load_module("theme")
+    User_Conf()
   '';
-  imports = [
-    ./lua/autostart.nix
-    ./lua/binds.nix
-    ./lua/hardware.nix
-    ./lua/layouts.nix.nix
-    ./lua/permissions.nix
-    ./lua/plugins.nix
-    ./lua/rules.nix
-    ./lua/theme.nix
-  ];
 }

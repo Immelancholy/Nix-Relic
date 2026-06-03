@@ -5,21 +5,6 @@ let
 in
 {
   xdg.configFile."hypr/lua/binds.lua".text = /* Lua */ ''
-    local browser = Browser
-    local discord = Discord
-    local editor = Editor
-    local files = Files
-    local filest = Filest
-    local menu = Menu
-    local mod = Mod
-    local moda = Moda
-    local modc = Modc
-    local mods = Mods
-    local player = Player
-    local playerctl = Playerctl
-    local scr = Scr
-    local term = Term
-
     local function layout_bind(bind_table)
       return function()
         local workspace = hl.get_active_special_workspace() or hl.get_active_workspace()
@@ -39,9 +24,9 @@ in
     local function universal_binds()
       for i = 1, 10 do
         local key = i % 10 -- 10 maps to key 0
-        hl.bind(mod .. " + " .. key, hl.dsp.focus({ workspace = i }))
-        hl.bind(mods .. " + " .. key, hl.dsp.window.move({ workspace = i }))
-        hl.bind(modc .. " + " .. key, hl.dsp.group.active({ index = i }))
+        hl.bind(Mod .. " + " .. key, hl.dsp.focus({ workspace = i }))
+        hl.bind(Mods .. " + " .. key, hl.dsp.window.move({ workspace = i }))
+        hl.bind(Modc .. " + " .. key, hl.dsp.group.active({ index = i }))
       end
 
       local MAX_ZOOM = 3
@@ -71,18 +56,18 @@ in
         zoom(-0.5)
       end)
 
-      hl.bind(mod .. " + F9", hl.dsp.pass({ window = "class:^(com.obsproject.studio)$" }))
-      hl.bind(mod .. " + F10", hl.dsp.pass({ window = "class:^(com.obsproject.studio)$" }))
-      hl.bind(mod .. " + F12", hl.dsp.pass({ window = "class:^(com.obsproject.studio)$" }))
-      hl.bind(moda .. " + V", hl.dsp.workspace.toggle_special("video"))
-      hl.bind(moda .. " + G", hl.dsp.workspace.toggle_special("game"))
-      hl.bind(moda .. " + W", hl.dsp.workspace.toggle_special("win"))
-      hl.bind(mods .. " + G", hl.dsp.window.move({ workspace = "special:game" }))
-      hl.bind(mods .. " + V", hl.dsp.window.move({ workspace = "special:video" }))
-      hl.bind(mods .. " + W", hl.dsp.window.move({ workspace = "special:win" }))
+      hl.bind(Mod .. " + F9", hl.dsp.pass({ window = "class:^(com.obsproject.studio)$" }))
+      hl.bind(Mod .. " + F10", hl.dsp.pass({ window = "class:^(com.obsproject.studio)$" }))
+      hl.bind(Mod .. " + F12", hl.dsp.pass({ window = "class:^(com.obsproject.studio)$" }))
+      hl.bind(Moda .. " + V", hl.dsp.workspace.toggle_special("video"))
+      hl.bind(Moda .. " + G", hl.dsp.workspace.toggle_special("game"))
+      hl.bind(Moda .. " + W", hl.dsp.workspace.toggle_special("win"))
+      hl.bind(Mods .. " + G", hl.dsp.window.move({ workspace = "special:game" }))
+      hl.bind(Mods .. " + V", hl.dsp.window.move({ workspace = "special:video" }))
+      hl.bind(Mods .. " + W", hl.dsp.window.move({ workspace = "special:win" }))
 
       hl.bind(
-        mod .. " + U",
+        Mod .. " + U",
         layout_bind({
           scrolling = hl.dsp.layout("swapcol l"), -- Scrolling: swap column with left one
           dwindle = hl.dsp.layout("swapsplit"), -- Dwindle: swap window split
@@ -91,7 +76,7 @@ in
         })
       )
       hl.bind(
-        mod .. " + I",
+        Mod .. " + I",
         layout_bind({
           scrolling = hl.dsp.layout("swapcol r"), -- Scrolling: swap column with left one
           dwindle = hl.dsp.layout("togglesplit"), -- Dwindle: swap window split
@@ -101,7 +86,7 @@ in
       )
 
       hl.bind(
-        mod .. " + Space",
+        Mod .. " + Space",
         layout_bind({
           scrolling = function()
             local centred = hl.get_config("scrolling.focus_fit_method")
@@ -143,27 +128,27 @@ in
         hl.dsp.exec_cmd("uwsm-app -- toggle-mute --mute-all"),
         { transparent = true, non_consuming = true }
       )
-      hl.bind(modc .. " + M", hl.dsp.exec_cmd("uwsm-app -- toggle-mute"), { transparent = true, non_consuming = true })
+      hl.bind(Modc .. " + M", hl.dsp.exec_cmd("uwsm-app -- toggle-mute"), { transparent = true, non_consuming = true })
       hl.bind(
-        modc .. " + SHIFT + M",
+        Modc .. " + SHIFT + M",
         hl.dsp.exec_cmd("uwsm-app -- toggle-mute --mute-all"),
         { transparent = true, non_consuming = true }
       )
-      hl.bind(mod .. " + Q", hl.dsp.window.close())
-      hl.bind(mod .. " + W", hl.dsp.window.float({ action = "toggle" }))
-      hl.bind(mod .. " + D", hl.dsp.focus({ window = "floating" }))
-      hl.bind(mod .. " + S", hl.dsp.focus({ window = "tiled" }))
-      hl.bind("Pause", hl.dsp.exec_cmd(playerctl .. " play-pause"))
-      hl.bind(mod .. " + T", hl.dsp.exec_cmd(term))
-      hl.bind(mods .. " + T", hl.dsp.exec_cmd(term .. " --class tmux tmux"))
-      hl.bind(mod .. " + F", hl.dsp.exec_cmd(browser))
-      hl.bind(mod .. " + E", hl.dsp.exec_cmd(files))
-      hl.bind(mod .. " + grave", hl.dsp.exec_cmd(menu))
-      hl.bind(mod .. " + Return", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
-      hl.bind(mods .. " + Return", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
-      hl.bind("ALT + Tab", hl.dsp.exec_cmd("rofi -show window -modi window"))
+      hl.bind(Mod .. " + Q", hl.dsp.window.close())
+      hl.bind(Mod .. " + W", hl.dsp.window.float({ action = "toggle" }))
+      hl.bind(Mod .. " + D", hl.dsp.focus({ window = "floating" }))
+      hl.bind(Mod .. " + S", hl.dsp.focus({ window = "tiled" }))
+      hl.bind("Pause", hl.dsp.exec_cmd(Playerctl .. " play-pause"))
+      hl.bind(Mod .. " + T", hl.dsp.exec_cmd(Term))
+      hl.bind(Mods .. " + T", hl.dsp.exec_cmd(Term .. " --class tmux tmux"))
+      hl.bind(Mod .. " + F", hl.dsp.exec_cmd(Browser))
+      hl.bind(Mod .. " + E", hl.dsp.exec_cmd(Files))
+      hl.bind(Mod .. " + grave", hl.dsp.exec_cmd(Menu))
+      hl.bind(Mod .. " + Return", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
+      hl.bind(Mods .. " + Return", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
+      hl.bind("ALT + Tab", hl.dsp.exec_cmd("rofi -show window -Modi window"))
 
-      hl.bind(mod .. " + Tab", function()
+      hl.bind(Mod .. " + Tab", function()
         local layouts = { "scrolling", "dwindle", "master", "monocle" }
         local workspace = hl.get_active_workspace()
         local next_layout = "dwindle"
@@ -183,7 +168,7 @@ in
         hl.workspace_rule({ workspace = workspace.name, layout = next_layout })
       end)
 
-      hl.bind(mods .. " + Tab", function()
+      hl.bind(Mods .. " + Tab", function()
         local layouts = { "monocole", "master", "dwindle", "scrolling" }
         local workspace = hl.get_active_workspace()
         local next_layout = "dwindle"
@@ -203,7 +188,7 @@ in
         hl.workspace_rule({ workspace = workspace.name, layout = next_layout })
       end)
 
-      hl.bind(mods .. " + U", function()
+      hl.bind(Mods .. " + U", function()
         hl.dispatch(hl.dsp.window.kill({ window = "class:^(${class})$" }))
         hl.dispatch(hl.dsp.window.kill({ window = "class:^(neo)$" }))
         hl.dispatch(hl.dsp.window.kill({ window = "class:^(fastfetch)$" }))
@@ -241,12 +226,12 @@ in
         )
       end)
 
-      hl.bind(mod .. " + Delete", hl.dsp.exec_cmd("rofi -show power-menu -modi power-menu:rofi-power-menu"))
+      hl.bind(Mod .. " + Delete", hl.dsp.exec_cmd("rofi -show power-menu -modi power-menu:rofi-power-menu"))
       hl.bind("CTRL + SHIFT + L", hl.dsp.exec_cmd("uwsm-app -- swaylock -fF"))
-      hl.bind(mod .. " + N", hl.dsp.exec_cmd("rofi -show Cliphist -modi Cliphist:cliphist.sh"))
-      hl.bind(mod .. " + Apostrophe", hl.dsp.exec_cmd("rofi -show emoji nerdy -modi emoji,nerdy"))
+      hl.bind(Mod .. " + N", hl.dsp.exec_cmd("rofi -show Cliphist -modi Cliphist:cliphist.sh"))
+      hl.bind(Mod .. " + Apostrophe", hl.dsp.exec_cmd("rofi -show emoji nerdy -modi emoji,nerdy"))
 
-      hl.bind(mod .. " + G", function()
+      hl.bind(Mod .. " + G", function()
         local gamemode = hl.get_config("animations.enabled")
         if gamemode == true then
           hl.config({
@@ -350,19 +335,19 @@ in
         end
       end)
 
-      hl.bind(mod .. " + Y", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
-      hl.bind("CTRL + SHIFT + Escape", hl.dsp.exec_cmd(term .. " --title btop btop"))
+      hl.bind(Mod .. " + Y", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
+      hl.bind("CTRL + SHIFT + Escape", hl.dsp.exec_cmd(Term .. " --title btop btop"))
       hl.bind("XF86Calculator", hl.dsp.exec_cmd("uwsm-app -- qalculate-gtk"))
-      hl.bind(mod .. " + semicolon", hl.dsp.exec_cmd("uwsm-app -- qalculate-gtk"))
-      hl.bind(moda .. " + S", hl.dsp.workspace.toggle_special("magic"))
-      hl.bind(mods .. " + S", hl.dsp.window.move({ workspace = "special:magic" }))
+      hl.bind(Mod .. " + semicolon", hl.dsp.exec_cmd("uwsm-app -- qalculate-gtk"))
+      hl.bind(Moda .. " + S", hl.dsp.workspace.toggle_special("magic"))
+      hl.bind(Mods .. " + S", hl.dsp.window.move({ workspace = "special:magic" }))
       hl.bind("Print", hl.dsp.exec_cmd("hyprquickframe -n -d"))
-      hl.bind(mod .. " + O", hl.dsp.exec_cmd("uwsm-app -- hyprpicker -a"))
-      hl.bind(mods .. " + P", hl.dsp.submap("player"))
-      hl.bind(mods .. " + Comma", hl.dsp.window.move({ monitor = "+1", follow = true }))
-      hl.bind(mods .. " + Period", hl.dsp.window.move({ monitor = "-1", follow = true }))
-      hl.bind(mod .. " + Comma", hl.dsp.focus({ monitor = "+1" }))
-      hl.bind(mod .. " + Period", hl.dsp.focus({ monitor = "-1" }))
+      hl.bind(Mod .. " + O", hl.dsp.exec_cmd("uwsm-app -- hyprpicker -a"))
+      hl.bind(Mods .. " + P", hl.dsp.submap("player"))
+      hl.bind(Mods .. " + Comma", hl.dsp.window.move({ monitor = "+1", follow = true }))
+      hl.bind(Mods .. " + Period", hl.dsp.window.move({ monitor = "-1", follow = true }))
+      hl.bind(Mod .. " + Comma", hl.dsp.focus({ monitor = "+1" }))
+      hl.bind(Mod .. " + Period", hl.dsp.focus({ monitor = "-1" }))
       hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd(" uwsm-app -- playerVol dec"), { repeating = true, locked = true })
       hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd(" uwsm-app -- playerVol inc"), { repeating = true, locked = true })
       hl.bind(
@@ -378,45 +363,45 @@ in
       hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd(" uwsm-app -- brightness inc"), { repeating = true, locked = true })
       hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd(" uwsm-app -- brightness dec"), { repeating = true, locked = true })
 
-      hl.bind("XF86AudioPlay", hl.dsp.exec_cmd(playerctl .. " play-pause"), { locked = true })
-      hl.bind("XF86AudioNext", hl.dsp.exec_cmd(playerctl .. " next"), { locked = true })
-      hl.bind("XF86AudioPrev", hl.dsp.exec_cmd(playerctl .. " next"), { locked = true })
+      hl.bind("XF86AudioPlay", hl.dsp.exec_cmd(Playerctl .. " play-pause"), { locked = true })
+      hl.bind("XF86AudioNext", hl.dsp.exec_cmd(Playerctl .. " next"), { locked = true })
+      hl.bind("XF86AudioPrev", hl.dsp.exec_cmd(Playerctl .. " next"), { locked = true })
       hl.bind("XF86AudioMute", hl.dsp.exec_cmd("uwsm-app -- playerVol mute"), { locked = true })
 
-      hl.bind(mod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
-      hl.bind(mod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
+      hl.bind(Mod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
+      hl.bind(Mod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
       hl.bind(
-        mod .. " + C",
+        Mod .. " + C",
         layout_bind({
           scrolling = hl.dsp.layout("colresize +conf"),
         })
       )
       hl.bind(
-        mods .. " + C",
+        Mods .. " + C",
         layout_bind({
           scrolling = hl.dsp.layout("colresize -conf"),
         })
       )
       hl.bind(
-        mod .. " + X",
+        Mod .. " + X",
         layout_bind({
           scrolling = hl.dsp.layout("colresize 0.5"),
         })
       )
       hl.bind(
-        mod .. " + mouse_up",
+        Mod .. " + mouse_up",
         layout_bind({
           scrolling = hl.dsp.layout("focus left"),
         })
       )
       hl.bind(
-        mod .. " + mouse_down",
+        Mod .. " + mouse_down",
         layout_bind({
           scrolling = hl.dsp.layout("focus right"),
         })
       )
       hl.bind(
-        mods .. " + mouse_up",
+        Mods .. " + mouse_up",
         layout_bind({
           scrolling = hl.dsp.focus({ workspace = "e-1" }),
           dwindle = hl.dsp.focus({ workspace = "e-1" }),
@@ -425,7 +410,7 @@ in
         })
       )
       hl.bind(
-        mods .. " + mouse_down",
+        Mods .. " + mouse_down",
         layout_bind({
           scrolling = hl.dsp.focus({ workspace = "e+1" }),
           dwindle = hl.dsp.focus({ workspace = "e+1" }),
@@ -433,16 +418,17 @@ in
           monocle = hl.dsp.focus({ workspace = "e+1" }),
         })
       )
-      hl.bind(modc .. " + G", hl.dsp.group.toggle())
+      hl.bind(Modc .. " + G", hl.dsp.group.toggle())
+      Universal_User_Binds()
     end
     universal_binds()
 
-    hl.bind(modc .. " + H", hl.dsp.group.prev())
-    hl.bind(modc .. " + L", hl.dsp.group.next())
-    hl.bind(modc .. " + Left", hl.dsp.group.prev())
-    hl.bind(modc .. " + Right", hl.dsp.group.next())
+    hl.bind(Modc .. " + H", hl.dsp.group.prev())
+    hl.bind(Modc .. " + L", hl.dsp.group.next())
+    hl.bind(Modc .. " + Left", hl.dsp.group.prev())
+    hl.bind(Modc .. " + Right", hl.dsp.group.next())
     hl.bind(
-      mod .. " + H",
+      Mod .. " + H",
       layout_bind({
         scrolling = hl.dsp.layout("move -col"),
         dwindle = hl.dsp.focus({ direction = "left" }),
@@ -450,10 +436,10 @@ in
         monocle = hl.dsp.focus({ direction = "left" }),
       })
     )
-    hl.bind(mod .. " + J", hl.dsp.focus({ direction = "down" }))
-    hl.bind(mod .. " + K", hl.dsp.focus({ direction = "up" }))
+    hl.bind(Mod .. " + J", hl.dsp.focus({ direction = "down" }))
+    hl.bind(Mod .. " + K", hl.dsp.focus({ direction = "up" }))
     hl.bind(
-      mod .. " + L",
+      Mod .. " + L",
       layout_bind({
         scrolling = hl.dsp.layout("move +col"),
         dwindle = hl.dsp.focus({ direction = "right" }),
@@ -462,7 +448,7 @@ in
       })
     )
     hl.bind(
-      mod .. " + Left",
+      Mod .. " + Left",
       layout_bind({
         scrolling = hl.dsp.layout("move -col"),
         dwindle = hl.dsp.focus({ direction = "left" }),
@@ -470,10 +456,10 @@ in
         monocle = hl.dsp.focus({ direction = "left" }),
       })
     )
-    hl.bind(mod .. " + Down", hl.dsp.focus({ direction = "down" }))
-    hl.bind(mod .. " + Up", hl.dsp.focus({ direction = "up" }))
+    hl.bind(Mod .. " + Down", hl.dsp.focus({ direction = "down" }))
+    hl.bind(Mod .. " + Up", hl.dsp.focus({ direction = "up" }))
     hl.bind(
-      mod .. " + Right",
+      Mod .. " + Right",
       layout_bind({
         scrolling = hl.dsp.layout("move +col"),
         dwindle = hl.dsp.focus({ direction = "right" }),
@@ -481,17 +467,17 @@ in
         monocle = hl.dsp.focus({ direction = "right" }),
       })
     )
-    hl.bind(mods .. " + H", hl.dsp.focus({ workspace = "r-1" }))
-    hl.bind(mods .. " + L", hl.dsp.focus({ workspace = "r+1" }))
-    hl.bind(mods .. " + J", hl.dsp.focus({ workspace = "empty" }))
-    hl.bind(mods .. " + Left", hl.dsp.focus({ workspace = "r-1" }))
-    hl.bind(mods .. " + Right", hl.dsp.focus({ workspace = "r+1" }))
-    hl.bind(mods .. " + Down", hl.dsp.focus({ workspace = "empty" }))
+    hl.bind(Mods .. " + H", hl.dsp.focus({ workspace = "r-1" }))
+    hl.bind(Mods .. " + L", hl.dsp.focus({ workspace = "r+1" }))
+    hl.bind(Mods .. " + J", hl.dsp.focus({ workspace = "empty" }))
+    hl.bind(Mods .. " + Left", hl.dsp.focus({ workspace = "r-1" }))
+    hl.bind(Mods .. " + Right", hl.dsp.focus({ workspace = "r+1" }))
+    hl.bind(Mods .. " + Down", hl.dsp.focus({ workspace = "empty" }))
 
-    hl.bind(mod .. " + A", hl.dsp.submap("manage"))
+    hl.bind(Mod .. " + A", hl.dsp.submap("manage"))
     hl.define_submap("manage", function()
       universal_binds()
-      hl.bind(mod .. " + P", hl.dsp.window.pin())
+      hl.bind(Mod .. " + P", hl.dsp.window.pin())
 
       hl.bind(
         "H",
@@ -534,12 +520,12 @@ in
         })
       )
 
-      hl.bind(mods .. " + H", hl.dsp.window.move({ workspace = "r-1" }))
-      hl.bind(mods .. " + L", hl.dsp.window.move({ workspace = "r+1" }))
-      hl.bind(mods .. " + J", hl.dsp.window.move({ workspace = "empty" }))
-      hl.bind(mods .. " + Left", hl.dsp.window.move({ workspace = "r-1" }))
-      hl.bind(mods .. " + Right", hl.dsp.window.move({ workspace = "r+1" }))
-      hl.bind(mods .. " + Down", hl.dsp.window.move({ workspace = "empty" }))
+      hl.bind(Mods .. " + H", hl.dsp.window.move({ workspace = "r-1" }))
+      hl.bind(Mods .. " + L", hl.dsp.window.move({ workspace = "r+1" }))
+      hl.bind(Mods .. " + J", hl.dsp.window.move({ workspace = "empty" }))
+      hl.bind(Mods .. " + Left", hl.dsp.window.move({ workspace = "r-1" }))
+      hl.bind(Mods .. " + Right", hl.dsp.window.move({ workspace = "r+1" }))
+      hl.bind(Mods .. " + Down", hl.dsp.window.move({ workspace = "empty" }))
 
       hl.bind("CTRL + H", hl.dsp.group.prev())
       hl.bind("CTRL + L", hl.dsp.group.next())
@@ -547,7 +533,7 @@ in
       hl.bind("CTRL + Right", hl.dsp.group.next())
 
       hl.bind(
-        mod .. " + H",
+        Mod .. " + H",
         layout_bind({
           scrolling = hl.dsp.layout("consume_or_expel prev"),
           dwindle = hl.dsp.window.move({ direction = "left" }),
@@ -555,10 +541,10 @@ in
           monocle = hl.dsp.window.move({ direction = "left" }),
         })
       )
-      hl.bind(mod .. " + J", hl.dsp.window.move({ direction = "down" }))
-      hl.bind(mod .. " + K", hl.dsp.window.move({ direction = "up" }))
+      hl.bind(Mod .. " + J", hl.dsp.window.move({ direction = "down" }))
+      hl.bind(Mod .. " + K", hl.dsp.window.move({ direction = "up" }))
       hl.bind(
-        mod .. " + L",
+        Mod .. " + L",
         layout_bind({
           scrolling = hl.dsp.layout("consume_or_expel next"),
           dwindle = hl.dsp.window.move({ direction = "right" }),
@@ -568,7 +554,7 @@ in
       )
 
       hl.bind(
-        mod .. " + Left",
+        Mod .. " + Left",
         layout_bind({
           scrolling = hl.dsp.layout("consume_or_expel prev"),
           dwindle = hl.dsp.window.move({ direction = "left" }),
@@ -576,10 +562,10 @@ in
           monocle = hl.dsp.window.move({ direction = "left" }),
         })
       )
-      hl.bind(mod .. " + Down", hl.dsp.window.move({ direction = "down" }))
-      hl.bind(mod .. " + Up", hl.dsp.window.move({ direction = "up" }))
+      hl.bind(Mod .. " + Down", hl.dsp.window.move({ direction = "down" }))
+      hl.bind(Mod .. " + Up", hl.dsp.window.move({ direction = "up" }))
       hl.bind(
-        mod .. " + Right",
+        Mod .. " + Right",
         layout_bind({
           scrolling = hl.dsp.layout("consume_or_expel next"),
           dwindle = hl.dsp.window.move({ direction = "right" }),
@@ -588,69 +574,74 @@ in
         })
       )
 
-      hl.bind(modc .. " + H", hl.dsp.window.move({ direction = "left", group_aware = true }))
-      hl.bind(modc .. " + J", hl.dsp.window.move({ direction = "down", group_aware = true }))
-      hl.bind(modc .. " + K", hl.dsp.window.move({ direction = "up", group_aware = true }))
-      hl.bind(modc .. " + L", hl.dsp.window.move({ direction = "right", group_aware = true }))
-      hl.bind(modc .. " + Left", hl.dsp.window.move({ direction = "left", group_aware = true }))
-      hl.bind(modc .. " + Down", hl.dsp.window.move({ direction = "down", group_aware = true }))
-      hl.bind(modc .. " + Up", hl.dsp.window.move({ direction = "up", group_aware = true }))
-      hl.bind(modc .. " + Right", hl.dsp.window.move({ direction = "right", group_aware = true }))
+      hl.bind(Modc .. " + H", hl.dsp.window.move({ direction = "left", group_aware = true }))
+      hl.bind(Modc .. " + J", hl.dsp.window.move({ direction = "down", group_aware = true }))
+      hl.bind(Modc .. " + K", hl.dsp.window.move({ direction = "up", group_aware = true }))
+      hl.bind(Modc .. " + L", hl.dsp.window.move({ direction = "right", group_aware = true }))
+      hl.bind(Modc .. " + Left", hl.dsp.window.move({ direction = "left", group_aware = true }))
+      hl.bind(Modc .. " + Down", hl.dsp.window.move({ direction = "down", group_aware = true }))
+      hl.bind(Modc .. " + Up", hl.dsp.window.move({ direction = "up", group_aware = true }))
+      hl.bind(Modc .. " + Right", hl.dsp.window.move({ direction = "right", group_aware = true }))
 
-      hl.bind(mod .. " + R", hl.dsp.submap("resize"))
+      hl.bind(Mod .. " + R", hl.dsp.submap("resize"))
       hl.define_submap("resize", function()
         universal_binds()
 
-        hl.bind(mod .. " + Left", hl.dsp.window.resize({ x = -10, y = 0, relative = true }), { repeating = true })
-        hl.bind(mod .. " + Down", hl.dsp.window.resize({ x = 0, y = 10, relative = true }), { repeating = true })
-        hl.bind(mod .. " + Up", hl.dsp.window.resize({ x = 0, y = -10, relative = true }), { repeating = true })
-        hl.bind(mod .. " + Right", hl.dsp.window.resize({ x = 10, y = 0, relative = true }), { repeating = true })
+        hl.bind(Mod .. " + Left", hl.dsp.window.resize({ x = -10, y = 0, relative = true }), { repeating = true })
+        hl.bind(Mod .. " + Down", hl.dsp.window.resize({ x = 0, y = 10, relative = true }), { repeating = true })
+        hl.bind(Mod .. " + Up", hl.dsp.window.resize({ x = 0, y = -10, relative = true }), { repeating = true })
+        hl.bind(Mod .. " + Right", hl.dsp.window.resize({ x = 10, y = 0, relative = true }), { repeating = true })
 
-        hl.bind(mod .. " + H", hl.dsp.window.resize({ x = -10, y = 0, relative = true }), { repeating = true })
-        hl.bind(mod .. " + J", hl.dsp.window.resize({ x = 0, y = 10, relative = true }), { repeating = true })
-        hl.bind(mod .. " + K", hl.dsp.window.resize({ x = 0, y = -10, relative = true }), { repeating = true })
-        hl.bind(mod .. " + L", hl.dsp.window.resize({ x = 10, y = 0, relative = true }), { repeating = true })
+        hl.bind(Mod .. " + H", hl.dsp.window.resize({ x = -10, y = 0, relative = true }), { repeating = true })
+        hl.bind(Mod .. " + J", hl.dsp.window.resize({ x = 0, y = 10, relative = true }), { repeating = true })
+        hl.bind(Mod .. " + K", hl.dsp.window.resize({ x = 0, y = -10, relative = true }), { repeating = true })
+        hl.bind(Mod .. " + L", hl.dsp.window.resize({ x = 10, y = 0, relative = true }), { repeating = true })
 
-        hl.bind(mod .. " + M", hl.dsp.submap("move"))
-        hl.bind(mod .. " + R", hl.dsp.submap("manage"))
-        hl.bind(mod .. " + A", hl.dsp.submap("manage"))
+        hl.bind(Mod .. " + M", hl.dsp.submap("move"))
+        hl.bind(Mod .. " + R", hl.dsp.submap("manage"))
+        hl.bind(Mod .. " + A", hl.dsp.submap("manage"))
         hl.bind("escape", hl.dsp.submap("manage"))
+        Resize_User_Binds()
       end)
 
-      hl.bind(mod .. " + M", hl.dsp.submap("move"))
+      hl.bind(Mod .. " + M", hl.dsp.submap("move"))
       hl.define_submap("move", function()
         universal_binds()
 
-        hl.bind(mod .. " + Left", hl.dsp.window.move({ x = -10, y = 0, relative = true }), { repeating = true })
-        hl.bind(mod .. " + Down", hl.dsp.window.move({ x = 0, y = 10, relative = true }), { repeating = true })
-        hl.bind(mod .. " + Up", hl.dsp.window.move({ x = 0, y = -10, relative = true }), { repeating = true })
-        hl.bind(mod .. " + Right", hl.dsp.window.move({ x = 10, y = 0, relative = true }), { repeating = true })
+        hl.bind(Mod .. " + Left", hl.dsp.window.move({ x = -10, y = 0, relative = true }), { repeating = true })
+        hl.bind(Mod .. " + Down", hl.dsp.window.move({ x = 0, y = 10, relative = true }), { repeating = true })
+        hl.bind(Mod .. " + Up", hl.dsp.window.move({ x = 0, y = -10, relative = true }), { repeating = true })
+        hl.bind(Mod .. " + Right", hl.dsp.window.move({ x = 10, y = 0, relative = true }), { repeating = true })
 
-        hl.bind(mod .. " + H", hl.dsp.window.move({ x = -10, y = 0, relative = true }), { repeating = true })
-        hl.bind(mod .. " + J", hl.dsp.window.move({ x = 0, y = 10, relative = true }), { repeating = true })
-        hl.bind(mod .. " + K", hl.dsp.window.move({ x = 0, y = -10, relative = true }), { repeating = true })
-        hl.bind(mod .. " + L", hl.dsp.window.move({ x = 10, y = 0, relative = true }), { repeating = true })
+        hl.bind(Mod .. " + H", hl.dsp.window.move({ x = -10, y = 0, relative = true }), { repeating = true })
+        hl.bind(Mod .. " + J", hl.dsp.window.move({ x = 0, y = 10, relative = true }), { repeating = true })
+        hl.bind(Mod .. " + K", hl.dsp.window.move({ x = 0, y = -10, relative = true }), { repeating = true })
+        hl.bind(Mod .. " + L", hl.dsp.window.move({ x = 10, y = 0, relative = true }), { repeating = true })
 
-        hl.bind(mod .. " + R", hl.dsp.submap("resize"))
-        hl.bind(mod .. " + M", hl.dsp.submap("manage"))
-        hl.bind(mod .. " + A", hl.dsp.submap("manage"))
+        hl.bind(Mod .. " + R", hl.dsp.submap("resize"))
+        hl.bind(Mod .. " + M", hl.dsp.submap("manage"))
+        hl.bind(Mod .. " + A", hl.dsp.submap("manage"))
         hl.bind("escape", hl.dsp.submap("manage"))
+        Move_User_Binds()
       end)
 
       hl.bind("Escape", hl.dsp.submap("reset"))
 
-      hl.bind(mod .. " + A", hl.dsp.submap("reset"))
+      hl.bind(Mod .. " + A", hl.dsp.submap("reset"))
+      Manage_User_Binds()
     end)
 
     hl.define_submap("player", function()
       universal_binds()
       hl.bind("escape", hl.dsp.submap("reset"))
-      hl.bind(mods .. " + P", hl.dsp.submap("reset"))
+      hl.bind(Mods .. " + P", hl.dsp.submap("reset"))
       hl.bind("O", hl.dsp.exec_cmd("uwsm-app -- playerVol inc"), { repeating = true, locked = true })
       hl.bind("I", hl.dsp.exec_cmd("uwsm-app -- playerVol dec"), { repeating = true, locked = true })
-      hl.bind("SHIFT + O", hl.dsp.exec_cmd(playerctl .. " next"), { repeating = true, locked = true })
-      hl.bind("SHIFT + I", hl.dsp.exec_cmd(playerctl .. " previous"), { repeating = true, locked = true })
-      hl.bind("P", hl.dsp.exec_cmd(playerctl .. " play-pause"), { locked = true })
+      hl.bind("SHIFT + O", hl.dsp.exec_cmd(Playerctl .. " next"), { repeating = true, locked = true })
+      hl.bind("SHIFT + I", hl.dsp.exec_cmd(Playerctl .. " previous"), { repeating = true, locked = true })
+      hl.bind("P", hl.dsp.exec_cmd(Playerctl .. " play-pause"), { locked = true })
+      Player_User_Binds()
     end)
+    Default_User_Binds()
   '';
 }
