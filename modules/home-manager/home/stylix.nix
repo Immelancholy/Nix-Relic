@@ -23,10 +23,6 @@ let
     /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.exec_cmd("uwsm app -- kitty --class fastfetch kitty @ launch --type overlay --env class=fastfetch", { workspace = "1 silent", float = true, size = {590, 383}, move = {10, 42} })'
     /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.exec_cmd("${playerCmd}", { workspace = "1 silent", float = true, size = {888, 559}, move = {610, 42} })'
     /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.exec_cmd("uwsm app -- localsend_app --hidden")'
-    systemctl restart --user easyeffects
-    systemctl restart --user qpwgraph
-    sleep 1
-    systemctl restart --user waybar
     dunstctl set-paused false
     dunstctl close-all
     notify-send "|-<(Theme Loaded)>-|"
