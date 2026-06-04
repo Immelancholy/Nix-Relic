@@ -2,6 +2,15 @@
 let
   inherit (config.player) cmd class cmdGame;
   inherit (config.wayland.windowManager.hyprland) liveWallpaper;
+  wallpaperKill = "${
+    if liveWallpaper.enable then
+      ''
+        hl.exec_cmd("systemctl start --user hyprpaper")
+            hl.exec_cmd("pkill mpvpaper")
+      ''
+    else
+      ""
+  }";
 in
 {
   xdg.configFile."hypr/lua/binds.lua".text = /* Lua */ ''
@@ -277,7 +286,7 @@ in
             match = { class = "^(.*)$" },
             opacity = "1.0 override 1.0 override 1.0 override",
           })
-          hl.dispatch(hl.dsp.exec_cmd("pkill mpvpaper"))
+          ${wallpaperKill}
           hl.dispatch(hl.dsp.window.kill({ window = "class:^(${class})$" }))
           hl.dispatch(hl.dsp.window.kill({ window = "class:^(neo)$" }))
           hl.dispatch(hl.dsp.window.kill({ window = "class:^(fastfetch)$" }))
@@ -291,47 +300,7 @@ in
           )
         end
         if gamemode == false then
-          hl.dispatch(
-            hl.dsp.exec_cmd(
-              "uwsm-app -- mpvpaper -f -p -o \"--loop hwdec=auto --no-audio\" '*' ${liveWallpaper.path}"
-            )
-          )
           hl.dispatch(hl.dsp.exec_cmd("hyprctl reload config-only -q"))
-          hl.dispatch(hl.dsp.window.kill({ window = "class:^(${class})$" }))
-          hl.dispatch(hl.dsp.window.kill({ window = "class:^(neo)$" }))
-          hl.dispatch(hl.dsp.window.kill({ window = "class:^(fastfetch)$" }))
-          hl.dispatch(hl.dsp.window.kill({ window = "class:^(btop)$" }))
-          hl.dispatch(hl.dsp.window.kill({ window = "class:^(cava)$" }))
-          hl.dispatch(
-            hl.dsp.exec_cmd(
-              "uwsm-app -- kitty --class cava cava.sh",
-              { workspace = "1 silent", float = true, size = { 888, 462 }, move = { 610, 609 } }
-            )
-          )
-          hl.dispatch(
-            hl.dsp.exec_cmd(
-              "uwsm-app -- kitty --class btop btop.sh",
-              { workspace = "1 silent", float = true, size = { 590, 637 }, move = { 10, 433 } }
-            )
-          )
-          hl.dispatch(
-            hl.dsp.exec_cmd(
-              "uwsm-app -- kitty --class neo neo.sh",
-              { workspace = "1 silent", float = true, size = { 402, 1030 }, move = { 1508, 42 } }
-            )
-          )
-          hl.dispatch(
-            hl.dsp.exec_cmd(
-              "uwsm-app -- kitty --class fastfetch kitty @ launch --type overlay --env class=fastfetch",
-              { workspace = "1 silent", float = true, size = { 590, 383 }, move = { 10, 42 } }
-            )
-          )
-          hl.dispatch(
-            hl.dsp.exec_cmd(
-              "${cmd}",
-              { workspace = "1 silent", float = true, size = { 888, 559 }, move = { 610, 42 } }
-            )
-          )
         end
       end)
 
