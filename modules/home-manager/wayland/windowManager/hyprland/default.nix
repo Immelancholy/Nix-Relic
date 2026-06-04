@@ -1,5 +1,5 @@
 {
   imports = [
-    # ./useLiveWallpaper.nix
+    ./useLiveWallpaper.nix
   ];
 }
