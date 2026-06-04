@@ -1,8 +1,10 @@
 { config, ... }:
 let
   inherit (config.lib.stylix) colors;
+  mkHex = colors: builtins.mapAttrs (_: value: "#${value}") colors;
+  colors-hex = mkHex colors;
 in
-with colors;
+with colors-hex;
 {
   programs.waybar.style = /* CSS */ ''
      * {
