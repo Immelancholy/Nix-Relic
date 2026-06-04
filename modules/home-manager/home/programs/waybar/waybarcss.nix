@@ -16,6 +16,7 @@ with colors-hex;
         min-height: 11px;
     }
 
+
     window#waybar {
         background: transparent;
     }
@@ -55,7 +56,7 @@ with colors-hex;
     }
 
     #workspaces button:hover {
-        background: linear-gradient(0deg, alpha(${base07}, 0.92), alpha(${base0C}, 0.92));
+        background: linear-gradient(0deg, alpha(${base07}, 0.92), alpha(${base0C}, 0.92), alpha(${base00}, 0.92));
         color: ${base02};
         animation: ws_hover 20s ease-in-out 1;
         transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
@@ -106,7 +107,7 @@ with colors-hex;
     #custom-rl_end,
     #custom-rr_end {
         color: ${base05};
-        background: linear-gradient(180deg, alpha(${base00}, 0.92), alpha(${base0C}, 0.92));
+        background: linear-gradient(0deg, alpha(${base07}, 0.92), alpha(${base00}, 0.92));
         opacity: 1;
         margin: 4px 0px 4px 0px;
         padding-left: 4px;
