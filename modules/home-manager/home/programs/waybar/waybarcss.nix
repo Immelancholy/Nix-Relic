@@ -56,7 +56,7 @@ with colors-hex;
     }
 
     #workspaces button:hover {
-        background: radial-gradient(ellipse farthest-side, ${base00} 70%, ${base0C} 20%, ${base07} 10%);
+        background: radial-gradient(ellipse farthest-side, ${base00} 10%, ${base0C} 20%, ${base07} 70%);
         color: ${base02};
         animation: ws_hover 20s ease-in-out 1;
         transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
@@ -107,7 +107,7 @@ with colors-hex;
     #custom-rl_end,
     #custom-rr_end {
         color: ${base05};
-        background: radial-gradient(ellipse farthest-side, ${base00}, ${base0C}, ${base07});
+        background: radial-gradient(ellipse farthest-side, ${base00} 10%, ${base0C} 20%, ${base07} 70%);
         opacity: 1;
         margin: 4px 0px 4px 0px;
         padding-left: 4px;
