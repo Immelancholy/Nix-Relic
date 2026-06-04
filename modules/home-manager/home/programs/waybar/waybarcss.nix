@@ -107,8 +107,8 @@
         margin: 4px 0px 4px 0px;
         padding-left: 4px;
         padding-right: 4px;
-        border-bottom: 2px solid alpha(@teal, 0.92);
-        box-shadow: 0 0 10px alpha(@teal 1.0);
+        border-bottom: 2px solid alpha(@mauve, 0.92);
+        box-shadow: inset 0 -2px 10px alpha(@teal, 1.0);
     }
 
     #workspaces,
