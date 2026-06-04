@@ -24,9 +24,9 @@ in
       global = {
         follow = "keyboard";
         enable_posix_regex = true;
-        frame_color = "${mauve}c0";
+        frame_color = "${teal}c0";
         separator_color = "frame";
-        highlight = "${mauve}c0";
+        highlight = "${teal}c0";
         gaps_size = 4;
         frame_width = 2;
         corner_radius = 20;
