@@ -107,7 +107,7 @@ with colors-hex;
     #custom-rl_end,
     #custom-rr_end {
         color: ${base05};
-        background: radial-gradient(0deg, ${base00}, ${base0C}, ${base07});
+        background: radial-gradient(ellipse farthest-side, ${base00}, ${base0C}, ${base07});
         opacity: 1;
         margin: 4px 0px 4px 0px;
         padding-left: 4px;
