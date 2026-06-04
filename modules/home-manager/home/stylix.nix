@@ -6,27 +6,6 @@
   ...
 }:
 let
-  playerClass = config.player.class;
-  playerCmd = config.player.cmd;
-  launches = pkgs.writeShellScriptBin "launches" ''
-    dunstctl set-paused true
-    dunstctl close-all
-    pkill localsend
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.window.kill({ window = "class:^(${playerClass})$" })'
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.window.kill({ window = "class:^(neo)$" })'
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.window.kill({ window = "class:^(fastfetch)$" })'
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.window.kill({ window = "class:^(btop)$" })'
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.window.kill({ window = "class:^(cava)$" })'
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.exec_cmd("uwsm app -- kitty --class cava cava.sh", { workspace = "1 silent", float = true, size = {888, 462}, move = {610, 609} })'
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.exec_cmd("uwsm app -- kitty --class btop btop.sh", { workspace = "1 silent", float = true, size = {590, 637}, move = {10, 433} })'
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.exec_cmd("uwsm app -- kitty --class neo neo.sh", { workspace = "1 silent", float = true, size = {402, 1030}, move = {1508, 42} })'
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.exec_cmd("uwsm app -- kitty --class fastfetch kitty @ launch --type overlay --env class=fastfetch", { workspace = "1 silent", float = true, size = {590, 383}, move = {10, 42} })'
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.exec_cmd("${playerCmd}", { workspace = "1 silent", float = true, size = {888, 559}, move = {610, 42} })'
-    /run/current-system/sw/bin/hyprctl dispatch 'hl.dsp.exec_cmd("uwsm app -- localsend_app --hidden")'
-    dunstctl set-paused false
-    dunstctl close-all
-    notify-send "|-<(Theme Loaded)>-|"
-  '';
   iconColour = osConfig.nix-relic.icons.colour;
 in
 {
@@ -65,24 +44,6 @@ in
           override.applications = 0.5;
         };
       };
-    };
-  };
-  systemd.user.services.Theme-Reload = {
-    Unit = {
-      Description = "Reloads Theme";
-      PartOf = [ "graphical-session.target" ];
-      Requires = [ "graphical-session.target" ];
-      After = [ "graphical-session.target" ];
-      ConditionEnvironment = "WAYLAND_DISPLAY";
-    };
-    Service = {
-      ExecStart = "${lib.getExe launches}";
-      Type = "simple";
-      Slice = [ "session.slice" ];
-      Restart = "on-failure";
-    };
-    Install = {
-      WantedBy = [ "graphical-session.target" ];
     };
   };
 }
