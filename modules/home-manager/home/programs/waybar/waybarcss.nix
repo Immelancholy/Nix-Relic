@@ -106,13 +106,13 @@ with colors-hex;
     #custom-rl_end,
     #custom-rr_end {
         color: ${base05};
-        background: alpha(${base07}, 0.8);
+        background: alpha(${base09}, 0.8);
         opacity: 1;
         margin: 4px 0px 4px 0px;
         padding-left: 4px;
         padding-right: 4px;
-        border-bottom: 2px solid alpha(${base0E}, 0.92);
-        box-shadow: inset 0 -2px 10px alpha(${base0C}, 1.0);
+        border-bottom: 2px solid alpha(${base07}, 0.92);
+        box-shadow: 0 -2px 10px alpha(${base0C}, 1.0);
     }
 
     #workspaces,
@@ -158,13 +158,13 @@ with colors-hex;
 
     #custom-cava {
         color: ${base05};
-        background: alpha(${base07}, 0.8);
+        background: alpha(${base00}, 0.8);
         opacity: 1;
         margin: 4px 0px 4px 0px;
         padding-left: 4px;
         padding-right: 4px;
-        border-bottom: 2px solid alpha(${base0E}, 0.92);
-        box-shadow: inset 0 -2px 10px alpha(${base0C}, 1.0);
+        border-bottom: 2px solid alpha(${base07}, 0.92);
+        box-shadow: 0 -2px 10px alpha(${base0C}, 1.0);
     }
   '';
 }
