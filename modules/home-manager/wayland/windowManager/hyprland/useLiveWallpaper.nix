@@ -1,7 +1,6 @@
 {
   config,
   lib,
-  pkgs,
   osConfig,
   ...
 }:
@@ -22,9 +21,29 @@ in
       description = "Path to animated background";
     };
   };
-  config = mkIf (cfg.liveWallpaper.enable && cfg.enable) {
-    home.packages = with pkgs; [
-      mpvpaper
-    ];
-  };
+  config =
+    mkIf cfg.liveWallpaper.enable
+    && cfg.enable {
+      home.packages = [
+        mpvpaper
+      ];
+      systemd.user.services.paper-change = {
+        Unit = {
+          Description = "Wallpaper Changer";
+          PartOf = [ "graphical-session.target" ];
+          Requires = [ "graphical-session.target" ];
+          After = [ "graphical-session.target" ];
+          ConditionEnvironment = "WAYLAND_DISPLAY";
+        };
+        Service = {
+          ExecStart = "/run/current-system/sw/bin/systemctl stop --user hyprpaper";
+          Type = "simple";
+          Slice = [ "session.slice" ];
+          Restart = "on-failure";
+        };
+        Install = {
+          WantedBy = [ "graphical-session.target" ];
+        };
+      };
+    };
 }
