@@ -1,7 +1,9 @@
+{ config, ... }:
+let
+  inherit (config.stylix.lib) colors;
+in
+with colors;
 {
-  imports = [
-    ./colors.nix
-  ];
   programs.waybar.style = /* CSS */ ''
      * {
         border: none;
@@ -17,8 +19,8 @@
     }
 
     tooltip {
-        background: alpha(@base, 0.8);
-        color: @text;
+        background: alpha(${base00}, 0.8);
+        color: ${base05};
         border-radius: 7px;
         border-width: 0px;
     }
@@ -35,13 +37,13 @@
         padding-left: 3px;
         padding-right: 3px;
         margin-right: 0px;
-        color: @text;
+        color: ${base05};
         animation: ws_normal 20s ease-in-out 1;
     }
 
     #workspaces button.active {
-        background: alpha(@mauve, 0.92);
-        color: @surface0;
+        background: alpha(${base0E}, 0.92);
+        color: ${base02};
         margin-left: 3px;
         padding-left: 12px;
         padding-right: 12px;
@@ -51,8 +53,8 @@
     }
 
     #workspaces button:hover {
-        background: alpha(@lavender, 0.92);
-        color: @surface0;
+        background: alpha(${base07}, 0.92);
+        color: ${base02};
         animation: ws_hover 20s ease-in-out 1;
         transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
     }
@@ -66,11 +68,11 @@
     }
 
     #battery.critical {
-      color: @red;
+      color: #df0f25;
     }
 
     #battery.warning {
-      color: @yellow;
+      color: #ffbe27;
     }
 
     #backlight,
@@ -101,14 +103,14 @@
     #custom-sr_end,
     #custom-rl_end,
     #custom-rr_end {
-        color: @text;
-        background: alpha(@base, 0.8);
+        color: ${base07};
+        background: alpha(${base00}, 0.8);
         opacity: 1;
         margin: 4px 0px 4px 0px;
         padding-left: 4px;
         padding-right: 4px;
-        border-bottom: 2px solid alpha(@mauve, 0.92);
-        box-shadow: inset 0 -2px 10px alpha(@teal, 1.0);
+        border-bottom: 2px solid alpha(${base0E}, 0.92);
+        box-shadow: inset 0 -2px 10px alpha(${base0C}, 1.0);
     }
 
     #workspaces,
@@ -153,13 +155,14 @@
     }
 
     #custom-cava {
-        color: @text;
-        background: alpha(@base, 0.8);
+        color: ${base05};
+        background: alpha(${base07}, 0.8);
         opacity: 1;
         margin: 4px 0px 4px 0px;
         padding-left: 4px;
         padding-right: 4px;
-        border-bottom: 2px solid alpha(@mauve, 0.92);
+        border-bottom: 2px solid alpha(${base0E}, 0.92);
+        box-shadow: inset 0 -2px 10px alpha(${base0C}, 1.0);
     }
   '';
 }
