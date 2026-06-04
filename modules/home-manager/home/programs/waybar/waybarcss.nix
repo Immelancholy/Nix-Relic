@@ -106,7 +106,7 @@ with colors-hex;
     #custom-rl_end,
     #custom-rr_end {
         color: ${base05};
-        background: alpha(${base00}, 0.8);
+        background: linear-gradient(180deg, alpha(${base00}, 0.92), alpha(${base0C}, 0.92));
         opacity: 1;
         margin: 4px 0px 4px 0px;
         padding-left: 4px;
