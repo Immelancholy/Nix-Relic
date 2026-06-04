@@ -111,8 +111,7 @@ with colors-hex;
         margin: 4px 0px 4px 0px;
         padding-left: 4px;
         padding-right: 4px;
-        border-bottom: 2px solid alpha(${base07}, 0.92);
-        box-shadow: 0 -2px 10px alpha(${base0C}, 1.0);
+        border-bottom: 2px solid alpha(${base0C}, 0.92);
     }
 
     #workspaces,
@@ -163,8 +162,7 @@ with colors-hex;
         margin: 4px 0px 4px 0px;
         padding-left: 4px;
         padding-right: 4px;
-        border-bottom: 2px solid alpha(${base07}, 0.92);
-        box-shadow: 0 -2px 10px alpha(${base0C}, 1.0);
+        border-bottom: 2px solid alpha(${base0C}, 0.92);
     }
   '';
 }
