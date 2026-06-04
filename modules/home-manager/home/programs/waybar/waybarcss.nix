@@ -105,8 +105,8 @@ with colors-hex;
     #custom-sr_end,
     #custom-rl_end,
     #custom-rr_end {
-        color: ${base07};
-        background: alpha(${base00}, 0.8);
+        color: ${base05};
+        background: alpha(${base07}, 0.8);
         opacity: 1;
         margin: 4px 0px 4px 0px;
         padding-left: 4px;
