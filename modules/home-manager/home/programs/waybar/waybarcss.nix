@@ -55,7 +55,7 @@ with colors-hex;
     }
 
     #workspaces button:hover {
-        background: linear-gradient(90deg, alpha(${base00}, 0.92), alpha(${base0C}, 0.92));
+        background: linear-gradient(0deg, alpha(${base07}, 0.92), alpha(${base0C}, 0.92));
         color: ${base02};
         animation: ws_hover 20s ease-in-out 1;
         transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
