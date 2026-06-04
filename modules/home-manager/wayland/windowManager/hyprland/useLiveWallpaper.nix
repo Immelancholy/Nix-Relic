@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs,
   osConfig,
   ...
 }:
@@ -23,7 +24,7 @@ in
   };
   config = mkIf (cfg.liveWallpaper.enable && cfg.enable) {
     home.packages = [
-      mpvpaper
+      pkgs.mpvpaper
     ];
     systemd.user.services.paper-change = {
       Unit = {
