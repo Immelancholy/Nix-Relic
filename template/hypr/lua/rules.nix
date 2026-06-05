@@ -315,7 +315,6 @@
         title = "^(Qalculate!)$",
       },
       float = true,
-      size = { 437, 306 },
     })
     hl.window_rule({
       match = {
