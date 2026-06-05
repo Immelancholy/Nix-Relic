@@ -29,6 +29,9 @@
       allowUnfree = true;
     };
   };
+  services.displayManager = {
+    defaultSession = lib.mkForce "hyprland-uwsm";
+  };
 
   nix =
     let
