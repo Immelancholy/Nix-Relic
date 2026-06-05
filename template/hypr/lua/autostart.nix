@@ -40,9 +40,9 @@ in
         end, {timeout = 5, type = "oneshot"})
         ${wallpaper}
         hl.timer(function()
-          hl.exec_cmd("dunstctl set-paused false")
+          hl.exec_cmd("sleep 1; dunstctl set-paused false")
           hl.exec_cmd("dunstctl close-all")
-          hl.exec_cmd("sleep 1; notify-send \"|-<(Theme Loaded)>-|\"")
+          hl.exec_cmd("sleep 2; notify-send \"|-<(Theme Loaded)>-|\"")
         end, {timeout = 5, type = "oneshot"})
       end, { timeout = 1, type = "oneshot" })
     end)
@@ -70,9 +70,9 @@ in
         ${wallpaperKill}
         ${wallpaper}
         hl.timer(function()
-          hl.exec_cmd("dunstctl set-paused false")
+          hl.exec_cmd("sleep 1; dunstctl set-paused false")
           hl.exec_cmd("dunstctl close-all")
-          hl.exec_cmd("sleep 1; notify-send \"|-<(Theme Loaded)>-|\"")
+          hl.exec_cmd("sleep 2; notify-send \"|-<(Theme Loaded)>-|\"")
         end, {timeout = 5, type = "oneshot"})
       end, { timeout = 1, type = "oneshot" })
     end)
