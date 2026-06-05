@@ -21,7 +21,7 @@ with colors-hex;
     }
 
     tooltip {
-        background: alpha(${base00}, 0.8);
+        background: alpha(alpha(${base00}, 0.65), 0.8);
         color: ${base05};
         border-radius: 7px;
         border-width: 0px;
@@ -43,7 +43,7 @@ with colors-hex;
     }
 
     #workspaces button.active {
-        background: radial-gradient(circle farthest-side, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base0C}, ${base06}, ${base0C}, transparent);
+        background: radial-gradient(circle farthest-side, alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), ${base0C}, ${base06}, ${base0C}, transparent);
         color: ${base05};
         margin-left: 3px;
         padding-left: 13px;
@@ -54,7 +54,7 @@ with colors-hex;
     }
 
     #workspaces button:hover {
-        background: radial-gradient(circle farthest-side, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base0C}, ${base06}, ${base0C}, transparent);
+        background: radial-gradient(circle farthest-side, alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), ${base0C}, ${base06}, ${base0C}, transparent);
         color: ${base0C};
         animation: ws_hover 20s ease-in-out 1;
         transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
@@ -105,7 +105,7 @@ with colors-hex;
     #custom-rl_end,
     #custom-rr_end {
         color: ${base05};
-        background: linear-gradient(0deg, transparent, ${base0C}, ${base06}, ${base0C}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base0C}, ${base06}, ${base0C}, transparent);
+        background: linear-gradient(0deg, transparent, ${base0C}, ${base06}, ${base0C}, alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), ${base0C}, ${base06}, ${base0C}, transparent);
         opacity: 1;
         margin: 1px 0px 4px 0px;
         padding-left: 4px;
@@ -119,7 +119,7 @@ with colors-hex;
 
     #custom-r_end {
         border-radius: 0px 21px 21px 0px;
-        background: radial-gradient(ellipse farthest-side, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base0C}, ${base06}, ${base0C}, transparent);
+        background: radial-gradient(ellipse farthest-side, alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), ${base0C}, ${base06}, ${base0C}, transparent);
         background-size: 200% 100%;
         background-position: 100% 0%;
         margin-right: 9px;
@@ -128,7 +128,7 @@ with colors-hex;
 
     #custom-l_end {
         border-radius: 21px 0px 0px 21px;
-        background: radial-gradient(ellipse farthest-side, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base0C}, ${base06}, ${base0C}, transparent);
+        background: radial-gradient(ellipse farthest-side, alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), ${base0C}, ${base06}, ${base0C}, transparent);
         background-size: 200% 100%;
         margin-left: 9px;
         padding-left: 3px;
@@ -160,7 +160,7 @@ with colors-hex;
 
     #custom-cava {
         color: ${base05};
-        background: linear-gradient(0deg, transparent, ${base0C}, ${base06}, ${base0C}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base0C}, ${base06}, ${base0C}, transparent);
+        background: linear-gradient(0deg, transparent, ${base0C}, ${base06}, ${base0C}, alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65),${base0C}, ${base06}, ${base0C}, transparent);
         opacity: 1;
         margin: 1px 0px 4px 0px;
         padding-left: 4px;
