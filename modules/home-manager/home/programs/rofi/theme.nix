@@ -186,6 +186,9 @@
       "element selected.active" = {
         background-color = mkLiteral "@base";
         text-color = mkLiteral "@teal";
+        border = mkLiteral "2px solid";
+        border-color = mkLiteral "@teal";
+        border-radius = mkLiteral "20px";
       };
       "element-icon" = {
         background-color = mkLiteral "transparent";
