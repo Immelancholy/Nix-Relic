@@ -4,14 +4,16 @@
 }:
 let
   associations = {
-    "text/plain" = [ "nvim.desktop" ];
-    "text/css" = [ "nvim.desktop" ];
-    "text/csv" = [ "nvim.desktop" ];
-    "text/javascript" = [ "nvim.desktop" ];
-    "text/markdown" = [ "nvim.desktop" ];
-    "application/json" = [ "nvim.desktop" ];
-    "application/xml" = [ "nvim.desktop" ];
-    "application/x-shellscript" = [ "nvim.desktop" ];
+    "text/plain" = [ "org.neovim.nvim.desktop" ];
+    "text/html" = [ "org.neovim.nvim.desktop" ];
+    "text/css" = [ "org.neovim.nvim.desktop" ];
+    "text/csv" = [ "org.neovim.nvim.desktop" ];
+    "text/javascript" = [ "org.neovim.nvim.desktop" ];
+    "text/markdown" = [ "org.neovim.nvim.desktop" ];
+    "application/json" = [ "org.neovim.nvim.desktop" ];
+    "application/xml" = [ "org.neovim.nvim.desktop" ];
+    "application/x-shellscript" = [ "org.neovim.nvim.desktop" ];
+    "application/rtf" = [ "org.neovim.nvim.desktop" ];
   };
 in
 {
@@ -24,5 +26,6 @@ in
   ];
   home.sessionVariables = {
     EDITOR = "nvim";
+    VISUAL = "nvim";
   };
 }

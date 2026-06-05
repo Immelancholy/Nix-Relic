@@ -96,7 +96,6 @@
     wantedBy = [ "graphical-session.target" ];
   };
   environment.systemPackages = with pkgs; [
-    rheayna-vim
     nr.relic-cli
     nr.flake-cli
     nix-output-monitor
