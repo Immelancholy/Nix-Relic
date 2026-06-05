@@ -23,7 +23,7 @@
 
     Browser = "uwsm-app -- zen-beta.desktop"
     Discord = "uwsm-app -- vesktop.desktop"
-    Editor = "uwsm-app -- nvim.desktop"
+    Editor = "uwsm-app -- org.neovim.nvim.desktop"
     Files = "uwsm-app -- nemo.desktop"
     Filest = "uwsm-app -- yazi.desktop"
     Menu =
