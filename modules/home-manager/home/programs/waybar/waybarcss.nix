@@ -56,7 +56,7 @@ with colors-hex;
     }
 
     #workspaces button:hover {
-        background: radial-gradient(, ${base00}, ${base0C}, ${base07});
+        background: radial-gradient(ellipse farthest-side, ${base00}, ${base0C}, ${base07});
         color: ${base02};
         animation: ws_hover 20s ease-in-out 1;
         transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
@@ -107,12 +107,12 @@ with colors-hex;
     #custom-rl_end,
     #custom-rr_end {
         color: ${base05};
-        background: linear-gradient(0deg, ${base0C}, ${base07}, ${base00}, ${base0C}, ${base07});
+        background: linear-gradient(0deg, ${base07}, ${base0C},  ${base00}, ${base0C}, ${base07});
         opacity: 1;
         margin: 4px 0px 4px 0px;
         padding-left: 4px;
         padding-right: 4px;
-        border-bottom: 2px solid linear-gradient(to right, ${base0E}, ${base0C}, ${base06});
+        border-bottom: 2px solid alpha(${base0C}, 0.92);
     }
 
     #workspaces,
@@ -158,12 +158,12 @@ with colors-hex;
 
     #custom-cava {
         color: ${base05};
-        background: linear-gradient(0deg, ${base0C}, ${base07}, ${base00}, ${base0C}, ${base07});
+        background: linear-gradient(0deg, ${base07}, ${base0C},  ${base00}, ${base0C}, ${base07});
         opacity: 1;
         margin: 4px 0px 4px 0px;
         padding-left: 4px;
         padding-right: 4px;
-        border-bottom: 2px solid linear-gradient(to right, ${base0E}, ${base0C}, ${base06});
+        border-bottom: 2px solid alpha(${base0C}, 0.92);
     }
   '';
 }
