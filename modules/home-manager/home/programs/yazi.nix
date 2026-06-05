@@ -58,21 +58,21 @@
       opener = {
         play = [
           {
-            run = "mpv %s";
+            run = "runapp mpv %s";
             orphan = true;
             for = "unix";
           }
         ];
         edit = [
           {
-            run = "$EDITOR %s";
+            run = "runapp $EDITOR %s";
             block = true;
             for = "unix";
           }
         ];
         open = [
           {
-            run = "xdg-open %s1";
+            run = "runapp xdg-open %s1";
             desc = "Open";
           }
         ];
@@ -82,6 +82,17 @@
           {
             mime = "text/*";
             use = "edit";
+          }
+          {
+            url = "*.json";
+            use = "edit";
+          }
+          {
+            url = "*.html";
+            use = [
+              "open"
+              "edit"
+            ];
           }
           {
             mime = "video/*";
