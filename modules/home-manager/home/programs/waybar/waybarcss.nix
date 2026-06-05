@@ -43,7 +43,7 @@ with colors-hex;
     }
 
     #workspaces button.active {
-        background: radial-gradient(circle farthest-side, alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), ${base0C}, ${base06}, ${base0C}, transparent);
+        background: radial-gradient(circle farthest-side, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, ${base0C}, ${base06}, ${base0C}, transparent);
         color: ${base05};
         margin-left: 3px;
         padding-left: 13px;
@@ -54,7 +54,7 @@ with colors-hex;
     }
 
     #workspaces button:hover {
-        background: radial-gradient(circle farthest-side, alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), ${base0C}, ${base06}, ${base0C}, transparent);
+        background: radial-gradient(circle farthest-side, transparent, transparent, transparent, transparent, transparent, transparent, transparent, ${base0C}, ${base06}, ${base0C}, transparent);
         color: ${base0C};
         animation: ws_hover 20s ease-in-out 1;
         transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
