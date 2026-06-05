@@ -58,21 +58,21 @@
       opener = {
         play = [
           {
-            run = "runapp mpv %s";
+            run = "uwsm-app -- mpv %s";
             orphan = true;
             for = "unix";
           }
         ];
         edit = [
           {
-            run = "runapp $EDITOR %s";
+            run = "uwsm-app -- $EDITOR %s";
             block = true;
             for = "unix";
           }
         ];
         open = [
           {
-            run = "runapp xdg-open %s1";
+            run = "uwsm-app -- xdg-open %s1";
             desc = "Open";
           }
         ];
