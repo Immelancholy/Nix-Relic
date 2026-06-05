@@ -60,7 +60,7 @@
       inputs.hyprland.follows = "hyprland";
     };
     stylix = {
-      url = "github:Immelancholy/stylix/zen+kms";
+      url = "github:Immelancholy/stylix/master+zen";
     };
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
