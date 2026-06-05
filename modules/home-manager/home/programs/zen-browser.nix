@@ -46,6 +46,7 @@ in
       "sheetkeys@github.com" = "sheetkeys";
       "{762f9885-5a13-4abd-9c77-433dcd38b8fd}" = "return-youtube-dislikes";
       "{d66c8515-1e0d-408f-82ee-2682f2362726}" = "iina-open-in-mpv";
+      "addon@darkreader.org" = "darkreader";
     };
   };
 }
