@@ -227,31 +227,6 @@ in
         interval = "once";
         tooltip = false;
       };
-      "custom/sl_end" = {
-        format = " ";
-        interval = "once";
-        tooltip = false;
-      };
-      "custom/sr_end" = {
-        format = " ";
-        interval = "once";
-        tooltip = false;
-      };
-      "custom/rl_end" = {
-        format = " ";
-        interval = "once";
-        tooltip = false;
-      };
-      "custom/rr_end" = {
-        format = " ";
-        interval = "once";
-        tooltip = false;
-      };
-      "custom/padd" = {
-        format = " ";
-        interval = "once";
-        tooltip = false;
-      };
       "custom/cava" = {
         format = "{}";
         exec = "waycava.sh stdout --stb 3";

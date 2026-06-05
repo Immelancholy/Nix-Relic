@@ -99,11 +99,7 @@ with colors-hex;
     #workspaces,
     #workspaces,
     #custom-l_end,
-    #custom-r_end,
-    #custom-sl_end,
-    #custom-sr_end,
-    #custom-rl_end,
-    #custom-rr_end {
+    #custom-r_end {
         color: ${base05};
         background: linear-gradient(0deg, transparent, ${base0C}, ${base06}, ${base0C}, alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), ${base0C}, ${base06}, ${base0C}, transparent);
         opacity: 1;
@@ -134,30 +130,6 @@ with colors-hex;
         padding-left: 3px;
     }
 
-    #custom-sr_end {
-        border-radius: 0px;
-        margin-right: 9px;
-        padding-right: 3px;
-    }
-
-    #custom-sl_end {
-        border-radius: 0px;
-        margin-left: 9px;
-        padding-left: 3px;
-    }
-
-    #custom-rr_end {
-        border-radius: 0px 7px 7px 0px;
-        margin-right: 9px;
-        padding-right: 3px;
-    }
-
-    #custom-rl_end {
-        border-radius: 7px 0px 0px 7px;
-        margin-left: 9px;
-        padding-left: 3px;
-    }
-
     #custom-cava {
         color: ${base05};
         background: linear-gradient(0deg, transparent, ${base0C}, ${base06}, ${base0C}, alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65), alpha(${base00}, 0.65),${base0C}, ${base06}, ${base0C}, transparent);
@@ -168,7 +140,7 @@ with colors-hex;
     }
 
     #custom-power {
-        padding-left: 4px;
+        padding-left: 5px;
         padding-right: 8px;
     }
   '';
