@@ -12,7 +12,7 @@ with colors-hex;
         border-radius: 0px;
         font-family: "JetBrainsMono Nerd Font";
         font-weight: bold;
-        font-size: 11px;
+        font-size: 12px;
         min-height: 11px;
     }
 
@@ -32,8 +32,8 @@ with colors-hex;
         text-shadow: none;
         padding: 0px;
         border-radius: 9px;
-        margin-top: 3px;
-        margin-bottom: 3px;
+        margin-top: 5px;
+        margin-bottom: 5px;
         margin-left: 0px;
         padding-left: 4px;
         padding-right: 3px;
@@ -169,7 +169,7 @@ with colors-hex;
 
     #custom-power {
         padding-left: 4px;
-        padding-right: 6px;
+        padding-right: 8px;
     }
   '';
 }
