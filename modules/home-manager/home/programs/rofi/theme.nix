@@ -55,7 +55,7 @@
         enabled = mkLiteral "true";
         border = mkLiteral "2px solid";
         border-radius = mkLiteral "20px";
-        border-color = mkLiteral "@lavender";
+        border-color = mkLiteral "@teal";
         cursor = "default";
         background-color = mkLiteral "@base";
       };
@@ -123,7 +123,7 @@
         cursor = mkLiteral "pointer";
       };
       "button selected" = {
-        background-color = mkLiteral "@mauve";
+        background-color = mkLiteral "@teal";
         text-color = mkLiteral "@text-dark";
       };
       "listview" = {
@@ -164,7 +164,7 @@
         text-color = mkLiteral "@text-dark";
       };
       "element selected.normal" = {
-        background-color = mkLiteral "@mauve";
+        background-color = mkLiteral "@teal";
         text-color = mkLiteral "@text-dark";
       };
       "element selected.urgent" = {
@@ -172,7 +172,7 @@
         text-color = mkLiteral "@text";
       };
       "element selected.active" = {
-        background-color = mkLiteral "@mauve";
+        background-color = mkLiteral "@teal";
         text-color = mkLiteral "@text-dark";
       };
       "element-icon" = {
