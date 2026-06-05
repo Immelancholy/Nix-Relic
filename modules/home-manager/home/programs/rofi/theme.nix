@@ -88,8 +88,10 @@
         expand = mkLiteral "false";
         str = " :";
         padding = mkLiteral "12px 15px";
+        border = mkLiteral "2px solid";
+        border-color = mkLiteral "@teal";
         border-radius = mkLiteral "100%";
-        background-color = mkLiteral "@mantle";
+        background-color = mkLiteral "@base";
         text-color = mkLiteral "inherit";
       };
       "entry" = {
@@ -97,8 +99,10 @@
         expand = mkLiteral "false";
         width = mkLiteral "250px";
         padding = mkLiteral "12px 16px";
+        border = mkLiteral "2px solid";
+        border-color = mkLiteral "@teal";
         border-radius = mkLiteral "100%";
-        background-color = mkLiteral "@mantle";
+        background-color = mkLiteral "@base";
         text-color = mkLiteral "inherit";
         cursor = mkLiteral "text";
         placeholder = "Search";
@@ -117,14 +121,16 @@
       "button" = {
         width = mkLiteral "90px";
         padding = mkLiteral "0px";
+        border = mkLiteral "2px solid";
+        border-color = mkLiteral "@teal";
         border-radius = mkLiteral "100%";
-        background-color = mkLiteral "@mantle";
+        background-color = mkLiteral "@base";
         text-color = mkLiteral "inherit";
         cursor = mkLiteral "pointer";
       };
       "button selected" = {
-        background-color = mkLiteral "@teal";
-        text-color = mkLiteral "@text-dark";
+        background-color = mkLiteral "@base";
+        text-color = mkLiteral "@teal";
       };
       "listview" = {
         enabled = mkLiteral "true";
@@ -156,24 +162,30 @@
         text-color = mkLiteral "inherit";
       };
       "element normal.urgent" = {
-        background-color = mkLiteral "@red";
+        background-color = mkLiteral "#df0f25";
         text-color = mkLiteral "@text-dark";
       };
       "element normal.active" = {
-        background-color = mkLiteral "@lavender";
-        text-color = mkLiteral "@text-dark";
+        background-color = mkLiteral "@base";
+        text-color = mkLiteral "@teal";
+        border = mkLiteral "2px solid";
+        border-color = mkLiteral "@teal";
+        border-radius = mkLiteral "20px";
       };
       "element selected.normal" = {
-        background-color = mkLiteral "@teal";
-        text-color = mkLiteral "@text-dark";
+        background-color = mkLiteral "@base";
+        text-color = mkLiteral "@teal";
+        border = mkLiteral "2px solid";
+        border-color = mkLiteral "@teal";
+        border-radius = mkLiteral "20px";
       };
       "element selected.urgent" = {
-        background-color = mkLiteral "@red";
-        text-color = mkLiteral "@text";
+        background-color = mkLiteral "#df0f25";
+        text-color = mkLiteral "@text-dark";
       };
       "element selected.active" = {
-        background-color = mkLiteral "@teal";
-        text-color = mkLiteral "@text-dark";
+        background-color = mkLiteral "@base";
+        text-color = mkLiteral "@teal";
       };
       "element-icon" = {
         background-color = mkLiteral "transparent";
