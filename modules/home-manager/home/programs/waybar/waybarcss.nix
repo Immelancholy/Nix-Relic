@@ -16,7 +16,6 @@ with colors-hex;
         min-height: 11px;
     }
 
-
     window#waybar {
         background: transparent;
     }
@@ -28,16 +27,15 @@ with colors-hex;
         border-width: 0px;
     }
 
-
     #workspaces button {
         box-shadow: none;
         text-shadow: none;
         padding: 0px;
         border-radius: 9px;
-        margin-top: 3px;
-        margin-bottom: 3px;
+        margin-top: 1px;
+        margin-bottom: 1px;
         margin-left: 0px;
-        padding-left: 3px;
+        padding-left: 4px;
         padding-right: 3px;
         margin-right: 0px;
         color: ${base05};
@@ -45,10 +43,10 @@ with colors-hex;
     }
 
     #workspaces button.active {
-        background: alpha(${base0E}, 0.92);
-        color: ${base02};
+        background: radial-gradient(circle farthest-side, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base0C}, ${base06}, ${base0C}, transparent);
+        color: ${base05};
         margin-left: 3px;
-        padding-left: 12px;
+        padding-left: 13px;
         padding-right: 12px;
         margin-right: 3px;
         animation: ws_active 20s ease-in-out 1;
@@ -56,8 +54,8 @@ with colors-hex;
     }
 
     #workspaces button:hover {
-        background: radial-gradient(ellipse farthest-side, ${base00}, ${base0C}, ${base07});
-        color: ${base02};
+        background: radial-gradient(circle farthest-side, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base0C}, ${base06}, ${base0C}, transparent);
+        color: ${base0C};
         animation: ws_hover 20s ease-in-out 1;
         transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
     }
@@ -107,12 +105,11 @@ with colors-hex;
     #custom-rl_end,
     #custom-rr_end {
         color: ${base05};
-        background: linear-gradient(0deg, ${base07}, ${base0C},  ${base00} 10% 90%, ${base0C}, ${base07});
+        background: linear-gradient(0deg, transparent, ${base0C}, ${base06}, ${base0C}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base0C}, ${base06}, ${base0C}, transparent);
         opacity: 1;
-        margin: 4px 0px 4px 0px;
+        margin: 1px 0px 4px 0px;
         padding-left: 4px;
         padding-right: 4px;
-        border-bottom: 2px solid alpha(${base0C}, 0.92);
     }
 
     #workspaces,
@@ -122,12 +119,17 @@ with colors-hex;
 
     #custom-r_end {
         border-radius: 0px 21px 21px 0px;
+        background: radial-gradient(ellipse farthest-side, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base0C}, ${base06}, ${base0C}, transparent);
+        background-size: 200% 100%;
+        background-position: 100% 0%;
         margin-right: 9px;
         padding-right: 3px;
     }
 
     #custom-l_end {
         border-radius: 21px 0px 0px 21px;
+        background: radial-gradient(ellipse farthest-side, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base0C}, ${base06}, ${base0C}, transparent);
+        background-size: 200% 100%;
         margin-left: 9px;
         padding-left: 3px;
     }
@@ -158,12 +160,16 @@ with colors-hex;
 
     #custom-cava {
         color: ${base05};
-        background: linear-gradient(0deg, ${base07}, ${base0C},  ${base00} 10% 90%, ${base0C}, ${base07});
+        background: linear-gradient(0deg, transparent, ${base0C}, ${base06}, ${base0C}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base00}, ${base0C}, ${base06}, ${base0C}, transparent);
         opacity: 1;
-        margin: 4px 0px 4px 0px;
+        margin: 1px 0px 4px 0px;
         padding-left: 4px;
         padding-right: 4px;
-        border-bottom: 2px solid alpha(${base0C}, 0.92);
+    }
+
+    #custom-power {
+        padding-left: 4px;
+        padding-right: 6px;
     }
   '';
 }
