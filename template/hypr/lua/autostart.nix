@@ -29,6 +29,7 @@ in
         hl.exec_cmd("dunstctl close-all")
         hl.exec_cmd("systemctl restart --user easyeffects")
         hl.exec_cmd("systemctl restart --user qpwgraph")
+        hl.exec_cmd("pkill localsend")
         hl.timer(function()
           hl.exec_cmd("uwsm-app -- localsend_app --hidden")
           hl.dispatch(hl.dsp.exec_cmd("uwsm-app -- kitty --class cava cava.sh", { workspace = "1 silent", float = true, size = { 888, 462 }, move = { 610, 609 } }))

@@ -253,10 +253,17 @@ in
               enabled = false,
             },
             decoration = {
+              screen_shader = "",
               shadow = {
                 enabled = false,
               },
               blur = {
+                enabled = false,
+              },
+              motion_blur = {
+                enabled = false,
+              },
+              glow = {
                 enabled = false,
               },
               rounding = 0,
