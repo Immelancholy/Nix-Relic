@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-26.05";
+    git-hooks.url = "github:cachix/git-hooks.nix";
     rheayna-vim = {
       url = "github:Immelancholy/RheaynaVim";
     };
@@ -89,7 +90,7 @@
       ...
     }:
     let
-      inherit self;
+      inherit (self) inputs;
       systems = [
         "x86_64-linux"
         "aarch64-linux"
@@ -97,7 +98,47 @@
       forAllSystems = nixpkgs.lib.genAttrs systems;
     in
     {
-      formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.nixfmt-tree);
+      formatter = forAllSystems (
+        system:
+        let
+          pkgs = import nixpkgs { inherit system; };
+          config = self.checks.${system}.pre-commit-check.config;
+          inherit (config) package configFile;
+          script = ''
+            ${pkgs.lib.getExe package} run --all-files --config ${configFile}
+          '';
+        in
+        pkgs.writeShellScriptBin "pre-commit-run" script
+      );
+
+      checks = forAllSystems (
+        system:
+        let
+          pkgs = import nixpkgs { inherit system; };
+        in
+        {
+          pre-commit-check = inputs.git-hooks.lib.${system}.run {
+            src = ./.;
+            hooks = {
+              nixfmt.enable = true;
+            };
+
+            package = pkgs.prek;
+          };
+        }
+      );
+
+      devShells = forAllSystems (system: {
+        default =
+          let
+            pkgs = nixpkgs.legacyPackages.${system};
+            inherit (self.checks.${system}.pre-commit-check) shellHook enabledPackages;
+          in
+          pkgs.mkShell {
+            inherit shellHook;
+            buildInputs = enabledPackages;
+          };
+      });
 
       overlays = import ./overlays { inherit self; };
 
