@@ -1,14 +1,14 @@
 {
   pkgs,
-  self,
+  inputs,
   config,
   lib,
   ...
 }:
 let
   cfg = config.services.cava-cfg;
-
-  cava-cfg = self.packages.${pkgs.stdenv.hostPlatform.system}.cava-cfg.override {
+  inherit (inputs) nix-relic;
+  cava-cfg = nix-relic.inputs.packages.${pkgs.stdenv.hostPlatform.system}.cava-cfg.override {
     color1 = "${cfg.colors.color1}";
     color2 = "${cfg.colors.color2}";
     color3 = "${cfg.colors.color3}";
