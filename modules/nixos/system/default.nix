@@ -19,7 +19,9 @@
     overlays = [
       outputs.overlays.modifications
       outputs.overlays.additions
-      inputs.nix-relic.overlays.default
+      inputs.nix-relic.overlays.relicpkgs
+      inputs.nix-relic.overlays.stable
+      inputs.nix-relic.overlays.nur
       inputs.nix-relic.inputs.zarumet.overlays.default
       inputs.nix-relic.inputs.waybar.overlays.default
       inputs.nix-relic.inputs.rheayna-vim.overlays.default
