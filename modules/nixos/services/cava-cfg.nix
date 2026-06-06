@@ -1,14 +1,14 @@
 {
   pkgs,
-  outputs,
+  self,
   config,
   lib,
   ...
 }:
 let
-  cfg = config.services.cavaCfg;
+  cfg = config.services.cava-cfg;
 
-  cava-cfg = outputs.packages.${pkgs.stdenv.hostPlatform.system}.cava-cfg.override {
+  cava-cfg = self.packages.${pkgs.stdenv.hostPlatform.system}.cava-cfg.override {
     color1 = "${cfg.colors.color1}";
     color2 = "${cfg.colors.color2}";
     color3 = "${cfg.colors.color3}";
@@ -21,7 +21,7 @@ let
   };
 in
 {
-  options.services.cavaCfg = {
+  options.services.cava-cfg = {
     enable = lib.mkEnableOption "Enable neo color file generation service";
     framerate = lib.mkOption {
       type = lib.types.int;

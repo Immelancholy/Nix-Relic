@@ -89,7 +89,7 @@
       ...
     }:
     let
-      inherit (self) inputs outputs;
+      inherit self;
       systems = [
         "x86_64-linux"
         "aarch64-linux"
@@ -110,11 +110,11 @@
       );
 
       nixosModules = {
-        default = import ./modules/nixos { inherit inputs outputs; };
+        default = import ./modules/nixos;
       };
 
       homeManagerModules = {
-        default = import ./modules/home-manager { inherit inputs outputs; };
+        default = import ./modules/home-manager;
       };
 
       templates = {

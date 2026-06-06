@@ -76,7 +76,7 @@
     };
   };
 
-  services.cavaCfg = {
+  services.cava-cfg = {
     enable = true;
     framerate = config.nix-relic.cava.framerate;
     noiseReduction = config.nix-relic.cava.noiseReduction;
