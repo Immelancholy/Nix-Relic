@@ -10,5 +10,5 @@ rec {
   nur = final: prev: {
     nur = self.inputs.nur.overlays.default;
   };
-  default = final: prev: import relicPkgs stable nur final.pkgs;
+  default = final: prev: import relicPkgs { inherit self; } stable nur final.pkgs;
 }
