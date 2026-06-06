@@ -10,7 +10,7 @@ let
   colors-hex = mkHex colors;
   neo-color =
     with colors-hex;
-    pkgs.nr.neo-color.override {
+    pkgs.neo-color.override {
       color1 = "${base0F}";
       color2 = "${base0D}";
       color3 = "${base0E}";
