@@ -4,7 +4,7 @@
   ...
 }:
 writeShellApplication {
-  name = "cava.sh";
+  name = "relic-cava";
 
   runtimeInputs = with pkgs; [
     kitty

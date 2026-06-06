@@ -4,7 +4,7 @@
   ...
 }:
 writeShellApplication {
-  name = "btop.sh";
+  name = "relic-btop";
 
   runtimeInputs = with pkgs; [
     kitty

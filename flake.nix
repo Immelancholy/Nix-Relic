@@ -87,7 +87,7 @@
       self,
       nixpkgs,
       ...
-    }@inputs:
+    }:
     let
       inherit self;
       systems = [
@@ -95,21 +95,19 @@
         "aarch64-linux"
       ];
       forAllSystems = nixpkgs.lib.genAttrs systems;
-      overlay = final: prev: {
-        nr = import ./packages final.pkgs;
-        stable = import inputs.nixpkgs-stable {
-          system = final.stdenv.hostPlatform.system;
-          config.allowUnfree = true;
-        };
-        nur = inputs.nur.overlays.default;
-      };
     in
     {
-      packages = forAllSystems (system: import ./packages nixpkgs.legacyPackages.${system});
+      packages = forAllSystems (
+        system:
+        let
+          pkgs = nixpkgs { inherit system; };
+        in
+        import ./pkgs { inherit self; } pkgs
+      );
 
       formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.nixfmt-tree);
 
-      overlays.default = overlay;
+      overlays = import ./overlays;
 
       nixosModules = {
         default = import ./modules/nixos;

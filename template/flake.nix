@@ -32,9 +32,15 @@
     {
       formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.nixfmt-tree);
 
-      overlays = import ./overlays { inherit inputs; };
+      overlays = import ./overlays { inherit self; };
 
-      packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
+      packages = forAllSystems (
+        system:
+        let
+          pkgs = nixpkgs { inherit system; };
+        in
+        import ./pkgs { inherit self; } pkgs
+      );
 
       nixosModules = import ./modules/nixos;
 

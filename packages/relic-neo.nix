@@ -5,7 +5,7 @@
   ...
 }:
 writeShellApplication {
-  name = "neo.sh";
+  name = "neo";
 
   runtimeInputs = [
     pkgs.neo

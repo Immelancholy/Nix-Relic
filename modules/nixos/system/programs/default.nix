@@ -96,8 +96,40 @@
     wantedBy = [ "graphical-session.target" ];
   };
   environment.systemPackages = with pkgs; [
-    nr.relic-cli
-    nr.flake-cli
+    #Custom nix-relic packages
+    relic-cli
+    flake-cli
+    rofi-power-menu
+    toggle-mute
+    waycava
+    brightness
+    (cava-cfg.override {
+      color1 = "#${config.lib.stylix.colors.base0E}";
+      color2 = "#${config.lib.stylix.colors.base0D}";
+      color3 = "#${config.lib.stylix.colors.base0C}";
+      color4 = "#${config.lib.stylix.colors.base0B}";
+      color5 = "#${config.lib.stylix.colors.base0A}";
+      color6 = "#${config.lib.stylix.colors.base09}";
+      color7 = "#${config.lib.stylix.colors.base08}";
+      framerate = "${toString config.nix-relic.cava.framerate}";
+      noiseReduction = "${toString config.nix-relic.cava.noiseReduction}";
+    })
+    checkshell
+    cliphist
+    colortrans
+    (neo-color.override {
+      color1 = "${config.lib.stylix.colors.base0F}";
+      color2 = "${config.lib.stylix.colors.base0D}";
+      color3 = "${config.lib.stylix.colors.base0E}";
+      color4 = "${config.lib.stylix.colors.base0C}";
+      color5 = "${config.lib.stylix.colors.base05}";
+    })
+    relic-btop
+    relic-cava
+    (relic-neo.override {
+      framerate = "${toString config.nix-relic.framerates.neo}";
+    })
+
     nix-output-monitor
     imagemagick
     chafa
@@ -108,14 +140,6 @@
     mpc
     ffmpegthumbnailer
     libcamera
-    # (nr.systemd-restarts.override {
-    #   restarts = ''
-    #     systemctl restart --user nm-applet
-    #       sleep 10
-    #       systemctl restart --user solaar
-    #       exit
-    #   '';
-    # })
     (ffmpeg-full.override {
       withUnfree = true;
       withOpengl = true;
@@ -126,40 +150,6 @@
     libnotify
     wl-clipboard
     sbctl
-    nr.brightness
-    (nr.cavaCfg.override {
-      color1 = "#${config.lib.stylix.colors.base0E}";
-      color2 = "#${config.lib.stylix.colors.base0D}";
-      color3 = "#${config.lib.stylix.colors.base0C}";
-      color4 = "#${config.lib.stylix.colors.base0B}";
-      color5 = "#${config.lib.stylix.colors.base0A}";
-      color6 = "#${config.lib.stylix.colors.base09}";
-      color7 = "#${config.lib.stylix.colors.base08}";
-      framerate = "${builtins.toString config.nix-relic.cava.framerate}";
-      noiseReduction = "${builtins.toString config.nix-relic.cava.noiseReduction}";
-    })
-    nr.checkshell
-    nr.cliphist
-    nr.colortrans
-    (nr.neo-color.override {
-      color1 = "${config.lib.stylix.colors.base0F}";
-      color2 = "${config.lib.stylix.colors.base0D}";
-      color3 = "${config.lib.stylix.colors.base0E}";
-      color4 = "${config.lib.stylix.colors.base0C}";
-      color5 = "${config.lib.stylix.colors.base05}";
-    })
-    nr.btop
-    nr.cava
-    (nr.neo.override {
-      framerate = "${builtins.toString config.nix-relic.framerates.neo}";
-    })
-    nr.rofi-power-menu
-    nr.tmux_dev
-    nr.tmux_nix
-    nr.tmux_notes
-    nr.tmux_music
-    nr.toggle-mute
-    nr.waycava
     qpwgraph
     pwvucontrol
     pulsemixer

@@ -1,10 +1,6 @@
-{ inputs, ... }:
+{ self }:
 {
-  modifications = final: _prev: {
-    nur = inputs.nur.overlays.default;
-    stable = import inputs.nixpkgs-stable {
-      system = final.system;
-      config.allowUnfree = true;
-    };
+  additions = final: prev: import ../pkgs { inherit self; } final.pkgs;
+  modifications = final: prev: {
   };
 }
