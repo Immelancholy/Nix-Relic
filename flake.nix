@@ -97,6 +97,10 @@
       forAllSystems = nixpkgs.lib.genAttrs systems;
     in
     {
+      formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.nixfmt-tree);
+
+      overlays = import ./overlays { inherit self; };
+
       packages = forAllSystems (
         system:
         let
@@ -104,10 +108,6 @@
         in
         import ./pkgs { inherit self; } pkgs
       );
-
-      formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.nixfmt-tree);
-
-      overlays = import ./overlays;
 
       nixosModules = {
         default = import ./modules/nixos;
