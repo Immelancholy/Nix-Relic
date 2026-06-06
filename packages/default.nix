@@ -1,3 +1,4 @@
+{ self }:
 pkgs: {
   brightness = pkgs.callPackage ./brightness.nix { };
   cava-cfg = pkgs.callPackage ./cavaCfg.nix { };
