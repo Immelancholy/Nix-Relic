@@ -1,18 +1,14 @@
 { self }:
-let
-  overlays = {
-    relicPkgs = final: prev: import ./packages { inherit self; } final.pkgs;
-    stable = final: prev: {
-      stable = import self.inputs.nixpkgs-stable {
-        system = final.stdenv.hostPlatform.system;
-        config.allowUnfree = true;
-      };
-    };
-    nur = final: prev: {
-      nur = self.inputs.nur.overlays.default;
+rec {
+  relicPkgs = final: prev: import ./packages { inherit self; } final.pkgs;
+  stable = final: prev: {
+    stable = import self.inputs.nixpkgs-stable {
+      system = final.stdenv.hostPlatform.system;
+      config.allowUnfree = true;
     };
   };
-in
-{
-  default = overlays;
+  nur = final: prev: {
+    nur = self.inputs.nur.overlays.default;
+  };
+  default = final: prev: import relicPkgs stable nur final.pkgs;
 }
