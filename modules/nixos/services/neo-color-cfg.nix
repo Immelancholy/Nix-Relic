@@ -6,7 +6,7 @@
 }:
 let
   cfg = config.services.neo-color;
-  neo-color = pkgs.callPackage ../../../packages/neo-color.nix {
+  neo-color = pkgs.neo-color.override {
     color1 = "${cfg.colors.color1}";
     color2 = "${cfg.colors.color2}";
     color3 = "${cfg.colors.color3}";
@@ -44,7 +44,7 @@ in
   config = lib.mkIf cfg.enable {
     systemd.user.services."neo-color" = {
       enable = true;
-      name = "Neo Color";
+      name = "Configure Neo Colors";
       wantedBy = [ "default.target" ];
       path = [
         neo-color

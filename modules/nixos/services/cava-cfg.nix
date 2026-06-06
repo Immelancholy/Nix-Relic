@@ -7,7 +7,7 @@
 let
   cfg = config.services.cavaCfg;
 
-  cavaCfg = pkgs.callPackage ../../../packages/cavaCfg.nix {
+  cava-cfg = pkgs.cava-cfg {
     color1 = "${cfg.colors.color1}";
     color2 = "${cfg.colors.color2}";
     color3 = "${cfg.colors.color3}";
@@ -15,8 +15,8 @@ let
     color5 = "${cfg.colors.color5}";
     color6 = "${cfg.colors.color6}";
     color7 = "${cfg.colors.color7}";
-    framerate = "${builtins.toString cfg.framerate}";
-    noiseReduction = "${builtins.toString cfg.noiseReduction}";
+    framerate = "${toString cfg.framerate}";
+    noiseReduction = "${toString cfg.noiseReduction}";
   };
 in
 {
@@ -63,14 +63,14 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    systemd.user.services."cavaCfg" = {
+    systemd.user.services."cava-cfg" = {
       enable = true;
-      name = "Cava Cfg";
+      name = "Configure Cava";
       wantedBy = [ "default.target" ];
       path = [
-        cavaCfg
+        cava-cfg
       ];
-      script = "cavaCfg";
+      script = "cava-cfg";
     };
   };
 }
