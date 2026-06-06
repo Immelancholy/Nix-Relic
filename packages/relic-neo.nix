@@ -5,7 +5,7 @@
   ...
 }:
 writeShellApplication {
-  name = "neo";
+  name = "relic-neo";
 
   runtimeInputs = [
     pkgs.neo
