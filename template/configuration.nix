@@ -135,10 +135,6 @@
     gamescopeSession.enable = true;
   };
 
-  services.mpdchck = {
-    enable = false;
-  };
-
   drivers = {
     amd.enable = true;
     intel.enable = false;

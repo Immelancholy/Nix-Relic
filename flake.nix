@@ -106,7 +106,7 @@
         let
           pkgs = nixpkgs { inherit system; };
         in
-        import ./pkgs { inherit self; } pkgs
+        import ./packages { inherit self; } pkgs
       );
 
       nixosModules = {
