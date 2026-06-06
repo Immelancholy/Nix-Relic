@@ -61,7 +61,8 @@
       inputs.hyprland.follows = "hyprland";
     };
     stylix = {
-      url = "github:Immelancholy/stylix/master+zen";
+      url = "github:Immelancholy/stylix/zen-browser-opacity";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
