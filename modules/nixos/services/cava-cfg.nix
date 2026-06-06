@@ -1,6 +1,6 @@
 {
   pkgs,
-  self,
+  outputs,
   config,
   lib,
   ...
@@ -8,7 +8,7 @@
 let
   cfg = config.services.cavaCfg;
 
-  cava-cfg = self.packages.${pkgs.stdenv.hostPlatform.system}.cava-cfg.override {
+  cava-cfg = outputs.packages.${pkgs.stdenv.hostPlatform.system}.cava-cfg.override {
     color1 = "${cfg.colors.color1}";
     color2 = "${cfg.colors.color2}";
     color3 = "${cfg.colors.color3}";

@@ -110,11 +110,11 @@
       );
 
       nixosModules = {
-        default = import ./modules/nixos { inherit self inputs outputs; };
+        default = import ./modules/nixos { inherit inputs outputs; };
       };
 
       homeManagerModules = {
-        default = import ./modules/home-manager { inherit self inputs outputs; };
+        default = import ./modules/home-manager { inherit inputs outputs; };
       };
 
       templates = {
