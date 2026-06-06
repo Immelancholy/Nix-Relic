@@ -13,7 +13,7 @@
   cavaDir ? "$HOME/.config/cava",
   ...
 }:
-writeShellScriptBin "cava-cfg" /* Lua */ ''
+writeShellScriptBin "cava-cfg" ''
   cavaDir="${cavaDir}"
   cavaConfigFile="$cavaDir/config"
   id=$(${pkgs.wireplumber}/bin/wpctl status | grep "virtual_cable_in" | ${pkgs.gawk}/bin/awk '{print $2}' | grep -m1 "" | cut -f1 -d ".")
@@ -24,27 +24,37 @@ writeShellScriptBin "cava-cfg" /* Lua */ ''
     mkdir -p "$cavaDir"
   fi
 
-  cat <<EOF > "$cavaConfigFile"
+  noiseReduction="${noiseReduction}"
+  framerate="${framerate}"
+  color1="${color1}"
+  color2="${color2}"
+  color3="${color3}"
+  color4="${color4}"
+  color5="${color5}"
+  color6="${color6}"
+  color7="${color7}"
+
+  cat <<-EOF > "$cavaConfigFile"
     [color]
     gradient=1
-    gradient_color_1='${color1}'
-    gradient_color_2='${color2}'
-    gradient_color_3='${color3}'
-    gradient_color_4='${color4}'
-    gradient_color_5='${color5}'
-    gradient_color_6='${color6}'
-    gradient_color_7='${color7}'
+    gradient_color_1='$color1'
+    gradient_color_2='$color2'
+    gradient_color_3='$color3'
+    gradient_color_4='$color4'
+    gradient_color_5='$color5'
+    gradient_color_6='$color6'
+    gradient_color_7='$color7'
 
     [general]
     bar_spacing=0
     bar_width=1
     bars=0
-    framerate=${framerate}
+    framerate=$framerate
     sensitivity=100
 
     [input]
     method=pipewire
-    source=''${serial}
+    source=$serial
 
     [output]
     channels=stereo
@@ -53,7 +63,7 @@ writeShellScriptBin "cava-cfg" /* Lua */ ''
 
     [smoothing]
     monstercat=1
-    noise_reduction=${noiseReduction}
+    noise_reduction=$noiseReduction
     waves=0
   EOF
 ''
