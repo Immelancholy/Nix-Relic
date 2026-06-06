@@ -13,18 +13,18 @@
   cavaDir ? "$HOME/.config/cava",
   ...
 }:
-writeShellScriptBin "cavaCfg" ''
-  cavaDir="${cavaDir}"
-  cavaConfigFile="$cavaDir/config"
-  id=$(${pkgs.wireplumber}/bin/wpctl status | grep "virtual_cable_in" | ${pkgs.gawk}/bin/awk '{print $2}' | grep -m1 "" | cut -f1 -d ".")
-  serial=$(${pkgs.wireplumber}/bin/wpctl inspect "''${id}" | sed -n 's/.*object.serial = //p')
+writeShellScriptBin "cava-cfg" ''
+    cavaDir="${cavaDir}"
+    cavaConfigFile="$cavaDir/config"
+    id=$(${pkgs.wireplumber}/bin/wpctl status | grep "virtual_cable_in" | ${pkgs.gawk}/bin/awk '{print $2}' | grep -m1 "" | cut -f1 -d ".")
+    serial=$(${pkgs.wireplumber}/bin/wpctl inspect "''${id}" | sed -n 's/.*object.serial = //p')
 
-  if [ ! -d "$cavaDir" ]; then
-    echo "Making cava Directory"
-    mkdir -p "$cavaDir"
-  fi
+    if [ ! -d "$cavaDir" ]; then
+      echo "Making cava Directory"
+      mkdir -p "$cavaDir"
+    fi
 
-  cat >"$cavaConfigFile" <<EOF
+    cat >"$cavaConfigFile" <<EOF
   [color]
   gradient=1
   gradient_color_1='${color1}'
@@ -46,14 +46,14 @@ writeShellScriptBin "cavaCfg" ''
   method=pipewire
   source=''${serial}
 
-  [output]
-  channels=stereo
-  method=noncurses
-  mono_option=average
+[output]
+channels=stereo
+method=noncurses
+mono_option=average
 
-  [smoothing]
-  monstercat=1
-  noise_reduction=${noiseReduction}
-  waves=0
-  EOF
+[smoothing]
+monstercat=1
+noise_reduction=noiseReduction}
+waves=0
+EOF
 ''

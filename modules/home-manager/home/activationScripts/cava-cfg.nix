@@ -9,7 +9,7 @@ let
   inherit (config.lib.stylix) colors;
   mkHex = colors: builtins.mapAttrs (_: value: "#${value}") colors;
   colors-hex = mkHex colors;
-  cavaCfg =
+  cava-cfg =
     with colors-hex;
     pkgs.cava-cfg.override {
       color1 = "${base0E}";
@@ -27,7 +27,7 @@ in
   home = {
     activation = {
       cavaCfg = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-        run cavaCfg
+        run cava-cfg
       '';
     };
     extraActivationPath = [
