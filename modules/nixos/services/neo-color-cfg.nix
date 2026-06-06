@@ -8,7 +8,7 @@
 let
   cfg = config.services.neo-color;
   inherit (inputs) nix-relic;
-  neo-color = nix-relic.inputs.packages.${pkgs.stdenv.hostPlatform.system}.neo-color.override {
+  neo-color = nix-relic.packages.${pkgs.stdenv.hostPlatform.system}.neo-color.override {
     color1 = "${cfg.colors.color1}";
     color2 = "${cfg.colors.color2}";
     color3 = "${cfg.colors.color3}";
