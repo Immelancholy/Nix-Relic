@@ -3,7 +3,7 @@ pkgs: {
   brightness = pkgs.callPackage ./brightness.nix { };
   cava-cfg = pkgs.callPackage ./cava-cfg.nix { };
   checkshell = pkgs.callPackage ./checkshell.nix { };
-  rofi-cliphist = pkgs.callPackage ./cliphist.nix { };
+  rofi-cliphist = pkgs.callPackage ./rofi-cliphist.nix { };
   colortrans = pkgs.callPackage ./colortrans.nix { };
   neo-color = pkgs.callPackage ./neo-color.nix { };
   playerVolMPD = pkgs.callPackage ./playerVolMPD.nix { };
