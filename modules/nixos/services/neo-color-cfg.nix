@@ -1,12 +1,13 @@
 {
   pkgs,
+  self,
   config,
   lib,
   ...
 }:
 let
   cfg = config.services.neo-color;
-  neo-color = pkgs.neo-color.override {
+  neo-color = self.packages.${pkgs.stdenv.hostPlatform.system}.neo-color.override {
     color1 = "${cfg.colors.color1}";
     color2 = "${cfg.colors.color2}";
     color3 = "${cfg.colors.color3}";
