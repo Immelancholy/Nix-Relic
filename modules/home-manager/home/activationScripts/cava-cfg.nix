@@ -31,7 +31,7 @@ in
       '';
     };
     extraActivationPath = [
-      cavaCfg
+      cava-cfg
     ];
   };
 }
