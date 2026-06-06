@@ -100,6 +100,7 @@
     relic-cli
     flake-cli
     rofi-power-menu
+    rofi-cliphist
     toggle-mute
     waycava
     brightness
@@ -115,7 +116,6 @@
       noiseReduction = "${toString config.nix-relic.cava.noiseReduction}";
     })
     checkshell
-    cliphist
     colortrans
     (neo-color.override {
       color1 = "${config.lib.stylix.colors.base0F}";
@@ -131,6 +131,7 @@
     })
 
     nix-output-monitor
+    cliphist
     imagemagick
     chafa
     onefetch

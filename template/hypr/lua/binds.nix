@@ -237,7 +237,7 @@ in
 
       hl.bind(Mod .. " + Delete", hl.dsp.exec_cmd("rofi -show power-menu -modi power-menu:rofi-power-menu"))
       hl.bind("CTRL + SHIFT + L", hl.dsp.exec_cmd("uwsm-app -- swaylock -fF"))
-      hl.bind(Mod .. " + N", hl.dsp.exec_cmd("rofi -show Cliphist -modi Cliphist:cliphist.sh"))
+      hl.bind(Mod .. " + N", hl.dsp.exec_cmd("rofi -show Cliphist -modi Cliphist:rofi-cliphist"))
       hl.bind(Mod .. " + Apostrophe", hl.dsp.exec_cmd("rofi -show emoji nerdy -modi emoji,nerdy"))
 
       hl.bind(Mod .. " + G", function()
