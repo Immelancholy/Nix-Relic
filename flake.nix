@@ -121,6 +121,17 @@
             src = ./.;
             hooks = {
               nixfmt.enable = true;
+
+              stylua = {
+                enable = true;
+                args = [
+                  "--indent-type"
+                  "Spaces"
+                  "--indent-width"
+                  "2"
+                  "-"
+                ];
+              };
             };
 
             package = pkgs.prek;
