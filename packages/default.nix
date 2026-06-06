@@ -1,7 +1,7 @@
 { self }:
 pkgs: {
   brightness = pkgs.callPackage ./brightness.nix { };
-  cava-cfg = pkgs.callPackage ./cavaCfg.nix { };
+  cava-cfg = pkgs.callPackage ./cava-cfg.nix { };
   checkshell = pkgs.callPackage ./checkshell.nix { };
   rofi-cliphist = pkgs.callPackage ./cliphist.nix { };
   colortrans = pkgs.callPackage ./colortrans.nix { };
