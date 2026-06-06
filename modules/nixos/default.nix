@@ -1,4 +1,4 @@
-{ self, ... }:
+{ inputs, ... }:
 {
   imports = [
     ./boot
@@ -11,6 +11,6 @@
     ./wallpaper.nix
     ./system
     ./nix-relic.nix
-    self.inputs.solaar.nixosModules.default
+    inputs.nix-relic.inputs.solaar.nixosModules.default
   ];
 }
