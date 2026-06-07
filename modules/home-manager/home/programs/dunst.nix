@@ -40,11 +40,11 @@ with colors-hex;
       };
       urgency_normal = {
         background = "${base00}99";
-        foreground = "${text05}";
+        foreground = "${base05}";
       };
       urgency_critical = {
         background = "${base00}99";
-        foreground = "${text05}";
+        foreground = "${base05}";
         frame_color = "${base08}c0";
       };
     };
