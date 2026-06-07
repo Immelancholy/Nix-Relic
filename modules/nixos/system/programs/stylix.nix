@@ -88,9 +88,9 @@ in
         name = "Noto Color Emoji";
       };
       sizes = {
-        applications = 10;
+        applications = 12;
         terminal = 10;
-        desktop = 9;
+        desktop = 12;
         popups = 10;
       };
     };

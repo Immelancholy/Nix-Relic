@@ -1,6 +1,7 @@
 { config, ... }:
 let
   inherit (config.lib.stylix) colors;
+  inherit (config.stylix) fonts;
   mkHex = colors: builtins.mapAttrs (_: value: "#${value}") colors;
   colors-hex = mkHex colors;
 in
@@ -10,9 +11,9 @@ with colors-hex;
      * {
         border: none;
         border-radius: 0px;
-        font-family: "JetBrainsMono Nerd Font";
+        font-family: "${fonts.monospace.name}";
         font-weight: bold;
-        font-size: 12px;
+        font-size: ${fonts.sizes.desktop}px;
         min-height: 11px;
     }
 

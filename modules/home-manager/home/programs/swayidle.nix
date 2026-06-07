@@ -1,27 +1,29 @@
 {
-  pkgs,
-  inputs,
+  osConfig,
+  config,
   ...
 }:
+let
+  osCfg = osConfig;
+  cfg = config;
+  hyprlandPkg = osCfg.programs.hyprland.package;
+  swaylockPkg = cfg.programs.swaylock.package;
+in
 {
   services.swayidle = {
     enable = true;
     events = {
-      before-sleep = "${pkgs.swaylock}/bin/swaylock -fF";
+      before-sleep = "${swaylockPkg}/bin/swaylock -fF";
     };
     timeouts = [
       {
         timeout = 600;
-        command = "${pkgs.swaylock}/bin/swaylock -fF";
+        command = "${swaylockPkg}/bin/swaylock -fF";
       }
       {
         timeout = 610;
-        command = ''${
-          inputs.nix-relic.inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland
-        }/bin/hyprctl eval 'hl.dispatch(hl.dsp.dpms({ action = "disable" }))'  '';
-        resumeCommand = ''${
-          inputs.nix-relic.inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland
-        }/bin/hyprctl eval 'hl.dispatch(hl.dsp.dpms({ action = "enable" }))'  '';
+        command = ''${hyprlandPkg}/bin/hyprctl eval 'hl.dispatch(hl.dsp.dpms({ action = "disable" }))'  '';
+        resumeCommand = ''${hyprlandPkg}/bin/hyprctl eval 'hl.dispatch(hl.dsp.dpms({ action = "enable" }))'  '';
       }
     ];
   };

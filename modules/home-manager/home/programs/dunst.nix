@@ -1,22 +1,11 @@
 { config, ... }:
 let
-  base = "#${config.lib.stylix.colors.base00}";
-  mantle = "#${config.lib.stylix.colors.base01}";
-  surface0 = "#${config.lib.stylix.colors.base02}";
-  surface1 = "#${config.lib.stylix.colors.base03}";
-  surface2 = "#${config.lib.stylix.colors.base04}";
-  text = "#${config.lib.stylix.colors.base05}";
-  rosewater = "#${config.lib.stylix.colors.base06}";
-  lavender = "#${config.lib.stylix.colors.base07}";
-  red = "#${config.lib.stylix.colors.base08}";
-  peach = "#${config.lib.stylix.colors.base09}";
-  yellow = "#${config.lib.stylix.colors.base0A}";
-  green = "#${config.lib.stylix.colors.base0B}";
-  teal = "#${config.lib.stylix.colors.base0C}";
-  blue = "#${config.lib.stylix.colors.base0D}";
-  mauve = "#${config.lib.stylix.colors.base0E}";
-  flamingo = "#${config.lib.stylix.colors.base0F}";
+  inherit (config.lib.stylix) colors;
+  inherit (config.stylix) fonts;
+  mkHex = colors: builtins.mapAttrs (_: value: "#${value}") colors;
+  colors-hex = mkHex colors;
 in
+with colors-hex;
 {
   services.dunst = {
     enable = true;
@@ -24,9 +13,9 @@ in
       global = {
         follow = "keyboard";
         enable_posix_regex = true;
-        frame_color = "${teal}c0";
+        frame_color = "${base0C}c0";
         separator_color = "frame";
-        highlight = "${teal}c0";
+        highlight = "${base0C}c0";
         gaps_size = 4;
         frame_width = 2;
         corner_radius = 20;
@@ -40,24 +29,23 @@ in
         padding = 15;
         horizontal_padding = 10;
         max_icon_size = 256;
-        # font = "JetBrainsMono Nerd Font Mono 10";
-        font = "${config.stylix.fonts.monospace.name} 10";
+        font = "${fonts.monospace.name} ${fonts.sizes.popups}";
         mouse_left_click = "do_action, close_current";
         mouse_middle_click = "close_current";
         dmenu = "rofi -dmenu";
       };
       urgency_low = {
-        background = "${base}99";
-        foreground = "${text}";
+        background = "${base00}99";
+        foreground = "${base05}";
       };
       urgency_normal = {
-        background = "${base}99";
-        foreground = "${text}";
+        background = "${base00}99";
+        foreground = "${text05}";
       };
       urgency_critical = {
-        background = "${base}99";
-        foreground = "${text}";
-        frame_color = "${red}c0";
+        background = "${base00}99";
+        foreground = "${text05}";
+        frame_color = "${base08}c0";
       };
     };
   };

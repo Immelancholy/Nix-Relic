@@ -3,11 +3,15 @@
   pkgs,
   ...
 }:
+let
+  cfg = config;
+  inherit (cfg.stylix) fonts;
+in
 {
   programs.rofi = {
     enable = true;
-    font = "JetBrainsMono Nerd Font Mono 12";
-    terminal = config.home.sessionVariables.TERMINAL;
+    font = "${fonts.monospace.name} ${fonts.sizes.desktop}";
+    terminal = cfg.home.sessionVariables.TERMINAL;
     plugins = with pkgs; [
       rofi-nerdy
       rofi-emoji
