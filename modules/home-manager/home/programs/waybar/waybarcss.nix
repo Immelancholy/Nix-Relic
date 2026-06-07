@@ -1,9 +1,14 @@
-{ config, ... }:
+{ config, lib, ... }:
 let
   inherit (config.lib.stylix) colors;
   inherit (config.stylix) fonts;
   mkHex = colors: builtins.mapAttrs (_: value: "#${value}") colors;
   colors-hex = mkHex colors;
+  font =
+    if lib.hasSuffix " Mono" fonts.monospace.name then
+      lib.removeSuffix " Mono" fonts.monospace.name
+    else
+      fonts.monospace.name;
 in
 with colors-hex;
 {
@@ -11,7 +16,7 @@ with colors-hex;
      * {
         border: none;
         border-radius: 0px;
-        font-family: "${fonts.monospace.name}";
+        font-family: "${font}";
         font-weight: bold;
         font-size: ${toString fonts.sizes.desktop}px;
         min-height: 11px;
