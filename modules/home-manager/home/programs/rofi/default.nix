@@ -10,7 +10,7 @@ in
 {
   programs.rofi = {
     enable = true;
-    font = "${fonts.monospace.name} ${fonts.sizes.desktop}";
+    font = "${fonts.monospace.name} ${toString fonts.sizes.desktop}";
     terminal = cfg.home.sessionVariables.TERMINAL;
     plugins = with pkgs; [
       rofi-nerdy
