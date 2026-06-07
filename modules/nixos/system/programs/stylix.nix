@@ -72,8 +72,8 @@ in
     targets.nixos-icons.enable = true;
     fonts = {
       monospace = {
-        package = pkgs.nerd-fonts.caskaydia-cove;
-        name = "FiraCode Nerd Font Mono";
+        package = pkgs.nerd-fonts.jetbrains-mono;
+        name = "JetBrainsMono Nerd Font Mono";
       };
       serif = {
         package = pkgs.nerd-fonts.noto;
