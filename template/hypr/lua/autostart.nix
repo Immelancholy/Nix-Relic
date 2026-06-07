@@ -33,11 +33,11 @@ in
         hl.exec_cmd("pkill localsend")
         hl.timer(function()
           hl.exec_cmd("uwsm-app -- localsend_app --hidden")
-          hl.dispatch(hl.dsp.exec_cmd("uwsm-app -- kitty --class cava relic-cava", { workspace = "1 silent", float = true, size = { 888, 462 }, move = { 610, 609 } }))
+          hl.dispatch(hl.dsp.exec_cmd("uwsm-app -- kitty --class cava relic-cava", { workspace = "1 silent", float = true, size = { 888, 456 }, move = { 610, 615 } }))
           hl.dispatch(hl.dsp.exec_cmd("uwsm-app -- kitty --class btop relic-btop", { workspace = "1 silent", float = true, size = { 590, 637 }, move = { 10, 433 } }))
           hl.dispatch(hl.dsp.exec_cmd("uwsm-app -- kitty --class neo relic-neo", { workspace = "1 silent", float = true, size = { 402, 1030 }, move = { 1508, 42 } }))
           hl.dispatch(hl.dsp.exec_cmd("uwsm-app -- kitty --class fastfetch kitty @ launch --type overlay --env class=fastfetch", { workspace = "1 silent", float = true, size = { 590, 383 }, move = { 10, 42 } }))
-          hl.dispatch(hl.dsp.exec_cmd("${cmd}", { workspace = "1 silent", float = true, size = { 888, 559 }, move = { 610, 42 } }))
+          hl.dispatch(hl.dsp.exec_cmd("${cmd}", { workspace = "1 silent", float = true, size = { 888, 565 }, move = { 610, 42 } }))
         end, {timeout = 5, type = "oneshot"})
         ${wallpaper}
         hl.timer(function()
@@ -61,11 +61,11 @@ in
         hl.dispatch(hl.dsp.window.kill({ window = "class:^(cava)$" }))
         hl.timer(function()
           hl.exec_cmd("uwsm-app -- localsend_app --hidden")
-          hl.dispatch(hl.dsp.exec_cmd("uwsm-app -- kitty --class cava relic-cava", { workspace = "1 silent", float = true, size = { 888, 462 }, move = { 610, 609 } }))
+          hl.dispatch(hl.dsp.exec_cmd("uwsm-app -- kitty --class cava relic-cava", { workspace = "1 silent", float = true, size = { 888, 456 }, move = { 610, 615 } }))
           hl.dispatch(hl.dsp.exec_cmd("uwsm-app -- kitty --class btop relic-btop", { workspace = "1 silent", float = true, size = { 590, 637 }, move = { 10, 433 } }))
           hl.dispatch(hl.dsp.exec_cmd("uwsm-app -- kitty --class neo relic-neo", { workspace = "1 silent", float = true, size = { 402, 1030 }, move = { 1508, 42 } }))
           hl.dispatch(hl.dsp.exec_cmd("uwsm-app -- kitty --class fastfetch kitty @ launch --type overlay --env class=fastfetch", { workspace = "1 silent", float = true, size = { 590, 383 }, move = { 10, 42 } }))
-          hl.dispatch(hl.dsp.exec_cmd("${cmd}", { workspace = "1 silent", float = true, size = { 888, 559 }, move = { 610, 42 } }))
+          hl.dispatch(hl.dsp.exec_cmd("${cmd}", { workspace = "1 silent", float = true, size = { 888, 565 }, move = { 610, 42 } }))
         end, {timeout = 5, type = "oneshot"})
         ${wallpaperKill}
         ${wallpaper}
