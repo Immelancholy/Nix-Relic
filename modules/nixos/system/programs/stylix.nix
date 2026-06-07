@@ -73,7 +73,7 @@ in
     fonts = {
       monospace = {
         package = pkgs.nerd-fonts.caskaydia-cove;
-        name = "CaskaydiaCove Nerd Font Mono";
+        name = "FiraCode Nerd Font Mono";
       };
       serif = {
         package = pkgs.nerd-fonts.noto;
