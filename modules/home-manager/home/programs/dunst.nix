@@ -29,7 +29,7 @@ with colors-hex;
         padding = 15;
         horizontal_padding = 10;
         max_icon_size = 256;
-        font = "${fonts.monospace.name} ${fonts.sizes.popups}";
+        font = "${fonts.monospace.name} ${toString fonts.sizes.popups}";
         mouse_left_click = "do_action, close_current";
         mouse_middle_click = "close_current";
         dmenu = "rofi -dmenu";

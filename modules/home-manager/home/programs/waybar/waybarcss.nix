@@ -13,7 +13,7 @@ with colors-hex;
         border-radius: 0px;
         font-family: "${fonts.monospace.name}";
         font-weight: bold;
-        font-size: ${fonts.sizes.desktop}px;
+        font-size: ${toString fonts.sizes.desktop}px;
         min-height: 11px;
     }
 
