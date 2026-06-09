@@ -1,6 +1,11 @@
 { config, ... }:
 let
-  inherit (config.player) cmd class cmdGame;
+  inherit (config.player)
+    cmd
+    class
+    cmdGame
+    title
+    ;
   inherit (config.wayland.windowManager.hyprland) liveWallpaper;
   wallpaperKill = "${
     if liveWallpaper.enable then
@@ -198,16 +203,16 @@ in
       end)
 
       hl.bind(Mods .. " + U", function()
-        hl.dispatch(hl.dsp.window.kill({ window = "class:^(${class})$" }))
-        hl.dispatch(hl.dsp.window.kill({ window = "class:^(neo)$" }))
-        hl.dispatch(hl.dsp.window.kill({ window = "class:^(fastfetch)$" }))
-        hl.dispatch(hl.dsp.window.kill({ window = "class:^(btop)$" }))
-        hl.dispatch(hl.dsp.window.kill({ window = "class:^(cava)$" }))
-        hl.dispatch(hl.dsp.exec_cmd("uwsm-app -- kitty --class cava relic-cava", { workspace = "1 silent", float = true, size = { 888, 456 }, move = { 610, 615 } }))
-        hl.dispatch(hl.dsp.exec_cmd("uwsm-app -- kitty --class btop relic-btop", { workspace = "1 silent", float = true, size = { 590, 615 }, move = { 10, 455 } }))
-        hl.dispatch(hl.dsp.exec_cmd("uwsm-app -- kitty --class neo relic-neo", { workspace = "1 silent", float = true, size = { 402, 1030 }, move = { 1508, 42 } }))
-        hl.dispatch(hl.dsp.exec_cmd("uwsm-app -- kitty --class fastfetch kitty @ launch --type overlay --env class=fastfetch", { workspace = "1 silent", float = true, size = { 590, 405 }, move = { 10, 42 } }))
-        hl.dispatch(hl.dsp.exec_cmd("${cmd}", { workspace = "1 silent", float = true, size = { 888, 565 }, move = { 610, 42 } }))
+        hl.dispatch(hl.dsp.window.kill({ window = "title:^(${title})$" }))
+        hl.dispatch(hl.dsp.window.kill({ window = "title:^(relic-neo)$" }))
+        hl.dispatch(hl.dsp.window.kill({ window = "title:^(relic-fastfetch)$" }))
+        hl.dispatch(hl.dsp.window.kill({ window = "title:^(relic-btop)$" }))
+        hl.dispatch(hl.dsp.window.kill({ window = "title:^(relic-cava)$" }))
+        hl.dispatch(hl.dsp.exec_cmd("uwsm-app -- kitty --title relic-cava relic-cava", { workspace = "1 silent", float = true, size = { 888, 456 }, move = { 610, 615 } }))
+        hl.dispatch(hl.dsp.exec_cmd("uwsm-app -- kitty --title relic-btop relic-btop", { workspace = "1 silent", float = true, size = { 590, 615 }, move = { 10, 455 } }))
+        hl.dispatch(hl.dsp.exec_cmd("uwsm-app -- kitty --title relic-neo relic-neo", { workspace = "1 silent", float = true, size = { 402, 1030 }, move = { 1508, 42 } }))
+        hl.dispatch(hl.dsp.exec_cmd("uwsm-app -- kitty --title relic-fastfetch kitty @ launch --type overlay --env class=fastfetch", { workspace = "1 silent", float = true, size = { 590, 405 }, move = { 10, 42 } }))
+        hl.dispatch(hl.dsp.exec_cmd(Player .. " -b on", { workspace = "1 silent", float = true, size = { 888, 565 }, move = { 610, 42 } }))
       end)
 
       hl.bind(Mod .. " + Delete", hl.dsp.exec_cmd("rofi -show power-menu -modi power-menu:rofi-power-menu"))
@@ -269,17 +274,14 @@ in
             opacity = "1.0 override 1.0 override 1.0 override",
           })
           ${wallpaperKill}
-          hl.dispatch(hl.dsp.window.kill({ window = "class:^(${class})$" }))
-          hl.dispatch(hl.dsp.window.kill({ window = "class:^(neo)$" }))
-          hl.dispatch(hl.dsp.window.kill({ window = "class:^(fastfetch)$" }))
-          hl.dispatch(hl.dsp.window.kill({ window = "class:^(btop)$" }))
-          hl.dispatch(hl.dsp.window.kill({ window = "class:^(cava)$" }))
-          hl.dispatch(
-            hl.dsp.exec_cmd(
-              "${cmdGame}",
-              { workspace = "1 silent", float = true, size = { 1118, 710 }, move = { 401, 145 } }
-            )
-          )
+          hl.dispatch(hl.dsp.window.kill({ window = "title:^(${title})$" }))
+          hl.dispatch(hl.dsp.window.kill({ window = "title:^(relic-neo)$" }))
+          hl.dispatch(hl.dsp.window.kill({ window = "title:^(relic-fastfetch)$" }))
+          hl.dispatch(hl.dsp.window.kill({ window = "title:^(relic-btop)$" }))
+          hl.dispatch(hl.dsp.window.kill({ window = "title:^(relic-cava)$" }))
+          hl.timer(function()
+            hl.dispatch( hl.dsp.exec_cmd( Player .. " -b off", { workspace = "1 silent", float = true, size = { 1118, 710 }, move = { 401, 145 } }))
+          end, {timeout = 5, type = "oneshot"})
         end
         if gamemode == false then
           hl.dispatch(hl.dsp.exec_cmd("hyprctl reload config-only -q"))

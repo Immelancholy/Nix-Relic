@@ -6,6 +6,12 @@
 }:
 let
   inherit (config) player;
+  toggle-player = pkgs.toggle-player.override {
+    playerTitle = player.title;
+    playerCmd = player.cmd;
+    playerClass = player.class;
+    playerPkg = pkgs.zarumet;
+  };
 in
 {
   programs.waybar.settings = {
@@ -265,7 +271,7 @@ in
         exec = "waycava.sh stdout --stb 3";
         on-click = "playerctl --player=${player.class} play-pause";
         on-click-right = ''
-          hyprctl dispatch 'hl.exec_cmd("${lib.getExe pkgs.toggle-player}")'
+          hyprctl dispatch 'hl.exec_cmd("${lib.getExe toggle-player}")'
         '';
         on-scroll-down = "playerctl --player=${player.class} next";
         on-scroll-up = "playerctl --player=${player.class} previous";

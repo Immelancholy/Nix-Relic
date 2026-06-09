@@ -1,5 +1,6 @@
 {
   xdg.configFile."hypr/lua/rules.lua".text = /* lua */ ''
+    -- Window Rules
     hl.window_rule({
       match = {
         class = "^(.*)$",
@@ -365,6 +366,24 @@
       },
       float = true,
     })
+    hl.window_rule({
+      name = "linktui-top-bar",
+      match = { title = "^(linktui-top-bar)$" },
+      float = true,
+      pin = true,
+      size = "630 520",
+      move = { 1200, 50 },
+    })
+    hl.window_rule({
+      name = "zarumet-top-bar",
+      match = { title = "^(zarumet-top-bar)$" },
+      float = true,
+      pin = true,
+      size = "740 490",
+      move = { 590, 50 },
+    })
+
+    -- Layer Rules
     hl.layer_rule({
       match = { namespace = "waybar" },
       blur = true,

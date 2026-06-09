@@ -29,7 +29,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     linktui = {
-      url = "github:Immelancholy/linktui/nix-flake";
+      url = "github:austinemk/linktui";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     yazi = {

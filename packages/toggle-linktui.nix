@@ -4,19 +4,30 @@
   kitty,
   self,
   pkgs,
+  lib,
 }:
+let
+  linktui-top-bar = writeShellApplication {
+    name = "player-top-bar";
+    runtimeInputs = [
+      self.inputs.linktui.packages.${pkgs.stdenv.hostPlatform.system}.default
+    ];
+    text = ''
+      linktui "$@"
+    '';
+  };
+in
 writeShellApplication {
   name = "toggle-linktui";
   runtimeInputs = [
     procps
     kitty
-    self.inputs.linktui.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
   text = /* Bash */ ''
-    if pgrep -f "kitty.*linktui" >/dev/null; then
-            pkill -f "kitty.*linktui"
+    if pgrep -f "kitty.*linktui-top-bar" >/dev/null; then
+            pkill -f "kitty.*linktui-top-bar"
     else
-            kitty --title "linktui" -e linktui "$@"
+            kitty --class "linktui" --title "linktui-top-bar" -e ${lib.getExe linktui-top-bar} "$@"
     fi
   '';
 }

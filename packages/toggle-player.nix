@@ -4,22 +4,37 @@
   kitty,
   self,
   pkgs,
+  uwsm,
+  lib,
   playerTitle ? "zarumet",
   playerCmd ? "zarumet",
+  playerClass ? "mpd",
   playerPkg ? self.inputs.zarumet.packages.${pkgs.stdenv.hostPlatform.system}.default,
 }:
+let
+  player-top-bar = writeShellApplication {
+    name = "player-top-bar";
+    runtimeInputs = [
+      playerPkg
+    ];
+    text = ''
+      ${playerCmd}
+    '';
+  };
+in
 writeShellApplication {
-  name = "toggle-zarumet";
+  name = "toggle-player";
   runtimeInputs = [
     procps
     kitty
+    uwsm
     playerPkg
   ];
   text = /* Bash */ ''
-    if pgrep -f "kitty.*${playerCmd}" >/dev/null; then
-            pkill -f "kitty.*${playerCmd}"
+    if pgrep -f "kitty.*player-top-bar" >/dev/null; then
+            pkill -f "kitty.*player-top-bar"
     else
-            kitty --title "${playerTitle}" -e ${playerCmd} "$@"
+            uwsm-app -- kitty --class "${playerClass}" --title "${playerTitle}-top-bar" -e ${lib.getExe player-top-bar} "$@"
     fi
   '';
 }

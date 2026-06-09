@@ -1118,16 +1118,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1780969522,
-        "narHash": "sha256-zfFbzyW9mHRwaBv6bzW/2l/LgPyW/Tcz377W8I5oJU0=",
-        "owner": "Immelancholy",
+        "lastModified": 1781038609,
+        "narHash": "sha256-t8MJIxyTq1hV+sAxe5J6M9FZJiJEI4UZ6xHs/RFNEQo=",
+        "owner": "austinemk",
         "repo": "linktui",
-        "rev": "51f10c46260e971b437aa8dda8b9c8ca0a5b9f1c",
+        "rev": "1040bbeaa9e254ece9deeeff0fd470dff35a5273",
         "type": "github"
       },
       "original": {
-        "owner": "Immelancholy",
-        "ref": "nix-flake",
+        "owner": "austinemk",
         "repo": "linktui",
         "type": "github"
       }

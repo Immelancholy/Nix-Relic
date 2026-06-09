@@ -24,18 +24,18 @@ in
     };
     cmd = mkOption {
       type = types.str;
-      default = "uwsm app -- kitty --class mpd zarumet -b on";
+      default = "zarumet";
       description = "Launch command for music player";
-    };
-    cmdGame = mkOption {
-      type = types.str;
-      default = "uwsm app -- kitty --class mpd zarumet -b off";
-      description = "Launch command for gamemode music player";
     };
     class = mkOption {
       type = types.str;
       default = "mpd";
       description = "Class of music player";
+    };
+    title = mkOption {
+      type = types.str;
+      default = "zarumet";
+      description = "Title of music player";
     };
     scriptUseDefaultSink = mkOption {
       type = types.bool;
