@@ -1802,16 +1802,15 @@
         "tinted-zed": "tinted-zed"
       },
       "locked": {
-        "lastModified": 1780783302,
-        "narHash": "sha256-jkkDEQx3hbHnuSmUcr7atw8cg8GYssiMWhDCbecROpI=",
-        "owner": "Immelancholy",
+        "lastModified": 1781018772,
+        "narHash": "sha256-C+cGIUaC6dqfwTbI+BwCd572PbESGA3WYxR1sLTqxkY=",
+        "owner": "nix-community",
         "repo": "stylix",
-        "rev": "432009c8512699a73604e4ac649e9c58027d26e4",
+        "rev": "a378e4c09031fb15a4d65da88aa628f71fc52f6b",
         "type": "github"
       },
       "original": {
-        "owner": "Immelancholy",
-        "ref": "zen-browser-opacity",
+        "owner": "nix-community",
         "repo": "stylix",
         "type": "github"
       }
