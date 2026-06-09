@@ -36,13 +36,20 @@
         "aarch64-linux"
         "x86_64-linux"
       ];
-      forAllSystems = nixpkgs.lib.genAttrs systems;
+      forAllSystems =
+        f:
+        nixpkgs.lib.genAttrs systems (
+          system:
+          f {
+            system = system;
+            pkgs = import nixpkgs { inherit system; };
+          }
+        );
     in
     {
       formatter = forAllSystems (
-        system:
+        { pkgs, system }:
         let
-          pkgs = import nixpkgs { inherit system; };
           config = self.checks.${system}.pre-commit-check.config;
           inherit (config) package configFile;
           script = ''
@@ -53,10 +60,7 @@
       );
 
       checks = forAllSystems (
-        system:
-        let
-          pkgs = import nixpkgs { inherit system; };
-        in
+        { pkgs, system }:
         {
           pre-commit-check = inputs.git-hooks.lib.${system}.run {
             src = ./.;
@@ -80,27 +84,23 @@
         }
       );
 
-      devShells = forAllSystems (system: {
-        default =
-          let
-            pkgs = nixpkgs.legacyPackages.${system};
-            inherit (self.checks.${system}.pre-commit-check) shellHook enabledPackages;
-          in
-          pkgs.mkShell {
-            inherit shellHook;
-            buildInputs = enabledPackages;
-          };
-      });
+      devShells = forAllSystems (
+        { pkgs, system }:
+        {
+          default =
+            let
+              inherit (self.checks.${system}.pre-commit-check) shellHook enabledPackages;
+            in
+            pkgs.mkShell {
+              inherit shellHook;
+              buildInputs = enabledPackages;
+            };
+        }
+      );
 
       overlays = import ./overlays { inherit self; };
 
-      packages = forAllSystems (
-        system:
-        let
-          pkgs = import nixpkgs { inherit system; };
-        in
-        import ./pkgs { inherit self; } pkgs
-      );
+      packages = forAllSystems ({ pkgs, ... }: import ./pkgs { inherit self; } pkgs);
 
       nixosModules = import ./modules/nixos;
 

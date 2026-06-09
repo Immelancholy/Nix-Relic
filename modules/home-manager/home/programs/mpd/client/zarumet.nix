@@ -1,6 +1,7 @@
 {
   config,
   inputs,
+  pkgs,
   ...
 }:
 let
@@ -27,6 +28,7 @@ in
   ];
   programs.zarumet = {
     enable = true;
+    package = pkgs.zarumet;
     settings = {
       mpd = {
         address = "${config.services.mpd.network.listenAddress}:${toString config.services.mpd.network.port}";
