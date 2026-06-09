@@ -12,6 +12,7 @@ pkgs: {
   rofi-power-menu = pkgs.callPackage ./rofi-power-menu.nix { };
   toggle-mute = pkgs.callPackage ./toggle-mute.nix { };
   toggle-linktui = pkgs.callPackage ./toggle-linktui.nix { inherit self; };
+  toggle-player = pkgs.callPackage ./toggle-player.nix { inherit self; };
   waycava = pkgs.callPackage ./waycava.nix { };
   relic-cli = pkgs.callPackage ./relic-cli.nix { };
   relic-btop = pkgs.callPackage ./relic-btop.nix { };

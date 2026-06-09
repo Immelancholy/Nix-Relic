@@ -265,7 +265,7 @@ in
         exec = "waycava.sh stdout --stb 3";
         on-click = "playerctl --player=${player.class} play-pause";
         on-click-right = ''
-          hyprctl dispatch 'hl.exec_cmd("${player.cmd}", {float = true, size = { 888, 559 } })'
+          hyprctl dispatch 'hl.exec_cmd("${lib.getExe pkgs.toggle-player}")'
         '';
         on-scroll-down = "playerctl --player=${player.class} next";
         on-scroll-up = "playerctl --player=${player.class} previous";
