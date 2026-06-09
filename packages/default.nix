@@ -11,7 +11,7 @@ pkgs: {
   playerVolDefault_Sink = pkgs.callPackage ./playerVolDefault_Sink.nix { };
   rofi-power-menu = pkgs.callPackage ./rofi-power-menu.nix { };
   toggle-mute = pkgs.callPackage ./toggle-mute.nix { };
-  toggle-linktui = pkgs.callPackage ./toggle-linktui.nix { };
+  toggle-linktui = pkgs.callPackage ./toggle-linktui.nix { inherit self; };
   waycava = pkgs.callPackage ./waycava.nix { };
   relic-cli = pkgs.callPackage ./relic-cli.nix { };
   relic-btop = pkgs.callPackage ./relic-btop.nix { };
