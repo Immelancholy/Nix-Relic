@@ -1,6 +1,5 @@
 {
   pkgs,
-  inputs,
   config,
   ...
 }:
@@ -11,6 +10,7 @@
     ./weylus.nix
     ./bluetooth.nix
     ./stylix.nix
+    ./linktui.nix
   ];
 
   services.flatpak.enable = true;

@@ -1,6 +1,7 @@
 {
   pkgs,
   outputs,
+  nix-relic,
   inputs,
   lib,
   config,
@@ -19,12 +20,13 @@
     overlays = [
       outputs.overlays.modifications
       outputs.overlays.additions
-      inputs.nix-relic.overlays.relicpkgs
-      inputs.nix-relic.overlays.stable
-      inputs.nix-relic.overlays.nur
-      inputs.nix-relic.inputs.zarumet.overlays.default
-      inputs.nix-relic.inputs.waybar.overlays.default
-      inputs.nix-relic.inputs.rheayna-vim.overlays.default
+      nix-relic.overlays.relicpkgs
+      nix-relic.overlays.stable
+      nix-relic.overlays.nur
+      nix-relic.inputs.zarumet.overlays.default
+      nix-relic.inputs.waybar.overlays.default
+      nix-relic.inputs.rheayna-vim.overlays.default
+      nix-relic.inputs.linktui.overlays.default
     ];
 
     config = {

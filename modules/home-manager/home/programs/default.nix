@@ -29,6 +29,7 @@
     ./quickshell
     ./hyprquickframe.nix
     ./zen-browser.nix
+    ./linktui.nix
   ];
 
   programs.satty = {
