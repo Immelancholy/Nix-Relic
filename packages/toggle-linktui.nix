@@ -1,13 +1,13 @@
 {
   writeShellApplication,
-  linktui,
   procps,
+  kitty,
 }:
 writeShellApplication {
   name = "toggle-linktui";
   runtimeInputs = [
-    linktui
     procps
+    kitty
   ];
   text = /* Bash */ ''
     if pgrep -f "kitty.*linktui" >/dev/null; then

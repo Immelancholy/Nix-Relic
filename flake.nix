@@ -98,16 +98,13 @@
         "x86_64-linux"
         "aarch64-linux"
       ];
-      overlays = [
-        inputs.linktui.overlays.default
-      ];
       forAllSystems =
         f:
         nixpkgs.lib.genAttrs systems (
           system:
           f {
             system = system;
-            pkgs = import nixpkgs { inherit system overlays; };
+            pkgs = import nixpkgs { inherit system; };
           }
         );
     in
