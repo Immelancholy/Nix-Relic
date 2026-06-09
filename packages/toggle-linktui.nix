@@ -3,6 +3,7 @@
   procps,
   kitty,
   self,
+  uwsm,
   pkgs,
   lib,
 }:
@@ -22,12 +23,13 @@ writeShellApplication {
   runtimeInputs = [
     procps
     kitty
+    uwsm
   ];
   text = /* Bash */ ''
     if pgrep -f "kitty.*linktui-top-bar" >/dev/null; then
             pkill -f "kitty.*linktui-top-bar"
     else
-            kitty --class "linktui" --title "linktui-top-bar" -e ${lib.getExe linktui-top-bar} "$@"
+            uwsm-app -- kitty --class "linktui" --title "linktui-top-bar" -e ${lib.getExe linktui-top-bar} "$@"
     fi
   '';
 }

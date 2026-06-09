@@ -135,8 +135,10 @@ in
           "▇"
           "█"
         ];
+        on-click-right = ''
+          hyprctl dispatch 'hl.exec_cmd("${lib.getExe pkgs.toggle-btop}")'
+        '';
       };
-
       "memory" = {
         states = {
           c = 90;
@@ -152,6 +154,9 @@ in
         max-length = 10;
         tooltip = true;
         tooltip-format = "󰾆 {percentage}%\n {used:0.1f}GB/{total:0.1f}GB";
+        on-click-right = ''
+          hyprctl dispatch 'hl.exec_cmd("${lib.getExe pkgs.toggle-btop}")'
+        '';
       };
 
       "temperature" = {
