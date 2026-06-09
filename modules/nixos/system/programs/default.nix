@@ -269,10 +269,6 @@
 
   environment.variables.SSH_ASKPASS_REQUIRE = "prefer";
 
-  programs.nm-applet = {
-    enable = true;
-    indicator = true;
-  };
   virtualisation.waydroid.enable = true;
 
   programs.gamescope = {

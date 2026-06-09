@@ -1,4 +1,9 @@
-{ config, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 let
   inherit (config) player;
 in
@@ -46,6 +51,7 @@ in
         "pulseaudio#mic"
         "keyboard-state"
         "network"
+        "bluetooth"
         "custom/r_end"
         "custom/l_end"
         "tray"
@@ -159,6 +165,33 @@ in
         format-disconnected = "Disconnected 󰖪";
         format-alt = "<span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>";
         interval = 2;
+        on-click-right = ''
+          hyprctl dispatch 'hl.exec_cmd("${lib.getExe pkgs.toggle-linktui} --tab=wifi")'
+        '';
+      };
+      "bluetooth" = {
+        format = " {status}";
+        format-connected = " {device_alias}";
+        format-connected-battery = " {device_alias} {icon} {device_battery_percentage}%";
+        tooltip-format = "{controller_alias}\t{controller_address}\n\n{num_connections} connected";
+        tooltip-format-connected = "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}";
+        tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
+        tooltip-format-enumerate-connected-battery = "{device_alias}\t{device_address}\t{device_battery_percentage}%";
+        on-click-right = ''
+          hyprctl dispatch 'hl.exec_cmd("${lib.getExe pkgs.toggle-linktui} --tab=bluetooth")'
+        '';
+        format-icons = [
+          "󰁺"
+          "󰁻"
+          "󰁼"
+          "󰁽"
+          "󰁾"
+          "󰁿"
+          "󰂀"
+          "󰂁"
+          "󰂂"
+          "󰁹"
+        ];
       };
       "pulseaudio" = {
         scroll-step = 1;
