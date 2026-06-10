@@ -31,8 +31,8 @@ writeShellApplication {
     playerPkg
   ];
   text = /* Bash */ ''
-    if pgrep -f "kitty.*player-top-bar" >/dev/null; then
-            pkill -f "kitty.*player-top-bar"
+    if pgrep -f "kitty.*-top-bar" >/dev/null; then
+            pkill -f "kitty.*-top-bar"
     else
             uwsm-app -- kitty --class "${playerClass}" --title "${playerTitle}-top-bar" -e ${lib.getExe player-top-bar} "$@"
     fi
