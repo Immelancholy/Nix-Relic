@@ -375,6 +375,14 @@
       move = { 1200, 50 },
     })
     hl.window_rule({
+      name = "btop-top-bar",
+      match = { title = "^(btop-top-bar)$" },
+      float = true,
+      pin = true,
+      size = "660 740",
+      move = { 1045, 50 },
+    })
+    hl.window_rule({
       name = "zarumet-top-bar",
       match = { title = "^(zarumet-top-bar)$" },
       float = true,
