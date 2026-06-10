@@ -5,16 +5,17 @@
   self,
   uwsm,
   pkgs,
-  lib,
+  tab ? "",
 }:
 let
+  title = "linktui-${tab}-top-bar";
   linktui-top-bar = writeShellApplication {
-    name = "player-top-bar";
+    name = "${title}";
     runtimeInputs = [
       self.inputs.linktui.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
     text = ''
-      linktui "$@"
+      linktui -tab=${tab} "$@"
     '';
   };
 in
@@ -24,15 +25,16 @@ writeShellApplication {
     procps
     kitty
     uwsm
+    linktui-top-bar
   ];
   text = /* Bash */ ''
-    if pgrep -f "kitty.*linktui-top-bar" >/dev/null; then
-            pkill -f "kitty.*linktui-top-bar"
+    if pgrep -f "kitty.*${title}" >/dev/null; then
+            pkill -f "kitty.*${title}"
     elif pgrep -f "kitty.*-top-bar" >/dev/null; then
             pkill -f "kitty.*-top-bar"
-            uwsm-app -- kitty --class "linktui" --title "linktui-top-bar" -e ${lib.getExe linktui-top-bar} "$@"
+            uwsm-app -- kitty --class "linktui" --title "${title}" -e ${title} "$@"
     else
-            uwsm-app -- kitty --class "linktui" --title "linktui-top-bar" -e ${lib.getExe linktui-top-bar} "$@"
+            uwsm-app -- kitty --class "linktui" --title "${title}" -e ${title} "$@"
     fi
   '';
 }

@@ -371,8 +371,16 @@ in
       float = true,
     })
     hl.window_rule({
-      name = "linktui-top-bar",
-      match = { title = "^(linktui-top-bar)$" },
+      name = "linktui-wifi-top-bar",
+      match = { title = "^(linktui-wifi-top-bar)$" },
+      float = true,
+      pin = true,
+      size = "630 520",
+      move = { 1200, 50 },
+    })
+    hl.window_rule({
+      name = "linktui-bluetooth-top-bar",
+      match = { title = "^(linktui-bluetooth-top-bar)$" },
       float = true,
       pin = true,
       size = "630 520",

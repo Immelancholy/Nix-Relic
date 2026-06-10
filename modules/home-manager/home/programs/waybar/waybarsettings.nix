@@ -168,46 +168,54 @@ in
           ""
         ];
       };
-      "network" = {
-        format-wifi = "{essid} ({signalStrength}%)  ";
-        format-ethernet = "{ipaddr}/{cidr} 󰈀 ";
-        tooltip-format = "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>";
-        format-linked = "󰈀 {ifname} (No IP)";
-        format-disconnected = "Disconnected 󰖪";
-        format-alt = "<span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>";
-        interval = 2;
-        on-click-right = ''
-          hyprctl dispatch 'hl.exec_cmd("${lib.getExe pkgs.toggle-linktui} --tab=wifi")'
-        '';
-      };
-      "bluetooth" = {
-        format-on = "󰂯";
-        format-off = "󰂲";
-        format-connected = "󰂯 {device_alias}";
-        format-connected-battery = "󰂯 {device_alias} {icon} {device_battery_percentage}%";
-        tooltip-format = "{controller_alias}\t{controller_address}\n\n{num_connections} connected";
-        tooltip-format-connected = "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}";
-        tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
-        tooltip-format-enumerate-connected-battery = "{device_alias}\t{device_address}\t{device_battery_percentage}%";
-        on-click = ''
-          hyprctl dispatch 'hl.exec_cmd("${lib.getExe pkgs.toggle-linktui} --tab=bluetooth")'
-        '';
-        on-click-right = ''
-          hyprctl dispatch 'hl.exec_cmd("${lib.getExe pkgs.toggle-linktui} --tab=bluetooth")'
-        '';
-        format-icons = [
-          "󰁺"
-          "󰁻"
-          "󰁼"
-          "󰁽"
-          "󰁾"
-          "󰁿"
-          "󰂀"
-          "󰂁"
-          "󰂂"
-          "󰁹"
-        ];
-      };
+      "network" =
+        let
+          toggle-linktui = pkgs.toggle-linktui.override { tab = "wifi"; };
+        in
+        {
+          format-wifi = "{essid} ({signalStrength}%)  ";
+          format-ethernet = "{ipaddr}/{cidr} 󰈀 ";
+          tooltip-format = "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>";
+          format-linked = "󰈀 {ifname} (No IP)";
+          format-disconnected = "Disconnected 󰖪";
+          format-alt = "<span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>";
+          interval = 2;
+          on-click-right = ''
+            hyprctl dispatch 'hl.exec_cmd("${lib.getExe toggle-linktui}")'
+          '';
+        };
+      "bluetooth" =
+        let
+          toggle-linktui = pkgs.toggle-linktui.override { tab = "bluetooth"; };
+        in
+        {
+          format-on = "󰂯";
+          format-off = "󰂲";
+          format-connected = "󰂯 {device_alias}";
+          format-connected-battery = "󰂯 {device_alias} {icon} {device_battery_percentage}%";
+          tooltip-format = "{controller_alias}\t{controller_address}\n\n{num_connections} connected";
+          tooltip-format-connected = "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}";
+          tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
+          tooltip-format-enumerate-connected-battery = "{device_alias}\t{device_address}\t{device_battery_percentage}%";
+          on-click = ''
+            hyprctl dispatch 'hl.exec_cmd("${lib.getExe toggle-linktui}")'
+          '';
+          on-click-right = ''
+            hyprctl dispatch 'hl.exec_cmd("${lib.getExe toggle-linktui}")'
+          '';
+          format-icons = [
+            "󰁺"
+            "󰁻"
+            "󰁼"
+            "󰁽"
+            "󰁾"
+            "󰁿"
+            "󰂀"
+            "󰂁"
+            "󰂂"
+            "󰁹"
+          ];
+        };
       "pulseaudio" = {
         scroll-step = 1;
         format = "{volume}% {icon}";
