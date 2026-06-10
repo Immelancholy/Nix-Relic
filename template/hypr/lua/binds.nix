@@ -70,9 +70,6 @@ in
         zoom(-0.5)
       end)
 
-      hl.bind(Mod .. " + F9", hl.dsp.pass({ window = "class:^(com.obsproject.studio)$" }))
-      hl.bind(Mod .. " + F10", hl.dsp.pass({ window = "class:^(com.obsproject.studio)$" }))
-      hl.bind(Mod .. " + F12", hl.dsp.pass({ window = "class:^(com.obsproject.studio)$" }))
       hl.bind(Moda .. " + V", hl.dsp.workspace.toggle_special("video"))
       hl.bind(Moda .. " + G", hl.dsp.workspace.toggle_special("game"))
       hl.bind(Moda .. " + W", hl.dsp.workspace.toggle_special("win"))
