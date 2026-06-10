@@ -189,6 +189,9 @@ in
         tooltip-format-connected = "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}";
         tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
         tooltip-format-enumerate-connected-battery = "{device_alias}\t{device_address}\t{device_battery_percentage}%";
+        on-click = ''
+          hyprctl dispatch 'hl.exec_cmd("${lib.getExe pkgs.toggle-linktui} --tab=bluetooth")'
+        '';
         on-click-right = ''
           hyprctl dispatch 'hl.exec_cmd("${lib.getExe pkgs.toggle-linktui} --tab=bluetooth")'
         '';
@@ -260,6 +263,7 @@ in
         format = "";
         tooltip = false;
         on-click = "rofi -show power-menu -modi power-menu:rofi-power-menu ";
+        on-click-right = "rofi -show power-menu -modi power-menu:rofi-power-menu ";
       };
       #Custom padding mmodules
       "custom/l_end" = {

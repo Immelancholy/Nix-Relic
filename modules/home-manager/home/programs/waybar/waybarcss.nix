@@ -104,6 +104,7 @@ with colors-hex;
     #workspaces,
     #workspaces,
     #workspaces,
+    #custom-tailscale,
     #custom-l_end,
     #custom-r_end {
         color: ${base05};
