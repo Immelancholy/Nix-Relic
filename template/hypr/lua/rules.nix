@@ -1,3 +1,7 @@
+{ config, ... }:
+let
+  inherit (config.player) title;
+in
 {
   xdg.configFile."hypr/lua/rules.lua".text = /* lua */ ''
     -- Window Rules
@@ -383,8 +387,8 @@
       move = { 1045, 50 },
     })
     hl.window_rule({
-      name = "zarumet-top-bar",
-      match = { title = "^(zarumet-top-bar)$" },
+      name = "${title}-top-bar",
+      match = { title = "^(${title}-top-bar)$" },
       float = true,
       pin = true,
       size = "740 490",

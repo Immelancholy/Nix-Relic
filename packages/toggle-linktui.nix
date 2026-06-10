@@ -26,8 +26,11 @@ writeShellApplication {
     uwsm
   ];
   text = /* Bash */ ''
-    if pgrep -f "kitty.*-top-bar" >/dev/null; then
+    if pgrep -f "kitty.*linktui-top-bar" >/dev/null; then
+            pkill -f "kitty.*linktui-top-bar"
+    elif pgrep -f "kitty.*-top-bar" >/dev/null; then
             pkill -f "kitty.*-top-bar"
+            uwsm-app -- kitty --class "linktui" --title "linktui-top-bar" -e ${lib.getExe linktui-top-bar} "$@"
     else
             uwsm-app -- kitty --class "linktui" --title "linktui-top-bar" -e ${lib.getExe linktui-top-bar} "$@"
     fi
