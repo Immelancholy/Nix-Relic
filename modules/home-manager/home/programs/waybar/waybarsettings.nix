@@ -27,6 +27,7 @@ in
       modules-left = [
         "custom/padd"
         "custom/l_end"
+        "keyboard-state"
         "hyprland/submap"
         "custom/r_end"
         "custom/l_end"
@@ -55,9 +56,8 @@ in
         "custom/l_end"
         "pulseaudio"
         "pulseaudio#mic"
-        "keyboard-state"
-        "network"
         "bluetooth"
+        "network"
         "custom/r_end"
         "custom/l_end"
         "tray"
