@@ -234,7 +234,12 @@ in
           ];
         };
         tooltip-format = "{icon} {desc} // {volume}%";
-        on-click = "pwvucontrol -t 4";
+        on-click = ''
+          hyprctl dispatch 'hl.exec_cmd("${lib.getExe pkgs.toggle-pwvucontrol} -t 4")'
+        '';
+        on-click-right = ''
+          hyprctl dispatch 'hl.exec_cmd("${lib.getExe pkgs.toggle-pwvucontrol} -t 4")'
+        '';
       };
       "battery" = {
         interval = 5;
@@ -263,7 +268,12 @@ in
         format = "{source_volume}% {format_source}";
         format-source = "󰍬";
         format-source-muted = "󰍭";
-        on-click = "pwvucontrol -t 3";
+        on-click = ''
+          hyprctl dispatch 'hl.exec_cmd("${lib.getExe pkgs.toggle-pwvucontrol} -t 3")'
+        '';
+        on-click-right = ''
+          hyprctl dispatch 'hl.exec_cmd("${lib.getExe pkgs.toggle-pwvucontrol} -t 3")'
+        '';
 
         tooltip-format = "{format_source} {source_desc} // {source_volume}%";
       };

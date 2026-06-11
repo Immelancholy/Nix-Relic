@@ -30,8 +30,8 @@ writeShellApplication {
   text = /* Bash */ ''
     if pgrep -f "kitty.*${title}" >/dev/null; then
             pkill -f "kitty.*${title}"
-    elif pgrep -f "kitty.*-top-bar" >/dev/null; then
-            pkill -f "kitty.*-top-bar"
+    elif pgrep -f "kitty.*-top-bar | pwvucontrol" >/dev/null; then
+            pkill -f "kitty.*-top-bar | pwvucontrol"
             uwsm-app -- kitty --class "linktui" --title "${title}" -e ${title} "$@"
     else
             uwsm-app -- kitty --class "linktui" --title "${title}" -e ${title} "$@"

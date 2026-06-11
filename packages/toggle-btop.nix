@@ -27,8 +27,8 @@ writeShellApplication {
   text = /* Bash */ ''
     if pgrep -f "kitty.*btop-top-bar" >/dev/null; then
             pkill -f "kitty.*btop-top-bar"
-    elif pgrep -f "kitty.*-top-bar" >/dev/null; then
-            pkill -f "kitty.*-top-bar"
+    elif pgrep -f "kitty.*-top-bar|pwvucontrol" >/dev/null; then
+            pkill -f "kitty.*-top-bar|pwvucontrol"
             uwsm-app -- kitty --class "btop" --title "btop-top-bar" -e ${lib.getExe btop-top-bar} "$@"
     else
             uwsm-app -- kitty --class "btop" --title "btop-top-bar" -e ${lib.getExe btop-top-bar} "$@"

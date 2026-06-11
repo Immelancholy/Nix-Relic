@@ -33,8 +33,8 @@ writeShellApplication {
   text = /* Bash */ ''
     if pgrep -f "kitty.*${playerTitle}-top-bar" >/dev/null; then
             pkill -f "kitty.*${playerTitle}-top-bar"
-    elif pgrep -f "kitty.*-top-bar" >/dev/null; then
-            pkill -f "kitty.*-top-bar"
+    elif pgrep -f "kitty.*-top-bar | pwvucontrol" >/dev/null; then
+            pkill -f "kitty.*-top-bar | pwvucontrol"
             uwsm-app -- kitty --class "${playerClass}" --title "${playerTitle}-top-bar" -e ${lib.getExe player-top-bar} "$@"
     else
             uwsm-app -- kitty --class "${playerClass}" --title "${playerTitle}-top-bar" -e ${lib.getExe player-top-bar} "$@"

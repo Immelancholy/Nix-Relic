@@ -14,6 +14,7 @@ pkgs: {
   toggle-linktui = pkgs.callPackage ./toggle-linktui.nix { inherit self; };
   toggle-player = pkgs.callPackage ./toggle-player.nix { inherit self; };
   toggle-btop = pkgs.callPackage ./toggle-btop.nix { };
+  toggle-pwvucontrol = pkgs.callPackage ./toggle-pwvucontrol.nix { };
   waycava = pkgs.callPackage ./waycava.nix { };
   relic-cli = pkgs.callPackage ./relic-cli.nix { };
   relic-btop = pkgs.callPackage ./relic-btop.nix { };
