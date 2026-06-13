@@ -328,12 +328,6 @@
         setsMode = "default";
         repaint = true;
       };
-      jj = {
-        command = "";
-        mode = "insert";
-        setsMode = "default";
-        repaint = true;
-      };
     };
     interactiveShellInit = /* fish */ ''
       set -U fish_greeting
