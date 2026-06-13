@@ -340,6 +340,7 @@
       check_tmux
 
       if [ "$class" = "fastfetch" ]
+        kitty @ set-font-size 10
         fastfetch --logo $FASTFETCH_STARTUP_LOGO
       else
         check_for_repo

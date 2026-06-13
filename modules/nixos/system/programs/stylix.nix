@@ -89,7 +89,7 @@ in
       };
       sizes = {
         applications = 11;
-        terminal = 11;
+        terminal = 12;
         desktop = 12;
         popups = 10;
       };

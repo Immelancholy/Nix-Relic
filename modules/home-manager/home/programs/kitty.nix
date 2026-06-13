@@ -19,7 +19,7 @@ in
       resize_in_steps = "yes";
       cursor_trail = 10;
       cursor_trail_start_threshold = 0;
-      shellIntegration = "no-cursor";
+      shell_integration = "no-cursor";
       cursor_trail_decay = "0.01 0.15";
       cursor_shape = "beam";
       cursor_blink_interval = "0.5 ease-in-out";
