@@ -1,6 +1,6 @@
 { config, ... }:
 let
-  colors = config.lib.stylix.colors;
+  inherit (config.lib.stylix) colors;
   rgb = color: "rgb(${color})";
   rgba = color: alpha: "rgba(${color}${alpha})";
 in
@@ -49,8 +49,10 @@ with colors;
       decoration = {
         rounding = 20,
         shadow = {
-          enabled = false,
-          color = "${rgba colors.base00 "99"}",
+          enabled = true,
+          color = "${rgba base0C "ff"}",
+          range = 5,
+          render_power = 4,
         },
         dim_special = 0.3,
         blur = {
@@ -62,6 +64,16 @@ with colors;
           ignore_opacity = true,
           xray = false,
           special = true,
+        },
+        motion_blur = {
+          enabled = true,
+          samples = 200,
+        },
+        glow = {
+          enabled = true,
+          range = 15,
+          render_power = 4,
+          color = "${rgba base0C "ff"}",
         },
       },
       animations = {
