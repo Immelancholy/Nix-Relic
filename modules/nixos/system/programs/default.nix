@@ -130,7 +130,8 @@
       framerate = "${toString config.nix-relic.framerates.neo}";
     })
 
-    nix-output-monitor
+    yt-dlp
+    yt-dlg
     cliphist
     imagemagick
     chafa
@@ -181,7 +182,6 @@
     grim
     slurp
     pipes
-    lazygit
     loupe
     glycin-loaders
     swappy

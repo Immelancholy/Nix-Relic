@@ -71,7 +71,7 @@
           };
 
           home.packages = with pkgs; [
-            # Packages for this user only here
+            lazygit
           ];
 
           programs.nixvim = {
