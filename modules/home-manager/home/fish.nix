@@ -7,10 +7,8 @@
     shellAbbrs = {
       ll = "eza -l";
       ls = "eza";
-      cava = "cava.sh";
       reboot-bios = "sudo systemctl reboot --firmware-setup";
       gc = "nix-collect-garbage -d && sudo nix-collect-garbage -d";
-      nv = "nvim";
       lg = "lazygit";
       lj = "lazyjj";
     };
