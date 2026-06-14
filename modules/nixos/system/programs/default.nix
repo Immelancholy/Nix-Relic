@@ -146,7 +146,7 @@
       withOpengl = true;
       withRtmp = true;
     })
-    libsForQt5.qt5.qtwayland
+    qt5.qtwayland
     kdePackages.qtwayland
     libnotify
     wl-clipboard
