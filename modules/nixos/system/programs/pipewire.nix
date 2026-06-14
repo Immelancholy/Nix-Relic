@@ -157,15 +157,6 @@
       }
     ];
   };
-  services.pipewire.extraConfig.jack."92-low-latency" = {
-    "jack.properties" = {
-      "rt.prio" = 88;
-      "node.latency" = "64/96000";
-      "node.rate" = "1/96000";
-      "node.quantum" = "64/96000";
-      "node.force-quantum" = 128;
-    };
-  };
   services.pipewire.extraConfig.client."92-low-latency" = {
     "stream.properties" = {
       "resample.quality" = 15;
