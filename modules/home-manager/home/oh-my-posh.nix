@@ -1,22 +1,10 @@
 { config, ... }:
 let
-  base = "#${config.lib.stylix.colors.base00}";
-  mantle = "#${config.lib.stylix.colors.base01}";
-  surface0 = "#${config.lib.stylix.colors.base02}";
-  surface1 = "#${config.lib.stylix.colors.base03}";
-  surface2 = "#${config.lib.stylix.colors.base04}";
-  text = "#${config.lib.stylix.colors.base05}";
-  rosewater = "#${config.lib.stylix.colors.base06}";
-  lavender = "#${config.lib.stylix.colors.base07}";
-  red = "#${config.lib.stylix.colors.base08}";
-  peach = "#${config.lib.stylix.colors.base09}";
-  yellow = "#${config.lib.stylix.colors.base0A}";
-  green = "#${config.lib.stylix.colors.base0B}";
-  teal = "#${config.lib.stylix.colors.base0C}";
-  blue = "#${config.lib.stylix.colors.base0D}";
-  mauve = "#${config.lib.stylix.colors.base0E}";
-  flamingo = "#${config.lib.stylix.colors.base0F}";
+  inherit (config.lib.stylix) colors;
+  mkHex = colors: builtins.mapAttrs (_: value: "#${value}") colors;
+  colors-hex = mkHex colors;
 in
+with colors-hex;
 {
   programs.bash = {
     enable = true;
@@ -33,16 +21,16 @@ in
         {
           "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
           "palette": {
-            "white": "#FFFFFF",
-            "black": "#0C212F",
-            "tan": "${teal}",
-            "teal": "${surface1}",
-            "plum": "${mantle}",
-            "blush": "${mauve}",
-            "salmon": "${peach}",
-            "sky": "${surface2}",
-            "teal_blue": "${flamingo}",
-            "behind": "#ef9f76"
+          "white": "#FFFFFF",
+          "black": "#0C212F",
+          "tan": "${base0C}",
+          "teal": "${base03}",
+          "plum": "${base01}",
+          "blush": "${base0E}",
+          "salmon": "${base09}",
+          "sky": "${base04}",
+          "teal_blue": "${base0F}",
+          "behind": "#ef9f76"
           },
           "secondary_prompt": {
             "background": "transparent",
