@@ -98,6 +98,16 @@
             mime = "video/*";
             use = "play";
           }
+          {
+            mime = "audio/*";
+            use = "play";
+          }
+          {
+            url = "*";
+            use = [
+              "open"
+            ];
+          }
         ];
       };
       plugin.prepend_fetchers = [

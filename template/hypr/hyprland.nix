@@ -30,7 +30,6 @@ in
        Discord = "uwsm-app -- vesktop.desktop"
        Editor = "uwsm-app -- org.neovim.nvim.desktop"
        Files = "uwsm-app -- nemo.desktop"
-       Filest = "uwsm-app -- yazi.desktop"
        Menu =
          'rofi -show drun -run-command "uwsm-app -- {cmd}" run filebrowser power-menu -modi drun,run,filebrowser,power-menu:rofi-power-menu'
        Mod = "SUPER"
