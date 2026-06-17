@@ -1,5 +1,4 @@
 {
-  inputs,
   pkgs,
   nix-relic,
   ...
@@ -58,7 +57,14 @@
       opener = {
         play = [
           {
-            run = "uwsm-app -- mpv %s";
+            run = "uwsm-app -- mpv --player-operation-mode=pseudo-gui %s";
+            orphan = true;
+            for = "unix";
+          }
+        ];
+        image = [
+          {
+            run = "uwsm-app -- loupe %s";
             orphan = true;
             for = "unix";
           }
@@ -72,7 +78,7 @@
         ];
         open = [
           {
-            run = "uwsm-app -- xdg-open %s1";
+            run = "uwsm-app -- xdg-open %s";
             desc = "Open";
           }
         ];
@@ -103,10 +109,8 @@
             use = "play";
           }
           {
-            url = "*";
-            use = [
-              "open"
-            ];
+            mime = "image/*";
+            use = "image";
           }
         ];
       };
