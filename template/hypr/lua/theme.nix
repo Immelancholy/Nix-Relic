@@ -58,11 +58,10 @@ with colors;
         blur = {
           enabled = true,
           size = 5,
-          passes = 3,
-          vibrancy = 0.5,
-          new_optimizations = true,
-          ignore_opacity = true,
-          xray = false,
+          passes = 4,
+          brightness = 1.35,
+          vibrancy = 0.75,
+          vibrancy_darkness = 0.8,
           special = true,
         },
         motion_blur = {
