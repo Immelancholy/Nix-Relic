@@ -22,11 +22,11 @@ in
   xdg.configFile."hypr/lua/autostart.lua".text = /* Lua */ ''
     hl.on("hyprland.start", function()
       hl.timer(function()
+        hl.exec_cmd("dunstctl set-paused true")
+        hl.exec_cmd("dunstctl close-all")
         hl.exec_cmd(Discord)
         hl.exec_cmd(Browser, { workspace = "2 silent" })
         hl.exec_cmd("uwsm-app -- waybar")
-        hl.exec_cmd("dunstctl set-paused true")
-        hl.exec_cmd("dunstctl close-all")
         hl.exec_cmd("pkill localsend")
         hl.timer(function()
           hl.dispatch(hl.dsp.exec_cmd("uwsm-app -- kitty --title relic-cava relic-cava", { workspace = "1 silent", float = true, size = { 888, 456 }, move = { 610, 615 } }))
