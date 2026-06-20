@@ -1562,6 +1562,22 @@
         "type": "github"
       }
     },
+    "plugins-quickbuf": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1781949804,
+        "narHash": "sha256-sjTxvFCGlsHUk/2Ne0kdB8TKooszYFspQOfCdpwahHY=",
+        "owner": "tjgao",
+        "repo": "quickbuf.nvim",
+        "rev": "75b49dfd836a95cd0c80b04c1f5ac7e689e35421",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tjgao",
+        "repo": "quickbuf.nvim",
+        "type": "github"
+      }
+    },
     "plugins-vim-be-good": {
       "flake": false,
       "locked": {
@@ -1638,16 +1654,17 @@
         "plugins-mole": "plugins-mole",
         "plugins-nvim-autopairs": "plugins-nvim-autopairs",
         "plugins-nvim-highlight-colors": "plugins-nvim-highlight-colors",
+        "plugins-quickbuf": "plugins-quickbuf",
         "plugins-vim-be-good": "plugins-vim-be-good",
         "rust-overlay": "rust-overlay",
         "wrappers": "wrappers"
       },
       "locked": {
-        "lastModified": 1781963445,
-        "narHash": "sha256-87XjADbhFCImhnCbxtuDFBKKyOnyx+Dcoi5ywiIV8L4=",
+        "lastModified": 1781965214,
+        "narHash": "sha256-GX6UFBiuuz78KhOjbtwLjvlQ2KgeuZjNIQ2IknM6PmM=",
         "owner": "Immelancholy",
         "repo": "RheaynaVim",
-        "rev": "da1b8edc20020bf541ee11c88be374d27ef53c1d",
+        "rev": "47f436449ef334eae616d663d215a880bc94311c",
         "type": "github"
       },
       "original": {
