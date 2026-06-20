@@ -27,7 +27,7 @@
         isAdmin = true; # enable or disable this to give or take sudo access.
         home-config = {
           imports = [
-            ./hypr/hyprland.nix
+            ./hyprland
           ];
           programs.discord = {
             enable = true;

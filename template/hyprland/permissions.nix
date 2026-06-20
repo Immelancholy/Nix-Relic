@@ -1,5 +1,5 @@
 {
-  xdg.configFile."hypr/lua/permissions.lua".text = /* Lua */ ''
+  xdg.configFile."hypr/permissions.lua".text = /* Lua */ ''
     hl.config({
       ecosystem = {
         enforce_permissions = true,

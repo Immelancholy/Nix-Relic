@@ -1,5 +1,5 @@
 {
-  xdg.configFile."hypr/lua/layouts.lua".text = /* Lua */ ''
+  xdg.configFile."hypr/layouts.lua".text = /* Lua */ ''
     hl.config({
       general = {
         layout = "scrolling",

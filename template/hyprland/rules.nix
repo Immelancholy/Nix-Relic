@@ -3,7 +3,7 @@ let
   inherit (config.player) title;
 in
 {
-  xdg.configFile."hypr/lua/rules.lua".text = /* lua */ ''
+  xdg.configFile."hypr/rules.lua".text = /* lua */ ''
     -- Window Rules
     hl.window_rule({
       match = {

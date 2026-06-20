@@ -6,7 +6,7 @@ let
 in
 with colors;
 {
-  xdg.configFile."hypr/lua/theme.lua".text = /* Lua */ ''
+  xdg.configFile."hypr/theme.lua".text = /* Lua */ ''
     hl.config({
       general = {
         gaps_in = 3,
