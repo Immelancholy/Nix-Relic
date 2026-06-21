@@ -467,11 +467,11 @@
         "nixpkgs": "nixpkgs_12"
       },
       "locked": {
-        "lastModified": 1781733627,
-        "narHash": "sha256-U3yTuGBnmXvXoQI3qkpfEDsn9RovQPAjN7ndRco+3u0=",
+        "lastModified": 1778507602,
+        "narHash": "sha256-kTwur1wV+01SdqskVMSo6JMEpg71ps3HpbFY2GsflKs=",
         "owner": "cachix",
         "repo": "git-hooks.nix",
-        "rev": "3bbec39bc90eadfa031e6f3b77272f3f60803e39",
+        "rev": "61ab0e80d9c7ab14c256b5b453d8b3fb0189ba0a",
         "type": "github"
       },
       "original": {
@@ -1766,11 +1766,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1781925477,
-        "narHash": "sha256-QT9/mwEXqfrB9v7E2YGPeYTowXZP8c34behjJ9HuQKA=",
+        "lastModified": 1781320681,
+        "narHash": "sha256-mjJ/VxJaIkgcUvKANgKOaaN5M1X1X+6NjCP0C5hw0WI=",
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "rev": "e8e2021ee8cf3b58b000953ed3bee0d16b5e98e0",
+        "rev": "5b929d8c854149d926d05ea0cd6469bf4e54db27",
         "type": "github"
       },
       "original": {
@@ -2133,11 +2133,11 @@
         "rust-overlay": "rust-overlay_4"
       },
       "locked": {
-        "lastModified": 1782002018,
-        "narHash": "sha256-Bz0Sf3cPsrET+hNoTSLsZSUQ+npUVcZ0Gc7BZYUxDJ8=",
+        "lastModified": 1782002244,
+        "narHash": "sha256-WsgGD66x8PMO9oe0YM6Po5ihcRWf6+m/3a5CvDCNYh4=",
         "owner": "Immelancholy",
         "repo": "zarumet",
-        "rev": "661cf855770c0bccfed9ab03c7fbd632f7541729",
+        "rev": "de75d3802081f64f778a36051df31ba403e9eca4",
         "type": "github"
       },
       "original": {
