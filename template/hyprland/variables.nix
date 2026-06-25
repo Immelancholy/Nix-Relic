@@ -38,7 +38,7 @@ in
     Browser = "uwsm-app -- zen-beta.desktop"
     Discord = "uwsm-app -- vesktop.desktop"
     Editor = "uwsm-app -- org.neovim.nvim.desktop"
-    Files = "uwsm-app -- yazi.desktop"
+    Files = "uwsm-app -- " .. Term .. " yazi"
     Menu =
       'rofi -show drun -run-command "uwsm-app -- {cmd}" run filebrowser power-menu -modi drun,run,filebrowser,power-menu:rofi-power-menu'
     Mod = "SUPER"

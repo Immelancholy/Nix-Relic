@@ -10,13 +10,6 @@
       hl.exec_cmd("hyprlock")
     end)
 
-    function Universal_User_Binds() end
-    function Default_User_Binds() end
-    function Manage_User_Binds() end
-    function Resize_User_Binds() end
-    function Move_User_Binds() end
-    function Player_User_Binds() end
-
     function WorkspaceOneExecs()
       hl.dispatch(
         hl.dsp.exec_cmd(
@@ -48,7 +41,6 @@
           { workspace = "1 silent", float = true, size = { 888, 565 }, move = { 610, 42 } }
         )
       )
-      hl.exec_cmd("uwsm-app -- localsend_app --hidden")
     end
 
     function WorkspaceOneKills()
@@ -57,7 +49,13 @@
       hl.dispatch(hl.dsp.window.kill({ window = "title:^(relic-fastfetch)$" }))
       hl.dispatch(hl.dsp.window.kill({ window = "title:^(relic-btop)$" }))
       hl.dispatch(hl.dsp.window.kill({ window = "title:^(relic-cava)$" }))
-      hl.exec_cmd("pkill localsend")
     end
+
+    function Universal_User_Binds() end
+    function Default_User_Binds() end
+    function Manage_User_Binds() end
+    function Resize_User_Binds() end
+    function Move_User_Binds() end
+    function Player_User_Binds() end
   '';
 }
