@@ -1,6 +1,7 @@
 {
   xdg.configFile."hypr/hyprland.lua".text = /* Lua */ ''
     require("variables")
+    require("colors")
     require("userconf")
     require("autostart")
     require("binds")

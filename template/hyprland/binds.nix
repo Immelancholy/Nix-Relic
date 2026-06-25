@@ -1,16 +1,6 @@
 { config, ... }:
 let
   inherit (config.player) title;
-  inherit (config.wayland.windowManager.hyprland) liveWallpaper;
-  wallpaperKill = "${
-    if liveWallpaper.enable then
-      ''
-        hl.exec_cmd("systemctl start --user hyprpaper")
-            hl.exec_cmd("pkill mpvpaper")
-      ''
-    else
-      ""
-  }";
 in
 {
   xdg.configFile."hypr/binds.lua".text = /* Lua */ ''
@@ -200,11 +190,36 @@ in
         hl.dispatch(hl.dsp.window.kill({ window = "title:^(relic-fastfetch)$" }))
         hl.dispatch(hl.dsp.window.kill({ window = "title:^(relic-btop)$" }))
         hl.dispatch(hl.dsp.window.kill({ window = "title:^(relic-cava)$" }))
-        hl.dispatch(hl.dsp.exec_cmd("uwsm-app -- kitty --title relic-cava relic-cava", { workspace = "1 silent", float = true, size = { 888, 456 }, move = { 610, 615 } }))
-        hl.dispatch(hl.dsp.exec_cmd("uwsm-app -- kitty --title relic-btop relic-btop", { workspace = "1 silent", float = true, size = { 590, 615 }, move = { 10, 455 } }))
-        hl.dispatch(hl.dsp.exec_cmd("uwsm-app -- kitty --title relic-neo relic-neo", { workspace = "1 silent", float = true, size = { 402, 1030 }, move = { 1508, 42 } }))
-        hl.dispatch(hl.dsp.exec_cmd("uwsm-app -- kitty --title relic-fastfetch kitty @ launch --type overlay --env class=fastfetch", { workspace = "1 silent", float = true, size = { 590, 405 }, move = { 10, 42 } }))
-        hl.dispatch(hl.dsp.exec_cmd(Player .. " -b on", { workspace = "1 silent", float = true, size = { 888, 565 }, move = { 610, 42 } }))
+        hl.dispatch(
+          hl.dsp.exec_cmd(
+            "uwsm-app -- kitty --title relic-cava relic-cava",
+            { workspace = "1 silent", float = true, size = { 888, 456 }, move = { 610, 615 } }
+          )
+        )
+        hl.dispatch(
+          hl.dsp.exec_cmd(
+            "uwsm-app -- kitty --title relic-btop relic-btop",
+            { workspace = "1 silent", float = true, size = { 590, 615 }, move = { 10, 455 } }
+          )
+        )
+        hl.dispatch(
+          hl.dsp.exec_cmd(
+            "uwsm-app -- kitty --title relic-neo relic-neo",
+            { workspace = "1 silent", float = true, size = { 402, 1030 }, move = { 1508, 42 } }
+          )
+        )
+        hl.dispatch(
+          hl.dsp.exec_cmd(
+            "uwsm-app -- kitty --title relic-fastfetch kitty @ launch --type overlay --env class=fastfetch",
+            { workspace = "1 silent", float = true, size = { 590, 405 }, move = { 10, 42 } }
+          )
+        )
+        hl.dispatch(
+          hl.dsp.exec_cmd(
+            Player .. " -b on",
+            { workspace = "1 silent", float = true, size = { 888, 565 }, move = { 610, 42 } }
+          )
+        )
       end)
 
       hl.bind(Mod .. " + Delete", hl.dsp.exec_cmd("rofi -show power-menu -modi power-menu:rofi-power-menu"))
@@ -265,15 +280,16 @@ in
             match = { class = "^(.*)$" },
             opacity = "1.0 override 1.0 override 1.0 override",
           })
-          ${wallpaperKill}
-          hl.dispatch(hl.dsp.window.kill({ window = "title:^(${title})$" }))
-          hl.dispatch(hl.dsp.window.kill({ window = "title:^(relic-neo)$" }))
-          hl.dispatch(hl.dsp.window.kill({ window = "title:^(relic-fastfetch)$" }))
-          hl.dispatch(hl.dsp.window.kill({ window = "title:^(relic-btop)$" }))
-          hl.dispatch(hl.dsp.window.kill({ window = "title:^(relic-cava)$" }))
+          LiveWallpaperKill()
+          WorkspaceOneKills()
           hl.timer(function()
-            hl.dispatch( hl.dsp.exec_cmd( Player .. " -b off", { workspace = "1 silent", float = true, size = { 1118, 710 }, move = { 401, 145 } }))
-          end, {timeout = 5, type = "oneshot"})
+            hl.dispatch(
+              hl.dsp.exec_cmd(
+                Player .. " -b off",
+                { workspace = "1 silent", float = true, size = { 1118, 710 }, move = { 401, 145 } }
+              )
+            )
+          end, { timeout = 5, type = "oneshot" })
         end
         if gamemode == false then
           hl.dispatch(hl.dsp.exec_cmd("hyprctl reload config-only -q"))
@@ -419,7 +435,7 @@ in
     hl.bind(Mods .. " + Right", hl.dsp.focus({ workspace = "r+1" }))
     hl.bind(Mods .. " + Down", hl.dsp.focus({ workspace = "empty" }))
 
-    local function universal_manage_binds ()
+    local function universal_manage_binds()
       hl.bind(Mod .. " + P", hl.dsp.window.pin())
 
       hl.bind(

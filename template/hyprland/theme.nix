@@ -1,10 +1,3 @@
-{ config, ... }:
-let
-  inherit (config.lib.stylix) colors;
-  rgb = color: "rgb(${color})";
-  rgba = color: alpha: "rgba(${color}${alpha})";
-in
-with colors;
 {
   xdg.configFile."hypr/theme.lua".text = /* Lua */ ''
     hl.config({
@@ -14,10 +7,10 @@ with colors;
         border_size = 2,
         col = {
           active_border = {
-            colors = { "${rgb base0E}", "${rgb base0C}", "${rgb base06}" },
+            colors = { Base0E, Base0C, Base06 },
             angle = 40,
           },
-          inactive_border = { colors = { "${rgba base07 "cc"}", "${rgba base04 "cc"}" }, angle = 45 },
+          inactive_border = { colors = { RgbaBase07, RgbaBase04 }, angle = 45 },
         },
         resize_on_border = true,
         allow_tearing = true,
@@ -25,24 +18,24 @@ with colors;
       group = {
         col = {
           border_active = {
-            colors = { "${rgb base0E}", "${rgb base0C}", "${rgb base06}" },
+            colors = { Base0E, Base0C, Base06 },
             angle = 40,
           },
-          border_inactive = { colors = { "${rgba base07 "cc"}", "${rgba base04 "cc"}" }, angle = 45 },
+          border_inactive = { colors = { RgbaBase07, RgbaBase04 }, angle = 45 },
           border_locked_active = {
-            colors = { "${rgb base0E}", "${rgb base0C}", "${rgb base06}" },
+            colors = { Base0E, Base0C, Base06 },
             angle = 40,
           },
-          border_locked_inactive = { colors = { "${rgba base07 "cc"}", "${rgba base04 "cc"}" }, angle = 45 },
+          border_locked_inactive = { colors = { RgbaBase07, RgbaBase04 }, angle = 45 },
         },
         groupbar = {
           font_family = "JetBrainsMono Nerd Font Mono Bold",
           font_size = 12,
           gradients = false,
-          text_color = "${rgb base05}",
+          text_color = Base05,
           col = {
-            active = "${rgb base0E}",
-            inactive = "${rgba base07 "cc"}",
+            active = Base0E,
+            inactive = RgbaBase07,
           },
         },
       },
@@ -50,7 +43,7 @@ with colors;
         rounding = 20,
         shadow = {
           enabled = true,
-          color = "${rgba base0C "ff"}",
+          color = Base0C,
           range = 5,
           render_power = 4,
         },
@@ -72,7 +65,7 @@ with colors;
           enabled = true,
           range = 15,
           render_power = 4,
-          color = "${rgba base0C "ff"}",
+          color = RgbaBase0C,
         },
       },
       animations = {

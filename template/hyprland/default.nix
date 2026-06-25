@@ -2,6 +2,7 @@
   imports = [
     ./autostart.nix
     ./binds.nix
+    ./colors.nix
     ./hardware.nix
     ./hyprland.nix
     ./layouts.nix

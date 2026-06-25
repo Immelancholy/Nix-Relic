@@ -15,7 +15,7 @@
       mount = "${nix-relic.inputs.yazi-plugins}/mount.yazi";
       yamb = "${nix-relic.inputs.yamb}";
     };
-    initLua = ''
+    initLua = /* Lua */ ''
       local bookmarks = {}
 
       local path_sep = package.config:sub(1, 1)
@@ -25,20 +25,20 @@
           tag = "Scoop Local",
 
           path = (os.getenv("SCOOP") or home_path .. "\\scoop") .. "\\",
-          key = "p"
+          key = "p",
         })
         table.insert(bookmarks, {
           tag = "Scoop Global",
           path = (os.getenv("SCOOP_GLOBAL") or "C:\\ProgramData\\scoop") .. "\\",
-          key = "P"
+          key = "P",
         })
       end
-      require("full-border"):setup {
+      require("full-border"):setup({
         -- Available values: ui.Border.PLAIN, ui.Border.ROUNDED
         type = ui.Border.ROUNDED,
-      }
+      })
       require("git"):setup()
-      require("yamb"):setup {
+      require("yamb"):setup({
         bookmarks = bookmarks,
 
         jump_notify = true,
@@ -48,7 +48,7 @@
         keys = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
 
         path = (os.getenv("HOME") .. "/.config/yazi/bookmark"),
-      }
+      })
     '';
     settings = {
       manager = {

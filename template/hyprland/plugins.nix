@@ -1,14 +1,10 @@
 {
   nix-relic,
-  config,
   pkgs,
   ...
 }:
 let
   inherit (nix-relic) inputs;
-  colors = config.lib.stylix.colors;
-  rgb = color: "rgb(${color})";
-  rgba = color: alpha: "rgba(${color}${alpha})";
   # easymotion = "${
   #   inputs.hyprland-easymotion.packages.${pkgs.stdenv.hostPlatform.system}.hyprland-easymotion
   # }/lib/libhyprland-easymotion.so";
@@ -16,11 +12,11 @@ let
     inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.csgo-vulkan-fix
   }/lib/libcsgo-vulkan-fix.so";
 in
-with colors;
 {
   xdg.configFile."hypr/plugins.lua".text = /* Lua */ ''
+    local csgo = "${csgo-vulkan}"
     hl.on("hyprland.start", function()
-      hl.exec_cmd("hyprctl plugin load ${csgo-vulkan}")
+      hl.exec_cmd("hyprctl plugin load " .. csgo)
     end)
     hl.permission({
       binary = "/nix/store/[a-z0-9]{32}-csgo-vulkan-fix-[0-9.]*/lib/libcsgo-vulkan-fix.so",
@@ -36,10 +32,10 @@ with colors;
     -- hl.config({
     --   plugin = {
     --     easymotion = {
-    --       textcolor = "${rgb base05}",
-    --       bgcolor = "${rgba base00 "bb"}",
+    --       textcolor = Base05,
+    --       bgcolor = RgbaBase00,
     --       bordercolor = {
-    --         colors = { "${rgb base0E}", "${rgb base0C}", "${rgb base06}" },
+    --         colors = { Base0E, Base0C, Base06 },
     --         angle = 40,
     --       },
     --       blur = 1,
@@ -52,6 +48,5 @@ with colors;
     -- })
 
     -- hl.bind(mod .. " + D", function() hl.plugin.easymotion.action("hyprctl dispatch 'hl.dsp.focus({ window = \"{}\" })'") end))
-  
-'';
+  '';
 }
