@@ -21,7 +21,7 @@ with colors-hex;
         corner_radius = 20;
         origin = "top-right";
         offset = "(54, 18)";
-        width = "(0, 350)";
+        width = "(0, 320)";
         height = "(0, 400)";
         alignment = "center";
         icon_corner_radius = 15;
