@@ -28,4 +28,12 @@
     "discard"
     "fs.inotify.max_user_watches=524288"
   ];
+  boot.lanzaboote = {
+    settings = {
+      editor = false;
+    };
+  };
+  # Workaround for https://github.com/NixOS/nixpkgs/issues/535850
+  # linuxPackages_zen outputs "vmlinuz" instead of "bzImage"
+  system.boot.loader.kernelFile = "vmlinuz";
 }
