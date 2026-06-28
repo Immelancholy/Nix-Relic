@@ -17,8 +17,7 @@ let
     if liveWallpaper.enable then
       ''
         hl.exec_cmd("systemctl start --user hyprpaper")
-          hl.exec_cmd("pkill mpvpaper")
-      ''
+          hl.exec_cmd("pkill mpvpaper")''
     else
       ""
   }";
@@ -37,19 +36,15 @@ in
     Term = "uwsm-app -- kitty"
     Browser = "uwsm-app -- zen-beta.desktop"
     Discord = "uwsm-app -- vesktop.desktop"
-    Editor = "uwsm-app -- org.neovim.nvim.desktop"
-    Files = "uwsm-app -- " .. Term .. " yazi"
+    Editor = Term .. " nvim"
+    Files = Term .. " yazi"
     Menu =
       'rofi -show drun -run-command "uwsm-app -- {cmd}" run filebrowser power-menu -modi drun,run,filebrowser,power-menu:rofi-power-menu'
     Mod = "SUPER"
     Moda = "SUPER + ALT"
     Modc = "SUPER + CTRL"
     Mods = "SUPER + SHIFT"
-    Player = (
-      "uwsm-app -- "
-      .. Term
-      .. " --title ${title} --class ${class} ${cmd}"
-    )
+    Player = Term .. " --title ${title} --class ${class} ${cmd}"
     Playerctl = "uwsm-app -- playerctl --player=${class}"
     PlayerTitle = "${title}"
   '';
