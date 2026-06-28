@@ -1,16 +1,8 @@
 {
   pkgs,
-  inputs,
   lib,
-  config,
   ...
 }:
-let
-  cfg = config.wayland.windowManager.hyprland;
-  playerCmd = config.player.cmd;
-  playerCmdGame = config.player.cmdGame;
-  playerClass = config.player.class;
-in
 {
   wayland.windowManager.hyprland = lib.mkMerge [
     {

@@ -1,19 +1,11 @@
 {
   xdg.configFile."hypr/autostart.lua".text = /* Lua */ ''
     hl.on("hyprland.start", function()
-      LiveWallpaper()
+      hl.exec_cmd("uwsm-app -- waybar")
       hl.exec_cmd(Discord)
       hl.exec_cmd(Browser, { workspace = "2 silent" })
-      hl.exec_cmd("uwsm-app -- waybar")
-      hl.exec_cmd("dunstctl set-paused true")
-      hl.exec_cmd("dunstctl close-all")
-      WorkspaceOneExecs()
-      hl.exec_cmd("uwsm-app -- localsend_app --hidden")
       hl.exec_cmd("systemctl restart --user easyeffects")
       hl.exec_cmd("systemctl restart --user qpwgraph")
-      hl.exec_cmd("sleep 1; dunstctl set-paused false")
-      hl.exec_cmd("dunstctl close-all")
-      hl.exec_cmd('sleep 2; notify-send "|-<(Theme Loaded)>-|"')
     end)
     hl.on("config.reloaded", function()
       hl.exec_cmd("dunstctl set-paused true")
@@ -27,8 +19,8 @@
       hl.exec_cmd("systemctl restart --user easyeffects")
       hl.exec_cmd("systemctl restart --user qpwgraph")
       hl.exec_cmd("sleep 1; dunstctl set-paused false")
-      hl.exec_cmd("dunstctl close-all")
-      hl.exec_cmd('sleep 2; notify-send "|-<(Theme Loaded)>-|"')
+      hl.exec_cmd("sleep 1; dunstctl close-all")
+      hl.exec_cmd("sleep 1; notify-send '|-<(Theme Loaded)>-|'")
     end)
   '';
 }

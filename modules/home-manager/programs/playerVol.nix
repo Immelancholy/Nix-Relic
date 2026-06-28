@@ -44,13 +44,6 @@ in
     };
   };
   config = mkMerge [
-    (mkIf (config.wayland.windowManager.hyprland.enable && cfg.enable) {
-      wayland.windowManager.hyprland.settings = {
-        player = {
-          _var = "${cfg.name}";
-        };
-      };
-    })
     (mkIf (cfg.enable && config.player.name == "mpd" && !config.player.scriptUseDefaultSink) {
       home.packages = [
         playerVolMPD
