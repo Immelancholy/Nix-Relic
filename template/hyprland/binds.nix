@@ -132,8 +132,19 @@ in
       )
       hl.bind(Mod .. " + Q", hl.dsp.window.close())
       hl.bind(Mod .. " + W", hl.dsp.window.float({ action = "toggle" }))
-      hl.bind(Mod .. " + D", hl.dsp.focus({ window = "floating" }))
-      hl.bind(Mod .. " + S", hl.dsp.focus({ window = "tiled" }))
+      hl.bind(Mod .. " + S", function()
+        local w = hl.get_active_window()
+
+        if not w then
+          return
+        end
+
+        if w.floating == true then
+          hl.dispatch(hl.dsp.focus({ window = "tiled" }))
+        else
+          hl.dispatch(hl.dsp.focus({ window = "floating" }))
+        end
+      end)
       hl.bind("Pause", hl.dsp.exec_cmd(Playerctl .. " play-pause"))
       hl.bind(Mod .. " + T", hl.dsp.exec_cmd(Term))
       hl.bind(Mods .. " + T", hl.dsp.exec_cmd(Term .. " --class tmux tmux"))
@@ -145,7 +156,7 @@ in
       hl.bind(Mods .. " + Return", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
       hl.bind("ALT + Tab", hl.dsp.exec_cmd("rofi -show window -Modi window"))
 
-      hl.bind(Mod .. " + Tab", function()
+      hl.bind(Mod .. " + ALT + CONTROL + Delete", function()
         local layouts = { "scrolling", "dwindle", "master", "monocle" }
         local workspace = hl.get_active_workspace()
         local next_layout = "dwindle"
@@ -165,10 +176,10 @@ in
         hl.workspace_rule({ workspace = workspace.name, layout = next_layout })
       end)
 
-      hl.bind(Mods .. " + Tab", function()
-        local layouts = { "monocole", "master", "dwindle", "scrolling" }
+      hl.bind(Mod .. " + ALT + SHIFT + CONTROL + Delete", function()
+        local layouts = { "monocle", "master", "dwindle", "scrolling" }
         local workspace = hl.get_active_workspace()
-        local next_layout = "dwindle"
+        local next_layout = "master"
 
         if not workspace then
           return
@@ -224,8 +235,7 @@ in
       end)
 
       hl.bind(Mod .. " + Delete", hl.dsp.exec_cmd("rofi -show power-menu -modi power-menu:rofi-power-menu"))
-      hl.bind("CTRL + SHIFT + L", hl.dsp.exec_cmd("uwsm-app -- swaylock -fF"))
-      hl.bind(Mod .. " + N", hl.dsp.exec_cmd("rofi -show Cliphist -modi Cliphist:rofi-cliphist"))
+      hl.bind(Mod .. " + V", hl.dsp.exec_cmd("rofi -show Cliphist -modi Cliphist:rofi-cliphist"))
       hl.bind(Mod .. " + Apostrophe", hl.dsp.exec_cmd("rofi -show emoji nerdy -modi emoji,nerdy"))
 
       hl.bind(Mod .. " + G", function()
@@ -297,7 +307,6 @@ in
         end
       end)
 
-      hl.bind(Mod .. " + Y", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
       hl.bind("CTRL + SHIFT + Escape", hl.dsp.exec_cmd(Term .. " --title btop btop"))
       hl.bind("XF86Calculator", hl.dsp.exec_cmd("uwsm-app -- qalculate-gtk"))
       hl.bind(Mod .. " + semicolon", hl.dsp.exec_cmd("uwsm-app -- qalculate-gtk"))
@@ -332,6 +341,18 @@ in
 
       hl.bind(Mod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
       hl.bind(Mod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
+      hl.bind(
+        Mod .. " + N",
+        layout_bind({
+          scrolling = hl.dsp.layout("colresize +0.1"),
+        })
+      )
+      hl.bind(
+        Mods .. " + N",
+        layout_bind({
+          scrolling = hl.dsp.layout("colresize -0.1"),
+        })
+      )
       hl.bind(
         Mod .. " + C",
         layout_bind({
