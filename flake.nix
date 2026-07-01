@@ -84,6 +84,10 @@
       url = "github:chrissicool/zsh-256color";
       flake = false;
     };
+    quickshell-overview = {
+      url = "github:Shanu-Kumawat/quickshell-overview";
+      flake = false;
+    };
   };
 
   outputs =
@@ -170,6 +174,7 @@
 
       homeManagerModules = {
         default = import ./modules/home-manager;
+        quickshell-overview = import ./modules/home-manager/programs/quickshell-overview.nix self;
       };
 
       templates = {

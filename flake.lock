@@ -1640,6 +1640,22 @@
         "type": "github"
       }
     },
+    "quickshell-overview": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1781006042,
+        "narHash": "sha256-Gwaj36/+kDWsu30/NQKBM6x+K9zVaOf+Qtl4ZsUx/UU=",
+        "owner": "Shanu-Kumawat",
+        "repo": "quickshell-overview",
+        "rev": "74918ba66e0714017a6a5bfb9bf2affa66dabbc1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Shanu-Kumawat",
+        "repo": "quickshell-overview",
+        "type": "github"
+      }
+    },
     "rheayna-vim": {
       "inputs": {
         "git-hooks": "git-hooks_4",
@@ -1685,6 +1701,7 @@
         "nixpkgs": "nixpkgs_6",
         "nixpkgs-stable": "nixpkgs-stable",
         "nur": "nur",
+        "quickshell-overview": "quickshell-overview",
         "rheayna-vim": "rheayna-vim",
         "rust-overlay": "rust-overlay_2",
         "spicetify-nix": "spicetify-nix",

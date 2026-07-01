@@ -1,5 +1,6 @@
 {
   pkgs,
+  inputs,
   ...
 }:
 {
@@ -30,6 +31,7 @@
     ./hyprquickframe.nix
     ./zen-browser.nix
     ./linktui.nix
+    inputs.nix-relic.homeManagerModules.quickshell-overview
   ];
 
   programs.satty = {

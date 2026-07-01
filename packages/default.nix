@@ -9,6 +9,7 @@ pkgs: {
   playerVolMPD = pkgs.callPackage ./playerVolMPD.nix { };
   playerVolMpris = pkgs.callPackage ./playerVolMpris.nix { };
   playerVolDefault_Sink = pkgs.callPackage ./playerVolDefault_Sink.nix { };
+  quickshell-overview = pkgs.callPackage ./quickshell-overview.nix { inherit self; };
   rofi-power-menu = pkgs.callPackage ./rofi-power-menu.nix { };
   toggle-mute = pkgs.callPackage ./toggle-mute.nix { };
   toggle-linktui = pkgs.callPackage ./toggle-linktui.nix { inherit self; };
