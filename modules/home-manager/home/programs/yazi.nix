@@ -78,7 +78,7 @@
         ];
         open = [
           {
-            run = "uwsm-app -- xdg-open %s";
+            run = "xdg-open %s";
             desc = "Open";
           }
         ];
@@ -87,6 +87,10 @@
         rules = [
           {
             mime = "text/*";
+            use = "edit";
+          }
+          {
+            url = "*.js";
             use = "edit";
           }
           {

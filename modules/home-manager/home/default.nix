@@ -25,6 +25,7 @@
 
   xdg = {
     enable = true;
+    portal.xdgOpenUsePortal = true;
     userDirs = {
       enable = true;
       createDirectories = true;
