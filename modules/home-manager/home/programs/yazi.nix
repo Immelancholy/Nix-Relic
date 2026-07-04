@@ -60,6 +60,7 @@
             run = "uwsm-app -- mpv --player-operation-mode=pseudo-gui %s";
             orphan = true;
             for = "unix";
+            desc = "Mpv";
           }
         ];
         image = [
@@ -67,6 +68,7 @@
             run = "uwsm-app -- loupe %s";
             orphan = true;
             for = "unix";
+            desc = "Loupe";
           }
         ];
         edit = [
@@ -74,6 +76,7 @@
             run = "uwsm-app -- $EDITOR %s";
             block = true;
             for = "unix";
+            desc = "Editor";
           }
         ];
         open = [
@@ -82,20 +85,86 @@
             desc = "Open";
           }
         ];
+        zip = [
+          {
+            run = "uwsm-app -- ark %s";
+            orphan = true;
+            for = "unix";
+            desc = "Ark";
+          }
+        ];
       };
       open = {
         rules = [
           {
             mime = "text/*";
-            use = "edit";
+            use = [
+              "edit"
+              "open"
+            ];
           }
           {
-            url = "*.js";
-            use = "edit";
+            url = "*.zip";
+            use = [
+              "zip"
+              "open"
+            ];
           }
           {
-            url = "*.json";
-            use = "edit";
+            url = "*.7z";
+            use = [
+              "zip"
+              "open"
+            ];
+          }
+          {
+            url = "*.tar";
+            use = [
+              "zip"
+              "open"
+            ];
+          }
+          {
+            url = "*.tar.*";
+            use = [
+              "zip"
+              "open"
+            ];
+          }
+          {
+            url = "*.gz";
+            use = [
+              "zip"
+              "open"
+            ];
+          }
+          {
+            url = "*.bz2";
+            use = [
+              "zip"
+              "open"
+            ];
+          }
+          {
+            url = "*.xz";
+            use = [
+              "zip"
+              "open"
+            ];
+          }
+          {
+            url = "*.rar";
+            use = [
+              "zip"
+              "open"
+            ];
+          }
+          {
+            mime = "application/*";
+            use = [
+              "edit"
+              "open"
+            ];
           }
           {
             url = "*.html";
@@ -106,15 +175,24 @@
           }
           {
             mime = "video/*";
-            use = "play";
+            use = [
+              "play"
+              "open"
+            ];
           }
           {
             mime = "audio/*";
-            use = "play";
+            use = [
+              "play"
+              "open"
+            ];
           }
           {
             mime = "image/*";
-            use = "image";
+            use = [
+              "image"
+              "open"
+            ];
           }
         ];
       };

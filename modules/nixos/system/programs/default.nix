@@ -130,6 +130,7 @@
       framerate = "${toString config.nix-relic.framerates.neo}";
     })
 
+    unrar
     yt-dlp
     yt-dlg
     cliphist

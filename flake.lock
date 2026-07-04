@@ -1995,16 +1995,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1779377647,
-        "narHash": "sha256-weB+iCrCzTxWFPkuijVEUH6v1RE1YqZHqHdgxC5oWDs=",
-        "owner": "buzz",
+        "lastModified": 1783183683,
+        "narHash": "sha256-+qrrIGP86yY6Cnk1qZGq71V3mm7Lu/Gq3Crp91862HY=",
+        "owner": "Alexays",
         "repo": "waybar",
-        "rev": "ea36aab3babe79f646e87b8cd3a49d041dc32443",
+        "rev": "2d9b95e9de2a811df4db4f05676f7fbc800efd1f",
         "type": "github"
       },
       "original": {
-        "owner": "buzz",
-        "ref": "fix/hyprland-workspaces-scroll",
+        "owner": "Alexays",
         "repo": "waybar",
         "type": "github"
       }
