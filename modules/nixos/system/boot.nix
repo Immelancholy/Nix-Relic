@@ -19,8 +19,8 @@
   boot.extraModprobeConfig = ''
     options v4l2loopback devices=1 video_nr=1 card_label="OBS Cam" exclusive_caps=1
   '';
-  boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
-  # boot.kernelPackages = pkgs.linuxKernel.packages.linux_lqx;
+  # boot.kernelPackages = pkgs.linuxKernel.packages.linux_zen;
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_xanmod_latest;
   boot.kernelParams = [
     "rw"
     "quiet"
@@ -33,7 +33,7 @@
       editor = false;
     };
   };
-  # Workaround for https://github.com/NixOS/nixpkgs/issues/535850
-  # linuxPackages_zen outputs "vmlinuz" instead of "bzImage"
-  system.boot.loader.kernelFile = "vmlinuz";
+  # # Workaround for https://github.com/NixOS/nixpkgs/issues/535850
+  # # linuxPackages_zen outputs "vmlinuz" instead of "bzImage"
+  # system.boot.loader.kernelFile = "vmlinuz";
 }
