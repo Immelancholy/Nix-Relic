@@ -27,6 +27,7 @@
       nix-relic.inputs.waybar.overlays.default
       nix-relic.inputs.rheayna-vim.overlays.default
       nix-relic.inputs.linktui.overlays.default
+      nix-relic.inputs.nix-cachyos-kernel.overlays.pinned
     ];
 
     config = {

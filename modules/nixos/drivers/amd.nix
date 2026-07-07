@@ -6,16 +6,11 @@
 }:
 with lib;
 let
-  cfg = config.drivers.amd;
+  cfg = config.hardware.amdgpu;
 in
 {
-  options.drivers.amd = {
-    enable = mkOption {
-      type = types.bool;
-      default = false;
-      description = "Enable AMD Graphics Drivers";
-    };
-  };
+  options.hardware.amdgpu.enable = mkEnableOption "Enable amdgpu packages";
+
   config = mkIf cfg.enable {
     services.xserver.videoDrivers = [ "amdgpu" ];
 

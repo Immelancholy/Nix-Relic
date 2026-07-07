@@ -135,33 +135,23 @@
     gamescopeSession.enable = true;
   };
 
-  drivers = {
-    amd.enable = true;
-    intel.enable = false;
+  hardware = {
+    amdgpu.enabled = true;
+    intelgpu.enabled = false;
     nvidia = {
-      enable = false;
-      open = true;
-      powerManagement = true;
-      finePowerManagement = false;
-      # package = config.boot.kernelPackages.nvidiaPackages.vulkan_beta;
-      prime = {
-        enable = false;
-        # intelBusId = ""; # For Intel
-        # amdgpuBusId = ""; # For AMD
-        nvidiaBusId = "";
-      };
+      enabled = false;
     };
   };
 
   displayManager = {
     # Display Manager to user, only enable 1
     sddm = {
-      enable = false; # logout doesn't work right forcing you to do systemctl restart display-manager to get sddm to pop up again after logging out
+      enable = true; # logout doesn't work right forcing you to do systemctl restart display-manager to get sddm to pop up again after logging out
       compositor = "kwin";
       screenWidth = "1920";
       screenHeight = "1080";
     };
-    tuiGreet.enable = true;
+    tuiGreet.enable = false;
   };
 
   locale = "en_GB.UTF-8"; # change to your locale

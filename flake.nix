@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-26.05";
+    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel";
     git-hooks.url = "github:cachix/git-hooks.nix";
 
     rheayna-vim.url = "github:Immelancholy/RheaynaVim";
