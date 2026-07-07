@@ -299,9 +299,10 @@ in
     })
     hl.window_rule({
       match = {
-        title = "^(Picture-in-Picture)$",
+        title = "^(?i)(picture-in-picture)$",
       },
       float = true,
+      opacity = "1.0 override 1.0 override",
     })
     hl.window_rule({
       match = {
@@ -425,6 +426,11 @@ in
       match = { namespace = "notifications" },
       blur = true,
       ignore_alpha = 0,
+    })
+    hl.layer_rule({
+      match = { namespace = "quickshell:overview-blur" },
+      blur = true,
+      ignore_alpha = 0.2,
     })
   '';
 }

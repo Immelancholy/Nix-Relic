@@ -154,7 +154,7 @@ in
       hl.bind(Mod .. " + grave", hl.dsp.exec_cmd(Menu))
       hl.bind(Mod .. " + Return", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
       hl.bind(Mods .. " + Return", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
-      hl.bind("ALT + Tab", hl.dsp.exec_cmd("rofi -show window -Modi window"))
+      hl.bind("ALT + Tab", hl.dsp.exec_cmd("uwsm-app -- overview ipc call overview toggle"))
 
       hl.bind(Mod .. " + ALT + CONTROL + Delete", function()
         local layouts = { "scrolling", "dwindle", "master", "monocle" }
@@ -197,41 +197,8 @@ in
       end)
 
       hl.bind(Mods .. " + U", function()
-        hl.dispatch(hl.dsp.window.kill({ window = "title:^(${title})$" }))
-        hl.dispatch(hl.dsp.window.kill({ window = "title:^(relic-neo)$" }))
-        hl.dispatch(hl.dsp.window.kill({ window = "title:^(relic-fastfetch)$" }))
-        hl.dispatch(hl.dsp.window.kill({ window = "title:^(relic-btop)$" }))
-        hl.dispatch(hl.dsp.window.kill({ window = "title:^(relic-cava)$" }))
-        hl.dispatch(
-          hl.dsp.exec_cmd(
-            "uwsm-app -- kitty --title relic-cava relic-cava",
-            { workspace = "1 silent", float = true, size = { 888, 456 }, move = { 610, 615 } }
-          )
-        )
-        hl.dispatch(
-          hl.dsp.exec_cmd(
-            "uwsm-app -- kitty --title relic-btop relic-btop",
-            { workspace = "1 silent", float = true, size = { 590, 615 }, move = { 10, 455 } }
-          )
-        )
-        hl.dispatch(
-          hl.dsp.exec_cmd(
-            "uwsm-app -- kitty --title relic-neo relic-neo",
-            { workspace = "1 silent", float = true, size = { 402, 1030 }, move = { 1508, 42 } }
-          )
-        )
-        hl.dispatch(
-          hl.dsp.exec_cmd(
-            "uwsm-app -- kitty --title relic-fastfetch kitty @ launch --type overlay --env class=fastfetch",
-            { workspace = "1 silent", float = true, size = { 590, 405 }, move = { 10, 42 } }
-          )
-        )
-        hl.dispatch(
-          hl.dsp.exec_cmd(
-            Player .. " -b on",
-            { workspace = "1 silent", float = true, size = { 888, 565 }, move = { 610, 42 } }
-          )
-        )
+        WorkspaceOneKills()
+        WorkspaceOneExecs()
       end)
 
       hl.bind(Mod .. " + Delete", hl.dsp.exec_cmd("rofi -show power-menu -modi power-menu:rofi-power-menu"))
@@ -295,10 +262,7 @@ in
           WorkspaceOneKills()
           hl.timer(function()
             hl.dispatch(
-              hl.dsp.exec_cmd(
-                Player .. " -b off",
-                { workspace = "1 silent", float = true, size = { 1118, 710 }, move = { 401, 145 } }
-              )
+              hl.dsp.exec_cmd(Player, { workspace = "1 silent", float = true, size = { 1118, 710 }, move = { 401, 145 } })
             )
           end, { timeout = 5, type = "oneshot" })
         end
@@ -341,18 +305,8 @@ in
 
       hl.bind(Mod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
       hl.bind(Mod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
-      hl.bind(
-        Mod .. " + N",
-        layout_bind({
-          scrolling = hl.dsp.layout("colresize +0.1"),
-        })
-      )
-      hl.bind(
-        Mods .. " + N",
-        layout_bind({
-          scrolling = hl.dsp.layout("colresize -0.1"),
-        })
-      )
+      hl.bind(Mod .. " + N", layout_bind({ scrolling = hl.dsp.layout("colresize +0.01") }), { repeating = true })
+      hl.bind(Mods .. " + N", layout_bind({ scrolling = hl.dsp.layout("colresize -0.01") }), { repeating = true })
       hl.bind(
         Mod .. " + C",
         layout_bind({

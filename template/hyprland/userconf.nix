@@ -36,10 +36,7 @@
         )
       )
       hl.dispatch(
-        hl.dsp.exec_cmd(
-          Player .. " -b on",
-          { workspace = "1 silent", float = true, size = { 888, 565 }, move = { 610, 42 } }
-        )
+        hl.dsp.exec_cmd(Player, { workspace = "1 silent", float = true, size = { 888, 565 }, move = { 610, 42 } })
       )
     end
 

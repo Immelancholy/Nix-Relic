@@ -9,7 +9,7 @@ let
       ''
         local wallpaper = "${liveWallpaper.path}"
           hl.exec_cmd("uwsm-app -- mpvpaper -f -p -o \"--loop no-audio\" '*' " .. wallpaper)
-          hl.exec_cmd("systemctl stop --user hyprpaper")''
+          hl.exec_cmd("sleep 2; systemctl stop --user hyprpaper")''
     else
       ""
   }";

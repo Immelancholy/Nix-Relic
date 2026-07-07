@@ -5,6 +5,7 @@
         layout = "scrolling",
       },
       dwindle = {
+        precise_mouse_move = true,
         preserve_split = true,
       },
       master = {
