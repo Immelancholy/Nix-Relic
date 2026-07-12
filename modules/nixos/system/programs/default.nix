@@ -48,10 +48,10 @@
 
   programs.dconf.enable = true;
 
-  services.input-remapper = {
-    enable = true;
-    enableUdevRules = true;
-  };
+  # services.input-remapper = {
+  #   enable = true;
+  #   enableUdevRules = true;
+  # };
 
   programs.gamemode = {
     enable = true;

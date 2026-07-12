@@ -23,6 +23,8 @@
     enable = true;
   };
 
+  home.pointerCursor.enable = true;
+
   xdg = {
     enable = true;
     portal.xdgOpenUsePortal = true;
@@ -30,11 +32,11 @@
       enable = true;
       createDirectories = true;
     };
-    configFile = {
-      "autostart/input-mapper-autoload.desktop" = lib.mkIf nixosConfig.services.input-remapper.enable {
-        source = "${nixosConfig.services.input-remapper.package}/share/applications/input-remapper-autoload.desktop";
-      };
-    };
+    # configFile = {
+    #   "autostart/input-mapper-autoload.desktop" = lib.mkIf nixosConfig.services.input-remapper.enable {
+    #     source = "${nixosConfig.services.input-remapper.package}/share/applications/input-remapper-autoload.desktop";
+    #   };
+    # };
   };
   home.file = {
     ".vimium/Vimium-C-Binds.json".text = ''
