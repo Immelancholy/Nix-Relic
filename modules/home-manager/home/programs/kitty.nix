@@ -13,7 +13,7 @@ in
       window_padding_width = 5;
       allow_remote_control = true;
       listen_on = "unix:/tmp/mykitty-${user}";
-      background_opacity = lib.mkForce "0.85";
+      background_opacity = lib.mkForce "0.75";
       confirm_os_window_close = 0;
       placement_strategy = "center";
       resize_in_steps = "yes";

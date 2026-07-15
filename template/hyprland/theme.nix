@@ -52,7 +52,7 @@
           enabled = true,
           size = 5,
           passes = 4,
-          brightness = 1.35,
+          brightness = 1.25,
           vibrancy = 0.75,
           vibrancy_darkness = 0.8,
           special = true,
