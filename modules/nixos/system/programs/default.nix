@@ -147,6 +147,7 @@
       withUnfree = true;
       withOpengl = true;
       withRtmp = true;
+      withCudaLLVM = false;
     })
     qt5.qtwayland
     kdePackages.qtwayland
