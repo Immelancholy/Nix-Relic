@@ -59,7 +59,7 @@
         },
         motion_blur = {
           enabled = true,
-          samples = 200,
+          samples = 64,
         },
         glow = {
           enabled = true,
