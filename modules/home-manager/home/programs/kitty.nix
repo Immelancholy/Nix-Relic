@@ -1,7 +1,4 @@
-{ config, lib, ... }:
-let
-  user = config.home.username;
-in
+{ lib, ... }:
 {
   programs.kitty = {
     enable = true;
@@ -11,8 +8,8 @@ in
       italic_font = "auto";
       bold_italic_font = "auto";
       window_padding_width = 5;
-      allow_remote_control = true;
-      listen_on = "unix:/tmp/mykitty-${user}";
+      allow_remote_control = "socket-only";
+      listen_on = "unix:\${XDG_RUNTIME_DIR}/relic-kitty-{kitty_pid}";
       background_opacity = lib.mkForce "0.75";
       confirm_os_window_close = 0;
       placement_strategy = "center";
