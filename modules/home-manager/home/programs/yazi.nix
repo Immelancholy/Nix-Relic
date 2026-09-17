@@ -93,6 +93,14 @@
             desc = "Ark";
           }
         ];
+        pdf = [
+          {
+            run = "uwsm-app -- zathura %s";
+            orphan = true;
+            for = "unix";
+            desc = "Zathura";
+          }
+        ];
       };
       open = {
         rules = [
@@ -100,6 +108,13 @@
             mime = "text/*";
             use = [
               "edit"
+              "open"
+            ];
+          }
+          {
+            url = "*.pdf";
+            use = [
+              "pdf"
               "open"
             ];
           }
