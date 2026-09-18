@@ -10,19 +10,9 @@ in
 {
   programs.rofi = {
     enable = true;
-    font = "${fonts.monospace.name} ${toString fonts.sizes.desktop}";
-    terminal = cfg.home.sessionVariables.TERMINAL;
-    plugins = with pkgs; [
-      rofi-nerdy
-      rofi-emoji
-    ];
-    modes = [
-      "drun"
-      "run"
-      "filebrowser"
-      "window"
-    ];
-    extraConfig = {
+    settings = {
+      font = "${fonts.monospace.name} ${toString fonts.sizes.desktop}";
+      terminal = cfg.home.sessionVariables.TERMINAL;
       # hover-select = true;
       # me-select-entry = "";
       # me-accept-entry = "MousePrimary";
@@ -47,6 +37,16 @@ in
       kb-remove-char-back = "BackSpace";
       kb-mode-complete = "Control+Shift+l";
     };
+    plugins = with pkgs; [
+      rofi-nerdy
+      rofi-emoji
+    ];
+    modes = [
+      "drun"
+      "run"
+      "filebrowser"
+      "window"
+    ];
   };
   imports = [
     ./theme.nix

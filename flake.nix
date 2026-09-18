@@ -42,7 +42,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     waybar = {
-      url = "github:Alexays/waybar";
+      url = "github:tonybutt/waybar/hyprland-addressable-workspaces";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     stylix = {
