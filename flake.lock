@@ -1377,11 +1377,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1789686230,
-        "narHash": "sha256-HQczYakzbDaqA6/dhcTWEAxThe9InHAEWh0XhHYUeqE=",
+        "lastModified": 1789688564,
+        "narHash": "sha256-vibEIDn48fb28YZDmATKPnmGNB1Rub8j53eQZrzmVp8=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "bde47912e6e03057e717244ded617947d81dd89a",
+        "rev": "7bbde0285dafb8154b1a8449d8f7f8754831a792",
         "type": "github"
       },
       "original": {
@@ -1993,15 +1993,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1789627973,
-        "narHash": "sha256-OJBVQSIpW0Ozb3czGP3+TQyDC5BBqMQtx2asPsspFHo=",
-        "owner": "Alexays",
+        "lastModified": 1789592453,
+        "narHash": "sha256-9VHyC9nUbMyu7ojZmyHlGDX2HICTCd8lqJFNm0F4blY=",
+        "owner": "tonybutt",
         "repo": "waybar",
-        "rev": "1687ec724a89756e79371784a2ba3f9700f8e5c6",
+        "rev": "da3d2672805d20fb7db6dbd55e8224895547eacb",
         "type": "github"
       },
       "original": {
-        "owner": "Alexays",
+        "owner": "tonybutt",
+        "ref": "hyprland-addressable-workspaces",
         "repo": "waybar",
         "type": "github"
       }
