@@ -1993,17 +1993,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1789750187,
-        "narHash": "sha256-24zl1AUL+K4o6UK0TC20PlfJhcFxClOx4TdmaJLegw0=",
-        "owner": "tonybutt",
+        "lastModified": 1789576343,
+        "narHash": "sha256-udymEQjGzKq9sg/4ag0zwY3N+FXIY20sUCwsbebFg84=",
+        "owner": "Alexays",
         "repo": "waybar",
-        "rev": "919939aa435d1442d423e180fb3bd452802befa4",
+        "rev": "4c495a41f6fe5689665783138ce0097f9b757e0a",
         "type": "github"
       },
       "original": {
-        "owner": "tonybutt",
-        "ref": "hyprland-addressable-workspaces",
+        "owner": "Alexays",
         "repo": "waybar",
+        "rev": "4c495a41f6fe5689665783138ce0097f9b757e0a",
         "type": "github"
       }
     },
@@ -2094,11 +2094,11 @@
         "rust-overlay": "rust-overlay_3"
       },
       "locked": {
-        "lastModified": 1789820495,
-        "narHash": "sha256-ecQY/Bz1INk5Ruo1HswEaeS3mObzIzZ+PHiBF8qzt9E=",
+        "lastModified": 1789917380,
+        "narHash": "sha256-+R7lwIjG+6mPv3awdK85wjaDx+4aSJ8rAbFq07Z56B4=",
         "owner": "sxyazi",
         "repo": "yazi",
-        "rev": "014426fd8535b8b99e0be7edd3dc7c05e21d1a44",
+        "rev": "112aeceac8e70c73d7a752976d9af7fc83f148bd",
         "type": "github"
       },
       "original": {
