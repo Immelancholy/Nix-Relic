@@ -46,5 +46,10 @@ in
         vulkan-hdr-layer-kwin6
       ];
     };
+
+    nix.settings.substituters = lib.mkAfter [ "https://cache.nixos-cuda.org" ];
+    nix.settings.trusted-public-keys = lib.mkAfter [
+      "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M="
+    ];
   };
 }
