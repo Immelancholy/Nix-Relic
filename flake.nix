@@ -42,7 +42,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     waybar = {
-      url = "github:Alexays/waybar/2a12740b77ce62cf372f2ae73db1edf4ec3ad551";
+      url = "github:Alexays/waybar/1b85fb50c92ed3500a50f4e1fb2e2be9c4ff9139";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     stylix = {
