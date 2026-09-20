@@ -42,8 +42,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     waybar = {
-      url = "github:Alexays/waybar/1b85fb50c92ed3500a50f4e1fb2e2be9c4ff9139";
-      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:Alexays/waybar";
+      # inputs.nixpkgs.follows = "nixpkgs";
     };
     stylix = {
       url = "github:nix-community/stylix";
