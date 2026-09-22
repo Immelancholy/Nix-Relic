@@ -19,8 +19,6 @@ let
       color5 = "${base0A}";
       color6 = "${base09}";
       color7 = "${base08}";
-      framerate = "${toString nixosConfig.nix-relic.cava.framerate}";
-      noiseReduction = "${toString nixosConfig.nix-relic.cava.noiseReduction}";
     };
 in
 {

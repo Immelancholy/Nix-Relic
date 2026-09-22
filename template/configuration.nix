@@ -6,13 +6,8 @@
 {
   nix-relic = {
     flakePath = "/path/to/flake/folder";
-    cava = {
-      framerate = 60;
-      noiseReduction = 30;
-    };
     framerates = {
       steamGamescopeSession = 60;
-      neo = 60;
     };
     wallpaper = {
       path = "${nix-relic}/backgrounds/Evil_Miku.png";

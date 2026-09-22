@@ -126,9 +126,7 @@
     })
     relic-btop
     relic-cava
-    (relic-neo.override {
-      framerate = "${toString config.nix-relic.framerates.neo}";
-    })
+    relic-neo
 
     unrar
     yt-dlp

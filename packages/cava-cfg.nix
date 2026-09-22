@@ -8,8 +8,6 @@
   color5 ? "",
   color6 ? "",
   color7 ? "",
-  framerate ? "60",
-  noiseReduction ? "30",
   cavaDir ? "$HOME/.config/cava",
   ...
 }:
@@ -24,8 +22,6 @@ writeShellScriptBin "cava-cfg" ''
     mkdir -p "$cavaDir"
   fi
 
-  noiseReduction="${noiseReduction}"
-  framerate="${framerate}"
   color1="${color1}"
   color2="${color2}"
   color3="${color3}"
@@ -49,7 +45,8 @@ writeShellScriptBin "cava-cfg" ''
     bar_spacing=0
     bar_width=1
     bars=0
-    framerate=$framerate
+    framerate=60
+    autosens=2
     sensitivity=100
 
     [input]
@@ -63,7 +60,7 @@ writeShellScriptBin "cava-cfg" ''
 
     [smoothing]
     monstercat=1
-    noise_reduction=$noiseReduction
+    noise_reduction=50
     waves=0
   EOF
 ''
