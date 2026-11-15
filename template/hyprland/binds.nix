@@ -55,12 +55,12 @@ in
         zoom(-0.5)
       end)
 
-      hl.bind(Moda .. " + V", hl.dsp.workspace.toggle_special("video"))
-      hl.bind(Moda .. " + G", hl.dsp.workspace.toggle_special("game"))
-      hl.bind(Moda .. " + W", hl.dsp.workspace.toggle_special("win"))
-      hl.bind(Mods .. " + G", hl.dsp.window.move({ workspace = "special:game" }))
-      hl.bind(Mods .. " + V", hl.dsp.window.move({ workspace = "special:video" }))
-      hl.bind(Mods .. " + W", hl.dsp.window.move({ workspace = "special:win" }))
+      hl.bind(Moda .. " + V", hl.dsp.workspace.toggle_special("Video"))
+      hl.bind(Moda .. " + G", hl.dsp.focus({ workspace = "name:Game" }))
+      hl.bind(Moda .. " + W", hl.dsp.workspace.toggle_special("Win"))
+      hl.bind(Mods .. " + G", hl.dsp.window.move({ workspace = "name:Game" }))
+      hl.bind(Mods .. " + V", hl.dsp.window.move({ workspace = "special:Video" }))
+      hl.bind(Mods .. " + W", hl.dsp.window.move({ workspace = "special:Win" }))
 
       hl.bind(
         Mod .. " + U",

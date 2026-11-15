@@ -15,35 +15,35 @@ in
       match = {
         class = "^(steam_app_\\d+)$",
       },
-      workspace = "special:game",
+      workspace = "name:Game",
       fullscreen = true,
     })
     hl.window_rule({
       match = {
         xdg_tag = "^(proton-game)$",
       },
-      workspace = "special:game",
+      workspace = "name:Game",
       fullscreen = true,
     })
     hl.window_rule({
       match = {
         content = "game",
       },
-      workspace = "special:game",
+      workspace = "name:Game",
       fullscreen = true,
     })
     hl.window_rule({
       match = {
         class = "^(xfreerdp)$",
       },
-      workspace = "special:win",
+      workspace = "special:Win",
       fullscreen = true,
     })
     hl.window_rule({
       match = {
         class = "^(.*[Ee]pisode \\d+ - mpv*.)$",
       },
-      workspace = "special:video",
+      workspace = "special:Video",
       opacity = "1.0 override 0.8 override",
       fullscreen = true,
     })
