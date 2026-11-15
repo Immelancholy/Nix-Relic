@@ -261,12 +261,17 @@ in
           LiveWallpaperKill()
           WorkspaceOneKills()
           hl.timer(function()
-            hl.dispatch(
-              hl.dsp.exec_cmd(Player, { workspace = "1 silent", float = true, size = { 1118, 710 }, move = { 401, 145 } })
-            )
+            ExtraGameCalls()
+            hl.dispatch(hl.dsp.exec_cmd(Player, {
+              workspace = "name:Start silent",
+              float = true,
+              size = { "monitor_w * 0.582", "monitor_h * 0.657" },
+              move = { "(monitor_w - window_w) * 0.5", "(monitor_h - window_h) * 0.4" },
+            }))
           end, { timeout = 5, type = "oneshot" })
         end
         if gamemode == false then
+          ExtraGameExitCalls()
           hl.dispatch(hl.dsp.exec_cmd("hyprctl reload config-only -q"))
         end
       end)

@@ -40,6 +40,9 @@
       )
     end
 
+    function ExtraGameCalls() end
+    function ExtraGameExitCalls() end
+
     function WorkspaceOneKills()
       hl.dispatch(hl.dsp.window.kill({ window = "title:^(" .. PlayerTitle .. ")$" }))
       hl.dispatch(hl.dsp.window.kill({ window = "title:^(relic-neo)$" }))
