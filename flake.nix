@@ -9,6 +9,7 @@
 
     rheayna-vim.url = "github:Immelancholy/RheaynaVim";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    yazi.url = "github:sxyazi/yazi";
 
     hyprland.url = "github:hyprwm/Hyprland";
     hyprland-plugins = {
@@ -27,10 +28,6 @@
     };
     zarumet = {
       url = "github:Immelancholy/zarumet";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    yazi = {
-      url = "github:sxyazi/yazi";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     zen-browser = {
