@@ -263,7 +263,7 @@ in
           hl.timer(function()
             ExtraGameCalls()
             hl.dispatch(hl.dsp.exec_cmd(Player, {
-              workspace = "name:Start silent",
+              workspace = "1 silent",
               float = true,
               size = { "monitor_w * 0.582", "monitor_h * 0.657" },
               move = { "(monitor_w - window_w) * 0.5", "(monitor_h - window_h) * 0.4" },
