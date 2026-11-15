@@ -1,7 +1,3 @@
-{ config, ... }:
-let
-  inherit (config.player) title;
-in
 {
   xdg.configFile."hypr/rules.lua".text = /* lua */ ''
     -- Window Rules
@@ -11,9 +7,46 @@ in
       },
       opacity = "0.8 0.7",
     })
+
+    hl.window_rule({
+      match = { title = "^(relic-cava)$" },
+      workspace = "name:Start silent",
+      float = true,
+      size = { 888, 456 },
+      move = { 610, 615 },
+    })
+    hl.window_rule({
+      match = { title = "^(" .. PlayerTitle .. ")$" },
+      workspace = "name:Start silent",
+      float = true,
+      size = { 888, 565 },
+      move = { 610, 42 },
+    })
+    hl.window_rule({
+      match = { title = "^(relic-btop)$" },
+      workspace = "name:Start silent",
+      float = true,
+      size = { 590, 605 },
+      move = { 10, 465 },
+    })
+    hl.window_rule({
+      match = { title = "^(relic-fastfetch)$" },
+      workspace = "name:Start silent",
+      float = true,
+      size = { 590, 415 },
+      move = { 10, 42 },
+    })
+    hl.window_rule({
+      match = { title = "^(relic-neo)$" },
+      workspace = "name:Start silent",
+      float = true,
+      size = { 402, 1030 },
+      move = { 1508, 42 },
+    })
+
     hl.window_rule({
       match = {
-        class = "^(steam_app_\\d+)$",
+        class = "^(steam_app_.*)$",
       },
       workspace = "name:Game",
       fullscreen = true,
@@ -47,6 +80,7 @@ in
       opacity = "1.0 override 0.8 override",
       fullscreen = true,
     })
+
     hl.window_rule({
       match = {
         class = "^(kitty)$",
@@ -376,7 +410,7 @@ in
       match = { title = "^(linktui-wifi-top-bar)$" },
       float = true,
       pin = true,
-      size = "715 565",
+      size = { 715, 565 },
       move = { "(monitor_w - window_w) * 0.925", 50 },
     })
     hl.window_rule({
@@ -384,7 +418,7 @@ in
       match = { title = "^(linktui-bluetooth-top-bar)$" },
       float = true,
       pin = true,
-      size = "715 565",
+      size = { 715, 565 },
       move = { "(monitor_w - window_w) * 0.925", 50 },
     })
     hl.window_rule({
@@ -392,15 +426,15 @@ in
       match = { title = "^(btop-top-bar)$" },
       float = true,
       pin = true,
-      size = "740 855",
+      size = { 740, 855 },
       move = { "(monitor_w - window_w) * 0.886", 50 },
     })
     hl.window_rule({
-      name = "${title}-top-bar",
-      match = { title = "^(${title}-top-bar)$" },
+      name = PlayerTitle .. "-top-bar",
+      match = { title = "^(" .. PlayerTitle .. "-top-bar)$" },
       float = true,
       pin = true,
-      size = "740 490",
+      size = { "monitor_w * 0.5", "monitor_h * 0.55" },
       move = { "(monitor_w - window_w) * 0.5", 50 },
     })
 
