@@ -29,10 +29,6 @@
       url = "github:Immelancholy/zarumet";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    linktui = {
-      url = "github:austinemk/linktui";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     yazi = {
       url = "github:sxyazi/yazi";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -47,6 +43,10 @@
     };
     stylix = {
       url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    linktui = {
+      url = "github:Immelancholy/linktui";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

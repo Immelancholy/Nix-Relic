@@ -8,7 +8,6 @@
   boot.loader.systemd-boot.editor = false;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.initrd.systemd = {
-    enable = true;
     tpm2.enable = true;
   };
   boot.kernelModules = [ "v4l2loopback" ];
