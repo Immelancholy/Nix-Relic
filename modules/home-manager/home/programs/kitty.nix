@@ -20,6 +20,7 @@
       cursor_trail_decay = "0.01 0.15";
       cursor_shape = "beam";
       cursor_blink_interval = "0.5 ease-in-out";
+      remember_window_size = "no";
     };
   };
 }
