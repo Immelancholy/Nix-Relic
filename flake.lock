@@ -2007,11 +2007,11 @@
         "nixpkgs": "nixpkgs_13"
       },
       "locked": {
-        "lastModified": 1789938288,
-        "narHash": "sha256-dc2tsgfAKqnZ/w369G6mYkfeIathdWLeyh+xgBxERU8=",
+        "lastModified": 1794308546,
+        "narHash": "sha256-adIBnBcBakfBXm3L+yfDynO+mPuar89VgeQvACasGvg=",
         "owner": "Alexays",
         "repo": "waybar",
-        "rev": "3672eee03a6abfe883310b92ddbcf3300ae43b2d",
+        "rev": "2318da41bdce5ebb99c6f9115acc27d28f1bdc7b",
         "type": "github"
       },
       "original": {
