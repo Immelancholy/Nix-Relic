@@ -377,7 +377,7 @@ in
       float = true,
       pin = true,
       size = "715 565",
-      move = { 1115, 50 },
+      move = { "(monitor_w - window_w) * 0.925", 50 },
     })
     hl.window_rule({
       name = "linktui-bluetooth-top-bar",
@@ -385,7 +385,7 @@ in
       float = true,
       pin = true,
       size = "715 565",
-      move = { 1115, 50 },
+      move = { "(monitor_w - window_w) * 0.925", 50 },
     })
     hl.window_rule({
       name = "btop-top-bar",
@@ -393,7 +393,7 @@ in
       float = true,
       pin = true,
       size = "740 855",
-      move = { 1045, 50 },
+      move = { "(monitor_w - window_w) * 0.886", 50 },
     })
     hl.window_rule({
       name = "${title}-top-bar",
@@ -401,7 +401,7 @@ in
       float = true,
       pin = true,
       size = "740 490",
-      move = { 590, 50 },
+      move = { "(monitor_w - window_w) * 0.5", 50 },
     })
 
     -- Layer Rules
