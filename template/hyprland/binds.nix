@@ -284,6 +284,8 @@ in
       hl.bind("Print", hl.dsp.exec_cmd("hyprquickframe -n -d"))
       hl.bind(Mod .. " + O", hl.dsp.exec_cmd("uwsm-app -- hyprpicker -a"))
       hl.bind(Mods .. " + P", hl.dsp.submap("player"))
+      hl.bind(Moda .. " + Comma", hl.dsp.workspace.move({ monitor = "+1" }))
+      hl.bind(Moda .. " + Period", hl.dsp.workspace.move({ monitor = "-1" }))
       hl.bind(Mods .. " + Comma", hl.dsp.window.move({ monitor = "+1", follow = true }))
       hl.bind(Mods .. " + Period", hl.dsp.window.move({ monitor = "-1", follow = true }))
       hl.bind(Mod .. " + Comma", hl.dsp.focus({ monitor = "+1" }))
