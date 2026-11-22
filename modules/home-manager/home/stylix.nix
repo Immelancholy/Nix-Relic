@@ -22,6 +22,7 @@ in
       light = "Tela-circle-${iconColour}";
     };
     targets = {
+      wayprompt.enable = false;
       dunst.enable = false;
       rofi.enable = false;
       waybar.enable = false;
